@@ -2,12 +2,7 @@
 ---
 @import "{{ site.theme }}";
 
-div {
-    text-align: justify;
-    text-justify: inter-word;
-}
-
-p {
+.justify{
     text-align: justify;
     text-justify: inter-word;
 }
