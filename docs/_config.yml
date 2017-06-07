@@ -1,6 +1,6 @@
 theme: jekyll-theme-minimal
 
-markdown: kramdown
-
 title: [Digital Signal Processing in Radio Astronomy]
 description: [An NSF Research Experience for Teachers Program]
+
+markdown: redcarpet
