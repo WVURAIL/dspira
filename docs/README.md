@@ -1,1 +1,1 @@
- This filder contains necessary documentation
+ This folder contains necessary documentation
