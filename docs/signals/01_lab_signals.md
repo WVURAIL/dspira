@@ -1,3 +1,3 @@
 # Software Defined Radio
 
-$$2\cdot\lambda$$
+$ 2\cdot \lambda $
