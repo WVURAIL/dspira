@@ -18,4 +18,4 @@ The West Virginia University (WVU) Lane Department of Computer Science and Elect
 
 ## 1.2. Labs
 
-[1. Signals](01_lab_signals)
+[1. Signals](signals/01_lab_signals)
