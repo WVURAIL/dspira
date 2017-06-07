@@ -4,6 +4,7 @@
 
 - [1. DSP in Radio Astronomy](#1-dsp-in-radio-astronomy)
     - [1.1. Introduction](#11-introduction)
+    - [1.2 Lab 1: Signals](#./01_lab_signals.md)
 
 <!-- /TOC -->
 
