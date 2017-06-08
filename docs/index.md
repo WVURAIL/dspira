@@ -25,8 +25,8 @@ Aims of this program:
 
 The following guided lab exercies will be covered:
 
-1. [Introduction to GNU Radio & Signals](lab/01)   
-2. [Signal Modulation & First steps with SDR Hardware](lab/02)   
-3. [Fourier Transforms](lab/03)   
-4. [Filters](lab/04)   
-5. [A Radio Telescope](lab/05)    
+1. [Introduction to GNU Radio & Signals](labs/01)   
+2. [Signal Modulation & First steps with SDR Hardware](labs/02)   
+3. [Fourier Transforms](labs/03)   
+4. [Filters](labs/04)   
+5. [A Radio Telescope](labs/05)    
