@@ -9,8 +9,9 @@ This page shall guide you through our primary tool -- GNU Radio. GNU Radio is ve
 
 - [1. Introduction to GNU Radio and Signals](#1-introduction-to-gnu-radio-and-signals)
     - [1.1. Installation Guide](#11-installation-guide)
-    - [1.2. Getting Started with GNU Radio](#12-getting-started-with-gnu-radio)
-        - [1.2.1. Let's get Familiar](#121-lets-get-familiar)
+        - [1.1.1. Getting Started with GNU Radio](#111-getting-started-with-gnu-radio)
+    - [1.2. Let's get Familiar](#12-lets-get-familiar)
+        - [1.2.1. A Cosine Waveform generator](#121-a-cosine-waveform-generator)
 
 <!-- /TOC -->
 
@@ -62,7 +63,7 @@ Sanity check as to whether the hardware is working (tunes to an local FM radio s
 	#alteratively
 	rtl_test -t
 ```
-## 1.2. Getting Started with GNU Radio
+### 1.1.1. Getting Started with GNU Radio
 
 We start start right away by typing ``gnuradio-companion`` in the terminal:
 
@@ -78,7 +79,7 @@ The “Options” block at the top left is used to set some general parameters o
 
 Every GRC window has these two very basic blocks. The white space is called the GRC canvas.
 
-### 1.2.1. Let's get Familiar
+## 1.2. Let's get Familiar
 
 On the right side of the window is a list of the block categories that are available. Click on a triangle next to a category to see what blocks are available in that category. We will look for the waveform generator category to look for the signal source block. Alternatively, we can click on the magnifying/looking glass to the top right and search for the block we need. We will add the ``signal source`` block to the canvas by double clicking on signal source
 
@@ -87,7 +88,7 @@ On the right side of the window is a list of the block categories that are avail
 To move a block on the canvas, grab it with the cursor, press the left mouse button, and move the block to the desired location. You can also rotate blocks by right-clicking on them and then clicking either “Rotate Counterclockwise” or “Rotate Clockwise”. Blocks can also be temporarily disabled by clicking on “Disable”, which is useful for debugging and what-if questions. The rearranged blocks with the options for the “Signal Source” visible are shown next.
 
 ----
-**~~Aside~~**
+**_Aside_**
 
 We notice that the “Signal Source” block has two ports, a grey one on the left and a blue one on the right. The color of a port indicates the type of data generated for an output port or the type of data accepted for an input. The most common data types that we will use are:
 
@@ -105,4 +106,13 @@ GNU Radio uses a stream processing model to process large amounts of data in rea
 
 ----
 
+### 1.2.1. A Cosine Waveform generator 
+
+As a first experiment we want to generate a real-valued cosine signal with frequency 1000 Hz (default for the “Signal Source”) and display it in the time and frequency domains. We start from a flowgraph which consists of a “Signal Source” connected to a “Throttle”. To make the output of the Signal Source real-valued, double-click on the block and in the Properties window that shows up click on “Complex” under “Output Type” and select “Float” as shown below. Then choose “QT” under “Instrumentation” (or just simply search for “QT GUI Sink”) and double-click on “QT GUI Sink”. This block will allow you to see the waveform at the input in the frequency as well as in the time domain. Change the data “Type” from “Complex” to “Real” and connect the input to the output of the “Throttle” block. Save the flowgraph, e.g., as ex01_1.grc
+
+![Example 1 Flowgraph](img/8.png)
+
+Now you can run the flowgraph by clicking on the green triangle above the canvas or by clicking “Run” on the menu bar. You can choose between the “Frequency Display” and the “Time Domain Display” tabs as shown below. Use the cursor to zoom in on a rectangluar region, increase the FFT size to 4096 or 8192, choose different types of windows, e.g. “rectangular” or “Kaiser” and observe the effects, especially on the Frequency Display. Note that the Frequency Display shows power spectral density (PSD) which is essentially proportional to the magnitude squared of the Fourier transform.
+
+![Example 1 Output Frequency](img/9.png) ![Example 1 Output Frequency](img/10.png)
 
