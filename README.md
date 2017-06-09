@@ -34,8 +34,9 @@ Add a paragraph about SDR and Radio Astronomy
 We shall explore SDR through guided labs leading up to a project of building a radio telescope and do some science.
 The modules would be structure as below and you get begin by clicking [here](labs)
 
-1. Introduction to GNU Radio & Signals
-2. First steps with SDR Hardware   
-3. Fourier Analysis   
-4. Filters   
-5. Project: A Radio Telescope    
+1. [Introduction to GNU Radio & Signals](lab/01)
+2. [First steps with SDR Hardware](lab/02)   
+3. [Introduction to Fourier Analysis](lab/03)   
+4. [Filters](lab/04)   
+5. [Fourier Analysis -- Expert Mode!](lab/05)
+6. [A Radio Telescope](lab/06)    

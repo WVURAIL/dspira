@@ -13,7 +13,7 @@ This page shall guide you through our primary tool -- GNU Radio. GNU Radio is ve
     - [1.2. Let's get Familiar](#12-lets-get-familiar)
         - [1.2.1. A Cosine Waveform generator](#121-a-cosine-waveform-generator)
         - [1.2.2. A Cosine Waveform Generator with Variable Frequency and Sound](#122-a-cosine-waveform-generator-with-variable-frequency-and-sound)
-        - [1.2.3. More General Waveform Generator](#123-more-general-waveform-generator)
+        - [1.2.3. A General Waveform Generator](#123-a-general-waveform-generator)
 
 <!-- /TOC -->
 
@@ -120,9 +120,11 @@ Now you can run the flowgraph by clicking on the green triangle above the canvas
 
 ### 1.2.2. A Cosine Waveform Generator with Variable Frequency and Sound
 
-Start from the ``ex01_1.grc`` flowgraph from our first exercise. Under “GUI Widgets” and “QT” select “QT GUI Range”. Double- click on the block so that you get to see its Properties. Change the “ID” from ``variable_qtgui_range_0`` to ``f0``. For the “Default Value” enter ``1000``. For the “Start” and the “Stop” values enter ``-2000`` and ``2000``, respectively. Next we double-click on the “Signal Source” block and change the “Frequency” entry from ``1000`` to ``f0``. The respective windows look like below:
+We can start from the ``ex01_1.grc`` flowgraph from our first exercise. Under “GUI Widgets” and “QT” select “QT GUI Range”. Double- click on the block so that you get to see its Properties. Change the “ID” from ``variable_qtgui_range_0`` to ``f0``. For the “Default Value” enter ``1000``. For the “Start” and the “Stop” values enter ``-2000`` and ``2000``, respectively. Next we double-click on the “Signal Source” block and change the “Frequency” entry from ``1000`` to ``f0``. The respective windows look like below:
 
-![QT Range properties](img/11.png) ![signal source default freq](img/12.png)
+![signal source default freq](img/12.png)
+
+![QT Range properties](img/11.png)
 
 To add a sound output, select “Audio” and then double-click on “Audio Sink”. Connect the “Audio Sink” input to the “Throttle” output and leave the “Sample Rate” at the default value of ``samp_rate (32000 samples/sec)``.
 
@@ -134,4 +136,6 @@ If you run the flowgraph now you will get a slider for changing the “Signal So
 
 Difference between \\(+ve\ \&\ -ve\\) frequencies?
 
-### 1.2.3. More General Waveform Generator
+### 1.2.3. A General Waveform Generator
+
+In this subsection we shall explore 
