@@ -9,12 +9,13 @@ This page shall guide you through our primary tool -- GNU Radio. GNU Radio is ve
 
 - [Introduction to GNU Radio and Signals](#introduction-to-gnu-radio-and-signals)
     - [Installation Guide](#installation-guide)
+    - [Getting Started with GNU Radio](#getting-started-with-gnu-radio)
 
 <!-- /TOC -->
 
 ## Installation Guide
 
-It is relative very easy to install. First install dependences and change directory to the appropriate one: 
+It is relative very easy to install *if you are installing on Linux*. We woudl recommend working on linux however installing on a macOS or windows system is, albiet very hard, possible. First, we install dependences and change directory to the appropriate one: 
 
 ```bash
 	sudo apt-get install git
@@ -56,3 +57,6 @@ Sanity check as to whether the hardware is working (tunes to an local FM radio s
 	#alteratively
 	rtl_test -t
 ```
+## Getting Started with GNU Radio
+
+We start start right away by tpying in the terminal
