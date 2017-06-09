@@ -120,10 +120,15 @@ Now you can run the flowgraph by clicking on the green triangle above the canvas
 
 ### 1.2.2. A Cosine Waveform Generator with Variable Frequency and Sound
 
-Start from the ``ex01_1.grc`` flowgraph from our first exercise. Under “GUI Widgets” and “QT” select “QT GUI Range”. Double- click on the block so that you get to see its Properties. Change the “ID” from ``variable_qtgui_range_0`` to ``f0``. For the “Default Value” enter ``1000``. For the “Start” and the “Stop” values enter ``-2000`` and ``2000``, respectively. Next we double-click on the “Signal Source” block and change the “Frequency” entry from ``1000`` to ``f0``. 
+Start from the ``ex01_1.grc`` flowgraph from our first exercise. Under “GUI Widgets” and “QT” select “QT GUI Range”. Double- click on the block so that you get to see its Properties. Change the “ID” from ``variable_qtgui_range_0`` to ``f0``. For the “Default Value” enter ``1000``. For the “Start” and the “Stop” values enter ``-2000`` and ``2000``, respectively. Next we double-click on the “Signal Source” block and change the “Frequency” entry from ``1000`` to ``f0``. The respective windows look like below:
 
 ![QT Range properties](img/11.png) ![signal source default freq](img/12.png)
 
-To add sound, select “Audio” and then double-click on “Audio Sink”. Connect the “Audio Sink” input to the “Throttle” output and leave the “Sample Rate” at the default value of samp_rate (32000 samples/sec).
+To add a sound output, select “Audio” and then double-click on “Audio Sink”. Connect the “Audio Sink” input to the “Throttle” output and leave the “Sample Rate” at the default value of ``samp_rate (32000 samples/sec)``.
+
+![Audio sink](img/13.png)
+
+Since the “Audio Sink” is a rate-setting hardware device we now have a potential timing conflict between the “Throttle” and the “Audio Sink” blocks. For this reason we “Bypass” the “Throttle” block by selecting it and typing B on the keyboard (or by double-clicking and selecting “Bypass”). After that the finished flowgraph looks like this. If you run the flowgraph now you will get a slider for changing the “Signal Source” frequency from -5000 to +5000 Hz, you will hear the coresponding sound, and you can choose to display the “Frequency” or the “Time Domain” graph.
+
 
 ### 1.2.3. More General Waveform Generator
