@@ -84,3 +84,18 @@ On the right side of the window is a list of the block categories that are avail
 
 ![adding signal source](5.png)
 
+To move a block on the canvas, grab it with the cursor, press the left mouse button, and move the block to the desired location. You can also rotate blocks by right-clicking on them and then clicking either “Rotate Counterclockwise” or “Rotate Clockwise”. Blocks can also be temporarily disabled by clicking on “Disable”, which is useful for debugging and what-if questions. The rearranged blocks with the options for the “Signal Source” visible are shown next.
+
+----
+Aside
+
+We notice that the “Signal Source” block has two ports, a grey one on the left and a blue one on the right. The color of a port indicates the type of data generated for an output port or the type of data accepted for an input. The most common data types that we will use are:
+
+	- Blue for complex-valued 32-bit floating point data samples (32 bits for each, real and imaginary part).
+	- Orange for real-valued 32-bit floating point data samples
+	- Blue-Green for real-valued 32-bit (long) integer data samples
+	- Yellow for real-valued 16-bit (short) integer data samples
+	- Magenta for real-valued 8-bit (byte) integer data samples
+
+![datatypes](6.png)
+----
