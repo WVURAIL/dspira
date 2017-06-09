@@ -139,3 +139,5 @@ Difference between \\(+ve\ \&\ -ve\\) frequencies?
 ### 1.2.3. A General Waveform Generator
 
 In this subsection we shall explore 
+
+[△ Go to the Top of the Page](#)
