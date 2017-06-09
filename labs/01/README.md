@@ -87,15 +87,22 @@ On the right side of the window is a list of the block categories that are avail
 To move a block on the canvas, grab it with the cursor, press the left mouse button, and move the block to the desired location. You can also rotate blocks by right-clicking on them and then clicking either “Rotate Counterclockwise” or “Rotate Clockwise”. Blocks can also be temporarily disabled by clicking on “Disable”, which is useful for debugging and what-if questions. The rearranged blocks with the options for the “Signal Source” visible are shown next.
 
 ----
-Aside
+**~~Aside~~**
 
 We notice that the “Signal Source” block has two ports, a grey one on the left and a blue one on the right. The color of a port indicates the type of data generated for an output port or the type of data accepted for an input. The most common data types that we will use are:
 
-	- Blue for complex-valued 32-bit floating point data samples (32 bits for each, real and imaginary part).
-	- Orange for real-valued 32-bit floating point data samples
-	- Blue-Green for real-valued 32-bit (long) integer data samples
-	- Yellow for real-valued 16-bit (short) integer data samples
-	- Magenta for real-valued 8-bit (byte) integer data samples
+- Blue for complex-valued 32-bit floating point data samples (32 bits for each, real and imaginary part).
+- Orange for real-valued 32-bit floating point data samples
+- Blue-Green for real-valued 32-bit (long) integer data samples
+- Yellow for real-valued 16-bit (short) integer data samples
+- Magenta for real-valued 8-bit (byte) integer data samples
 
 ![datatypes](6.png)
+
+GNU Radio uses a stream processing model to process large amounts of data in real-time as opposed to a array processing environment (like Matlab). In practice this means that each signal processing block has an independent scheduler running in its own execution thread and each block runs as fast as the CPU, dataflow, and buffer space allows. If there is a hardware source and/or sink that imposes a fixed rate (e.g., 44100 samples/sec for an audio signal, or 10 Msamples/sec for an SDR interface), then that determines the overall processing rate. But if both the source and the sink are implemented purely in software (like a signal generator feeding a time or frequency display), then some form of timing constraint must be imposed in software to limit the processing speed to a specified sampling rate. A special “Throttle” block that we will frequently encounter is used for this purpose. The figure below shows a “Throttle” block connected to the output of the “Signal Source” that we placed earlier. Click on one port follow it by clicking on the other port: this wires the output port of one block to the input port of another block. For the flowgrapg to work both ports must use data of the same type (i.e., both ports must be of the same color). If they are of different types, then the arrow of the connection will be red instead of black. It is worth noticing that the word “Throttle” appears in red on the Throttle block, indicating that there is something *wrong* with this block in the flowgraph. Things that can go wrong are unspecified or undefined parameters or, as is the case above, connections to/from some ports are missing. If you see any red arrows or red writing in a flowgraph you will not be able to run the flowgraph until the offending condition has been fixed.
+
+![throttle blocking](7.png)
+
 ----
+
+
