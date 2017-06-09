@@ -66,15 +66,15 @@ Sanity check as to whether the hardware is working (tunes to an local FM radio s
 
 We start start right away by typing ``gnuradio-companion`` in the terminal:
 
-![start gnuradio-companion](1.png)
+![start gnuradio-companion](img/1.png)
 
 This opens GNU Radio Companion (GRC):
 
-![gnuradio gui](2.png)
+![gnuradio gui](img/2.png)
 
 The “Options” block at the top left is used to set some general parameters of the flowgraph, such as metadata of the flowgraph like the title, author, etc., the graphical user interface (GUI) for widgets and result displays, or the size of the canvas on which the DSP blocks are placed. Right-click on the block and click on Properties (or double-click on the block) to see all the parameters that can be set. Below the Options block is a “Variable” block that is used to set values to variables that are used throughout the flowgraph like the sample rate, e.g.,\\(F_s = 32000 Hz\\) 
 
-![top_block](3.png) ![variable block](4.png)
+![top_block](img/3.png) ![variable block](img/4.png)
 
 Every GRC window has these two very basic blocks. The white space is called the GRC canvas.
 
@@ -82,7 +82,7 @@ Every GRC window has these two very basic blocks. The white space is called the 
 
 On the right side of the window is a list of the block categories that are available. Click on a triangle next to a category to see what blocks are available in that category. We will look for the waveform generator category to look for the signal source block. Alternatively, we can click on the magnifying/looking glass to the top right and search for the block we need. We will add the ``signal source`` block to the canvas by double clicking on signal source
 
-![adding signal source](5.png)
+![adding signal source](img/5.png)
 
 To move a block on the canvas, grab it with the cursor, press the left mouse button, and move the block to the desired location. You can also rotate blocks by right-clicking on them and then clicking either “Rotate Counterclockwise” or “Rotate Clockwise”. Blocks can also be temporarily disabled by clicking on “Disable”, which is useful for debugging and what-if questions. The rearranged blocks with the options for the “Signal Source” visible are shown next.
 
@@ -97,11 +97,11 @@ We notice that the “Signal Source” block has two ports, a grey one on the le
 - Yellow for real-valued 16-bit (short) integer data samples
 - Magenta for real-valued 8-bit (byte) integer data samples
 
-![datatypes](6.png)
+![datatypes](img/6.png)
 
 GNU Radio uses a stream processing model to process large amounts of data in real-time as opposed to a array processing environment (like Matlab). In practice this means that each signal processing block has an independent scheduler running in its own execution thread and each block runs as fast as the CPU, dataflow, and buffer space allows. If there is a hardware source and/or sink that imposes a fixed rate (e.g., 44100 samples/sec for an audio signal, or 10 Msamples/sec for an SDR interface), then that determines the overall processing rate. But if both the source and the sink are implemented purely in software (like a signal generator feeding a time or frequency display), then some form of timing constraint must be imposed in software to limit the processing speed to a specified sampling rate. A special “Throttle” block that we will frequently encounter is used for this purpose. The figure below shows a “Throttle” block connected to the output of the “Signal Source” that we placed earlier. Click on one port follow it by clicking on the other port: this wires the output port of one block to the input port of another block. For the flowgrapg to work both ports must use data of the same type (i.e., both ports must be of the same color). If they are of different types, then the arrow of the connection will be red instead of black. It is worth noticing that the word “Throttle” appears in red on the Throttle block, indicating that there is something *wrong* with this block in the flowgraph. Things that can go wrong are unspecified or undefined parameters or, as is the case above, connections to/from some ports are missing. If you see any red arrows or red writing in a flowgraph you will not be able to run the flowgraph until the offending condition has been fixed.
 
-![throttle blocking](7.png)
+![throttle blocking](img/7.png)
 
 ----
 
