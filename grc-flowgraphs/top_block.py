@@ -3,7 +3,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Top Block
-# Generated: Fri Jun  9 13:21:21 2017
+# Generated: Fri Jun  9 14:43:21 2017
 ##################################################
 
 if __name__ == '__main__':
@@ -18,12 +18,14 @@ if __name__ == '__main__':
 
 from PyQt4 import Qt
 from gnuradio import analog
+from gnuradio import audio
 from gnuradio import blocks
 from gnuradio import eng_notation
 from gnuradio import gr
 from gnuradio import qtgui
 from gnuradio.eng_option import eng_option
 from gnuradio.filter import firdes
+from gnuradio.qtgui import Range, RangeWidget
 from optparse import OptionParser
 import sip
 import sys
@@ -60,10 +62,14 @@ class top_block(gr.top_block, Qt.QWidget):
         # Variables
         ##################################################
         self.samp_rate = samp_rate = 32000
+        self.f0 = f0 = 1000
 
         ##################################################
         # Blocks
         ##################################################
+        self._f0_range = Range(-2000, 2000, 1, 1000, 200)
+        self._f0_win = RangeWidget(self._f0_range, self.set_f0, "f0", "counter_slider", float)
+        self.top_layout.addWidget(self._f0_win)
         self.qtgui_sink_x_0 = qtgui.sink_f(
         	1024, #fftsize
         	firdes.WIN_BLACKMAN_hARRIS, #wintype
@@ -83,14 +89,14 @@ class top_block(gr.top_block, Qt.QWidget):
 
 
 
-        self.blocks_throttle_0 = blocks.throttle(gr.sizeof_float*1, samp_rate,True)
-        self.analog_sig_source_x_0 = analog.sig_source_f(samp_rate, analog.GR_COS_WAVE, 1000, 1, 0)
+        self.audio_sink_0 = audio.sink(samp_rate, '', True)
+        self.analog_sig_source_x_0 = analog.sig_source_f(samp_rate, analog.GR_COS_WAVE, f0, 1, 0)
 
         ##################################################
         # Connections
         ##################################################
-        self.connect((self.analog_sig_source_x_0, 0), (self.blocks_throttle_0, 0))
-        self.connect((self.blocks_throttle_0, 0), (self.qtgui_sink_x_0, 0))
+        self.connect((self.analog_sig_source_x_0, 0), (self.audio_sink_0, 0))
+        self.connect((self.analog_sig_source_x_0, 0), (self.qtgui_sink_x_0, 0))
 
     def closeEvent(self, event):
         self.settings = Qt.QSettings("GNU Radio", "top_block")
@@ -103,8 +109,14 @@ class top_block(gr.top_block, Qt.QWidget):
     def set_samp_rate(self, samp_rate):
         self.samp_rate = samp_rate
         self.qtgui_sink_x_0.set_frequency_range(0, self.samp_rate)
-        self.blocks_throttle_0.set_sample_rate(self.samp_rate)
         self.analog_sig_source_x_0.set_sampling_freq(self.samp_rate)
+
+    def get_f0(self):
+        return self.f0
+
+    def set_f0(self, f0):
+        self.f0 = f0
+        self.analog_sig_source_x_0.set_frequency(self.f0)
 
 
 def main(top_block_cls=top_block, options=None):
