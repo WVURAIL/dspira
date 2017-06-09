@@ -1,19 +1,20 @@
 
 
-# Introduction to GNU Radio and Signals
+# 1. Introduction to GNU Radio and Signals
 
 This page shall guide you through our primary tool -- GNU Radio. GNU Radio is very popular and robust SOftware defined radio package. It is open source and is relatively very easy to use. All "coding" is done using flowgraphs comprised of  interconnected Digital Signal Processing (DSP) blocks. Most commonly used blocks come predefined as part of the software package however  one can program their own blocks as well. 
 
 
 <!-- TOC -->
 
-- [Introduction to GNU Radio and Signals](#introduction-to-gnu-radio-and-signals)
-    - [Installation Guide](#installation-guide)
-    - [Getting Started with GNU Radio](#getting-started-with-gnu-radio)
+- [1. Introduction to GNU Radio and Signals](#1-introduction-to-gnu-radio-and-signals)
+    - [1.1. Installation Guide](#11-installation-guide)
+    - [1.2. Getting Started with GNU Radio](#12-getting-started-with-gnu-radio)
+        - [1.2.1. Let's get Familiar](#121-lets-get-familiar)
 
 <!-- /TOC -->
 
-## Installation Guide
+## 1.1. Installation Guide
 
 It is relative very easy to install *if you are installing on Linux*. We woudl recommend working on linux however installing on a macOS or windows system is, albiet very hard, possible. First, we install dependences and change directory to the appropriate one: 
 
@@ -61,16 +62,25 @@ Sanity check as to whether the hardware is working (tunes to an local FM radio s
 	#alteratively
 	rtl_test -t
 ```
-## Getting Started with GNU Radio
+## 1.2. Getting Started with GNU Radio
 
 We start start right away by typing ``gnuradio-companion`` in the terminal:
 
 ![start gnuradio-companion](1.png)
 
-This opens the window with the gnuradio workspace:
+This opens GNU Radio Companion (GRC):
 
 ![gnuradio gui](2.png)
 
 The “Options” block at the top left is used to set some general parameters of the flowgraph, such as metadata of the flowgraph like the title, author, etc., the graphical user interface (GUI) for widgets and result displays, or the size of the canvas on which the DSP blocks are placed. Right-click on the block and click on Properties (or double-click on the block) to see all the parameters that can be set. Below the Options block is a “Variable” block that is used to set values to variables that are used throughout the flowgraph like the sample rate, e.g.,\\(F_s = 32000 Hz\\) 
 
 ![top_block](3.png) ![variable block](4.png)
+
+Every GRC window has these two very basic blocks. The white space is called the GRC canvas.
+
+### 1.2.1. Let's get Familiar
+
+On the right side of the window is a list of the block categories that are available. Click on a triangle next to a category to see what blocks are available in that category. We will look for the waveform generator category to look for the signal source block. Alternatively, we can click on the magnifying/looking glass to the top right and search for the block we need. We will add the ``signal source`` block to the canvas by double clicking on signal source
+
+![adding signal source](5.png)
+
