@@ -1,5 +1,4 @@
 
-#
 # 1. Introduction to GNU Radio and Signals
 
 This page shall guide you through our primary tool -- GNU Radio. GNU Radio is very popular and robust SOftware defined radio package. It is open source and is relatively very easy to use. All "coding" is done using flowgraphs comprised of  interconnected Digital Signal Processing (DSP) blocks. Most commonly used blocks come predefined as part of the software package however  one can program their own blocks as well. 
@@ -65,6 +64,9 @@ Sanity check as to whether the hardware is working (tunes to an local FM radio s
 	#alteratively
 	rtl_test -t
 ```
+
+[↑ Go to the Top of the Page](#)
+
 ### 1.1.1. Getting Started with GNU Radio
 
 We start start right away by typing ``gnuradio-companion`` in the terminal:
@@ -80,6 +82,8 @@ The “Options” block at the top left is used to set some general parameters o
 ![top_block](img/03.png) ![variable block](img/04.png)
 
 Every GRC window has these two very basic blocks. The white space is called the GRC canvas.
+
+[↑ Go to the Top of the Page](#)
 
 ## 1.2. Let's get Familiar
 
@@ -107,6 +111,7 @@ GNU Radio uses a stream processing model to process large amounts of data in rea
 ![throttle blocking](img/07.png)
 
 ----
+[↑ Go to the Top of the Page](#)
 
 ### 1.2.1. A Cosine Waveform generator 
 
@@ -136,8 +141,10 @@ If you run the flowgraph now you will get a slider for changing the “Signal So
 
 Difference between \\(+ve\ \&\ -ve\\) frequencies?
 
+[↑ Go to the Top of the Page](#)
+
 ### 1.2.3. A General Waveform Generator
 
 In this subsection we shall explore 
 
-[△ Go to the Top of the Page](#)
+[↑ Go to the Top of the Page](#)
