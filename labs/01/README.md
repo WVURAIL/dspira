@@ -71,4 +71,6 @@ This opens the window with the gnuradio workspace:
 
 ![gnuradio gui](2.png)
 
-The “Options” block at the top left is used to set some general parameters of the flowgraph, such as the graphical user interface (GUI) for widgets and result displays, or the size of the canvas on which the DSP blocks are placed. Right-click on the block and click on Properties (or double-click on the block) to see all the parameters that can be set. For now we will leave the default settings unchanged. Below the Options block is a “Variable” block that is used to set the sample rate, e.g., to \\(F_s = 32000 Hz\\) in the GRC window above.
+The “Options” block at the top left is used to set some general parameters of the flowgraph, such as metadata of the flowgraph like the title, author, etc., the graphical user interface (GUI) for widgets and result displays, or the size of the canvas on which the DSP blocks are placed. Right-click on the block and click on Properties (or double-click on the block) to see all the parameters that can be set. Below the Options block is a “Variable” block that is used to set values to variables that are used throughout the flowgraph like the sample rate, e.g.,\\(F_s = 32000 Hz\\) 
+
+![top_block](3.png) ![variable block](4.png)
