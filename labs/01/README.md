@@ -128,7 +128,10 @@ To add a sound output, select “Audio” and then double-click on “Audio Sink
 
 ![Audio sink](img/13.png)
 
-Since the “Audio Sink” is a rate-setting hardware device we now have a potential timing conflict between the “Throttle” and the “Audio Sink” blocks. For this reason we “Bypass” the “Throttle” block by selecting it and typing B on the keyboard (or by double-clicking and selecting “Bypass”). After that the finished flowgraph looks like this. If you run the flowgraph now you will get a slider for changing the “Signal Source” frequency from -5000 to +5000 Hz, you will hear the coresponding sound, and you can choose to display the “Frequency” or the “Time Domain” graph.
+If you run the flowgraph now you will get a slider for changing the “Signal Source” frequency from ``-2000 to +2000 Hz``, you will hear the coresponding sound, and you can choose to display the “Frequency” or the “Time Domain” graph.
 
+![GUI out ex01_2](img/14.png)
+
+Difference between \\(+ve\ \&\ -ve\\) frequencies?
 
 ### 1.2.3. More General Waveform Generator
