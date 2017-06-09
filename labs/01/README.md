@@ -23,11 +23,15 @@ It is relative very easy to install *if you are installing on Linux*. We woudl r
 	sudo apt-get install libssl-dev
 	sudo apt-get install python-dev
 	sudo pip install pyopengl pyopengl_accelerate
-	mkdir ~/gnuradio
-	cd ~/gnuradio
+```
+In your home directory make a directory where we would install gnuradio:
+
+```bash
+	mkdir ~/sdr
+	cd ~/sdr
 ```
 
-Install the package manager  PyBOMBS required to install gnuradio and add the recipes to the package manager 
+To always have the most recent version of the sofware, we use *PyBOMBS*. It is a package manager with all the latest version version of the sdr software. We install the package manager and then we add the 'recipes' to the package manager:
 
 ```bash
 	sudo apt-get install python-pip
@@ -38,13 +42,13 @@ Install the package manager  PyBOMBS required to install gnuradio and add the re
 	pybombs recipes list
 ```
 
-Install gnuradio gr-osmosdr
+Install ``gnuradio`` and the hardware drivers for gnuradio, ``gr-osmosdr``:
 
 ```bash
 	pybombs prefix init ~/gnuradio -a myprefix #kind of tells the package manager the directory where to arrange all installs within
 	pybombs install gnuradio gr-osmosdr
 ```
-Add the environmental variables script to .bashrc
+Add the environmental variables script to ``.bashrc``
 
 ```bash
 	echo "source ~/gnuradio/setup_env.sh" >> ~/.bashrc
