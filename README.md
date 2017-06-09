@@ -35,7 +35,7 @@ We shall explore SDR through guided labs leading up to a project of building a r
 The modules would be structure as below and you get begin by clicking [here](labs)
 
 1. Introduction to GNU Radio & Signals
-2. Signal Modulation & First steps with SDR Hardware   
-3. Fourier Transforms   
+2. First steps with SDR Hardware   
+3. Fourier Analysis   
 4. Filters   
 5. Project: A Radio Telescope    

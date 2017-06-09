@@ -13,6 +13,7 @@ This page shall guide you through our primary tool -- GNU Radio. GNU Radio is ve
     - [1.2. Let's get Familiar](#12-lets-get-familiar)
         - [1.2.1. A Cosine Waveform generator](#121-a-cosine-waveform-generator)
         - [1.2.2. A Cosine Waveform Generator with Variable Frequency and Sound](#122-a-cosine-waveform-generator-with-variable-frequency-and-sound)
+        - [1.2.3. More General Waveform Generator](#123-more-general-waveform-generator)
 
 <!-- /TOC -->
 
@@ -121,4 +122,4 @@ Now you can run the flowgraph by clicking on the green triangle above the canvas
 
 Start from the ``ex01_1.grc`` flowgraph from our first exercise. Under “GUI Widgets” and “QT” select “QT GUI Range”. Double- click on the block so that you get to see its Properties.
 
-
+### 1.2.3. More General Waveform Generator
