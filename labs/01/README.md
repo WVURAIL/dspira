@@ -145,6 +145,6 @@ Difference between \\(+ve\ \&\ -ve\\) frequencies?
 
 ### 1.2.3. A General Waveform Generator
 
-In this subsection we shall explore 
+In this subsection we shall expand upon the previois exercise by 
 
-[↑ Go to the Top of the Page](#) 							[Next Lab](../02)
+[↑ Go to the Top of the Page](#) ......[Next Lab](../02)
