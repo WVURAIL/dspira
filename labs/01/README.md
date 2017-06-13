@@ -135,7 +135,7 @@ To add a sound output, select “Audio” and then double-click on “Audio Sink
 
 ![Audio sink](img/13.png)
 
-If you run the flowgraph now you will get a slider for changing the “Signal Source” frequency from ``-2000 to +2000 Hz``, you will hear the coresponding sound, and you can choose to display the “Frequency” or the “Time Domain” graph.
+Save the flowgraph, e.g., as ``ex01_2.grc``. If you run the flowgraph now you will get a slider for changing the “Signal Source” frequency from ``-2000 to +2000 Hz``, you will hear the coresponding sound, and you can choose to display the “Frequency” or the “Time Domain” graph.
 
 ![GUI out ex01_2](img/14.png)
 
@@ -145,6 +145,10 @@ Difference between \\(+ve\ \&\ -ve\\) frequencies?
 
 ### 1.2.3. A General Waveform Generator
 
-In this subsection we shall expand upon the previois exercise by 
+In this subsection we shall expand upon the previous exercise and learn how to play around with various useful GNU Radio Companion features.  Let us begin by changing ``ex01_2.grc`` flowgraph by removing the “Audio Sink” and the “QT GUI Sink”
+
+![GUI start ex01_3](img/15.png)
+
+
 
 [↑ Go to the Top of the Page](#) ......[Next Lab](../02)
