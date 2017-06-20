@@ -145,7 +145,7 @@ Difference between \\(+ve\ \&\ -ve\\) frequencies?
 
 ### 1.2.3. A General Waveform Generator
 
-In this subsection we shall expand upon the previous exercise and learn how to play around with various useful GNU Radio Companion features.  Let us begin by changing ``ex01_2.grc`` flowgraph by removing the “Audio Sink” and the “QT GUI Sink”. Save this new flowgraph as ``ex01_3.grc``:1k
+In this subsection we shall expand upon the previous exercise and learn how to play around with various useful GNU Radio Companion features.  Let us begin by changing ``ex01_2.grc`` flowgraph by removing the “Audio Sink” and the “QT GUI Sink”. Save this new flowgraph as ``ex01_3.grc``
 
 ![GUI start ex01_3](img/15.png)
 
@@ -168,5 +168,13 @@ Finally, double-click on the “Signal Source” block and modify the “Propert
 Double click on the sinks and change to autoscale property to "Yes" respectively. Click the green triangle above the flowgraph or click on “Run” and “Execute” in the GRC menu bar. The output is as below:
 
 ![Output 1](img/20.png)
+
+The arrangement of graphical elements, such as sliders, choosers, time and frequency sinks, etc., used in a GRC flowgraph can be modified by specifying grid positioning arguments in the “GUI Hint” fields of individual blocks. A grid positioning argument is a list of four integers of the form
+
+```
+(row, column, row span, column span)
+```
+
+If the “GUI Hint” entry is left blank, then the graphical elements are stacked vertically on top of each other. Otherwise, they are placed in the specified ``row``  and the specified ``column``, spanning ``row span`` rows and ``col span`` columns. Note that ``rowspan > 1`` and ``colspan > 1`` are required. The two tables below show the general row and column numbering on the left and the placement of the graphical elements with the corresponding “GUI Hint” values for this example on the right.
 
 [↑ Go to the Top of the Page](#) ......[Next Lab](../02)
