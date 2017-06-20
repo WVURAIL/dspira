@@ -172,7 +172,7 @@ Double click on the sinks and change to autoscale property to "Yes" respectively
 The arrangement of graphical elements, such as sliders, choosers, time and frequency sinks, etc., used in a GRC flowgraph can be modified by specifying grid positioning arguments in the “GUI Hint” fields of individual blocks. A grid positioning argument is a list of four integers of the form
 
 ```
-(row, column, row span, column span)
+row, column, row span, column span
 ```
 
 If the “GUI Hint” entry is left blank, then the graphical elements are stacked vertically on top of each other. Otherwise, they are placed in the specified ``row``  and the specified ``column``, spanning ``row span`` rows and ``col span`` columns. Note that ``rowspan >= 1`` and ``colspan >= 1`` are required.
@@ -184,9 +184,9 @@ If the “GUI Hint” entry is left blank, then the graphical elements are stack
 
 
 We shall rearrange our signal generator with the following GUI Hints
-|	|	|
-|---	|---	|
+
 |Offset Slider (0,0,1,1)    | Waveform Selector (0,1,2,1) | 
+|---	|---	|
 |Frequency Slider (1,0,1,1) | 				"		  | 
 |Time Display (2,0,1,1)		  | Frequency Display (2,1,1,1)|
 
