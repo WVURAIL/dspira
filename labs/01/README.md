@@ -190,6 +190,13 @@ We shall rearrange our signal generator with the following GUI Hints
 |Frequency Slider (1,0,1,1) | 				"		  | 
 |Time Display (2,0,1,1)		  | Frequency Display (2,1,1,1)|
 
+The GUI hints are updated as seen the following dialog boxes:
+
+![GUI Hints](img/211.png)
+![GUI Hints](img/212.png)
+![GUI Hints](img/213.png)
+![GUI Hints](img/214.png)
+![GUI Hints](img/215.png)
 
 This give the following Output:
 
