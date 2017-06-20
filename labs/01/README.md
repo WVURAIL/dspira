@@ -145,10 +145,28 @@ Difference between \\(+ve\ \&\ -ve\\) frequencies?
 
 ### 1.2.3. A General Waveform Generator
 
-In this subsection we shall expand upon the previous exercise and learn how to play around with various useful GNU Radio Companion features.  Let us begin by changing ``ex01_2.grc`` flowgraph by removing the “Audio Sink” and the “QT GUI Sink”
+In this subsection we shall expand upon the previous exercise and learn how to play around with various useful GNU Radio Companion features.  Let us begin by changing ``ex01_2.grc`` flowgraph by removing the “Audio Sink” and the “QT GUI Sink”. Save this new flowgraph as ``ex01_3.grc``:1k
 
 ![GUI start ex01_3](img/15.png)
 
+We would like to build a waveform generator that can produce real-valued “Cosine”, “Rectangular”, and “Triangular” waveforms with variable frequency and variable dc offset.  To this end we need “QT GUI Range” blocks and a “QT GUI Chooser (from “GUI Widgets” and “QT”). Connect a “QT GUI Time Sink” and a “QT GUI Frequency Sink” (from “Instrumen- tation” and “QT”) to the output of the “Throttle” Block. Change the input type of the Sink blocks from “Complex” to “Float”. The Flowgraph should look like this:
 
+![GUI start ex01_3](img/16.png)
+
+Now, double-click on the second “QT GUI Range” which will be used to adjust the offset of the waveform and modify the “Properties” as shown below:
+
+![Offset](img/17.png)
+
+Next, double-click on the “QT GUI Chooser” that will be used to select different waveforms. The (integer) code for “Cosine” is 102, for “Square” it is 103, for “Triangle” it is 104 and for "Sawtooth" it is 105
+
+![Waveform chooser](img/18.png)
+
+Finally, double-click on the “Signal Source” block and modify the “Properties” to look as follows.
+
+![Waveform properties](img/19.png)
+
+Double click on the sinks and change to autoscale property to "Yes" respectively. Click the green triangle above the flowgraph or click on “Run” and “Execute” in the GRC menu bar. The output is as below:
+
+![Output 1](img/20.png)
 
 [↑ Go to the Top of the Page](#) ......[Next Lab](../02)
