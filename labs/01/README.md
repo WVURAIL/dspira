@@ -175,6 +175,26 @@ The arrangement of graphical elements, such as sliders, choosers, time and frequ
 (row, column, row span, column span)
 ```
 
-If the “GUI Hint” entry is left blank, then the graphical elements are stacked vertically on top of each other. Otherwise, they are placed in the specified ``row``  and the specified ``column``, spanning ``row span`` rows and ``col span`` columns. Note that ``rowspan > 1`` and ``colspan > 1`` are required. The two tables below show the general row and column numbering on the left and the placement of the graphical elements with the corresponding “GUI Hint” values for this example on the right.
+If the “GUI Hint” entry is left blank, then the graphical elements are stacked vertically on top of each other. Otherwise, they are placed in the specified ``row``  and the specified ``column``, spanning ``row span`` rows and ``col span`` columns. Note that ``rowspan >= 1`` and ``colspan >= 1`` are required.
+
+|  (0,0) |  (0,1) 	|   (0,2)	|   (0,3)	|   
+|---	|---	|---	|---	|---	|
+|  (1,0)	|   (1,1)	|   (1,2)	|   (1,3)	|   	
+|  (1,0)	|   (1,1)	|   (1,2)	|   (1,3)	|   	
+
+
+We shall rearrange our signal generator with the following GUI Hints
+|	|	|
+|---	|---	|
+|Offset Slider (0,0,1,1)    | Waveform Selector (0,1,2,1) | 
+|Frequency Slider (1,0,1,1) | 				"		  | 
+|Time Display (2,0,1,1)		  | Frequency Display (2,1,1,1)|
+
+
+This give the following Output:
+
+![Output 1_rearranged](img/21.png)
+
+
 
 [↑ Go to the Top of the Page](#) ......[Next Lab](../02)
