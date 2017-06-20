@@ -3,7 +3,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Top Block
-# Generated: Tue Jun 20 12:12:46 2017
+# Generated: Tue Jun 20 12:41:00 2017
 ##################################################
 
 if __name__ == '__main__':
@@ -71,22 +71,31 @@ class top_block(gr.top_block, Qt.QWidget):
         ##################################################
         self._waveform_options = (102, 103, 104, 105, )
         self._waveform_labels = ('Cosine', 'Square', 'Triangle', 'Sawtooth', )
-        self._waveform_tool_bar = Qt.QToolBar(self)
-        self._waveform_tool_bar.addWidget(Qt.QLabel("waveform"+": "))
-        self._waveform_combo_box = Qt.QComboBox()
-        self._waveform_tool_bar.addWidget(self._waveform_combo_box)
-        for label in self._waveform_labels: self._waveform_combo_box.addItem(label)
-        self._waveform_callback = lambda i: Qt.QMetaObject.invokeMethod(self._waveform_combo_box, "setCurrentIndex", Qt.Q_ARG("int", self._waveform_options.index(i)))
+        self._waveform_group_box = Qt.QGroupBox('Waveform Select')
+        self._waveform_box = Qt.QVBoxLayout()
+        class variable_chooser_button_group(Qt.QButtonGroup):
+            def __init__(self, parent=None):
+                Qt.QButtonGroup.__init__(self, parent)
+            @pyqtSlot(int)
+            def updateButtonChecked(self, button_id):
+                self.button(button_id).setChecked(True)
+        self._waveform_button_group = variable_chooser_button_group()
+        self._waveform_group_box.setLayout(self._waveform_box)
+        for i, label in enumerate(self._waveform_labels):
+        	radio_button = Qt.QRadioButton(label)
+        	self._waveform_box.addWidget(radio_button)
+        	self._waveform_button_group.addButton(radio_button, i)
+        self._waveform_callback = lambda i: Qt.QMetaObject.invokeMethod(self._waveform_button_group, "updateButtonChecked", Qt.Q_ARG("int", self._waveform_options.index(i)))
         self._waveform_callback(self.waveform)
-        self._waveform_combo_box.currentIndexChanged.connect(
+        self._waveform_button_group.buttonClicked[int].connect(
         	lambda i: self.set_waveform(self._waveform_options[i]))
-        self.top_layout.addWidget(self._waveform_tool_bar)
+        self.top_grid_layout.addWidget(self._waveform_group_box, 0,1,2,1)
         self._offset_range = Range(-1, 1, 0.01, 0, 200)
         self._offset_win = RangeWidget(self._offset_range, self.set_offset, "offset", "counter_slider", float)
-        self.top_layout.addWidget(self._offset_win)
+        self.top_grid_layout.addWidget(self._offset_win, 0,0,1,1)
         self._f0_range = Range(-2000, 2000, 1, 1000, 200)
         self._f0_win = RangeWidget(self._f0_range, self.set_f0, "f0", "counter_slider", float)
-        self.top_layout.addWidget(self._f0_win)
+        self.top_grid_layout.addWidget(self._f0_win, 1,0,1,1)
         self.qtgui_time_sink_x_0 = qtgui.time_sink_f(
         	1024, #size
         	samp_rate, #samp_rate
@@ -133,7 +142,7 @@ class top_block(gr.top_block, Qt.QWidget):
             self.qtgui_time_sink_x_0.set_line_alpha(i, alphas[i])
 
         self._qtgui_time_sink_x_0_win = sip.wrapinstance(self.qtgui_time_sink_x_0.pyqwidget(), Qt.QWidget)
-        self.top_layout.addWidget(self._qtgui_time_sink_x_0_win)
+        self.top_grid_layout.addWidget(self._qtgui_time_sink_x_0_win, 2,0,1,1)
         self.qtgui_freq_sink_x_0 = qtgui.freq_sink_f(
         	1024, #size
         	firdes.WIN_BLACKMAN_hARRIS, #wintype
@@ -176,7 +185,7 @@ class top_block(gr.top_block, Qt.QWidget):
             self.qtgui_freq_sink_x_0.set_line_alpha(i, alphas[i])
 
         self._qtgui_freq_sink_x_0_win = sip.wrapinstance(self.qtgui_freq_sink_x_0.pyqwidget(), Qt.QWidget)
-        self.top_layout.addWidget(self._qtgui_freq_sink_x_0_win)
+        self.top_grid_layout.addWidget(self._qtgui_freq_sink_x_0_win, 2,1,1,1)
         self.blocks_throttle_0 = blocks.throttle(gr.sizeof_float*1, samp_rate,True)
         self.analog_sig_source_x_0 = analog.sig_source_f(samp_rate, waveform, f0, 1, offset)
 

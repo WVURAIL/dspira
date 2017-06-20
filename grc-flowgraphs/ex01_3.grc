@@ -101,7 +101,7 @@
     </param>
     <param>
       <key>gui_hint</key>
-      <value></value>
+      <value>1,0,1,1</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -164,7 +164,7 @@
     </param>
     <param>
       <key>gui_hint</key>
-      <value></value>
+      <value>0,0,1,1</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -254,7 +254,7 @@
     </param>
     <param>
       <key>gui_hint</key>
-      <value></value>
+      <value>0,1,2,1</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -286,7 +286,7 @@
     </param>
     <param>
       <key>label</key>
-      <value></value>
+      <value>Waveform Select</value>
     </param>
     <param>
       <key>labels</key>
@@ -330,7 +330,7 @@
     </param>
     <param>
       <key>widget</key>
-      <value>combo_box</value>
+      <value>radio_buttons</value>
     </param>
   </block>
   <block>
@@ -503,7 +503,7 @@
     </param>
     <param>
       <key>gui_hint</key>
-      <value></value>
+      <value>2,1,1,1</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -790,7 +790,7 @@
     </param>
     <param>
       <key>gui_hint</key>
-      <value></value>
+      <value>2,0,1,1</value>
     </param>
     <param>
       <key>_rotation</key>
