@@ -225,7 +225,7 @@ We shall import a standard library called ``numpy``. It allows us to make matric
 
 ![numpy](img/23.png)
 
-We shall make a rectangular pulse with variable width ``tau`` going from 0 to 32ms, we establish that range using the "QT GUI Range block"  
+We shall make a rectangular pulse with variable width ``tau`` going from 0 to 10ms, we establish that range using the "QT GUI Range block"  
 
 The function shall be generated shall be generated using the following python code:
 
@@ -233,13 +233,23 @@ The function shall be generated shall be generated using the following python co
 	np.hstack((np.ones(int(tau*samp_rate)), np.zeros(int((0.1-tau)*samp_rate))))
 ```
 
-Before we place our blocks, we need to add consider a "Tag Object" block [^stream]. It basically helps us synchronize the sinks when the generated *stream tag* associated with our vector source is stopped by the sink. This will alow us to observe the generated pulse. Vector Source has the “Repeat” field which is set to “Yes” so that the pulse of width tau is repeated periodically. The properties of the blocks are set as below:
+Before we place our blocks, we need to add consider a "Tag Object" block [^stream]. It basically helps us synchronize the sinks when the generated *stream tag* associated with our vector source is stopped by the sink. This will alow us to observe the generated pulse. Vector Source has the “Repeat” field which is set to “Yes” so that the pulse of width tau is repeated periodically. Note the "Tag" field. The properties of the blocks are set as below:
 
 [^stream]: For a technical explaionation of the block [click here](https://gnuradio.org/doc/doxygen/page_stream_tags.html)
 
 ![tau](img/24.png)
 ![tag](img/25.png)
 ![vector](img/26.png)
+
+We set the sinks to have the trigger mode to "tag" and  enter the "Tag Key"  ``t0`` and change the "Number of Points" in the time sink to "1024 * 3" and in the frequency sink to "1024 * 6". This is to properly visualize the signal and its frequency components.  
+
+![timetrigger](img/27.png)
+![freqtrigger](img/28.png)
+
+We should then have the flowgraph and output that looks like this:
+
+![ex01_4](img/29.png)
+![ex01_4_output](img/30.png)
 
 [↑ Go to the Top of the Page](#)
 
