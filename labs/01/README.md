@@ -206,6 +206,8 @@ This give the following Output:
 
 ![Output 1_rearranged](img/21.png)
 
+[↑ Go to the Top of the Page](#)
+
 ## 1.3. GNU Radio and Python
 
 GNU Radio is written in python and the final code that does the magic is all in Python. Python is very powerful programing language known for its readability and versitality. The flow graphs created in GNU radio compinion are converted into a Python script. All the predefined blocks are written in Python and/or C. One can make their own GNU Radio blocks by coding in Python or C. If you want to know how to do this in depth you can click on this guided tutorial [here](https://wiki.gnuradio.org/index.php/Guided_Tutorial_GNU_Radio_in_Python)
@@ -223,7 +225,23 @@ We shall import a standard library called ``numpy``. It allows us to make matric
 
 ![numpy](img/23.png)
 
+We shall make a rectangular pulse with variable width ``tau`` going from 0 to 32ms, we establish that range using the "QT GUI Range block"  
 
+The function shall be generated shall be generated using the following python code:
+
+```
+	np.hstack((np.ones(int(tau*samp_rate)), np.zeros(int((0.1-tau)*samp_rate))))
+```
+
+Before we place our blocks, we need to add consider a "Tag Object" block [^stream tag]
+
+[^stream tag]: https://gnuradio.org/doc/doxygen/page_stream_tags.html
+
+![tau](img/24.png)
+![tag](img/25.png)
+![vector](img/26.png)
+
+[↑ Go to the Top of the Page](#)
 
 ## Note on the Frequency Display
 
