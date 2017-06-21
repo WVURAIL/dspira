@@ -199,7 +199,7 @@
     </param>
     <param>
       <key>stop</key>
-      <value>0.032</value>
+      <value>0.1</value>
     </param>
     <param>
       <key>rangeType</key>
@@ -399,7 +399,7 @@
     </param>
     <param>
       <key>fftsize</key>
-      <value>1024*3</value>
+      <value>1024*6</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -962,7 +962,7 @@
     </param>
     <param>
       <key>size</key>
-      <value>1024</value>
+      <value>1024*3</value>
     </param>
     <param>
       <key>srate</key>

@@ -3,7 +3,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Top Block
-# Generated: Wed Jun 21 14:24:36 2017
+# Generated: Wed Jun 21 14:46:22 2017
 ##################################################
 
 if __name__ == '__main__':
@@ -68,11 +68,11 @@ class top_block(gr.top_block, Qt.QWidget):
         ##################################################
         # Blocks
         ##################################################
-        self._tau_range = Range(0, 0.032, 0.001, 0.01, 200)
+        self._tau_range = Range(0, 0.1, 0.001, 0.01, 200)
         self._tau_win = RangeWidget(self._tau_range, self.set_tau, "tau", "counter_slider", float)
         self.top_layout.addWidget(self._tau_win)
         self.qtgui_time_sink_x_0 = qtgui.time_sink_f(
-        	1024, #size
+        	1024*3, #size
         	samp_rate, #samp_rate
         	"", #name
         	1 #number of inputs
@@ -119,7 +119,7 @@ class top_block(gr.top_block, Qt.QWidget):
         self._qtgui_time_sink_x_0_win = sip.wrapinstance(self.qtgui_time_sink_x_0.pyqwidget(), Qt.QWidget)
         self.top_grid_layout.addWidget(self._qtgui_time_sink_x_0_win, 0,0)
         self.qtgui_freq_sink_x_0 = qtgui.freq_sink_f(
-        	1024*3, #size
+        	1024*6, #size
         	firdes.WIN_BLACKMAN_hARRIS, #wintype
         	0, #fc
         	samp_rate, #bw
