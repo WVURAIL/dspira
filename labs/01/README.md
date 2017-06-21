@@ -60,6 +60,7 @@ Add the environmental variables script to ``.bashrc``
 ```bash
 	echo "source ~/gnuradio/setup_env.sh" >> ~/.bashrc
 ```
+<!--
 Sanity check as to whether the hardware is working (tunes to an local FM radio station at 100.1 Mhz) 
 
 ```bash
@@ -67,7 +68,7 @@ Sanity check as to whether the hardware is working (tunes to an local FM radio s
     
 	#alteratively
 	rtl_test -t
-```
+```-->
 
 [↑ Go to the Top of the Page](#)
 
@@ -260,6 +261,11 @@ This particular display may not seem very intuitive for the those seeing it for 
 
 ## 1.4. Exercises
 
-1. 
+1. GNU Radio has a host of "Math Operators" that will allow you to perform a host of operations:
+
+![ex01_4_output](img/31.png)
+ 	
+	Use mulitple signal generators from section [1.2.3](#123-a-general-waveform-generator) to add and subtract and multiply to form new waveforms.
+
 
 [↑ Go to the Top of the Page](#) ......[Next Lab](../02)
