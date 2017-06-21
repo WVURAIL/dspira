@@ -233,9 +233,9 @@ The function shall be generated shall be generated using the following python co
 	np.hstack((np.ones(int(tau*samp_rate)), np.zeros(int((0.1-tau)*samp_rate))))
 ```
 
-Before we place our blocks, we need to add consider a "Tag Object" block [^stream tag]
+Before we place our blocks, we need to add consider a "Tag Object" block [^stream]
 
-[^stream tag]: https://gnuradio.org/doc/doxygen/page_stream_tags.html
+[^stream]: https://gnuradio.org/doc/doxygen/page_stream_tags.html
 
 ![tau](img/24.png)
 ![tag](img/25.png)
