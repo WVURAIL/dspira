@@ -13,6 +13,10 @@ This page shall guide you through our primary tool -- GNU Radio. GNU Radio is ve
         - [1.2.1. A Cosine Waveform generator](#121-a-cosine-waveform-generator)
         - [1.2.2. A Cosine Waveform Generator with Variable Frequency and Sound](#122-a-cosine-waveform-generator-with-variable-frequency-and-sound)
         - [1.2.3. A General Waveform Generator](#123-a-general-waveform-generator)
+    - [1.3. GNU Radio and Python](#13-gnu-radio-and-python)
+        - [1.3.1. Arbitrary Function generation](#131-arbitrary-function-generation)
+    - [Note on the Frequency Display](#note-on-the-frequency-display)
+    - [1.4. Exercises](#14-exercises)
 
 <!-- /TOC -->
 
@@ -202,6 +206,32 @@ This give the following Output:
 
 ![Output 1_rearranged](img/21.png)
 
+## 1.3. GNU Radio and Python
 
+GNU Radio is written in python and the final code that does the magic is all in Python. Python is very powerful programing language known for its readability and versitality. The flow graphs created in GNU radio compinion are converted into a Python script. All the predefined blocks are written in Python and/or C. One can make their own GNU Radio blocks by coding in Python or C. If you want to know how to do this in depth you can click on this guided tutorial [here](https://wiki.gnuradio.org/index.php/Guided_Tutorial_GNU_Radio_in_Python)
+
+
+### 1.3.1. Arbitrary Function generation 
+
+The fact that the end product and much of the guts of GNU Radio is in Python implied we can exploit the standard library of python or our own scripts to test out severel things. We shall look into making any arbitrary wave form. This is useful for testing systems designed in gnuradio
+
+To import a library from python we use the "import" block and we shall employ the "vector source" block to input our arbitrary function. We shall contruct a flow graph similar to ``ex01_3.grc`` except we remove the "signal source" and replace with "vector source", add an "import block" and we shall not worry about the GUI elements for this one. We should have a flowgraph that looks like this:
+
+![vector source](img/22.png)
+
+We shall import a standard library called ``numpy``. It allows us to make matrices/vector and manipulate them easily. Double click the import block and fill out the import field as below:
+
+![numpy](img/23.png)
+
+
+
+## Note on the Frequency Display
+
+This particular display may not seem very intuitive for the those seeing it for the first time. It basically shows, as the name suggests, the 'frequency' components of the signal. This means the peaks in the graph represents the frequencies of the periodic signals that make up that particular signal. This is the basis of a very important concept called Fourier Analysis. Detailed discussions shall be done in class and systematically demonstrated in [Lab 3](../03) and [Lab 5](../05)
+
+
+## 1.4. Exercises
+
+1. 
 
 [↑ Go to the Top of the Page](#) ......[Next Lab](../02)
