@@ -1,5 +1,5 @@
-# Software Defined Radio
+# Software Defined Radio - Hardware
 
-$$2\cdot \lambda$$
+Most of the signal processing is done on the computer through gnuradio but the signal needs ot be in digital form to 
 
-\\[ \frac{1}{n^{2}} \\]
+
