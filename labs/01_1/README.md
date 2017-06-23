@@ -28,6 +28,6 @@ Run the flowgraph, with the scale factor at 1.  What does the time plot look lik
 
 Now also try different distribution sources.  Use the "Noise Source" block and set it to a gaussian distribution.  What does the timestream look like?  What about the histogram?
 
-Now again use a cosine input signal as you've used in a previous excercise.  What does the timeseries look like?  The histogram?  A cosine signal is not very random.  What if instead, each measured point in time of the cosine was completely randomized (could also think of using a uniform random signal put through a cosine function)?  Would the histogram look any different?  This would also be a random signal, and has the functional form $\frac{A}{\sqrt{1-y^2}}$, which should agree with your histogram.  
+Now again use a cosine input signal as you've used in a previous excercise.  What does the timeseries look like?  The histogram?  A cosine signal is not very random.  What if instead, each measured point in time of the cosine was completely randomized (could also think of using a uniform random signal put through a cosine function)?  Would the histogram look any different?  This would also be a random signal, and has the functional form \[\frac{A}{\sqrt{1-y^2}}\], which should agree with your histogram.  
 
 
