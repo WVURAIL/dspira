@@ -8,4 +8,4 @@
 3. [Introduction to Fourier Analysis](03)   
 4. [Filters](04)   
 5. [Fourier Analysis -- Expert Mode!](05)
-6. [A Radio Telescope](06)    
+6. [A Radio Telescope](06)
