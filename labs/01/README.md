@@ -29,6 +29,7 @@ It is relative very easy to install *if you are installing on Linux*. We woudl r
 	sudo apt-get install libyaml-dev
 	sudo apt-get install libssl-dev
 	sudo apt-get install python-dev
+	sudo apt-get install python-pip
 	sudo pip install pyopengl pyopengl_accelerate
 ```
 In your home directory make a directory where we would install gnuradio:
@@ -41,7 +42,6 @@ In your home directory make a directory where we would install gnuradio:
 To always have the most recent version of the sofware, we use *PyBOMBS*. It is a package manager with all the latest version version of the sdr software. We install the package manager and then we add the 'recipes' to the package manager:
 
 ```bash
-	sudo apt-get install python-pip
 	sudo pip install --upgrade pip
 	sudo pip install pybombs
 	pybombs recipes add gr-recipes git+https://github.com/gnuradio/gr-recipes.git
