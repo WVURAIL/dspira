@@ -60,6 +60,26 @@ Add the environmental variables script to ``.bashrc``
 ```bash
 	echo "source ~/gnuradio/setup_env.sh" >> ~/.bashrc
 ```
+
+The hardware we use requires us to tell the computer to allow us to use our device:
+
+```bash
+cd ~/gnuradio/src/airspy/
+cd build
+cmake ../ -DINSTALL_UDEV_RULES=ON
+make
+sudo make install
+sudo ldconfig
+cp ../airspy-tools/52-airspy.rules /etc/udev/rules.d/
+sudo ldconfig
+```
+
+Restart Computer to make all the changes work.
+
+PLug in the box into the USB port. Open terminal and type ``airspy_info``. It woudl spit out all the hardware info. 
+
+*For other hardware devices in the ``~/gnuradio/src/`` directory are drivers for them. Move into them and follow similar procedure as mentioned above. Look for the correct for each ``.rules`` files in their directory and copy it into ``/etc/udev/rules.d/``*
+
 <!--
 Sanity check as to whether the hardware is working (tunes to an local FM radio station at 100.1 Mhz) 
 
