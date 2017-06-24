@@ -30,5 +30,5 @@ Now also try different distribution sources.  Use the "Noise Source" block and s
 
 Now again use a cosine input signal as you've used in a previous excercise.  What does the timeseries look like?  The histogram?  A cosine signal is not very random.  What if instead, each measured point in time of the cosine was completely randomized (could also think of using a uniform random signal put through a cosine function)?  Would the histogram look any different?  This would also be a random signal, and has the functional form $$\frac{A}{\sqrt{1-y^2}}$$, which should agree with your histogram.  
 
-[↑ Go to the Top of the Page](#) ......[Next Lab](../2)
+[↑ Go to the Top of the Page](#) ......[Next Lab](../02)
 
