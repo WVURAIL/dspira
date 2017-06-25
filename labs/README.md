@@ -10,7 +10,7 @@
 > This lab ilvilves working with hardware i.e. the SDR dongle. We shall build a simple FM radio
 
 3. [Introduction to Fourier Analysis](03)   
-> This is an introductory exercise in Fourier Analysis by way of HArmonic Analysis using Fourier Series. We shall fourier transform some simple waveforms. 
+> This is an introductory exercise in Fourier Analysis by way of Harmonic Analysis using Fourier Series. We shall fourier transform some simple waveforms. 
 
 4. [Filters](04)   
 >  To implement filters. We shall make a an "*equillizer* for the FM demodulated audio using the filters. 
@@ -20,6 +20,6 @@
 
 6. [A Radio Telescope](06)    
 > 1. Build an Antenna
-> 2. Introduction to Polyphase Filterbanks. Give a software upgrade to the polyphase filterbanks. 
+> 2. Introduction to Polyphase Filterbanks. Give a software upgrade to the Spectrometer 
 > 3. Inegration of Antenna to SDR dongle to GNU Radio companion. Testing
 > 4. First Light

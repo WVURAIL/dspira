@@ -54,7 +54,7 @@ $$
 f(x) = \frac{1}{2} + \sum_{n=1}^{\infty} \frac{2}{(2k-1)\pi} sin(2k-1)x = \frac{1}{2} + \frac{2}{\pi}sin(x) + \frac{2}{3\pi}sin(3x) + \frac{2}{5\pi}sin(5x) + \frac{2}{7\pi}sin(7x) + ... + + \frac{2}{n\pi}sin(nx)\ (\ n\ is\ odd)
 $$
 
-Use at least five sources to add sinusoids and see what waveform do you get?Output waveform after each added term. 
+Use at least five sources to add sinusoids and see what waveform do you get after each added term
 
 It should look like this:
 
@@ -77,7 +77,7 @@ Make a flowgraph out of the four expanded terms above and check the output after
 
 It should give an output like this:
 
-![Triangle wave](img/1,png) 
+![Triangle wave](img/2,png) 
 
 ---
 
