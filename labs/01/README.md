@@ -15,8 +15,8 @@ This page shall guide you through our primary tool -- GNU Radio. GNU Radio is ve
         - [1.2.3. A General Waveform Generator](#123-a-general-waveform-generator)
     - [1.3. GNU Radio and Python](#13-gnu-radio-and-python)
         - [1.3.1. Arbitrary Function generation](#131-arbitrary-function-generation)
-    - [Note on the Frequency Display](#note-on-the-frequency-display)
-    - [1.4. Exercises](#14-exercises)
+    - [1.4. Note on the Frequency Display](#14-note-on-the-frequency-display)
+    - [1.5. Exercises](#15-exercises)
 
 <!-- /TOC -->
 
@@ -275,12 +275,12 @@ We should then have the flowgraph and output that looks like this:
 
 [↑ Go to the Top of the Page](#)
 
-## Note on the Frequency Display
+## 1.4. Note on the Frequency Display
 
 This particular display may not seem very intuitive for the those seeing it for the first time. It basically shows, as the name suggests, the 'frequency' components of the signal. This means the peaks in the graph represents the frequencies of the periodic signals that make up that particular signal. This is the basis of a very important concept called Fourier Analysis. Detailed discussions shall be done in class and systematically demonstrated in [Lab 3](../03) and [Lab 5](../05)
 
 
-## 1.4. Exercises
+## 1.5. Exercises
 
 1. GNU Radio has a host of "Math Operators" that will allow you to perform a host of operations:
 
