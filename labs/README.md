@@ -7,7 +7,7 @@
   > > A short exploration of random Signals and Sampling
 
 2. [First steps with SDR Hardware](02)   
-> This lab ilvilves working with hardware i.e. the SDR dongle. We shall build a simple FM radio
+> This lab involves working with hardware i.e. the SDR dongle. We shall build a simple FM radio
 
 3. [Introduction to Fourier Analysis](03)   
 > This is an introductory exercise in Fourier Analysis by way of Harmonic Analysis using Fourier Series. We shall fourier transform some simple waveforms. 
