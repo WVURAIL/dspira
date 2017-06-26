@@ -36,6 +36,7 @@ First, we make sure our dingle is plugged into the USB see if it is detected by 
 ``
 gqrx
 ``
+
 It will open a window that looks like this. 
 
 ![gqrx](img/2.png)
