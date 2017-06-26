@@ -97,7 +97,7 @@ Find the corresponding blocks and connect them according to the flow given above
 
 ![LP Filter](img/7_1.png)
 
-**Resampler**: Continuing the resampling we started earlier. we 'decimate' the input by dividing ``5`` and 'inerpolate' it by mulitplying by ``12`` to resample to 480kHz!
+**Resampler**: Continuing the resampling we started earlier. we 'decimate' the input by dividing ``5`` and 'interpolate' it by mulitplying by ``12`` to resample to 480kHz!
 
 ![resampler](img/8.png)
 
