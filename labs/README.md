@@ -13,7 +13,7 @@
 > This is an introductory exercise in Fourier Analysis by way of Harmonic Analysis using Fourier Series. We shall fourier transform some simple waveforms. 
 
 4. [Filters](04)   
->  To implement filters. We shall make a an "*equalizer* for the FM demodulated audio using the filters. 
+>  To implement filters. We shall make a an "*equalizer*" for the demodulated FM audio using the filters. 
 
 5. [Fourier Analysis -- Expert Mode!](05)
 > Implement a simple N-point *Fast Fourier Transform*. Use the gnuradio FFT block and filters from the previous exercise to build a spectrometer.
