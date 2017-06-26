@@ -20,6 +20,8 @@ x(t) = x(t + T)
 $$
 for all values of $$t$$. The smallest value of $$T$$ for which this is true is called the fundamental period and is denoted $$T_o$$. The corresponding *fundamental frequency* is $$f_o = \frac{1}{T_o}$$. If $$T_o$$ is in seconds, then $$f_o$$ is in Hertz (Hz). The fundamental angular frequency is $$\omega_o = 2\pi f_o$$ and is measured in rad/sec.
 
+[↑ Go to the Top of the Page](#)
+
 ## 1.2. Fourier Series
 
 A Fourier series is an expansion of a periodic function f(x) in terms of an infinite sum of sines and cosines. The computation and study of Fourier series is known as harmonic analysis and is extremely useful as a way to break up an arbitrary periodic function into a set of simple terms that can be plugged in, solved individually, and then recombined to obtain the solution to the original problem or an approximation to it to whatever accuracy is desired or practical. [^1]
@@ -58,7 +60,9 @@ Use at least five sources to add sinusoids and see what waveform do you get afte
 
 It should look like this:
 
-![square wave](img/1,png) 
+![square wave](img/1.png) 
+
+[↑ Go to the Top of the Page](#)
 
 ## 1.4. A Triangle Wave
 
@@ -91,4 +95,5 @@ Try coding a flowgraph for a sawtooth wave
 
 ---
 
+[↑ Go to the Top of the Page](#) ......[Next Lab](../04)
 
