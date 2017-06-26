@@ -1,6 +1,6 @@
 # 1. Software Defined Radio - Hardware
 
-In [Lab 1](../01/) we learnt how to work around GNU Radio Companion (GRC) and simulate signals and instruments. We shall now step into the real world with real signals. 
+In [Lab 1](../01/) we learned how to work around GNU Radio Companion (GRC) and simulate signals and instruments. We shall now step into the real world with real signals. 
 
 <!-- TOC -->
 
