@@ -27,6 +27,8 @@ Radio Waves excite electrons in the antenna and induces a current. The frequenci
 
 Before we code on our own we shall this useful application called GQRX
 
+[↑ Go to the Top of the Page](#)
+
 ## 1.2. GQRX - It's cool
 
 [GQRX](http://gqrx.dk) is an application written is gnuradio. It acquired data from the dongle and has a set of preset options to manipulate said signals. It can even store raw data for custom decoding.
@@ -60,12 +62,16 @@ Since the sample rate is very high (a feature of this particular hardware). We c
 
 We can use this application to recieve even decode to all kinds of signals from 24 – 1800 Mhz. Check out [Section 1.4](#14-fun-sdrgnu-radio-things)
 
+[↑ Go to the Top of the Page](#)
+
 ### 1.2.1. Frequency Correction
 
-The hardware ususally well made but sometimes errors slip through. The frequency the "tuner" tunes to may be every slightly off from the actaull frequency it is tuning to. We can correct for that in the software.  For high hend SDR dongles this correction is virtually non existent but some low-end dogles have higher deviations!
+The hardware ususally well made but sometimes errors slip through. The frequency the "tuner" tunes to may be every slightly off from the actaul frequency it is tuning to. We can correct for that in the software.  For high hend SDR dongles this correction is virtually non existent but some low-end dogles have higher deviations!
 
 We can transmit a signal using a known and relaiable tone. Then we use our receiver set up with gqrx to see the signal. If the incoming signal is exactly at the expected frequency. If not we look at the ``input controls`` tab in gqrx and change the ``freq. correction`` value until the peak is at the correct output.
  Note this value for future purposes. This value will be different for all dongles.
+
+[↑ Go to the Top of the Page](#)
 
 ## 1.3. GNURadio FM
 
@@ -103,6 +109,7 @@ Find the corresponding blocks and connect them according to the flow given above
 
 **Audio Sink**: To listen to the sweet tunes!
 
+[↑ Go to the Top of the Page](#)
 
 ## 1.4. Fun SDR/GNU Radio things
 
@@ -115,3 +122,5 @@ Find the corresponding blocks and connect them according to the flow given above
 7. Recieve and decode live satellite images of earth
 8. If transmitted nearby get a newspaper over the radio!
 9. Build your own radio astronomy observatory! ( ok we are totally doing that!)
+
+[↑ Go to the Top of the Page](#) ......[Next Lab](../03)
