@@ -24,7 +24,7 @@ This page shall guide you through our primary tool -- GNU Radio. GNU Radio is ve
 
 It is relative very easy to install *if you are installing on Linux*. We would recommend working on linux however installing on a macOS or windows system is, albiet very hard, possible. First, we install dependences and change directory to the appropriate one.
 
-Open terminal, ( open by right clicking and choosing open terminal from menu)
+Open terminal, ( open by right clicking on desktop and choosing open terminal from menu)
 
 ```bash
 	sudo apt-get install git
@@ -81,7 +81,9 @@ Restart Computer to make all the changes work.
 
 Plug in the box into the USB port. Open terminal and type ``airspy_info``. It should display some hardware info about the device. 
 
-*For other hardware devices in the ``~/gnuradio/src/`` directory are drivers for them. Move into them and follow similar procedure as mentioned above. Look for the correct for each ``.rules`` files in their directory and copy it into ``/etc/udev/rules.d/``*
+----
+*For other hardware devices, the files in the ``~/gnuradio/src/`` directory are drivers for them. Move into them and follow similar procedure as mentioned above. Look for the correct for each ``.rules`` files in their directory and copy it into ``/etc/udev/rules.d/``*
+----
 
 <!--
 Sanity check as to whether the hardware is working (tunes to an local FM radio station at 100.1 Mhz) 
@@ -143,7 +145,7 @@ GNU Radio uses a stream processing model to process large amounts of data in rea
 
 ### 1.2.1. A Cosine Waveform generator 
 
-As a first experiment we want to generate a real-valued cosine signal with frequency 1000 Hz (default for the “Signal Source”) and display it in the time and frequency domains. We start from a flowgraph which consists of a “Signal Source” connected to a “Throttle”. To make the output of the Signal Source real-valued, double-click on the block and in the Properties window that shows up click on “Complex” under “Output Type” and select “Float” as shown below. Then choose “QT” under “Instrumentation” (or just simply search for “QT GUI Sink”) and double-click on “QT GUI Sink”. This block will allow you to see the waveform at the input in the frequency as well as in the time domain. Change the data “Type” from “Complex” to “Real” and connect the input to the output of the “Throttle” block. Save the flowgraph, e.g., as ex01_1.grc
+As a first experiment we want to generate a real-valued cosine signal with frequency 1000 Hz (default for the “Signal Source”) and display it in the time and frequency domains. We start from a flowgraph which consists of a “Signal Source” connected to a “Throttle”. To make the output of the Signal Source real-valued, double-click on the block and in the Properties window that shows up click on “Complex” under “Output Type” and select “Float” as shown below. Then choose “QT” under “Instrumentation” (or just simply search for “QT GUI Sink”) and double-click on “QT GUI Sink”. This block will allow you to see the waveform at the input in the frequency as well as in the time domain. Change the data “Type” from “Complex” to “Float” and connect the input to the output of the “Throttle” block. Save the flowgraph, e.g., as ex01_1.grc
 
 ![Example 1 Flowgraph](img/08.png)
 
@@ -284,9 +286,11 @@ This particular display may not seem very intuitive for the those seeing it for 
 
 ## 1.5. Exercises
 
-1. GNU Radio has a host of "Math Operators" that will allow you to perform a host of operations:
+1. * Delaying Signals: * Use the ``delay`` block after the signal source and the value of delay be controlled by a``GUI Range`` have the a slider to have the delay change from values from 0 to 2000.  See how the the signal in a time sink. 
 
-![ex01_4_output](img/31.png)
+2. GNU Radio has a host of "Math Operators" that will allow you to perform a host of operations:
+
+![ex01_4_output](img/31.png). 
  	
 > Use mulitple signal generators from section [1.2.3](#123-a-general-waveform-generator) to add and subtract and multiply to form new waveforms.  We'll add the examples here!
 
