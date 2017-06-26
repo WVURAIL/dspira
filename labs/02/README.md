@@ -31,7 +31,7 @@ Before we code on our own we shall a useful application called GQRX
 
 ## 1.2. GQRX - It's cool
 
-[GQRX](http://gqrx.dk) is an application written is gnuradio. It acquired data from the dongle and has a set of preset options to manipulate said signals. It can even store raw data for custom decoding.
+[GQRX](http://gqrx.dk) is an application written using gnuradio. It acquired data from the dongle and has a set of preset options to manipulate said signals. It can even store raw data for custom decoding.
 
 First, we make sure our dingle is plugged into the USB see if it is detected by the computer by typing  ``airspy_info``. If we installed all software correctly it should return information about the dongle and no errors. If everything is in order the type in terminal:
 
