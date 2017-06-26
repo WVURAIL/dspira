@@ -24,6 +24,8 @@ This page shall guide you through our primary tool -- GNU Radio. GNU Radio is ve
 
 It is relative very easy to install *if you are installing on Linux*. We would recommend working on linux however installing on a macOS or windows system is, albiet very hard, possible. First, we install dependences and change directory to the appropriate one.
 
+Open terminal, ( open by right clicking and choosing open terminal from menu)
+
 ```bash
 	sudo apt-get install git
 	sudo apt-get install libyaml-dev

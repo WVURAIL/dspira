@@ -76,7 +76,7 @@ First things first, FM stands for frequency modulation i.e. the information is c
 
 Our FM Radio design GRC in its most basic has the following flow:
 
-[Source]--->[Low Pass Filter]--->[Resampler]-->[FM demodulator]--->[Volume Gain]--->[Audio Sink]
+[Source]--->(Low Pass Filter)--->(Resampler)-->(FM demodulator)--->(Volume Gain)--->[Audio Sink]
 
 Find the corresponding blocks and connect them according to the flow given above. Use appropraite variables and GUI elements. USe the QT GUI Sink to visually show the signal in the flow before and after modulation. 
 
