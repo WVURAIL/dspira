@@ -81,25 +81,26 @@ Our FM Radio design GRC in its most basic has the following flow:
 Find the corresponding blocks and connect them according to the flow given above. Use appropraite variables and GUI elements. USe the QT GUI Sink to visually show the signal in the flow before and after modulation. 
 
 *Hints for reference*
-[Source]: Since we are using a hardware source we have to use the appropriate block. Search for the ``osmocom Source`` block. The Device arguments should be ``airspy=0``. **NOTE: The Sample rate supported by this dongle is either 2.5 MHz or 10 MHz. We shall set our ``samp_freq`` variable to ``2500000``**. The ``Ch0: Frequency (Hz)`` is the frequency you want to tune to. 
+
+**Source**: Since we are using a hardware source we have to use the appropriate block. Search for the ``osmocom Source`` block. The Device arguments should be ``airspy=0``. **NOTE: The Sample rate supported by this dongle is either 2.5 MHz or 10 MHz. We shall set our ``samp_freq`` variable to ``2500000``**. The ``Ch0: Frequency (Hz)`` is the frequency you want to tune to. 
 
 ![source](img/7.png)
 
-[Low Pass Filter]: This filters out all the frequencies apart from the one we want to tune our radio to. Note that I have another variable called ``channel_width`` which is equal to ``200e3``. It is to filter out at a data rate 200kHz. We are attempting to change the data rate to 480kHz which is the soundcard's working frequency for all audio data files. We do this because the sample rate is 2.5MHz and 480kHZ is not divisor of it i.e. they aren't integral multiples ( 2.5MHz/480kHz = 5.208).  
+**Low Pass Filter**: This filters out all the frequencies apart from the one we want to tune our radio to. Note that I have another variable called ``channel_width`` which is equal to ``200e3``. It is to filter out at a data rate 200kHz. We are attempting to change the data rate to 480kHz which is the soundcard's working frequency for all audio data files. We do this because the sample rate is 2.5MHz and 480kHZ is not divisor of it i.e. they aren't integral multiples ( 2.5MHz/480kHz = 5.208).  
 
 ![source](img/7.png)
 
-[Resampler]: Continuing the resampling we started earlier. we 'decimate' the input by dividing ``5`` and 'inerpolate' it by mulitplying by ``12`` to resample to 480kHz!
+**Resampler**: Continuing the resampling we started earlier. we 'decimate' the input by dividing ``5`` and 'inerpolate' it by mulitplying by ``12`` to resample to 480kHz!
 
 ![resampler](img/8.png)
 
-[FM demodulator]: This is the most important part of the radio, well, it is essentially the radio as it decodes
+**FM demodulator**: This is the most important part of the radio, well, it is essentially the radio as it decodes the signals to audio!
 
 ![demod](img/9.png)
 
-[Volume Gain]: Raise the roof people! It's a simple multiply constant block. 
+**Volume Gain**: Raise the roof people! It's a simple multiply constant block. 
 
-[Audio Sink]: To listen to the sweet tunes!
+**Audio Sink**: To listen to the sweet tunes!
 
 
 ## 1.4. Fun SDR/GNU Radio things
