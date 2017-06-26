@@ -286,7 +286,7 @@ This particular display may not seem very intuitive for the those seeing it for 
 
 ## 1.5. Exercises
 
-1. * Delaying Signals: * Use the ``delay`` block after the signal source and the value of delay be controlled by a``GUI Range`` have the a slider to have the delay change from values from 0 to 2000.  See how the the signal in a time sink. 
+1. *Delaying Signals:* Use the "delay" block after the signal source and the value of delay can be controlled by a "GUI Range" to make a slider to have the delay change values from 0 to 2000.  See how the the signal changes in a time sink. 
 
 2. GNU Radio has a host of "Math Operators" that will allow you to perform a host of operations:
 
