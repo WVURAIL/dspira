@@ -25,9 +25,7 @@ A software defined radio (SDR) is a “Radio in which some or all of the physica
 
 The main advantage of an SDR over a traditional radio is that (most of) the radio’s operating functions (often referred to as physical layer processing) are implemented through modifiable and upgradable software and firmware on programmable devices such as field programmable gate arrays (FPGA), DSPs, general purpose computers (GPP), programmable System on a Chip (SoC), etc. The use of these technologies allows new wireless features and capabilities to be added to an existing radio system without replacing or modifying its hardware.
 
-```
-Add a paragraph about SDR and Radio Astronomy
-```
+Modern Radio Astronomy is driven by algorithmic advances. Programmable hardware components makes designing a system robust and highly flexible. FPGAs are epecially used in almost all current and upcoming telescopes. Programming an FPGA is a skill in itself but one of the most used tools in FPGA developement involves coding in a fashion similar to SDRs vis-a-vis flowgraphs. The difference is almost in distinuishable without peering at the guts (and relative perfomance which is due to different hardware involved). 
 
 ## 1.3. Labs
 

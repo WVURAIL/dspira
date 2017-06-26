@@ -22,7 +22,7 @@ This page shall guide you through our primary tool -- GNU Radio. GNU Radio is ve
 
 ## 1.1. Installation Guide
 
-It is relative very easy to install *if you are installing on Linux*. We woudl recommend working on linux however installing on a macOS or windows system is, albiet very hard, possible. First, we install dependences and change directory to the appropriate one: 
+It is relative very easy to install *if you are installing on Linux*. We would recommend working on linux however installing on a macOS or windows system is, albiet very hard, possible. First, we install dependences and change directory to the appropriate one.
 
 ```bash
 	sudo apt-get install git

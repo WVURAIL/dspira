@@ -1,23 +1,31 @@
-# Random Signals and Sampling
+# 1. Random Signals and Sampling
 
-## Random Discrete Signals
+- [1. Random Signals and Sampling](#1-random-signals-and-sampling)
+    - [1.1. Random Discrete Signals](#11-random-discrete-signals)
+    - [1.2. Sampling](#12-sampling)
+    - [1.3. Histograms](#13-histograms)
+    - [1.4. GnuRadio Companion Example.](#14-gnuradio-companion-example)
+
+<!-- /TOC -->
+
+## 1.1. Random Discrete Signals
 
 Random signals are signals where the next value can be though of as chips
 drawn from a hat with many many values, where the exact number of chips with those values relative to eachother can be given by an equation, the 'distribution'.  One of the simplest is a uniform random signal, where each value has an equal number of chips.  
 
-In GnuRadio we can create these signals with a 'Random Uniform Source' block.
+In GnuRadio we can create these signals with a 'Random Uniform Source' block.<!-- TOC -->
 
 A very common distribution in nature is the 'gaussian' distribution.  
 
-## Sampling
+## 1.2. Sampling
 
 Sampling can always be though of as the act of pulling the chips out of the hat, and rounding the value on the chip to the nearest integer. When a real signal is digitized by an analog to digital converter (ADC), every clock cycle, the level of the signal is measured and recorded to the nearest value.
 
-## Histograms
+## 1.3. Histograms
 
 A histogram is a plot of the number of occurances of the signal that occur between a set of levels chosen.  Plotting the histogram is a way of trying to measure the distribution of an incoming random signal.  
 
-## GnuRadio Companion Example.  
+## 1.4. GnuRadio Companion Example.  
 
 Create the shown GnuRadio flowgraph.  
 ![sampling](img/sampling.png) 
