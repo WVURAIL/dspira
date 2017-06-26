@@ -43,8 +43,8 @@ It will open a window that looks like this.
 
 ![gqrx](img/2.png)
 
- If you are using for the first time the hardware setting window/(IO setting) should open automatically and also automatically detect the dongle if not chose ``AirSpy AIRSPY`` from the drop down. 
-Else you canb open it by clicking on the "circuit board" icon next to the play triangle. The I/O device settings shoud look like this:
+ If you are using for the first time the hardware setting window/(IO setting) should open automatically and also automatically detect the dongle.  If not chose ``AirSpy AIRSPY`` from the drop down. 
+Otherwise you can open it by clicking on the "circuit board" icon next to the play triangle. The I/O device settings shoud look like this:
 
 ![io](img/3.png)
 
