@@ -109,6 +109,8 @@ Find the corresponding blocks and connect them according to the flow given above
 
 **Audio Sink**: To listen to the sweet tunes!
 
+The choices made so far here may seem a bit arbitrary.  In the future we'll go into filters and filter design, and you can return to your FM radio, and possibly improve it!
+
 [↑ Go to the Top of the Page](#)
 
 ## 1.4. Fun SDR/GNU Radio things
