@@ -20,8 +20,9 @@
         <p>{{ site.description | default: site.github.project_tagline }}</p>
         
         <h3><a href="{{ site.path }}/dspira/">DSPiRA Home</a></h3>
+        <h3><a href="{{ site.path }}/dspira/lectures/">Lectures</a></h3>
         <h3><a href="{{ site.path }}/dspira/labs/">Labs</a></h3>
-
+               
         {% if site.github.is_project_page %}
           <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ github_name }}</small></a></p>
         {% endif %}
@@ -47,6 +48,7 @@
         {% if site.github.is_project_page %}
         <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
         {% endif %}
+        <p><small>i.e.<a href="http://wvurail.org/">West Virgnia University ⏦ Radio Astronomy Instrumentation Laboratory</a></small></p>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>

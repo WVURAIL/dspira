@@ -29,6 +29,8 @@ It is relative very easy to install *if you are installing on Linux*. We would r
 	sudo apt-get install libyaml-dev
 	sudo apt-get install libssl-dev
 	sudo apt-get install python-dev
+	sudo apt-get install python-pip
+	sudo apt-get install python-apt
 	sudo pip install pyopengl pyopengl_accelerate
 ```
 In your home directory make a directory where we would install gnuradio:
@@ -41,25 +43,44 @@ In your home directory make a directory where we would install gnuradio:
 To always have the most recent version of the sofware, we use *PyBOMBS*. It is a package manager with all the latest version version of the sdr software. We install the package manager and then we add the 'recipes' to the package manager:
 
 ```bash
-	sudo apt-get install python-pip
 	sudo pip install --upgrade pip
 	sudo pip install pybombs
 	pybombs recipes add gr-recipes git+https://github.com/gnuradio/gr-recipes.git
 	pybombs recipes add gr-etcetera git+https://github.com/gnuradio/gr-etcetera.git 
-	pybombs recipes list
 ```
 
-Install ``gnuradio`` and the hardware drivers for gnuradio, ``gr-osmosdr``:
+Install ``gnuradio`` and the hardware drivers for gnuradio, ``gr-osmosdr``. We will also install an app called ``gqrx``:
 
 ```bash
 	pybombs prefix init ~/gnuradio -a myprefix #kind of tells the package manager the directory where to arrange all installs within
 	pybombs install gnuradio gr-osmosdr
+	pybombs install gqrx
 ```
 Add the environmental variables script to ``.bashrc``
 
 ```bash
 	echo "source ~/gnuradio/setup_env.sh" >> ~/.bashrc
 ```
+
+The hardware we use requires us to tell the computer to allow us to use our device:
+
+```bash
+cd ~/gnuradio/src/airspy/
+cd build
+cmake ../ -DINSTALL_UDEV_RULES=ON
+make
+sudo make install
+sudo ldconfig
+cp ../airspy-tools/52-airspy.rules /etc/udev/rules.d/
+sudo ldconfig
+```
+
+Restart Computer to make all the changes work.
+
+PLug in the box into the USB port. Open terminal and type ``airspy_info``. It woudl spit out all the hardware info. 
+
+*For other hardware devices in the ``~/gnuradio/src/`` directory are drivers for them. Move into them and follow similar procedure as mentioned above. Look for the correct for each ``.rules`` files in their directory and copy it into ``/etc/udev/rules.d/``*
+
 <!--
 Sanity check as to whether the hardware is working (tunes to an local FM radio station at 100.1 Mhz) 
 
@@ -265,7 +286,7 @@ This particular display may not seem very intuitive for the those seeing it for 
 
 ![ex01_4_output](img/31.png)
  	
-	Use mulitple signal generators from section [1.2.3](#123-a-general-waveform-generator) to add and subtract and multiply to form new waveforms.
+> Use mulitple signal generators from section [1.2.3](#123-a-general-waveform-generator) to add and subtract and multiply to form new waveforms.
 
 
-[↑ Go to the Top of the Page](#) ......[Next Lab](../02)
+[↑ Go to the Top of the Page](#) ......[Next Lab](../01_1)
