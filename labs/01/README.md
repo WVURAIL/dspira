@@ -79,7 +79,7 @@ sudo ldconfig
 
 Restart Computer to make all the changes work.
 
-PLug in the box into the USB port. Open terminal and type ``airspy_info``. It woudl spit out all the hardware info. 
+Plug in the box into the USB port. Open terminal and type ``airspy_info``. It should display some hardware info about the device. 
 
 *For other hardware devices in the ``~/gnuradio/src/`` directory are drivers for them. Move into them and follow similar procedure as mentioned above. Look for the correct for each ``.rules`` files in their directory and copy it into ``/etc/udev/rules.d/``*
 
