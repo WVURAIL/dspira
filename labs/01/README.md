@@ -234,7 +234,7 @@ This give the following Output:
 
 ## 1.3. GNU Radio and Python
 
-GNU Radio is written in python and the final code that does the magic is all in Python. Python is very powerful programing language known for its readability and versitality. The flow graphs created in GNU radio compinion are converted into a Python script. All the predefined blocks are written in Python and/or C. One can make their own GNU Radio blocks by coding in Python or C. If you want to know how to do this in depth you can click on this guided tutorial [here](https://wiki.gnuradio.org/index.php/Guided_Tutorial_GNU_Radio_in_Python)
+GNU Radio is written in python and the final code that does the magic is all in Python. Python is very powerful programing language known for its readability and versatility. The flow graphs created in GNU radio companion are converted into a Python script. All the predefined blocks are written in Python and/or C. One can make their own GNU Radio blocks by coding in Python or C. If you want to know how to do this in depth you can click on this guided tutorial [here](https://wiki.gnuradio.org/index.php/Guided_Tutorial_GNU_Radio_in_Python)
 
 
 ### 1.3.1. Arbitrary Function generation 
