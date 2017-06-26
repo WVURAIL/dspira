@@ -288,7 +288,7 @@ This particular display may not seem very intuitive for the those seeing it for 
 
 ![ex01_4_output](img/31.png)
  	
-> Use mulitple signal generators from section [1.2.3](#123-a-general-waveform-generator) to add and subtract and multiply to form new waveforms.
+> Use mulitple signal generators from section [1.2.3](#123-a-general-waveform-generator) to add and subtract and multiply to form new waveforms.  We'll add the examples here!
 
 
 [↑ Go to the Top of the Page](#) ......[Next Lab](../01_1)
