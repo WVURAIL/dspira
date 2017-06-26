@@ -16,7 +16,6 @@
 >  To implement filters. We shall make a an "*equillizer* for the FM demodulated audio using the filters. 
 
 5. [Fourier Analysis -- Expert Mode!](05)
-
 > Implement a simple N-point *Fast Fourier Transform*. Use the gnuradio FFT block and filters from the previous exercise to build a spectrometer.
 
 6. [A Radio Telescope](06)    
