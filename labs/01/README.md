@@ -99,7 +99,7 @@ Sanity check as to whether the hardware is working (tunes to an local FM radio s
 
 ### 1.1.1. Getting Started with GNU Radio
 
-We start start right away by typing ``gnuradio-companion`` in the terminal:
+We shall start right away by typing ``gnuradio-companion`` in the terminal:
 
 ![start gnuradio-companion](img/01.png)
 
