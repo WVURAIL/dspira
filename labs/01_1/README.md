@@ -38,5 +38,22 @@ Now also try different distribution sources.  Use the "Noise Source" block and s
 
 Now again use a cosine input signal as you've used in a previous excercise.  What does the timeseries look like?  The histogram?  A cosine signal is not very random.  What if instead, each measured point in time of the cosine was completely randomized (could also think of using a uniform random signal put through a cosine function)?  Would the histogram look any different?  This would also be a random signal, and has the functional form $$\frac{A}{\sqrt{1-y^2}}$$, which should agree with your histogram.  
 
+## 1.5 Make your own gaussian noise block
+
+You are now ready to try to make your own gaussian noise block out of other blocks.  
+
+Create a new flowgraph in grc.
+ We'll start by using a just a QLFSR block.  This is a 'linear feedback shift register'  block, which is a very simple way to create 'pseudorandom' noise.  Look [here](https://en.wikipedia.org/wiki/Linear-feedback_shift_register) for more details.  Set the type to float, the degree (how many elements in the shift register) to 32, repeat yes.  Change the seed to any number.  Leave the 'mask' at zero to get an 'optimal' source that wont repeat.  Try using other numbers to compare, 1075838979 is a nice choice for random looking data.  Use a histogram sink and a gui sink to look at the output.  Even though the output is only -1 or 1, without knowing the initial seed and how many cycles have gone by, the answer is random.
+
+ Add a number of these sources together:
+ ![ganssian](img/lfsr_noise.png)
+
+ What does the output look like now?  This is one of the simple ways of going from a 'flat' random number to a gaussian white noise.
+ 
+  
+
+
+
+
 [↑ Go to the Top of the Page](#) ......[Next Lab](../02)
 
