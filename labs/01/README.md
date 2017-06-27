@@ -301,7 +301,4 @@ This particular display may not seem very intuitive for the those seeing it for 
 Extra Materials:
 
 - [A guided tutorial by gnuradio](https://wiki.gnuradio.org/index.php/Guided_Tutorial_GRC)
-
-<sub><sup>
 - this tutorial has been adapted from this [lab](http://ecee.colorado.edu/~mathys/ecen4652/labs.html)
-</sup></sub>
