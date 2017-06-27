@@ -302,6 +302,6 @@ Extra Materials:
 
 - [A guided tutorial by gnuradio](https://wiki.gnuradio.org/index.php/Guided_Tutorial_GRC)
 
-$$
-._this tutorial has been adapted from this [lab](http://ecee.colorado.edu/~mathys/ecen4652/labs.html)
-$$
+<sub><sup>
+- this tutorial has been adapted from this [lab](http://ecee.colorado.edu/~mathys/ecen4652/labs.html)
+</sup></sub>
