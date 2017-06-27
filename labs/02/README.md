@@ -116,13 +116,20 @@ The choices made so far here may seem a bit arbitrary.  In the future we'll go i
 ## 1.4. Fun SDR/GNU Radio things
 
 1. AM Radio!
-2. Listen to and get airplain ADS-B data
-3. Listen to HAM radio chatter
-4. EMS and police and local services radio.
-5. WeatherFAX. Get latest images of weather data from naval bases! 
-6. Get satellite data
-7. Recieve and decode live satellite images of earth
+2. Narrow Band FM ( same are FM but a narrower filter passband)
+3. [Listen to and get airplain ADS-B data](http://www.rtl-sdr.com/adsb-aircraft-radar-with-rtl-sdr/)
+To chekc it out on your own get this software: [dump1090](https://github.com/MalcolmRobb/dump1090) 
+4. Listen to HAM radio chatter ( usually amplitude modulated )
+5. EMS and police and local services radio. [local scanners and frequencies](https://www.radioreference.com/apps/db/)
+6. WeatherFAX. Get latest images of weather data from naval bases! [http://www.rtl-sdr.com/receiving-weather-rtty-rtl-sdr/](http://www.rtl-sdr.com/receiving-weather-rtty-rtl-sdr/)  
+7. Get satellite data (Recieve and decode live satellite images of earth):
+ These satellite transmit that these frequencies:
+NOAA 15 – 137.6200 MHz
+NOAA 18 – 137.9125 MHz
+NOAA 19 – 137.1000 MHz
+
 8. If transmitted nearby get a newspaper over the radio!
-9. Build your own radio astronomy observatory! ( ok we are totally doing that!)
+9. [Decode high definition radio](http://theori.io/research/nrsc-5-c)
+10. Build your own radio astronomy observatory! ( ok we are totally doing that!)
 
 [↑ Go to the Top of the Page](#) ......[Next Lab](../03)
