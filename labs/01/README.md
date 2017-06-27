@@ -294,5 +294,14 @@ This particular display may not seem very intuitive for the those seeing it for 
  	
 > Use mulitple signal generators from section [1.2.3](#123-a-general-waveform-generator) to add and subtract and multiply to form new waveforms.  We'll add the examples here!
 
-
 [↑ Go to the Top of the Page](#) ......[Next Lab](../01_1)
+
+----
+
+Extra Materials:
+
+- [A guided tutorial by gnuradio](https://wiki.gnuradio.org/index.php/Guided_Tutorial_GRC)
+
+$$
+._this tutorial has been adapted from this [lab](http://ecee.colorado.edu/~mathys/ecen4652/labs.html)
+$$
