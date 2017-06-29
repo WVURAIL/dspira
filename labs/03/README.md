@@ -51,15 +51,32 @@ f(x) =
   \end{cases}\ and\ f(x+2\pi)=f(x)
 $$ 
 
+Which has a period of $$2\pi$$.  For an arbitrary period P:
+$$
+f(x) = 
+  \begin{cases} 
+   0 & \text{if } -\P/2 \leq x \lt 0 \\
+   1       & \text{if } 0 \leq x \lt P/2
+  \end{cases}\ and\ f(x+P)=f(x)
+$$
+
+
 The correposdonding fourier series of the square wave
 $$
-f(x) = \frac{1}{2} + \sum_{n=1}^{\infty} \frac{2}{(2k-1)\pi} sin(2k-1)x \\
+f(x) = \frac{1}{2} + \sum_{n=1}^{\infty} \frac{2}{(2k-1)\pi} sin[(2k-1)x] \\
 \ \ \ = \frac{1}{2} + \frac{2}{\pi}sin(x) + \frac{2}{3\pi}sin(3x) + \frac{2}{5\pi}sin(5x) + \frac{2}{7\pi}sin(7x) + ... + + \frac{2}{n\pi}sin(nx)\ (\ n\ is\ odd)
 $$
 
+and for arbirary period P:
+$$
+f(x) = \frac{1}{2} + \sum_{n=1}^{\infty} \frac{2}{(2k-1)\pi} sin[\frac{2\pi}{P}(2k-1)x] \\
+\ \ \ = \frac{1}{2} + \frac{2}{\pi}sin(\frac{2\pi}{P}x) + \frac{2}{3\pi}sin(\frac{2\pi}{P}3x) + \frac{2}{5\pi}sin(\frac{2\pi}{P}5x) + \frac{2}{7\pi}sin(\frac{2\pi}{P}7x) + ... + + \frac{2}{n\pi}sin(\frac{2\pi}{P}nx)\ (\ n\ is\ odd)
+$$
+
+
 Use at least five ( or more ) sources to add sinusoids and see what waveform do you get after each added term
 
-It should look like this:
+It should look similar to this:
 
 ![square wave](img/1.png) 
 
