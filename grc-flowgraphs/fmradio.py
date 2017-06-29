@@ -5,7 +5,7 @@
 # Title: FMRadio
 # Author: Pranav
 # Description: An FM radio with Coarse and Fine scrubbing
-# Generated: Sun Jun 25 19:41:34 2017
+# Generated: Wed Jun 28 16:20:55 2017
 ##################################################
 
 if __name__ == '__main__':
@@ -164,7 +164,7 @@ class fmradio(gr.top_block, Qt.QWidget):
         self.osmosdr_source_0.set_antenna('', 0)
         self.osmosdr_source_0.set_bandwidth(0, 0)
           
-        self.low_pass_filter_0 = filter.fir_filter_ccf(int(samp_rate/channel_width), firdes.low_pass(
+        self.low_pass_filter_0 = filter.fir_filter_ccf(12, firdes.low_pass(
         	1, samp_rate, 75e3, 25e3, firdes.WIN_HAMMING, 6.76))
         self.blocks_multiply_xx_0 = blocks.multiply_vcc(1)
         self.blocks_multiply_const_vxx_0 = blocks.multiply_const_vff((volume_slider, ))
