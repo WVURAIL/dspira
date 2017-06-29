@@ -53,10 +53,11 @@ $$
 
 The correposdonding fourier series of the square wave
 $$
-f(x) = \frac{1}{2} + \sum_{n=1}^{\infty} \frac{2}{(2k-1)\pi} sin(2k-1)x = \frac{1}{2} + \frac{2}{\pi}sin(x) + \frac{2}{3\pi}sin(3x) + \frac{2}{5\pi}sin(5x) + \frac{2}{7\pi}sin(7x) + ... + + \frac{2}{n\pi}sin(nx)\ (\ n\ is\ odd)
+f(x) = \frac{1}{2} + \sum_{n=1}^{\infty} \frac{2}{(2k-1)\pi} sin(2k-1)x \\
+\ \ \ = \frac{1}{2} + \frac{2}{\pi}sin(x) + \frac{2}{3\pi}sin(3x) + \frac{2}{5\pi}sin(5x) + \frac{2}{7\pi}sin(7x) + ... + + \frac{2}{n\pi}sin(nx)\ (\ n\ is\ odd)
 $$
 
-Use at least five sources to add sinusoids and see what waveform do you get after each added term
+Use at least five ( or more ) sources to add sinusoids and see what waveform do you get after each added term
 
 It should look like this:
 
@@ -74,7 +75,8 @@ $$
 Its corresponding fourier series is:
 
 $$
-f(x) = \frac{1}{2} - \sum_{n=1}^{\infty} \frac{4}{(2k-1)^2\pi^2} cos(2k-1)\pi x = \frac{1}{2} - \frac{4}{\pi^2}cos(\pi x) - \frac{4}{9\pi^2}cos(3pi x) + \frac{4}{25\pi^2}sin(5\pi x) - ...
+f(x) = \frac{1}{2} - \sum_{n=1}^{\infty} \frac{4}{(2k-1)^2\pi^2} cos(2k-1)\pi x \\
+= \frac{1}{2} - \frac{4}{\pi^2}cos(\pi x) - \frac{4}{9\pi^2}cos(3 \pi x) - \frac{4}{25\pi^2}cos(5\pi x) - ...
 $$
 
 Make a flowgraph out of the four expanded terms above and check the output after each operation. 
@@ -91,7 +93,7 @@ As an added exercise for later. Derive the fourier series for:
 2.  Triangular Wave
 3.  Sawtooth Wave
 
-Try coding a flowgraph for a sawtooth wave
+Try coding a flowgraph for 3.
 
 ---
 
