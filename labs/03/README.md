@@ -108,11 +108,14 @@ It should give an output like this:
 
 ---
 
+
 ## 1.5 A Sawtooth wave.
 
 Now mathematically define a sawtooth wave and find it's fourier series expansion.  Then create its flow-graph, again with more and more fourier components.  Again, do you need more/less fourier components as compared to a square or triangle wave?  
 
 ---
+
+<!--
 
 ## 1.6 Find the fourier series for:
 
@@ -126,7 +129,7 @@ It is also helpful to plot the timeseries to see what your input is and the freq
 
 An example flowgraph looks like:
 ![sawtooth](img/3.png) 
-
+-->
 
 [↑ Go to the Top of the Page](#) ......[Next Lab](../04)
 
