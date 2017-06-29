@@ -74,11 +74,15 @@ f(x) = \frac{1}{2} + \sum_{n=1}^{\infty} \frac{2}{(2k-1)\pi} sin[\frac{2\pi}{P}(
 $$
 
 
-Use at least five ( or more ) sources to add sinusoids and see what waveform do you get after each added term
+Use more and more sources to add additional sinusoids and see what waveform you get after each added term.  How many terms until you're square wave looks good?  5?  10?  
+
+
 
 It should look similar to this:
+![square wave](img/1.png)
 
-![square wave](img/1.png) 
+This type of analysis is important for digital design in that most digital signals are square waves, representing either a 1 or a zero.  So if your signal is at 10MHz, how fast should the electronics and design work?
+
 
 [↑ Go to the Top of the Page](#)
 
