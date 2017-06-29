@@ -9,6 +9,7 @@ Fourier Analysis is a very powerful tool that comes into play when we discuss pe
     - [1.2. Fourier Series](#12-fourier-series)
     - [1.3. A Sqaure Wave](#13-a-sqaure-wave)
     - [1.4. A Triangle Wave](#14-a-triangle-wave)
+    - [1.5. A Sawtooth wave.](#15-a-sawtooth-wave)
 
 <!-- /TOC -->
 
@@ -109,27 +110,11 @@ It should give an output like this:
 ---
 
 
-## 1.5 A Sawtooth wave.
+## 1.5. A Sawtooth wave.
 
 Now mathematically define a sawtooth wave and find it's fourier series expansion.  Then create its flow-graph, again with more and more fourier components.  Again, do you need more/less fourier components as compared to a square or triangle wave?  
 
 ---
-
-<!--
-
-## 1.6 Find the fourier series for:
-
-1.  Sqaure Wave
-2.  Triangular Wave
-3.  Sawtooth Wave
-
-We can use gnuradio-companion to graphically figure out what the fourier components should be using a fourier transform.  Create a flow-graph with a signal source->FFT(fourier transform)-> complex to real/imag -> vector sinks.  The output of the real-part contains the cosine components of the transform.  The imaginary part contains the sine components of the fourier expansion.  
-
-It is also helpful to plot the timeseries to see what your input is and the frequency sink to make it easier to just read off the frequency of the components.  
-
-An example flowgraph looks like:
-![sawtooth](img/3.png) 
--->
 
 [↑ Go to the Top of the Page](#) ......[Next Lab](../04)
 
