@@ -90,17 +90,17 @@ This type of analysis is important for digital design in that most digital signa
 
 The triangular wave is defined as:
 $$
-f(x)=|x|\  for\ -1\leq x \leq 1\ ans\ f(x+2)=f(x)\ for\ all\ x
+f(x)=|x|\  for\ -1\lt x \leq 1\ and\ f(x+2)=f(x)\ for\ all\ x
 $$
 
 Its corresponding fourier series is:
 
 $$
-f(x) = \frac{1}{2} - \sum_{n=1}^{\infty} \frac{4}{(2k-1)^2\pi^2} cos(2k-1)\pi x \\
+f(x) = \frac{1}{2} - \sum_{n=1}^{\infty} \frac{4}{(2k-1)^2\pi^2} cos[(2k-1)\pi x] \\
 = \frac{1}{2} - \frac{4}{\pi^2}cos(\pi x) - \frac{4}{9\pi^2}cos(3 \pi x) - \frac{4}{25\pi^2}cos(5\pi x) - ...
 $$
 
-Make a flowgraph out of the four expanded terms above and check the output after each operation. 
+Make a flowgraph out of the expanded terms above and check the output after each operation. Do you need more or fewer components to begin looking like a triangle wave as compared to a square wave?  Why do you think that is?  
 
 It should give an output like this:
 
@@ -108,13 +108,19 @@ It should give an output like this:
 
 ---
 
+## 1.5 A Sawtooth wave.
+
+Now mathematically define a sawtooth wave and find it's fourier series expansion.  Then create its flow-graph, again with more and more fourier components.  Again, do you need more/less fourier components as compared to a square or triangle wave?  
+
+
+
 As an added exercise for later. Derive the fourier series for:
 
 1.  Sqaure Wave
 2.  Triangular Wave
 3.  Sawtooth Wave
 
-Try coding a flowgraph for 3.
+
 
 ---
 
