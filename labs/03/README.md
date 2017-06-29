@@ -114,7 +114,7 @@ Now mathematically define a sawtooth wave and find it's fourier series expansion
 
 ---
 
-## 1.6 Calculate the fourier series for:
+## 1.6 Find the fourier series for:
 
 1.  Sqaure Wave
 2.  Triangular Wave
