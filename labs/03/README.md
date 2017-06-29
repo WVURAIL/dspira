@@ -55,7 +55,7 @@ Which has a period of $$2\pi$$.  For an arbitrary period P:
 $$
 f(x) = 
   \begin{cases} 
-   0 & \text{if } -\P/2 \leq x \lt 0 \\
+   0 & \text{if } -P/2 \leq x \lt 0 \\
    1       & \text{if } 0 \leq x \lt P/2
   \end{cases}\ and\ f(x+P)=f(x)
 $$
