@@ -83,7 +83,7 @@ Make a flowgraph out of the four expanded terms above and check the output after
 
 It should give an output like this:
 
-![Triangle wave](img/2,png) 
+![Triangle wave](img/2.png) 
 
 ---
 
