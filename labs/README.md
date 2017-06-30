@@ -10,7 +10,10 @@
 > This lab involves working with hardware i.e. the SDR dongle. We shall build a simple FM radio
 
 3. [Introduction to Fourier Analysis](03)   
-> This is an introductory exercise in Fourier Analysis by way of Harmonic Analysis using Fourier Series. We shall fourier transform some simple waveforms. 
+> This is an introductory exercise in Fourier Analysis by way of Harmonic Analysis using Fourier Series. 
+
+  - [3.1. Fourier Analyis: Series and Transforms])(03_1)
+  > > We shall fourier transform some simple waveforms. 
 
 4. [Filters](04)   
 >  To implement filters. We shall make a an "*equalizer*" for the demodulated FM audio using the filters. 

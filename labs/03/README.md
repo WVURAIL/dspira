@@ -9,6 +9,7 @@ Fourier Analysis is a very powerful tool that comes into play when we discuss pe
     - [1.2. Fourier Series](#12-fourier-series)
     - [1.3. A Sqaure Wave](#13-a-sqaure-wave)
     - [1.4. A Triangle Wave](#14-a-triangle-wave)
+    - [1.5. A Sawtooth wave.](#15-a-sawtooth-wave)
 
 <!-- /TOC -->
 
@@ -51,16 +52,38 @@ f(x) =
   \end{cases}\ and\ f(x+2\pi)=f(x)
 $$ 
 
+Which has a period of $$2\pi$$.  For an arbitrary period P:
+$$
+f(x) = 
+  \begin{cases} 
+   0 & \text{if } -P/2 \leq x \lt 0 \\
+   1       & \text{if } 0 \leq x \lt P/2
+  \end{cases}\ and\ f(x+P)=f(x)
+$$
+
+
 The correposdonding fourier series of the square wave
 $$
-f(x) = \frac{1}{2} + \sum_{n=1}^{\infty} \frac{2}{(2k-1)\pi} sin(2k-1)x = \frac{1}{2} + \frac{2}{\pi}sin(x) + \frac{2}{3\pi}sin(3x) + \frac{2}{5\pi}sin(5x) + \frac{2}{7\pi}sin(7x) + ... + + \frac{2}{n\pi}sin(nx)\ (\ n\ is\ odd)
+f(x) = \frac{1}{2} + \sum_{n=1}^{\infty} \frac{2}{(2k-1)\pi} sin[(2k-1)x] \\
+\ \ \ = \frac{1}{2} + \frac{2}{\pi}sin(x) + \frac{2}{3\pi}sin(3x) + \frac{2}{5\pi}sin(5x) + \frac{2}{7\pi}sin(7x) + ... + + \frac{2}{n\pi}sin(nx)\ (\ n\ is\ odd)
 $$
 
-Use at least five sources to add sinusoids and see what waveform do you get after each added term
+and for arbirary period P:
+$$
+f(x) = \frac{1}{2} + \sum_{n=1}^{\infty} \frac{2}{(2k-1)\pi} sin[\frac{2\pi}{P}(2k-1)x] \\
+\ \ \ = \frac{1}{2} + \frac{2}{\pi}sin(\frac{2\pi}{P}x) + \frac{2}{3\pi}sin(\frac{2\pi}{P}3x) + \frac{2}{5\pi}sin(\frac{2\pi}{P}5x) + \frac{2}{7\pi}sin(\frac{2\pi}{P}7x) + ... + + \frac{2}{n\pi}sin(\frac{2\pi}{P}nx)\ (\ n\ is\ odd)
+$$
 
-It should look like this:
 
-![square wave](img/1.png) 
+Use more and more sources to add additional sinusoids and see what waveform you get after each added term.  How many terms until you're square wave looks good?  5?  10?  
+
+
+
+It should look similar to this:
+![square wave](img/1.png)
+
+This type of analysis is important for digital design in that most digital signals are square waves, representing either a 1 or a zero.  So if your signal is at 10MHz, how fast should the electronics and design work?
+
 
 [↑ Go to the Top of the Page](#)
 
@@ -68,30 +91,28 @@ It should look like this:
 
 The triangular wave is defined as:
 $$
-f(x)=|x|\  for\ -1\leq x \leq 1\ ans\ f(x+2)=f(x)\ for\ all\ x
+f(x)=|x|\  for\ -1\lt x \leq 1\ and\ f(x+2)=f(x)\ for\ all\ x
 $$
 
 Its corresponding fourier series is:
 
 $$
-f(x) = \frac{1}{2} - \sum_{n=1}^{\infty} \frac{4}{(2k-1)^2\pi^2} cos(2k-1)\pi x = \frac{1}{2} - \frac{4}{\pi^2}cos(\pi x) - \frac{4}{9\pi^2}cos(3pi x) + \frac{4}{25\pi^2}sin(5\pi x) - ...
+f(x) = \frac{1}{2} - \sum_{n=1}^{\infty} \frac{4}{(2k-1)^2\pi^2} cos[(2k-1)\pi x] \\
+= \frac{1}{2} - \frac{4}{\pi^2}cos(\pi x) - \frac{4}{9\pi^2}cos(3 \pi x) - \frac{4}{25\pi^2}cos(5\pi x) - ...
 $$
 
-Make a flowgraph out of the four expanded terms above and check the output after each operation. 
+Make a flowgraph out of the expanded terms above and check the output after each operation. Do you need more or fewer components to begin looking like a triangle wave as compared to a square wave?  Why do you think that is?  
 
 It should give an output like this:
 
-![Triangle wave](img/2,png) 
+![Triangle wave](img/2.png) 
 
 ---
 
-As an added exercise for later. Derive the fourier series for:
 
-1.  Sqaure Wave
-2.  Triangular Wave
-3.  Sawtooth Wave
+## 1.5. A Sawtooth wave.
 
-Try coding a flowgraph for a sawtooth wave
+Now mathematically define a sawtooth wave and find it's fourier series expansion.  Then create its flow-graph, again with more and more fourier components.  Again, do you need more/less fourier components as compared to a square or triangle wave?  
 
 ---
 
