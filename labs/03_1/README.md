@@ -36,9 +36,11 @@ $$
 
 where $$X(\omega)$$ is the fourier transform and $$\omega_o = \frac{2\pi}{T}$$
 
-**In summary, the fourier series is a decomposition of a signal into a sum of sines and cosines. This is shown in a neat animation as shown below ( *credit: wikipedia* ) and in the next section**
+**In summary, the fourier series of a signal is a sum of sines and cosines. And, the fourier transform decomposes the signal into it's its frequency components with their relative strength. This can be visually seen in a neat animation as shown below ( *credit: wikipedia* ) and in the next section**
 
 ![animation FS](img/Fourier_series_and_transform.gif)
+
+[↑ Go to the Top of the Page](#)
 
 ## 1.2. Fourier Transform Things Now
 
@@ -46,7 +48,7 @@ Use the [Square Wave](../03/#13-a-sqaure-wave) and the [Triangle Wave](../03/#14
 
 First use a ``signal source`` block to make a square wave and feed the signal into a ``QT frequency sink``
 
-**The Frequency Sink takes the Fourier Transform the incoming signal and plots the output of the fourier transform**
+**The Frequency Sink takes the Fourier Transform of the incoming signal and plots the output of the fourier transform**
 
 Place another ``QT Frequency Sink`` and change the number of inputs to the number of fourier series sinusoids you have in your flowgraph and feed all the sinusoids (vis-a-vis the individual fourier series terms) into the frequency sink 
 
@@ -60,4 +62,8 @@ Repeat this exercise for the triangle wave.
 
 We've been taking fourier transform of the signal everytime we see a plot with frequency in the time axes. 
 
-As seen in section 1.1 the FFT block is a special block which does the fourier transform really fast. We shall visit fourier transforms in detail again that in Lab 5. 
+As seen in section 1.1 the FFT block is a special block which does the fourier transform really fast. Play around with the FFT block and your general waveform generator from Lab 1 to take their fourier tranform.  
+
+ We shall visit fourier transforms in detail again that in Lab 5. 
+
+[↑ Go to the Top of the Page](#) ......[Next Lab](../04)
