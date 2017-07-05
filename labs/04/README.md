@@ -91,21 +91,37 @@ We shall design FIR filters using the graphical tool that ships with gnuradio. I
 ![taskbar]()
 ![filterdesign]()
 
-We shall design all our filters by graphically using this tool. 
+We shall design all our filters by graphically using this tool. Theorotically, there are several methods employed to design a filter. The most common used method is by designing a window function.  In the window design method, one first designs an ideal IIR filter and then truncates the infinite impulse response by multiplying it with a finite length window function. The result is a finite impulse response filter whose frequency response is modified from that of the IIR filter. Multiplying the infinite impulse by the window function in the time domain results in the frequency response of the IIR being convolved with the Fourier transform of the window function [^source]
+
+For us, this GUI does everything behind the scenes. We observe the response of the designed filters in the window and use the necessary taps/filter-co-effecients in the FIR block. 
+
+![filterdesign1]()
+![filterdesign2]()
+![filterdesign3]()
+
+The FIR Block: 
 
 ### 1.3.1. Exercise 2: Extracting Fundamental Frequencies from a Guitar/Piano Chord (C Major)
 
-A chord is the sound produced by playing three  or more notes played together. We can use fourier tranform to extract the frequencies that make up those chords. Build a flowgrpah that simply uses an ``audio source`` and send the output through an ``FFT`` block into a ``Frequency Sink``
+A chord is the sound produced by playing three  or more notes together. We can use fourier tranform to extract the frequencies that make up those chords. Build a flowgrpah that simply uses an ``audio source`` and send the output through an ``FFT`` block into a ``Frequency Sink``
 
 ![audio spectrum]()
 
-Once ready, let's play the C-Major chord. It is the C (= 261.63Hz) , E (= 329.63Hz) and G (= 392Hz). Notice 
+Once ready, let's play the C-Major chord. It is the C (= 261.63Hz) , E (= 329.63Hz) and G (= 392Hz). Notice that the frequency spectrum shows more than just the three fundamental frequencies. They show the harmonics of the three frequencies mentioned above! Recall from fourier series , these harmoics including the fundamental frequencies when added together makes the waveform that forms the music note. The amplitudes of these harmonics for the same note is different for different instruments because the "timber" i.e. the waveform produced by every instrument is different!
 
-[Click here](https://en.wikipedia.org/wiki/Piano_key_frequencies) for the frequency of every key on the piano. 
+Now let us extract just the fundamental frequencies by implementing low pass filters to have:
+
+1. C-E-G Fundamental Frequency ( use cut-off frequency 456 Hz)
+2. C-E Fundamental Frequency ( use cut-off frequency 361 Hz)
+3. C Fundamental Frequency ( use cut-off frequency 296 Hz)
+
+You may want to save the filtered audio to disk. Look for the the appropriate "sink" block to do so! You can try this with any other chord. Change the filters accordingly. [Click here](https://en.wikipedia.org/wiki/Piano_key_frequencies) for the frequency of every key on the piano. 
+
+Fun Fact: Using Fourier tranforms and some cool filtering you can transcribe any chords in any any music piece. For example, [deciphering the "mystery" opening chord of the Beatles' *Hard Day's Night*](https://www.wired.com/2008/10/how-a-professor/)
 
 ### 1.3.2. Exercise 3: Guitar Tuner
 
-The Fundamental frequencies of the open guitar string in a standard tuning:
+Let us be more ambitious and design a Digital Guitar Tuner in GNU Radio. It is rather simple: It is a series of bandpass filters centred on the fundamental frequency of the strings. The Fundamental frequencies of the open guitar string in a standard tuning:
 
 | String    |   Frequency   |
 |-----------|---------------|	
@@ -115,6 +131,12 @@ The Fundamental frequencies of the open guitar string in a standard tuning:
 |4 (D)      |	146.83 Hz   |	
 |5 (A)      |	110.00 Hz   |	
 |6 (E)      |	82.41 Hz    |
+
+The flowpraph should resemble this diagram:
+
+![diagram]()
+
+Choose an appropriate bandwidth. Add frequency and waterfall sinks for each string. What type of window will you use? 
 
 ### 1.3.3. Exercise 4: Digital Audio Equilizer 
 
@@ -128,6 +150,6 @@ Let us try and construct a simple digital equalizer. I shall present the primer 
 
 ![equalizer]()
 
-You have more than three frequency channels, you can google commonly used frequency divisions.
+You have more than three frequency channels, you can google commonly used frequency divisions in commercial equalizers.
 
 ## 1.4. IIR: Infinite Impulse Response Filters
