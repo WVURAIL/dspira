@@ -34,7 +34,7 @@ As we have seen in the previous lab every signal in the time domain has an equiv
 - Ripple: Oscillations from the expected straight line. 
 - Roll-off: The region between the end of the pass-band and a stop-band.
 
-![diagram]()
+![diagram](img/1.png)
 
 ### 1.1.2. Classic Analog Filters
 
@@ -69,7 +69,7 @@ $$
 
 Use a sine wave from the ``signal source`` and add a noise to it (Discussed in Lab 1 and 1.1). Pass this to a 8-tap moving average filter. The flowgraph should resemble this diagram:
 
-![8 point mvngavg]()
+![8 point mvngavg](img/2.png)
 
 Observe the signal before and after the filtering.
 Cascade multiple 8 point average filters (i.e. connect end to start). How does the signal change?
@@ -82,7 +82,7 @@ Cascade multiple 8 point average filters (i.e. connect end to start). How does t
 
 The flow diagram of an FIR filter is shpwn below, $$ x[n]\ and\ y[n] $$ are inputs and outputs respectively. $$ z^{-1} $$ is the unit delay and $$ b_n $$ are the filter co-effecients. 
 
-![FIR filter wikipedia](1000px-FIR_Filter.svg.png)
+![FIR filter wikipedia](img/1000px-FIR_Filter.png)
 
 FIR filters are mathematically fast and 
 
@@ -134,7 +134,7 @@ Let us be more ambitious and design a Digital Guitar Tuner in GNU Radio. It is r
 
 The flowpraph should resemble this diagram:
 
-![diagram]()
+![diagram](img/3.png)
 
 Choose an appropriate bandwidth. Add frequency and waterfall sinks for each string. What type of window will you use? 
 
@@ -148,7 +148,7 @@ Let us try and construct a simple digital equalizer. I shall present the primer 
  Attach this to FM Radio flowgraph before the ``audio sink``
  The gnuradio flowgrpah will follow this diagram: 
 
-![equalizer]()
+![equalizer](img/4.png)
 
 You have more than three frequency channels, you can google commonly used frequency divisions in commercial equalizers.
 
