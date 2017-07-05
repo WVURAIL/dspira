@@ -153,3 +153,5 @@ Let us try and construct a simple digital equalizer. I shall present the primer 
 You have more than three frequency channels, you can google commonly used frequency divisions in commercial equalizers.
 
 ## 1.4. IIR: Infinite Impulse Response Filters
+
+*To add*
