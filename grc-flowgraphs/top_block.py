@@ -192,6 +192,7 @@ class top_block(gr.top_block, Qt.QWidget):
         self.connect((self.movingavg_0_2, 1), (self.movingavg_0_2_0, 1))    
         self.connect((self.movingavg_0_2_0, 1), (self.qtgui_time_sink_x_0_0, 0))    
 
+
     def closeEvent(self, event):
         self.settings = Qt.QSettings("GNU Radio", "top_block")
         self.settings.setValue("geometry", self.saveGeometry())
