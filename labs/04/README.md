@@ -150,7 +150,7 @@ Choose an appropriate bandwidth. Add frequency and waterfall sinks for each stri
 
 The flow diagram of an IIR filter is shown below, $$ x[n]\ and\ y[n] $$ are inputs and outputs respectively. $$ z^{-1} $$ is the unit delay and $$ b_n $$ are the feed-forward filter coefficients, and $$ a_n $$ are the feed-back coefficients.
 
-![IIR-Filter](img/IIR-Filter.png)
+![IIR-Filter](img/IIR-filter.png)
 
 ### 1.4.1. Classic Analog Filters
 
