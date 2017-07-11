@@ -3,7 +3,7 @@
 
 1. [Introduction to GNU Radio & Signals](01)
 > This lab is a guided tutorial on GNU Radio including an installation guide. The guided exercises involve development of waveform generation and manipulating graphic user interfaces.           
-  -  [1.1. Signals Continued: Sampling](01_1) 
+  - [1.1. Signals Continued: Sampling](01_1) 
   > > A short exploration of random Signals and Sampling
 
 2. [First steps with SDR Hardware](02)   
@@ -11,9 +11,8 @@
 
 3. [Introduction to Fourier Analysis](03)   
 > This is an introductory exercise in Fourier Analysis by way of Harmonic Analysis using Fourier Series. 
-
-  - [3.1. Fourier Analyis: Series and Transforms])(03_1)
-  > > We shall fourier transform some simple waveforms. 
+  - [3.1. Fourier Series and Fourier Transforms](03_1)
+  > > Let's find out what all this fourier fuss is all about!
 
 4. [Filters](04)   
 >  To implement filters. We shall make a an "*equalizer*" for the demodulated FM audio using the filters. 
