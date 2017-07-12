@@ -1,19 +1,19 @@
-# 1. Fourier Analysis
+# 3. Fourier Analysis
 
 Fourier Analysis is a very powerful tool that comes into play when we discuss periodic signals. Colloquially, a periodic signal repeats.  
 
 <!-- TOC -->
 
-- [1. Fourier Analysis](#1-fourier-analysis)
-    - [1.1. Introduction](#11-introduction)
-    - [1.2. Fourier Series](#12-fourier-series)
-    - [1.3. A Sqaure Wave](#13-a-sqaure-wave)
-    - [1.4. A Triangle Wave](#14-a-triangle-wave)
-    - [1.5. A Sawtooth wave.](#15-a-sawtooth-wave)
+- [3. Fourier Analysis](#3-fourier-analysis)
+    - [3.1. Introduction](#31-introduction)
+    - [3.2. Fourier Series](#32-fourier-series)
+    - [3.3. A Sqaure Wave](#33-a-sqaure-wave)
+    - [3.4. A Triangle Wave](#34-a-triangle-wave)
+    - [3.5. A Sawtooth wave.](#35-a-sawtooth-wave)
 
 <!-- /TOC -->
 
-## 1.1. Introduction
+## 3.1. Introduction
 
 Mathematically a signal $$x(t)$$ is periodic if there exists a positive constant $$T$$ such that:
 $$
@@ -23,7 +23,7 @@ for all values of $$t$$. The smallest value of $$T$$ for which this is true is c
 
 [↑ Go to the Top of the Page](#)
 
-## 1.2. Fourier Series
+## 3.2. Fourier Series
 
 A Fourier series is an expansion of a periodic function f(x) in terms of an infinite sum of sines and cosines. The computation and study of Fourier series is known as harmonic analysis and is extremely useful as a way to break up an arbitrary periodic function into a set of simple terms that can be plugged in, solved individually, and then recombined to obtain the solution to the original problem or an approximation to it to whatever accuracy is desired or practical. [^1]
 
@@ -38,7 +38,7 @@ $$
 
 We shall explore this concept by making two waveforms using sinosoids:
 
-## 1.3. A Sqaure Wave
+## 3.3. A Sqaure Wave
 
 From [Lab 1](../01/), we have te function generator. We use that to make a square wave of amplitude = 1. 
 
@@ -87,7 +87,7 @@ This type of analysis is important for digital design in that most digital signa
 
 [↑ Go to the Top of the Page](#)
 
-## 1.4. A Triangle Wave
+## 3.4. A Triangle Wave
 
 The triangular wave is defined as:
 $$
@@ -110,7 +110,7 @@ It should give an output like this:
 ---
 
 
-## 1.5. A Sawtooth wave.
+## 3.5. A Sawtooth wave.
 
 Now mathematically define a sawtooth wave and find it's fourier series expansion.  Then create its flow-graph, again with more and more fourier components.  Again, do you need more/less fourier components as compared to a square or triangle wave?  
 

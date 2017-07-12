@@ -1,25 +1,25 @@
-# 1. Digital Filters
+# 4. Digital Filters
 
 A filter changes the nature of the signal. A digital filter does so by manipulating a discretized signal. 
 
 <!-- TOC -->
 
-- [1. Digital Filters](#1-digital-filters)
-    - [1.1. Introduction](#11-introduction)
-        - [1.1.1. Filter Terminology](#111-filter-terminology)
-    - [1.2. Moving Average Filter](#12-moving-average-filter)
-        - [1.2.1. Exercise 1: Noise Reduction](#121-exercise-1-noise-reduction)
-    - [1.3. FIR: Finite Impulse Response Filters](#13-fir-finite-impulse-response-filters)
-        - [1.3.1. Exercise 2: Extracting Fundamental Frequencies from a Guitar/Piano Chord (C Major)](#131-exercise-2-extracting-fundamental-frequencies-from-a-guitarpiano-chord-c-major)
-        - [1.3.2. Exercise 3: Digital Audio Equalizer](#132-exercise-3-digital-audio-equalizer)
-        - [1.3.3. Exercise 4: Guitar Tuner](#133-exercise-4-guitar-tuner)
-    - [1.4. IIR: Infinite Impulse Response Filters](#14-iir-infinite-impulse-response-filters)
-        - [1.4.1. Classic Analog Filters](#141-classic-analog-filters)
-        - [1.4.2. IIR Filter Design](#142-iir-filter-design)
+- [4. Digital Filters](#4-digital-filters)
+    - [4.1. Introduction](#41-introduction)
+        - [4.1.1. Filter Terminology](#411-filter-terminology)
+    - [4.2. Moving Average Filter](#42-moving-average-filter)
+        - [4.2.1. Exercise 1: Noise Reduction](#421-exercise-1-noise-reduction)
+    - [4.3. FIR: Finite Impulse Response Filters](#43-fir-finite-impulse-response-filters)
+        - [4.3.1. Exercise 2: Extracting Fundamental Frequencies from a Guitar/Piano Chord (C Major)](#431-exercise-2-extracting-fundamental-frequencies-from-a-guitarpiano-chord-c-major)
+        - [4.3.2. Exercise 3: Digital Audio Equalizer](#432-exercise-3-digital-audio-equalizer)
+        - [4.3.3. Exercise 4: Guitar Tuner](#433-exercise-4-guitar-tuner)
+    - [4.4. IIR: Infinite Impulse Response Filters](#44-iir-infinite-impulse-response-filters)
+        - [4.4.1. Classic Analog Filters](#441-classic-analog-filters)
+        - [4.4.2. IIR Filter Design](#442-iir-filter-design)
 
 <!-- /TOC -->
 
-## 1.1. Introduction
+## 4.1. Introduction
 
 As we have seen in the previous lab every signal in the time domain has an equivalent representation in the frequency domain by way of the fourier transform. Information in a signal can be distinctly displayed as a function of the three parameters: time, frequency and phase. Different filters are designed to manipulate the said information in the signal with respect the different parameters. 
 
@@ -28,7 +28,9 @@ $$ x(t) = A cos(\omega t + \phi) $$
 
 we can then create filter that when the signal passes through it changes the amplitude, to get $$ y(t) = B(\omega) x(t) $$.  The output will have a different amplitude compared to the input, depending on the frequency.  
 
-### 1.1.1. Filter Terminology
+[↑ Go to the Top of the Page](#)
+
+### 4.1.1. Filter Terminology
 
 - Cut-off Frequency: The frequency around which the signal either passes or stops
 - Low Pass: A filter which allows only frequencies *below* the cutoff frequency  to pass
@@ -44,7 +46,9 @@ we can then create filter that when the signal passes through it changes the amp
 
 ![diagram](img/1.png)
 
-## 1.2. Moving Average Filter
+[↑ Go to the Top of the Page](#)
+
+## 4.2. Moving Average Filter
 
 A moving average filter does exactly what its name suggests. It is very commonly used filter and it's very simple in its implementation. It performs optimally in the time domain particularly functioning to reduce random noise. It is mathematically represented as: 
 
@@ -55,7 +59,9 @@ $$
 
 *NOTE: A moving average filter is a simple finite impulse response(FIR) filter. Specifically it is a low-pass filter.  You can also think of this as a convolution.*
 
-### 1.2.1. Exercise 1: Noise Reduction
+[↑ Go to the Top of the Page](#)
+
+### 4.2.1. Exercise 1: Noise Reduction
 
 Use a sine wave from the ``signal source`` and add a noise to it (Discussed in Lab 1 and 1.1). Pass this to a 8-tap moving average filter. The flowgraph should resemble this diagram:
 
@@ -64,7 +70,9 @@ Use a sine wave from the ``signal source`` and add a noise to it (Discussed in L
 Observe the signal before and after the filtering.
 Cascade multiple 8 point average filters (i.e. connect end to start). This will require saving just your filter as a 'hier block' with two 'pad sources' and two 'pad sinks' (why two?).  Once the block is compiled, reload the blocks (refresh button in gnuradio-companion).  There should now be a "GRC Hier Blocks" section with your block named.  How does the signal change adding more and more averaging?
 
-## 1.3. FIR: Finite Impulse Response Filters
+[↑ Go to the Top of the Page](#)
+
+## 4.3. FIR: Finite Impulse Response Filters
 
 "A finite impulse response (FIR) filter is a filter whose impulse response (or response to any finite length input) is of finite duration, because it settles to zero in finite time. This is in contrast to infinite impulse response (IIR) filters, which may have internal feedback and may continue to respond indefinitely (usually decaying)."[^source]
 
@@ -89,8 +97,9 @@ For us, this GUI does everything behind the scenes. We observe the response of t
 
 GNU Radio has two kinds of FIR filter blocks. A decimating and interpolating FIR filter which reduce(by dividing) and increase(by multiplying) the number of samples of the filtered signal respectively. When we design our filter we simply copy and paste the Filter Taps in the ``Taps`` field of the filter block properties. 
 
+[↑ Go to the Top of the Page](#)
 
-### 1.3.1. Exercise 2: Extracting Fundamental Frequencies from a Guitar/Piano Chord (C Major)
+### 4.3.1. Exercise 2: Extracting Fundamental Frequencies from a Guitar/Piano Chord (C Major)
 
 A chord is the sound produced by playing three  or more notes together. We can use fourier transform to extract the frequencies that make up those chords. Build a flow-graph that simply uses an ``audio source``, converts the float output to complex and sends that into a ``Frequency Sink``
 
@@ -111,7 +120,9 @@ You may want to save the filtered audio to disk. Look for the the appropriate "s
 
 Fun Fact: Using Fourier transforms and some cool filtering you can transcribe any chords in any any music piece. For example, [deciphering the "mystery" opening chord of the Beatles' *Hard Day's Night*](https://www.wired.com/2008/10/how-a-professor/)
 
-### 1.3.2. Exercise 3: Digital Audio Equalizer 
+[↑ Go to the Top of the Page](#)
+
+### 4.3.2. Exercise 3: Digital Audio Equalizer 
 
 Let us try and construct a simple digital equalizer. I shall present the primer for a very simple 3 band equalizer divided into three frequency bands created by three band-pass filters:
 - Low range: 20Hz – 250Hz
@@ -127,7 +138,9 @@ You can of course have more than three frequency channels, you can google common
 
 **NOTE**: Ancient stereos/cassette players and old audio workstations in music studios have analog equalizers designed using analog filters. If you look at the frequency sink of the output of our digital Equalizer you can observe that the filters work *really really* well. Digital filters can be very very precisely designed. The roll-off(or transition width) can be as narrow as you want!
 
-### 1.3.3. Exercise 4: Guitar Tuner
+[↑ Go to the Top of the Page](#)
+
+### 4.3.3. Exercise 4: Guitar Tuner
 
 Let us be more ambitious and design a Digital Guitar Tuner in GNU Radio. It is rather simple and very similar to the equalizer:  It is a series of band-pass filters **centred** on the fundamental frequency of the strings. The Fundamental frequencies of the open guitar string in a standard tuning:
 
@@ -146,13 +159,15 @@ The flow-graph should resemble this diagram:
 
 Choose an appropriate bandwidth. Add frequency and waterfall sinks for each string. What type of window will you use? 
 
-## 1.4. IIR: Infinite Impulse Response Filters
+[↑ Go to the Top of the Page](#)
+
+## 4.4. IIR: Infinite Impulse Response Filters
 
 The flow diagram of an IIR filter is shown below, $$ x[n]\ and\ y[n] $$ are inputs and outputs respectively. $$ z^{-1} $$ is the unit delay and $$ b_n $$ are the feed-forward filter coefficients, and $$ a_n $$ are the feed-back coefficients.
 
 ![IIR-Filter](img/IIR-filter.png)
 
-### 1.4.1. Classic Analog Filters
+### 4.4.1. Classic Analog Filters
 
 Analog filters built using traditional circuit elements like inductors, resistors, capacitors, transistor, op-amps, etc. have mathematical approximations that allow us to implement them digitally. There are 4 types each excelling in one parameter while under-performing in another:
 
@@ -170,6 +185,8 @@ Analog filters built using traditional circuit elements like inductors, resistor
 
 IIR or Infinite response filters are the closest digital implementations of these filters. 
 
-### 1.4.2. IIR Filter Design
+### 4.4.2. IIR Filter Design
 
 Now create an IIR filter to again pull out the fundamental frequency of the C-chord.  Do this again using the 'Filter design tool'.  When you use an IIR filter, the design is now in 'normalized' units of 'cycles/sample'. To get units of frequency, you must multiply by the sample rate/2 (fs/2) you are using.  So with a sample rate of 48000, you divide the frequency you want by 24000.  For an IIR filter you can use the "IIR Filter" block, where the feed-forward taps are the "b's" and the feed-back taps are the "a's".  Be sure to also select the 'new' style of taps.  How many coefficients (taps) are required for an IIR filter in comparison to an FIR filter with a similar response function?  More? Less?  Why?
+
+[↑ Go to the Top of the Page](#) ... [Next Lab](../05)
