@@ -1,24 +1,24 @@
-# 1. Fourier Analysis - Expert Mode! 
+# 5. Fourier Analysis - Expert Mode! 
 
-As we observed in the previous labs and theor corresponding exercises, Fourier analysis is a very important tool in Signal Processing. 
+As we observed in the previous labs and theory with their corresponding exercises, Fourier analysis is a very important tool in Signal Processing. 
 
 <!-- TOC -->
 
-- [1. Fourier Analysis - Expert Mode!](#1-fourier-analysis---expert-mode)
-    - [1.1. Fourier Transform Pairs](#11-fourier-transform-pairs)
-    - [1.2. IQ signals *or* What is up with all the Complex Numbers](#12-iq-signals-or-what-is-up-with-all-the-complex-numbers)
-    - [1.3. Fast Fourier Transforms (FFT)](#13-fast-fourier-transforms-fft)
-        - [1.3.1. 8 Point Fast Fourier Transform **[OPTIONAL]**](#131-8-point-fast-fourier-transform-optional)
-    - [1.4. Fourier Analysis in Radio Astronomy: A Spectrometer](#14-fourier-analysis-in-radio-astronomy-a-spectrometer)
-    - [1.5. Revisiting the spectrometer's purpose](#15-revisiting-the-spectrometers-purpose)
-    - [1.6. The Window Field in the FFT block](#16-the-window-field-in-the-fft-block)
-    - [1.7. Spectral Leakage & Polyphase Filter Bank (PFB)](#17-spectral-leakage--polyphase-filter-bank-pfb)
-    - [1.8. Final Upgrade: PFB Spectrometer](#18-final-upgrade-pfb-spectrometer)
-    - [1.9. Saving Data](#19-saving-data)
+- [5. Fourier Analysis - Expert Mode!](#1-fourier-analysis---expert-mode)
+    - [5.1. Fourier Transform Pairs](#11-fourier-transform-pairs)
+    - [5.2. IQ signals *or* What is up with all the Complex Numbers](#12-iq-signals-or-what-is-up-with-all-the-complex-numbers)
+    - [5.3. Fast Fourier Transforms (FFT)](#13-fast-fourier-transforms-fft)
+        - [5.3.1. 8 Point Fast Fourier Transform **[OPTIONAL]**](#131-8-point-fast-fourier-transform-optional)
+    - [5.4. Fourier Analysis in Radio Astronomy: A Spectrometer](#14-fourier-analysis-in-radio-astronomy-a-spectrometer)
+    - [5.5. Revisiting the spectrometer's purpose](#15-revisiting-the-spectrometers-purpose)
+    - [5.6. The Window Field in the FFT block](#16-the-window-field-in-the-fft-block)
+    - [5.7. Spectral Leakage & Polyphase Filter Bank (PFB)](#17-spectral-leakage--polyphase-filter-bank-pfb)
+    - [5.8. Final Upgrade: PFB Spectrometer](#18-final-upgrade-pfb-spectrometer)
+    - [5.9. Saving Data](#19-saving-data)
 
 <!-- /TOC -->
 
-## 1.1. Fourier Transform Pairs
+## 5.1. Fourier Transform Pairs
 
 Let us revisit fourier transform by exploring the concept through their various properties. Refer to this [Table of Fourier Transform Pairs and Properties](http://www.ws.binghamton.edu/fowler/fowler%20personal%20page/EE301_files/FT%20Tables_rev3.pdf) and implement in gnuradio the following :
 
@@ -37,7 +37,7 @@ Try to implement other properties from the link of fourier transform pairs and p
 
 [↑ Go to the Top of the Page](#)
 
-## 1.2. IQ signals *or* What is up with all the Complex Numbers
+## 5.2. IQ signals *or* What is up with all the Complex Numbers
 
 If you remember from the [lab 2 introduction](../02/#21-introduction) an SDR dongle passes the incoming signal through a mixer where the receiver sets the frequency you observe by setting the "LO" frequency which is mixed (multiplied) with the incoming signal.  The signal is actually mixed with 2 LO's, one cosine wave and one sine wave.  This is called quadrature sampling, and is done so that it is possible to distinguish a signal that is some frequency(say 2MHz) below the "LO" frequency, or 2MHz above the LO frequency.  With just a single mixing and one measurement, one just cannot distinguish between a signal at those two frequencies.
 
@@ -60,7 +60,7 @@ multiplied signals.  With just the single incoming tone, demonstrate that you ca
 
 [↑ Go to the Top of the Page](#)
 
-## 1.3. Fast Fourier Transforms (FFT)
+## 5.3. Fast Fourier Transforms (FFT)
 
 The Discrete Fourier Transform for N samples is given by:
 
@@ -76,7 +76,7 @@ Fast Fourier transform algorithms drastically reduce the computational complexit
 
 [↑ Go to the Top of the Page](#)
 
-### 1.3.1. 8 Point Fast Fourier Transform **[OPTIONAL]**
+### 5.3.1. 8 Point Fast Fourier Transform **[OPTIONAL]**
 
 The DFT implemented through a Cooley-Tukey Decimation in frequency FFT algorithm has the flowgraph shown below.
 ![8pfft](img/fft8p.png)
@@ -86,25 +86,25 @@ Use appropriate Constant multiplies and and adders to construct the above in gnu
 [↑ Go to the Top of the Page](#)
 
 <!--
-## 1.4. Fourier Analysis in Radio Astronomy: A Spectrometer
+## 5.4. Fourier Analysis in Radio Astronomy: A Spectrometer
 
 [↑ Go to the Top of the Page](#)
 
-## 1.5. Revisiting the spectrometer's purpose
+## 5.5. Revisiting the spectrometer's purpose
 
-## 1.6. The Window Field in the FFT block
-
-[↑ Go to the Top of the Page](#)
-
-## 1.7. Spectral Leakage & Polyphase Filter Bank (PFB)
+## 5.6. The Window Field in the FFT block
 
 [↑ Go to the Top of the Page](#)
 
-## 1.8. Final Upgrade: PFB Spectrometer
+## 5.7. Spectral Leakage & Polyphase Filter Bank (PFB)
 
 [↑ Go to the Top of the Page](#)
 
-## 1.9. Saving Data
+## 5.8. Final Upgrade: PFB Spectrometer
+
+[↑ Go to the Top of the Page](#)
+
+## 5.9. Saving Data
 
 [↑ Go to the Top of the Page](#)
 -->
