@@ -39,11 +39,21 @@ Try to implement other properties from the link of fourier transform pairs and p
 
 ## 1.2. IQ signals *or* What is up with all the Complex Numbers
 
-Signal modulation changes a sinusoid to encode information. The equation representing a sinusoid  is as follows:
+If you remember from the lab 2 introduction **link? or reproduce more complicated diagram** an SDR dongle passes the incoming signal through a mixer where the receiver sets the frequency you observe by setting the "LO" frequency which is mixed (multiplied) with the incoming signal.  The signal is actually mixed with 2 LO's, one cosine wave and one sine wave.  This is called quadrature sampling, and is done so that it is possible to distinguish a signal that is some frequency(say 2MHz) below the "LO" frequency, or 2MHz above the LO frequency.  With just a single mixing and one measurement, one just cannot distinguish between a signal at those two frequencies.
 
-$$
-x(t) = cos(2 \pi f_c t + \phi )
-$$
+[See this jupyter notebook] (I_Q_quadrature_sampling.html) for an 
+introduction to the idea.  
+
+Now demonstrate IQ processing in gnuradio.  We can demonstrate this at much lower frequencies as well.  Set the sample-rate to 48kHz.  Create 2 tones(cosine signals), one at 8kHz, one at 12kHz.  Create your LO at 10kHz, one a cosine and one a sine.
+
+Try using the two signals independently, and added together, this is the overall 'signal'.
+Now multiply this signal by the cosine and the sine "LO's".  This now will become your IQ signal.  In gnuradio, this is passed into a "float to complex" block,
+where the cosine LO mixed signal is the real, and the sine multiplied is the imaginary.  This can then be passed into a sink.  
+
+Add different syncs along the way, looking at just the cosine ("I") or sine ("Q")
+multiplied signals.  With just the single incoming tone, demonstrate that you can in fact recover it after mixing.  Do we need a filter?  Where? Add one if needed.  
+
+
 
 
 
