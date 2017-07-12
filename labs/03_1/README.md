@@ -1,14 +1,14 @@
-# 1. Fourier Series and Fourier Transforms
+# 3.1. Fourier Series and Fourier Transforms
 <!-- TOC -->
 
-- [1. Fourier Series and Fourier Transforms](#1-fourier-series-and-fourier-transforms)
-    - [1.1. Intro](#11-intro)
-    - [1.2. Fourier Transform](#12-fourier-transform)
-    - [1.3. Example](#13-Example)
+- [3.1. Fourier Series and Fourier Transforms](#31-fourier-series-and-fourier-transforms)
+    - [3.1.1. Intro](#311-intro)
+    - [3.1.2. Fourier Transform](#312-fourier-transform)
+    - [3.1.3 Example](#313-example)
 
 <!-- /TOC -->
 
-## 1.1. Intro
+## 3.1.1. Intro
 
 We segue into the concept of fourier transforms directly by seeing how they relate to fourier series. First some mathematics to associate familiarity, the fourier transform of $$x(t)$$ is given by:
 
@@ -38,7 +38,7 @@ where $$X(\omega)$$ is the fourier transform and $$\omega_o = \frac{2\pi}{T}$$
 
 [↑ Go to the Top of the Page](#)
 
-## 1.2. Fourier Transform
+## 3.1.2. Fourier Transform
 
 Use the [Square Wave](../03/#13-a-sqaure-wave) and the [Triangle Wave](../03/#14-a-triangle-wave) flowgraphs from the previous exercise.
 
@@ -60,7 +60,7 @@ We've been taking fourier transform of the signal everytime we see a plot with f
 
  We shall visit fourier transforms in detail again that in Lab 5. 
 
-## 1.3 Example
+## 3.1.3 Example
 
 We can also think of this to use gnuradio-companion to graphically get the fourier components of a signal using a fourier transform.  Create a flow-graph with a signal source->FFT(fourier transform)-> complex to real/imag -> vector sinks.  The output of the real-part contains the cosine components of the transform.  The imaginary part contains the sine components of the fourier expansion.  
 

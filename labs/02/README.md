@@ -1,19 +1,19 @@
-# 1. Software Defined Radio - Hardware
+# 2. Software Defined Radio - Hardware
 
 In [Lab 1](../01/) we learned how to work around GNU Radio Companion (GRC) and simulate signals and instruments. We shall now step into the real world with real signals. 
 
 <!-- TOC -->
 
-- [1. Software Defined Radio - Hardware](#1-software-defined-radio---hardware)
-    - [1.1. Introduction](#11-introduction)
-    - [1.2. GQRX - It's cool](#12-gqrx---its-cool)
-        - [1.2.1. Frequency Correction](#121-frequency-correction)
-    - [1.3. GNURadio FM](#13-gnuradio-fm)
-    - [1.4. Fun SDR/GNU Radio things](#14-fun-sdrgnu-radio-things)
+- [2. Software Defined Radio - Hardware](#2-software-defined-radio---hardware)
+    - [2.1. Introduction](#21-introduction)
+    - [2.2. GQRX - It's cool](#22-gqrx---its-cool)
+        - [2.2.1. Frequency Correction](#221-frequency-correction)
+    - [2.3. GNURadio FM](#23-gnuradio-fm)
+    - [2.4. Fun SDR/GNU Radio things](#24-fun-sdrgnu-radio-things)
 
 <!-- /TOC -->
 
-## 1.1. Introduction
+## 2.1. Introduction
 
 A "simplified" diagram of the device which we shall be using is shown below:
 
@@ -29,7 +29,7 @@ Before we code on our own we shall a useful application called GQRX
 
 [↑ Go to the Top of the Page](#)
 
-## 1.2. GQRX - It's cool
+## 2.2. GQRX - It's cool
 
 [GQRX](http://gqrx.dk) is an application written using gnuradio. It acquired data from the dongle and has a set of preset options to manipulate said signals. It can even store raw data for custom decoding.
 
@@ -64,7 +64,7 @@ We can use this application to recieve even decode to all kinds of signals from 
 
 [↑ Go to the Top of the Page](#)
 
-### 1.2.1. Frequency Correction
+### 2.2.1. Frequency Correction
 
 The hardware is well made, but a precision clock is quite expensive. The frequency the "tuner" tunes to may be slightly off from the actual frequency it is tuning to. We can correct for that in the software.  For high hend SDR dongles this correction is virtually non existent but some low-end dogles have higher deviations!
 
@@ -73,7 +73,7 @@ We can transmit a signal using a known and relaiable tone. Then we use our recei
 
 [↑ Go to the Top of the Page](#)
 
-## 1.3. GNURadio FM
+## 2.3. GNURadio FM
 
 We used gqrx in section 1.2 to listen to FM now we shall code our own radio using GRC!
 
@@ -113,7 +113,7 @@ The choices made so far here may seem a bit arbitrary.  In the future we'll go i
 
 [↑ Go to the Top of the Page](#)
 
-## 1.4. Fun SDR/GNU Radio things
+## 2.4. Fun SDR/GNU Radio things
 
 1. AM Radio!
 2. Narrow Band FM ( same are FM but a narrower filter passband)
