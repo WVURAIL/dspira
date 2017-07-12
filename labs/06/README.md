@@ -1,4 +1,4 @@
-# A radio Telescope
+# A Radio Telescope
 
 You now have the tools necessary to create the digital signal processing for a Spectrometer for a radio telescope.  A spectrometer:
 
