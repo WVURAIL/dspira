@@ -10,7 +10,7 @@ The Neutral Hydrogen signal from the Milky Way galaxy is very faint, and the tel
 
 A brief memo on the initial design and performance of the LNA is here:
 
-[LNA assembly Instructions](DSPIRA_memo2_LNA.pdf)
+[LNA memo](DSPIRA_memo2_LNA.pdf)
 
 ## 6.3 Spectrometer.  
 
