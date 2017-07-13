@@ -15,6 +15,7 @@ As we observed in the previous labs and theory with their corresponding exercise
     - [5.7. Spectral Leakage & Polyphase Filter Bank (PFB)](#57-spectral-leakage--polyphase-filter-bank-pfb)
     - [5.8. Final Upgrade: PFB Spectrometer](#58-final-upgrade-pfb-spectrometer)
     - [5.9. Saving Data](#59-saving-data)
+                    - [Image Credits](#image-credits)
 
 <!-- /TOC -->
 
@@ -42,6 +43,7 @@ Try to implement other properties from the link of fourier transform pairs and p
 If you remember from the [lab 2 introduction](../02/#21-introduction) an SDR dongle passes the incoming signal through a mixer where the receiver sets the frequency you observe by setting the "LO" frequency which is mixed (multiplied) with the incoming signal.  The signal is actually mixed with 2 LO's, one cosine wave and one sine wave.  This is called quadrature sampling, and is done so that it is possible to distinguish a signal that is some frequency(say 2MHz) below the "LO" frequency, or 2MHz above the LO frequency.  With just a single mixing and one measurement, one just cannot distinguish between a signal at those two frequencies.
 
 ![IQ](img/iq.png)
+[Credit](#image-credits)
 
 [See this jupyter notebook](I_Q_quadrature_sampling.html) for an 
 introduction to the idea.  
@@ -168,8 +170,7 @@ y(n) = \sum_{p=0}^{P-1} x(n + pN) h(n+pN)
 $$
 Where, where the sub-filter coefficients $$h(n + pN)$$ correspond to what are called P-tap 'polyphase sub-filters'. The N such polyphase sub-filters that make up this operation, together with the following DFT stage, are collectively called a 'polyphase filter bank' ('PFB'). A realization of this filter bank is shown below:
 
-![pfbrealized]()
-
+![pfbrealized](img/pfbrealized.png)
 
 [↑ Go to the Top of the Page](#)
 
@@ -185,7 +186,7 @@ Save the spectrometer data for science! (Use File Sink)
 
 ###### Image Credits
 
-1. The windows, the two types of spectrometers,fft vs hann resposnse https://arxiv.org/pdf/1607.03579.pdf
-2. The PFB flowgraph, spectral leakage demo, https://casper.berkeley.edu/wiki/The_Polyphase_Filter_Bank_Technique
+1. The windows, the two types of spectrometers,fft vs hann resposnse [https://arxiv.org/pdf/1607.03579.pdf](https://arxiv.org/pdf/1607.03579.pdf)
+2. The PFB flowgraph, spectral leakage demo, [https://casper.berkeley.edu/wiki/The_Polyphase_Filter_Bank_Technique](https://casper.berkeley.edu/wiki/The_Polyphase_Filter_Bank_Technique)
 
 [↑ Go to the Top of the Page](#) ... [Next Lab](../06)
