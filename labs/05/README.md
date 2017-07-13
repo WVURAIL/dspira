@@ -183,7 +183,6 @@ Add the polyphase filters to your spectrometer just before taking the FFT. Refer
 
 Save the spectrometer data for science! (Use File Sink)
 
-[Credit](#image-credits)
 ###### Image Credits
 
 1. The windows, the two types of spectrometers,fft vs hann resposnse https://arxiv.org/pdf/1607.03579.pdf
