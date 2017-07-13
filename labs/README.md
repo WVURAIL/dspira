@@ -18,11 +18,10 @@
 >  To implement filters. We shall make a an "*equalizer*" for the demodulated FM audio using the filters. Extract fundamental frequencies from a piano chord. Build a guitar tuner. 
 
 5. [Fourier Analysis -- Expert Mode!](05)
-> Revisit Fourier Transform, FT properties, IQ sampling, Optionally, Implement a simple N-point *Fast Fourier Transform*. Use the gnuradio FFT block and filters from the previous exercise to build a spectrometer.
+> Revisit Fourier Transform, FT properties, IQ sampling, Optionally, Implement a simple N-point *Fast Fourier Transform*. Use the gnuradio FFT block and filters from the previous exercise to build a spectrometer. Intruduction to Polyphase filterbanks as an added upgrade to the spectrometer. 
 
 6. [A Radio Telescope](06)    
 > 1. Build an Antenna
-> 2. Introduction to Polyphase Filterbanks. Give a software upgrade to the Spectrometer 
-> 3. Inegration of Antenna to SDR dongle to GNU Radio companion. Testing
+> 2. Inegration of Antenna to SDR dongle to GNU Radio companion. Testing
+> 3. Data reduction
 > 4. First Light
-> 5. Data reduction

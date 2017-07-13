@@ -11,7 +11,7 @@ As we observed in the previous labs and theory with their corresponding exercise
         - [5.3.1. 8 Point Fast Fourier Transform **[OPTIONAL]**](#531-8-point-fast-fourier-transform-optional)
     - [5.4. Fourier Analysis in Radio Astronomy: A Spectrometer](#54-fourier-analysis-in-radio-astronomy-a-spectrometer)
     - [5.5. The Spectrometer's purpose](#55-the-spectrometers-purpose)
-    - [5.6. The Window Field in the FFT block](#56-the-window-field-in-the-fft-block)
+    - [5.6. The Window Field in the gnuradio FFT block](#56-the-window-field-in-the-gnuradio-fft-block)
     - [5.7. Spectral Leakage & Polyphase Filter Bank (PFB)](#57-spectral-leakage--polyphase-filter-bank-pfb)
     - [5.8. Final Upgrade: PFB Spectrometer](#58-final-upgrade-pfb-spectrometer)
     - [5.9. Saving Data](#59-saving-data)
@@ -115,24 +115,65 @@ S_{xx}(\nu)=E[|X(\nu)|^2]
 $$
 E[] stands for the expected value i.e. the mean
 
-There are therefore two distinct classes of spectrometers: ones that approximate $$ S_{xx} (k) $$ by first forming the autocorrelation, then taking a Fourier transform and those that first convert into the frequency domain to form X(k) before evaluating $$ S_{xx} (k) $$. These are Autocorrelation Spectrometers and  Fourier Tranform Filterbanks respectively.
+There are therefore two distinct classes of spectrometers: ones that approximate $$ S_{xx} (k) $$ by first forming the autocorrelation, then taking a Fourier transform and those that first convert into the frequency domain to form X(k) before evaluating $$ S_{xx} (k) $$. These are Autocorrelation Spectrometers and  Fourier Tranform Filterbanks respectively. 
 
-## 5.6. The Window Field in the FFT block
+![the two spectrometers](img/spectro.png)
+
+The one we made above is a fourier transform filterbank. A filterbank is simply an array of band-pass filters, designed to split an input signal into multiple components. A spectrometer is referred to as a *analysis filterbank* where the output of each filter is squared and averaged.
+
+## 5.6. The Window Field in the gnuradio FFT block
+
+The spectrometer we constructed effectively works as a array of band-pass FIR filters. If you recall FIR filters their design involves something called window-functions designed to optimise the filter response. The Discrete Fourier transform as it were uses the rectangular window function across each frequency channel. The response is non-ideal leading to spectral leakage i.e. the signal showing up in neighnouring frequency channels. Below is a Demonstration of DFT leakage - a tone at 5.1MHz, sampled at 128MHz, and Fourier-transformed with 64 points, appears to varying levels in all the output frequency bins.
+
+![specleak](img/specleak.png)
+
+This can be improveed by using better windowing functions to properly define the frequency channel. Below are some commonly used windowing functions. 
+
+![windows](img/windows.png)
+
+Note the frequncy response, the main lobe width and the attenuation of the side lobes determine how well defined are the frequency channels Below shows the window response in some frequency bins, the ones with the higher sidelobes as responses of boxcar windows and the the lower sidelobes are of the hann window.
+
+![rectvshann](img/nwvsw.png)
+
+In your spectrometer flowgraph, change the window field in the FFT block and observe how the response of a tone ( a sinusoud signal ) changes for different windows. 
 
 [↑ Go to the Top of the Page](#)
 
 ## 5.7. Spectral Leakage & Polyphase Filter Bank (PFB)
 
+Despite the appropraite windowing, spectral leakage persists, moreover there is something called a scalloping loss. Scalloping loss is the loss in energy between frequency bin centres due to the non-flat nature of the single-bin frequency response. 
+
+The polyphase filter bank (PFB) technique is a mechanism for alleviating the aforementioned drawbacks of the straightforward DFT. The PFB not only produces a flat response across the channel, but also provides excellent suppression of out-of-band signals, as shown below.
+
+![pfb](img/pfb.png)
+
+
+
+"Instead of taking an N-point transform directly, a block of data of size N x P = M is read, and multiplied point-by-point with a window function (in other words, the data is 'weighted'). As mentioned before, the shape of the window function determines the shape of the single-bin frequency response. Since we wish the single-bin frequency response to resemble a rectangular function as much as possible, we choose its Fourier Transform pair, the sinc function, as our window function. Once the multiplication is done, the block of data is split into P subsets of length N each, and added point-by-point. This array is then passed to a regular DFT routine to get an N-point transform that exhibits less leakage. This method is presented graphically below"[^1]
+
+[^1]: [https://casper.berkeley.edu/wiki/The_Polyphase_Filter_Bank_Technique](https://casper.berkeley.edu/wiki/The_Polyphase_Filter_Bank_Technique)
+
+![pfb](img/pfb_chart.png)
+
+The same process, mathematically:
+
+$$
+y(n) = \sum_{p=0}^{P-1} x(n + pN) h(n+pN)
+$$
+Where, where the sub-filter coefficients $$h(n + pN)$$ correspond to what are called P-tap 'polyphase sub-filters'. The N such polyphase sub-filters that make up this operation, together with the following DFT stage, are collectively called a 'polyphase filter bank' ('PFB'). A realization of this filter bank is shown below:
+
+![pfbrealized](img/pfbyo.png)
+
 [↑ Go to the Top of the Page](#)
 
 ## 5.8. Final Upgrade: PFB Spectrometer
 
-Add 
+Add the polyphase filters to your spectrometer just before taking the FFT. Refer to the diagram above, the dotted squares are simply band-pass FIR filters. Use a hann/hamming window. 
 
 [↑ Go to the Top of the Page](#)
 
 ## 5.9. Saving Data
 
-Save the spectrometer data! (Use File Sink)
+Save the spectrometer data for science! (Use File Sink)
 
 [↑ Go to the Top of the Page](#) ... [Next Lab](../06)
