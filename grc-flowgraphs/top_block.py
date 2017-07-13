@@ -3,7 +3,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Top Block
-# Generated: Wed Jul  5 22:54:51 2017
+# Generated: Thu Jul  6 14:22:07 2017
 ##################################################
 
 if __name__ == '__main__':
@@ -66,10 +66,110 @@ class top_block(gr.top_block, Qt.QWidget):
         ##################################################
         # Blocks
         ##################################################
+        self.qtgui_time_sink_x_0_0_0_0 = qtgui.time_sink_c(
+        	1024, #size
+        	samp_rate, #samp_rate
+        	"After Filtering", #name
+        	1 #number of inputs
+        )
+        self.qtgui_time_sink_x_0_0_0_0.set_update_time(0.10)
+        self.qtgui_time_sink_x_0_0_0_0.set_y_axis(-1, 1)
+        
+        self.qtgui_time_sink_x_0_0_0_0.set_y_label('Amplitude', "")
+        
+        self.qtgui_time_sink_x_0_0_0_0.enable_tags(-1, True)
+        self.qtgui_time_sink_x_0_0_0_0.set_trigger_mode(qtgui.TRIG_MODE_FREE, qtgui.TRIG_SLOPE_POS, 0.0, 0, 0, "")
+        self.qtgui_time_sink_x_0_0_0_0.enable_autoscale(True)
+        self.qtgui_time_sink_x_0_0_0_0.enable_grid(False)
+        self.qtgui_time_sink_x_0_0_0_0.enable_axis_labels(True)
+        self.qtgui_time_sink_x_0_0_0_0.enable_control_panel(False)
+        
+        if not True:
+          self.qtgui_time_sink_x_0_0_0_0.disable_legend()
+        
+        labels = ['', '', '', '', '',
+                  '', '', '', '', '']
+        widths = [1, 1, 1, 1, 1,
+                  1, 1, 1, 1, 1]
+        colors = ["blue", "red", "green", "black", "cyan",
+                  "magenta", "yellow", "dark red", "dark green", "blue"]
+        styles = [1, 1, 1, 1, 1,
+                  1, 1, 1, 1, 1]
+        markers = [-1, -1, -1, -1, -1,
+                   -1, -1, -1, -1, -1]
+        alphas = [1.0, 1.0, 1.0, 1.0, 1.0,
+                  1.0, 1.0, 1.0, 1.0, 1.0]
+        
+        for i in xrange(2*1):
+            if len(labels[i]) == 0:
+                if(i % 2 == 0):
+                    self.qtgui_time_sink_x_0_0_0_0.set_line_label(i, "Re{{Data {0}}}".format(i/2))
+                else:
+                    self.qtgui_time_sink_x_0_0_0_0.set_line_label(i, "Im{{Data {0}}}".format(i/2))
+            else:
+                self.qtgui_time_sink_x_0_0_0_0.set_line_label(i, labels[i])
+            self.qtgui_time_sink_x_0_0_0_0.set_line_width(i, widths[i])
+            self.qtgui_time_sink_x_0_0_0_0.set_line_color(i, colors[i])
+            self.qtgui_time_sink_x_0_0_0_0.set_line_style(i, styles[i])
+            self.qtgui_time_sink_x_0_0_0_0.set_line_marker(i, markers[i])
+            self.qtgui_time_sink_x_0_0_0_0.set_line_alpha(i, alphas[i])
+        
+        self._qtgui_time_sink_x_0_0_0_0_win = sip.wrapinstance(self.qtgui_time_sink_x_0_0_0_0.pyqwidget(), Qt.QWidget)
+        self.top_layout.addWidget(self._qtgui_time_sink_x_0_0_0_0_win)
+        self.qtgui_time_sink_x_0_0_0 = qtgui.time_sink_c(
+        	1024, #size
+        	samp_rate, #samp_rate
+        	"After Filtering", #name
+        	1 #number of inputs
+        )
+        self.qtgui_time_sink_x_0_0_0.set_update_time(0.10)
+        self.qtgui_time_sink_x_0_0_0.set_y_axis(-1, 1)
+        
+        self.qtgui_time_sink_x_0_0_0.set_y_label('Amplitude', "")
+        
+        self.qtgui_time_sink_x_0_0_0.enable_tags(-1, True)
+        self.qtgui_time_sink_x_0_0_0.set_trigger_mode(qtgui.TRIG_MODE_FREE, qtgui.TRIG_SLOPE_POS, 0.0, 0, 0, "")
+        self.qtgui_time_sink_x_0_0_0.enable_autoscale(True)
+        self.qtgui_time_sink_x_0_0_0.enable_grid(False)
+        self.qtgui_time_sink_x_0_0_0.enable_axis_labels(True)
+        self.qtgui_time_sink_x_0_0_0.enable_control_panel(False)
+        
+        if not True:
+          self.qtgui_time_sink_x_0_0_0.disable_legend()
+        
+        labels = ['', '', '', '', '',
+                  '', '', '', '', '']
+        widths = [1, 1, 1, 1, 1,
+                  1, 1, 1, 1, 1]
+        colors = ["blue", "red", "green", "black", "cyan",
+                  "magenta", "yellow", "dark red", "dark green", "blue"]
+        styles = [1, 1, 1, 1, 1,
+                  1, 1, 1, 1, 1]
+        markers = [-1, -1, -1, -1, -1,
+                   -1, -1, -1, -1, -1]
+        alphas = [1.0, 1.0, 1.0, 1.0, 1.0,
+                  1.0, 1.0, 1.0, 1.0, 1.0]
+        
+        for i in xrange(2*1):
+            if len(labels[i]) == 0:
+                if(i % 2 == 0):
+                    self.qtgui_time_sink_x_0_0_0.set_line_label(i, "Re{{Data {0}}}".format(i/2))
+                else:
+                    self.qtgui_time_sink_x_0_0_0.set_line_label(i, "Im{{Data {0}}}".format(i/2))
+            else:
+                self.qtgui_time_sink_x_0_0_0.set_line_label(i, labels[i])
+            self.qtgui_time_sink_x_0_0_0.set_line_width(i, widths[i])
+            self.qtgui_time_sink_x_0_0_0.set_line_color(i, colors[i])
+            self.qtgui_time_sink_x_0_0_0.set_line_style(i, styles[i])
+            self.qtgui_time_sink_x_0_0_0.set_line_marker(i, markers[i])
+            self.qtgui_time_sink_x_0_0_0.set_line_alpha(i, alphas[i])
+        
+        self._qtgui_time_sink_x_0_0_0_win = sip.wrapinstance(self.qtgui_time_sink_x_0_0_0.pyqwidget(), Qt.QWidget)
+        self.top_layout.addWidget(self._qtgui_time_sink_x_0_0_0_win)
         self.qtgui_time_sink_x_0_0 = qtgui.time_sink_c(
         	1024, #size
         	samp_rate, #samp_rate
-        	"", #name
+        	"After Filtering", #name
         	1 #number of inputs
         )
         self.qtgui_time_sink_x_0_0.set_update_time(0.10)
@@ -119,7 +219,7 @@ class top_block(gr.top_block, Qt.QWidget):
         self.qtgui_time_sink_x_0 = qtgui.time_sink_c(
         	1024, #size
         	samp_rate, #samp_rate
-        	"", #name
+        	"Before Filtering", #name
         	1 #number of inputs
         )
         self.qtgui_time_sink_x_0.set_update_time(0.10)
@@ -180,10 +280,12 @@ class top_block(gr.top_block, Qt.QWidget):
         ##################################################
         self.connect((self.analog_noise_source_x_0, 0), (self.blocks_add_xx_0, 1))    
         self.connect((self.analog_sig_source_x_0, 0), (self.blocks_add_xx_0, 0))    
+        self.connect((self.analog_sig_source_x_0, 0), (self.qtgui_time_sink_x_0_0_0_0, 0))    
         self.connect((self.blocks_add_xx_0, 0), (self.movingavg_0, 0))    
         self.connect((self.blocks_add_xx_0, 0), (self.qtgui_time_sink_x_0, 0))    
-        self.connect((self.movingavg_0, 1), (self.movingavg_0_0, 1))    
         self.connect((self.movingavg_0, 0), (self.movingavg_0_0, 0))    
+        self.connect((self.movingavg_0, 1), (self.movingavg_0_0, 1))    
+        self.connect((self.movingavg_0, 1), (self.qtgui_time_sink_x_0_0_0, 0))    
         self.connect((self.movingavg_0_0, 0), (self.movingavg_0_1, 0))    
         self.connect((self.movingavg_0_0, 1), (self.movingavg_0_1, 1))    
         self.connect((self.movingavg_0_1, 0), (self.movingavg_0_2, 0))    
@@ -191,7 +293,6 @@ class top_block(gr.top_block, Qt.QWidget):
         self.connect((self.movingavg_0_2, 0), (self.movingavg_0_2_0, 0))    
         self.connect((self.movingavg_0_2, 1), (self.movingavg_0_2_0, 1))    
         self.connect((self.movingavg_0_2_0, 1), (self.qtgui_time_sink_x_0_0, 0))    
-
 
     def closeEvent(self, event):
         self.settings = Qt.QSettings("GNU Radio", "top_block")
@@ -203,6 +304,8 @@ class top_block(gr.top_block, Qt.QWidget):
 
     def set_samp_rate(self, samp_rate):
         self.samp_rate = samp_rate
+        self.qtgui_time_sink_x_0_0_0_0.set_samp_rate(self.samp_rate)
+        self.qtgui_time_sink_x_0_0_0.set_samp_rate(self.samp_rate)
         self.qtgui_time_sink_x_0_0.set_samp_rate(self.samp_rate)
         self.qtgui_time_sink_x_0.set_samp_rate(self.samp_rate)
         self.analog_sig_source_x_0.set_sampling_freq(self.samp_rate)
