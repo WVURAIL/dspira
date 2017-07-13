@@ -4,17 +4,17 @@ As we observed in the previous labs and theory with their corresponding exercise
 
 <!-- TOC -->
 
-- [5. Fourier Analysis - Expert Mode!](#1-fourier-analysis---expert-mode)
-    - [5.1. Fourier Transform Pairs](#11-fourier-transform-pairs)
-    - [5.2. IQ signals *or* What is up with all the Complex Numbers](#12-iq-signals-or-what-is-up-with-all-the-complex-numbers)
-    - [5.3. Fast Fourier Transforms (FFT)](#13-fast-fourier-transforms-fft)
-        - [5.3.1. 8 Point Fast Fourier Transform **[OPTIONAL]**](#131-8-point-fast-fourier-transform-optional)
-    - [5.4. Fourier Analysis in Radio Astronomy: A Spectrometer](#14-fourier-analysis-in-radio-astronomy-a-spectrometer)
-    - [5.5. Revisiting the spectrometer's purpose](#15-revisiting-the-spectrometers-purpose)
-    - [5.6. The Window Field in the FFT block](#16-the-window-field-in-the-fft-block)
-    - [5.7. Spectral Leakage & Polyphase Filter Bank (PFB)](#17-spectral-leakage--polyphase-filter-bank-pfb)
-    - [5.8. Final Upgrade: PFB Spectrometer](#18-final-upgrade-pfb-spectrometer)
-    - [5.9. Saving Data](#19-saving-data)
+- [5. Fourier Analysis - Expert Mode!](#5-fourier-analysis---expert-mode)
+    - [5.1. Fourier Transform Pairs](#51-fourier-transform-pairs)
+    - [5.2. IQ signals *or* What is up with all the Complex Numbers](#52-iq-signals-or-what-is-up-with-all-the-complex-numbers)
+    - [5.3. Fast Fourier Transforms (FFT)](#53-fast-fourier-transforms-fft)
+        - [5.3.1. 8 Point Fast Fourier Transform **[OPTIONAL]**](#531-8-point-fast-fourier-transform-optional)
+    - [5.4. Fourier Analysis in Radio Astronomy: A Spectrometer](#54-fourier-analysis-in-radio-astronomy-a-spectrometer)
+    - [5.5. The Spectrometer's purpose](#55-the-spectrometers-purpose)
+    - [5.6. The Window Field in the FFT block](#56-the-window-field-in-the-fft-block)
+    - [5.7. Spectral Leakage & Polyphase Filter Bank (PFB)](#57-spectral-leakage--polyphase-filter-bank-pfb)
+    - [5.8. Final Upgrade: PFB Spectrometer](#58-final-upgrade-pfb-spectrometer)
+    - [5.9. Saving Data](#59-saving-data)
 
 <!-- /TOC -->
 
@@ -85,12 +85,35 @@ Use appropriate Constant multiplies and and adders to construct the above in gnu
 
 [↑ Go to the Top of the Page](#)
 
-<!--
 ## 5.4. Fourier Analysis in Radio Astronomy: A Spectrometer
+
+You now have the tools necessary to create the digital signal processing for a Spectrometer for a radio telescope.  A spectrometer:
+
+1.  Separates the incoming radio signal into individual frequency components (breaks it into individual cosine wave amplitudes and phases at each frequency)
+2.  Measures the power in each of the cosine waves.
+3.  Integrates (Averages) to get get a more precise measurement of the power at each frequency.
+
+Use GnuRadio to create the signal processing chain to achieve this. Use an osmocom airspy source.  Use an FFT to separate frequency components. 
 
 [↑ Go to the Top of the Page](#)
 
-## 5.5. Revisiting the spectrometer's purpose
+## 5.5. The Spectrometer's purpose
+
+As mentioned above, A spectrometer is used to record and measure the spectral content of signals, such as radio waves received from astronomical sources. Specifically, a spectrom- eter measures the power spectral density (PSD, measured in units of $$WHz^{−1}$$) of a signal. Analysis of spectral content can reveal details of radio sources, as well as properties of the intervening medium like galactic neutral hydrogen. The Power Spectral Density is given by the Wiener-Kinchin theorem for wide sense stationary signals as: 
+
+$$
+S_{xx}(\nu) = \int^{\infty}_{^-\infty}r_{xx}(\tau) e^{-2\pi i\nu\tau}d\tau
+$$
+$$
+r_{xx}= E[x(t)(x(t-\tau)]
+$$
+and in the fourier domain
+$$
+S_{xx}(\nu)=E[|X(\nu)|^2]
+$$
+E[] stands for the expected value i.e. the mean
+
+There are therefore two distinct classes of spectrometers: ones that approximate $$ S_{xx} (k) $$ by first forming the autocorrelation, then taking a Fourier transform and those that first convert into the frequency domain to form X(k) before evaluating $$ S_{xx} (k) $$. These are Autocorrelation Spectrometers and  Fourier Tranform Filterbanks respectively.
 
 ## 5.6. The Window Field in the FFT block
 
@@ -102,9 +125,12 @@ Use appropriate Constant multiplies and and adders to construct the above in gnu
 
 ## 5.8. Final Upgrade: PFB Spectrometer
 
+Add 
+
 [↑ Go to the Top of the Page](#)
 
 ## 5.9. Saving Data
 
-[↑ Go to the Top of the Page](#)
--->
+Save the spectrometer data! (Use File Sink)
+
+[↑ Go to the Top of the Page](#) ... [Next Lab](../06)
