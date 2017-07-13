@@ -101,7 +101,7 @@ Use GnuRadio to create the signal processing chain to achieve this. Use an osmoc
 
 ## 5.5. The Spectrometer's purpose
 
-As mentioned above, A spectrometer is used to record and measure the spectral content of signals, such as radio waves received from astronomical sources. Specifically, a spectrom- eter measures the power spectral density (PSD, measured in units of $$WHz^{−1}$$) of a signal. Analysis of spectral content can reveal details of radio sources, as well as properties of the intervening medium like galactic neutral hydrogen. The Power Spectral Density is given by the Wiener-Kinchin theorem for wide sense stationary signals as: 
+As mentioned above, A spectrometer is used to record and measure the spectral content of signals, such as radio waves received from astronomical sources. Specifically, a spectrometer measures the power spectral density (PSD, measured in units of $$W Hz^{−1}$$) of a signal. Analysis of spectral content can reveal details of radio sources, as well as properties of the intervening medium like galactic neutral hydrogen. The Power Spectral Density is given by the Wiener-Kinchin theorem for wide sense stationary signals as: 
 
 $$
 S_{xx}(\nu) = \int^{\infty}_{^-\infty}r_{xx}(\tau) e^{-2\pi i\nu\tau}d\tau
@@ -115,7 +115,7 @@ S_{xx}(\nu)=E[|X(\nu)|^2]
 $$
 E[] stands for the expected value i.e. the mean
 
-There are therefore two distinct classes of spectrometers: ones that approximate $$ S_{xx} (k) $$ by first forming the autocorrelation, then taking a Fourier transform and those that first convert into the frequency domain to form X(k) before evaluating $$ S_{xx} (k) $$. These are Autocorrelation Spectrometers and  Fourier Tranform Filterbanks respectively. 
+There are therefore two distinct classes of spectrometers: 1) ones that approximate $$ S_{xx} (k) $$ by first forming the autocorrelation, then taking a Fourier transform and 2) those that first convert into the frequency domain to form X(k) before evaluating $$ S_{xx} (k) $$. These are Autocorrelation Spectrometers and  Fourier Tranform Filterbanks respectively. 
 
 ![the two spectrometers](img/spectro.png)
 
@@ -123,7 +123,7 @@ The one we made above is a fourier transform filterbank. A filterbank is simply 
 
 ## 5.6. The Window Field in the gnuradio FFT block
 
-The spectrometer we constructed effectively works as a array of band-pass FIR filters. If you recall FIR filters their design involves something called window-functions designed to optimise the filter response. The Discrete Fourier transform as it were uses the rectangular window function across each frequency channel. The response is non-ideal leading to spectral leakage i.e. the signal showing up in neighnouring frequency channels. Below is a Demonstration of DFT leakage - a tone at 5.1MHz, sampled at 128MHz, and Fourier-transformed with 64 points, appears to varying levels in all the output frequency bins.
+The spectrometer we constructed effectively works as a array of band-pass FIR filters. If you recall FIR filters their design involves something called window-functions designed to optimise the filter response. The Discrete Fourier transform as it were uses the rectangular window function across each frequency channel. The response is non-ideal leading to spectral leakage i.e. the signal showing up in neighboring frequency channels. Below is a Demonstration of DFT leakage - a tone at 5.1MHz, sampled at 128MHz, and Fourier-transformed with 64 points, appears to varying levels in all the output frequency bins.
 
 ![specleak](img/specleak.png)
 
