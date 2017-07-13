@@ -188,5 +188,6 @@ Save the spectrometer data for science! (Use File Sink)
 
 1. The windows, the two types of spectrometers,fft vs hann resposnse [https://arxiv.org/pdf/1607.03579.pdf](https://arxiv.org/pdf/1607.03579.pdf)
 2. The PFB flowgraph, spectral leakage demo, [https://casper.berkeley.edu/wiki/The_Polyphase_Filter_Bank_Technique](https://casper.berkeley.edu/wiki/The_Polyphase_Filter_Bank_Technique)
+3. IQ diagram[https://www.dsprelated.com/showarticle/192.php](https://www.dsprelated.com/showarticle/192.php)
 
 [↑ Go to the Top of the Page](#) ... [Next Lab](../06)
