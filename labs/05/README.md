@@ -131,8 +131,9 @@ This can be improveed by using better windowing functions to properly define the
 
 ![windows](img/windows.png)
 
-Note the frequncy response, the main lobe width and the attenuation of the side lobes determine how well defined are the frequency channels Below shows the window response in some frequency bins, the ones with the higher sidelobes as responses of boxcar windows and the the lower sidelobes are of the hann window.
+Note the frequncy response, the main lobe width and the attenuation of the side lobes determine how well defined are the frequency channels. The figures below illustrate the difference. The second plot shows the window response in some frequency bins, the ones with the higher sidelobes as responses of boxcar windows and the the lower sidelobes are of the hann window.
 
+![fftvshan](img/fftvshann.png)
 ![rectvshann](img/nwvsw.png)
 
 In your spectrometer flowgraph, change the window field in the FFT block and observe how the response of a tone ( a sinusoud signal ) changes for different windows. 
