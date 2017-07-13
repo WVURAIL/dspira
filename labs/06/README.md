@@ -1,16 +1,26 @@
 # A Radio Telescope
 
-You now have the tools necessary to create the digital signal processing for a Spectrometer for a radio telescope.  A spectrometer:
+## 6.1. Horn Antenna
 
-1.  Separates the incoming radio signal into individual frequency components (breaks it into individual cosine wave amplitudes and phases at each frequency)
-2.  Measures the power in each of the cosine waves.
-3.  Integrates (Averages) to get get a more precise measurement of the power at each frequency.
+## 6.2  21cm Low Noise Amplifier
 
-Use GnuRadio to create the signal processing chain to achieve this.  
-Use an osmocom airspy source.  Use an FFT to separate frequency components.  This can be improved further by either windowing the FFT, or using a poly-phase filter bank to improve separating frequencies.
+The Neutral Hydrogen signal from the Milky Way galaxy is very faint, and the telescope needs an amplifier that adds as little noise to the signal as possible.  We have designed a low noise amplifier for you to use which will add less than 50 Kelvin noise temperature to the incoming signal.  See the attached pdf for assembly instructions:
 
-Convert to power and integrate using the appropriate blocks.
+[LNA assembly Instructions](DSPIRA_LNA_assembly.pdf)
 
-Initially, output to a vector sink to see the output spectrum.  Add a file sink to save the data.
+A brief memo on the initial design and performance of the LNA is here:
 
-switch over to using the hdf5 file sink from the gr-radio_astro repository.  This will require installing an out-of-tree module.    
+[LNA assembly Instructions](DSPIRA_memo2_LNA.pdf)
+
+## 6.3 Spectrometer.  
+
+Use the spectrometer you designed in [Lab 5](../05)
+
+You may want to upgrade your spectrometer to use a different output than just a standard binary data file (which you'll have to know ahead of time how to interpret).
+
+You can use an out-of-tree module to instead save the data to an HDF5 file, which will then include additional information about what the data is, to help interpretation. ...
+
+## 6.4  Observe.
+
+
+
