@@ -38,7 +38,7 @@ We can now convert our measurement of Power vs. frequency to Power vs. speed (us
 
 See below for a plot of frequency vs. radial velocity for neutral hydrogen.
 
-![freq_vs_radial_velocity](img/freq_vs_radial_velocity.pdf)
+![freq_vs_radial_velocity](img/freq_vs_radial_velocity.png)
 
 
 
@@ -46,7 +46,7 @@ See below for a plot of frequency vs. radial velocity for neutral hydrogen.
 
 What we want is the speed of the neutral hydrogen moving around the galactic center as a function of the distance away from the galactic center.  What we measure is not the velocity of the neutral hydrogen relative the galactic center, but instead relative to us along a given line of sight.  We can use as a given the speed of the earth around the galactic center as 200 km/s (current numbers are 180-250km/s) at a radius of 8 kpc (7-9 kpc).  (The speed of the earth around the sun is 30 km/s, so should be also taken into account for a more precise measurement, but we'll skip this for now.)
 
-![Galactic Rotation](img/galactic_rotation.pdf) 
+![Galactic Rotation](img/galactic_rotation.png) 
 
 We'll use the *Tangent Point Method* to find the rotation speed at a given radius.  To do this, well assume that the fastest moving hydrogen along the line of sight for a given line of sight will be that which is closest to the center of the galaxy, since it will be also moving along the same line (See diagram).  With this assumption use the 'fastest' speed on a given line of sight (negative or positive) and convert it to a rotational velocity at that radius.  
 
