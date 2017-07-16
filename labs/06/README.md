@@ -32,9 +32,15 @@ The observations of the Neutral Hydrogen in the galaxy were made around its at r
 $$  \frac{ \lambda_o - \lambda_e}{\lambda_e} = \frac{\Delta \lambda}{\lambda} = \frac{v}{c} $$
 
 where $$ \lambda_e $$ is the wavelength emitted, and $$ \lambda_o $$ is the wavelength observed.  To convert from frequency to wavelength, we can use the speed of light:
-$$ c = \lambda \nu $$
+$$ c = \lambda f $$
 
-We can now convert our measurement of Power vs. frequency to Power vs. speed (use km/s) relative to us.   
+to get:
+
+$$ \frac{f_e - f_o}{f_o} c = v $$
+
+where now $$f_e$$ is the frequency emitted, $$f_o$$ is the frequency observed, and c is the speed of light (300,000 km/s).
+
+We can now convert our measurement of Power vs. frequency to Power vs. speed (use km/s) relative to us.  Does it matter what units are used for frequency?
 
 See below for a plot of frequency vs. radial velocity for neutral hydrogen.
 
