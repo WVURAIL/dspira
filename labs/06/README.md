@@ -24,5 +24,47 @@ You can use an out-of-tree module to instead save the data to an HDF5 file, whic
 
 ## 6.4  Observe.
 
+## 6.5 Milky Way Rotation Curve.  
+
+### 6.5.1 From Frequency to Velocity
+The observations of the Neutral Hydrogen in the galaxy were made around its at rest frequency of 1420.40575177 MHz.  We observe it at different frequencies since it is moving relative to us in the galaxy.  We'll use the non-relativistic formula:
+
+$$  \frac{ \lambda_o - \lambda_e}{\lambda_e} = \frac{\Delta \lambda}{\lambda} = \frac{v}{c} $$
+
+where $$ \lambda_e $ is the wavelength emitted, and $$$$ is the wavelength observed.  To convert from frequency to wavelength, we can use the speed of light:
+$$ c = \lambda \nu $$
+
+We can now convert our measurement of Power vs. frequency to Power vs. speed (use km/s) relative to us.   
+
+See below for a plot of frequency vs. radial velocity for neutral hydrogen.
+
+![freq_vs_radial_velocity](img/freq_vs_radial_velocity.pdf)
+
+
+
+### 6.5.2 From Velocities relative to us to relative to the Milky Way center.  
+
+What we want is the speed of the neutral hydrogen moving around the galactic center as a function of the distance away from the galactic center.  What we measure is not the velocity of the neutral hydrogen relative the galactic center, but instead relative to us along a given line of sight.  We can use as a given the speed of the earth around the galactic center as 200 km/s (current numbers are 180-250km/s) at a radius of 8 kpc (7-9 kpc).  (The speed of the earth around the sun is 30 km/s, so should be also taken into account for a more precise measurement, but we'll skip this for now.)
+
+![Galactic Rotation](img/galactic_rotation.pdf) 
+
+We'll use the *Tangent Point Method* to find the rotation speed at a given radius.  To do this, well assume that the fastest moving hydrogen along the line of sight for a given line of sight will be that which is closest to the center of the galaxy, since it will be also moving along the same line (See diagram).  With this assumption use the 'fastest' speed on a given line of sight (negative or positive) and convert it to a rotational velocity at that radius.  
+
+The radius will be given by:
+
+$$ R_l = R_e sin(l) $$
+
+where $$ R_e $$ is the earth radius, and $$l$$ is the galactic longitude.  
+
+The radial velocity will be given by:
+
+$$ V_l = | V_{los} | + V_e sin(|l|) $$
+
+Where $$ V_l $$ is the galactic rotational velocity, $$ V_{los} $$ is the maximal ( negative or positive ) velocity measured at that $$l$$, and $$ V_e $$ is the given earth radial velocity.  
+
+You now have all the ingredients to create a plot of the galactic rotation curve for the Milky Way, plotting rotational velocity as a function of radial distance away from the center.  
+
+What is the expected result?
+
 
 
