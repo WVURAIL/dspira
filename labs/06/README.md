@@ -20,7 +20,26 @@ Use the spectrometer you designed in [Lab 5](../05)
 
 You may want to upgrade your spectrometer to use a different output than just a standard binary data file (which you'll have to know ahead of time how to interpret).
 
-You can use an out-of-tree module to instead save the data to an HDF5 file, which will then include additional information about what the data is, to help interpretation. ...
+You can use an out-of-tree module to instead save the data to an HDF5 file, which will then include additional information about what the data is, to help interpretation. Follow the instructions from the readme file at this website:
+[gnuradio OOT radio astronomy package ](https://github.com/WVURAIL/gr-radio_astro)
+
+1.) Clone the repository: 
+git clone https://github.com/WVURAIL/gr-radio_astro.git
+
+2.) create a build directory inside the repository:
+mkdir build
+
+3.)  run cmake inside the build directory:
+cd build;  cmake ..
+
+4.) run make inside build directory
+make
+
+5.)  If no errors, install
+make install
+
+Blocks should now be available in gnuradio-companion, in the 'radio_astro' section.
+
 
 ## 6.4  Observe.
 
