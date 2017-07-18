@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<?grc format='1' created='3.7.11'?>
+<?grc format='1' created='3.7.12'?>
 <flow_graph>
   <timestamp>Thu Jan 19 12:15:45 2017</timestamp>
   <block>
@@ -2795,7 +2795,7 @@
     </param>
     <param>
       <key>args</key>
-      <value>airspy=0,bias=1</value>
+      <value>airspy=0,bias=0,pack=0</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -3573,6 +3573,14 @@
     <param>
       <key>fname</key>
       <value>recfile</value>
+    </param>
+    <param>
+      <key>notes</key>
+      <value>testing az el etc</value>
+    </param>
+    <param>
+      <key>pointing</key>
+      <value>AZ: 180, EL: 30</value>
     </param>
     <param>
       <key>vec_length</key>
