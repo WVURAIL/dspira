@@ -159,7 +159,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(496, 384)</value>
+      <value>(288, 372)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -206,11 +206,11 @@
     </param>
     <param>
       <key>freq</key>
-      <value>1000</value>
+      <value>100*fftsize/32000.0</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(64, 280)</value>
+      <value>(64, 248)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -234,7 +234,7 @@
     </param>
     <param>
       <key>type</key>
-      <value>complex</value>
+      <value>float</value>
     </param>
     <param>
       <key>samp_rate</key>
@@ -273,7 +273,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(976, 904)</value>
+      <value>(968, 880)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -676,7 +676,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(84, 624)</value>
+      <value>(60, 424)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -700,11 +700,11 @@
     </param>
     <param>
       <key>type</key>
-      <value>complex</value>
+      <value>float</value>
     </param>
     <param>
       <key>vlen</key>
-      <value>fftsize</value>
+      <value>1</value>
     </param>
   </block>
   <block>
@@ -727,11 +727,11 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>2</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(656, 884)</value>
+      <value>(712, 924)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -868,7 +868,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(296, 600)</value>
+      <value>(296, 544)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -911,7 +911,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(328, 856)</value>
+      <value>(312, 808)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1013,7 +1013,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(92, 448)</value>
+      <value>(60, 536)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1025,7 +1025,7 @@
     </param>
     <param>
       <key>type</key>
-      <value>complex</value>
+      <value>float</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -1123,7 +1123,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(664, 232)</value>
+      <value>(592, 232)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1186,7 +1186,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(504, 472)</value>
+      <value>(512, 432)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1325,6 +1325,69 @@
     <param>
       <key>type</key>
       <value>complex</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>nthreads</key>
+      <value>3</value>
+    </param>
+    <param>
+      <key>shift</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>window</key>
+      <value>window.rectangular(fftsize)</value>
+    </param>
+  </block>
+  <block>
+    <key>fft_vxx</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>fft_size</key>
+      <value>fftsize</value>
+    </param>
+    <param>
+      <key>forward</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(64, 680)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>fft_vxx_0_0_1</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>float</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -2188,7 +2251,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1136, 540)</value>
+      <value>(1144, 532)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -2459,7 +2522,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(812, 728)</value>
+      <value>(852, 664)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -2730,7 +2793,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(92, 888)</value>
+      <value>(60, 864)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -3272,7 +3335,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(664, 644)</value>
+      <value>(688, 644)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -3523,7 +3586,7 @@
   </connection>
   <connection>
     <source_block_id>analog_sig_source_x_0</source_block_id>
-    <sink_block_id>blocks_stream_to_vector_0_0</sink_block_id>
+    <sink_block_id>blocks_delay_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -3583,27 +3646,9 @@
   </connection>
   <connection>
     <source_block_id>blocks_delay_0</source_block_id>
-    <sink_block_id>blocks_complex_to_imag_0_0</sink_block_id>
+    <sink_block_id>blocks_stream_to_vector_0_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>blocks_delay_0</source_block_id>
-    <sink_block_id>blocks_complex_to_real_0_1</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>blocks_delay_0</source_block_id>
-    <sink_block_id>blocks_multiply_conjugate_cc_0_0_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>blocks_delay_0</source_block_id>
-    <sink_block_id>blocks_multiply_conjugate_cc_0_0_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>1</sink_key>
   </connection>
   <connection>
     <source_block_id>blocks_delay_0_0</source_block_id>
@@ -3643,7 +3688,7 @@
   </connection>
   <connection>
     <source_block_id>blocks_stream_to_vector_0_0</source_block_id>
-    <sink_block_id>blocks_delay_0</sink_block_id>
+    <sink_block_id>fft_vxx_0_0_1</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -3712,5 +3757,29 @@
     <sink_block_id>blocks_complex_to_real_0_0_0_0_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>fft_vxx_0_0_1</source_block_id>
+    <sink_block_id>blocks_complex_to_imag_0_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>fft_vxx_0_0_1</source_block_id>
+    <sink_block_id>blocks_complex_to_real_0_1</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>fft_vxx_0_0_1</source_block_id>
+    <sink_block_id>blocks_multiply_conjugate_cc_0_0_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>fft_vxx_0_0_1</source_block_id>
+    <sink_block_id>blocks_multiply_conjugate_cc_0_0_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>1</sink_key>
   </connection>
 </flow_graph>
