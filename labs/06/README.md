@@ -23,20 +23,38 @@ You may want to upgrade your spectrometer to use a different output than just a 
 You can use an out-of-tree module to instead save the data to an HDF5 file, which will then include additional information about what the data is, to help interpretation. Follow the instructions from the readme file at this website:
 [gnuradio OOT radio astronomy package ](https://github.com/WVURAIL/gr-radio_astro)
 
-1.) Clone the repository: 
-git clone https://github.com/WVURAIL/gr-radio_astro.git
+1.) Clone the repository into an appropriate folder/repository: 
 
-2.) create a build directory inside the repository:
+``git clone https://github.com/WVURAIL/gr-radio_astro.git``
+
+2.) Go to the ``gr-radio_astro.git`` folder/repository, create a build directory inside the repository:
+
+``
+cd gr-radio_astro.git
+``
+
+``
 mkdir build
+`` 
 
 3.)  run cmake inside the build directory:
-cd build;  cmake ..
+
+``cd build;  cmake ..``
 
 4.) run make inside build directory
-make
+
+``make``
 
 5.)  If no errors, install
-make install
+
+``make install``
+
+Blocks should now be available in gnuradio-companion.
+ 
+ **Additionally install h5py**
+ 
+ ``sudo pip install h5py``
+
 
 Blocks should now be available in gnuradio-companion, in the 'radio_astro' section.
 
