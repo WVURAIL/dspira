@@ -45,7 +45,7 @@ cd build;  cmake ..
 4.) run make inside build directory
 
 ```bash
-make`
+make
 ```
 
 5.)  If no errors, install
