@@ -3,7 +3,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Top Block
-# Generated: Thu Jul 13 16:39:50 2017
+# Generated: Tue Jul 18 13:31:20 2017
 ##################################################
 
 if __name__ == '__main__':
@@ -365,7 +365,7 @@ class top_block(gr.top_block, Qt.QWidget):
         self.blocks_multiply_conjugate_cc_0_0_0 = blocks.multiply_conjugate_cc(fftsize)
         self.blocks_multiply_conjugate_cc_0_0 = blocks.multiply_conjugate_cc(fftsize)
         self.blocks_multiply_conjugate_cc_0 = blocks.multiply_conjugate_cc(fftsize)
-        self.blocks_delay_0 = blocks.delay(gr.sizeof_float*1, 1)
+        self.blocks_delay_0 = blocks.delay(gr.sizeof_float*1, 100)
         self.blocks_complex_to_real_0_1 = blocks.complex_to_real(fftsize)
         self.blocks_complex_to_real_0_0_0_0_0 = blocks.complex_to_real(fftsize)
         self.blocks_complex_to_real_0_0_0_0 = blocks.complex_to_real(fftsize)

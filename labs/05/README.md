@@ -26,7 +26,7 @@ Let us revisit fourier transform by exploring the concept through their various 
 1. Fourier Transform a Sinusoid and 
 2. Fourier transform of the sinusoid delayed by one sample
 3. The output of the Fourier transform of a constant source of the value 1 is a dirac delta function. Find the FT of the dirac delta function and the dirac delta function time delayed.
-4. Fourier transform of $$ e^{h\omega_o t} $$
+4. Fourier transform of $$ e^{j\omega_o t} $$
 5. Demonstrate the convolution property (use square wave) *Hint: Inverse Fourier transform can be implemented by choosing ``reverse`` in the ``Forward/Reverse`` Option. Hint: The output should be a triangle wave*
 6. Fourier transform  a square pulse of different widths (i.e. tau *refer lab 1.3.1*)
 
