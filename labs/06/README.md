@@ -25,35 +25,42 @@ You can use an out-of-tree module to instead save the data to an HDF5 file, whic
 
 1.) Clone the repository into an appropriate folder/repository: 
 
-``git clone https://github.com/WVURAIL/gr-radio_astro.git``
+```bash
+git clone https://github.com/WVURAIL/gr-radio_astro.git
+```
 
 2.) Go to the ``gr-radio_astro.git`` folder/repository, create a build directory inside the repository:
 
-``
+```bash
 cd gr-radio_astro.git
-``
-
-``
 mkdir build
-`` 
+```
 
 3.)  run cmake inside the build directory:
 
-``cd build;  cmake ..``
+```bash
+cd build;  cmake ..
+```
 
 4.) run make inside build directory
 
-``make``
+```bash
+make`
+```
 
 5.)  If no errors, install
 
-``make install``
+```bash
+make install
+```
 
 Blocks should now be available in gnuradio-companion.
  
  **Additionally install h5py**
  
- ``sudo pip install h5py``
+ ```bash
+ sudo pip install h5py
+ ```
 
 
 Blocks should now be available in gnuradio-companion, in the 'radio_astro' section.
