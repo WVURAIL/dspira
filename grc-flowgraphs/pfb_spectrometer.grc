@@ -1,9 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<<<<<<< HEAD
-<?grc format='1' created='3.7.10'?>
-=======
 <?grc format='1' created='3.7.12'?>
->>>>>>> 23dea302eed73bdef33c74694cf718f444676ee4
 <flow_graph>
   <timestamp>Thu Jan 19 12:15:45 2017</timestamp>
   <block>
