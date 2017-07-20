@@ -178,11 +178,39 @@ Where, where the sub-filter coefficients $$h(n + pN)$$ correspond to what are ca
 
 Add the polyphase filters to your spectrometer just before taking the FFT. Refer to the diagram above, the dotted squares are simply band-pass FIR filters. Use a hann/hamming window. 
 
-[↑ Go to the Top of the Page](#)
+The ployphase filter can be realized by implementing following flowgraph:
+
+![pfb](img/grcpfb1.png)
+
+The ``constant muliplier`` blocks are sections of the filter window as seen the diagram detailing the process above. The filter window is designed by using import block to import ``numpy`` and assigning thhree constant variables as:
+
+- sinc_constant_variables
+```python
+np.arange(-np.pi*4/2.0, np.pi*4/2.0, np.pi/vec_length)
+```
+- sinc
+```python
+np.sinc(sinc_sample_locations/np.pi)
+```
+- custom_window
+```python
+sinc*np.hamming(4*vec_length)
+```
+Now ``custom_window`` are all the window co-efficients/taps you need to do the multiplications, your vector length samples at a time. The constants in the constant  mulitplier blocks from the top to bottom are as follows:
+```python
+custom_window[-vec_length:]
+custom_window[2*vec_length:3*vec_length]
+custom_window[vec_length:2*vec_length]
+custom_window[0:vec_length]
+```
 
 ## 5.9. Saving Data
 
 Save the spectrometer data for science! (Use File Sink)
+
+**NOTE: Our Low Noise Amplifier (LNA) needs to be powered to actually work. We can configure the airspy dongle by settign bias=1 in the device arguments field of the osmocom source block such as:**
+
+![airspy bias](img/grcpfb2.png)
 
 ###### Image Credits
 

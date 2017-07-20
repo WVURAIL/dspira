@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<?grc format='1' created='3.7.12'?>
+<?grc format='1' created='3.7.10'?>
 <flow_graph>
   <timestamp>Thu Jan 19 12:15:45 2017</timestamp>
   <block>
@@ -120,7 +120,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(400, 8)</value>
+      <value>(392, 12)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -363,7 +363,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(160, 8)</value>
+      <value>(176, 4)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -398,7 +398,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(880, 152)</value>
+      <value>(904, 192)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -449,11 +449,11 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1104, 316)</value>
+      <value>(1108, 232)</value>
     </param>
     <param>
       <key>_rotation</key>
-      <value>0</value>
+      <value>270</value>
     </param>
     <param>
       <key>id</key>
@@ -661,7 +661,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(888, 472)</value>
+      <value>(904, 580)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -712,11 +712,11 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(888, 368)</value>
+      <value>(1204, 392)</value>
     </param>
     <param>
       <key>_rotation</key>
-      <value>0</value>
+      <value>270</value>
     </param>
     <param>
       <key>id</key>
@@ -790,11 +790,11 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1080, 216)</value>
+      <value>(1200, 192)</value>
     </param>
     <param>
       <key>_rotation</key>
-      <value>0</value>
+      <value>270</value>
     </param>
     <param>
       <key>id</key>
@@ -837,7 +837,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(640, 316)</value>
+      <value>(632, 316)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -888,7 +888,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(624, 224)</value>
+      <value>(632, 244)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -939,7 +939,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(632, 160)</value>
+      <value>(632, 172)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -990,7 +990,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(624, 88)</value>
+      <value>(632, 92)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1037,7 +1037,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1016, 664)</value>
+      <value>(1016, 700)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1088,7 +1088,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(344, 448)</value>
+      <value>(312, 540)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1343,7 +1343,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(856, 668)</value>
+      <value>(784, 708)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1402,7 +1402,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1040, 64)</value>
+      <value>(1032, 64)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2795,7 +2795,7 @@
     </param>
     <param>
       <key>args</key>
-      <value>airspy=0,bias=0,pack=0</value>
+      <value>airspy=0,bias=1,pack=0</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -2942,7 +2942,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1128, 656)</value>
+      <value>(792, 788)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -3297,7 +3297,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(504, 464)</value>
+      <value>(512, 540)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -3560,7 +3560,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1072, 500)</value>
+      <value>(1096, 552)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -3573,6 +3573,14 @@
     <param>
       <key>fname</key>
       <value>recfile</value>
+    </param>
+    <param>
+      <key>freq_start</key>
+      <value>freq - samp_rate/2</value>
+    </param>
+    <param>
+      <key>freq_step</key>
+      <value>samp_rate/vec_length</value>
     </param>
     <param>
       <key>notes</key>
