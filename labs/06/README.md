@@ -1,5 +1,21 @@
 # A Radio Telescope
 
+That's been a lot of Digital Signal Processing so let us just go ahead and build radio telecope already!
+
+<!-- TOC -->
+
+- [A Radio Telescope](#a-radio-telescope)
+    - [6.1. Horn Antenna](#61-horn-antenna)
+    - [6.2  21cm Low Noise Amplifier](#62--21cm-low-noise-amplifier)
+    - [6.3 Spectrometer.](#63-spectrometer)
+    - [6.4  Observe.](#64--observe)
+        - [6.4.1 Data Reduction](#641-data-reduction)
+    - [6.5 Milky Way Rotation Curve.](#65-milky-way-rotation-curve)
+        - [6.5.1 From Frequency to Velocity](#651-from-frequency-to-velocity)
+        - [6.5.2 From Velocities relative to us to relative to the Milky Way center.](#652-from-velocities-relative-to-us-to-relative-to-the-milky-way-center)
+
+<!-- /TOC -->
+
 ## 6.1. Horn Antenna
 
 [Horn Assembly](DSPIRA_Horn_Assembly.pdf)

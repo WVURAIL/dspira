@@ -184,7 +184,7 @@ The ployphase filter can be realized by implementing following flowgraph:
 
 The ``constant muliplier`` blocks are sections of the filter window as seen the diagram detailing the process above. The filter window is designed by using import block to import ``numpy`` and assigning thhree constant variables as:
 
-- sinc_constant_variables
+- sinc_sample_locations
 ```python
 np.arange(-np.pi*4/2.0, np.pi*4/2.0, np.pi/vec_length)
 ```
@@ -207,6 +207,8 @@ custom_window[0:vec_length]
 ## 5.9. Saving Data
 
 Save the spectrometer data for science! (Use File Sink)
+
+- You 
 
 **NOTE: Our Low Noise Amplifier (LNA) needs to be powered to actually work. We can configure the airspy dongle by settign bias=1 in the device arguments field of the osmocom source block such as:**
 

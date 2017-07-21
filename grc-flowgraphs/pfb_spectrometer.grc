@@ -712,7 +712,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1204, 392)</value>
+      <value>(1004, 392)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -3568,7 +3568,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>radio_astro_hdf5_sink_0</value>
+      <value>radio_astro_hdf5_sink_1</value>
     </param>
     <param>
       <key>fname</key>
@@ -3584,7 +3584,7 @@
     </param>
     <param>
       <key>notes</key>
-      <value>testing az el etc</value>
+      <value>test</value>
     </param>
     <param>
       <key>pointing</key>
@@ -3633,7 +3633,7 @@
   </connection>
   <connection>
     <source_block_id>blocks_integrate_xx_0</source_block_id>
-    <sink_block_id>radio_astro_hdf5_sink_0</sink_block_id>
+    <sink_block_id>radio_astro_hdf5_sink_1</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
