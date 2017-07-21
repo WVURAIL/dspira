@@ -84,7 +84,7 @@ ipython --pylab
 ## Read and reshape data
 ##########################
 
-spec1 = np.fromfile("data","r") # open 'data' in read mode and put all the data as a numpy array spec
+spec1 = np.fromfile("data",dtype=np.float32) # open 'data' in read mode and put all the data as a numpy array spec
 spec1.shape # .shape shows the array dimension.shape
 spec = spec.reshape((-1,4096)) # reshapes data into stacks od 4096 points
 spec.shape # get the shape of the new array. The frst number is the number of time intgrations
@@ -93,7 +93,7 @@ spec.shape # get the shape of the new array. The frst number is the number of ti
 # save to a text file to open on excel or other
 ###############################################
 
-np.savetxt("reshapeddata.txt",spec,delimiter=',') # saved to file reshapeddata.txt with a comma delimiter
+np.savetxt("reshapeddata.csv",np.transpose(spec),delimiter=',') # saved to file reshapeddata.txt with a comma delimiter
 
 ##############################################
 # Plot
@@ -103,6 +103,47 @@ plot(spec[0]) # plots the first integration
 plot(spec[i]) # plots the i-th integration
 
 ```
+
+If you used the Out-of-Tree Module ``hdf5_sink``  you ur data  
+
+``` python 
+##########################################
+# Import h5py package to read hdf5 files
+##########################################
+
+import h5py
+
+###########################################
+# read file into a variable
+###########################################
+
+f = h5py.File('2017-07-19_16.12.50.h5','r')   
+
+list(f.attrs) # check the metadata attributes
+list(f.attrs.items()) # check the metadata attributes and their values
+f.items() # list the datasets in the file
+
+#############################################
+# extract the spectrum data and 
+#############################################
+
+spectrum = f['spectrum'][:] # get the spectrum data
+
+fstart = f.attrs['freq_start'] # get the start frequency
+fstep = f.attrs['freq_step'] # get the stop frequency 
+flength = 4096 # the number of points on the frequency axis, vector length
+
+############################################
+# plot
+############################################
+
+freq = np.arange(flength)*fstep + fstart # make an array of x-axis indices
+rcParams['axes.formatter.useoffset'] = False 
+plot(freq, 10.0*np.log10(spectrum.mean(axis=0))) # log was taken before putting into the sink
+
+
+```
+
 
 ## 6.5 Milky Way Rotation Curve.  
 ### 6.5.1 From Frequency to Velocity
