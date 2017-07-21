@@ -1,6 +1,6 @@
 # A Radio Telescope
 
-That's been a lot of Digital Signal Processing so let us just go ahead and build radio telecope already!
+That's been a lot of Digital Signal Processing so let us just go ahead and build our radio telecope already!
 
 <!-- TOC -->
 
@@ -16,9 +16,11 @@ That's been a lot of Digital Signal Processing so let us just go ahead and build
 
 <!-- /TOC -->
 
-## 6.1. Horn Antenna
+## 6.1. Horn Antenna 
 
-[Horn Assembly](DSPIRA_Horn_Assembly.pdf)
+We are building a special kind of radio telescope which uses a Horn Antenna. 
+
+[Follow these intructions for Horn Assembly](DSPIRA_Horn_Assembly.pdf)
 
 ## 6.2  21cm Low Noise Amplifier
 
