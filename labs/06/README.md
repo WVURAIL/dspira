@@ -68,8 +68,43 @@ Blocks should now be available in gnuradio-companion, in the 'radio_astro' secti
 
 ## 6.4  Observe.
 
-## 6.5 Milky Way Rotation Curve.  
+### 6.4.1 Data Reduction
 
+Depending on the kind of sink you use you have different kind of data formats - if you used the file sink defualt block the data is saved with``float32`` data in 4096 point vectors encoded in binary. You can reduce that data as follows:
+
+Open IPython from the folder/directory where your data is saved:
+
+```bash
+ipython --pylab
+```
+
+```python
+
+##########################
+## Read and reshape data
+##########################
+
+spec1 = np.fromfile("data","r") # open 'data' in read mode and put all the data as a numpy array spec
+spec1.shape # .shape shows the array dimension.shape
+spec = spec.reshape((-1,4096)) # reshapes data into stacks od 4096 points
+spec.shape # get the shape of the new array. The frst number is the number of time intgrations
+
+###############################################
+# save to a text file to open on excel or other
+###############################################
+
+np.savetxt("reshapeddata.txt",spec,delimiter=',') # saved to file reshapeddata.txt with a comma delimiter
+
+##############################################
+# Plot
+##############################################
+
+plot(spec[0]) # plots the first integration
+plot(spec[i]) # plots the i-th integration
+
+```
+
+## 6.5 Milky Way Rotation Curve.  
 ### 6.5.1 From Frequency to Velocity
 The observations of the Neutral Hydrogen in the galaxy were made around its at rest frequency of 1420.40575177 MHz.  We observe it at different frequencies since it is moving relative to us in the galaxy.  We'll use the non-relativistic formula:
 
