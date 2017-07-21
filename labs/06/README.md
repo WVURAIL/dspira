@@ -86,7 +86,7 @@ ipython --pylab
 
 spec1 = np.fromfile("data",dtype=np.float32) # open 'data' in read mode and put all the data as a numpy array spec
 spec1.shape # .shape shows the array dimension.shape
-spec = spec.reshape((-1,4096)) # reshapes data into stacks od 4096 points
+spec = spec.reshape((-1,4096)) # reshapes data into stacks of 4096 points
 spec.shape # get the shape of the new array. The frst number is the number of time intgrations
 
 ###############################################
@@ -97,14 +97,14 @@ np.savetxt("reshapeddata.csv",np.transpose(spec),delimiter=',') # saved to file 
 
 ##############################################
 # Plot
-##############################################
+############################################## 
 
 plot(spec[0]) # plots the first integration
 plot(spec[i]) # plots the i-th integration
 
 ```
 
-If you used the Out-of-Tree Module ``hdf5_sink``  you ur data  
+If you used the Out-of-Tree Module ``hdf5_sink`` your data is in the hdf5 (heirarchichal data format) format. You can reduce it such: 
 
 ``` python 
 ##########################################
@@ -129,10 +129,15 @@ f.items()             # list the datasets in the file
 
 spectrum = f['spectrum'][:]          # get the spectrum data
 
+###############################################
+# save to a text file to open on excel or other
+###############################################
+
+np.savetxt("reshapeddata.csv",np.transpose(spectrum),delimiter=',') # saved to file reshapeddata.txt with a comma delimiter
+
 ############################################
 # plot
 ############################################
-
 
 fstart = f.attrs['freq_start']       # get the start frequency
 fstep = f.attrs['freq_step']         # get the stop frequency 
