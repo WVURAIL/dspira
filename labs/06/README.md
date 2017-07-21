@@ -119,25 +119,25 @@ import h5py
 
 f = h5py.File('2017-07-19_16.12.50.h5','r')   
 
-list(f.attrs) # check the metadata attributes
+list(f.attrs)         # check the metadata attributes
 list(f.attrs.items()) # check the metadata attributes and their values
-f.items() # list the datasets in the file
+f.items()             # list the datasets in the file
 
 #############################################
 # extract the spectrum data and 
 #############################################
 
-spectrum = f['spectrum'][:] # get the spectrum data
-
-fstart = f.attrs['freq_start'] # get the start frequency
-fstep = f.attrs['freq_step'] # get the stop frequency 
-flength = 4096 # the number of points on the frequency axis, vector length
+spectrum = f['spectrum'][:]          # get the spectrum data
 
 ############################################
 # plot
 ############################################
 
-freq = np.arange(flength)*fstep + fstart # make an array of x-axis indices
+
+fstart = f.attrs['freq_start']       # get the start frequency
+fstep = f.attrs['freq_step']         # get the stop frequency 
+flength = 4096                       # the number of points on the frequency axis, vector length
+freq = np.arange(flength)*fstep + fstart         # make an array of x-axis indices
 rcParams['axes.formatter.useoffset'] = False 
 plot(freq, 10.0*np.log10(spectrum.mean(axis=0))) # log was taken before putting into the sink
 
