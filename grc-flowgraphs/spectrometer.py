@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 ##################################################
 # GNU Radio Python Flow Graph
-# Title: Top Block
-# Generated: Wed Jul 19 16:12:49 2017
+# Title: Spectrometer
+# Generated: Wed Jul 19 14:54:43 2017
 ##################################################
 
 if __name__ == '__main__':
@@ -35,12 +35,12 @@ import sys
 import time
 
 
-class top_block(gr.top_block, Qt.QWidget):
+class spectrometer(gr.top_block, Qt.QWidget):
 
     def __init__(self):
-        gr.top_block.__init__(self, "Top Block")
+        gr.top_block.__init__(self, "Spectrometer")
         Qt.QWidget.__init__(self)
-        self.setWindowTitle("Top Block")
+        self.setWindowTitle("Spectrometer")
         try:
             self.setWindowIcon(Qt.QIcon.fromTheme('gnuradio-grc'))
         except:
@@ -57,7 +57,7 @@ class top_block(gr.top_block, Qt.QWidget):
         self.top_grid_layout = Qt.QGridLayout()
         self.top_layout.addLayout(self.top_grid_layout)
 
-        self.settings = Qt.QSettings("GNU Radio", "top_block")
+        self.settings = Qt.QSettings("GNU Radio", "spectrometer")
         self.restoreGeometry(self.settings.value("geometry").toByteArray())
 
         ##################################################
@@ -162,7 +162,7 @@ class top_block(gr.top_block, Qt.QWidget):
         
         self._qtgui_time_sink_x_0_win = sip.wrapinstance(self.qtgui_time_sink_x_0.pyqwidget(), Qt.QWidget)
         self.top_layout.addWidget(self._qtgui_time_sink_x_0_win)
-        self.osmosdr_source_0 = osmosdr.source( args="numchan=" + str(1) + " " + 'airspy=0,bias=1,pack=0' )
+        self.osmosdr_source_0 = osmosdr.source( args="numchan=" + str(1) + " " + 'airspy=0,bias=0,pack=0' )
         self.osmosdr_source_0.set_sample_rate(samp_rate)
         self.osmosdr_source_0.set_center_freq(freq, 0)
         self.osmosdr_source_0.set_freq_corr(0, 0)
@@ -230,7 +230,7 @@ class top_block(gr.top_block, Qt.QWidget):
         self.connect((self.osmosdr_source_0, 0), (self.blocks_stream_to_vector_0, 0))    
 
     def closeEvent(self, event):
-        self.settings = Qt.QSettings("GNU Radio", "top_block")
+        self.settings = Qt.QSettings("GNU Radio", "spectrometer")
         self.settings.setValue("geometry", self.saveGeometry())
         event.accept()
 
@@ -325,7 +325,7 @@ class top_block(gr.top_block, Qt.QWidget):
         self.blocks_multiply_const_vxx_0.set_k((self.custom_window[0:self.vec_length]))
 
 
-def main(top_block_cls=top_block, options=None):
+def main(top_block_cls=spectrometer, options=None):
 
     from distutils.version import StrictVersion
     if StrictVersion(Qt.qVersion()) >= StrictVersion("4.5.0"):
