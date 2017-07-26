@@ -214,5 +214,3 @@ Where $$ V_l $$ is the galactic rotational velocity, $$ V_{los} $$ is the maxima
 You now have all the ingredients to create a plot of the galactic rotation curve for the Milky Way, plotting rotational velocity as a function of radial distance away from the center.  
 
 What is the expected result?
-
-<div id="js_clock"></div>
