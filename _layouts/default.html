@@ -101,7 +101,7 @@
 
 
         var clock_div = document.getElementById('js_clock');
-        clock_div.innerHTML = "<font face=Courier color=#000000> Coordinated Universal Time (UTC): &nbsp;" +cuth + ":"  +cutm+":"+cuts+"<br>Greenwich Local Sidereal Time: &nbsp;&nbsp;&nbsp;&nbsp;" +gmt_ch + ":"  + gmt_cmin  + ":" +gmt_csecs+"<hr><br>Green Bank LST: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;" +ch + ":"  + cmin  + ":" +csecs+ "<br> Morgantown  LST: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +mh + ":"  + mmin  + ":" +msecs+ " <br><hr> Julian Day: &nbsp;&nbsp;" +JulD+ " <br> Modified Julian Day: &nbsp;&nbsp;" +MJulD+ " </font>";
+        clock_div.innerHTML = "<font face=Courier color=#000000> Coordinated Universal Time (UTC): &nbsp;" +cuth + ":"  +cutm+":"+cuts+"<br>Greenwich Local Sidereal Time : &nbsp;" +gmt_ch + ":"  + gmt_cmin  + ":" +gmt_csecs+"<br>Green Bank LST: &nbsp;" +ch + ":"  + cmin  + ":" +csecs+ "<br> Morgantown  LST: &nbsp;" +mh + ":"  + mmin  + ":" +msecs+ " <br><hr> </font>";
         setTimeout("calculate()",5);
     }
 
