@@ -215,3 +215,4 @@ You now have all the ingredients to create a plot of the galactic rotation curve
 
 What is the expected result?
 
+<div id="js_clock"></div>
