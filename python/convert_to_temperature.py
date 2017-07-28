@@ -29,7 +29,7 @@ if __name__ == '__main__':
     pylab.rcParams['axes.formatter.useoffset'] = False
     pylab.plot(T_sys)
     pylab.ylim(0,600)
-    pylab.savefig(args.output_file[:-4]+"_noise.pdf")
+    pylab.savefig(args.output_file[:-4]+"_Tsys.pdf")
     pylab.clf()
     pylab.plot(gain)
     pylab.savefig(args.output_file[:-4] + "_gain.pdf")
