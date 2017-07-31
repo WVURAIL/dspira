@@ -15,12 +15,14 @@
 | July 13 | Sampling | All Galaxy Great and Small |Lab 5, Analog Assembly|
 | July 14 | Signal Modulation | Galaxy Interaction/Dark Matter | Shop - telescope construction |
 | July 17 | Signal Modulation | Dark Matter | Shop - telescope Construction |
-| July 18 | Probability | Galaxy Rotation | Shop - Telescope Construction, Analog Assembly |
+| July 18 | Probability | [Galaxy Rotation](https://github.com/WVURAIL/dspira/blob/master/lectures/astronomy/LDA_Lectures/RET_DSP_Rotation_Curves.pdf) | Shop - Telescope Construction, Analog Assembly |
 | July 19 | Free Class | Galaxy Rotation | Lab 5 |
 | July 20 | Random Variables | Observation Planning | Telescope testing/ data acquisition |
 | July 21 | Wide Sense Stationary/ Power Spectral Density / Parsevals | Spectrum Data Interpretation | DSP debugging/Scope packing |
 
 ------
+
+# [Click for Astronomy Lecture Slides](http://wvurail.org/dspira/lectures/astronomy/)
 
 ## Instructors 
 
