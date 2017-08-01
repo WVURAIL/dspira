@@ -15,8 +15,8 @@ if __name__ == '__main__':
     fgal = h5py.File(args.sky,'r')
     fgd = h5py.File(args.ground, 'r')
     #Should parse to see how much data in the files.  
-    cold = fgal['spectrum'][0,:]
-    hot = fgd['spectrum'][0,:]
+    cold = np.mean(fgal['spectrum'][:,:],axis=0)
+    hot = np.mean(fgd['spectrum'][:,:],axis=0)
     Y = hot/cold #in linear ratio.  otherwise:Y = 10**((hot-cold)/10.0)
     T_sys = (300.0 - Y*10.0)/(Y-1)  #10 is assumed "cold sky" temperature 300gnd
     gain = cold/(10.0 + T_sys)
