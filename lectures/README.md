@@ -6,7 +6,7 @@
 | June 27 |Linear Systems, Convolution| [Motion]() | Lab 1, 1.1|
 | June 28 |convolution with delta function, Fourier Series| [Motion, co-ordinate systems]() |lab 2|
 | June 29 | Complex exponemtials, complx fourier series | Planeterium Lecture | lab 3|
-| June 30 | Fourier Series| [Gravity](https://github.com/WVURAIL/dspira/blob/master/lectures/astronomy/LDA_Lectures/RET_DSP_Gravity.pdf) [Time and planning](https://github.com/WVURAIL/dspira/blob/master/lectures/astronomy/LDA_Lectures/RET_SCP_Time_Planning_Observations.pdf) | lab 3.1, observation planning using stellarium|
+| June 30 | Fourier Series| [Gravity](https://github.com/WVURAIL/dspira/blob/master/lectures/astronomy/LDA_Lectures/RET_DSP_Gravity.pdf) // [Time and planning](https://github.com/WVURAIL/dspira/blob/master/lectures/astronomy/LDA_Lectures/RET_SCP_Time_Planning_Observations.pdf) | lab 3.1, observation planning using stellarium|
 | July 6 | Fourier Series| [Light and Telescopes](https://github.com/WVURAIL/dspira/blob/master/lectures/astronomy/DJP_Lectures/RET_0706.pdf) |Lab 4|
 | July 7 | Fourier Transform| [Doppler Effect, Telescopes. Stars](https://github.com/WVURAIL/dspira/blob/master/lectures/astronomy/DJP_Lectures/RET_0707.pdf) |lab 4, Analog Assembly|
 | July 10 | Fourier Transform| [Stars](https://github.com/WVURAIL/dspira/blob/master/lectures/astronomy/DJP_Lectures/RET_0710.pdf) | Lab 4 Analog Assembly|
