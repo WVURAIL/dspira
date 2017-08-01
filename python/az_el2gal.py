@@ -21,7 +21,7 @@ def azEl2Gal(Az, El, t, tel):
     ra, dec = tel.radec_of(Az,El)
     eq = ephem.Equatorial(ra,dec)
     gc = ephem.Galactic(eq)
-    return gc.lat, gc.long
+    return gc.long, gc.lat
 
 tel = telescope()
 
