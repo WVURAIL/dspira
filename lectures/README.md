@@ -1,6 +1,6 @@
 # Lecture Notes
 
-| Day | DSP | Astronomy| Labs |
+| Day | DSP | [Astronomy]()(http://wvurail.org/dspira/lectures/astronomy/) | Labs |
 |-----|-----|----------|------|
 | June 26 |Signals| [Scientific Notation, why, what, when](https://github.com/WVURAIL/dspira/blob/master/lectures/astronomy/LDA_Lectures/RET_DSP_Intro.pdf) | Lab 1 |
 | June 27 |Linear Systems, Convolution| [Motion](https://github.com/WVURAIL/dspira/blob/master/lectures/astronomy/LDA_Lectures/RET_DSP_MotionOfSky1.pdf) | Lab 1, 1.1|
@@ -21,8 +21,6 @@
 | July 21 | Wide Sense Stationary/ Power Spectral Density / Parsevals | Spectrum Data Interpretation | DSP debugging/Scope packing |
 
 ------
-
-# [Click for links to all Astronomy Lecture Slides](http://wvurail.org/dspira/lectures/astronomy/)
 
 ## Instructors 
 
