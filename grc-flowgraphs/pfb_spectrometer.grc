@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<?grc format='1' created='3.7.10'?>
+<?grc format='1' created='3.7.12'?>
 <flow_graph>
   <timestamp>Thu Jan 19 12:15:45 2017</timestamp>
   <block>
@@ -159,7 +159,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>1.419e9</value>
+      <value>251e6</value>
     </param>
   </block>
   <block>
@@ -240,7 +240,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>prefix + timenow + ".h5"</value>
+      <value>prefix + timenow + "_GBTdrift.h5"</value>
     </param>
   </block>
   <block>
@@ -1511,7 +1511,7 @@
     </param>
     <param>
       <key>bb_gain0</key>
-      <value>20</value>
+      <value>10</value>
     </param>
     <param>
       <key>bw0</key>
@@ -1535,7 +1535,7 @@
     </param>
     <param>
       <key>if_gain0</key>
-      <value>20</value>
+      <value>10</value>
     </param>
     <param>
       <key>iq_balance_mode0</key>
@@ -1543,7 +1543,7 @@
     </param>
     <param>
       <key>gain0</key>
-      <value>20</value>
+      <value>16</value>
     </param>
     <param>
       <key>ant10</key>
@@ -2795,7 +2795,7 @@
     </param>
     <param>
       <key>args</key>
-      <value>airspy=0,bias=1,pack=0</value>
+      <value>airspy=0,bias=0,pack=0</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -3584,11 +3584,11 @@
     </param>
     <param>
       <key>notes</key>
-      <value>test</value>
+      <value>GBT Drift  / J5CM13</value>
     </param>
     <param>
       <key>pointing</key>
-      <value>AZ: 180, EL: 30</value>
+      <value>A312E77</value>
     </param>
     <param>
       <key>vec_length</key>

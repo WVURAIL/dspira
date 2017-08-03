@@ -3,7 +3,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Top Block
-# Generated: Wed Jul 19 16:12:49 2017
+# Generated: Tue Aug  1 09:25:56 2017
 ##################################################
 
 if __name__ == '__main__':
@@ -33,6 +33,7 @@ import radio_astro
 import sip
 import sys
 import time
+from gnuradio import qtgui
 
 
 class top_block(gr.top_block, Qt.QWidget):
@@ -41,6 +42,7 @@ class top_block(gr.top_block, Qt.QWidget):
         gr.top_block.__init__(self, "Top Block")
         Qt.QWidget.__init__(self)
         self.setWindowTitle("Top Block")
+        qtgui.util.check_set_qss()
         try:
             self.setWindowIcon(Qt.QIcon.fromTheme('gnuradio-grc'))
         except:
@@ -69,16 +71,16 @@ class top_block(gr.top_block, Qt.QWidget):
         self.sinc = sinc = np.sinc(sinc_sample_locations/np.pi)
         self.prefix = prefix = "/home/dspradio/grc_data/"
         self.samp_rate = samp_rate = 10e6
-        self.recfile = recfile = prefix + timenow + ".h5"
+        self.recfile = recfile = prefix + timenow + "_GBTdrift.h5"
         self.integration_time = integration_time = 2
-        self.freq = freq = 1.419e9
+        self.freq = freq = 251e6
         self.display_integration = display_integration = 0.5
         self.custom_window = custom_window = sinc*np.hamming(4*vec_length)
 
         ##################################################
         # Blocks
         ##################################################
-        self.radio_astro_hdf5_sink_0 = radio_astro.hdf5_sink(vec_length, recfile, 'AZ: 180, EL: 30', freq - samp_rate/2, samp_rate/vec_length, 'testing az el etc')
+        self.radio_astro_hdf5_sink_1 = radio_astro.hdf5_sink(vec_length, recfile, 'A312E77', freq - samp_rate/2, samp_rate/vec_length, 'GBT Drift  / J5CM13')
         self.qtgui_vector_sink_f_0 = qtgui.vector_sink_f(
             vec_length,
             freq - samp_rate/2,
@@ -95,7 +97,7 @@ class top_block(gr.top_block, Qt.QWidget):
         self.qtgui_vector_sink_f_0.set_x_axis_units("Hz")
         self.qtgui_vector_sink_f_0.set_y_axis_units("arb")
         self.qtgui_vector_sink_f_0.set_ref_level(0)
-        
+
         labels = ['', '', '', '', '',
                   '', '', '', '', '']
         widths = [1, 1, 1, 1, 1,
@@ -112,7 +114,7 @@ class top_block(gr.top_block, Qt.QWidget):
             self.qtgui_vector_sink_f_0.set_line_width(i, widths[i])
             self.qtgui_vector_sink_f_0.set_line_color(i, colors[i])
             self.qtgui_vector_sink_f_0.set_line_alpha(i, alphas[i])
-        
+
         self._qtgui_vector_sink_f_0_win = sip.wrapinstance(self.qtgui_vector_sink_f_0.pyqwidget(), Qt.QWidget)
         self.top_layout.addWidget(self._qtgui_vector_sink_f_0_win)
         self.qtgui_time_sink_x_0 = qtgui.time_sink_f(
@@ -123,19 +125,19 @@ class top_block(gr.top_block, Qt.QWidget):
         )
         self.qtgui_time_sink_x_0.set_update_time(0.10)
         self.qtgui_time_sink_x_0.set_y_axis(-1, 1)
-        
+
         self.qtgui_time_sink_x_0.set_y_label('Amplitude', "")
-        
+
         self.qtgui_time_sink_x_0.enable_tags(-1, True)
         self.qtgui_time_sink_x_0.set_trigger_mode(qtgui.TRIG_MODE_FREE, qtgui.TRIG_SLOPE_POS, 0.0, 0, 0, "")
         self.qtgui_time_sink_x_0.enable_autoscale(True)
         self.qtgui_time_sink_x_0.enable_grid(False)
         self.qtgui_time_sink_x_0.enable_axis_labels(False)
         self.qtgui_time_sink_x_0.enable_control_panel(True)
-        
+
         if not True:
           self.qtgui_time_sink_x_0.disable_legend()
-        
+
         labels = ['', '', '', '', '',
                   '', '', '', '', '']
         widths = [1, 1, 1, 1, 1,
@@ -148,7 +150,7 @@ class top_block(gr.top_block, Qt.QWidget):
                    -1, -1, -1, -1, -1]
         alphas = [1.0, 1.0, 1.0, 1.0, 1.0,
                   1.0, 1.0, 1.0, 1.0, 1.0]
-        
+
         for i in xrange(1):
             if len(labels[i]) == 0:
                 self.qtgui_time_sink_x_0.set_line_label(i, "Data {0}".format(i))
@@ -159,22 +161,22 @@ class top_block(gr.top_block, Qt.QWidget):
             self.qtgui_time_sink_x_0.set_line_style(i, styles[i])
             self.qtgui_time_sink_x_0.set_line_marker(i, markers[i])
             self.qtgui_time_sink_x_0.set_line_alpha(i, alphas[i])
-        
+
         self._qtgui_time_sink_x_0_win = sip.wrapinstance(self.qtgui_time_sink_x_0.pyqwidget(), Qt.QWidget)
         self.top_layout.addWidget(self._qtgui_time_sink_x_0_win)
-        self.osmosdr_source_0 = osmosdr.source( args="numchan=" + str(1) + " " + 'airspy=0,bias=1,pack=0' )
+        self.osmosdr_source_0 = osmosdr.source( args="numchan=" + str(1) + " " + 'airspy=0,bias=0,pack=0' )
         self.osmosdr_source_0.set_sample_rate(samp_rate)
         self.osmosdr_source_0.set_center_freq(freq, 0)
         self.osmosdr_source_0.set_freq_corr(0, 0)
         self.osmosdr_source_0.set_dc_offset_mode(0, 0)
         self.osmosdr_source_0.set_iq_balance_mode(0, 0)
         self.osmosdr_source_0.set_gain_mode(False, 0)
-        self.osmosdr_source_0.set_gain(20, 0)
-        self.osmosdr_source_0.set_if_gain(20, 0)
-        self.osmosdr_source_0.set_bb_gain(20, 0)
+        self.osmosdr_source_0.set_gain(16, 0)
+        self.osmosdr_source_0.set_if_gain(10, 0)
+        self.osmosdr_source_0.set_bb_gain(10, 0)
         self.osmosdr_source_0.set_antenna('', 0)
         self.osmosdr_source_0.set_bandwidth(0, 0)
-          
+
         self.fft_vxx_0 = fft.fft_vcc(vec_length, True, (window.rectangular(vec_length)), True, 1)
         self.blocks_vector_to_stream_0 = blocks.vector_to_stream(gr.sizeof_float*1, vec_length)
         self.blocks_stream_to_vector_0_2 = blocks.stream_to_vector(gr.sizeof_gr_complex*1, vec_length)
@@ -200,34 +202,34 @@ class top_block(gr.top_block, Qt.QWidget):
         ##################################################
         # Connections
         ##################################################
-        self.msg_connect((self.qtgui_vector_sink_f_0, 'xval'), (self.blocks_message_debug_0, 'print'))    
-        self.connect((self.blocks_add_xx_0, 0), (self.fft_vxx_0, 0))    
-        self.connect((self.blocks_complex_to_real_0_0, 0), (self.blocks_integrate_xx_0_0, 0))    
-        self.connect((self.blocks_delay_0_0, 0), (self.blocks_stream_to_vector_0_0, 0))    
-        self.connect((self.blocks_delay_0_0_0, 0), (self.blocks_stream_to_vector_0_2, 0))    
-        self.connect((self.blocks_delay_0_0_0_0, 0), (self.blocks_stream_to_vector_0_1, 0))    
-        self.connect((self.blocks_integrate_xx_0, 0), (self.blocks_vector_to_stream_0, 0))    
-        self.connect((self.blocks_integrate_xx_0, 0), (self.radio_astro_hdf5_sink_0, 0))    
-        self.connect((self.blocks_integrate_xx_0_0, 0), (self.blocks_integrate_xx_0, 0))    
-        self.connect((self.blocks_integrate_xx_0_0, 0), (self.blocks_nlog10_ff_0_0, 0))    
-        self.connect((self.blocks_multiply_conjugate_cc_0, 0), (self.blocks_complex_to_real_0_0, 0))    
-        self.connect((self.blocks_multiply_const_vxx_0, 0), (self.blocks_add_xx_0, 3))    
-        self.connect((self.blocks_multiply_const_vxx_0_0, 0), (self.blocks_add_xx_0, 2))    
-        self.connect((self.blocks_multiply_const_vxx_0_1, 0), (self.blocks_add_xx_0, 1))    
-        self.connect((self.blocks_multiply_const_vxx_0_2, 0), (self.blocks_add_xx_0, 0))    
-        self.connect((self.blocks_nlog10_ff_0, 0), (self.qtgui_time_sink_x_0, 0))    
-        self.connect((self.blocks_nlog10_ff_0_0, 0), (self.qtgui_vector_sink_f_0, 0))    
-        self.connect((self.blocks_stream_to_vector_0, 0), (self.blocks_multiply_const_vxx_0_2, 0))    
-        self.connect((self.blocks_stream_to_vector_0_0, 0), (self.blocks_multiply_const_vxx_0_1, 0))    
-        self.connect((self.blocks_stream_to_vector_0_1, 0), (self.blocks_multiply_const_vxx_0, 0))    
-        self.connect((self.blocks_stream_to_vector_0_2, 0), (self.blocks_multiply_const_vxx_0_0, 0))    
-        self.connect((self.blocks_vector_to_stream_0, 0), (self.blocks_nlog10_ff_0, 0))    
-        self.connect((self.fft_vxx_0, 0), (self.blocks_multiply_conjugate_cc_0, 0))    
-        self.connect((self.fft_vxx_0, 0), (self.blocks_multiply_conjugate_cc_0, 1))    
-        self.connect((self.osmosdr_source_0, 0), (self.blocks_delay_0_0, 0))    
-        self.connect((self.osmosdr_source_0, 0), (self.blocks_delay_0_0_0, 0))    
-        self.connect((self.osmosdr_source_0, 0), (self.blocks_delay_0_0_0_0, 0))    
-        self.connect((self.osmosdr_source_0, 0), (self.blocks_stream_to_vector_0, 0))    
+        self.msg_connect((self.qtgui_vector_sink_f_0, 'xval'), (self.blocks_message_debug_0, 'print'))
+        self.connect((self.blocks_add_xx_0, 0), (self.fft_vxx_0, 0))
+        self.connect((self.blocks_complex_to_real_0_0, 0), (self.blocks_integrate_xx_0_0, 0))
+        self.connect((self.blocks_delay_0_0, 0), (self.blocks_stream_to_vector_0_0, 0))
+        self.connect((self.blocks_delay_0_0_0, 0), (self.blocks_stream_to_vector_0_2, 0))
+        self.connect((self.blocks_delay_0_0_0_0, 0), (self.blocks_stream_to_vector_0_1, 0))
+        self.connect((self.blocks_integrate_xx_0, 0), (self.blocks_vector_to_stream_0, 0))
+        self.connect((self.blocks_integrate_xx_0, 0), (self.radio_astro_hdf5_sink_1, 0))
+        self.connect((self.blocks_integrate_xx_0_0, 0), (self.blocks_integrate_xx_0, 0))
+        self.connect((self.blocks_integrate_xx_0_0, 0), (self.blocks_nlog10_ff_0_0, 0))
+        self.connect((self.blocks_multiply_conjugate_cc_0, 0), (self.blocks_complex_to_real_0_0, 0))
+        self.connect((self.blocks_multiply_const_vxx_0, 0), (self.blocks_add_xx_0, 3))
+        self.connect((self.blocks_multiply_const_vxx_0_0, 0), (self.blocks_add_xx_0, 2))
+        self.connect((self.blocks_multiply_const_vxx_0_1, 0), (self.blocks_add_xx_0, 1))
+        self.connect((self.blocks_multiply_const_vxx_0_2, 0), (self.blocks_add_xx_0, 0))
+        self.connect((self.blocks_nlog10_ff_0, 0), (self.qtgui_time_sink_x_0, 0))
+        self.connect((self.blocks_nlog10_ff_0_0, 0), (self.qtgui_vector_sink_f_0, 0))
+        self.connect((self.blocks_stream_to_vector_0, 0), (self.blocks_multiply_const_vxx_0_2, 0))
+        self.connect((self.blocks_stream_to_vector_0_0, 0), (self.blocks_multiply_const_vxx_0_1, 0))
+        self.connect((self.blocks_stream_to_vector_0_1, 0), (self.blocks_multiply_const_vxx_0, 0))
+        self.connect((self.blocks_stream_to_vector_0_2, 0), (self.blocks_multiply_const_vxx_0_0, 0))
+        self.connect((self.blocks_vector_to_stream_0, 0), (self.blocks_nlog10_ff_0, 0))
+        self.connect((self.fft_vxx_0, 0), (self.blocks_multiply_conjugate_cc_0, 0))
+        self.connect((self.fft_vxx_0, 0), (self.blocks_multiply_conjugate_cc_0, 1))
+        self.connect((self.osmosdr_source_0, 0), (self.blocks_delay_0_0, 0))
+        self.connect((self.osmosdr_source_0, 0), (self.blocks_delay_0_0_0, 0))
+        self.connect((self.osmosdr_source_0, 0), (self.blocks_delay_0_0_0_0, 0))
+        self.connect((self.osmosdr_source_0, 0), (self.blocks_stream_to_vector_0, 0))
 
     def closeEvent(self, event):
         self.settings = Qt.QSettings("GNU Radio", "top_block")
@@ -262,7 +264,7 @@ class top_block(gr.top_block, Qt.QWidget):
 
     def set_timenow(self, timenow):
         self.timenow = timenow
-        self.set_recfile(self.prefix + self.timenow + ".h5")
+        self.set_recfile(self.prefix + self.timenow + "_GBTdrift.h5")
 
     def get_sinc(self):
         return self.sinc
@@ -277,7 +279,7 @@ class top_block(gr.top_block, Qt.QWidget):
 
     def set_prefix(self, prefix):
         self.prefix = prefix
-        self.set_recfile(self.prefix + self.timenow + ".h5")
+        self.set_recfile(self.prefix + self.timenow + "_GBTdrift.h5")
 
     def get_samp_rate(self):
         return self.samp_rate
