@@ -20,17 +20,17 @@ That's been a lot of Digital Signal Processing so let us just go ahead and build
 
 We are building a special kind of radio telescope which uses a Horn Antenna. 
 
-[Follow these intructions for Horn Assembly](DSPIRA_Horn_Assembly.pdf)
+[Follow these intructions for Horn Assembly](https://github.com/WVURAIL/dspira/blob/master/labs/06/DSPIRA_Horn_Assembly.pdf)
 
 ## 6.2  21cm Low Noise Amplifier
 
 The Neutral Hydrogen signal from the Milky Way galaxy is very faint, and the telescope needs an amplifier that adds as little noise to the signal as possible.  We have designed a low noise amplifier for you to use which will add less than 50 Kelvin noise temperature to the incoming signal.  See the attached pdf for assembly instructions:
 
-[LNA assembly Instructions](DSPIRA_LNA_assembly.pdf)
+[LNA assembly Instructions](https://github.com/WVURAIL/dspira/blob/master/labs/06/DSPIRA_LNA_assembly.pdf)
 
 A brief memo on the initial design and performance of the LNA is here:
 
-[LNA memo](DSPIRA_memo2_LNA.pdf)
+[LNA memo](https://github.com/WVURAIL/dspira/blob/master/labs/06/DSPIRA_memo2_LNA.pdf)
 
 ## 6.3 Spectrometer.  
 
