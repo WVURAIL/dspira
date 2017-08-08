@@ -3,8 +3,10 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Top Block
-# Generated: Tue Aug  1 09:25:56 2017
+# Generated: Tue Aug  8 10:18:17 2017
 ##################################################
+
+from distutils.version import StrictVersion
 
 if __name__ == '__main__':
     import ctypes
@@ -16,25 +18,23 @@ if __name__ == '__main__':
         except:
             print "Warning: failed to XInitThreads()"
 
-from PyQt4 import Qt
+from PyQt5 import Qt
+from argparse import ArgumentParser
 from datetime import datetime
+from gnuradio import analog
 from gnuradio import blocks
 from gnuradio import eng_notation
 from gnuradio import fft
 from gnuradio import gr
 from gnuradio import qtgui
-from gnuradio.eng_option import eng_option
+from gnuradio.eng_arg import eng_float, intx
 from gnuradio.fft import window
 from gnuradio.filter import firdes
-from optparse import OptionParser
 import numpy as np
-import osmosdr
 import radio_astro
 import sip
 import sys
-import time
 from gnuradio import qtgui
-
 
 class top_block(gr.top_block, Qt.QWidget):
 
@@ -60,27 +60,34 @@ class top_block(gr.top_block, Qt.QWidget):
         self.top_layout.addLayout(self.top_grid_layout)
 
         self.settings = Qt.QSettings("GNU Radio", "top_block")
-        self.restoreGeometry(self.settings.value("geometry").toByteArray())
+
+        try:
+            if StrictVersion(Qt.qVersion()) < StrictVersion("5.0.0"):
+                self.restoreGeometry(self.settings.value("geometry").toByteArray())
+            else:
+                self.restoreGeometry(self.settings.value("geometry"))
+        except:
+            pass
 
         ##################################################
         # Variables
         ##################################################
-        self.vec_length = vec_length = 4096
+        self.vec_length = vec_length = 65536
         self.sinc_sample_locations = sinc_sample_locations = np.arange(-np.pi*4/2.0, np.pi*4/2.0, np.pi/vec_length)
         self.timenow = timenow = datetime.now().strftime("%Y-%m-%d_%H.%M.%S")
         self.sinc = sinc = np.sinc(sinc_sample_locations/np.pi)
-        self.prefix = prefix = "/home/dspradio/grc_data/"
-        self.samp_rate = samp_rate = 10e6
-        self.recfile = recfile = prefix + timenow + "_GBTdrift.h5"
+        self.prefix = prefix = "/Users/kbandura/grc_data/"
+        self.samp_rate = samp_rate = 2.4e6
+        self.recfile = recfile = prefix + timenow + ".h5"
         self.integration_time = integration_time = 2
-        self.freq = freq = 251e6
+        self.freq = freq = 1420.5e6
         self.display_integration = display_integration = 0.5
         self.custom_window = custom_window = sinc*np.hamming(4*vec_length)
 
         ##################################################
         # Blocks
         ##################################################
-        self.radio_astro_hdf5_sink_1 = radio_astro.hdf5_sink(vec_length, recfile, 'A312E77', freq - samp_rate/2, samp_rate/vec_length, 'GBT Drift  / J5CM13')
+        self.radio_astro_hdf5_sink_1 = radio_astro.hdf5_sink(vec_length, recfile, 'testing', freq - samp_rate/2, samp_rate/vec_length, 'testing')
         self.qtgui_vector_sink_f_0 = qtgui.vector_sink_f(
             vec_length,
             freq - samp_rate/2,
@@ -164,19 +171,6 @@ class top_block(gr.top_block, Qt.QWidget):
 
         self._qtgui_time_sink_x_0_win = sip.wrapinstance(self.qtgui_time_sink_x_0.pyqwidget(), Qt.QWidget)
         self.top_layout.addWidget(self._qtgui_time_sink_x_0_win)
-        self.osmosdr_source_0 = osmosdr.source( args="numchan=" + str(1) + " " + 'airspy=0,bias=0,pack=0' )
-        self.osmosdr_source_0.set_sample_rate(samp_rate)
-        self.osmosdr_source_0.set_center_freq(freq, 0)
-        self.osmosdr_source_0.set_freq_corr(0, 0)
-        self.osmosdr_source_0.set_dc_offset_mode(0, 0)
-        self.osmosdr_source_0.set_iq_balance_mode(0, 0)
-        self.osmosdr_source_0.set_gain_mode(False, 0)
-        self.osmosdr_source_0.set_gain(16, 0)
-        self.osmosdr_source_0.set_if_gain(10, 0)
-        self.osmosdr_source_0.set_bb_gain(10, 0)
-        self.osmosdr_source_0.set_antenna('', 0)
-        self.osmosdr_source_0.set_bandwidth(0, 0)
-
         self.fft_vxx_0 = fft.fft_vcc(vec_length, True, (window.rectangular(vec_length)), True, 1)
         self.blocks_vector_to_stream_0 = blocks.vector_to_stream(gr.sizeof_float*1, vec_length)
         self.blocks_stream_to_vector_0_2 = blocks.stream_to_vector(gr.sizeof_gr_complex*1, vec_length)
@@ -190,7 +184,6 @@ class top_block(gr.top_block, Qt.QWidget):
         self.blocks_multiply_const_vxx_0_0 = blocks.multiply_const_vcc((custom_window[vec_length:2*vec_length]))
         self.blocks_multiply_const_vxx_0 = blocks.multiply_const_vcc((custom_window[0:vec_length]))
         self.blocks_multiply_conjugate_cc_0 = blocks.multiply_conjugate_cc(vec_length)
-        self.blocks_message_debug_0 = blocks.message_debug()
         self.blocks_integrate_xx_0_0 = blocks.integrate_ff(int(display_integration*samp_rate/vec_length), vec_length)
         self.blocks_integrate_xx_0 = blocks.integrate_ff(int((integration_time)*samp_rate/vec_length)/int(display_integration*samp_rate/vec_length), vec_length)
         self.blocks_delay_0_0_0_0 = blocks.delay(gr.sizeof_gr_complex*1, 3*vec_length)
@@ -198,11 +191,15 @@ class top_block(gr.top_block, Qt.QWidget):
         self.blocks_delay_0_0 = blocks.delay(gr.sizeof_gr_complex*1, vec_length)
         self.blocks_complex_to_real_0_0 = blocks.complex_to_real(vec_length)
         self.blocks_add_xx_0 = blocks.add_vcc(vec_length)
+        self.analog_fastnoise_source_x_0 = analog.fastnoise_source_c(analog.GR_GAUSSIAN, 1, 0, 8192)
 
         ##################################################
         # Connections
         ##################################################
-        self.msg_connect((self.qtgui_vector_sink_f_0, 'xval'), (self.blocks_message_debug_0, 'print'))
+        self.connect((self.analog_fastnoise_source_x_0, 0), (self.blocks_delay_0_0, 0))
+        self.connect((self.analog_fastnoise_source_x_0, 0), (self.blocks_delay_0_0_0, 0))
+        self.connect((self.analog_fastnoise_source_x_0, 0), (self.blocks_delay_0_0_0_0, 0))
+        self.connect((self.analog_fastnoise_source_x_0, 0), (self.blocks_stream_to_vector_0, 0))
         self.connect((self.blocks_add_xx_0, 0), (self.fft_vxx_0, 0))
         self.connect((self.blocks_complex_to_real_0_0, 0), (self.blocks_integrate_xx_0_0, 0))
         self.connect((self.blocks_delay_0_0, 0), (self.blocks_stream_to_vector_0_0, 0))
@@ -226,10 +223,6 @@ class top_block(gr.top_block, Qt.QWidget):
         self.connect((self.blocks_vector_to_stream_0, 0), (self.blocks_nlog10_ff_0, 0))
         self.connect((self.fft_vxx_0, 0), (self.blocks_multiply_conjugate_cc_0, 0))
         self.connect((self.fft_vxx_0, 0), (self.blocks_multiply_conjugate_cc_0, 1))
-        self.connect((self.osmosdr_source_0, 0), (self.blocks_delay_0_0, 0))
-        self.connect((self.osmosdr_source_0, 0), (self.blocks_delay_0_0_0, 0))
-        self.connect((self.osmosdr_source_0, 0), (self.blocks_delay_0_0_0_0, 0))
-        self.connect((self.osmosdr_source_0, 0), (self.blocks_stream_to_vector_0, 0))
 
     def closeEvent(self, event):
         self.settings = Qt.QSettings("GNU Radio", "top_block")
@@ -264,7 +257,7 @@ class top_block(gr.top_block, Qt.QWidget):
 
     def set_timenow(self, timenow):
         self.timenow = timenow
-        self.set_recfile(self.prefix + self.timenow + "_GBTdrift.h5")
+        self.set_recfile(self.prefix + self.timenow + ".h5")
 
     def get_sinc(self):
         return self.sinc
@@ -279,7 +272,7 @@ class top_block(gr.top_block, Qt.QWidget):
 
     def set_prefix(self, prefix):
         self.prefix = prefix
-        self.set_recfile(self.prefix + self.timenow + "_GBTdrift.h5")
+        self.set_recfile(self.prefix + self.timenow + ".h5")
 
     def get_samp_rate(self):
         return self.samp_rate
@@ -288,7 +281,6 @@ class top_block(gr.top_block, Qt.QWidget):
         self.samp_rate = samp_rate
         self.qtgui_vector_sink_f_0.set_x_axis(self.freq - self.samp_rate/2, self.samp_rate/self.vec_length)
         self.qtgui_time_sink_x_0.set_samp_rate(self.samp_rate)
-        self.osmosdr_source_0.set_sample_rate(self.samp_rate)
 
     def get_recfile(self):
         return self.recfile
@@ -308,7 +300,6 @@ class top_block(gr.top_block, Qt.QWidget):
     def set_freq(self, freq):
         self.freq = freq
         self.qtgui_vector_sink_f_0.set_x_axis(self.freq - self.samp_rate/2, self.samp_rate/self.vec_length)
-        self.osmosdr_source_0.set_center_freq(self.freq, 0)
 
     def get_display_integration(self):
         return self.display_integration
@@ -329,8 +320,7 @@ class top_block(gr.top_block, Qt.QWidget):
 
 def main(top_block_cls=top_block, options=None):
 
-    from distutils.version import StrictVersion
-    if StrictVersion(Qt.qVersion()) >= StrictVersion("4.5.0"):
+    if StrictVersion("4.5.0") <= StrictVersion(Qt.qVersion()) < StrictVersion("5.0.0"):
         style = gr.prefs().get_string('qtgui', 'style', 'raster')
         Qt.QApplication.setGraphicsSystem(style)
     qapp = Qt.QApplication(sys.argv)
@@ -342,7 +332,7 @@ def main(top_block_cls=top_block, options=None):
     def quitting():
         tb.stop()
         tb.wait()
-    qapp.connect(qapp, Qt.SIGNAL("aboutToQuit()"), quitting)
+    qapp.aboutToQuit.connect(quitting)
     qapp.exec_()
 
 
