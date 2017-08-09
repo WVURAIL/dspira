@@ -22,6 +22,11 @@
 
 6. [A Radio Telescope](06)    
 > 1. Build an Antenna
-> 2. Inegration of Antenna to SDR dongle to GNU Radio companion. Testing
-> 3. Data reduction
-> 4. First Light
+> 2. Assemble Low Noise Amplifier
+> 3. Inegration of Antenna to SDR dongle to GNU Radio companion. 
+
+7. [Observations](07)
+> 1. Making measurements
+> 2. Caliberating
+> 3. Mapping the neutral hydrogen
+> 4. Rotation Curve of the Milky Way 
