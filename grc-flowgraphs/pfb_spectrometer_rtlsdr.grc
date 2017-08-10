@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<?grc format='1' created='3.7.11'?>
+<?grc format='1' created='3.7.12'?>
 <flow_graph>
   <timestamp>Thu Jan 19 12:15:45 2017</timestamp>
   <block>
@@ -186,7 +186,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>2</value>
+      <value>8</value>
     </param>
   </block>
   <block>
@@ -213,7 +213,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>"/Users/kbandura/grc_data/"</value>
+      <value>"/home/dspradio/grc_data/"</value>
     </param>
   </block>
   <block>
@@ -240,7 +240,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>prefix + timenow + ".h5"</value>
+      <value>prefix + timenow + "rtl_gnd.h5"</value>
     </param>
   </block>
   <block>
@@ -375,7 +375,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>65536</value>
+      <value>4096</value>
     </param>
   </block>
   <block>
@@ -3553,11 +3553,11 @@
     </param>
     <param>
       <key>notes</key>
-      <value>testing</value>
+      <value>testing RTL-sdr with bias</value>
     </param>
     <param>
       <key>pointing</key>
-      <value>testing</value>
+      <value>A180E30</value>
     </param>
     <param>
       <key>vec_length</key>
