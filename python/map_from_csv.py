@@ -33,7 +33,7 @@ if __name__ == '__main__':
             hit_dat = np.loadtxt(fs_hit[i], delimiter=',')
             hit += hit_dat
     
-    pylab.imshow((h1/hit).transpose(),extent=[0,360,-90,90], interpolation='gaussian', cmap='plasma')
+    pylab.imshow((h1/hit)[:,::-1].transpose(),extent=[0,360,-90,90], interpolation='gaussian', cmap='plasma')
     pylab.xlabel("galactic longitude")
     pylab.ylabel('galactic latitude')
     pylab.title('HI map')
