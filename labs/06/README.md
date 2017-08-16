@@ -42,7 +42,7 @@ You can use an out-of-tree module to instead save the data to an HDF5 file, whic
 git clone https://github.com/WVURAIL/gr-radio_astro.git
 ```
 
-2.) Go to the ``gr-radio_astro.git`` folder/repository, create a build directory inside the repository:
+2.) Go to the ``gr-radio_astro`` folder/repository, create a build directory inside the repository:
 
 ```bash
 cd gr-radio_astro
