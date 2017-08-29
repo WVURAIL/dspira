@@ -186,7 +186,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>8</value>
+      <value>4</value>
     </param>
   </block>
   <block>
@@ -240,7 +240,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>prefix + timenow + "rtl_gnd.h5"</value>
+      <value>prefix + timenow + "rtl_drift.h5"</value>
     </param>
   </block>
   <block>
@@ -3553,11 +3553,11 @@
     </param>
     <param>
       <key>notes</key>
-      <value>testing RTL-sdr with bias</value>
+      <value>amber:39.659,-79.872.  horn3b, lna V3 mod, thin, 5.2/5.2cm probe, RTLSDR</value>
     </param>
     <param>
       <key>pointing</key>
-      <value>A180E30</value>
+      <value>A180E55</value>
     </param>
     <param>
       <key>vec_length</key>

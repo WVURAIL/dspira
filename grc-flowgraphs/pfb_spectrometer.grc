@@ -240,7 +240,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>prefix + timenow + "_amberDrift.h5"</value>
+      <value>prefix + timenow + "_Drift.h5"</value>
     </param>
   </block>
   <block>
@@ -1511,7 +1511,7 @@
     </param>
     <param>
       <key>bb_gain0</key>
-      <value>20</value>
+      <value>10</value>
     </param>
     <param>
       <key>bw0</key>
@@ -1535,7 +1535,7 @@
     </param>
     <param>
       <key>if_gain0</key>
-      <value>20</value>
+      <value>12</value>
     </param>
     <param>
       <key>iq_balance_mode0</key>
@@ -3584,11 +3584,11 @@
     </param>
     <param>
       <key>notes</key>
-      <value>amber:39.659,-79.872.  horn3b, lna1, thin, 5.2/5.2cm probe</value>
+      <value>amber:39.659,-79.872.  horn3b, lna V3 mod, thin, 5.2/5.2cm probe, 20,12,10</value>
     </param>
     <param>
       <key>pointing</key>
-      <value>A180E30</value>
+      <value>A180E55</value>
     </param>
     <param>
       <key>vec_length</key>
