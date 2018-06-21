@@ -50,7 +50,7 @@ Place another ``QT Frequency Sink`` and change the number of inputs to the numbe
 
 The output looks like this:
 
-![1.png](img/1.png)
+![1.png](img/3.png)
 
 The couloured peaks are the Fourier transforms of the individual sinusoids. Do they align with the Fourier Transform of the pure square wave? If you add more terms of the fourier series to the sink, how do they compare?
 
@@ -67,7 +67,7 @@ We can also think of this to use gnuradio-companion to graphically get the fouri
 It is also helpful to plot the timeseries to see what your input is and the frequency sink to make it easier to just read off the frequency of the components.  
 
 An example flowgraph looks like:
-![sawtooth](img/3.png) 
+![sawtooth](img/4.png) 
 
 The FFT block is a special block which does the fourier transform really fast. Play around with the FFT block and your general waveform generator from Lab 1 to take their fourier tranform.  Use this to read off the fourier series coefficients.  This can still be used with a periodic signal with much less obvious structure.
 
