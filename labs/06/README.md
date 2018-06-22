@@ -27,13 +27,14 @@ A brief memo on the initial design and performance of the LNA is here:
 
 [LNA memo](https://github.com/WVURAIL/dspira/blob/master/labs/06/DSPIRA_memo2_LNA.pdf)
 
-## 6.3 Spectrometer.  
+## 6.3 Spectrometer.
 
 Use the spectrometer you designed in [Lab 5](../05)
 
 You may want to upgrade your spectrometer to use a different output than just a standard binary data file (which you'll have to know ahead of time how to interpret).
 
 You can use an out-of-tree module to instead save the data to an HDF5 file, which will then include additional information about what the data is, to help interpretation. Follow the instructions from the readme file at this website:
+
 [gnuradio OOT radio astronomy package ](https://github.com/WVURAIL/gr-radio_astro)
 
 1.) Clone the repository into an appropriate folder/repository: 
@@ -72,8 +73,7 @@ Blocks should now be available in gnuradio-companion.
  **Additionally install h5py**
  
  ```bash
- sudo pip install h5py
+ sudo pip install 'h5py==2.7.0'
  ```
-
 
 Blocks should now be available in gnuradio-companion, in the 'radio_astro' section.
