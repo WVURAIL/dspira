@@ -21,7 +21,7 @@ We are building a special kind of radio telescope which uses a Horn Antenna.
 
 The Neutral Hydrogen signal from the Milky Way galaxy is very faint, and the telescope needs an amplifier that adds as little noise to the signal as possible.  We have designed a low noise amplifier for you to use which will add less than 50 Kelvin noise temperature to the incoming signal.  See the attached pdf for assembly instructions:
 
-[LNA assembly Instructions](https://github.com/WVURAIL/dspira/blob/master/labs/06/DSPIRA_LNA_assembly.pdf)
+[LNA assembly Instructions](https://github.com/WVURAIL/dspira/blob/master/labs/06/2018_06_22.pdf.pdf)
 
 A brief memo on the initial design and performance of the LNA is here:
 
@@ -77,3 +77,6 @@ Blocks should now be available in gnuradio-companion.
  ```
 
 Blocks should now be available in gnuradio-companion, in the 'radio_astro' section.
+
+----
+[↑ Go to the Top of the Page](#) ......[Next Lab](../07)
