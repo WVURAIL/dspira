@@ -33,10 +33,8 @@ We shall explore SDR through guided labs leading up to a project of building a r
 The modules would be structure as below and you get begin by clicking [here](labs)
 
 1. [Introduction to GNU Radio & Signals](labs/01)
-    -   [1.1. Signals (continued): Sampling](labs/01_1)
 2. [First steps with SDR Hardware](labs/02)   
 3. [Introduction to Fourier Analysis](labs/03)   
-    -   [3.1. Fourier Series and Fourier Analysis](labs/03_1)
 4. [Filters](labs/04)   
 5. [Fourier Analysis -- Expert Mode!](labs/05)
 6. [A Radio Telescope](labs/06)  

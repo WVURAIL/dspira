@@ -1,15 +1,18 @@
-# 3. Fourier Analysis
+# 1. Fourier Analysis
 
 Fourier Analysis is a very powerful tool that comes into play when we discuss periodic signals. Colloquially, a periodic signal repeats.  
 
 <!-- TOC -->
 
-- [3. Fourier Analysis](#3-fourier-analysis)
+- [1. Fourier Analysis](#1-fourier-analysis)
     - [3.1. Introduction](#31-introduction)
     - [3.2. Fourier Series](#32-fourier-series)
-    - [3.3. A Sqaure Wave](#33-a-sqaure-wave)
-    - [3.4. A Triangle Wave](#34-a-triangle-wave)
-    - [3.5. A Sawtooth wave.](#35-a-sawtooth-wave)
+        - [3.2.1. A Sqaure Wave](#321-a-sqaure-wave)
+        - [3.2.2. A Triangle Wave](#322-a-triangle-wave)
+        - [3.2.3. A Sawtooth wave.](#323-a-sawtooth-wave)
+    - [3.3. Fourier Series and Fourier Transforms](#33-fourier-series-and-fourier-transforms)
+        - [3.3.1. Fourier Transform](#331-fourier-transform)
+        - [3.3.2. Example](#332-example)
 
 <!-- /TOC -->
 
@@ -29,7 +32,7 @@ A Fourier series is an expansion of a periodic function f(x) in terms of an infi
 
 [^1]: http://mathworld.wolfram.com/FourierSeries.html
 
-Mathermatically in a simple sense an arbitrary function $$f(t)$$ can be decomposed as:
+Mathematically in a simple sense an arbitrary function $$f(t)$$ can be decomposed as:
 
 $$
 f(x) = a_0 + \sum_{n=1}^{\infty} a_n cos(nx) + b_n sin(nx) 
@@ -38,9 +41,9 @@ $$
 
 We shall explore this concept by making two waveforms using sinosoids:
 
-## 3.3. A Sqaure Wave
+### 3.2.1. A Sqaure Wave
 
-From [Lab 1](../01/), we have te function generator. We use that to make a square wave of amplitude = 1. 
+From [Lab 1](../01/), we have the function generator. We use that to make a square wave of amplitude = 1. 
 
 Mathematically it can be written as:
 
@@ -62,7 +65,7 @@ f(x) =
 $$
 
 
-The correposdonding fourier series of the square wave
+The corresponding Fourier series of the square wave
 $$
 f(x) = \frac{1}{2} + \sum_{n=1}^{\infty} \frac{2}{(2k-1)\pi} sin[(2k-1)x] \\
 \ \ \ = \frac{1}{2} + \frac{2}{\pi}sin(x) + \frac{2}{3\pi}sin(3x) + \frac{2}{5\pi}sin(5x) + \frac{2}{7\pi}sin(7x) + ... + + \frac{2}{n\pi}sin(nx)\ (\ n\ is\ odd)
@@ -87,7 +90,7 @@ This type of analysis is important for digital design in that most digital signa
 
 [↑ Go to the Top of the Page](#)
 
-## 3.4. A Triangle Wave
+### 3.2.2. A Triangle Wave
 
 The triangular wave is defined as:
 $$
@@ -110,9 +113,72 @@ It should give an output like this:
 ---
 
 
-## 3.5. A Sawtooth wave.
+### 3.2.3. A Sawtooth wave.
 
-Now mathematically define a sawtooth wave and find it's fourier series expansion.  Then create its flow-graph, again with more and more fourier components.  Again, do you need more/less fourier components as compared to a square or triangle wave?  
+Now mathematically define a sawtooth wave and find it's Fourier series expansion.  Then create its flow-graph, again with more and more Fourier components.  Again, do you need more/less Fourier components as compared to a square or triangle wave?  
+
+## 3.3. Fourier Series and Fourier Transforms
+
+We segue into the concept of Fourier transforms directly by seeing how they relate to fourier series. First some mathematics to associate familiarity, the Fourier transform of $$x(t)$$ is given by:
+
+$$
+X(\omega) = \int_{-\infty}^{+\infty} x(t) cos(\omega t)dt -i \int_{-\infty}^{+\infty} x(t) sin(\omega t) = \int_{-\infty}^{+\infty}x(t)e^{-i\omega t}dt
+$$
+
+When x(t) is periodic and has a Fourier series expansion, this integral is pulling out those sines and cosines in the expansion.  
+
+In more detail: For the complex representation of a Fourier series of a periodic function $$x(t)$$ :
+
+$$
+x(t) = \sum_{-\infty}^{\infty} c_n e^{jn\omega t}
+$$
+
+The co-effecients, $$ c_n $$ of $$ x(t) $$ (which  has the period $$ T $$ is given by the relation:
+
+$$
+c_n = \frac{1}{T} X(n\omega_o)
+$$
+
+where $$X(\omega)$$ is the Fourier transform and $$\omega_o = \frac{2\pi}{T}$$
+
+**In summary, the Fourier series of a signal is a sum of sines and cosines. And, the Fourier transform decomposes the signal into it's its frequency components with their relative strength. This can be visually seen in a neat animation as shown below ( *credit: wikipedia* ) and in the next section**
+
+![animation FS](img/Fourier_series_and_transform.gif)
+
+[↑ Go to the Top of the Page](#)
+
+### 3.3.1. Fourier Transform
+
+Use the [Square Wave](../03/#13-a-sqaure-wave) and the [Triangle Wave](../03/#14-a-triangle-wave) flowgraphs from the previous exercise.
+
+First use a ``signal source`` block to make a square wave and feed the signal into a ``QT frequency sink``
+
+**The Frequency Sink takes the Fourier Transform of the incoming signal and plots the output of the fourier transform**
+
+Place another ``QT Frequency Sink`` and change the number of inputs to the number of Fourier series sinusoids you have in your flowgraph and feed all the sinusoids (vis-a-vis the individual Fourier series terms) into the frequency sink 
+
+The output looks like this:
+
+![1.png](img/3.png)
+
+The colored peaks are the Fourier transforms of the individual sinusoids. Do they align with the Fourier Transform of the pure square wave? If you add more terms of the Fourier series to the sink, how do they compare?
+
+Repeat this exercise for the triangle wave.
+
+We've been taking Fourier transform of the signal every time we see a plot with frequency in the time axes. 
+
+ We shall visit Fourier transforms in detail again that in Lab 5. 
+
+### 3.3.2. Example
+
+We can also think of this to use gnuradio-companion to graphically get the Fourier components of a signal using a Fourier transform.  Create a flow-graph with a signal source->FFT(Fourier transform)-> complex to real/imag -> vector sinks.  The output of the real-part contains the cosine components of the transform.  The imaginary part contains the sine components of the Fourier expansion.  
+
+It is also helpful to plot the time series to see what your input is and the frequency sink to make it easier to just read off the frequency of the components.  
+
+An example flowgraph looks like:
+![sawtooth](img/4.png) 
+
+The FFT block is a special block which does the Fourier transform really fast. Play around with the FFT block and your general waveform generator from Lab 1 to take their Fourier transform.  Use this to read off the Fourier series coefficients.  This can still be used with a periodic signal with much less obvious structure.
 
 ---
 

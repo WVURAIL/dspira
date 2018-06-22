@@ -21,7 +21,7 @@ A filter changes the nature of the signal. A digital filter does so by manipulat
 
 ## 4.1. Introduction
 
-As we have seen in the previous lab every signal in the time domain has an equivalent representation in the frequency domain by way of the fourier transform. Information in a signal can be distinctly displayed as a function of the three parameters: time, frequency and phase. Different filters are designed to manipulate the said information in the signal with respect the different parameters. 
+As we have seen in the previous lab every signal in the time domain has an equivalent representation in the frequency domain by way of the Fourier transform. Information in a signal can be distinctly displayed as a function of the three parameters: time, frequency and phase. Different filters are designed to manipulate the said information in the signal with respect the different parameters.
 
 Use for example the signal x as a function of time:
 $$ x(t) = A cos(\omega t + \phi) $$
@@ -70,6 +70,8 @@ Use a sine wave from the ``signal source`` and add a noise to it (Discussed in L
 Observe the signal before and after the filtering.
 Cascade multiple 8 point average filters (i.e. connect end to start). This will require saving just your filter as a 'hier block' with two 'pad sources' and two 'pad sinks' (why two?).  Once the block is compiled, reload the blocks (refresh button in gnuradio-companion).  There should now be a "GRC Hier Blocks" section with your block named.  How does the signal change adding more and more averaging?
 
+*Note: There are two options for 'heir' block with or without 'QT GUI' appending heir. Choose the one without the 'QT GUI. Male sure you have to disabled blocks in your floegraph *
+
 [↑ Go to the Top of the Page](#)
 
 ## 4.3. FIR: Finite Impulse Response Filters
@@ -82,7 +84,7 @@ The flow diagram of an FIR filter is shown below, $$ x[n]\ and\ y[n] $$ are inpu
 
 ![FIR filter wikipedia](img/1000px-FIR_Filter.png)
 
-FIR filters are mathematically fast and 
+FIR filters are mathematically fast and relatively easier to design and implement digitally. 
 
 We shall design FIR filters using the graphical tool that ships with gnuradio. In the taskbar (move mouse to the top of the window) click on ``tools`` and then ``filter design tool``
 
@@ -105,7 +107,7 @@ A chord is the sound produced by playing three  or more notes together. We can u
 
 ![audio to sink](img/audiotosink.png)
 
-Once ready, let's play the C-Major chord. It is the C (= 261.63Hz) , E (= 329.63Hz) and G (= 392Hz). Notice that the frequency spectrum shows more than just the three fundamental frequencies. They show the harmonics of the three frequencies mentioned above! Recall from fourier series , these harmonics including the fundamental frequencies when added together makes the waveform that forms the music note. The amplitudes of these harmonics for the same note is different for different instruments because the "timber" i.e. the waveform produced by every instrument is different!
+Once ready, let's play the C-Major chord. It is the C (= 261.63Hz) , E (= 329.63Hz) and G (= 392Hz). Notice that the frequency spectrum shows more than just the three fundamental frequencies. They show the harmonics of the three frequencies mentioned above! Recall from Fourier series , these harmonics including the fundamental frequencies when added together makes the waveform that forms the music note. The amplitudes of these harmonics for the same note is different for different instruments because the "timber" i.e. the waveform produced by every instrument is different!
 
 Now let us extract just the fundamental frequencies by implementing low pass filters to have:
 
@@ -130,7 +132,7 @@ Let us try and construct a simple digital equalizer. I shall present the primer 
 - High-range: 4kHz – 20kHz
  
  Attach this to FM Radio flow-graph before the ``audio sink``
- The gnuradio flow-grpah will follow this diagram: 
+ The gnuradio flow-graph will follow this diagram: 
 
 ![equalizer](img/4.png)
 

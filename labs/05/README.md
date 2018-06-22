@@ -21,7 +21,7 @@ As we observed in the previous labs and theory with their corresponding exercise
 
 ## 5.1. Fourier Transform Pairs
 
-Let us revisit fourier transform by exploring the concept through their various properties. Refer to this [Table of Fourier Transform Pairs and Properties](http://www.ws.binghamton.edu/fowler/fowler%20personal%20page/EE301_files/FT%20Tables_rev3.pdf) and implement in gnuradio the following :
+Let us revisit Fourier transform by exploring the concept through their various properties. Refer to this [Table of Fourier Transform Pairs and Properties](http://www.ws.binghamton.edu/fowler/fowler%20personal%20page/EE301_files/FT%20Tables_rev3.pdf) and implement in gnuradio the following :
 
 1. Fourier Transform a Sinusoid and 
 2. Fourier transform of the sinusoid delayed by one sample
@@ -35,6 +35,8 @@ Try to implement other properties from the link of fourier transform pairs and p
 **NOTE: Use the ``FFT`` Block for the above exercises. Use complex sources. The `FFT` block takes an input vector and outputs a complex vector. Use to appropriate stream to vector and complex to real/imaginary convertor blocks where necessary**
 
 **The power of the FFT output is given by multiplying the complex output of the FFT by its complex conjugate**
+
+**Use vector sinks for signals that 'vectors' i.e. data comes out in chunks of a particular matrix size(vector length)**
 
 [↑ Go to the Top of the Page](#)
 
@@ -54,13 +56,8 @@ Try using the two signals independently, and added together, this is the overall
 Now multiply this signal by the cosine and the sine "LO's".  This now will become your IQ signal.  In gnuradio, this is passed into a "float to complex" block,
 where the cosine LO mixed signal is the real, and the sine multiplied is the imaginary.  This can then be passed into a sink.  
 
-Add different syncs along the way, looking at just the cosine ("I") or sine ("Q")
+Add different sinks along the way, looking at just the cosine ("I") or sine ("Q")
 multiplied signals.  With just the single incoming tone, demonstrate that you can in fact recover it after mixing.  Do we need a filter?  Where? Add one if needed.  
-
-
-
-
-
 
 [↑ Go to the Top of the Page](#)
 
@@ -85,7 +82,7 @@ Fast Fourier transform algorithms drastically reduce the computational complexit
 The DFT implemented through a Cooley-Tukey Decimation in frequency FFT algorithm has the flowgraph shown below.
 ![8pfft](img/fft8p.png)
 
-Use appropriate Constant multiplies and and adders to construct the above in gnuradio. Are the outputs the Valid frequency domain results? 
+Use appropriate Constant multiplies and and adders to construct the above in gnuradio ( Where W^{i} = $e^\frac{-2\pi ki}{8})$. Are the outputs the Valid frequency domain results? 
 
 [↑ Go to the Top of the Page](#)
 
@@ -117,16 +114,16 @@ S_{xx}(\nu)=E[|X(\nu)|^2]
 $$
 E[] stands for the expected value i.e. the mean
 
-There are therefore two distinct classes of spectrometers: 1) ones that approximate $$ S_{xx} (k) $$ by first forming the autocorrelation, then taking a Fourier transform and 2) those that first convert into the frequency domain to form X(k) before evaluating $$ S_{xx} (k) $$. These are Autocorrelation Spectrometers and  Fourier Tranform Filterbanks respectively. 
+There are therefore two distinct classes of spectrometers: 1) ones that approximate $$ S_{xx} (k) $$ by first forming the autocorrelation, then taking a Fourier transform and 2) those that first convert into the frequency domain to form X(k) before evaluating $$ S_{xx} (k) $$. These are Autocorrelation Spectrometers and  Fourier Transform Filter  banks respectively. 
 
 ![the two spectrometers](img/spectro.png)
 [Credit](#image-credits)
 
-The one we made above is a fourier transform filterbank. A filterbank is simply an array of band-pass filters, designed to split an input signal into multiple components. A spectrometer is referred to as a *analysis filterbank* where the output of each filter is squared and averaged.
+The one we made above is a Fourier transform filter bank. A filter bank is simply an array of band-pass filters, designed to split an input signal into multiple components . A spectrometer is referred to as a *analysis filterbank* where the output of each filter is squared and averaged.
 
 ## 5.6. The Window Field in the gnuradio FFT block
 
-The spectrometer we constructed effectively works as a array of band-pass FIR filters. If you recall FIR filters their design involves something called window-functions designed to optimise the filter response. The Discrete Fourier transform as it were uses the rectangular window function across each frequency channel. The response is non-ideal leading to spectral leakage i.e. the signal showing up in neighboring frequency channels. Below is a Demonstration of DFT leakage - a tone at 5.1MHz, sampled at 128MHz, and Fourier-transformed with 64 points, appears to varying levels in all the output frequency bins.
+The spectrometer we constructed effectively works as a array of band-pass FIR filters. If you recall FIR filters their design involves something called window-functions designed to optimize the filter response. The Discrete Fourier transform as it were uses the rectangular window function across each frequency channel. The response is non-ideal leading to spectral leakage i.e. the signal showing up in neighboring frequency channels. Below is a Demonstration of DFT leakage - a tone at 5.1MHz, sampled at 128MHz, and Fourier-transformed with 64 points, appears to varying levels in all the output frequency bins.
 
 ![specleak](img/specleak.png)
 [Credit](#image-credits)
@@ -136,7 +133,7 @@ This can be improveed by using better windowing functions to properly define the
 ![windows](img/windows.png)
 [Credit](#image-credits)
 
-Note the frequncy response, the main lobe width and the attenuation of the side lobes determine how well defined are the frequency channels. The figures below illustrate the difference. The second plot shows the window response in some frequency bins, the ones with the higher sidelobes as responses of boxcar windows and the the lower sidelobes are of the hann window.
+Note the frequncy response, the main lobe width and the attenuation of the side lobes determine how well defined are the frequency channels. The figures below illustrate the difference. The second plot shows the window response in some frequency bins, the ones with the higher side-lobes as responses of boxcar windows and the the lower side-lobes are of the hann window.
 
 ![fftvshan](img/fftvshann.png)
 [Credit](#image-credits)
@@ -148,7 +145,7 @@ In your spectrometer flowgraph, change the window field in the FFT block and obs
 
 ## 5.7. Spectral Leakage & Polyphase Filter Bank (PFB)
 
-Despite the appropraite windowing, spectral leakage persists, moreover there is something called a scalloping loss. Scalloping loss is the loss in energy between frequency bin centres due to the non-flat nature of the single-bin frequency response. 
+Despite the appropriate windowing, spectral leakage persists, moreover there is something called a scalloping loss. Scalloping loss is the loss in energy between frequency bin centers due to the non-flat nature of the single-bin frequency response. 
 
 The polyphase filter bank (PFB) technique is a mechanism for alleviating the aforementioned drawbacks of the straightforward DFT. The PFB produces a flat response across the channel and provides excellent suppression of out-of-band signals, as shown below.
 
@@ -182,7 +179,7 @@ The ployphase filter can be realized by implementing following flowgraph:
 
 ![pfb](img/grcpfb1.png)
 
-The ``constant muliplier`` blocks are sections of the filter window as seen the diagram detailing the process above. The filter window is designed by using import block to import ``numpy`` and assigning thhree constant variables as:
+The ``constant muliplier`` blocks are sections of the filter window as seen the diagram detailing the process above. The filter window is designed by using import block to import ``numpy`` and assigning three constant variables as:
 
 - sinc_sample_locations
 ```python
@@ -196,7 +193,7 @@ np.sinc(sinc_sample_locations/np.pi)
 ```python
 sinc*np.hamming(4*vec_length)
 ```
-Now ``custom_window`` are all the window co-efficients/taps you need to do the multiplications, your vector length samples at a time. The constants in the constant  mulitplier blocks from the top to bottom are as follows:
+Now ``custom_window`` are all the window co-efficients/taps you need to do the multiplications, your vector length samples at a time. The constants in the constant  multiplier blocks from the top to bottom are as follows:
 ```python
 custom_window[-vec_length:]
 custom_window[2*vec_length:3*vec_length]
@@ -207,8 +204,6 @@ custom_window[0:vec_length]
 ## 5.9. Saving Data
 
 Save the spectrometer data for science! (Use File Sink)
-
-- You 
 
 **NOTE: Our Low Noise Amplifier (LNA) needs to be powered to actually work. We can configure the airspy dongle by settign bias=1 in the device arguments field of the osmocom source block such as:**
 

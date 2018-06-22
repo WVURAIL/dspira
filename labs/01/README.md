@@ -17,12 +17,17 @@ This page shall guide you through our primary tool -- GNU Radio. GNU Radio is ve
         - [1.3.1. Arbitrary Function generation](#131-arbitrary-function-generation)
     - [1.4. Note on the Frequency Display](#14-note-on-the-frequency-display)
     - [1.5. Exercises](#15-exercises)
+    - [1.6. Random Discrete Signals](#16-random-discrete-signals)
+    - [1.7. Sampling](#17-sampling)
+    - [1.8. Histograms](#18-histograms)
+    - [1.9. GnuRadio Companion Example.](#19-gnuradio-companion-example)
+    - [1.10. Make your own gaussian noise block](#110-make-your-own-gaussian-noise-block)
 
 <!-- /TOC -->
 
 ## 1.1. Installation Guide
 
-It is relative very easy to install *if you are installing on Linux*. We would recommend working on linux however installing on a macOS or windows system is, albiet very hard, possible. First, we install dependences and change directory to the appropriate one.
+It is relative very easy to install *if you are installing on Linux*. We would recommend working on linux however installing on a macOS or windows system is, albeit very hard, possible. First, we install dependences.
 
 Open terminal, ( open by right clicking on desktop and choosing open terminal from menu)
 
@@ -35,54 +40,18 @@ Open terminal, ( open by right clicking on desktop and choosing open terminal fr
 	sudo apt-get install python-apt
 	sudo pip install pyopengl pyopengl_accelerate
 ```
-In your home directory make a directory where we would install gnuradio:
+
 
 ```bash
-	mkdir ~/gnuradio
-	cd ~/gnuradio
-```
-
-To always have the most recent version of the sofware, we use *PyBOMBS*. It is a package manager with all the latest version version of the sdr software. We install the package manager and then we add the 'recipes' to the package manager:
-
-```bash
-	sudo pip install --upgrade pip
-	sudo pip install pybombs
-	pybombs recipes add gr-recipes git+https://github.com/gnuradio/gr-recipes.git
-	pybombs recipes add gr-etcetera git+https://github.com/gnuradio/gr-etcetera.git 
-```
-
-Install ``gnuradio`` and the hardware drivers for gnuradio, ``gr-osmosdr``. We will also install an app called ``gqrx``:
-
-```bash
-	pybombs prefix init ~/gnuradio -a myprefix #kind of tells the package manager the directory where to arrange all installs within
-	pybombs install gnuradio gr-osmosdr
+	pybombs install gnuradio gr-osmosdr limesuite
 	pybombs install gqrx
 ```
 Add the environmental variables script to ``.bashrc``
 
-```bash
-	echo "source ~/gnuradio/setup_env.sh" >> ~/.bashrc
-```
-
-The hardware we use requires us to tell the computer to allow us to use our device:
-
-```bash
-cd ~/gnuradio/src/airspy/
-cd build
-cmake ../ -DINSTALL_UDEV_RULES=ON
-make
-sudo make install
-sudo ldconfig
-cp ../airspy-tools/52-airspy.rules /etc/udev/rules.d/
-sudo ldconfig
-```
-
-Restart Computer to make all the changes work.
+Restart Computer once everything is installed for good measure.
 
 Plug in the box into the USB port. Open terminal and type ``airspy_info``. It should display some hardware info about the device. 
 
-----
-*For other hardware devices, the files in the ``~/gnuradio/src/`` directory are drivers for them. Move into them and follow similar procedure as mentioned above. Look for the correct for each ``.rules`` files in their directory and copy it into ``/etc/udev/rules.d/``*
 ----
 
 <!--
@@ -136,7 +105,7 @@ We notice that the “Signal Source” block has two ports, a grey one on the le
 
 ![datatypes](img/06.png)
 
-GNU Radio uses a stream processing model to process large amounts of data in real-time as opposed to a array processing environment (like Matlab). In practice this means that each signal processing block has an independent scheduler running in its own execution thread and each block runs as fast as the CPU, dataflow, and buffer space allows. If there is a hardware source and/or sink that imposes a fixed rate (e.g., 44100 samples/sec for an audio signal, or 10 Msamples/sec for an SDR interface), then that determines the overall processing rate. But if both the source and the sink are implemented purely in software (like a signal generator feeding a time or frequency display), then some form of timing constraint must be imposed in software to limit the processing speed to a specified sampling rate. A special “Throttle” block that we will frequently encounter is used for this purpose. The figure below shows a “Throttle” block connected to the output of the “Signal Source” that we placed earlier. Click on one port follow it by clicking on the other port: this wires the output port of one block to the input port of another block. For the flowgrapg to work both ports must use data of the same type (i.e., both ports must be of the same color). If they are of different types, then the arrow of the connection will be red instead of black. It is worth noticing that the word “Throttle” appears in red on the Throttle block, indicating that there is something *wrong* with this block in the flowgraph. Things that can go wrong are unspecified or undefined parameters or, as is the case above, connections to/from some ports are missing. If you see any red arrows or red writing in a flowgraph you will not be able to run the flowgraph until the offending condition has been fixed.
+GNU Radio uses a stream processing model to process large amounts of data in real-time as opposed to a array processing environment (like Matlab). In practice this means that each signal processing block has an independent scheduler running in its own execution thread and each block runs as fast as the CPU, dataflow, and buffer space allows. If there is a hardware source and/or sink that imposes a fixed rate (e.g., 44100 samples/sec for an audio signal, or 10 Msamples/sec for an SDR interface), then that determines the overall processing rate. But if both the source and the sink are implemented purely in software (like a signal generator feeding a time or frequency display), then some form of timing constraint must be imposed in software to limit the processing speed to a specified sampling rate. A special “Throttle” block that we will frequently encounter is used for this purpose. The figure below shows a “Throttle” block connected to the output of the “Signal Source” that we placed earlier. Click on one port follow it by clicking on the other port: this wires the output port of one block to the input port of another block. For the flowgraph to work both ports must use data of the same type (i.e., both ports must be of the same color). If they are of different types, then the arrow of the connection will be red instead of black. It is worth noticing that the word “Throttle” appears in red on the Throttle block, indicating that there is something *wrong* with this block in the flowgraph. Things that can go wrong are unspecified or undefined parameters or, as is the case above, connections to/from some ports are missing. If you see any red arrows or red writing in a flowgraph you will not be able to run the flowgraph until the offending condition has been fixed.
 
 ![throttle blocking](img/07.png)
 
@@ -149,7 +118,7 @@ As a first experiment we want to generate a real-valued cosine signal with frequ
 
 ![Example 1 Flowgraph](img/08.png)
 
-Now you can run the flowgraph by clicking on the green triangle above the canvas or by clicking “Run” on the menu bar. You can choose between the “Frequency Display” and the “Time Domain Display” tabs as shown below. Use the cursor to zoom in on a rectangluar region, increase the FFT size to 4096 or 8192, choose different types of windows, e.g. “rectangular” or “Kaiser” and observe the effects, especially on the Frequency Display. Note that the Frequency Display shows power spectral density (PSD) which is essentially proportional to the magnitude squared of the Fourier transform.
+Now you can run the flowgraph by clicking on the green triangle above the canvas or by clicking “Run” on the menu bar. You can choose between the “Frequency Display” and the “Time Domain Display” tabs as shown below. Use the cursor to zoom in on a rectangular region, increase the FFT size to 4096 or 8192, choose different types of windows, e.g. “rectangular” or “Kaiser” and observe the effects, especially on the Frequency Display. Note that the Frequency Display shows power spectral density (PSD) which is essentially proportional to the magnitude squared of the Fourier transform.
 
 ![Example 1 Output Frequency](img/09.png) ![Example 1 Output Frequency](img/10.png)
 
@@ -165,7 +134,7 @@ To add a sound output, select “Audio” and then double-click on “Audio Sink
 
 ![Audio sink](img/13.png)
 
-Save the flowgraph, e.g., as ``ex01_2.grc``. If you run the flowgraph now you will get a slider for changing the “Signal Source” frequency from ``-2000 to +2000 Hz``, you will hear the coresponding sound, and you can choose to display the “Frequency” or the “Time Domain” graph.
+Save the flowgraph, e.g., as ``ex01_2.grc``. If you run the flowgraph now you will get a slider for changing the “Signal Source” frequency from ``-2000 to +2000 Hz``, you will hear the corresponding sound, and you can choose to display the “Frequency” or the “Time Domain” graph.
 
 ![GUI out ex01_2](img/14.png)
 
@@ -179,7 +148,7 @@ In this subsection we shall expand upon the previous exercise and learn how to p
 
 ![GUI start ex01_3](img/15.png)
 
-We would like to build a waveform generator that can produce real-valued “Cosine”, “Rectangular”, and “Triangular” waveforms with variable frequency and variable dc offset.  To this end we need “QT GUI Range” blocks and a “QT GUI Chooser (from “GUI Widgets” and “QT”). Connect a “QT GUI Time Sink” and a “QT GUI Frequency Sink” (from “Instrumen- tation” and “QT”) to the output of the “Throttle” Block. Change the input type of the Sink blocks from “Complex” to “Float”. The Flowgraph should look like this:
+We would like to build a waveform generator that can produce real-valued “Cosine”, “Rectangular”, and “Triangular” waveforms with variable frequency and variable dc offset.  To this end we need “QT GUI Range” blocks and a “QT GUI Chooser (from “GUI Widgets” and “QT”). Connect a “QT GUI Time Sink” and a “QT GUI Frequency Sink” (from “Instrumentation” and “QT”) to the output of the “Throttle” Block. Change the input type of the Sink blocks from “Complex” to “Float”. The flowgraph should look like this:
 
 ![GUI start ex01_3](img/16.png)
 
@@ -241,9 +210,9 @@ GNU Radio is written in python and the final code that does the magic is all in 
 
 ### 1.3.1. Arbitrary Function generation 
 
-The fact that the end product and much of the guts of GNU Radio is in Python implied we can exploit the standard library of python or our own scripts to test out severel things. We shall look into making any arbitrary wave form. This is useful for testing systems designed in gnuradio
+The fact that the end product and much of the guts of GNU Radio is in Python implied we can exploit the standard library of python or our own scripts to test out several things. We shall look into making any arbitrary wave form. This is useful for testing systems designed in gnuradio
 
-To import a library from python we use the "import" block and we shall employ the "vector source" block to input our arbitrary function. We shall contruct a flow graph similar to ``ex01_3.grc`` except we remove the "signal source" and replace with "vector source", add an "import block" and we shall not worry about the GUI elements for this one. We should have a flowgraph that looks like this:
+To import a library from python we use the "import" block and we shall employ the "vector source" block to input our arbitrary function. We shall construct a flow graph similar to ``ex01_3.grc`` except we remove the "signal source" and replace with "vector source", add an "import block" and we shall not worry about the GUI elements for this one. We should have a flowgraph that looks like this:
 
 ![vector source](img/22.png)
 
@@ -261,7 +230,7 @@ The function shall be generated shall be generated using the following python co
 
 Before we place our blocks, we need to add consider a "Tag Object" block [^stream]. It basically helps us synchronize the sinks when the generated *stream tag* associated with our vector source is stopped by the sink. This will alow us to observe the generated pulse. Vector Source has the “Repeat” field which is set to “Yes” so that the pulse of width tau is repeated periodically. Note the "Tag" field. The properties of the blocks are set as below:
 
-[^stream]: For a technical explaionation of the block [click here](https://gnuradio.org/doc/doxygen/page_stream_tags.html)
+[^stream]: For a technical explaination of the block [click here](https://gnuradio.org/doc/doxygen/page_stream_tags.html)
 
 ![tau](img/24.png)
 ![tag](img/25.png)
@@ -294,7 +263,50 @@ This particular display may not seem very intuitive for the those seeing it for 
  	
 > Use mulitple signal generators from section [1.2.3](#123-a-general-waveform-generator) to add and subtract and multiply to form new waveforms.  We'll add the examples here!
 
-[↑ Go to the Top of the Page](#) ......[Next Lab](../01_1)
+
+## 1.6. Random Discrete Signals
+
+Random signals are signals where the next value can be though of as chips drawn from a hat with many many values, where the exact number of chips with those values relative to each other can be given by an equation, the 'distribution'.  One of the simplest is a uniform random signal, where each value has an equal number of chips.  
+
+In GnuRadio we can create these signals with a 'Random Uniform Source' block.<!-- TOC -->
+
+A very common distribution in nature is the 'gaussian' distribution.  
+
+## 1.7. Sampling
+
+Sampling can always be though of as the act of pulling the chips out of the hat, and rounding the value on the chip to the nearest integer. When a real signal is digitized by an analog to digital converter (ADC), every clock cycle, the level of the signal is measured and recorded to the nearest value.
+
+## 1.8. Histograms
+
+A histogram is a plot of the number of occurrences of the signal that occur between a set of levels chosen.  Plotting the histogram is a way of trying to measure the distribution of an incoming random signal.  
+
+## 1.9. GnuRadio Companion Example.  
+
+Create the shown GnuRadio flowgraph.  
+![sampling](img/sampling.png) 
+
+Use a random source between -10 and 10.  The random source only creates discrete integer values, so you also need and Int to Float block with a 'scale' which will multiply the incoming signal by the scale value.  
+
+Run the flowgraph, with the scale factor at 1.  What does the time plot look like?  What does the histogram look like?  Now play with the scale factor.  Can the histogram have large gaps? Can you make the histogram look continuous?  What intuition do you gain from this about sampling a 'random' signal?  
+
+Now also try different distribution sources.  Use the "Noise Source" block and set it to a gaussian distribution.  What does the time stream look like?  What about the histogram?
+
+Now again use a cosine input signal as you've used in a previous exercise.  What does the time series look like?  The histogram?  A cosine signal is not very random.  What if instead, each measured point in time of the cosine was completely randomized (could also think of using a uniform random signal put through a cosine function)?  Would the histogram look any different?  This would also be a random signal, and has the functional form $$\frac{A}{\sqrt{1-y^2}}$$, which should agree with your histogram.  
+
+## 1.10. Make your own gaussian noise block
+
+You are now ready to try to make your own gaussian noise block out of other blocks.  
+
+Create a new flowgraph in grc.
+ We'll start by using a just a QLFSR block.  This is a 'linear feedback shift register'  block, which is a very simple way to create 'pseudorandom' noise.  Look [here](https://en.wikipedia.org/wiki/Linear-feedback_shift_register) for more details.  Set the type to float, the degree (how many elements in the shift register) to 32, repeat yes.  Change the seed to any number.  Leave the 'mask' at zero to get an 'optimal' source that wont repeat.  Try using other numbers to compare, 1075838979 is a nice choice for random looking data.  Use a histogram sink and a gui sink to look at the output.  Even though the output is only -1 or 1, without knowing the initial seed and how many cycles have gone by, the answer is random.
+
+ Add a number of these sources together:
+ ![gaussian](img/lfsr_noise.png)
+
+ What does the output look like now?  This is one of the simple ways of going from a 'flat' random number to a gaussian white noise.
+
+
+[↑ Go to the Top of the Page](#) ......[Next Lab](../02)
 
 ----
 
