@@ -38,15 +38,14 @@ Open terminal, ( open by right clicking on desktop and choosing open terminal fr
 	sudo apt-get install python-dev
 	sudo apt-get install python-pip
 	sudo apt-get install python-apt
-	sudo pip install pyopengl pyopengl_accelerate
+	sudo apt-get install pyopengl pyopengl_accelerate
 ```
 
 
 ```bash
-	pybombs install gnuradio gr-osmosdr limesuite
-	pybombs install gqrx
+	sudo apt-get install install gnuradio gr-osmosdr limesuite
+	sudo apt-get install install gqrx
 ```
-Add the environmental variables script to ``.bashrc``
 
 Restart Computer once everything is installed for good measure.
 
@@ -224,8 +223,8 @@ We shall make a rectangular pulse with variable width ``tau`` going from 0 to 10
 
 The function shall be generated shall be generated using the following python code:
 
-```
-	np.hstack((np.ones(int(tau*samp_rate)), np.zeros(int((0.1-tau)*samp_rate))))
+```python
+np.hstack((np.ones(int(tau*samp_rate)), np.zeros(int((0.1-tau)*samp_rate))))
 ```
 
 Before we place our blocks, we need to add consider a "Tag Object" block [^stream]. It basically helps us synchronize the sinks when the generated *stream tag* associated with our vector source is stopped by the sink. This will alow us to observe the generated pulse. Vector Source has the “Repeat” field which is set to “Yes” so that the pulse of width tau is repeated periodically. Note the "Tag" field. The properties of the blocks are set as below:
