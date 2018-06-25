@@ -39,13 +39,14 @@ Open terminal, ( open by right clicking on desktop and choosing open terminal fr
 	sudo apt-get install python-dev
 	sudo apt-get install python-pip
 	sudo apt-get install python-apt
-	sudo apt-get install pyopengl pyopengl_accelerate
+	sudo pip install pyopengl pyopengl_accelerate
 ```
 
 
 ```bash
-	sudo apt-get install install gnuradio gr-osmosdr limesuite
-	sudo apt-get install install gqrx
+	sudo apt-get install gnuradio gr-osmosdr
+	sudo apt-get install limesuite airspy
+	sudo apt-get install gqrx-sdr
 ```
 
 Restart Computer once everything is installed for good measure.
