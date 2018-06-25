@@ -6,8 +6,7 @@ In [Lab 1](../01/) we learned how to work around GNU Radio Companion (GRC) and s
 
 - [2. Software Defined Radio - Hardware](#2-software-defined-radio---hardware)
     - [2.1. Introduction](#21-introduction)
-    - [2.2. GQRX - It's cool](#22-gqrx---its-cool)
-        - [2.2.1. Frequency Correction](#221-frequency-correction)
+        - [2.1.1. Frequency Correction of the SDR Dongle](#211-frequency-correction-of-the-sdr-dongle)
     - [2.3. GNURadio FM](#23-gnuradio-fm)
     - [2.4. Fun SDR/GNU Radio things](#24-fun-sdrgnu-radio-things)
 
@@ -29,42 +28,7 @@ Before we code on our own we shall a useful application called GQRX
 
 [↑ Go to the Top of the Page](#)
 
-## 2.2. GQRX - It's cool
-
-[GQRX](http://gqrx.dk) is an application written using gnuradio. It acquired data from the dongle and has a set of preset options to manipulate said signals. It can even store raw data for custom decoding.
-
-First, we make sure our dongle is plugged into the USB see if it is detected by the computer by typing  ``airspy_info``. If we installed all software correctly it should return information about the dongle and no errors. If everything is in order the type in terminal:
-
-``
-gqrx
-``
-
-It will open a window that looks like this. 
-
-![gqrx](img/2.png)
-
- If you are using for the first time the hardware setting window/(IO setting) should open automatically and also automatically detect the dongle.  If not chose ``AirSpy AIRSPY`` from the drop down. 
-Otherwise you can open it by clicking on the "circuit board" icon next to the play triangle. The I/O device settings should look like this:
-
-![io](img/3.png)
-
-Once it is all in order click play. The window should show the spectrum as such:
-
-![spect out](img/4.png)
-
-Hit play. Change the frequency to 100 Mhz. Notice the bright bands on the waterfall and the peaks, these are local FM stations
-
-![io](img/5.png)
-
-Since the sample rate is very high (a feature of this particular hardware). We click on the "circuit board" button again and change input rate 2500000 (from the drop down). In the receiver options the right change ``Mode`` to ``WFM`` ( wideband FM ) from the drop down and et voila old timey over-the-air radio on your space-age computer.
-
-![io](img/6.png)
-
-We can use this application to receive even decode to all kinds of signals from 24 – 1800 Mhz. Check out [Section 1.4](#14-fun-sdrgnu-radio-things)
-
-[↑ Go to the Top of the Page](#)
-
-### 2.2.1. Frequency Correction
+### 2.1.1. Frequency Correction of the SDR Dongle
 
 The hardware is well made, but a precision clock is quite expensive. The frequency the "tuner" tunes to may be slightly off from the actual frequency it is tuning to. We can correct for that in the software.  For high hend SDR dongles this correction is virtually non existent but some low-end dongles have higher deviations!
 

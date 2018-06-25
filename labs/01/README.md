@@ -8,20 +8,21 @@ This page shall guide you through our primary tool -- GNU Radio. GNU Radio is ve
 
 - [1. Introduction to GNU Radio and Signals](#1-introduction-to-gnu-radio-and-signals)
     - [1.1. Installation Guide](#11-installation-guide)
-        - [1.1.1. Getting Started with GNU Radio](#111-getting-started-with-gnu-radio)
-    - [1.2. Let's get Familiar](#12-lets-get-familiar)
-        - [1.2.1. A Cosine Waveform generator](#121-a-cosine-waveform-generator)
-        - [1.2.2. A Cosine Waveform Generator with Variable Frequency and Sound](#122-a-cosine-waveform-generator-with-variable-frequency-and-sound)
-        - [1.2.3. A General Waveform Generator](#123-a-general-waveform-generator)
-    - [1.3. GNU Radio and Python](#13-gnu-radio-and-python)
-        - [1.3.1. Arbitrary Function generation](#131-arbitrary-function-generation)
-    - [1.4. Note on the Frequency Display](#14-note-on-the-frequency-display)
-    - [1.5. Exercises](#15-exercises)
-    - [1.6. Random Discrete Signals](#16-random-discrete-signals)
-    - [1.7. Sampling](#17-sampling)
-    - [1.8. Histograms](#18-histograms)
-    - [1.9. GnuRadio Companion Example.](#19-gnuradio-companion-example)
-    - [1.10. Make your own gaussian noise block](#110-make-your-own-gaussian-noise-block)
+    - [1.2. GQRX - It's cool](#12-gqrx---its-cool)
+        - [1.2.1. Getting Started with GNU Radio](#121-getting-started-with-gnu-radio)
+    - [1.3. Let's get Familiar](#13-lets-get-familiar)
+        - [1.3.1. A Cosine Waveform generator](#131-a-cosine-waveform-generator)
+        - [1.3.2. A Cosine Waveform Generator with Variable Frequency and Sound](#132-a-cosine-waveform-generator-with-variable-frequency-and-sound)
+        - [1.3.3. A General Waveform Generator](#133-a-general-waveform-generator)
+    - [1.4. GNU Radio and Python](#14-gnu-radio-and-python)
+        - [1.4.1. Arbitrary Function generation](#141-arbitrary-function-generation)
+    - [1.5. Note on the Frequency Display](#15-note-on-the-frequency-display)
+    - [1.6. Exercises](#16-exercises)
+    - [1.7. Random Discrete Signals](#17-random-discrete-signals)
+    - [1.8. Sampling](#18-sampling)
+    - [1.9. Histograms](#19-histograms)
+    - [1.10. GnuRadio Companion Example.](#110-gnuradio-companion-example)
+    - [1.11. Make your own gaussian noise block](#111-make-your-own-gaussian-noise-block)
 
 <!-- /TOC -->
 
@@ -65,9 +66,45 @@ Sanity check as to whether the hardware is working (tunes to an local FM radio s
 
 [↑ Go to the Top of the Page](#)
 
-### 1.1.1. Getting Started with GNU Radio
+## 1.2. GQRX - It's cool
 
-We shall start right away by typing ``gnuradio-companion`` in the terminal:
+[GQRX](http://gqrx.dk) is an application written using gnuradio. It acquired data from the dongle and has a set of preset options to manipulate said signals. It can even store raw data for custom decoding.
+
+First, we make sure our dongle is plugged into the USB see if it is detected by the computer by typing  ``airspy_info``. If we installed all software correctly it should return information about the dongle and no errors. If everything is in order the type in terminal:
+
+``
+gqrx
+``
+
+It will open a window that looks like this. 
+
+![gqrx](img/gqrx2.png)
+
+ If you are using for the first time the hardware setting window/(IO setting) should open automatically and also automatically detect the dongle.  If not chose ``AirSpy AIRSPY`` from the drop down. 
+Otherwise you can open it by clicking on the "circuit board" icon next to the play triangle. The I/O device settings should look like this:
+
+![io](img/gqrx3.png)
+
+Once it is all in order click play. The window should show the spectrum as such:
+
+![spect out](img/gqrx4.png)
+
+Hit play. Change the frequency to 100 Mhz. Notice the bright bands on the waterfall and the peaks, these are local FM stations
+
+![io](img/gqrx5.png)
+
+Since the sample rate is very high (a feature of this particular hardware). We click on the "circuit board" button again and change input rate 2500000 (from the drop down). In the receiver options the right change ``Mode`` to ``WFM`` ( wideband FM ) from the drop down and et voila old timey over-the-air radio on your space-age computer.
+
+![io](img/gqrx6.png)
+
+We can use this application to receive even decode to all kinds of signals from 24 – 1800 Mhz. Check out [Section 1.4](../02/#14-fun-sdrgnu-radio-things)
+
+[↑ Go to the Top of the Page](#)
+
+
+### 1.2.1. Getting Started with GNU Radio
+
+As mentioned earlier, *gqrx* has GNUradio as its engine. We can start developing using this tool right away by typing ``gnuradio-companion`` in the terminal:
 
 ![start gnuradio-companion](img/01.png)
 
@@ -83,7 +120,7 @@ Every GRC window has these two very basic blocks. The white space is called the 
 
 [↑ Go to the Top of the Page](#)
 
-## 1.2. Let's get Familiar
+## 1.3. Let's get Familiar
 
 On the right side of the window is a list of the block categories that are available. Click on a triangle next to a category to see what blocks are available in that category. We will look for the waveform generator category to look for the signal source block. Alternatively, we can click on the magnifying/looking glass to the top right and search for the block we need. We will add the ``signal source`` block to the canvas by double clicking on signal source
 
@@ -111,7 +148,7 @@ GNU Radio uses a stream processing model to process large amounts of data in rea
 ----
 [↑ Go to the Top of the Page](#)
 
-### 1.2.1. A Cosine Waveform generator 
+### 1.3.1. A Cosine Waveform generator 
 
 As a first experiment we want to generate a real-valued cosine signal with frequency 1000 Hz (default for the “Signal Source”) and display it in the time and frequency domains. We start from a flowgraph which consists of a “Signal Source” connected to a “Throttle”. To make the output of the Signal Source real-valued, double-click on the block and in the Properties window that shows up click on “Complex” under “Output Type” and select “Float” as shown below. Then choose “QT” under “Instrumentation” (or just simply search for “QT GUI Sink”) and double-click on “QT GUI Sink”. This block will allow you to see the waveform at the input in the frequency as well as in the time domain. Change the data “Type” from “Complex” to “Float” and connect the input to the output of the “Throttle” block. Save the flowgraph, e.g., as ex01_1.grc
 
@@ -121,7 +158,7 @@ Now you can run the flowgraph by clicking on the green triangle above the canvas
 
 ![Example 1 Output Frequency](img/09.png) ![Example 1 Output Frequency](img/10.png)
 
-### 1.2.2. A Cosine Waveform Generator with Variable Frequency and Sound
+### 1.3.2. A Cosine Waveform Generator with Variable Frequency and Sound
 
 We can start from the ``ex01_1.grc`` flowgraph from our first exercise. Under “GUI Widgets” and “QT” select “QT GUI Range”. Double- click on the block so that you get to see its Properties. Change the “ID” from ``variable_qtgui_range_0`` to ``f0``. For the “Default Value” enter ``1000``. For the “Start” and the “Stop” values enter ``-2000`` and ``2000``, respectively. Next we double-click on the “Signal Source” block and change the “Frequency” entry from ``1000`` to ``f0``. The respective windows look like below:
 
@@ -141,7 +178,7 @@ Difference between \\(+ve\ \&\ -ve\\) frequencies?
 
 [↑ Go to the Top of the Page](#)
 
-### 1.2.3. A General Waveform Generator
+### 1.3.3. A General Waveform Generator
 
 In this subsection we shall expand upon the previous exercise and learn how to play around with various useful GNU Radio Companion features.  Let us begin by changing ``ex01_2.grc`` flowgraph by removing the “Audio Sink” and the “QT GUI Sink”. Save this new flowgraph as ``ex01_3.grc``
 
@@ -202,12 +239,12 @@ This give the following Output:
 
 [↑ Go to the Top of the Page](#)
 
-## 1.3. GNU Radio and Python
+## 1.4. GNU Radio and Python
 
 GNU Radio is written in python and the final code that does the magic is all in Python. Python is very powerful programing language known for its readability and versatility. The flow graphs created in GNU radio companion are converted into a Python script. All the predefined blocks are written in Python and/or C. One can make their own GNU Radio blocks by coding in Python or C. If you want to know how to do this in depth you can click on this guided tutorial [here](https://wiki.gnuradio.org/index.php/Guided_Tutorial_GNU_Radio_in_Python)
 
 
-### 1.3.1. Arbitrary Function generation 
+### 1.4.1. Arbitrary Function generation 
 
 The fact that the end product and much of the guts of GNU Radio is in Python implied we can exploit the standard library of python or our own scripts to test out several things. We shall look into making any arbitrary wave form. This is useful for testing systems designed in gnuradio
 
@@ -247,12 +284,12 @@ We should then have the flowgraph and output that looks like this:
 
 [↑ Go to the Top of the Page](#)
 
-## 1.4. Note on the Frequency Display
+## 1.5. Note on the Frequency Display
 
 This particular display may not seem very intuitive for the those seeing it for the first time. It basically shows, as the name suggests, the 'frequency' components of the signal. This means the peaks in the graph represents the frequencies of the periodic signals that make up that particular signal. This is the basis of a very important concept called Fourier Analysis. Detailed discussions shall be done in class and systematically demonstrated in [Lab 3](../03) and [Lab 5](../05)
 
 
-## 1.5. Exercises
+## 1.6. Exercises
 
 1. *Delaying Signals:* Use the "delay" block after the signal source and the value of delay can be controlled by a "GUI Range" to make a slider to have the delay change values from 0 to 2000.  See how the the signal changes in a time sink. 
 
@@ -263,7 +300,7 @@ This particular display may not seem very intuitive for the those seeing it for 
 > Use mulitple signal generators from section [1.2.3](#123-a-general-waveform-generator) to add and subtract and multiply to form new waveforms.  We'll add the examples here!
 
 
-## 1.6. Random Discrete Signals
+## 1.7. Random Discrete Signals
 
 Random signals are signals where the next value can be though of as chips drawn from a hat with many many values, where the exact number of chips with those values relative to each other can be given by an equation, the 'distribution'.  One of the simplest is a uniform random signal, where each value has an equal number of chips.  
 
@@ -271,15 +308,15 @@ In GnuRadio we can create these signals with a 'Random Uniform Source' block.<!-
 
 A very common distribution in nature is the 'gaussian' distribution.  
 
-## 1.7. Sampling
+## 1.8. Sampling
 
 Sampling can always be though of as the act of pulling the chips out of the hat, and rounding the value on the chip to the nearest integer. When a real signal is digitized by an analog to digital converter (ADC), every clock cycle, the level of the signal is measured and recorded to the nearest value.
 
-## 1.8. Histograms
+## 1.9. Histograms
 
 A histogram is a plot of the number of occurrences of the signal that occur between a set of levels chosen.  Plotting the histogram is a way of trying to measure the distribution of an incoming random signal.  
 
-## 1.9. GnuRadio Companion Example.  
+## 1.10. GnuRadio Companion Example.  
 
 Create the shown GnuRadio flowgraph.  
 ![sampling](img/sampling.png) 
@@ -292,7 +329,7 @@ Now also try different distribution sources.  Use the "Noise Source" block and s
 
 Now again use a cosine input signal as you've used in a previous exercise.  What does the time series look like?  The histogram?  A cosine signal is not very random.  What if instead, each measured point in time of the cosine was completely randomized (could also think of using a uniform random signal put through a cosine function)?  Would the histogram look any different?  This would also be a random signal, and has the functional form $$\frac{A}{\sqrt{1-y^2}}$$, which should agree with your histogram.  
 
-## 1.10. Make your own gaussian noise block
+## 1.11. Make your own gaussian noise block
 
 You are now ready to try to make your own gaussian noise block out of other blocks.  
 
