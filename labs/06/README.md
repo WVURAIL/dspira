@@ -15,7 +15,7 @@ That's been a lot of Digital Signal Processing so let us just go ahead and build
 
 We are building a special kind of radio telescope which uses a Horn Antenna. 
 
-[Follow these intructions for Horn Assembly](https://github.com/WVURAIL/dspira/blob/master/labs/06/DSPIRA_Horn_Assembly.pdf)
+[Follow these instructions for Horn Assembly](https://github.com/WVURAIL/dspira/blob/master/labs/06/DSPIRA_Horn_Assembly.pdf)
 
 ## 6.2  21cm Low Noise Amplifier
 
