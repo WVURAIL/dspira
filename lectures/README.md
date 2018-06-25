@@ -2,6 +2,8 @@
 
 | Day | DSP | [Astronomy](http://wvurail.org/dspira/lectures/astronomy/) | Labs |
 |-----|-----|----------|------|
+| June 25 ||||
+<!--
 | June 26 |Signals| [Scientific Notation, why, what, when](https://github.com/WVURAIL/dspira/blob/master/lectures/astronomy/LDA_Lectures/RET_DSP_Intro.pdf) | Lab 1 |
 | June 27 |Linear Systems, Convolution| [Motion](https://github.com/WVURAIL/dspira/blob/master/lectures/astronomy/LDA_Lectures/RET_DSP_MotionOfSky1.pdf) | Lab 1, 1.1|
 | June 28 |convolution with delta function, Fourier Series| Motion, co-ordinate systems |lab 2|
@@ -21,6 +23,8 @@
 | July 21 | Wide Sense Stationary/ Power Spectral Density / Parsevals | Spectrum Data Interpretation | DSP debugging/Scope packing |
 
 ------
+
+-->
 
 ## Instructors 
 
@@ -42,3 +46,6 @@ Lab:
 Dr. Kevin Bandura
 [Department Webpage](http://www.statler.wvu.edu/faculty-staff/faculty/kevin-bandura)
 [Personal Webpage](http://community.wvu.edu/%7Ekmbandura/)
+
+Pranav Sanghavi
+mail: pranav [dot] sanghavi [at] mail.wvu.edu
