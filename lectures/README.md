@@ -21,29 +21,26 @@
 | July 19 | Free Class | Galaxy Rotation | Lab 5 |
 | July 20 | Random Variables | Observation Planning | Telescope testing/ data acquisition |
 | July 21 | Wide Sense Stationary/ Power Spectral Density / Parsevals | Spectrum Data Interpretation | DSP debugging/Scope packing |
-
-------
-
 -->
 
 ## Instructors 
 
 DSP: 
 
-Dr. Natalia Schmid
+Dr. Natalia Schmid  ( DSPIRA 2017, 2018 )
 [Web](http://www.statler.wvu.edu/faculty-staff/faculty/natalia-schmid)
 
 Astronomy:  
 
-Dr. Loren Anderson 
+Dr. Loren Anderson  ( DSPIRA 2017, 2018 )
 [Department Webpage](http://physics.wvu.edu/faculty-and-staff/faculty/loren-anderson)
 [Personal Webpage](http://community.wvu.edu/~ldanderson/)
 
-Dr. D. J. Pisano
+Dr. D. J. Pisano  ( DSPIRA 2017 ) 
 [Department Webpage](http://physics.wvu.edu/faculty-and-staff/faculty/d-j-pisano)
 
 Lab:
-Dr. Kevin Bandura
+Dr. Kevin Bandura   ( DSPIRA 2017, 2018 )
 [Department Webpage](http://www.statler.wvu.edu/faculty-staff/faculty/kevin-bandura)
 [Personal Webpage](http://community.wvu.edu/%7Ekmbandura/)
 
