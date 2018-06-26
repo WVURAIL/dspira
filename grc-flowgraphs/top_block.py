@@ -3,7 +3,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Top Block
-# Generated: Tue Aug  8 10:18:17 2017
+# Generated: Tue Jun 26 16:33:02 2018
 ##################################################
 
 from distutils.version import StrictVersion
@@ -19,22 +19,21 @@ if __name__ == '__main__':
             print "Warning: failed to XInitThreads()"
 
 from PyQt5 import Qt
-from argparse import ArgumentParser
-from datetime import datetime
-from gnuradio import analog
+from PyQt5 import Qt, QtCore
 from gnuradio import blocks
 from gnuradio import eng_notation
-from gnuradio import fft
 from gnuradio import gr
 from gnuradio import qtgui
-from gnuradio.eng_arg import eng_float, intx
-from gnuradio.fft import window
+from gnuradio.eng_option import eng_option
 from gnuradio.filter import firdes
+from gnuradio.qtgui import Range, RangeWidget
+from optparse import OptionParser
 import numpy as np
-import radio_astro
+import pmt
 import sip
 import sys
 from gnuradio import qtgui
+
 
 class top_block(gr.top_block, Qt.QWidget):
 
@@ -61,86 +60,42 @@ class top_block(gr.top_block, Qt.QWidget):
 
         self.settings = Qt.QSettings("GNU Radio", "top_block")
 
-        try:
-            if StrictVersion(Qt.qVersion()) < StrictVersion("5.0.0"):
-                self.restoreGeometry(self.settings.value("geometry").toByteArray())
-            else:
-                self.restoreGeometry(self.settings.value("geometry"))
-        except:
-            pass
+        if StrictVersion(Qt.qVersion()) < StrictVersion("5.0.0"):
+            self.restoreGeometry(self.settings.value("geometry").toByteArray())
+        else:
+            self.restoreGeometry(self.settings.value("geometry", type=QtCore.QByteArray))
 
         ##################################################
         # Variables
         ##################################################
-        self.vec_length = vec_length = 65536
-        self.sinc_sample_locations = sinc_sample_locations = np.arange(-np.pi*4/2.0, np.pi*4/2.0, np.pi/vec_length)
-        self.timenow = timenow = datetime.now().strftime("%Y-%m-%d_%H.%M.%S")
-        self.sinc = sinc = np.sinc(sinc_sample_locations/np.pi)
-        self.prefix = prefix = "/Users/kbandura/grc_data/"
-        self.samp_rate = samp_rate = 2.4e6
-        self.recfile = recfile = prefix + timenow + ".h5"
-        self.integration_time = integration_time = 2
-        self.freq = freq = 1420.5e6
-        self.display_integration = display_integration = 0.5
-        self.custom_window = custom_window = sinc*np.hamming(4*vec_length)
+        self.tau = tau = 0.01
+        self.tag = tag = gr.tag_utils.python_to_tag((0, pmt.intern("t0"), pmt.intern("0"), pmt.intern("vecsrc")))
+        self.samp_rate = samp_rate = 32000
 
         ##################################################
         # Blocks
         ##################################################
-        self.radio_astro_hdf5_sink_1 = radio_astro.hdf5_sink(vec_length, recfile, 'testing', freq - samp_rate/2, samp_rate/vec_length, 'testing')
-        self.qtgui_vector_sink_f_0 = qtgui.vector_sink_f(
-            vec_length,
-            freq - samp_rate/2,
-            samp_rate/vec_length,
-            "Frequency",
-            "PSD",
-            "Spectrum",
-            1 # Number of inputs
-        )
-        self.qtgui_vector_sink_f_0.set_update_time(0.10)
-        self.qtgui_vector_sink_f_0.set_y_axis(0, 3000)
-        self.qtgui_vector_sink_f_0.enable_autoscale(True)
-        self.qtgui_vector_sink_f_0.enable_grid(True)
-        self.qtgui_vector_sink_f_0.set_x_axis_units("Hz")
-        self.qtgui_vector_sink_f_0.set_y_axis_units("arb")
-        self.qtgui_vector_sink_f_0.set_ref_level(0)
-
-        labels = ['', '', '', '', '',
-                  '', '', '', '', '']
-        widths = [1, 1, 1, 1, 1,
-                  1, 1, 1, 1, 1]
-        colors = ["blue", "red", "green", "black", "cyan",
-                  "magenta", "yellow", "dark red", "dark green", "dark blue"]
-        alphas = [1.0, 1.0, 1.0, 1.0, 1.0,
-                  1.0, 1.0, 1.0, 1.0, 1.0]
-        for i in xrange(1):
-            if len(labels[i]) == 0:
-                self.qtgui_vector_sink_f_0.set_line_label(i, "Data {0}".format(i))
-            else:
-                self.qtgui_vector_sink_f_0.set_line_label(i, labels[i])
-            self.qtgui_vector_sink_f_0.set_line_width(i, widths[i])
-            self.qtgui_vector_sink_f_0.set_line_color(i, colors[i])
-            self.qtgui_vector_sink_f_0.set_line_alpha(i, alphas[i])
-
-        self._qtgui_vector_sink_f_0_win = sip.wrapinstance(self.qtgui_vector_sink_f_0.pyqwidget(), Qt.QWidget)
-        self.top_layout.addWidget(self._qtgui_vector_sink_f_0_win)
+        self._tau_range = Range(0, 1, 0.01, 0.01, 200)
+        self._tau_win = RangeWidget(self._tau_range, self.set_tau, "tau", "counter_slider", float)
+        self.top_layout.addWidget(self._tau_win)
         self.qtgui_time_sink_x_0 = qtgui.time_sink_f(
-        	vec_length, #size
+        	samp_rate, #size
         	samp_rate, #samp_rate
         	"", #name
         	1 #number of inputs
         )
-        self.qtgui_time_sink_x_0.set_update_time(0.10)
+        self.qtgui_time_sink_x_0.set_update_time(0.1)
         self.qtgui_time_sink_x_0.set_y_axis(-1, 1)
 
         self.qtgui_time_sink_x_0.set_y_label('Amplitude', "")
 
         self.qtgui_time_sink_x_0.enable_tags(-1, True)
-        self.qtgui_time_sink_x_0.set_trigger_mode(qtgui.TRIG_MODE_FREE, qtgui.TRIG_SLOPE_POS, 0.0, 0, 0, "")
+        self.qtgui_time_sink_x_0.set_trigger_mode(qtgui.TRIG_MODE_TAG, qtgui.TRIG_SLOPE_POS, 0.0, 0.0, 0, "t0")
         self.qtgui_time_sink_x_0.enable_autoscale(True)
-        self.qtgui_time_sink_x_0.enable_grid(False)
-        self.qtgui_time_sink_x_0.enable_axis_labels(False)
-        self.qtgui_time_sink_x_0.enable_control_panel(True)
+        self.qtgui_time_sink_x_0.enable_grid(True)
+        self.qtgui_time_sink_x_0.enable_axis_labels(True)
+        self.qtgui_time_sink_x_0.enable_control_panel(False)
+        self.qtgui_time_sink_x_0.enable_stem_plot(False)
 
         if not True:
           self.qtgui_time_sink_x_0.disable_legend()
@@ -170,152 +125,92 @@ class top_block(gr.top_block, Qt.QWidget):
             self.qtgui_time_sink_x_0.set_line_alpha(i, alphas[i])
 
         self._qtgui_time_sink_x_0_win = sip.wrapinstance(self.qtgui_time_sink_x_0.pyqwidget(), Qt.QWidget)
-        self.top_layout.addWidget(self._qtgui_time_sink_x_0_win)
-        self.fft_vxx_0 = fft.fft_vcc(vec_length, True, (window.rectangular(vec_length)), True, 1)
-        self.blocks_vector_to_stream_0 = blocks.vector_to_stream(gr.sizeof_float*1, vec_length)
-        self.blocks_stream_to_vector_0_2 = blocks.stream_to_vector(gr.sizeof_gr_complex*1, vec_length)
-        self.blocks_stream_to_vector_0_1 = blocks.stream_to_vector(gr.sizeof_gr_complex*1, vec_length)
-        self.blocks_stream_to_vector_0_0 = blocks.stream_to_vector(gr.sizeof_gr_complex*1, vec_length)
-        self.blocks_stream_to_vector_0 = blocks.stream_to_vector(gr.sizeof_gr_complex*1, vec_length)
-        self.blocks_nlog10_ff_0_0 = blocks.nlog10_ff(10, vec_length, 0)
-        self.blocks_nlog10_ff_0 = blocks.nlog10_ff(10, 1, 0)
-        self.blocks_multiply_const_vxx_0_2 = blocks.multiply_const_vcc((custom_window[-vec_length:]))
-        self.blocks_multiply_const_vxx_0_1 = blocks.multiply_const_vcc((custom_window[2*vec_length:3*vec_length]))
-        self.blocks_multiply_const_vxx_0_0 = blocks.multiply_const_vcc((custom_window[vec_length:2*vec_length]))
-        self.blocks_multiply_const_vxx_0 = blocks.multiply_const_vcc((custom_window[0:vec_length]))
-        self.blocks_multiply_conjugate_cc_0 = blocks.multiply_conjugate_cc(vec_length)
-        self.blocks_integrate_xx_0_0 = blocks.integrate_ff(int(display_integration*samp_rate/vec_length), vec_length)
-        self.blocks_integrate_xx_0 = blocks.integrate_ff(int((integration_time)*samp_rate/vec_length)/int(display_integration*samp_rate/vec_length), vec_length)
-        self.blocks_delay_0_0_0_0 = blocks.delay(gr.sizeof_gr_complex*1, 3*vec_length)
-        self.blocks_delay_0_0_0 = blocks.delay(gr.sizeof_gr_complex*1, 2*vec_length)
-        self.blocks_delay_0_0 = blocks.delay(gr.sizeof_gr_complex*1, vec_length)
-        self.blocks_complex_to_real_0_0 = blocks.complex_to_real(vec_length)
-        self.blocks_add_xx_0 = blocks.add_vcc(vec_length)
-        self.analog_fastnoise_source_x_0 = analog.fastnoise_source_c(analog.GR_GAUSSIAN, 1, 0, 8192)
+        self.top_grid_layout.addWidget(self._qtgui_time_sink_x_0_win, 0, 0, 1, 1)
+        [self.top_grid_layout.setRowStretch(r,1) for r in range(0,1)]
+        [self.top_grid_layout.setColumnStretch(c,1) for c in range(0,1)]
+        self.qtgui_freq_sink_x_0 = qtgui.freq_sink_f(
+        	1024*6, #size
+        	firdes.WIN_BLACKMAN_hARRIS, #wintype
+        	0, #fc
+        	samp_rate, #bw
+        	"", #name
+        	1 #number of inputs
+        )
+        self.qtgui_freq_sink_x_0.set_update_time(0.1)
+        self.qtgui_freq_sink_x_0.set_y_axis(-140, 10)
+        self.qtgui_freq_sink_x_0.set_y_label('Relative Gain', 'dB')
+        self.qtgui_freq_sink_x_0.set_trigger_mode(qtgui.TRIG_MODE_TAG, 0.0, 0, "t0")
+        self.qtgui_freq_sink_x_0.enable_autoscale(True)
+        self.qtgui_freq_sink_x_0.enable_grid(True)
+        self.qtgui_freq_sink_x_0.set_fft_average(1.0)
+        self.qtgui_freq_sink_x_0.enable_axis_labels(True)
+        self.qtgui_freq_sink_x_0.enable_control_panel(False)
+
+        if not True:
+          self.qtgui_freq_sink_x_0.disable_legend()
+
+        if "float" == "float" or "float" == "msg_float":
+          self.qtgui_freq_sink_x_0.set_plot_pos_half(not True)
+
+        labels = ['', '', '', '', '',
+                  '', '', '', '', '']
+        widths = [1, 1, 1, 1, 1,
+                  1, 1, 1, 1, 1]
+        colors = ["blue", "red", "green", "black", "cyan",
+                  "magenta", "yellow", "dark red", "dark green", "dark blue"]
+        alphas = [1.0, 1.0, 1.0, 1.0, 1.0,
+                  1.0, 1.0, 1.0, 1.0, 1.0]
+        for i in xrange(1):
+            if len(labels[i]) == 0:
+                self.qtgui_freq_sink_x_0.set_line_label(i, "Data {0}".format(i))
+            else:
+                self.qtgui_freq_sink_x_0.set_line_label(i, labels[i])
+            self.qtgui_freq_sink_x_0.set_line_width(i, widths[i])
+            self.qtgui_freq_sink_x_0.set_line_color(i, colors[i])
+            self.qtgui_freq_sink_x_0.set_line_alpha(i, alphas[i])
+
+        self._qtgui_freq_sink_x_0_win = sip.wrapinstance(self.qtgui_freq_sink_x_0.pyqwidget(), Qt.QWidget)
+        self.top_grid_layout.addWidget(self._qtgui_freq_sink_x_0_win, 0, 1, 1, 1)
+        [self.top_grid_layout.setRowStretch(r,1) for r in range(0,1)]
+        [self.top_grid_layout.setColumnStretch(c,1) for c in range(1,2)]
+        self.blocks_vector_source_x_0 = blocks.vector_source_f(np.hstack((np.ones(int(tau*samp_rate)), np.zeros(int((1-tau)*samp_rate)))), True, 1, [tag])
+        self.blocks_throttle_0 = blocks.throttle(gr.sizeof_float*1, samp_rate,True)
 
         ##################################################
         # Connections
         ##################################################
-        self.connect((self.analog_fastnoise_source_x_0, 0), (self.blocks_delay_0_0, 0))
-        self.connect((self.analog_fastnoise_source_x_0, 0), (self.blocks_delay_0_0_0, 0))
-        self.connect((self.analog_fastnoise_source_x_0, 0), (self.blocks_delay_0_0_0_0, 0))
-        self.connect((self.analog_fastnoise_source_x_0, 0), (self.blocks_stream_to_vector_0, 0))
-        self.connect((self.blocks_add_xx_0, 0), (self.fft_vxx_0, 0))
-        self.connect((self.blocks_complex_to_real_0_0, 0), (self.blocks_integrate_xx_0_0, 0))
-        self.connect((self.blocks_delay_0_0, 0), (self.blocks_stream_to_vector_0_0, 0))
-        self.connect((self.blocks_delay_0_0_0, 0), (self.blocks_stream_to_vector_0_2, 0))
-        self.connect((self.blocks_delay_0_0_0_0, 0), (self.blocks_stream_to_vector_0_1, 0))
-        self.connect((self.blocks_integrate_xx_0, 0), (self.blocks_vector_to_stream_0, 0))
-        self.connect((self.blocks_integrate_xx_0, 0), (self.radio_astro_hdf5_sink_1, 0))
-        self.connect((self.blocks_integrate_xx_0_0, 0), (self.blocks_integrate_xx_0, 0))
-        self.connect((self.blocks_integrate_xx_0_0, 0), (self.blocks_nlog10_ff_0_0, 0))
-        self.connect((self.blocks_multiply_conjugate_cc_0, 0), (self.blocks_complex_to_real_0_0, 0))
-        self.connect((self.blocks_multiply_const_vxx_0, 0), (self.blocks_add_xx_0, 3))
-        self.connect((self.blocks_multiply_const_vxx_0_0, 0), (self.blocks_add_xx_0, 2))
-        self.connect((self.blocks_multiply_const_vxx_0_1, 0), (self.blocks_add_xx_0, 1))
-        self.connect((self.blocks_multiply_const_vxx_0_2, 0), (self.blocks_add_xx_0, 0))
-        self.connect((self.blocks_nlog10_ff_0, 0), (self.qtgui_time_sink_x_0, 0))
-        self.connect((self.blocks_nlog10_ff_0_0, 0), (self.qtgui_vector_sink_f_0, 0))
-        self.connect((self.blocks_stream_to_vector_0, 0), (self.blocks_multiply_const_vxx_0_2, 0))
-        self.connect((self.blocks_stream_to_vector_0_0, 0), (self.blocks_multiply_const_vxx_0_1, 0))
-        self.connect((self.blocks_stream_to_vector_0_1, 0), (self.blocks_multiply_const_vxx_0, 0))
-        self.connect((self.blocks_stream_to_vector_0_2, 0), (self.blocks_multiply_const_vxx_0_0, 0))
-        self.connect((self.blocks_vector_to_stream_0, 0), (self.blocks_nlog10_ff_0, 0))
-        self.connect((self.fft_vxx_0, 0), (self.blocks_multiply_conjugate_cc_0, 0))
-        self.connect((self.fft_vxx_0, 0), (self.blocks_multiply_conjugate_cc_0, 1))
+        self.connect((self.blocks_throttle_0, 0), (self.qtgui_freq_sink_x_0, 0))
+        self.connect((self.blocks_throttle_0, 0), (self.qtgui_time_sink_x_0, 0))
+        self.connect((self.blocks_vector_source_x_0, 0), (self.blocks_throttle_0, 0))
 
     def closeEvent(self, event):
         self.settings = Qt.QSettings("GNU Radio", "top_block")
         self.settings.setValue("geometry", self.saveGeometry())
         event.accept()
 
-    def get_vec_length(self):
-        return self.vec_length
+    def get_tau(self):
+        return self.tau
 
-    def set_vec_length(self, vec_length):
-        self.vec_length = vec_length
-        self.set_custom_window(self.sinc*np.hamming(4*self.vec_length))
-        self.set_sinc_sample_locations(np.arange(-np.pi*4/2.0, np.pi*4/2.0, np.pi/self.vec_length))
-        self.qtgui_vector_sink_f_0.set_x_axis(self.freq - self.samp_rate/2, self.samp_rate/self.vec_length)
-        self.blocks_multiply_const_vxx_0_2.set_k((self.custom_window[-self.vec_length:]))
-        self.blocks_multiply_const_vxx_0_1.set_k((self.custom_window[2*self.vec_length:3*self.vec_length]))
-        self.blocks_multiply_const_vxx_0_0.set_k((self.custom_window[self.vec_length:2*self.vec_length]))
-        self.blocks_multiply_const_vxx_0.set_k((self.custom_window[0:self.vec_length]))
-        self.blocks_delay_0_0_0_0.set_dly(3*self.vec_length)
-        self.blocks_delay_0_0_0.set_dly(2*self.vec_length)
-        self.blocks_delay_0_0.set_dly(self.vec_length)
+    def set_tau(self, tau):
+        self.tau = tau
+        self.blocks_vector_source_x_0.set_data(np.hstack((np.ones(int(self.tau*self.samp_rate)), np.zeros(int((1-self.tau)*self.samp_rate)))), [self.tag])
 
-    def get_sinc_sample_locations(self):
-        return self.sinc_sample_locations
+    def get_tag(self):
+        return self.tag
 
-    def set_sinc_sample_locations(self, sinc_sample_locations):
-        self.sinc_sample_locations = sinc_sample_locations
-        self.set_sinc(np.sinc(self.sinc_sample_locations/np.pi))
-
-    def get_timenow(self):
-        return self.timenow
-
-    def set_timenow(self, timenow):
-        self.timenow = timenow
-        self.set_recfile(self.prefix + self.timenow + ".h5")
-
-    def get_sinc(self):
-        return self.sinc
-
-    def set_sinc(self, sinc):
-        self.sinc = sinc
-        self.set_custom_window(self.sinc*np.hamming(4*self.vec_length))
-        self.set_sinc(np.sinc(self.sinc_sample_locations/np.pi))
-
-    def get_prefix(self):
-        return self.prefix
-
-    def set_prefix(self, prefix):
-        self.prefix = prefix
-        self.set_recfile(self.prefix + self.timenow + ".h5")
+    def set_tag(self, tag):
+        self.tag = tag
+        self.blocks_vector_source_x_0.set_data(np.hstack((np.ones(int(self.tau*self.samp_rate)), np.zeros(int((1-self.tau)*self.samp_rate)))), [self.tag])
 
     def get_samp_rate(self):
         return self.samp_rate
 
     def set_samp_rate(self, samp_rate):
         self.samp_rate = samp_rate
-        self.qtgui_vector_sink_f_0.set_x_axis(self.freq - self.samp_rate/2, self.samp_rate/self.vec_length)
         self.qtgui_time_sink_x_0.set_samp_rate(self.samp_rate)
-
-    def get_recfile(self):
-        return self.recfile
-
-    def set_recfile(self, recfile):
-        self.recfile = recfile
-
-    def get_integration_time(self):
-        return self.integration_time
-
-    def set_integration_time(self, integration_time):
-        self.integration_time = integration_time
-
-    def get_freq(self):
-        return self.freq
-
-    def set_freq(self, freq):
-        self.freq = freq
-        self.qtgui_vector_sink_f_0.set_x_axis(self.freq - self.samp_rate/2, self.samp_rate/self.vec_length)
-
-    def get_display_integration(self):
-        return self.display_integration
-
-    def set_display_integration(self, display_integration):
-        self.display_integration = display_integration
-
-    def get_custom_window(self):
-        return self.custom_window
-
-    def set_custom_window(self, custom_window):
-        self.custom_window = custom_window
-        self.blocks_multiply_const_vxx_0_2.set_k((self.custom_window[-self.vec_length:]))
-        self.blocks_multiply_const_vxx_0_1.set_k((self.custom_window[2*self.vec_length:3*self.vec_length]))
-        self.blocks_multiply_const_vxx_0_0.set_k((self.custom_window[self.vec_length:2*self.vec_length]))
-        self.blocks_multiply_const_vxx_0.set_k((self.custom_window[0:self.vec_length]))
+        self.qtgui_freq_sink_x_0.set_frequency_range(0, self.samp_rate)
+        self.blocks_vector_source_x_0.set_data(np.hstack((np.ones(int(self.tau*self.samp_rate)), np.zeros(int((1-self.tau)*self.samp_rate)))), [self.tag])
+        self.blocks_throttle_0.set_sample_rate(self.samp_rate)
 
 
 def main(top_block_cls=top_block, options=None):
