@@ -151,7 +151,7 @@ GNU Radio uses a stream processing model to process large amounts of data in rea
 
 ### 1.3.1. A Cosine Waveform generator 
 
-As a first experiment we want to generate a real-valued cosine signal with frequency 1000 Hz (default for the “Signal Source”) and display it in the time and frequency domains. We start from a flowgraph which consists of a “Signal Source” connected to a “Throttle”. To make the output of the Signal Source real-valued, double-click on the block and in the Properties window that shows up click on “Complex” under “Output Type” and select “Float” as shown below. Then choose “QT” under “Instrumentation” (or just simply search for “QT GUI Sink”) and double-click on “QT GUI Sink”. This block will allow you to see the waveform at the input in the frequency as well as in the time domain. Change the data “Type” from “Complex” to “Float” and connect the input to the output of the “Throttle” block. Save the flowgraph, e.g., as ex01_1.grc
+For our first experiment we want to generate a real-valued cosine signal with frequency 1000 Hz (default for the “Signal Source”) and display it in the time and frequency domains. We start from a flowgraph which consists of a “Signal Source” connected to a “Throttle”. To make the output of the Signal Source real-valued, double-click on the block and in the Properties window that shows up click on “Complex” under “Output Type” and select “Float” as shown below. Then choose “QT” under “Instrumentation” (or just simply search for “QT GUI Sink”) and double-click on “QT GUI Sink”. This block will allow you to see the waveform at the input in the frequency as well as in the time domain. Change the data “Type” from “Complex” to “Float” and connect the input to the output of the “Throttle” block. Save the flowgraph, e.g., as ex01_1.grc
 
 ![Example 1 Flowgraph](img/08.png)
 
@@ -216,7 +216,7 @@ If the “GUI Hint” entry is left blank, then the graphical elements are stack
 |  (0,0) |  (0,1) 	|   (0,2)	|   (0,3)	|   
 |---	|---	|---	|---	|---	|
 |  (1,0)	|   (1,1)	|   (1,2)	|   (1,3)	|   	
-|  (1,0)	|   (1,1)	|   (1,2)	|   (1,3)	|   	
+|  (2,0)	|   (2,1)	|   (2,2)	|   (2,3)	|   	
 
 
 We shall rearrange our signal generator with the following GUI Hints
@@ -262,7 +262,7 @@ We shall make a rectangular pulse with variable width ``tau`` going from 0 to 10
 The function shall be generated shall be generated using the following python code:
 
 ```python
-np.hstack((np.ones(int(tau*samp_rate)), np.zeros(int((0.1-tau)*samp_rate))))
+np.hstack((np.ones(int(tau*samp_rate)), np.zeros(int((1-tau)*samp_rate))))
 ```
 
 Before we place our blocks, we need to add consider a "Tag Object" block [^stream]. It basically helps us synchronize the sinks when the generated *stream tag* associated with our vector source is stopped by the sink. This will alow us to observe the generated pulse. Vector Source has the “Repeat” field which is set to “Yes” so that the pulse of width tau is repeated periodically. Note the "Tag" field. The properties of the blocks are set as below:
@@ -273,7 +273,7 @@ Before we place our blocks, we need to add consider a "Tag Object" block [^strea
 ![tag](img/25.png)
 ![vector](img/26.png)
 
-We set the sinks to have the trigger mode to "tag" and  enter the "Tag Key"  ``t0`` and change the "Number of Points" in the time sink to "1024 * 3" and in the frequency sink to "1024 * 6". This is to properly visualize the signal and its frequency components.  
+We set the sinks to have the trigger mode to "tag" and  enter the "Tag Key"  ``t0`` and change the "Number of Points" in the time sink to "samp_rate" and in the frequency sink to "1024 * 6". This is to properly visualize the signal and its frequency components.  
 
 ![timetrigger](img/27.png)
 ![freqtrigger](img/28.png)
@@ -292,7 +292,7 @@ This particular display may not seem very intuitive for the those seeing it for 
 
 ## 1.6. Exercises
 
-1. *Delaying Signals:* Use the "delay" block after the signal source and the value of delay can be controlled by a "GUI Range" to make a slider to have the delay change values from 0 to 2000.  See how the the signal changes in a time sink. 
+1. *Delaying Signals:* Use the "delay" block after the signal source and the value of delay can be controlled by a "GUI Range" to make a slider to have the delay change values from 0 to 2000.  See how the the signal changes in a time sink. **NOTE: The delay value indicates the delay in units of number of time samples. Each time sample is $1/samp_rate \rm{s}$" **
 
 2. GNU Radio has a host of "Math Operators" that will allow you to perform a host of operations:
 
