@@ -119,9 +119,12 @@ $$
 For the FM signal 
 
 $$
-\begin{align} 
 y(t) & = A_{c} \cos \left( 2 \pi f_{c} t + 2 \pi f{\Delta} \int_{0}^{t}x_{m}(\tau) d \tau \right) \\
     & = A_c \cos \theta(t)
+$$
+
+$$
+\begin{align} 
 y'(t) & = -A_c \theta ' (t) \sin \theta (t)
     & = -2 \pi A_c \left f_c + f_{\Delta} x(t) \right \sin \theta (t)
 \end{align}
