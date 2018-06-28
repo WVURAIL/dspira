@@ -149,7 +149,10 @@ FM ---> |Filter out the signal of interest| ---> |Resample Signal| ---> |Quadrat
 
 ![LP Filter](img/7_1.png)
  
-**Resampling Signal**: Resample the signal such that the frequency of the signal is a multiple of out output frequency. The output frequency is the frequency at which the sound card accepts samples i.e. 48 kHz to play audio. The output frequency should still be near to the bandwhith of the message i.e. 200kHz.192kHzis the closest multiple of 48kHz to it.
+**Resampling Signal**: Use the 'Rational Resampler' block. Resample the signal such that the frequency of the signal is a multiple of out output frequency. The output frequency ( 'out_rate') is the frequency at which the sound card accepts samples i.e. 48 kHz to play audio. The output frequency should still be near to the bandwhith of the message i.e. 200kHz. 192kHz ie 'out_rate' is the closest multiple of 48kHz to it.  
+
+![resample](img/7_2.png)
+
 
 **Quadrature demodulation**: This block extracts the time dependend frequency component of the signal which is the audio signal.
    *use the quad demod block and fill in '(out_rate/(2*math.pi*channel_width))' in the gain field*
