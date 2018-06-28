@@ -49,9 +49,9 @@ $$
 f(t) = A \sin(\omega t + \phi).
 $$
 
-This sinusoid has 3 variables that can be altered ti change the function f(t). The first term, A, is called the magnitude, or amplitude of the sinusoid. The next term, <$$\omega$$ is known as the frequency, and the last term, $$\phi$$ is known as the phase angle. All 3 parameters can be altered to transmit data.
+This sinusoid has 3 variables that can be altered ti change the function f(t). The first term, A, is called the magnitude, or amplitude of the sinusoid. The next term, $$\omega$$ is known as the frequency, and the last term, $$\phi$$ is known as the phase angle. We can encode our message in either of these three parameters.
 
-The sinusoidal signal that is used in the modulation is known as the carrier signal, or simply "the carrier". The signal that is used in modulating the carrier signal (or sinusoidal signal) is known as the "data signal" or the "message signal". It is important to notice that a simple sinusoidal carrier contains no information of its own.
+The sinusoidal signal that is used in the modulation is known as the carrier signal, or simply "the carrier". The signal that is used in modulating the carrier signal (or sinusoidal signal) is known as the "data signal" or the "message signal".
 
 In other words we can say that modulation is used because some data signals are not always suitable for direct transmission, but the modulated signal may be more suitable.
 
@@ -75,11 +75,11 @@ $$
 m(t) = M\cdot \cos(2 \pi f_m t + \phi), 
 $$
 
-where $$M$$ is the amplitude of the modulation. If $$M>1$$ then overmodulation occurs and reconstruction of message signal from the transmitted signal would lead in loss of original signal. Amplitude modulation results when the carrier $$c(t)$$ is multiplied by the positive quantity  $$(A+m(t))$$:
+where $$M$$ is the amplitude of the modulation. If $$M>1$$ then overmodulation occurs and reconstruction of message signal from the transmitted signal would lead in loss of original signal. Amplitude modulation results when the carrier $$c(t)$$ is multiplied by the positive quantity  $$(1+m(t))$$:
 
 
 $$
-y(t) = [A + m(t)]\cdot c(t) \\
+y(t) = [1 + m(t)]\cdot c(t) \\
 \ \ = [1 + M\cdot \cos(2 \pi f_m t + \phi)] \cdot A \cdot \sin(2 \pi f_c t)
 $$
 
@@ -130,25 +130,25 @@ y'(t) & = -A_c \theta ' (t) \sin \theta (t) \\
 \end{align}
 $$
 
-We observe that we converted the FM signal into the form $$ y(t) = [A + m(t)]\cdot c(t) $$ which is an AM signal. We can easily demodulate this AM signal by filtering out the AM "carrier". It follows the following flow:
+We observe that we converted the FM signal into the form $$ y(t) = [1 + m(t)]\cdot c(t) $$ which is an AM signal. We can easily demodulate this AM signal by filtering out the AM "carrier". It follows the following flow:
 
-FM ---->|Differentiator|---->|Envelope Filter|----> Signal
+FM ---->|Differentiator|---->|Envelope Detector|----> Signal
 
 This can be achieved in GNU radio using the following flow:
 
-FM ----> |Filter out the signal of interest| ----> |Resample Signal| ----> |Quadrature Demodulator|---->|Envelope Filter|----> Audio Signal
+FM ----> |Filter out the signal of interest| ----> |Resample Signal| ----> |Quadrature Demodulator|---->|Lowpass Filter| ----> Audio Signal
 
 **Hints:**
 
-- Filtering the gignal with the signal: FM stations are usually contained in a BW of 200 KHz. We can use a lowpass filter which cuts off at 200kHz. may want to decimate the signal such that the number of samples that are filtered out is at least twice the width of the filter. 
+- *Filtering the gignal with the signal*: FM stations are usually contained in a BW of 200 KHz. We can use a lowpass filter which cuts off at 200kHz. may want to decimate the signal such that the number of samples that are filtered out is at least twice the width of the filter. 
  
-- Resampling Signal: Resample the signal such that the frequency of the signal is a multiple of out output frequency. The output frequency is the frequency at which the sound card accepts samples i.e. 48 kHz to play audio
+- *Resampling Signal*: Resample the signal such that the frequency of the signal is a multiple of out output frequency. The output frequency is the frequency at which the sound card accepts samples i.e. 48 kHz to play audio
 
-- Quadrature demodulation: This block does the differentiation operation therby converting the FM to equivalent AM.
+- *Quadrature demodulation*: This block does the differentiation operation therby converting the FM to equivalent AM.
 
-- Envelope Filter: Demodudulate the equivalent AM signal by filtering out the carrier. Use a lowpass filter with the cutoff frequency at 18 kHz
+- *Lowpass Filter*: Demodudulate the equivalent AM signal by filtering out the carrier. Use a lowpass filter with the cutoff frequency at 18 kHz
 
-- Play audio from an audio sink
+- _Play audio from an audio sink_
 
 Lets capture some sweet tunes! 
 
