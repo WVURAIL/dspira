@@ -65,13 +65,13 @@ make
 5.)  If no errors, install
 
 ```bash
-make install
+sudo make install
 ```
 
 Blocks should now be available in gnuradio-companion.
  
  **Additionally install h5py**
- 
+  
  ```bash
  sudo pip install 'h5py==2.7.0'
  ```
