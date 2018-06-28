@@ -6,7 +6,7 @@ In [Lab 1](../01/) we learned how to work around GNU Radio Companion (GRC) and s
 
 - [2. Software Defined Radio - Hardware](#2-software-defined-radio---hardware)
     - [2.1. Introduction](#21-introduction)
-        - [2.1.1. Frequency Correction of the SDR Dongle](#211-frequency-correction-of-the-sdr-dongle)
+    - [2.2 Frequency Correction of the SDR Dongle](#211-frequency-correction-of-the-sdr-dongle)
     - [2.3. GNURadio FM](#23-gnuradio-fm)
         - [2.3.1 Signal Modulation](#231-signal-modulation)
             - [2.3.1.1 Amplitude Modulation](#2311-amplitude-modulation)
@@ -29,7 +29,7 @@ Simplifying this further for a general SDR hardware including the energy convers
 Radio Waves excite electrons in the antenna and induces a current. The frequencies the antenna is most sensitive to is determined by the geometry of the antenna's design. The electric current is then initially amplified a bit. This amplifier is generally a "Low Noise Amplifier" because we want as little as possible in the antenna signal from the local electronics. Processing a signal at a fixed frequency gives a radio receiver improved performance so thus a local oscillator (LO) is used. It is an electronic oscillator used with a mixer to change the frequency of a signal. This frequency conversion process, also called heterodyning, produces the sum and difference frequencies from the frequency of the local oscillator and frequency of the input signal. The desired frequency is then filtered out and if required amplified again. The last step is the most crucial step where-in the signal is digitized to be sent to the computer to be manipulated by our gnuradio code!
 
 [↑ Go to the Top of the Page](#)
-### 2.1.1. Frequency Correction of the SDR Dongle
+## 2.2 Frequency Correction of the SDR Dongle
 
 The hardware is well made, but a precision clock is quite expensive. The frequency the "tuner" tunes to may be slightly off from the actual frequency it is tuning to. We can correct for that in the software.  For high-end SDR dongles this correction is virtually non existent but some low-end dongles have higher deviations!
 
