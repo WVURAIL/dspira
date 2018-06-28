@@ -3,7 +3,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Top Block
-# Generated: Tue Jun 26 16:33:02 2018
+# Generated: Wed Jun 27 14:13:59 2018
 ##################################################
 
 from distutils.version import StrictVersion
@@ -20,6 +20,8 @@ if __name__ == '__main__':
 
 from PyQt5 import Qt
 from PyQt5 import Qt, QtCore
+from PyQt5.QtCore import QObject, pyqtSlot
+from gnuradio import analog
 from gnuradio import blocks
 from gnuradio import eng_notation
 from gnuradio import gr
@@ -28,8 +30,6 @@ from gnuradio.eng_option import eng_option
 from gnuradio.filter import firdes
 from gnuradio.qtgui import Range, RangeWidget
 from optparse import OptionParser
-import numpy as np
-import pmt
 import sip
 import sys
 from gnuradio import qtgui
@@ -68,37 +68,69 @@ class top_block(gr.top_block, Qt.QWidget):
         ##################################################
         # Variables
         ##################################################
-        self.tau = tau = 0.01
-        self.tag = tag = gr.tag_utils.python_to_tag((0, pmt.intern("t0"), pmt.intern("0"), pmt.intern("vecsrc")))
+        self.waveform = waveform = 102
         self.samp_rate = samp_rate = 32000
+        self.mute = mute = True
+        self.f0 = f0 = 500
+        self.f = f = 50
 
         ##################################################
         # Blocks
         ##################################################
-        self._tau_range = Range(0, 1, 0.01, 0.01, 200)
-        self._tau_win = RangeWidget(self._tau_range, self.set_tau, "tau", "counter_slider", float)
-        self.top_layout.addWidget(self._tau_win)
-        self.qtgui_time_sink_x_0 = qtgui.time_sink_f(
-        	samp_rate, #size
+        self._waveform_options = (102, 103, 104, 105, )
+        self._waveform_labels = ('Cosine', 'Square', 'Triangle', 'Sawtooth', )
+        self._waveform_group_box = Qt.QGroupBox('signal 2 Select')
+        self._waveform_box = Qt.QVBoxLayout()
+        class variable_chooser_button_group(Qt.QButtonGroup):
+            def __init__(self, parent=None):
+                Qt.QButtonGroup.__init__(self, parent)
+            @pyqtSlot(int)
+            def updateButtonChecked(self, button_id):
+                self.button(button_id).setChecked(True)
+        self._waveform_button_group = variable_chooser_button_group()
+        self._waveform_group_box.setLayout(self._waveform_box)
+        for i, label in enumerate(self._waveform_labels):
+        	radio_button = Qt.QRadioButton(label)
+        	self._waveform_box.addWidget(radio_button)
+        	self._waveform_button_group.addButton(radio_button, i)
+        self._waveform_callback = lambda i: Qt.QMetaObject.invokeMethod(self._waveform_button_group, "updateButtonChecked", Qt.Q_ARG("int", self._waveform_options.index(i)))
+        self._waveform_callback(self.waveform)
+        self._waveform_button_group.buttonClicked[int].connect(
+        	lambda i: self.set_waveform(self._waveform_options[i]))
+        self.top_grid_layout.addWidget(self._waveform_group_box, 0, 3, 1, 1)
+        [self.top_grid_layout.setRowStretch(r,1) for r in range(0,1)]
+        [self.top_grid_layout.setColumnStretch(c,1) for c in range(3,4)]
+        _mute_check_box = Qt.QCheckBox('Do not Let Signal Through')
+        self._mute_choices = {True: True, False: False}
+        self._mute_choices_inv = dict((v,k) for k,v in self._mute_choices.iteritems())
+        self._mute_callback = lambda i: Qt.QMetaObject.invokeMethod(_mute_check_box, "setChecked", Qt.Q_ARG("bool", self._mute_choices_inv[i]))
+        self._mute_callback(self.mute)
+        _mute_check_box.stateChanged.connect(lambda i: self.set_mute(self._mute_choices[bool(i)]))
+        self.top_layout.addWidget(_mute_check_box)
+        self._f_range = Range(0, 100, 1, 50, 200)
+        self._f_win = RangeWidget(self._f_range, self.set_f, "f", "counter_slider", float)
+        self.top_layout.addWidget(self._f_win)
+        self.qtgui_time_sink_x_0_0 = qtgui.time_sink_f(
+        	1024, #size
         	samp_rate, #samp_rate
         	"", #name
         	1 #number of inputs
         )
-        self.qtgui_time_sink_x_0.set_update_time(0.1)
-        self.qtgui_time_sink_x_0.set_y_axis(-1, 1)
+        self.qtgui_time_sink_x_0_0.set_update_time(0.10)
+        self.qtgui_time_sink_x_0_0.set_y_axis(-1, 1)
 
-        self.qtgui_time_sink_x_0.set_y_label('Amplitude', "")
+        self.qtgui_time_sink_x_0_0.set_y_label('Amplitude', "")
 
-        self.qtgui_time_sink_x_0.enable_tags(-1, True)
-        self.qtgui_time_sink_x_0.set_trigger_mode(qtgui.TRIG_MODE_TAG, qtgui.TRIG_SLOPE_POS, 0.0, 0.0, 0, "t0")
-        self.qtgui_time_sink_x_0.enable_autoscale(True)
-        self.qtgui_time_sink_x_0.enable_grid(True)
-        self.qtgui_time_sink_x_0.enable_axis_labels(True)
-        self.qtgui_time_sink_x_0.enable_control_panel(False)
-        self.qtgui_time_sink_x_0.enable_stem_plot(False)
+        self.qtgui_time_sink_x_0_0.enable_tags(-1, True)
+        self.qtgui_time_sink_x_0_0.set_trigger_mode(qtgui.TRIG_MODE_FREE, qtgui.TRIG_SLOPE_POS, 0.0, 0, 0, "")
+        self.qtgui_time_sink_x_0_0.enable_autoscale(True)
+        self.qtgui_time_sink_x_0_0.enable_grid(True)
+        self.qtgui_time_sink_x_0_0.enable_axis_labels(True)
+        self.qtgui_time_sink_x_0_0.enable_control_panel(False)
+        self.qtgui_time_sink_x_0_0.enable_stem_plot(False)
 
         if not True:
-          self.qtgui_time_sink_x_0.disable_legend()
+          self.qtgui_time_sink_x_0_0.disable_legend()
 
         labels = ['', '', '', '', '',
                   '', '', '', '', '']
@@ -115,102 +147,69 @@ class top_block(gr.top_block, Qt.QWidget):
 
         for i in xrange(1):
             if len(labels[i]) == 0:
-                self.qtgui_time_sink_x_0.set_line_label(i, "Data {0}".format(i))
+                self.qtgui_time_sink_x_0_0.set_line_label(i, "Data {0}".format(i))
             else:
-                self.qtgui_time_sink_x_0.set_line_label(i, labels[i])
-            self.qtgui_time_sink_x_0.set_line_width(i, widths[i])
-            self.qtgui_time_sink_x_0.set_line_color(i, colors[i])
-            self.qtgui_time_sink_x_0.set_line_style(i, styles[i])
-            self.qtgui_time_sink_x_0.set_line_marker(i, markers[i])
-            self.qtgui_time_sink_x_0.set_line_alpha(i, alphas[i])
+                self.qtgui_time_sink_x_0_0.set_line_label(i, labels[i])
+            self.qtgui_time_sink_x_0_0.set_line_width(i, widths[i])
+            self.qtgui_time_sink_x_0_0.set_line_color(i, colors[i])
+            self.qtgui_time_sink_x_0_0.set_line_style(i, styles[i])
+            self.qtgui_time_sink_x_0_0.set_line_marker(i, markers[i])
+            self.qtgui_time_sink_x_0_0.set_line_alpha(i, alphas[i])
 
-        self._qtgui_time_sink_x_0_win = sip.wrapinstance(self.qtgui_time_sink_x_0.pyqwidget(), Qt.QWidget)
-        self.top_grid_layout.addWidget(self._qtgui_time_sink_x_0_win, 0, 0, 1, 1)
-        [self.top_grid_layout.setRowStretch(r,1) for r in range(0,1)]
-        [self.top_grid_layout.setColumnStretch(c,1) for c in range(0,1)]
-        self.qtgui_freq_sink_x_0 = qtgui.freq_sink_f(
-        	1024*6, #size
-        	firdes.WIN_BLACKMAN_hARRIS, #wintype
-        	0, #fc
-        	samp_rate, #bw
-        	"", #name
-        	1 #number of inputs
-        )
-        self.qtgui_freq_sink_x_0.set_update_time(0.1)
-        self.qtgui_freq_sink_x_0.set_y_axis(-140, 10)
-        self.qtgui_freq_sink_x_0.set_y_label('Relative Gain', 'dB')
-        self.qtgui_freq_sink_x_0.set_trigger_mode(qtgui.TRIG_MODE_TAG, 0.0, 0, "t0")
-        self.qtgui_freq_sink_x_0.enable_autoscale(True)
-        self.qtgui_freq_sink_x_0.enable_grid(True)
-        self.qtgui_freq_sink_x_0.set_fft_average(1.0)
-        self.qtgui_freq_sink_x_0.enable_axis_labels(True)
-        self.qtgui_freq_sink_x_0.enable_control_panel(False)
-
-        if not True:
-          self.qtgui_freq_sink_x_0.disable_legend()
-
-        if "float" == "float" or "float" == "msg_float":
-          self.qtgui_freq_sink_x_0.set_plot_pos_half(not True)
-
-        labels = ['', '', '', '', '',
-                  '', '', '', '', '']
-        widths = [1, 1, 1, 1, 1,
-                  1, 1, 1, 1, 1]
-        colors = ["blue", "red", "green", "black", "cyan",
-                  "magenta", "yellow", "dark red", "dark green", "dark blue"]
-        alphas = [1.0, 1.0, 1.0, 1.0, 1.0,
-                  1.0, 1.0, 1.0, 1.0, 1.0]
-        for i in xrange(1):
-            if len(labels[i]) == 0:
-                self.qtgui_freq_sink_x_0.set_line_label(i, "Data {0}".format(i))
-            else:
-                self.qtgui_freq_sink_x_0.set_line_label(i, labels[i])
-            self.qtgui_freq_sink_x_0.set_line_width(i, widths[i])
-            self.qtgui_freq_sink_x_0.set_line_color(i, colors[i])
-            self.qtgui_freq_sink_x_0.set_line_alpha(i, alphas[i])
-
-        self._qtgui_freq_sink_x_0_win = sip.wrapinstance(self.qtgui_freq_sink_x_0.pyqwidget(), Qt.QWidget)
-        self.top_grid_layout.addWidget(self._qtgui_freq_sink_x_0_win, 0, 1, 1, 1)
-        [self.top_grid_layout.setRowStretch(r,1) for r in range(0,1)]
-        [self.top_grid_layout.setColumnStretch(c,1) for c in range(1,2)]
-        self.blocks_vector_source_x_0 = blocks.vector_source_f(np.hstack((np.ones(int(tau*samp_rate)), np.zeros(int((1-tau)*samp_rate)))), True, 1, [tag])
-        self.blocks_throttle_0 = blocks.throttle(gr.sizeof_float*1, samp_rate,True)
+        self._qtgui_time_sink_x_0_0_win = sip.wrapinstance(self.qtgui_time_sink_x_0_0.pyqwidget(), Qt.QWidget)
+        self.top_grid_layout.addWidget(self._qtgui_time_sink_x_0_0_win, 3, 0, 1, 4)
+        [self.top_grid_layout.setRowStretch(r,1) for r in range(3,4)]
+        [self.top_grid_layout.setColumnStretch(c,1) for c in range(0,4)]
+        self.blocks_mute_xx_0 = blocks.mute_ff(bool(mute))
+        self.analog_sig_source_x_0_0 = analog.sig_source_f(samp_rate, waveform, f, 1, 0)
 
         ##################################################
         # Connections
         ##################################################
-        self.connect((self.blocks_throttle_0, 0), (self.qtgui_freq_sink_x_0, 0))
-        self.connect((self.blocks_throttle_0, 0), (self.qtgui_time_sink_x_0, 0))
-        self.connect((self.blocks_vector_source_x_0, 0), (self.blocks_throttle_0, 0))
+        self.connect((self.analog_sig_source_x_0_0, 0), (self.blocks_mute_xx_0, 0))
+        self.connect((self.blocks_mute_xx_0, 0), (self.qtgui_time_sink_x_0_0, 0))
 
     def closeEvent(self, event):
         self.settings = Qt.QSettings("GNU Radio", "top_block")
         self.settings.setValue("geometry", self.saveGeometry())
         event.accept()
 
-    def get_tau(self):
-        return self.tau
+    def get_waveform(self):
+        return self.waveform
 
-    def set_tau(self, tau):
-        self.tau = tau
-        self.blocks_vector_source_x_0.set_data(np.hstack((np.ones(int(self.tau*self.samp_rate)), np.zeros(int((1-self.tau)*self.samp_rate)))), [self.tag])
-
-    def get_tag(self):
-        return self.tag
-
-    def set_tag(self, tag):
-        self.tag = tag
-        self.blocks_vector_source_x_0.set_data(np.hstack((np.ones(int(self.tau*self.samp_rate)), np.zeros(int((1-self.tau)*self.samp_rate)))), [self.tag])
+    def set_waveform(self, waveform):
+        self.waveform = waveform
+        self._waveform_callback(self.waveform)
+        self.analog_sig_source_x_0_0.set_waveform(self.waveform)
 
     def get_samp_rate(self):
         return self.samp_rate
 
     def set_samp_rate(self, samp_rate):
         self.samp_rate = samp_rate
-        self.qtgui_time_sink_x_0.set_samp_rate(self.samp_rate)
-        self.qtgui_freq_sink_x_0.set_frequency_range(0, self.samp_rate)
-        self.blocks_vector_source_x_0.set_data(np.hstack((np.ones(int(self.tau*self.samp_rate)), np.zeros(int((1-self.tau)*self.samp_rate)))), [self.tag])
-        self.blocks_throttle_0.set_sample_rate(self.samp_rate)
+        self.qtgui_time_sink_x_0_0.set_samp_rate(self.samp_rate)
+        self.analog_sig_source_x_0_0.set_sampling_freq(self.samp_rate)
+
+    def get_mute(self):
+        return self.mute
+
+    def set_mute(self, mute):
+        self.mute = mute
+        self._mute_callback(self.mute)
+        self.blocks_mute_xx_0.set_mute(bool(self.mute))
+
+    def get_f0(self):
+        return self.f0
+
+    def set_f0(self, f0):
+        self.f0 = f0
+
+    def get_f(self):
+        return self.f
+
+    def set_f(self, f):
+        self.f = f
+        self.analog_sig_source_x_0_0.set_frequency(self.f)
 
 
 def main(top_block_cls=top_block, options=None):
