@@ -85,7 +85,8 @@ $$
 
 Using trigonometric identities, $$y(t)$$ can be shown to be the sum of three sine waves:
 
-$$y
+$$
+y
 (t) = A \cdot \sin(2 \pi f_c t) + \frac{AM}{2} \left[\sin(2 \pi (f_c + f_m) t + \phi) + \sin(2 \pi (f_c - f_m) t - \phi)\right]
 $$
 
@@ -94,7 +95,7 @@ Therefore, the modulated signal has three components: the carrier wave ''c(t)'' 
 Demodulation or extracting the message from the carrier involves simply filtering out the carrier signal. We can construct an AM radio reciever on GNU radio however our SDR dongle can only tune from ~20 MHz to ~1800 MHz. 
 #### 2.3.1.2 Frequency Modulation
 
-As the same suggests the message signal is encoded in the If the information to be transmitted (i.e., the data/message signal is $$x_m(t)$$ and the sinusoidal carrier is $$x_c(t) = A_c \cos (2 \pi f_c t)$$, where $$f_c$$ is the carrier's base frequency, and $$A_c$$ is the carrier's amplitude, the modulator combines the carrier with the baseband data signal to get the transmitted signal
+As the name suggests the message signal is encoded in the frequency variable of the carrier signal. If the information to be transmitted (i.e., the data/message signal is $$x_m(t)$$ and the sinusoidal carrier is $$x_c(t) = A_c \cos (2 \pi f_c t)$$, where $$f_c$$ is the carrier's base frequency, and $$A_c$$ is the carrier's amplitude, the modulator combines the carrier with the data/message signal to get the transmitted signal
 
 $$
 \begin{align} 
@@ -104,23 +105,49 @@ y(t) & = A_c \cos \left( 2 \pi \int_{0}^{t} f(\tau) d \tau \right) \\
 \end{align}
 $$
 
-where $$f_{\Delta} = K_f</math><math>A_m</math> , <math>K_f</math> being the sensitivity of the frequency modulator and <math>A_m</math> being the amplitude of the modulating signal.
+where $$f_{\Delta} = K_f \cdot A_m $$ , $$K_f$$ being the sensitivity of the frequency modulator and $$A_m$$ being the amplitude of the modulating signal.
 ### 2.3.2 Let's Make our FM Radio
 
+One way to demodulate the signal is to extract the message encoded in the frequency of the sinusoid outside the sinusoid. That can be achieved by differenting the sine wave. Consider the following:
 
+$$
+x(t) = a sin(f(t)t + \phi)
+\frac{d x(t)}{dt} = af(t) \cos(f(t)t + \phi)
+\ \ \  = A(t) \cos(f(t) + phi)
+$$
+
+For the FM signal 
+
+$$
+\begin{align} 
+y(t) & = A_{c} \cos \left( 2 \pi f_{c} t + 2 \pi f{\Delta} \int_{0}^{t}x_{m}(\tau) d \tau \right) \\
+    & = A_c \cos \theta(t)
+y'(t) & = -A_c \theta ' (t) \sin \theta (t)
+    & = -2 \pi A_c \left f_c + f_{\Delta} x(t) \right \sin \theta (t)
+\end{align}
+$$
+
+We observe that we converted the FM signal into the form $$ y(t) = [A + m(t)]\cdot c(t) $$ which is an AM signal. We can easily demodulate this AM signal by filtering out the AM "carrier". It follows the following flow:
 
 FM ---->|Differentiator|---->|Envelope Filter|----> Signal
 
+This can be achieved in GNU radio using the following flow:
 
 FM ----> |Filter out the signal of interest| ----> |Resample Signal| ----> |Quadrature Demodulator|---->|Envelope Filter|----> Audio Signal
 
 **Hints:**
 
-- Filtering the gignal with the signal:
-- Resampling Signal:
-- Quadrature demodulation:
-- Envelope Filter:
-- 
+- Filtering the gignal with the signal: FM stations are usually contained in a BW of 200 KHz. We can use a lowpass filter which cuts off at 200kHz. may want to decimate the signal such that the number of samples that are filtered out is at least twice the width of the filter. 
+ 
+- Resampling Signal: Resample the signal such that the frequency of the signal is a multiple of out output frequency. The output frequency is the frequency at which the sound card accepts samples i.e. 48 kHz to play audio
+
+- Quadrature demodulation: This block does the differentiation operation therby converting the FM to equivalent AM.
+
+- Envelope Filter: Demodudulate the equivalent AM signal by filtering out the carrier. Use a lowpass filter with the cutoff frequency at 18 kHz
+
+- Play audio from an audio sink
+
+Lets capture some sweet tunes! 
 
 <!--
 Our FM Radio design GRC in its most basic has the following flow:
