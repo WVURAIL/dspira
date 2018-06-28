@@ -157,7 +157,7 @@ FM ---> |Filter out the signal of interest| ---> |Resample Signal| ---> |Quadrat
 **Quadrature demodulation**: This block extracts the time dependend frequency component of the signal which is the audio signal.
    *use the quad demod block and fill in '(out_rate/(2*math.pi*channel_width))' in the gain field*
 
-![quaddemod](img/7_3.png)
+![quaddemod](img/7_4.png)
 
 **Lowpass Filter**: Use a lowpass filter with the cutoff frequency at 18 kHz ( because human audio perfecption has an upper limit close to it). Enter the decimation value to downsample the signal coming in from 192kHz to 48kHz the rate at which the sound card works. 
 
