@@ -154,8 +154,7 @@ FM ---> |Filter out the signal of interest| ---> |Resample Signal| ---> |Quadrat
 ![resample](img/7_2.png)
 
 
-**Quadrature demodulation**: This block extracts the time dependend frequency component of the signal which is the audio signal.
-   *use the quad demod block and fill in '(out_rate/(2*math.pi*channel_width))' in the gain field*
+**Quadrature demodulation**: This block extracts the time dependend frequency component of the signal which is the audio signal.Use the quad demod block and fill in '(out_rate/(2*math.pi*channel_width))' in the gain field
 
 ![quaddemod](img/7_4.png)
 
