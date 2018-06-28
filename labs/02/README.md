@@ -125,8 +125,8 @@ $$
 
 $$
 \begin{align} 
-y'(t) & = -A_c \theta ' (t) \sin \theta (t)
-    & = -2 \pi A_c \left f_c + f_{\Delta} x(t) \right \sin \theta (t)
+y'(t) & = -A_c \theta ' (t) \sin \theta (t) \\
+    & = -2 \pi A_c ( f_c + f_{\Delta} x(t) ) \sin \theta (t)
 \end{align}
 $$
 
