@@ -8,6 +8,10 @@ In [Lab 1](../01/) we learned how to work around GNU Radio Companion (GRC) and s
     - [2.1. Introduction](#21-introduction)
         - [2.1.1. Frequency Correction of the SDR Dongle](#211-frequency-correction-of-the-sdr-dongle)
     - [2.3. GNURadio FM](#23-gnuradio-fm)
+        - [2.3.1 Signal Modulation](#231-signal-modulation)
+            - [2.3.1.1 Amplitude Modulation](#2311-amplitude-modulation)
+            - [2.3.1.2 Frequency Modulation](#2312-frequency-modulation)
+        - [2.3.2 Let's Make our FM Radio](#232-lets-make-our-fm-radio)
     - [2.4. Fun SDR/GNU Radio things](#24-fun-sdrgnu-radio-things)
 
 <!-- /TOC -->
@@ -22,12 +26,9 @@ Simplifying this further for a general SDR hardware including the energy convers
 
 (EM Waves)))) >-(Antenna)-->(Amplifier)--->(Local Oscillators + Filters)-->(Analog to Digital Convertor)-->(networking control: usually USB)--->[Computer]
 
-Radio Waves excite electrons in the antenna and induces a current. The frequencies the antenna is most sensitive to is determined by the geometry of the antenna's design. The electric current is then initially amplified a bit. This amplifier is generally a "Low Noise Amplifier" because we want as little as possible in the antenna signal from the local electronics. Processing a signal at a fixed frequency gives a radio receiver improved performance so thus a local oscillator (LO) is used. It is an electronic oscillator used with a mixer to change the frequency of a signal. This frequency conversion process, also called heterodyning, produces the sum and difference frequencies from the frequency of the local oscillator and frequency of the input signal. The desired frequency is then filtered out and if required amplified again. The last step is the most crucial step where-in the signal is digitized to be sent to the computer to be manipulated by our gnuradio code! 
-
-Before we code on our own we shall a useful application called GQRX
+Radio Waves excite electrons in the antenna and induces a current. The frequencies the antenna is most sensitive to is determined by the geometry of the antenna's design. The electric current is then initially amplified a bit. This amplifier is generally a "Low Noise Amplifier" because we want as little as possible in the antenna signal from the local electronics. Processing a signal at a fixed frequency gives a radio receiver improved performance so thus a local oscillator (LO) is used. It is an electronic oscillator used with a mixer to change the frequency of a signal. This frequency conversion process, also called heterodyning, produces the sum and difference frequencies from the frequency of the local oscillator and frequency of the input signal. The desired frequency is then filtered out and if required amplified again. The last step is the most crucial step where-in the signal is digitized to be sent to the computer to be manipulated by our gnuradio code!
 
 [↑ Go to the Top of the Page](#)
-
 ### 2.1.1. Frequency Correction of the SDR Dongle
 
 The hardware is well made, but a precision clock is quite expensive. The frequency the "tuner" tunes to may be slightly off from the actual frequency it is tuning to. We can correct for that in the software.  For high-end SDR dongles this correction is virtually non existent but some low-end dongles have higher deviations!
@@ -36,18 +37,95 @@ We can transmit a signal using a known and reliable tone. Then we use our receiv
  This value will be different for all dongles.  It also changes with the temperature of the dongle.  It is interesting to watch this change as the dongle warms up. Note your value for future purposes. 
 
 [↑ Go to the Top of the Page](#)
-
 ## 2.3. GNURadio FM
 
 We used gqrx in section 1.2 to listen to FM now we shall code our own radio using GRC!
 
 First things first, FM stands for frequency modulation i.e. the information is coded into the frequecy variable of the signal. [^FM]
+### 2.3.1  Signal Modulation
 
-[^FM]: Read more about it in the [wikipedia article](https://en.wikipedia.org/wiki/Frequency_modulation) and a quick internet search or a peak into a basic signals textbook would have more relevant info.
+Modulation is a process of mixing a signal with a sinusoid to produce a new signal. Consider a signal represented by the function: 
 
+$$
+f(t) = A \sin(\omega t + \phi).
+$$
+
+This sinusoid has 3 variables that can be altered ti change the function f(t). The first term, A, is called the magnitude, or amplitude of the sinusoid. The next term, <$$\omega$$ is known as the frequency, and the last term, $$\phi$$ is known as the phase angle. All 3 parameters can be altered to transmit data.
+
+The sinusoidal signal that is used in the modulation is known as the carrier signal, or simply "the carrier". The signal that is used in modulating the carrier signal (or sinusoidal signal) is known as the "data signal" or the "message signal". It is important to notice that a simple sinusoidal carrier contains no information of its own.
+
+In other words we can say that modulation is used because some data signals are not always suitable for direct transmission, but the modulated signal may be more suitable.
+
+It follows  from above we encode in the above three variables. Consequently, we have 3 basic types of analog modulation:
+
+- Amplitude Modulation
+- Frequency Modulation
+- Phase Modulation
+#### 2.3.1.1 Amplitude Modulation
+
+For our discussion of amplitide modulation consider a carrier wave of frequency $$f_c$$ and amplitude $$A$$ given by:
+
+$$
+c(t) = A \cdot \sin(2 \pi f_c t).
+$$
+
+Let $$m(t)$$ represent the modulation waveform. For this example we shall take the modulation to be simply a sine wave of a frequency $$f_m$$, a much lower frequency (such as an audio frequency) than $$f_c$$:
+
+$$
+m(t) = M\cdot \cos(2 \pi f_m t + \phi), 
+$$
+
+where $$M$$ is the amplitude of the modulation. We shall insist that $$M<1$$ so that $$(A+m(t))$$ is always positive. If $$M>1$$ then overmodulation occurs and reconstruction of message signal from the transmitted signal would lead in loss of original signal. Amplitude modulation results when the carrier $$c(t)$$ is multiplied by the positive quantity  $$(1+m(t))$$:
+
+
+$$
+y(t) = [A + m(t)]\cdot c(t)
+\ \ = [1 + M\cdot \cos(2 \pi f_m t + \phi)] \cdot A \cdot \sin(2 \pi f_c t)
+$$
+
+Using trigonometric identities, $$y(t)$$ can be shown to be the sum of three sine waves:
+
+$$y
+(t) = A \cdot \sin(2 \pi f_c t) + \frac{AM}{2} \left[\sin(2 \pi (f_c + f_m) t + \phi) + \sin(2 \pi (f_c - f_m) t - \phi)\right]
+$$
+
+Therefore, the modulated signal has three components: the carrier wave ''c(t)'' which is unchanged, and two pure sine waves (known as [[sideband]]s) with frequencies slightly above and below the carrier frequency $$f_c$$.
+
+Demodulation or extracting the message from the carrier involves simply filtering out the carrier signal. We can construct an AM radio reciever on GNU radio however our SDR dongle can only tune from ~20 MHz to ~1800 MHz. 
+#### 2.3.1.2 Frequency Modulation
+
+As the same suggests the message signal is encoded in the If the information to be transmitted (i.e., the data/message signal is $$x_m(t)$$ and the sinusoidal carrier is $$x_c(t) = A_c \cos (2 \pi f_c t)$$, where $$f_c$$ is the carrier's base frequency, and $$A_c$$ is the carrier's amplitude, the modulator combines the carrier with the baseband data signal to get the transmitted signal
+
+$$
+\begin{align} 
+y(t) & = A_c \cos \left( 2 \pi \int_{0}^{t} f(\tau) d \tau \right) \\ 
+     & = A_{c} \cos \left( 2 \pi \int_{0}^{t} \left[ f_{c} + f_{\Delta} x_{m}(\tau) \right] d \tau \right)\\ 
+     & = A_{c} \cos \left( 2 \pi f_{c} t + 2 \pi f_{\Delta} \int_{0}^{t}x_{m}(\tau) d \tau \right) \\ 
+\end{align}
+$$
+
+where $$f_{\Delta} = K_f</math><math>A_m</math> , <math>K_f</math> being the sensitivity of the frequency modulator and <math>A_m</math> being the amplitude of the modulating signal.
+### 2.3.2 Let's Make our FM Radio
+
+
+
+FM ---->|Differentiator|---->|Envelope Filter|----> Signal
+
+
+FM ----> |Filter out the signal of interest| ----> |Resample Signal| ----> |Quadrature Demodulator|---->|Envelope Filter|----> Audio Signal
+
+**Hints:**
+
+- Filtering the gignal with the signal:
+- Resampling Signal:
+- Quadrature demodulation:
+- Envelope Filter:
+- 
+
+<!--
 Our FM Radio design GRC in its most basic has the following flow:
 
-[Source]--->(Low Pass Filter)--->(Resampler)-->(FM demodulator)--->(Volume Gain)--->[Audio Sink]
+[Source]--(Low Pass Filter)---(Resampler)--(FM demodulator)---(Volume Gain)---[Audio Sink]
 
 Find the corresponding blocks and connect them according to the flow given above. Use appropraite variables and GUI elements. USe the QT GUI Sink to visually show the signal in the flow before and after modulation. 
 
@@ -74,12 +152,13 @@ Find the corresponding blocks and connect them according to the flow given above
 **Audio Sink**: To listen to the sweet tunes!
 
 The choices made so far here may seem a bit arbitrary.  In the future we'll go into filters and filter design, and you can return to your FM radio, and possibly improve it!
+-->
 
 [↑ Go to the Top of the Page](#)
 
 ## 2.4. Fun SDR/GNU Radio things
 
-1. AM Radio!
+1. AM Radio! (see above)
 2. Narrow Band FM ( same are FM but a narrower filter passband)
 3. [Listen to and get airplain ADS-B data](http://www.rtl-sdr.com/adsb-aircraft-radar-with-rtl-sdr/)
 To chekc it out on your own get this software: [dump1090](https://github.com/MalcolmRobb/dump1090) 
