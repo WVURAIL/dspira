@@ -95,7 +95,7 @@ Demodulation or extracting the message from the carrier involves simply filterin
 
 #### 2.3.1.2 Frequency Modulation
 
-As the name suggests the message signal is encoded in the frequency variable of the carrier signal. If the information to be transmitted (i.e., the data/message signal is $$x_m(t)$$ and the sinusoidal carrier is $$x_c(t) = A_c \cos (2 \pi f_c t)$$, where $$f_c$$ is the carrier's base frequency, and $$A_c$$ is the carrier's amplitude, the modulator combines the carrier with the data/message signal to get the transmitted signal
+As the name suggests the message signal is encoded in the frequency variable of the carrier signal as in $$x(t) = a \sin (f(t)t + \phi) $$. If the information to be transmitted (i.e., the data/message signal is $$x_m(t)$$ and the sinusoidal carrier is $$x_c(t) = A_c \cos (2 \pi f_c t)$$, where $$f_c$$ is the carrier's base frequency, and $$A_c$$ is the carrier's amplitude, the modulator combines the carrier with the data/message signal to get the transmitted signal
 
 $$
 \begin{align} 
@@ -134,19 +134,20 @@ We observe that we converted the FM signal into the form $$ y(t) = [1 + m(t)]\cd
 
 FM ---->|Differentiator|---->|Envelope Detector|----> Signal
 
-This can be achieved in GNU radio using the following flow:
+A simliar operation can be achieved in GNU radio using the following flow:
 
-FM ----> |Filter out the signal of interest| ----> |Resample Signal| ----> |Quadrature Demodulator|---->|Lowpass Filter| ----> Audio Signal
+FM ---> |Filter out the signal of interest| ---> |Resample Signal| ---> |Quadrature Demodulator|--->|Lowpass Filter| ---> Audio Signal
 
 **Hints:**
 
 - *Filtering the gignal with the signal*: FM stations are usually contained in a BW of 200 KHz. We can use a lowpass filter which cuts off at 200kHz. may want to decimate the signal such that the number of samples that are filtered out is at least twice the width of the filter. 
  
-- *Resampling Signal*: Resample the signal such that the frequency of the signal is a multiple of out output frequency. The output frequency is the frequency at which the sound card accepts samples i.e. 48 kHz to play audio
+- *Resampling Signal*: Resample the signal such that the frequency of the signal is a multiple of out output frequency. The output frequency is the frequency at which the sound card accepts samples i.e. 48 kHz to play audio. The output frequency should still be near to the bandwhith of the message i.e. 200kHz.192kHzis the closest multiple of 48kHz to it.
 
-- *Quadrature demodulation*: This block does the differentiation operation therby converting the FM to equivalent AM.
+- *Quadrature demodulation*: This block extracts the time dependend frequency component of the signal which is the audio signal.
+   *use the quad demod block and fill in '(out_rate/(2*math.pi*channel_width))' in the gain field*
 
-- *Lowpass Filter*: Demodudulate the equivalent AM signal by filtering out the carrier. Use a lowpass filter with the cutoff frequency at 18 kHz
+- *Lowpass Filter*: Use a lowpass filter with the cutoff frequency at 18 kHz ( because human audio perfecption has an upper limit close to it). Enter the decimation value to downsample the signal coming in from 192kHz to 48kHz the rate at which the sound card works. 
 
 - _Play audio from an audio sink_
 
