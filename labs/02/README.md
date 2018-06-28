@@ -159,7 +159,10 @@ FM ---> |Filter out the signal of interest| ---> |Resample Signal| ---> |Quadrat
 
 **Lowpass Filter**: Use a lowpass filter with the cutoff frequency at 18 kHz ( because human audio perfecption has an upper limit close to it). Enter the decimation value to downsample the signal coming in from 192kHz to 48kHz the rate at which the sound card works. 
 
-- _Play audio from an audio sink_
+![lp2](img/7_3.png)
+
+
+**_Play audio from an audio sink_**
 
 Lets capture some sweet tunes! 
 
