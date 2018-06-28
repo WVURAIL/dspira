@@ -119,8 +119,8 @@ $$
 For the FM signal 
 
 $$
-y(t) & = A_{c} \cos ( 2 \pi f_{c} t + 2 \pi f{\Delta} \int_{0}^{t}x_{m}(\tau) d \tau ) \\
-    & = A_c cos \theta(t)
+y(t) = A_c \cos ( 2 \pi f_c t + 2 \pi f_{\Delta} \int_{0}^{t} x_{m} (\tau) d \tau ) \\
+ \ \ \  = A_c cos \theta(t)
 $$
 
 $$
