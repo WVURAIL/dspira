@@ -137,9 +137,15 @@ FM ----> |Filter out the signal of interest| ----> |Resample Signal| ----> |Quad
 
 **Hints:**
 
-- Filtering the gignal with the signal: FM stations are usually contained in a BW of 200 KHz. We can use a lowpass filter which cuts off at 200kHz. may want to decimate the signal such that the number of samples that are filtered out is at least twice the width of the filter. 
- 
-- Resampling Signal: Resample the signal such that the frequency of the signal is a multiple of out output frequency. The output frequency is the frequency at which the sound card accepts samples i.e. 48 kHz to play audio
+**Source**: Since we are using a hardware source we have to use the appropriate block. Search for the ``osmocom Source`` block. The Device arguments should be ``airspy=0``. **NOTE: The Sample rate supported by this dongle is either 2.5 MHz or 10 MHz. We shall set our ``samp_freq`` variable to ``2500000``**. The ``Ch0: Frequency (Hz)`` is the frequency you want to tune to. 
+
+![source](img/7.png)
+
+**Low Pass Filter**: This filters out all the frequencies apart from the one we want to tune our radio to. Note that I have another variable called ``channel_width`` which is equal to ``200e3``. It is to filter out at a data rate 200kHz. 
+
+![LP Filter](img/7_1.png)
+
+- Resampling Signal: We are attempting to change the datarate to 192 kHz i.e. a multiple of out output frequency. The output frequency is the frequency at which the sound card accepts samples i.e. 48 kHz to play audio
 
 - Quadrature demodulation: This block does the differentiation operation therby converting the FM to equivalent AM.
 
