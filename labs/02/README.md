@@ -41,7 +41,6 @@ We can transmit a signal using a known and reliable tone. Then we use our receiv
 
 We used gqrx in section 1.2 to listen to FM now we shall code our own radio using GRC!
 
-First things first, FM stands for frequency modulation i.e. the information is coded into the frequecy variable of the signal. [^FM]
 ### 2.3.1  Signal Modulation
 
 Modulation is a process of mixing a signal with a sinusoid to produce a new signal. Consider a signal represented by the function: 
@@ -61,6 +60,7 @@ It follows  from above we encode in the above three variables. Consequently, we 
 - Amplitude Modulation
 - Frequency Modulation
 - Phase Modulation
+
 #### 2.3.1.1 Amplitude Modulation
 
 For our discussion of amplitide modulation consider a carrier wave of frequency $$f_c$$ and amplitude $$A$$ given by:
@@ -75,24 +75,24 @@ $$
 m(t) = M\cdot \cos(2 \pi f_m t + \phi), 
 $$
 
-where $$M$$ is the amplitude of the modulation. We shall insist that $$M<1$$ so that $$(A+m(t))$$ is always positive. If $$M>1$$ then overmodulation occurs and reconstruction of message signal from the transmitted signal would lead in loss of original signal. Amplitude modulation results when the carrier $$c(t)$$ is multiplied by the positive quantity  $$(1+m(t))$$:
+where $$M$$ is the amplitude of the modulation. If $$M>1$$ then overmodulation occurs and reconstruction of message signal from the transmitted signal would lead in loss of original signal. Amplitude modulation results when the carrier $$c(t)$$ is multiplied by the positive quantity  $$(A+m(t))$$:
 
 
 $$
-y(t) = [A + m(t)]\cdot c(t)
+y(t) = [A + m(t)]\cdot c(t) \\
 \ \ = [1 + M\cdot \cos(2 \pi f_m t + \phi)] \cdot A \cdot \sin(2 \pi f_c t)
 $$
 
 Using trigonometric identities, $$y(t)$$ can be shown to be the sum of three sine waves:
 
 $$
-y
-(t) = A \cdot \sin(2 \pi f_c t) + \frac{AM}{2} \left[\sin(2 \pi (f_c + f_m) t + \phi) + \sin(2 \pi (f_c - f_m) t - \phi)\right]
+y(t) = A \cdot \sin(2 \pi f_c t) + \frac{AM}{2} \left[\sin(2 \pi (f_c + f_m) t + \phi) + \sin(2 \pi (f_c - f_m) t - \phi)\right]
 $$
 
-Therefore, the modulated signal has three components: the carrier wave ''c(t)'' which is unchanged, and two pure sine waves (known as [[sideband]]s) with frequencies slightly above and below the carrier frequency $$f_c$$.
+Therefore, the modulated signal has three components: the carrier wave $$c(t)$$ which is unchanged, and two pure sine waves (known as sidebands) with frequencies slightly above and below the carrier frequency $$f_c$$.
 
 Demodulation or extracting the message from the carrier involves simply filtering out the carrier signal. We can construct an AM radio reciever on GNU radio however our SDR dongle can only tune from ~20 MHz to ~1800 MHz. 
+
 #### 2.3.1.2 Frequency Modulation
 
 As the name suggests the message signal is encoded in the frequency variable of the carrier signal. If the information to be transmitted (i.e., the data/message signal is $$x_m(t)$$ and the sinusoidal carrier is $$x_c(t) = A_c \cos (2 \pi f_c t)$$, where $$f_c$$ is the carrier's base frequency, and $$A_c$$ is the carrier's amplitude, the modulator combines the carrier with the data/message signal to get the transmitted signal
@@ -111,16 +111,16 @@ where $$f_{\Delta} = K_f \cdot A_m $$ , $$K_f$$ being the sensitivity of the fre
 One way to demodulate the signal is to extract the message encoded in the frequency of the sinusoid outside the sinusoid. That can be achieved by differenting the sine wave. Consider the following:
 
 $$
-x(t) = a sin(f(t)t + \phi)
-\frac{d x(t)}{dt} = af(t) \cos(f(t)t + \phi)
-\ \ \  = A(t) \cos(f(t) + phi)
+x(t) = a \sin (f(t)t + \phi) \\
+\frac{d x(t)}{dt} = af(t) \cos(f(t)t + \phi) \\
+\ \ \  = A(t) \cos(f(t) + \phi)
 $$
 
 For the FM signal 
 
 $$
-y(t) & = A_{c} \cos \left( 2 \pi f_{c} t + 2 \pi f{\Delta} \int_{0}^{t}x_{m}(\tau) d \tau \right) \\
-    & = A_c \cos \theta(t)
+y(t) & = A_{c} \cos ( 2 \pi f_{c} t + 2 \pi f{\Delta} \int_{0}^{t}x_{m}(\tau) d \tau ) \\
+    & = A_c cos \theta(t)
 $$
 
 $$
