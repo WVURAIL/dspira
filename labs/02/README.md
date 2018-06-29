@@ -8,7 +8,7 @@ In [Lab 1](../01/) we learned how to work around GNU Radio Companion (GRC) and s
     - [2.1. Introduction](#21-introduction)
     - [2.2 Frequency Correction of the SDR Dongle](#22-frequency-correction-of-the-sdr-dongle)
     - [2.3. GNURadio FM](#23-gnuradio-fm)
-        - [2.3.1 Signal Modulation](#231-signal-modulation)
+        - [2.3.1  Signal Modulation](#231--signal-modulation)
             - [2.3.1.1 Amplitude Modulation](#2311-amplitude-modulation)
             - [2.3.1.2 Frequency Modulation](#2312-frequency-modulation)
         - [2.3.2 Let's Make our FM Radio](#232-lets-make-our-fm-radio)
@@ -75,7 +75,7 @@ $$
 m(t) = M\cdot \cos(2 \pi f_m t + \phi), 
 $$
 
-where $$M$$ is the amplitude of the modulation. If $$M>1$$ then overmodulation occurs and reconstruction of message signal from the transmitted signal would lead in loss of original signal. Amplitude modulation results when the carrier $$c(t)$$ is multiplied by the positive quantity  $$(1+m(t))$$:
+where $$M$$ is the amplitude of the modulation. If $$M>1$$ then overmodulation occurs and reconstruction of message signal from the transmitted signal is more difficult. Amplitude modulation results when the carrier $$c(t)$$ is multiplied by the positive quantity  $$(1+m(t))$$:
 
 
 $$
@@ -91,7 +91,7 @@ $$
 
 Therefore, the modulated signal has three components: the carrier wave $$c(t)$$ which is unchanged, and two pure sine waves (known as sidebands) with frequencies slightly above and below the carrier frequency $$f_c$$.
 
-Demodulation or extracting the message from the carrier involves simply filtering out the carrier signal. We can construct an AM radio reciever on GNU radio however our SDR dongle can only tune from ~20 MHz to ~1800 MHz. 
+Demodulation or extracting the message from the carrier involves simply filtering out the carrier signal. We can construct an AM radio receiver on GNU radio however our SDR dongle can only tune from ~20 MHz to ~1800 MHz. 
 
 #### 2.3.1.2 Frequency Modulation
 
@@ -99,16 +99,16 @@ As the name suggests the message signal is encoded in the frequency variable of 
 
 $$
 \begin{align} 
-y(t) & = A_c \cos \left( 2 \pi \int_{0}^{t} f(\tau) d \tau \right) \\ 
-     & = A_{c} \cos \left( 2 \pi \int_{0}^{t} \left[ f_{c} + f_{\Delta} x_{m}(\tau) \right] d \tau \right)\\ 
-     & = A_{c} \cos \left( 2 \pi f_{c} t + 2 \pi f_{\Delta} \int_{0}^{t}x_{m}(\tau) d \tau \right) \\ 
+y(t) & = A_c \cos \left( 2 \pi f(t) \right) \\ 
+     & = A_{c} \cos \left( 2 \pi \left[ f_{c} + f_{\Delta} x_{m}(t) \right] \right)\\ 
+     & = A_{c} \cos \left( 2 \pi f_{c} t + 2 \pi f_{\Delta} x_{m}(t) \right) \\ 
 \end{align}
 $$
 
-where $$f_{\Delta} = K_f \cdot A_m $$ , $$K_f$$ being the sensitivity of the frequency modulator and $$A_m$$ being the amplitude of the modulating signal.
+where $$f_{\Delta} = K_f \cdot A_m $$ , $$K_f$$ being the sensitivity of the frequency modulator which adjusts how much bandwidth is used for the signal and $$A_m$$ being the amplitude of the modulating signal.
 ### 2.3.2 Let's Make our FM Radio
 
-One way to demodulate the signal is to extract the message encoded in the frequency of the sinusoid outside the sinusoid. That can be achieved by differenting the sine wave. Consider the following:
+One way to demodulate the signal is to extract the message encoded in the frequency of the sinusoid outside the sinusoid. That can be achieved by differentiating the sine wave. Consider the following:
 
 $$
 x(t) = a \sin (f(t)t + \phi) \\
@@ -119,14 +119,14 @@ $$
 For the FM signal 
 
 $$
-y(t) = A_c \cos ( 2 \pi f_c t + 2 \pi f_{\Delta} \int_{0}^{t} x_{m} (\tau) d \tau ) \\
- \ \ \  = A_c cos \theta(t)
+y(t) = A_c \cos \left( 2 \pi f_c t + 2 \pi f_{\Delta} x_{m} (t)  \right) \\
+ \ \ \  = A_c cos ( \theta(t) )
 $$
 
 $$
 \begin{align} 
-y'(t) & = -A_c \theta ' (t) \sin \theta (t) \\
-    & = -2 \pi A_c ( f_c + f_{\Delta} x(t) ) \sin \theta (t)
+y'(t) & = -A_c \theta ' (t) \sin(\theta (t) ) \\
+    & = -2 \pi A_c ( f_c + f_{\Delta} x_m(t) ) \sin (\theta (t))
 \end{align}
 $$
 
@@ -134,9 +134,11 @@ We observe that we converted the FM signal into the form $$ y(t) = [1 + m(t)]\cd
 
 FM ---->|Differentiator|---->|Envelope Detector|----> Signal
 
-A simliar operation can be achieved in GNU radio using the following flow:
+A similar operation can be achieved in GNU radio using the following flow:
 
 FM ---> |Filter out the signal of interest| ---> |Resample Signal| ---> |Quadrature Demodulator|--->|Lowpass Filter| ---> Audio Signal
+
+The quadrature demodulator uses a different technique than differentiating the signal since the incoming data is complex, but the end result is the same, where the output is proportional to the change in frequency of the input. (That gnuradio block actually has a good explanation of the math in the description. )   
 
 **Hints:**
 
