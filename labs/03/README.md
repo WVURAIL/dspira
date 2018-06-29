@@ -56,6 +56,7 @@ f(x) =
 $$ 
 
 Which has a period of $$2\pi$$.  For an arbitrary period P:
+
 $$
 f(x) = 
   \begin{cases} 
@@ -65,13 +66,15 @@ f(x) =
 $$
 
 
-The corresponding Fourier series of the square wave
+The corresponding Fourier series of the square wave with period $$2\pi$$
+
 $$
 f(x) = \frac{1}{2} + \sum_{n=1}^{\infty} \frac{2}{(2k-1)\pi} sin[(2k-1)x] \\
 \ \ \ = \frac{1}{2} + \frac{2}{\pi}sin(x) + \frac{2}{3\pi}sin(3x) + \frac{2}{5\pi}sin(5x) + \frac{2}{7\pi}sin(7x) + ... + + \frac{2}{n\pi}sin(nx)\ (\ n\ is\ odd)
 $$
 
 and for arbirary period P:
+
 $$
 f(x) = \frac{1}{2} + \sum_{n=1}^{\infty} \frac{2}{(2k-1)\pi} sin[\frac{2\pi}{P}(2k-1)x] \\
 \ \ \ = \frac{1}{2} + \frac{2}{\pi}sin(\frac{2\pi}{P}x) + \frac{2}{3\pi}sin(\frac{2\pi}{P}3x) + \frac{2}{5\pi}sin(\frac{2\pi}{P}5x) + \frac{2}{7\pi}sin(\frac{2\pi}{P}7x) + ... + + \frac{2}{n\pi}sin(\frac{2\pi}{P}nx)\ (\ n\ is\ odd)
@@ -83,9 +86,10 @@ Use more and more sources to add additional sinusoids and see what waveform you 
 
 
 It should look similar to this:
+
 ![square wave](img/1.png)
 
-This type of analysis is important for digital design in that most digital signals are square waves, representing either a 1 or a zero.  So if your signal is at 10MHz, how fast should the electronics and design work?
+This type of analysis is important for digital design in the sense that most digital signals are square waves, representing either a 1 or a zero.  So if your signal is at 10MHz, how fast should the electronics and design work?
 
 
 [↑ Go to the Top of the Page](#)
@@ -149,7 +153,7 @@ where $$X(\omega)$$ is the Fourier transform and $$\omega_o = \frac{2\pi}{T}$$
 
 ### 3.3.1. Fourier Transform
 
-Use the [Square Wave](../03/#13-a-sqaure-wave) and the [Triangle Wave](../03/#14-a-triangle-wave) flowgraphs from the previous exercise.
+Use the [Square Wave](../03/#321-a-sqaure-wave) and the [Triangle Wave](../03/#322-a-triangle-wave) flowgraphs from the previous exercise.
 
 First use a ``signal source`` block to make a square wave and feed the signal into a ``QT frequency sink``
 
