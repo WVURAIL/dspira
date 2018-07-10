@@ -86,7 +86,7 @@ The flow diagram of an FIR filter is shown below, $$ x[n]\ and\ y[n] $$ are inpu
 
 FIR filters are mathematically fast and relatively easier to design and implement digitally. 
 
-We shall design FIR filters using the graphical tool that ships with gnuradio. In the taskbar (move mouse to the top of the window) click on ``tools`` and then ``filter design tool``
+We shall design FIR filters using the graphical tool that ships with gnuradio. This tool requires an additional software dependency to work which can be installed by opening a new termina window and entering``sudo apt install python-qwt5-qt4``. Once the dependency is installed, in the taskbar (move mouse to the top of the window) click on ``tools`` and then ``filter design tool``
 
 ![filterdesign](img/fdt.png)
 
