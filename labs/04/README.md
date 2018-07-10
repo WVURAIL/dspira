@@ -50,7 +50,7 @@ we can then create filter that when the signal passes through it changes the amp
 
 ## 4.2. Moving Average Filter
 
-A moving average filter does exactly what its name suggests. It is very commonly used filter and it's very simple in its implementation. It performs optimally in the time domain particularly functioning to reduce random noise. It is mathematically represented as: 
+A moving average filter does exactly what its name suggests. It is a very commonly used filter and very simple in its implementation. It performs optimally in the time domain particularly functioning to reduce random noise. It is mathematically represented as: 
 
 $$
 x_{n-point-average} = \frac{x[M]+x[M-1]+ . . . + x[M-(n-1)]}{n} \\
@@ -63,7 +63,7 @@ $$
 
 ### 4.2.1. Exercise 1: Noise Reduction
 
-Use a sine wave from the ``signal source`` and add a noise to it (Discussed in Lab 1 and 1.1). Pass this to a 8-tap moving average filter. The flowgraph should resemble this diagram:
+Use a sine wave from the ``signal source`` and add noise to it (Discussed in Lab 1). Pass this to a 8-tap moving average filter. The flowgraph should resemble this diagram:
 
 ![8 point mvngavg](img/2.png)
 
@@ -107,7 +107,7 @@ A chord is the sound produced by playing three  or more notes together. We can u
 
 ![audio to sink](img/audiotosink.png)
 
-Once ready, let's play the C-Major chord. It is the C (= 261.63Hz) , E (= 329.63Hz) and G (= 392Hz). Notice that the frequency spectrum shows more than just the three fundamental frequencies. They show the harmonics of the three frequencies mentioned above! Recall from Fourier series , these harmonics including the fundamental frequencies when added together makes the waveform that forms the music note. The amplitudes of these harmonics for the same note is different for different instruments because the "timber" i.e. the waveform produced by every instrument is different!
+Once ready, let's play the C-Major chord. It is the C (= 261.63Hz) , E (= 329.63Hz) and G (= 392Hz). Notice that the frequency spectrum shows more than just the three fundamental frequencies. They show the harmonics of the three frequencies mentioned above! Recall from Fourier series , these harmonics including the fundamental frequencies when added together makes the waveform that forms the music note. The amplitudes of these harmonics for the same note is different for different instruments because the "timbre" i.e. the waveform produced by every instrument is different!
 
 Now let us extract just the fundamental frequencies by implementing low pass filters to have:
 
@@ -138,7 +138,7 @@ Let us try and construct a simple digital equalizer. I shall present the primer 
 
 You can of course have more than three frequency channels, you can google commonly used frequency divisions in commercial equalizers.
 
-**NOTE**: Ancient stereos/cassette players and old audio workstations in music studios have analog equalizers designed using analog filters. If you look at the frequency sink of the output of our digital Equalizer you can observe that the filters work *really really* well. Digital filters can be very very precisely designed. The roll-off(or transition width) can be as narrow as you want!
+**NOTE**: "Ancient" stereos/cassette players and old audio workstations in music studios have analog equalizers designed using analog filters. If you look at the frequency sink of the output of our digital Equalizer you can observe that the filters work *really really* well. Digital filters can be very very precisely designed. The roll-off(or transition width) can be as narrow as you want!
 
 [↑ Go to the Top of the Page](#)
 
