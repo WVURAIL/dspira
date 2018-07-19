@@ -79,5 +79,19 @@ Blocks should now be available in gnuradio-companion.
 
 Blocks should now be available in gnuradio-companion, in the 'radio_astro' section.
 
+
+----
+### Updating software
+
+```bash
+# go to gr-radio_astro directory
+git pull # pull updated changes to software
+cd build # change working directory to build
+cmake ..
+make
+sudo make install 
+```
+this will install the updated software
+
 ----
 [↑ Go to the Top of the Page](#) ......[Next Lab](../07)
