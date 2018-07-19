@@ -19,6 +19,13 @@ Lets use our telescopes!
 
 ## 7.1  Data Processing of telescope files with Python
 
+*Install Python*
+
+```bash
+sudo apt install ipython ipython3
+sudo apt install jupyter
+```
+
 Depending on the kind of sink you use you have different kind of data formats - if you used the file sink defualt block the data is saved with``float32`` data in 4096 point vectors encoded in binary. You can reduce that data as follows:
 
 Open IPython from the folder/directory where your data is saved:
