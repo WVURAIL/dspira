@@ -74,6 +74,7 @@ Blocks should now be available in gnuradio-companion.
   
  ```bash
  sudo pip install 'h5py==2.7.0'
+ sudo pip install pyephem
  ```
 
 Blocks should now be available in gnuradio-companion, in the 'radio_astro' section.
