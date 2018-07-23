@@ -1,6 +1,5 @@
-# Lecture Notes -- DSPIRA 2017
+# Lecture Notes -- DSPIRA 2017 -- [Astronomy](http://wvurail.org/dspira/lectures/astronomy/) 
 
-- [Astronomy](http://wvurail.org/dspira/lectures/astronomy/) 
 - [Scientific Notation, why, what, when](https://github.com/WVURAIL/dspira/blob/master/lectures/astronomy/LDA_Lectures/RET_DSP_Intro.pdf)
 - [Motion](https://github.com/WVURAIL/dspira/blob/master/lectures/astronomy/LDA_Lectures/RET_DSP_MotionOfSky1.pdf)
 - [Gravity](https://github.com/WVURAIL/dspira/blob/master/lectures/astronomy/LDA_Lectures/RET_DSP_Gravity.pdf)
