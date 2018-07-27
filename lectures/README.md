@@ -1,20 +1,39 @@
-# Lecture Notes – DSPIRA 2017 – [Astronomy](http://wvurail.org/dspira/lectures/astronomy/) 
+---
+layout: default
+---
+<em> Click to Download </em>
 
-- [Scientific Notation, why, what, when](https://github.com/WVURAIL/dspira/blob/master/lectures/astronomy/LDA_Lectures/RET_DSP_Intro.pdf)
-- [Motion](https://github.com/WVURAIL/dspira/blob/master/lectures/astronomy/LDA_Lectures/RET_DSP_MotionOfSky1.pdf)
-- [Gravity](https://github.com/WVURAIL/dspira/blob/master/lectures/astronomy/LDA_Lectures/RET_DSP_Gravity.pdf)
-- [Time and planning](https://github.com/WVURAIL/dspira/blob/master/lectures/astronomy/LDA_Lectures/RET_SCP_Time_Planning_Observations.pdf)
-- [Light and Telescopes](https://github.com/WVURAIL/dspira/blob/master/lectures/astronomy/DJP_Lectures/RET_0706.pdf) 
-- [Doppler Effect, Telescopes. Stars](https://github.com/WVURAIL/dspira/blob/master/lectures/astronomy/DJP_Lectures/RET_0707.pdf) 
-- [Stars](https://github.com/WVURAIL/dspira/blob/master/lectures/astronomy/DJP_Lectures/RET_0710.pdf)
-- [Stellar Evolution](https://github.com/WVURAIL/dspira/blob/master/lectures/astronomy/DJP_Lectures/RET_0711.pdf)
-- [Discovery of the milky way](https://github.com/WVURAIL/dspira/blob/master/lectures/astronomy/DJP_Lectures/RET_0712.pdf)
-- [All Galaxy Great and Small](https://github.com/WVURAIL/dspira/blob/master/lectures/astronomy/DJP_Lectures/RET_0713.pdf)
-- [Galaxy Interaction/Dark Matter](https://github.com/WVURAIL/dspira/blob/master/lectures/astronomy/DJP_Lectures/RET_0714.pdf)
-- [Dark Matter](https://github.com/WVURAIL/dspira/blob/master/lectures/astronomy/LDA_Lectures/RET_DSP_Dark_Matter.pdf)
-- [Galaxy Rotation](https://github.com/WVURAIL/dspira/blob/master/lectures/astronomy/LDA_Lectures/RET_DSP_Rotation_Curves.pdf)
 
-## Instructors 
+<h1> DSPIRA 2018 </h1>
+
+<h2> Astronomy </h2>
+
+<a href="https://github.com/WVURAIL/dspira/blob/master/lectures/2018/Astronomy/1.pptx">Introduction to Astronomy</a><br>
+<a href="https://github.com/WVURAIL/dspira/blob/master/lectures/2018/Astronomy/2.pptx">Motion of the Sky</a><br>
+<a href="https://github.com/WVURAIL/dspira/blob/master/lectures/2018/Astronomy/2hw.pdf">Homework</a><br>
+<a href="https://github.com/WVURAIL/dspira/blob/master/lectures/2018/Astronomy/3.pptx">Time, Planning Observations and Coordinate Systems</a><br>
+<a href="https://github.com/WVURAIL/dspira/blob/master/lectures/2018/Astronomy/4.pptx">Dark Matter</a><br>
+<a href="https://github.com/WVURAIL/dspira/blob/master/lectures/2018/Astronomy/5.pptx">Galactic Rotation</a><br>
+<a href="https://github.com/WVURAIL/dspira/blob/master/lectures/2018/Astronomy/5.pptx">Observation</a><br>
+
+<hr>
+
+<h2> Digital Signal Processing  </h2>
+
+<a href="https://github.com/WVURAIL/dspira/blob/master/lectures/2018/DSP/lecture1.pptx">Signal Processing for Radio Astronomy Applications</a><br>
+<a href="https://github.com/WVURAIL/dspira/blob/master/lectures/2018/DSP/lecture2.pptx">Periodic and Non-Periodic Signals</a><br>
+<a href="https://github.com/WVURAIL/dspira/blob/master/lectures/2018/DSP/lecture3.pptx">Periodic Content of Non-Periodic Signals</a><br>
+<a href="https://github.com/WVURAIL/dspira/blob/master/lectures/2018/DSP/lecture3pr.pptx">Fourier Series Project Overview</a><br>
+<a href="https://github.com/WVURAIL/dspira/blob/master/lectures/2018/DSP/lecture4.pptx">Filter</a><br>
+<a href="https://github.com/WVURAIL/dspira/blob/master/lectures/2018/DSP/lecture5.pptx">Sampling</a><br>
+<a href="https://github.com/WVURAIL/dspira/blob/master/lectures/2018/DSP/lecture6.pptx">Lecture 6</a><br>
+<a href="https://github.com/WVURAIL/dspira/blob/master/lectures/2018/DSP/imagnconv.pdf">Imaging and Deconvolution</a><br>
+
+<hr>
+
+<h1> <a href="https://github.com/WVURAIL/dspira/blob/master/lectures/astronomy/">Lecture Notes – DSPIRA 2017 – Astronomy</a></h1>
+
+<h3> Instructors </h3>
 
 DSP: 
 
