@@ -1,6 +1,14 @@
 ---
 layout: default
 ---
+
+| Lectures                                          	| Demonstrations                                                     	| Laboratory Exercises                                                                              	|
+|---------------------------------------------------	|--------------------------------------------------------------------	|---------------------------------------------------------------------------------------------------	|
+| Introduction to Signals                           	| 1. Sampling 2. Mixing 3. Mixing (Frequency) 4. Histograms          	|  1. Installing GNU Radio 2. Getting Started with GNU Radio 3. Making your first GNU Radio program 	|
+|  Periodic and Non-Periodic Signals Fourier Series 	| 1. Fourier Analysis in GNU Radio 2. Fourier Analysis another Demo  	|                                                                                                   	|
+|                                                   	|                                                                    	|                                                                                                   	|
+
+
 <em> Click to Download </em>
 
 
