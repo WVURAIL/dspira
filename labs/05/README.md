@@ -5,42 +5,20 @@ As we observed in the previous labs and theory with their corresponding exercise
 <!-- TOC -->
 
 - [5. Fourier Analysis - Expert Mode!](#5-fourier-analysis---expert-mode)
-    - [5.1. Fourier Transform Pairs](#51-fourier-transform-pairs)
-    - [5.2. IQ signals *or* What is up with all the Complex Numbers](#52-iq-signals-or-what-is-up-with-all-the-complex-numbers)
-    - [5.3. Fast Fourier Transforms (FFT)](#53-fast-fourier-transforms-fft)
-        - [5.3.1. 8 Point Fast Fourier Transform **[OPTIONAL]**](#531-8-point-fast-fourier-transform-optional)
-    - [5.4. Fourier Analysis in Radio Astronomy: A Spectrometer](#54-fourier-analysis-in-radio-astronomy-a-spectrometer)
-    - [5.5. The Spectrometer's purpose](#55-the-spectrometers-purpose)
-    - [5.6. The Window Field in the gnuradio FFT block](#56-the-window-field-in-the-gnuradio-fft-block)
-    - [5.7. Spectral Leakage & Polyphase Filter Bank (PFB)](#57-spectral-leakage--polyphase-filter-bank-pfb)
-    - [5.8. Final Upgrade: PFB Spectrometer](#58-final-upgrade-pfb-spectrometer)
-    - [5.9. Saving Data](#59-saving-data)
+    - [5.1. IQ signals *or* What is up with all the Complex Numbers](#52-iq-signals-or-what-is-up-with-all-the-complex-numbers)
+    - [5.2. Fast Fourier Transforms (FFT)](#53-fast-fourier-transforms-fft)
+        - [5.2.1. 8 Point Fast Fourier Transform **[OPTIONAL]**](#531-8-point-fast-fourier-transform-optional)
+    - [5.3. Fourier Analysis in Radio Astronomy: A Spectrometer](#54-fourier-analysis-in-radio-astronomy-a-spectrometer)
+    - [5.4. The Spectrometer's purpose](#55-the-spectrometers-purpose)
+    - [5.5. The Window Field in the gnuradio FFT block](#56-the-window-field-in-the-gnuradio-fft-block)
+    - [5.6. Spectral Leakage & Polyphase Filter Bank (PFB)](#57-spectral-leakage--polyphase-filter-bank-pfb)
+    - [5.7. Final Upgrade: PFB Spectrometer](#58-final-upgrade-pfb-spectrometer)
+    - [5.8. Saving Data](#59-saving-data)
                     - [Image Credits](#image-credits)
 
 <!-- /TOC -->
 
-## 5.1. Fourier Transform Pairs
-
-Let us revisit Fourier transform by exploring the concept through their various properties. Refer to this [Table of Fourier Transform Pairs and Properties](http://www.ws.binghamton.edu/fowler/fowler%20personal%20page/EE301_files/FT%20Tables_rev3.pdf) and implement in gnuradio the following :
-
-1. Fourier Transform a Sinusoid and 
-2. Fourier transform of the sinusoid delayed by one sample
-3. The output of the Fourier transform of a constant source of the value 1 is a dirac delta function. Find the FT of the dirac delta function and the dirac delta function time delayed.
-4. Fourier transform of $$ e^{j\omega_o t} $$
-5. Demonstrate the convolution property (use square wave) *Hint: Inverse Fourier transform can be implemented by choosing ``reverse`` in the ``Forward/Reverse`` Option. Hint: The output should be a triangle wave*
-6. Fourier transform  a square pulse of different widths (i.e. tau *refer lab 1.3.1*)
-
-Try to implement other properties from the link of fourier transform pairs and properties as well. 
-
-**NOTE: Use the ``FFT`` Block for the above exercises. Use complex sources. The `FFT` block takes an input vector and outputs a complex vector. Use to appropriate stream to vector and complex to real/imaginary convertor blocks where necessary**
-
-**The power of the FFT output is given by multiplying the complex output of the FFT by its complex conjugate**
-
-**Use vector sinks for signals that 'vectors' i.e. data comes out in chunks of a particular matrix size(vector length)**
-
-[↑ Go to the Top of the Page](#)
-
-## 5.2. IQ signals *or* What is up with all the Complex Numbers
+## 5.1. IQ signals *or* What is up with all the Complex Numbers
 
 If you remember from the [lab 2 introduction](../02/#21-introduction) an SDR dongle passes the incoming signal through a mixer where the receiver sets the frequency you observe by setting the "LO" frequency which is mixed (multiplied) with the incoming signal.  The signal is actually mixed with 2 LO's, one cosine wave and one sine wave.  This is called quadrature sampling, and is done so that it is possible to distinguish a signal that is some frequency(say 2MHz) below the "LO" frequency, or 2MHz above the LO frequency.  With just a single mixing and one measurement, one just cannot distinguish between a signal at those two frequencies.
 
@@ -61,7 +39,7 @@ multiplied signals.  With just the single incoming tone, demonstrate that you ca
 
 [↑ Go to the Top of the Page](#)
 
-## 5.3. Fast Fourier Transforms (FFT)
+## 5.2. Fast Fourier Transforms (FFT)
 
 The Discrete Fourier Transform for N samples is given by:
 
@@ -77,7 +55,7 @@ Fast Fourier transform algorithms drastically reduce the computational complexit
 
 [↑ Go to the Top of the Page](#)
 
-### 5.3.1. 8 Point Fast Fourier Transform **[OPTIONAL]**
+### 5.2.1. 8 Point Fast Fourier Transform **[OPTIONAL]**
 
 The DFT implemented through a Cooley-Tukey Decimation in frequency FFT algorithm has the flowgraph shown below.
 ![8pfft](img/fft8p.png)
@@ -86,7 +64,7 @@ Use appropriate Constant multiplies and and adders to construct the above in gnu
 
 [↑ Go to the Top of the Page](#)
 
-## 5.4. Fourier Analysis in Radio Astronomy: A Spectrometer
+## 5.3. Fourier Analysis in Radio Astronomy: A Spectrometer
 
 You now have the tools necessary to create the digital signal processing for a Spectrometer for a radio telescope.  A spectrometer:
 
@@ -98,7 +76,7 @@ Use GnuRadio to create the signal processing chain to achieve this. Use an osmoc
 
 [↑ Go to the Top of the Page](#)
 
-## 5.5. The Spectrometer's purpose
+## 5.4. The Spectrometer's purpose
 
 As mentioned above, A spectrometer is used to record and measure the spectral content of signals, such as radio waves received from astronomical sources. Specifically, a spectrometer measures the power spectral density (PSD, measured in units of $$W Hz^{−1}$$) of a signal. Analysis of spectral content can reveal details of radio sources, as well as properties of the intervening medium like galactic neutral hydrogen. The Power Spectral Density is given by the Wiener-Kinchin theorem for wide sense stationary signals as: 
 
@@ -121,7 +99,7 @@ There are therefore two distinct classes of spectrometers: 1) ones that approxim
 
 The one we made above is a Fourier transform filter bank. A filter bank is simply an array of band-pass filters, designed to split an input signal into multiple components . A spectrometer is referred to as a *analysis filterbank* where the output of each filter is squared and averaged.
 
-## 5.6. The Window Field in the gnuradio FFT block
+## 5.5. The Window Field in the gnuradio FFT block
 
 The spectrometer we constructed effectively works as a array of band-pass FIR filters. If you recall FIR filters their design involves something called window-functions designed to optimize the filter response. The Discrete Fourier transform as it were uses the rectangular window function across each frequency channel. The response is non-ideal leading to spectral leakage i.e. the signal showing up in neighboring frequency channels. Below is a Demonstration of DFT leakage - a tone at 5.1MHz, sampled at 128MHz, and Fourier-transformed with 64 points, appears to varying levels in all the output frequency bins.
 
@@ -143,7 +121,7 @@ In your spectrometer flowgraph, change the window field in the FFT block and obs
 
 [↑ Go to the Top of the Page](#)
 
-## 5.7. Spectral Leakage & Polyphase Filter Bank (PFB)
+## 5.6. Spectral Leakage & Polyphase Filter Bank (PFB)
 
 Despite the appropriate windowing, spectral leakage persists, moreover there is something called a scalloping loss. Scalloping loss is the loss in energy between frequency bin centers due to the non-flat nature of the single-bin frequency response. 
 
@@ -171,7 +149,7 @@ Where, where the sub-filter coefficients $$h(n + pN)$$ correspond to what are ca
 
 [↑ Go to the Top of the Page](#)
 
-## 5.8. Final Upgrade: PFB Spectrometer
+## 5.7. Final Upgrade: PFB Spectrometer
 
 Add the polyphase filters to your spectrometer just before taking the FFT. Refer to the diagram above, the dotted squares are simply band-pass FIR filters. Use a hann/hamming window. 
 
@@ -201,7 +179,7 @@ custom_window[vec_length:2*vec_length]
 custom_window[0:vec_length]
 ```
 
-## 5.9. Saving Data
+## 5.8. Saving Data
 
 Save the spectrometer data for science! (Use File Sink)
 
