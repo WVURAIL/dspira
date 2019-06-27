@@ -9,6 +9,9 @@ layout: default
 |                                                   	|                                                                    	|                                                                                                   	|
 
 
+1. [Astronomy Lecture 1](https://mediasitecs.lib.wvu.edu/Mediasite1/Play/03a2e48acc71480d8671fe86e49fc8291d)
+2. [Astronomy Lecture 2](https://mediasitecs.lib.wvu.edu/Mediasite1/Play/9a78180f099e42cb83f3e7dcc5ecaa901d)
+
 <em> Click to Download </em>
 
 
