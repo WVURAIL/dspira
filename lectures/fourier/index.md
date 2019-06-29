@@ -2,19 +2,9 @@
 layout: Default
 ---
 
-<head>
-    </script>
-	<title>Fourier Analysis</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-    <meta name="viewport" content="width=device-width" />
-</head>
-<body>
-<header>
-	<h1>Fourier Analysis</h1>
-</header>
-
+<title>Fourier Analysis</title>
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width" />
 
 # Fourier Analysis
 
