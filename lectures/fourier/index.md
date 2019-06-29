@@ -1,45 +1,29 @@
-----
+---
 layout: Default
-----
+---
 
-<html>
 <head>
     </script>
 	<title>Fourier Analysis</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link href="css/styles.css" rel="stylesheet" type="text/css">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
 </head>
 <body>
 <header>
 	<h1>Fourier Analysis</h1>
-	<p></p>
 </header>
-<script src="main.bundle.js"></script>
-</body>
-</html>
 
 
-Fourier transforms are a tool used in a whole bunch of different things. This is an explanation of what a Fourier transform does, and some different ways it can be useful. And how you can make pretty things with it, like this thing:
+# Fourier Analysis
 
-<canvas id="self-draw" class="sketch" width=500 height=500></canvas>
+We're going to leave the mathematics and equations out of it on this page!
 
-I'm going to explain how that animation works, and along the way explain Fourier transforms!
+## So what is this Fourier Analysis?
 
-By the end you should have a good idea about
-- What a Fourier transform does
-- Some practical uses of Fourier transforms
-- Some pointless but cool uses of Fourier transforms
+Put simply, the Fourier transform is a way of splitting a signal/wave/data up into a bunch of sine waves. 
 
-We're going to leave the mathematics and equations out of it for now. There's a bunch of interesting maths behind it, but it's better to start with what it actually does, and why you'd want to use it first. If you want to know more about the how, there's some further reading suggestions below!
-
-## So what is this thing?
-
-Put simply, the Fourier transform is a way of splitting something up into a bunch of sine waves. As usual, the name comes from some person who lived a long time ago called Fourier.
-
-Let’s start with some simple examples and work our way up. First up we're going to look at waves - patterns that repeat over time.
 
 Here’s an example wave:
 
@@ -131,3 +115,6 @@ Another article explaining how you can use epicycles to draw a path, explained f
 And of course, the Wikipedia article is pretty good too.
 
 This webpage has been adapted from an open-source repository, you can check out the code on [GitHub](https://github.com/Jezzamonn/fourier)! 
+
+<script src="main.bundle.js"></script>
+</body>
