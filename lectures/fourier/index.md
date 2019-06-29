@@ -1,7 +1,7 @@
 ---
 layout: Default
 ---
-
+<html>
 <title>Fourier Analysis</title>
 <link href="css/styles.css" rel="stylesheet" type="text/css">
 <meta name="viewport" content="width=device-width" />
@@ -107,4 +107,4 @@ And of course, the Wikipedia article is pretty good too.
 This webpage has been adapted from an open-source repository, you can check out the code on [GitHub](https://github.com/Jezzamonn/fourier)! 
 
 <script src="main.bundle.js"></script>
-</body>
+</html>
