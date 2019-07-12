@@ -8,7 +8,7 @@ layout: default
 |-----|-----|-----|
 | [Introduction to Signals](https://mediasitecs.lib.wvu.edu/Mediasite1/Play/4ff26b2d1e334c199f9644f7c21f4f8d1d) | 1. [Sampling](https://mediasitecs.lib.wvu.edu/Mediasite1/Play/3a1842a284284aa5b08b533e3af825b71d) <br>2. [Mixing](https://mediasitecs.lib.wvu.edu/Mediasite1/Play/040268aefe154838a6b16d5890a526331d) <br>3. [Mixing (Frequency)](https://mediasitecs.lib.wvu.edu/Mediasite1/Play/ac80f7e2da8a4bf5856d7a1fa61053361d) <br> 4. [Histograms](https://mediasitecs.lib.wvu.edu/Mediasite1/Play/8de0d7fd64784c239f6b94b14161218e1d)          	|  1. [Installing GNU Radio](https://mediasitecs.lib.wvu.edu/Mediasite1/Play/1150c64dea0e41e5823ad63496e629d71d) <br> 2. [Getting Started with GNU Radio](https://mediasitecs.lib.wvu.edu/Mediasite1/Play/b3ab05640dee404bb30f9b84f2d25afd1d) <br> 3. [Making your first GNU Radio program](https://mediasitecs.lib.wvu.edu/Mediasite1/Play/4d9cf034b5d1473b9467f69a15e1fcd31d) <br> 4. [Best GNURadio Practices](https://mediasitecs.lib.wvu.edu/Mediasite1/Play/3d2c6810d9b847c19b087c23e521f26b1d) <br> 5. [ Beautify your GNURadio GUI](https://mediasitecs.lib.wvu.edu/Mediasite1/Play/622949d398ef4d55be1e6ea19845b3071d)	|
 |  1. [Periodic and Non-Periodic Signals Fourier Series](https://mediasitecs.lib.wvu.edu/Mediasite1/Play/bf73dba28e29455f9a966ce64f94042a1d)  <br> 2. [Fourier Series](https://mediasitecs.lib.wvu.edu/Mediasite1/Play/d9adb334770a49e089a77f7b0a70dea31d)	<br> 3. [Frequency Content of Non-Periodic Signals](https://mediasitecs.lib.wvu.edu/Mediasite1/Play/1d689eed4e1740d4b48dd7cc902e33281d) | 1. [Fourier Analysis in GNU Radio](https://mediasitecs.lib.wvu.edu/Mediasite1/Play/2407d3c94138460894e4357070b576281d) <br> 2. [Fourier Analysis - another Demo](https://mediasitecs.lib.wvu.edu/Mediasite1/Play/057d930e6e1a4bb2ac80c6752b748e751d)  	| [The FFT Block]() |
-| [Filters](https://mediasitecs.lib.wvu.edu/Mediasite1/Play/6aea73645b554d3099a5e32831d445a01d)| [Filters GNURadio Demo]()  | 1. [Filter Design Tool]() <br> 2. [Different Filter Blocks]()  |
+| [Filters](https://mediasitecs.lib.wvu.edu/Mediasite1/Play/6aea73645b554d3099a5e32831d445a01d)| [Filters GNURadio Demo]()  | 1. [Designing Filters in GNURadio]() |
 
 # Astronomy Lectures 
 
@@ -17,7 +17,7 @@ layout: default
 3. [Astronomy Lecture 3](https://mediasitecs.lib.wvu.edu/Mediasite1/Play/1f5b8658b1e04f4e9aef71c9bf8d4d121d)
 4. Astronomy Lecture 4 - Planetarium Lecture
 5. [Astronomy Lecture 5](https://mediasitecs.lib.wvu.edu/Mediasite1/Play/d474f6f0d1714acf9b89d1b884d30c551d)
-6. [Astronomy Lecture 6](https://mediasitecs.lib.wvu.edu/Mediasite1/Play/720042133bd34738af0d92c296f562e31d)
+6. [Astronomy Lecture 6]()
 7. [Astronomy Lecture 7]()
 
 
