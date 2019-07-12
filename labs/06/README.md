@@ -2,14 +2,7 @@
 
 That's been a lot of Digital Signal Processing so let us just go ahead and build our radio telecope already!
 
-<!-- TOC -->
-
-- [A Radio Telescope](#a-radio-telescope)
-    - [6.1. Horn Antenna](#61-horn-antenna)
-    - [6.2  21cm Low Noise Amplifier](#62--21cm-low-noise-amplifier)
-    - [6.3 Spectrometer.](#63-spectrometer)
-
-<!-- /TOC -->
+<!-- TOC -->autoauto- [A Radio Telescope](#a-radio-telescope)auto    - [6.1. Horn Antenna](#61-horn-antenna)auto    - [6.2  21cm Low Noise Amplifier](#62--21cm-low-noise-amplifier)auto    - [6.3 Spectrometer.](#63-spectrometer)auto        - [Updating software](#updating-software)autoauto<!-- /TOC -->
 
 ## 6.1. Horn Antenna 
 
@@ -73,8 +66,7 @@ Blocks should now be available in gnuradio-companion.
  **Additionally install h5py**
   
  ```bash
- sudo pip install 'h5py==2.7.0'
- sudo pip install pyephem
+ sudo apt install python-h5py
  ```
 
 Blocks should now be available in gnuradio-companion, in the 'radio_astro' section.
