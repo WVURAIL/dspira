@@ -6,23 +6,23 @@ This page shall guide you through our primary tool -- GNU Radio. GNU Radio is ve
 
 <!-- TOC -->
 
-- [1. Introduction to GNU Radio and Signals](#1-introduction-to-gnu-radio-and-signals)
-    - [1.1. Installation Guide](#11-installation-guide)
-    - [1.2. GQRX - It's cool](#12-gqrx---its-cool)
-        - [1.2.1. Getting Started with GNU Radio](#121-getting-started-with-gnu-radio)
-    - [1.3. Let's get Familiar](#13-lets-get-familiar)
-        - [1.3.1. A Cosine Waveform generator](#131-a-cosine-waveform-generator)
-        - [1.3.2. A Cosine Waveform Generator with Variable Frequency and Sound](#132-a-cosine-waveform-generator-with-variable-frequency-and-sound)
-        - [1.3.3. A General Waveform Generator](#133-a-general-waveform-generator)
-    - [1.4. GNU Radio and Python](#14-gnu-radio-and-python)
-        - [1.4.1. Arbitrary Function generation](#141-arbitrary-function-generation)
-    - [1.5. Note on the Frequency Display](#15-note-on-the-frequency-display)
-    - [1.6. Exercises](#16-exercises)
-    - [1.7. Random Discrete Signals](#17-random-discrete-signals)
-    - [1.8. Sampling](#18-sampling)
-    - [1.9. Histograms](#19-histograms)
-    - [1.10. GnuRadio Companion Example.](#110-gnuradio-companion-example)
-    - [1.11. Make your own gaussian noise block](#111-make-your-own-gaussian-noise-block)
+- [1. Introduction to GNU Radio and Signals](#1-Introduction-to-GNU-Radio-and-Signals)
+  - [1.1. Installation Guide](#11-Installation-Guide)
+  - [1.2. GQRX - It's cool](#12-GQRX---Its-cool)
+    - [1.2.1. Getting Started with GNU Radio](#121-Getting-Started-with-GNU-Radio)
+  - [1.3. Let's get Familiar](#13-Lets-get-Familiar)
+    - [1.3.1. A Cosine Waveform generator](#131-A-Cosine-Waveform-generator)
+    - [1.3.2. A Cosine Waveform Generator with Variable Frequency and Sound](#132-A-Cosine-Waveform-Generator-with-Variable-Frequency-and-Sound)
+    - [1.3.3. A General Waveform Generator](#133-A-General-Waveform-Generator)
+  - [1.4. GNU Radio and Python](#14-GNU-Radio-and-Python)
+    - [1.4.1. Arbitrary Function generation](#141-Arbitrary-Function-generation)
+  - [1.5. Note on the Frequency Display](#15-Note-on-the-Frequency-Display)
+  - [1.6. Exercises](#16-Exercises)
+  - [1.7. Random Discrete Signals](#17-Random-Discrete-Signals)
+  - [1.8. Sampling](#18-Sampling)
+  - [1.9. Histograms](#19-Histograms)
+  - [1.10. GnuRadio Companion Example.](#110-GnuRadio-Companion-Example)
+  - [1.11. Make your own gaussian noise block](#111-Make-your-own-gaussian-noise-block)
 
 <!-- /TOC -->
 
@@ -33,20 +33,20 @@ It is relative very easy to install *if you are installing on Linux*. We would r
 Open terminal, ( open by right clicking on desktop and choosing open terminal from menu)
 
 ```bash
-	sudo apt-get install git
-	sudo apt-get install libyaml-dev
-	sudo apt-get install libssl-dev
-	sudo apt-get install python-dev
-	sudo apt-get install python-pip
-	sudo apt-get install python-apt
+	sudo apt install git
+	sudo apt install libyaml-dev
+	sudo apt install libssl-dev
+	sudo apt install python-dev
+	sudo apt install python-pip
+	sudo apt install python-apt
 	sudo pip install pyopengl pyopengl_accelerate
 ```
 
 
 ```bash
-	sudo apt-get install gnuradio gr-osmosdr
-	sudo apt-get install limesuite airspy
-	sudo apt-get install gqrx-sdr
+	sudo apt install gnuradio gr-osmosdr
+	sudo apt install limesuite airspy
+	sudo apt install gqrx-sdr
 ```
 
 Restart Computer once everything is installed for good measure.
