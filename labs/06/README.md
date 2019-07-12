@@ -67,6 +67,7 @@ Blocks should now be available in gnuradio-companion.
   
  ```bash
  sudo apt install python-h5py
+ sudo apt install pyhton-pyephem
  ```
 
 Blocks should now be available in gnuradio-companion, in the 'radio_astro' section.
