@@ -80,9 +80,70 @@ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 git pull
 ```
 
-## Some unspoken rules
+### Some unspoken rules
 
 - Any files in the repository that you change should be copied to another location *before* making any changes
 
+### Oh no I tried to pull but it is angry, i may have ignored the rule
 
-- 
+```
+Updating d0ebfc5..0b10e81
+error: Your local changes to the following files would be overwritten by merge:
+	examples/spectrometer_w_cal.grc
+Please commit your changes or stash them before you merge.
+Aborting
+```
+
+- Your changes on a file are spotted by the git software and it wants you to save your checkpoint or commit it or stash it away to forget about it
+- ideally you want to commit changes but if you are not authorised to push commits and you just want to get the updates software you stash it away.
+- In terminal type:
+
+```
+git stash
+```
+
+- If you have not used git before it wanted to documnet you as the changer on the ledger you shoud get this:
+
+```*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'human@howard-ThinkPad-L390-Yoga.(none)')
+Cannot save the current index state
+
+```
+
+- Run this:
+```
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+```
+- Substitute your name and email
+
+- Run ``` git stast ``` again
+- Run ``` git pull again ```
+
+
+# Updating GNURadio software
+
+- Open Terminal.
+- Change the current working directory to the location of the software you want to update
+```
+cd gr-radio_astro
+git pull
+cd build
+cmake ..
+make
+sudo make install
+```
+
+
+
+
+
