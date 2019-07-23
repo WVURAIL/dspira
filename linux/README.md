@@ -46,3 +46,43 @@ Other requently used commands:
 |top |	Displays the resources being used on your system. Press q to exit. |
 |touch filename |	Create an empty file with the specified name. |
 |who [options] |	Display who is logged on. |
+
+
+# git it, git it good
+
+## Get a copy of the repository 
+
+- Open Terminal.
+- Change the current working directory to the location where you want the cloned directory to be made.
+- Type git clone, and then paste the URL you copied in Step 2.
+
+'''
+git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+'''
+
+- Press Enter. Your local clone will be created.
+
+'''
+git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+> Cloning into `Spoon-Knife`...
+> remote: Counting objects: 10, done.
+> remote: Compressing objects: 100% (8/8), done.
+> remove: Total 10 (delta 1), reused 10 (delta 1)
+> Unpacking objects: 100% (10/10), done.
+'''
+
+## Get updated changes from git
+
+- Open Terminal.
+- Change the current working directory to the location of your directory.
+
+'''
+git pull
+'''
+
+## Some unspoken rules
+
+- Any files in the repository that you change should be copied to another location *before* making any changes
+
+
+- 
