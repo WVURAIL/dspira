@@ -127,7 +127,7 @@ Cannot save the current index state
 - Substitute your name and email
 
 - Run ``` git stast ``` again
-- Run ``` git pull again ```
+- Run ``` git pull ``` again
 
 
 # Updating GNURadio software
@@ -144,6 +144,8 @@ sudo make install
 ```
 
 
-
+## [Git Handbook](https://guides.github.com/introduction/git-handbook/)
+## [Github Basic](https://guides.github.com/activities/hello-world/)
+## [Git Cheatsheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet/)
 
 
