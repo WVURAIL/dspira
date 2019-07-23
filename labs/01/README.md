@@ -34,12 +34,8 @@ Open terminal, ( open by right clicking on desktop and choosing open terminal fr
 
 ```bash
 	sudo apt install git
-	sudo apt install libyaml-dev
-	sudo apt install libssl-dev
-	sudo apt install python-dev
-	sudo apt install python-pip
+	sudo apt install cmake
 	sudo apt install python-apt
-	sudo pip install pyopengl pyopengl_accelerate
 ```
 
 
