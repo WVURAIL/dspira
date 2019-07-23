@@ -104,7 +104,8 @@ git stash
 
 - If you have not used git before it wanted to documnet you as the changer on the ledger you shoud get this:
 
-```*** Please tell me who you are.
+```
+*** Please tell me who you are.
 
 Run
 
@@ -124,6 +125,7 @@ Cannot save the current index state
   git config --global user.email "you@example.com"
   git config --global user.name "Your Name"
 ```
+
 - Substitute your name and email
 
 - Run ``` git stast ``` again
@@ -134,6 +136,7 @@ Cannot save the current index state
 
 - Open Terminal.
 - Change the current working directory to the location of the software you want to update
+
 ```
 cd gr-radio_astro
 git pull
