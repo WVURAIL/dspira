@@ -30,6 +30,12 @@ You can use an out-of-tree module to instead save the data to an HDF5 file, whic
 
 [gnuradio OOT radio astronomy package ](https://github.com/WVURAIL/gr-radio_astro)
 
+0.)  Make sure swig is installed
+
+```
+sudo apt install swig
+```
+
 1.) Clone the repository into an appropriate folder/repository: 
 
 ```bash
