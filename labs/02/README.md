@@ -99,16 +99,17 @@ As the name suggests the message signal is encoded in the frequency variable of 
 
 $$
 \begin{align} 
-y(t) & = A_c \cos \left( 2 \pi f(t) \right) \\ 
-     & = A_{c} \cos \left( 2 \pi \left[ f_{c} + f_{\Delta} x_{m}(t) \right] \right)\\ 
-     & = A_{c} \cos \left( 2 \pi f_{c} t + 2 \pi f_{\Delta} x_{m}(t) \right) \\ 
+y(t) & = A_c \cos \left( 2 \pi f(t) t \right) \\ 
+     & = A_{c} \cos \left( 2 \pi \left[ f_{c} + f_{\Delta} x_{m}(t) \right] t\right)\\ 
+     & = A_{c} \cos \left( 2 \pi f_{c} t + 2 \pi f_{\Delta} x_{m}(t) t \right) \\ 
 \end{align}
 $$
 
-where $$f_{\Delta} = K_f \cdot A_m $$ , $$K_f$$ being the sensitivity of the frequency modulator which adjusts how much bandwidth is used for the signal and $$A_m$$ being the amplitude of the modulating signal.
+where $$f_{\Delta} is the sensitivity of the frequency modulator which adjusts how much bandwidth is used for the signal.
+
 ### 2.3.2 Let's Make our FM Radio
 
-One way to demodulate the signal is to extract the message encoded in the frequency of the sinusoid outside the sinusoid. That can be achieved by differentiating the sine wave. Consider the following:
+One way to demodulate the signal is to extract the message encoded in the frequency of the sinusoid outside the sinusoid. That can be achieved by "fast" differentiating the sine wave, treating the message as a constant. Consider the following:
 
 $$
 x(t) = a \sin (f(t)t + \phi) \\
@@ -119,7 +120,7 @@ $$
 For the FM signal 
 
 $$
-y(t) = A_c \cos \left( 2 \pi f_c t + 2 \pi f_{\Delta} x_{m} (t)  \right) \\
+y(t) = A_c \cos \left( 2 \pi f_c t + 2 \pi f_{\Delta} x_{m} (t) t  \right) \\
  \ \ \  = A_c cos ( \theta(t) )
 $$
 
