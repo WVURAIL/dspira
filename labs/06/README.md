@@ -2,13 +2,18 @@
 
 That's been a lot of Digital Signal Processing so let us just go ahead and build our radio telecope already!
 
-<!-- TOC -->autoauto- [A Radio Telescope](#a-radio-telescope)auto    - [6.1. Horn Antenna](#61-horn-antenna)auto    - [6.2  21cm Low Noise Amplifier](#62--21cm-low-noise-amplifier)auto    - [6.3 Spectrometer.](#63-spectrometer)auto        - [Updating software](#updating-software)autoauto<!-- /TOC -->
+<!-- TOC -->
+- [A Radio Telescope](#a-radio-telescope)auto    
+    - [6.1. Horn Antenna](#61-horn-antenna)auto    
+    - [6.2  21cm Low Noise Amplifier](#62--21cm-low-noise-amplifier)    
+    - [6.3 Spectrometer.](#63-spectrometer)auto        
+    - [Updating software](#updating-software)autoauto<!-- /TOC -->
 
 ## 6.1. Horn Antenna 
 
 We are building a special kind of radio telescope which uses a Horn Antenna. 
 
-[Follow these instructions for Horn Assembly](https://github.com/WVURAIL/dspira/blob/master/labs/06/DSPIRA_Horn_Assembly.pdf)
+[Follow these instructions for Horn Assembly](http://wvurail.org/cra/Files_uploaded/DSPIRA_Horn_Assembly_2019.pdf)
 
 ## 6.2  21cm Low Noise Amplifier
 
