@@ -20,8 +20,8 @@ layout: default
 3. [Astronomy Lecture 3](https://mediasitecs.lib.wvu.edu/Mediasite1/Play/1f5b8658b1e04f4e9aef71c9bf8d4d121d)
 4. Astronomy Lecture 4 - Planetarium Lecture
 5. [Astronomy Lecture 5](https://mediasitecs.lib.wvu.edu/Mediasite1/Play/d474f6f0d1714acf9b89d1b884d30c551d)
-6. [Astronomy Lecture 6]()
-7. [Astronomy Lecture 7]()
+6. [Astronomy Lecture 6](https://mediasitecs.lib.wvu.edu/Mediasite1/Play/720042133bd34738af0d92c296f562e31d)
+7. [Astronomy Lecture 7](https://mediasitecs.lib.wvu.edu/Mediasite1/Play/751df502867e4704880ba31de01d026c1d)
 
 
 <hr>
