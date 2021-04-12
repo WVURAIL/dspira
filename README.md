@@ -1,3 +1,5 @@
+<span style="color:red"> NOTE: A MORE ACTIVELY UPDATED WEBSITE CAN BE FOUND HERE: [https://wvurail.org/dspira-lessons/](https://wvurail.org/dspira-lessons/)</span>
+
 # DSP in Radio Astronomy
 
 <!-- TOC -->
