@@ -1,43 +1,66 @@
-<span style="color:red"> NOTE: A MORE ACTIVELY UPDATED WEBSITE CAN BE FOUND HERE: [https://wvurail.org/dspira-lessons/](https://wvurail.org/dspira-lessons/)</span>
+# DSP in Radio Astronomy — archived
 
-# DSP in Radio Astronomy
+**This material has moved to [wvurail.org/dspira-lessons](https://wvurail.org/dspira-lessons/).**
 
-<!-- TOC -->
+This was the DSPIRA summer institute's working repository — the labs, the
+lectures and the analysis code. It was migrated in 2026 and is now read-only,
+kept so existing links and citations keep resolving.
 
-- [DSP in Radio Astronomy](#dsp-in-radio-astronomy)
-    - [Introduction](#introduction)
-    - [Software Defined Radio](#software-defined-radio)
-    - [Labs](#labs)
+| You wanted | It is now at |
+|---|---|
+| Labs 1–5, the DSP sequence | [Digital Signal Processing](https://wvurail.org/dspira-lessons/categories/digital-signal-processing/) |
+| Lab 7, Observations | [Observations](https://wvurail.org/dspira-lessons/Observations/) |
+| The `python/` analysis scripts | [`code/observations/`](https://github.com/WVURAIL/dspira-lessons/tree/master/code/observations) |
+| The GBT drift scan notebook | [`code/gbt_drift/`](https://github.com/WVURAIL/dspira-lessons/tree/master/code/gbt_drift) |
+| Astronomy lecture recordings | [Astronomy Lecture Recordings](https://wvurail.org/dspira-lessons/Astronomy_Lecture_Recordings/) |
+| DSP lecture recordings | [DSP Lectures](https://wvurail.org/dspira-lessons/dsp) |
+| The Linux and git notes | [The Command Line and Git](https://wvurail.org/dspira-lessons/CommandLine_and_Git/) |
+| Building the telescope | [All lessons](https://wvurail.org/dspira-lessons/all/) |
 
-<!-- /TOC -->
+## What stayed here
 
-## Introduction 
+Some things were deliberately not migrated, and this is where they remain:
 
-Digital Signal Processing in Radio Astronomy (DSPIRA) is an NSF Research Experiences for Teachers (RET) in Engineering and Computer Science Site at the West Virginia University Lane Department of Computer Science and Engineering. The Principal Investigators are Professors Natalia Schmid and Kevin Bandura. The GBO coordinator is Richard Prestage
+* **The GNU Radio flowgraphs** in `grc-flowgraphs/`. All of them are GNU Radio
+  **3.7** XML. GNU Radio 3.8 moved to a YAML format and will not open them, so
+  they are kept as a record rather than as something to hand a class. If you
+  are on 3.7, they work.
 
-Aims of this program: 
-1. Prepare teachers to implement DSP projects with their students, exposing them to exciting STEM career opportunities;
-2. Inspire high school students to pursue careers in STEM disciplines; 
-3. Broaden the reach of the DSP activities developed through DSPIRA, and 
-4. Develop the communication / pedagogical skills of the teachers, project staff, graduate and undergraduate students. 
+  The maintained spectrometer is
+  [`spectrometer_w_cal.grc`](https://github.com/WVURAIL/gr-radio_astro/tree/master/examples/DSPIRA)
+  in `gr-radio_astro` — one flowgraph for every radio, with the per-radio
+  settings on the [source block settings
+  page](https://wvurail.org/dspira-lessons/Spectrometer_sourceblock_settings).
+  **Check that page before copying any tuning out of the files here.** The
+  Pluto and Lime flowgraphs use a `freq` or `samp_rate` that differs from the
+  documented per-radio procedure, and changing `samp_rate` without also moving
+  `freq` can put the hydrogen line outside the recorded band. The analysis
+  scripts in `dspira-lessons` follow the page, not these files.
+* **The 2018 lecture slide decks** in `lectures/2018/`, superseded by the
+  recordings linked above.
+* **The LNA design memo** (`labs/06/DSPIRA_memo2_LNA.pdf`) — the measured
+  design and performance of the 21 cm amplifier. A candidate for the lessons
+  site once fetched out of Git LFS.
+* **Lab 6**, whose build instructions were written for GNU Radio 3.7 and whose
+  links point at the retired `cra` site. The current installation lessons are
+  [here](https://wvurail.org/dspira-lessons/categories/telescope-software-setup/).
 
-## Software Defined Radio
+The astronomy lecture decks in `lectures/astronomy/` are **not** in that list
+any more. All thirteen are on the lessons site: the five held back over
+textbook figures — Motion of the Sky, Light and Telescopes, the Doppler
+Effect, Stars, Stellar Evolution — were released once their authors confirmed
+the figures had been used with permission. The copies here are the originals
+and stay for the record.
 
-A software defined radio (SDR) is a “Radio in which some or all of the physical layer functions are software defined.” A radio is any kind of device that transmits and/or receives signals wirelessly in the radio frequency (RF) spectrum above 3 kHz. Traditional radio devices are defined by their hardware and are typically only usable in a specific frequency band and for a particular type of modulation. SDRs, on the other hand, perform most of the complex signal processing needed for modern communications systems at baseband, using digital signal processing (DSP). Analog hardware is then used to translate between a (complex-valued) baseband signal and its corresponding (real-valued) bandpass signal in a frequency band that is suitable for wireless transmission and reception. In its purest form, a SDR consists of an antenna and an analog-to-digital converter for the receiving part and a digital-to-analog converter connected to a power amplifier and an antenna for the transmitting part. All the filtering and signal processing then takes place in the digital domain that can be more precisely controlled in an economic fashion than is possible for traditional analog signal processing. In modern practice, DSP is used for frequencies up to several tens or a few hundreds of MHz and analog hardware is used for frequencies of several hundreds of MHz and beyond. Often the device that translates the digial baseband signal to the analog bandpass signal is referred to as the SDR and then the device (computer) that generates the digital baseband signal is referred to as the DSP.
+Almost every PDF and slide deck in this repository — `lectures/astronomy/`,
+parts of `lectures/2018/`, `labs/06/`, `archive/` — is stored with **Git LFS**.
+`git clone` alone gives you tiny pointer files a few dozen bytes long; run
+`git lfs pull` to fetch the real ones. The exceptions come down with an
+ordinary clone: the DSP decks in `lectures/2018/DSP/` and `linux/cheatsheet.pdf`.
+`NOTICE.md` records why.
 
-The main advantage of an SDR over a traditional radio is that (most of) the radio’s operating functions referred to as physical layer processing are implemented through modifiable and upgradable software and firmware on programmable devices such as field programmable gate arrays (FPGA), programmable System on a Chip (SoC), etc. The use of these technologies allows new wireless features and capabilities to be added to an existing radio system without replacing or modifying its hardware.
+---
 
-Modern Radio Astronomy is driven by algorithmic advances. As mentioned above, programmable hardware components makes designing a system robust and highly flexible. FPGAs are epecially used in almost all current and upcoming telescopes. Programming an FPGA is a skill in itself but one of the most used tools in FPGA developement involves coding in a fashion similar to the tools we shall work with vis-a-vis flowgraphs. The difference in implementation almost indistinuishable without peering at the guts (and relative perfomance which is due to different hardware involved). 
-
-## Labs
-
-We shall explore SDR through guided labs leading up to a project of building a radio telescope and do some science.
-The modules would be structure as below and you get begin by clicking [here](labs)
-
-1. [Introduction to GNU Radio & Signals](labs/01)
-2. [First steps with SDR Hardware](labs/02)   
-3. [Introduction to Fourier Analysis](labs/03)   
-4. [Filters](labs/04)   
-5. [Fourier Analysis -- Expert Mode!](labs/05)
-6. [A Radio Telescope](labs/06)  
-7. [Observations](labs/07)
+**DSPIRA** was an NSF-funded Research Experiences for Teachers programme at the
+Lane Department of Computer Science and Electrical Engineering, West Virginia
+University, run with the Green Bank Observatory.

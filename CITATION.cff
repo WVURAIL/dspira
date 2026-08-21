@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use DSPIRA tools or resources in your work, please cite it as below."
+title: "DSPIRA: Digital Signal Processing in Radio Astronomy"
+authors:
+  - name: "WVU Radio Astronomy Instrumentation Lab (WVURAIL)"
+    website: "https://github.com/WVURAIL"
+repository-code: "https://github.com/WVURAIL/dspira"
+license: "MIT"

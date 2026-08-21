@@ -1,2 +1,9 @@
 *.psd filter=lfs diff=lfs merge=lfs -text
 *.pdf filter=lfs diff=lfs merge=lfs -text
+
+# linux/cheatsheet.pdf is stored as an ordinary git blob rather than through
+# LFS. It was committed years ago as "cheatsheet,pdf" -- a comma, not a period --
+# which meant it never matched the *.pdf pattern above and so never had an LFS
+# object created for it. Renaming it to a real .pdf would silently convert it to
+# an LFS pointer with no object behind it, and the push would be rejected.
+linux/cheatsheet.pdf !filter !diff !merge

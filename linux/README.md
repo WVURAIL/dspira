@@ -1,6 +1,6 @@
 # A Very Very Basic Linux Cheat Sheet
 
-[Click here to download a cheat sheet](https://files.fosswire.com/2007/08/fwunixref.pdf) . It makes sense to save and print this for future reference *or* check below:
+[Click here to download a cheat sheet](https://files.fosswire.com/2007/08/fwunixref.pdf) (or the [local copy](cheatsheet.pdf), if that link has gone stale). It makes sense to save and print this for future reference *or* check below:
 
 The most used and bare minimum one must know to survive within the command line:
 

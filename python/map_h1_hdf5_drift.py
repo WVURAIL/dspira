@@ -1,3 +1,30 @@
+# =====================================================================
+# WARNING - THIS SCRIPT PRODUCES SKY MAPS WITH THE WRONG POINTING.
+#
+# Line 114 below reads the elevation as float(str(e)[:-1]), which drops the
+# last character before converting. A pointing written "A180E55" - the
+# default in this repository's own flowgraphs - is read as elevation 5
+# degrees, not 55. Nothing fails and nothing warns; the hydrogen is
+# measured correctly and filed at the wrong place on the sky, typically
+# 27 to 70 degrees away against a beam about 15 degrees across.
+#
+# It was not always wrong. Under h5py 2.x the pointing attribute read back
+# as bytes, so str() wrapped it in b'...' and the closing quote happened to
+# supply the character this code discards. h5py 3.0 (October 2020) returns
+# str, and from that point the bug became live for anyone who simply
+# updated their packages.
+#
+# Elevation affects position only - never flux, calibration, system
+# temperature or line profiles. Affected maps can be regenerated exactly,
+# because the raw HDF5 files still carry the true pointing string.
+#
+# A corrected version, with a test covering 30 pointing spellings, is at:
+#   https://github.com/WVURAIL/dspira-lessons -> code/observations/
+#
+# This repository is archived and read-only; the code below is left as the
+# historical record of what was run, not as something to use.
+# =====================================================================
+
 import ephem
 import numpy as np
 import time

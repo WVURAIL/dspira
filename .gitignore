@@ -1,0 +1,12 @@
+# Temporary files & python cache
+__pycache__/
+*.py[cod]
+*.grc~
+.DS_Store
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Editor
+.vscode/
