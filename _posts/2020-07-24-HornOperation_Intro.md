@@ -4,7 +4,8 @@ date:   2020-07-24
 title: What Can a Horn Telescope Measure?
 summary:  An overview of what a horn telescope detects
 tags: ['School-Teachers', 'Students', 'Hobbyists' ]
-categories: ['Telescope Operation'] 
+categories: ['Observing']
+order: 2
 ---
 
 ### The Horn Telescope: An Overview
@@ -12,7 +13,7 @@ categories: ['Telescope Operation']
 A horn telescope is simply an antenna designed to pick up radio waves. The horn used in DSPIRA is specifically designed to pick up radio waves emitted by neutral hydrogen atoms in the Milky Way Galaxy, which have a frequency of approximately 1420 MHz. 
 Because it is an antenna, a horn telescope will pick up all radio waves that are incident on it, regardless of their origin. As a result, the signal that is displayed on the spectrometer output includes signals from outer space as well as those from the local environment here on earth. Some of these signals are inherent in the data processing system. 
 
-Because we are primarily interested in signals that are coming from astronomical objects, such as the galaxy, we need to subtract out any any other signals that the telescope might be picking up. The spectrum_w_cal.grc Gnuradio program enables the user to do just that so that we can view spectra of signals that are only from the astronomical object of interest.
+Because we are primarily interested in signals that are coming from astronomical objects, such as the galaxy, we need to subtract out any any other signals that the telescope might be picking up. The spectrometer_w_cal.grc GNU Radio program enables the user to do just that so that we can view spectra of signals that are only from the astronomical object of interest.
 
 ### What Can a Horn Telescope Measure?
 

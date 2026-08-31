@@ -1,0 +1,18 @@
+# Site navigation. Edit here and every page follows.
+# `home: true` marks the link back to the lab site, which is styled apart.
+#
+# Five entries. There were six until /lesson-modules/ and /all/ turned out to
+# list exactly the same lessons; the header holds six, and the hamburger
+# breakpoint in css/style.scss was measured for that, so a sixth can come back
+# without moving it. A seventh cannot — see the note on it there.
+- text: Lessons
+  url: /all/
+- text: Telescope kits
+  url: /kits/
+- text: Forum
+  url: /forum/
+- text: About
+  url: /about/
+- text: WVU RAIL
+  url: /
+  home: true

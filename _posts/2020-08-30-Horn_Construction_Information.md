@@ -4,14 +4,15 @@ date:   2020-08-30
 title: Horn Construction Information
 summary:  An overview of horn construction is described, with appropriate links
 tags: ['School-Teachers', 'Students', 'Hobbyists' ]
-categories: ['category', 'Subcategory'] 
+categories: ['Horn Construction']
+order: 2
 ---
 
 A complete horn telescope system can be built for a few hundred dollars, the actual cost depending on the options you choose and whether or not you have a computer. 
 
-A horn telescope consists of 3 major parts: the antenna, the support stand, and the back-end electronics. These parts are highlighted in the picture below.
+A horn telescope consists of 3 major parts: the antenna, the support stand, and the back-end electronics. The first two are what you see below; the third sits behind the can, out of shot.
 
-{picture to come}
+![A finished horn telescope standing in a field. The pyramidal antenna is folded from foil-faced insulation board and feeds a square paint-thinner can at its throat; below it, a wooden cradle lets the horn turn in elevation on a stand of dimensional lumber.]({{ site.baseurl }}/images/programme/horn-on-stand.jpg)
 
 Below we present descriptions of the different parts with links to details how to purchase the parts and how to assemble them.
 
@@ -25,7 +26,7 @@ The **low noise amplifier** (LNA) is an electronic circuit that connects to the 
     
 Some options for obtaining a low noise amplifier include the following. All of these will work with the dSPIRA horn telescope and software.
 
-+ Best option: the DSPIRA LNA – This amplifier was designed for a 1420 MHz radio telescope by Professor Kevin Bandura at WVU. This option requires ordering the circuit board and components, and then assembling the components by soldering. Details on ordering the parts and instructions on how to solder the circuit are provided [here.](http://wvurail.org/dspira-lessons/DetailedLNAInstructions)
++ Best option: the DSPIRA LNA – This amplifier was designed for a 1420 MHz radio telescope by Professor Kevin Bandura at WVU. This option requires ordering the circuit board and components, and then assembling the components by soldering. Details on ordering the parts and instructions on how to solder the circuit are provided [here.]({{ site.baseurl }}/DetailedLNAInstructions)
 
     The total cost for the parts of this circuit is approximately $30.
 
@@ -54,5 +55,5 @@ A less expensive option is the [Airspy Mini](https://airspy.com/airspy-r2), $99.
 
 A [coaxial cable](https://www.coaxrf.com/shop/1-rf-coaxial-cables/times-microwave-lmr240/sma-male-times-microwave-lmr240/lmr240-sma-male-to-sma-male-coaxial-rf-pigtail-cable/) is needed to connect the LNA to the SDR. Refer to the diagram above. Typically a 10 ft length is adequate, but any length up to 25 ft should work fine.
 
-The SDR comes with a cable for plugging it into a USB port on the computer. The spectrometer program on the computer is run on GnuRadio, which is a free and open source software program. Information about setting up the computer with the necessary software can be found [here.](http://wvurail.org/dspira-lessons/HornOperation_computerSystems)
+The SDR comes with a cable for plugging it into a USB port on the computer. The spectrometer program on the computer is run on GNU Radio, which is a free and open source software program. Information about setting up the computer with the necessary software can be found [here.]({{ site.baseurl }}/HornOperation_computerSystems)
 

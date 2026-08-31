@@ -4,7 +4,8 @@ date:  2023-06-27
 title: Installing Ubuntu
 summary:  Details for partitioning a hard drive and installing Ubuntu OS on a Windows computer
 tags: ['School-Teachers', 'Students', 'Hobbyists' ]
-categories: ['Telescope Software Setup']
+categories: ['Software Setup']
+order: 4
 ---
 
   *Our software works under Ubuntu versions 22.04 LTS and older.*

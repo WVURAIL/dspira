@@ -1,0 +1,62 @@
+# The modules, in the order a newcomer should meet them: build the antenna, wire
+# up the receiver behind it, get it talking to a computer, observe with it, and
+# then do the signal processing and the astronomy the data is for.
+#
+# `category` must match the `categories:` value in the lessons' front matter
+# exactly. Every lesson list and count on the site is derived from it, so a
+# mismatch shows up as a module with no lessons rather than as a silent gap.
+#
+# The card photograph is images/modules/<category slugified>.jpg. It is derived
+# rather than named here so the two cannot drift apart; adding a module means
+# adding the file under the matching name.
+#
+# Eleven modules became seven in August 2026. Four of the old ones existed only
+# to hold two lessons that were each filed under two names at once, and four
+# more were built from the same two or three words — Telescope Hardware Setup,
+# Telescope Software Setup, Horn Operation, Telescope Operation — which nobody
+# could tell apart on the index. The old slugs redirect; see categories/.
+- category: Horn Construction
+  blurb: >-
+    Foil-faced insulation board, aluminium tape, dimensional lumber, and a
+    paint-thinner can for the throat. The finished stand is 75 cm across, so it
+    fits through a classroom door.
+  alt: A finished horn telescope on its wooden stand in a field.
+
+- category: Receiver Electronics
+  blurb: >-
+    The amplifier is what decides how good your telescope is, so it is the part
+    worth taking time over. Build the DSPIRA board for about $30 in parts, or
+    buy one ready-made and get on with the observing.
+  alt: A soldering station set up for assembling the low-noise amplifier.
+
+- category: Software Setup
+  blurb: >-
+    Ubuntu, GNU Radio, and the DSPIRA blocks. The flash-drive route turns any
+    Windows machine into a spectrometer without touching its hard disk.
+  alt: A GNU Radio flowgraph for the DSPIRA spectrometer.
+
+- category: Observing
+  blurb: >-
+    It works in daylight, in the rain, and from a school car park. All it needs
+    is open sky and somewhere to sit.
+  alt: Two observers running a horn telescope from camp chairs in a field.
+
+- category: Digital Signal Processing
+  blurb: >-
+    Six lab exercises that build a spectrometer in GNU Radio one block at a
+    time: sampling, Fourier analysis, filters, and finally correlation, the
+    trick that turns two horns into an interferometer.
+  alt: A spectrum with the 21 cm neutral hydrogen line standing above the noise.
+
+- category: Astronomy
+  blurb: >-
+    The part it is all for. Where to point, what hydrogen looks like at 21 cm,
+    and how a rotation curve ends up as an argument for dark matter.
+  alt: Horn telescopes and a lit tent under a field of stars at Green Bank.
+
+- category: Community Labs
+  blurb: >-
+    Schools, clubs and students who built the hardware and then went somewhere
+    the curriculum does not: cosmic rays, motorised mounts, and checking the
+    thing against the literature.
+  alt: Students setting up a horn telescope in a school parking lot.

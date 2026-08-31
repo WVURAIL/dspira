@@ -4,10 +4,11 @@ date:   2020-11-12
 title: Download and Install WVURAIL Radio Astronomy OS for Raspberry Pi
 summary:  Step by Step instructions for downloading and installing Radio Astronomy Operating System for Raspberry Pis.
 tags: ['School-Teachers', 'Students', 'Hobbyists' ]
-categories: ['Gnuradio', 'Raspberry Pi'] 
+categories: ['Software Setup']
+order: 11
 ---
 
-# Radio Astronomy with Raspberry Operating System
+## Radio Astronomy with Raspberry Operating System
 ### Glen Langston,  2020 October 21
 
 [Click to read this Document](https://drive.google.com/file/d/1Clyo3tW8s_1xhXjnvwi-_GTXlZI_uS-Z/view){: .button}
@@ -15,7 +16,7 @@ categories: ['Gnuradio', 'Raspberry Pi']
 ***
 *The text of the pdf is below*
 
-This document describes the Operating System provided by our research group for Raspberry Pis computers configured for Science Aficionado Radio Astronomy.    The Operating System (OS) is courtesy of nearly countless volunteers in the Raspberry Pi Foundation, the Ubuntu Organization, the GnuRadio Collaboration and the folks at SDRplay.  The GnuRadio Collaboration made home radio astronomy possible, thanks to their free software for digital signal processing.   The community of volunteers have been very helpful in creating a fun to use package for learning the fundamentals of modern communications.    The SDRplay company put together the basis of the OS package including GnuRadio, in order to ease testing of their RSP1A for numerous applications.
+This document describes the Operating System provided by our research group for Raspberry Pis computers configured for Science Aficionado Radio Astronomy.    The Operating System (OS) is courtesy of nearly countless volunteers in the Raspberry Pi Foundation, the Ubuntu Organization, the GNU Radio Collaboration and the folks at SDRplay.  The GNU Radio Collaboration made home radio astronomy possible, thanks to their free software for digital signal processing.   The community of volunteers have been very helpful in creating a fun to use package for learning the fundamentals of modern communications.    The SDRplay company put together the basis of the OS package including GNU Radio, in order to ease testing of their RSP1A for numerous applications.
 
 The notes here describe only my additions and some hints on setting up networks of radio telescopes, with precise time (hopefully with time tags correct to roughly a microsecond).
 Purpose
@@ -57,18 +58,18 @@ NooElec Neutral Hydrogen Amplifier has an amplifier designed for Neutral hydroge
 Computer System Setup
 This guide assumes you have one or more Raspberry PI 4 computers for your telescopes and a host computer, either Linux Ubuntu on a x86 laptop or a Mac computer.   I almost never connect a keyboard and monitor to my Raspberry Pis, unless there is some sort of problem.   Rather the host computer runs Virtual Network Connections to the PIs.   After installation you will have a complete computing environment. This Includes a python programming system and C++ compiler.   
 
-The OS includes GnuRadio and gnuradio-companion, an easy to use tool to explore signal processing.  GnuRadio can be used without any SDRs.  Click this link to see Sophie and Evan give a quick video introduction to GnuRadio, using only a laptop microphone and speakers.
+The OS includes GNU Radio and gnuradio-companion, an easy to use tool to explore signal processing.  GNU Radio can be used without any SDRs.  Click this link to see Sophie and Evan give a quick video introduction to GNU Radio, using only a laptop microphone and speakers.
 Figure 4: Raspberry Pi 4 in hand.
 Download
 The single file with the entire OS is available as a link to a very large file: NsfSdr-20Sep18.img.xz
 
 Look in this Shared Folder for the latest version of the OS in directory: RasberryPiOS
 
-This file is a 2.8 GB compressed version of the full 9.5 GB OS.   The OS is fully functional with many standard programs plus configuration for GnuRadio (version 3.7.13.4) and Radio Astronomy software from West Virginia University.   (I hope to upgrade GnuRadio soon.)
+This file is a 2.8 GB compressed version of the full 9.5 GB OS.   The OS is fully functional with many standard programs plus configuration for GNU Radio (version 3.7.13.4) and Radio Astronomy software from West Virginia University.   (I hope to upgrade GNU Radio soon.)
 
 You will need a 16 GB, or larger, SD card to install the OS.
 
-This file must be downloaded to your host computer.  Transfer will take a while.  This software is the product of many hundreds of volunteers.   GnuRadio is a great project built on top of the Linux operating system.   This particular version was created by the folks at sdrplay.com, then tuned for Radio Astronomy by our research group. 
+This file must be downloaded to your host computer.  Transfer will take a while.  This software is the product of many hundreds of volunteers.   GNU Radio is a great project built on top of the Linux operating system.   This particular version was created by the folks at sdrplay.com, then tuned for Radio Astronomy by our research group. 
 Transfer to SD Card 
 I use free download of the program Balena Etcher (https://www.balena.io/etcher/)  to transfer copies of this OS to SD Cards for my telescopes.   I usually use 32 GB cards, but 16 GB cards are sufficient, as the OS is only 9.5 GB.   One very nice thing about Etcher is that you don’t have to first uncompress the file, just start Etcher writing the compressed file to the SD Card.
 
@@ -116,7 +117,7 @@ Alternatively, you can use a terminal to type commands.  This is the old fashion
 cd examples
 python NsfIntegrate24.py
 
-The first command changes to the directory (cd) containing the GnuRadio designs for Radio Astronomy.   The second command starts a python program.   The programs are also available for free from our github site, West Virginia University Radio Astronomy Instrumentation Lab (WVURAIL).  These programs have been tested on Linux x86 laptops, Mac computers, Odroid N2 and Raspberry PI (3 and 4) computers.
+The first command changes to the directory (cd) containing the GNU Radio designs for Radio Astronomy.   The second command starts a python program.   The programs are also available for free from our github site, West Virginia University Radio Astronomy Instrumentation Lab (WVURAIL).  These programs have been tested on Linux x86 laptops, Mac computers, Odroid N2 and Raspberry PI (3 and 4) computers.
 
 If you have an AIRSPY you’d use NsfIntegrate25.py or NsfIntegrate100.py for 2.5 MHz or 10 MHz bandwidth observations.   If you have an AIRSPY-mini you’d use NsfIntegrate30.py or NsfIntegrate60.py for 3.0 or 6.0 MHz bandwidth observations.   For the Pluto SDR you’d use NsfIntegrate45.py and for the SDRplay you’d use NsfIntegrate80.py or NsfIntegrate90.py for 8.0 or 9.0 MHz bandwidth observations.
 
@@ -124,7 +125,7 @@ After starting the python program, a graphical user interface appears and lots o
 
 Figure 5:  Raw Radio Observations of the Sky.
 First Observations
-When you’ve completed the horn construction, you’ll need to first look at the ground to calibration the observations.  The calibration consists of two observations.  The Hot load is the ground, which has a temperature of about 280 Kelvin.   You will need to set the elevation to -90 degrees and set the Record mode to “Average”.   What about a minute.  Set the Observing mode to “Hot/Cold”, then change the record mode to “Save” to save the Hot load observation.   A red line will appear where the average line was.   Set the observing mode back to “Survey” and then set the recording mode to “WAIT”.
+When you’ve completed the horn construction, you’ll need to first look at the ground to calibrate the observations.  The calibration consists of two observations.  The Hot load is the ground, which has a temperature of about 280 Kelvin.   You will need to set the elevation to -90 degrees and set the Record mode to “Average”.   Wait about a minute.  Set the Observing mode to “Hot/Cold”, then change the record mode to “Save” to save the Hot load observation.   A red line will appear where the average line was.   Set the observing mode back to “Survey” and then set the recording mode to “WAIT”.
 
 The empty sky is very cold, only about 10 Kelvin (-440 F, -260 C).
 
@@ -148,11 +149,11 @@ It is our intention that everyone can become a Science Aficionado, by joining a 
 
 Each Aficionado can make a unique contribution, because the flashes extend only a hundred meters on a side, so unless a radio telescope is at that location, the event is missed.
 
-The Raspberry Pi 4 designs have been tested with Event capture. The test was performed by feeding a 1 Pulse-Per-Second (1PPS) output from a GPS receiver into a NooElec Neutral Hydrogen amplifier. The early, barebones, version of this amplifier has a control port which is intended to be used for calibration.  When the control signal is high, the input is grounding, causing a power change.   The 1PPS is a few millions of a second long (a few microseconds).  These pulses show up as flashing radio signals in the data stream.   These flashes occur with great timing precision, enabling tests of the timing accuracy of the event captures software.  
+The Raspberry Pi 4 designs have been tested with Event capture. The test was performed by feeding a 1 Pulse-Per-Second (1PPS) output from a GPS receiver into a NooElec Neutral Hydrogen amplifier. The early, barebones, version of this amplifier has a control port which is intended to be used for calibration.  When the control signal is high, the input is grounding, causing a power change.   The 1PPS is a few millionths of a second long (a few microseconds).  These pulses show up as flashing radio signals in the data stream.   These flashes occur with great timing precision, enabling tests of the timing accuracy of the event captures software.  
 
 The event detection python programs have names beginning with “NsfDetect??.py.   The last two characters are the sampler clock rate.   For example the SDRplay design, sampling at 9MHz has “NsfDetect90.py”.  When running on a Raspberry Pi 4 the design has been tested, and is found to capture all 600 1 PPS pulses in 10 minutes.   
 
-The Raspberry Pi 3 computers are slower and only designs working at less than 3 MHz less are able to accurately capture events without losing many samples.   In a 10 minute test, with a Raspberry Pi 3, running with an Airspy-mini sampling at 3.0 MHz sampling, is able to gather about 75% (484 out of 600) 1 PPS samples.   With the Raspberry Pi 4 and an RTL-SDR Dongle, sampling at 2.4 MHz, in a 10 minute sampling of 1 PPS events, all 600 events were detected.
+The Raspberry Pi 3 computers are slower and only designs working at less than 3 MHz are able to accurately capture events without losing many samples.   In a 10 minute test, with a Raspberry Pi 3, running with an Airspy-mini sampling at 3.0 MHz, is able to gather about 75% (484 out of 600) 1 PPS samples.   With the Raspberry Pi 4 and an RTL-SDR Dongle, sampling at 2.4 MHz, in a 10 minute sampling of 1 PPS events, all 600 events were detected.
 
 The event detection system is still under development and collaborators are welcomed.
 Summary
@@ -161,7 +162,7 @@ You have the opportunity to discover the Milky Way for yourself, with the tools 
 LightWork Memos
 The more detailed tests of the system are in a set of memos.  You’re invited to contribute to these memos:
 
-http://wvurail.org/lightwork
+[The LightWork memo series](/lightwork/)
 Live Video Demo
 We gave a live demo of the current horn design in an online webinar during the American Astronomical Society Meeting in June 2020.   The demo shows the telescope in operation, easily finding our Milky Way Galaxy spiral arms in a few seconds.
 
@@ -177,7 +178,7 @@ Below we describe a system that places all computing components inside a waterti
 
 My current favorite system includes only one GPIO Labs Neutral hydrogen amplifier, a SDRPlay RSP1A, the GPS hat, a Power Over Ethernet “hat” with fan (not a splitter), a bias-tee and Raspberry Pi 4 with metal standoffs.     The computer and amplifier are connected directly to the horn in metal boxes. The assembly of these components will also be described elsewhere.
 
-To test proper operations, the 50 Ohm Load is also needed.  This 50 Ohm noise source input provides power than all the power the horn will collect from the sky!
+To test proper operations, the 50 Ohm Load is also needed.  This 50 Ohm noise source input provides more power than all the power the horn will collect from the sky!
 
 You can certainly improve on these designs.  Give one a try, then improve your telescope.
 

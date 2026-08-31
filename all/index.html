@@ -1,37 +1,72 @@
 ---
-layout: page
+layout: default
+title: Lessons
+permalink: /all/
 ---
+{%- comment -%}
+Every lesson, grouped by module, in curriculum order. This is the only page
+that lists them all.
 
-{% assign posts_count = paginator.posts | size %}
+There used to be two: /lesson-modules/ rendered the same set with module
+photographs instead of summaries, which made "Modules" and "All lessons" two
+nav entries for one page. That URL redirects here now, and the photograph and
+blurb it carried are at the head of each section below.
 
-<h1> All Lessons </h1>
-
-<div class="home">
-  {% if posts_count > 0 %}
-    <div class="posts">
-      {% for post in paginator.posts %}
-        <div class="post py3">
-          <p class="post-meta">
-	    {% if site.date_format %}
-	      {{ post.date | date: site.date_format }}
-	    {% else %}
-	      {{ post.date | date: "%b %-d, %Y" }}
-	    {% endif %}
-	  </p>
-          <a href="{{ post.url | relative_url }}" class="post-link"><h3 class="h1 post-title">{{ post.title }}</h3></a>
-          <span class="post-summary">
-            {% if post.summary %}
-              {{ post.summary }}
-            {% else %}
-              {{ post.excerpt }}
-            {% endif %}
-          </span>
-        </div>
-      {% endfor %}
-    </div>
-
-    {% include pagination.html %}
-  {% else %}
-    <h1 class='center'>{{ site.text.index.coming_soon }}</h1>
-  {% endif %}
+The filter box is progressive enhancement — assets/js/lessons.js reveals it and
+wires it up. With JavaScript off the box never appears and the full list is
+there to read.
+{%- endcomment -%}
+<div class="page-head">
+   <div class="container">
+      <p class="eyebrow">Browse</p>
+      <h1>Every lesson</h1>
+      <p class="lead">
+         All {{ site.posts | size }} of them, in {{ site.data.modules | size }} modules,
+         each in the order it is meant to be worked through. Start at the top of module
+         one, or filter for what you need.
+      </p>
+      <div class="filter" data-lesson-filter hidden>
+         <label class="filter__label" for="lesson-filter">Filter lessons</label>
+         <input class="filter__input" id="lesson-filter" type="search" autocomplete="off"
+                placeholder="Type to filter by title, summary or module" />
+         <p class="filter__count" role="status" aria-live="polite"></p>
+      </div>
+   </div>
 </div>
+
+{%- for m in site.data.modules %}
+{%- assign lessons = site.categories[m.category] | sort: 'order' %}
+{%- if lessons and lessons.size > 0 %}
+{%- assign slug = m.category | slugify %}
+{%- assign href = slug | prepend: '/categories/' | append: '/' | relative_url %}
+<div class="section {% cycle 'plain', 'section--tint' %}" data-module="{{ m.category }}">
+   <div class="container">
+      <div class="module-toc__head">
+         <a href="{{ href }}" tabindex="-1" aria-hidden="true">
+            <img class="module-toc__img" loading="lazy" decoding="async"
+                 width="800" height="500"
+                 src="{{ slug | prepend: '/images/modules/' | append: '.jpg' | relative_url }}"
+                 alt="{{ m.alt }}" />
+         </a>
+         <div>
+            <p class="module__n">Module {{ forloop.index }} &middot;
+               {{ lessons | size }} lesson{% if lessons.size != 1 %}s{% endif %}</p>
+            <h2><a href="{{ href }}">{{ m.category }}</a></h2>
+            <p class="module__blurb">{{ m.blurb }}</p>
+         </div>
+      </div>
+
+      <ol class="lesson-grid lesson-grid--numbered">
+         {%- for post in lessons %}
+         <li class="lesson-card" data-search="{{ post.title | downcase }} {{ post.summary | downcase }} {{ m.category | downcase }}">
+            <span class="lesson-card__n" aria-hidden="true">{% if post.order < 10 %}0{% endif %}{{ post.order }}</span>
+            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+            {%- if post.summary %}<p>{{ post.summary }}</p>{% endif %}
+         </li>
+         {%- endfor %}
+      </ol>
+      <p class="no-matches" hidden>No lessons in this module match.</p>
+   </div>
+</div>
+{%- endif %}
+{%- endfor %}

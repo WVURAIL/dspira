@@ -1,0 +1,55 @@
+# Are the links off this site still alive?
+#
+# The build workflow runs check_links.py in --offline mode, which covers links
+# between lesson pages, heading anchors and referenced files. Those are ours and
+# they break when we change something, so they are checked on every push and
+# they gate the build.
+#
+# The 168 external links are different. They break when somebody else moves a
+# page, on a day nobody here touched anything, and no push-triggered check will
+# ever notice. A lesson that sends a student to a dead Ubuntu download or a
+# removed YouTube video is a lesson that wasted their afternoon.
+#
+# So: once a week, with the internet.
+#
+# It fails only on `broken` — links confirmed dead. The `needs a human` bucket
+# is reported and ignored, because Google Drive, Docs, YouTube and Mediasite all
+# answer 200 OK for things that have been deleted or made private, and failing
+# on those would make this job noise inside a month.
+name: External links
+
+on:
+  schedule:
+    # 06:23 UTC on Sundays. Off the hour, because everything scheduled on the
+    # hour queues behind everything else scheduled on the hour.
+    - cron: "23 6 * * 0"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  links:
+    name: Check every external link
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Check links, with one retry
+        run: |
+          # A single transient 502 from somebody else's server is not worth an
+          # email. Two in a row, five minutes apart, probably is.
+          if python3 tools/check_links.py --fail-on all; then
+            exit 0
+          fi
+          echo "::notice::first pass found broken links — waiting 5 minutes and trying again"
+          sleep 300
+          python3 tools/check_links.py --fail-on all
+
+      - name: Keep the report either way
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: link-report
+          path: link-report.md
+          retention-days: 30

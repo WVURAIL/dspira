@@ -4,12 +4,6 @@ title: Astronomy Forum
 permalink: /forum/astronomy/
 ---
 
-# Discussions on Astronomy
+## Discussions on Astronomy
 
-<script src="https://utteranc.es/client.js"
-        repo="WVURAIL/dspira-lessons"
-        issue-term="pathname"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>
+{% include giscus.html room="astronomy" %}

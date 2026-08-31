@@ -1,10 +1,11 @@
 ---
 layout: post
 date: 2020-07-25
-title: Running the systemp_w_calibration.grc Program
-summary:  Instructions on how to use the spectrometer_w_cal.grc program in GNURadio
+title: Running the spectrometer_w_cal.grc Program
+summary:  Instructions on how to use the spectrometer_w_cal.grc program in GNU Radio
 tags: ['School-Teachers', 'Students', 'Hobbyists' ]
-categories: ['Telescope Operation'] 
+categories: ['Observing']
+order: 5
 ---
 
 The video shown [here](https://youtu.be/50B2Uv-SoDY) explains the features in this program.
@@ -13,7 +14,7 @@ The video shown [here](https://youtu.be/50B2Uv-SoDY) explains the features in th
 
 The video [here](https://youtu.be/Oo28QCEZe_g) explains how set up the horn and make adjustments to the user-defined settings referred to below.
 
-   * Check the user-defined settings illustrated below. These are the `Variable` blocks in the upper right corner of the Gnuradio canvas.
+   * Check the user-defined settings illustrated below. These are the `Variable` blocks in the upper right corner of the GNU Radio canvas.
 
       ![User-defined blocks](/dspira-lessons/images/UserDefinedBlocks.png)
 

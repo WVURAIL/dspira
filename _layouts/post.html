@@ -1,76 +1,90 @@
 ---
 layout: default
 ---
+{%- comment -%}
+Previous/next walk the lesson's own module, in curriculum order. A curriculum is
+read in module order, and the dates are publication dates — several lessons
+share one to the day — so a chronological pager was close to random: "Next"
+from the horn-construction overview used to be the two-horn interferometer.
 
+Every lesson now carries exactly one category and an `order`, so the chain
+through a module is unambiguous.
 
-<div>
-  {% if page.categories != null %}
-    {% for category in page.categories %}
-      {% capture category_name %}{{ category }}{% endcapture %}
-      <a class="button" href="{{ site.baseurl }}/categories/{{ category_name | slugify }}/">Click to see all posts in the {{ category_name }} module</a> 
-    {% endfor %}
-  {% endif %}
+Only core Liquid here — one sort and one pass over the sibling list — because
+GitHub Pages runs Jekyll 3.9 and anything newer fails the build silently,
+serving the last good copy of the site.
+{%- endcomment -%}
+{%- assign module = page.categories | first -%}
+{%- assign siblings = site.categories[module] | sort: 'order' -%}
+{%- assign found = false -%}
+{%- assign takenext = false -%}
+{%- for s in siblings -%}
+   {%- if takenext %}{% assign nextpost = s %}{% assign takenext = false %}{% endif -%}
+   {%- if s.url == page.url %}{% assign found = true %}{% assign takenext = true %}{% endif -%}
+   {%- unless found %}{% assign prevpost = s %}{% endunless -%}
+{%- endfor -%}
+
+<div class="page-head">
+   <div class="container container--narrow">
+      {%- if module %}
+      <p class="eyebrow">{{ module }}</p>
+      {%- else %}
+      <p class="eyebrow">Lesson</p>
+      {%- endif %}
+      <h1>{{ page.title }}</h1>
+      {%- if page.summary %}<p class="lead">{{ page.summary }}</p>{% endif %}
+   </div>
 </div>
 
+<div class="section">
+   <div class="container container--narrow">
+      <nav class="crumbs" aria-label="Breadcrumb">
+         <a href="{{ '/all/' | relative_url }}">Lessons</a>
+         {%- if module %}
+         <span aria-hidden="true">/</span>
+         <a href="{{ module | slugify | prepend: '/categories/' | append: '/' | relative_url }}">{{ module }}</a>
+         {%- if page.order %}
+         <span aria-hidden="true">/</span>
+         <span>Lesson {{ page.order }} of {{ siblings | size }}</span>
+         {%- endif %}
+         {%- endif %}
+      </nav>
 
+      <article class="prose">
+         {{ content }}
+      </article>
 
-{% assign minutes = content | strip_html | number_of_words | divided_by: 180 %}
-{% if minutes == 0 %}
-{% assign minutes = 1 %}
-{% endif %}
+      {%- if page.tags and page.tags.size > 0 %}
+      <p class="audience">
+         <span>Written for</span>
+         {%- for tag in page.tags %}
+         <a class="tag" href="{{ tag | slugify | prepend: '/tags/' | append: '/' | relative_url }}">{{ tag | replace: '-', ' ' }}</a>
+         {%- endfor %}
+      </p>
+      {%- endif %}
 
-<div class="post-header mb2">
-  <h1>{{ page.title }}</h1>
-  <span class="post-meta">{{ page.date | date: site.date_format }} |</span>
-  {% if page.update_date %}
-    <span class="post-meta">{{ site.text.post.updated | default: "Updated" }}: {{ page.update_date | date: site.date_format }} |</span>
-  {% endif %}
-  <span class="post-meta small">
-  {% if page.minutes %}
-    {{ page.minutes }} {{ site.text.post.minute_read | default: "minute read" }}
-  {% else %}
-    {{ minutes }} {{ site.text.post.minute_read | default: "minute read" }}
-  {% endif %}
-  </span>
+      {%- if prevpost or nextpost %}
+      <nav class="pager" aria-label="Lessons in this module">
+         {%- if prevpost %}
+         <a href="{{ prevpost.url | relative_url }}">
+            <span class="dir">&larr; Previous</span>
+            <span class="t">{{ prevpost.title }}</span>
+         </a>
+         {%- endif %}
+         {%- if nextpost %}
+         <a class="next" href="{{ nextpost.url | relative_url }}">
+            <span class="dir">Next &rarr;</span>
+            <span class="t">{{ nextpost.title }}</span>
+         </a>
+         {%- endif %}
+      </nav>
+      {%- endif %}
+
+      <p class="post-tail">
+         <a href="{{ module | slugify | prepend: '/categories/' | append: '/' | relative_url }}">
+            {% include icon.html name="arrow-left" %} All {{ siblings | size }} lessons in {{ module }}
+         </a>
+         <span class="post-tail__date">Published {{ page.date | date: site.date_format }}</span>
+      </p>
+   </div>
 </div>
-
-<article class="post-content">
-  {{ content }}
-</article>
-
-{% if site.show_sharing_icons %}
-  {% include share_buttons.html %}
-{% endif %}
-
-{% if site.show_post_footers %}
-  {% include post_footer.html %}
-{% endif %}
-
-
-<div>
-  <h4>Appropriate for:</h4>
-  {% if page.tags != null %}
-    {% for tag in page.tags %}
-        {% capture tag_name %}{{ tag }}{% endcapture %}
-        <a class="button" href="{{ site.baseurl }}/tags/{{ tag_name | slugify: "pretty" }}">{{ tag_name }}
-        </a> 
-    {% endfor %}
-  {% endif %}
-</div>
-
-
-{% if site.show_related_posts %}
-  <h3 class="related-post-title">Related Lessons</h3>
-  <ul class="related-posts">
-    {% for post in site.related_posts %}
-    <li>
-      <a href="{{ post.url | relative_url }}" class="post-link">
-          {{ post.title }}
-      </a>
-    </li>
-    {% endfor %}
-  </ul>
-{% endif %}
-
-
-

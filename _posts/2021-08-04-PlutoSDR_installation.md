@@ -4,11 +4,12 @@ date:   2021-08-04
 title: PlutoSDR software Installation 
 summary:  Steps for installing the PlutoSDR software on your computer
 tags: ['School-Teachers', 'Students', 'Hobbyists' ]
-categories: ['Telescope Hardware Setup'] 
+categories: ['Receiver Electronics']
+order: 4
 ---
 
 
-The steps below outline the installation of software that is needed to run the Pluto SDR in GNURadio. More information and support about GNU Radio and IIO Devices can be found at: [https://wiki.analog.com/resources/tools-software/linux-software/gnuradio](https://wiki.analog.com/resources/tools-software/linux-software/gnuradio)
+The steps below outline the installation of software that is needed to run the Pluto SDR in GNU Radio. More information and support about GNU Radio and IIO Devices can be found at: [https://wiki.analog.com/resources/tools-software/linux-software/gnuradio](https://wiki.analog.com/resources/tools-software/linux-software/gnuradio)
 
 **Step 1: Install Dependencies**
 
@@ -70,4 +71,4 @@ Open a terminal window. Then type (or copy and paste) and enter the following:
 
 7. `sudo ldconfig`
 
-Your system should now be ready to install the PlutoSDR Source block in GNURadio. If there are any problems, refer to the information at: [https://wiki.analog.com/resources/tools-software/linux-software/gnuradio](https://wiki.analog.com/resources/tools-software/linux-software/gnuradio)
+Your system should now be ready to install the PlutoSDR Source block in GNU Radio. If there are any problems, refer to the information at: [https://wiki.analog.com/resources/tools-software/linux-software/gnuradio](https://wiki.analog.com/resources/tools-software/linux-software/gnuradio)

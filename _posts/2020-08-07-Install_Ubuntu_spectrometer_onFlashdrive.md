@@ -4,7 +4,8 @@ date:   2020-08-07
 title: Installing Ubuntu 22.04 with spectrometer_w_cal.grc on Bootable Flashdrive
 summary:  Instructions for copying the Ubuntu/spectrometer_w_cal image on a bootable flashdrive
 tags: ['School-Teachers', 'Students', 'Hobbyists' ]
-categories: ['Telescope Software Setup'] 
+categories: ['Software Setup']
+order: 5
 ---
 
 #### Image the Flashdrive:
@@ -24,9 +25,9 @@ categories: ['Telescope Software Setup']
 
 7. The *Ubuntu with spectrometer_w_cal.grc* image should now be on this bootable flashdrive.
 
-#### How to Run Gnuradio and the spectrometer_w_cal.grc program from the flashdrive. 
+#### How to Run GNU Radio and the spectrometer_w_cal.grc program from the flashdrive. 
 
-1. To run Gnuradio and the *spectrometer_w_cal.grc* program, place the bootable flash drive in a USB port. 
+1. To run GNU Radio and the *spectrometer_w_cal.grc* program, place the bootable flash drive in a USB port. 
 
 2. Start or reboot the computer. While it is starting, hold down the bootable key (F12) to pull up a menu of boot options.
 
@@ -42,7 +43,7 @@ categories: ['Telescope Software Setup']
 
 8. Before you hit the Play button at the top of the program window, you will need to adjust the gains for the AIRSpy in the OSMOCOM block. The nominal gain values for the AIRSpy are 17 12 10. 
 
-9. NOTE: When the save/write to file buttons are hit, the data files are written to the Spectra folder. Before you run GNURadio, you will need to create the Spectra folder. Click on the Files icon on the left side of the screen. Create the Spectra folder at this level.
+9. NOTE: When the save/write to file buttons are hit, the data files are written to the Spectra folder. Before you run GNU Radio, you will need to create the Spectra folder. Click on the Files icon on the left side of the screen. Create the Spectra folder at this level.
 
 10. NOTE: The system clock time defaults to UTC/London. Change it if needed.
 

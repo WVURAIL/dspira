@@ -1,32 +1,36 @@
 ---
 layout: page
+title: About DSPIRA
 permalink: /about/
-tags: about
-tite: Digital Signal Processing in Radio Astronomy 
-layout: default 
+eyebrow: The program
+lead: A three-summer NSF program that put radio telescopes in the hands of high school teachers.
 ---
 
-<h2>Digital Signal Processing in Radio Astronomy</h2>
+Digital Signal Processing in Radio Astronomy (DSPIRA) was a National Science
+Foundation **Research Experiences for Teachers** site at West Virginia
+University, run by the WVU Lane Department of Computer Science and Electrical
+Engineering with the WVU Center for Gravitational Waves and Cosmology and the
+[Green Bank Observatory](https://greenbankobservatory.org/).
 
-<div>
-    <p class="major">
-        Digital Signal Processing in Radio Astronomy (DSPIRA) is an NSF Research Experiences for Teachers (RET) in Engineering and
-        Computer Science Site at the West Virginia University Lane Department of Computer Science and Engineering.
-    </p>
-    <h3>Overview</h3>
-    <p>
-        The West Virginia University (WVU) Lane Department of Computer Science and Electrical Engineering, the WVU Center for Gravitational
-        Waves and Cosmology, and the National Radio Astronomy Observatory (NRAO) in Green Bank, WV, have been funded to develop
-        a Research Experience for Teachers program: "Digital Signal Processing in Radio Astronomy (DSPIRA)". This program providedands on experience using high quality open source software development tools,
-        in both research engineering and educational settings. This program was a six week summer program. Invlovemnet continued remotely. 
-        The teachers were given experience in the engineering method, via involvement in the research, design, development,
-        and prototyping of digital signal processing (DSP) techniques and applications targeted for the next generation of
-        radio telescopes.
-        </p>
-</div>
-<div>
-        <a href="https://hermandspira2018.travellerspoint.com/" class="button">Tad's Blog</a>
-        <a href="http://wvurail.org/dspira-2019/" class="button">RET - DSPiRA: Summer 2019</a>
-        <a href="http://wvurail.org/dspira-2018/" class="button">RET - DSPiRA: Summer 2018</a>
-        <a href="http://wvurail.org/dspira-2017/" class="button">RET - DSPiRA: Summer 2017</a>
-</div>
+Each cohort spent six weeks on site — four in Morgantown and two at Green Bank —
+and stayed involved remotely through the school year that followed. Teachers
+worked through the engineering method by doing it: researching, designing,
+building and testing the digital signal processing techniques that the next
+generation of radio telescopes depends on. Everything was built with open-source
+tools, the same ones the lab uses on real instruments.
+
+The cohort program ran in 2017, 2018 and 2019 and has concluded. The lessons
+those teachers wrote are what this site is, and they are still maintained.
+
+## The cohorts
+
+- [Summer 2019](/education/dspira-2019/)
+- [Summer 2018](/education/dspira-2018/)
+- [Summer 2017](/education/dspira-2017/)
+- [The program in full](/education/), on the lab's site
+
+## From a participant
+
+Tad Herman, one of the 2018 teachers, kept a
+[day-by-day blog](https://hermandspira2018.travellerspoint.com/) of the whole
+summer.

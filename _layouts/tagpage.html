@@ -1,14 +1,32 @@
 ---
-layout: page
+layout: default
 ---
-<div class="post">
-<h1>Level: {{ page.tag }}</h1>
-<ul>
-{% for post in site.tags[page.tag] %}
-  <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a> ({{ post.date | date_to_string }})<br>
-    {{ post.summary }}
-  </li>
-{% endfor %}
-</ul>
+{%- assign lessons = site.tags[page.tag] -%}
+<div class="page-head">
+   <div class="container">
+      <p class="eyebrow">Written for</p>
+      <h1>{{ page.tag | replace: '-', ' ' }}</h1>
+      {%- if page.lead %}<p class="lead">{{ page.lead }}</p>{% endif %}
+   </div>
 </div>
-<hr>
+
+<div class="section">
+   <div class="container">
+      {%- if lessons and lessons.size > 0 %}
+      <ul class="lesson-grid">
+         {%- for post in lessons %}
+         <li class="lesson-card">
+            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+            {%- if post.summary %}<p>{{ post.summary }}</p>{% endif %}
+            <p class="card-meta">
+               {%- assign m = post.categories | first -%}
+               {%- if m %}{{ m }}{% else %}Lesson{% endif %}
+            </p>
+         </li>
+         {%- endfor %}
+      </ul>
+      {%- else %}
+      <p class="lead">Nothing is tagged this way yet.</p>
+      {%- endif %}
+   </div>
+</div>

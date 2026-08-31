@@ -4,30 +4,32 @@ date:  2021-07-01
 title: Raspberry Pi
 summary:  Details for setting up Raspberry Pi for Radio Astronomy
 tags: ['School-Teachers', 'Students', 'Hobbyists' ]
-categories: ['Telescope Software Setup']
+categories: ['Software Setup']
+order: 10
 ---
 
-Raspberry Pi's are inexpensive and the more modern Pi's are powerful enough to keep up with the level of signal processing on GNURadio associated with Radio Astronomy applications. 
+Raspberry Pi's are inexpensive and the more modern Pi's are powerful enough to keep up with the level of signal processing on GNU Radio associated with Radio Astronomy applications. 
 
 
   - [Supported Raspberry Pi Devices](#supported-raspberry-pi-devices)
-  - [Installing Ubuntu image with radio astronomy preinstalled  on a Raspberry Pi](#installing-ubuntu-image-with-radio-astronomy-preinstalled-on-a-raspberry-pi)
-  - [Operating system requirement](#operating-system-requirement)
-  - [Installing Ubuntu on Raspberry Pi](#installing-ubuntu-on-raspberry-pi)
-    - [Prerequisites](#prerequisites)
-  - [Post Installation actions:](#post-installation-actions)
-    - [Interacting with the Raspberry Pi](#interacting-with-the-raspberry-pi)
-  - [Installing gr-radio_astro](#installing-gr-radioastro-installing-gr-radioastro-sitebaseurl-grradioastroinstallationtarget%22blank%22)
+  - [Installing Ubuntu image with radio astronomy preinstalled on a Raspberry Pi](#installing-ubuntu-image-with-radio-astronomy-preinstalled-on-a-raspberry-pi)
+  - [Setting OS and installing software from scratch](#setting-os-and-installing-software-from-scratch)
+    - [Operating system requirement](#operating-system-requirement)
+    - [Installing Ubuntu on Raspberry Pi](#installing-ubuntu-on-raspberry-pi)
+      - [Prerequisites](#prerequisites)
+    - [Post OS Installation actions](#post-os-installation-actions)
+      - [Interacting with the Raspberry Pi](#interacting-with-the-raspberry-pi)
+      - [Installing gr-radio_astro](#installing-gr-radio_astro)
 
 
-# Supported Raspberry Pi Devices
+## Supported Raspberry Pi Devices
 
 *All devices must have RAM greater than 4GB*
 1. Raspberry Pi 4 Model B
 2. Raspberry Pi 400
 
 
-# Installing Ubuntu image with radio astronomy preinstalled  on a Raspberry Pi
+## Installing Ubuntu image with radio astronomy preinstalled on a Raspberry Pi
 This image requires a minimum of 16GB of space on the SD card. 
 1. Download the image [here](https://drive.google.com/file/d/1KzfgMEwgwTTZUaCeNR5kRgLj9MfMKyAh/view?usp=sharing)
 2. Unzip the `.zip` file.
@@ -43,7 +45,7 @@ This image requires a minimum of 16GB of space on the SD card.
 5. The default user name is `pi`, with password `raspberry`. Change the password after first boot. 
 
 
-# Setting OS and installing software from scratch. 
+## Setting OS and installing software from scratch. 
 ## Operating system requirement
 
 1. Ubuntu for Raspberry Pi [Click here for more Info](https://ubuntu.com/raspberry-pi)
@@ -84,8 +86,10 @@ _NOTE_: Firstly, for Ubuntu desktop a monitor and mouse and keyboard is required
     
     
 
-### Installing `gr-radio_astro`: [Installing gr-radio_astro]({{ site.baseurl }}/gr_radio_astro_Installation){:target="_blank"} 
+### Installing gr-radio_astro
 
-Notes: run `volk_profile` after installing everything to make sure GNURadio is optimized to work on your device.
+[Installing gr-radio_astro]({{ site.baseurl }}/gr_radio_astro_Installation){: .button target="_blank"}
+
+Notes: run `volk_profile` after installing everything to make sure GNU Radio is optimized to work on your device.
 
 . 

@@ -4,7 +4,8 @@ date:   2020-07-22
 title: "Measuring the Earth's Speed around the Sun"
 summary:  This is a multi-activity lesson leading towards measuring the Speed of the Earth around the Sun
 tags: ['School-Teachers', 'Students', 'Hobbyists' ]
-categories: ['Astronomy'] 
+categories: ['Astronomy']
+order: 5
 ---
 This is a fairly intense sequence of activities for High School+ level students with the goal of eventually taking measurements with the DSPIRA Radio Horn Telescope to determine the Earths Speed around the Sun. The reference point to measure this speed with be the Center of the Galaxy (GC).   
 ### Click here for a complete document of [Teacher's Notes](https://docs.google.com/document/d/10zVMqpykbRbOjKvXGvWoZxYcacZ31Ay5AIp2mx70VOk/edit?usp=sharing) for this whole activity sequence
@@ -24,7 +25,7 @@ There are (up to) 6 activities to get to using the Horn Telescope
 ## 1. How Fast Are We Moving?   
    This activity is a stand alone activity that is a good simple exercise for students from general middle school space science up to high school physics students
    to determine the speed of the Earth's rotation, revolution around the Sun, and the Sun's speed around the Galaxy.
-######   >To get to the activity files, click here [How Fast Are We Moving?](http://wvurail.org/dspira-lessons/HowFastAreWeMoving)   
+######   >To get to the activity files, click here [How Fast Are We Moving?]({{ site.baseurl }}/HowFastAreWeMoving)   
    
 ## 2. Modeling Earth's Motion around the Sun    
 The Earth will be modeled as moving in a circle around the Sun.  The direction to the Center of the Galaxy(GC) is also included becuase it will eventually be needed for the 
@@ -76,11 +77,14 @@ This is an opportunity to gather the whole class data and discuss the results.  
 
 If you have a DSPIRA Radio Horn Telescope and the electronic means to use it, then there is an opportunity to have the students gather actual data from the Center of the Galaxy and run their own spectrum through the same set of analysis that was done in this activity sequence (namely, acitivities 2, 5, and 6)  
 
-![Students Observing the Galactic Center with a Radio Horn](/dspira-lessons/images/Students_Obs_GC.png)  
-<img src="/dspira-lessons/images/Students_Obs_GC.png" width="324" height="324">
+![Students Observing the Galactic Center with a Radio Horn]({{ site.baseurl }}/images/Students_Obs_GC.png)
 
 ###### *Students Observing the Galactic Center with a Radio Horn
 
-Video coming soon! How to go from choosing an object to observe to actually setting up the Horn Telescope and making the Observations
+Going from choosing an object to observe, through setting the telescope up,
+to taking the observation is covered in the **Observing** module:
+[Setting up the Telescope]({{ site.baseurl }}/Telescope_Setup) has the video,
+and [Horn Operation Tutorials]({{ site.baseurl }}/HornOperation_Tutorials)
+collects the rest of the walkthrough.
 
 

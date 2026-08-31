@@ -4,7 +4,8 @@ date:   2020-07-27
 title: "Tools for Observational Astronomy"
 summary:  The Radio Horn works best with the Milky Way, so let's learn about it
 tags: ['School-Teachers', 'Students', 'Hobbyists' ]
-categories: ['Astronomy'] 
+categories: ['Astronomy']
+order: 3
 ---
 
 The ultimate goal of the DSPIRA Astronomy Lessons Module is to give the teachers and students an opportunity to actually make observations in the sky using the DSPIRA Radio Horn Telescope.  If you are starting from ground zero in this discipline, then they will need to develop some basic tools, whether it is where to look in your hometown skies, to understanding what electromagnetic radiation is and what can we learn from it.  

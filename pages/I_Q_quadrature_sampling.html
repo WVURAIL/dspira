@@ -1,6 +1,14 @@
 ---
-layout: page
+# Served as its own document, NOT inside the site layout.
+#
+# This page is an exported Jupyter notebook. The export inlines about 246 KB of
+# Bootstrap, which redefines .container, .btn, body and h1 — every one of which
+# the site design system also uses. Dropped into a normal page it rewrites the
+# header, the footer and every button on that page. Keeping it standalone
+# quarantines it; the bar below is the way back.
+layout: null
 permalink: /iq/
+sitemap: false
 ---
 <!DOCTYPE html>
 <html>
@@ -11721,12 +11729,13 @@ div#notebook {
 }
 </style>
 
-<!-- Custom stylesheet, it must be in the same directory as the html file -->
-<link rel="stylesheet" href="custom.css">
+<!-- nbconvert emits a link to an optional per-user custom.css here. There has
+     never been one in this repo, so the link only bought a 404 on every load
+     of the page. If the notebook is ever re-exported, drop the link again. -->
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -11745,8 +11754,37 @@ div#notebook {
         }
     });
     </script>
-    <!-- End of mathjax configuration --></head>
+    <!-- End of mathjax configuration -->
+<style>
+/* Five colours from this file's own inlined Pygments and nbconvert stylesheets
+   miss WCAG AA on the background they are painted on - comments at 4.25:1,
+   string interpolation at 3.65:1, escapes at 3.89:1, operator words at 4.47:1,
+   and the Out[n] prompt at 4.44:1, all against a 4.5:1 minimum. Every one is a
+   near miss, which is the usual story with a default syntax palette.
+
+   Darkened just enough to pass, keeping each hue and saturation so the
+   highlighting still reads the way the notebook intended. Ratios after:
+   4.66, 4.61, 4.63, 4.62 and 4.61.
+
+   This block must come after the generated stylesheets above, which is why it
+   is here rather than in the site CSS - and this page does not load the site
+   CSS at all, by design. tools/check_contrast.py notices if a re-export drops
+   it. */
+.highlight .c1 { color: #3d7979; }
+.highlight .si { color: #b14f76; }
+.highlight .se { color: #a95c1f; }
+.highlight .ow { color: #a71bff; }
+div.output_prompt, div.prompt.output_prompt { color: #d34215; }
+</style>
+</head>
 <body>
+<div style="position:sticky;top:0;z-index:9999;background:#04070e;
+     border-bottom:1px solid rgba(255,255,255,.1);padding:12px 20px;
+     font:500 14px/1 -apple-system,'Segoe UI',sans-serif">
+  <a href="/dspira-lessons/" style="color:#eaaa00;text-decoration:none">&larr; DSPIRA lessons</a>
+  <span style="color:#7b8698;margin-left:14px">I/Q quadrature sampling</span>
+</div>
+
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
@@ -20784,7 +20822,7 @@ if (IPython.notebook.kernel != null) {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create &#39;complex&#39; IQ sampling output again.  Rember this is what an SDR dongle</span>
-<span class="c1">#gives as an output for processing by gnuradio.</span>
+<span class="c1">#gives as an output for processing by GNU Radio.</span>
 <span class="n">s1im</span> <span class="o">=</span> <span class="n">filtered_signals_imbalanced</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mf">1.0</span><span class="n">j</span><span class="o">*</span><span class="n">filtered_signals_imbalanced</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 <span class="n">s2im</span> <span class="o">=</span> <span class="n">filtered_signals_imbalanced</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="mf">1.0</span><span class="n">j</span><span class="o">*</span><span class="n">filtered_signals_imbalanced</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
 </pre></div>

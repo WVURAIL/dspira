@@ -4,12 +4,13 @@ date:  2021-07-01
 title: Installing gr-radio_astro
 summary:  Details for installing gr-radio_astro
 tags: ['School-Teachers', 'Students', 'Hobbyists' ]
-categories: ['Telescope Software Setup']
+categories: ['Software Setup']
+order: 7
 ---
 
-This will install the spectrometer program *spectrometer_w_cal.grc* as well as other useful radio astronomy GNURadio programs from the *gr_radio_astro* repository in GitHub.
+This will install the spectrometer program *spectrometer_w_cal.grc* as well as other useful radio astronomy GNU Radio programs from the *gr_radio_astro* repository in GitHub.
 
-**NOTE:** The instructions on this page will install files for Ubuntu 22.04. If you are using Ubuntu 20.04 LTS, click [here](https://wvurail.org//dspira-lessons/gr_radio_astro_Installation_Ubuntu20) for the installation.
+**NOTE:** The instructions on this page will install files for Ubuntu 22.04. If you are using Ubuntu 20.04 LTS, click [here]({{ site.baseurl }}/gr_radio_astro_Installation_Ubuntu20) for the installation.
 
 Complete the following steps:
 
@@ -17,7 +18,7 @@ Complete the following steps:
 
       **NOTE:** Most of the commands we use are entered in a *Terminal* window. We recommend adding the *Terminal* to your Favorites to be accessed easily.
 
-   2. If you have not already done so during the GNURadio installation, install the gnuradio external python dependencies and SDR drivers by typing the following and hit enter:
+   2. If you have not already done so during the GNU Radio installation, install the GNU Radio external python dependencies and SDR drivers by typing the following and hit enter:
    
       `sudo apt install gnuradio gr-osmosdr airspy python3-h5py python3-ephem git cmake liborc-0.4-dev -y`
    
@@ -39,7 +40,7 @@ Complete the following steps:
       sudo make install
       ```
  
-   9. To check that the installation was successful, type and enter `cd` to get to the home directory. Run the program in Gnuradio:
+   9. To check that the installation was successful, type and enter `cd` to get to the home directory. Run the program in GNU Radio:
    * In a terminal window type `gnuradio-companion`
    * Open the *spectrometer_w_cal.grc* program as follows from the File menu:
             
@@ -75,11 +76,11 @@ Occasionally the files in gr_radio_astro may change. Complete the following to u
    8. The update is complete.
 
    
-   **To Run the __spectrometer_w_cal.grc__ program in Gnuradio After Updating:**
+   **To Run the __spectrometer_w_cal.grc__ program in GNU Radio After Updating:**
    
    1. In a terminal window type `gnuradio-companion`.
 
-   2. Close any previous version of `spectrometer_w_cal.grc` that might be open in Gnuradio.
+   2. Close any previous version of `spectrometer_w_cal.grc` that might be open in GNU Radio.
    
    3. Open the new version of `spectrometer_w_cal.grc` from the folder `/gr-radio_astro/examples/DSPIRA/`
             

@@ -1,13 +1,14 @@
 ---
 layout: post
 date:  2021-07-01
-title: Installing GNURadio
-summary:  Details for installing GNURadio
+title: Installing GNU Radio
+summary:  Details for installing GNU Radio
 tags: ['School-Teachers', 'Students', 'Hobbyists' ]
-categories: ['Telescope Software Setup']
+categories: ['Software Setup']
+order: 6
 ---
 
-To install GNURadio, complete the following:
+To install GNU Radio, complete the following:
 
    1. Open a terminal window.
 

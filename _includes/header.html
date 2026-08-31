@@ -1,11 +1,24 @@
-<header class="center site-header px2 px-responsive">
-  <div class="mt2 wrap">
-    <div class="measure">
-      <a href="{{ "/" | relative_url }}" class="site-title button">{{ site.title }}</a>
-      <!-- <nav class="site-nav">
-        {% include navigation.html %}
-      </nav> -->
-      <div class="clearfix"></div>
-    </div>
-  </div>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+   <div class="container">
+      <a class="brand" href="{{ '/' | relative_url }}">
+         DSPIRA <small>Lessons</small>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"
+              aria-label="Menu">{% include icon.html name="menu" %}</button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+         {%- for item in site.data.nav %}
+         {%- if item.home %}
+         <a class="nav-home" href="{{ item.url }}">
+            {% include icon.html name="arrow-left" %} {{ item.text }}
+         </a>
+         {%- else %}
+         <a href="{{ item.url | relative_url }}"
+            {% if page.url == item.url %}aria-current="page"{% endif %}>{{ item.text }}</a>
+         {%- endif %}
+         {%- endfor %}
+      </nav>
+   </div>
 </header>

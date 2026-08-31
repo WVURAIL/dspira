@@ -1,84 +1,47 @@
-# Site settings
-title:       Digital Signal Processing in Radio Astronomy
+# DSPIRA lessons — site configuration.
+#
+# The site is built by GitHub Pages, which runs Jekyll 3.9 through the
+# github-pages gem. Anything that needs a newer Jekyll, or a plugin outside the
+# Pages allowlist, will fail the build silently: Pages emails the repository
+# owner and keeps serving the last good copy, so the site simply stops updating.
+
+title:       DSPIRA
+tagline:     Digital Signal Processing in Radio Astronomy
+description: >-
+  Free lessons on building and using a horn radio telescope — the antenna, the
+  amplifier, the software-defined radio and the astronomy. Written by the high
+  school teachers of the DSPIRA program at West Virginia University.
 email:       wvurail@gmail.com
-author:      Pranav Sanghavi
-description: "Lots of lessons"
+author:      WVU Radio Astronomy Instrumentation Laboratory
 baseurl:     "/dspira-lessons"
-url:         "https://wvurail.org/"
-date_format: "%b %-d, %Y"
-header_pages:
-  - tour.md
-   
-# Optional features
-animated:             true
-show_related_posts:   true
-show_post_footers:    false
-show_social_icons:    true
+# THE CUTOVER SWITCH. Serving does not read this (the domain is inherited from
+# the org site's CNAME); canonicals, og:url, the sitemap and the feed do. Change
+# to https://rail.wvu.edu in the same commit as the org repo's CNAME move — the
+# full checklist is .github/CUTOVER.md in wvurail.github.io.
+url:         "https://wvurail.org"
+date_format: "%B %-d, %Y"
 
-# Preview image for social media aka og:image and twitter:image
-post_preview_image: false
-
-
-# Social icons
-github_username: wvurail
-twitter_username: pranavsanghavi
-linkedin_username: 
-dev_username: dev_user
-
-# Post sharing icons
-show_sharing_icons: true
-# Change to 'true' to enable individual icons
-share_facebook: true
-share_twitter: true
-share_googleplus: false
-share_linkedin: true
-share_digg: false
-share_tumblr: true
-share_reddit: true
-share_stumbleupon: False
-share_hackernews: true
-
-text:
-  pagination:
-    newer: 'Newer'
-    older: 'Older'
-  share_buttons:
-    text:         ''
-    facebook:     'Share on Facebook'
-    twitter:      'Share on Twitter'
-    googleplus:   'Share on Google+'
-    linkedin:     'Share on LinkedIn'
-    digg:         'Share on Digg'
-    tumblr:       'Share on Tumblr'
-    reddit:       'Share on Reddit'
-    stumbleupon:  'Share on StumbleUpon'
-    hackernews:   'Share on Hacker News'
-  post:
-    updated:        'Updated'
-    minute_read:    'minute read'
-    related_posts:  'Related Lessons'
-    post_footer:    'Lorem ipsum'
-  index:
-    coming_soon: 'Coming soon...'
-  og_locale: 'en_US'
+github_username: WVURAIL
 
 # Build settings
 markdown: kramdown
 kramdown:
-redcarpet:
-  extensions: ['smart', 'tables', 'with_toc_data']
-permalink:    :title
-paginate:     10
-paginate_path: "/all/page:num/"
+  input: GFM
+  syntax_highlighter: rouge
+permalink: :title
 sass:
   style: compressed
 plugins:
-  - jekyll-paginate
   - jekyll-sitemap
 
 exclude:
+  # Belt and braces with .gitignore: if one of these is ever committed again it
+  # still must not reach _site, or the artifact upload fails on the colon.
+  - "*:Zone.Identifier"
   - Gemfile
   - Gemfile.lock
-  - Rakefile
+  - Gemfile.ci
+  - Gemfile.ci.lock
   - README.md
+  - CONTRIBUTING.md
   - vendor

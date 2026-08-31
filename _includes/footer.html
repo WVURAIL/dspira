@@ -1,17 +1,62 @@
-<footer class="left">
-  <div class="measure">
-    <div class="left" style="width: 80%;">
-      <small style="padding: 1%;">
-        &copy;{{ site.time | date:"%Y" }}  &nbsp; &nbsp;  <a class="button" href="{{ site.baseurl }}/about/">About DSPIRA</a>&nbsp;<a class="button" href="{{ site.baseurl }}/forum/">DSPIRA Forums</a><div style="padding: 2%; display: inline-block;"><div  style="float: left; width: 6%;"><img src="{{ site.baseurl }}/images/GBO.svg"></div><div  style="float: left; width: 5%;"><img src="{{ site.baseurl }}/images/nsf.svg"></div><div style="float: left; width: 20%;"><img src="{{ site.baseurl }}/images/wvu.svg"></div></div>
-      </small>
-    </div>
-    {% if site.show_social_icons %}
-      {% include social_links.html %}
-    {% endif %}
-  </div>
+<footer class="site-footer">
+   <div class="container">
+      <div class="footer-grid">
+         <div>
+            <h2>DSPIRA</h2>
+            <p>
+               Free lessons on building and using a horn radio telescope, written by the
+               high school teachers who did it. Produced by
+               <a href="/">WVU RAIL</a> with the
+               <a href="https://greenbankobservatory.org/">Green Bank Observatory</a>,
+               funded by the National Science Foundation.
+            </p>
+         </div>
+
+         <div>
+            <h2>Lessons</h2>
+            <ul>
+               <li><a href="{{ '/all/' | relative_url }}">All lessons</a></li>
+               <li><a href="{{ '/kits/' | relative_url }}">Telescope kits</a></li>
+               <li><a href="{{ '/user-levels/' | relative_url }}">Who these are for</a></li>
+               <li><a href="{{ '/labs/' | relative_url }}">Associate research labs</a></li>
+               <li><a href="{{ '/forum/' | relative_url }}">Ask in the forum</a></li>
+               <li><a href="{{ '/feed.xml' | relative_url }}">RSS feed</a></li>
+            </ul>
+         </div>
+
+         <div>
+            <h2>Elsewhere</h2>
+            <ul>
+               <li><a href="{{ '/about/' | relative_url }}">About DSPIRA</a></li>
+               <li><a href="/education/">The program</a></li>
+               <li>
+                  <a href="https://github.com/{{ site.github_username }}/dspira-lessons">
+                     {% include icon.html name="github" %} Source on GitHub
+                  </a>
+               </li>
+               <li>
+                  <a href="mailto:{{ site.email }}">
+                     {% include icon.html name="mail" %} {{ site.email }}
+                  </a>
+               </li>
+            </ul>
+         </div>
+      </div>
+
+      <div class="funders">
+         <a href="https://greenbankobservatory.org/">
+            <img src="{{ '/images/GBO.svg' | relative_url }}" alt="Green Bank Observatory" height="34" />
+         </a>
+         <a href="https://www.nsf.gov/">
+            <img src="{{ '/images/nsf.svg' | relative_url }}" alt="National Science Foundation" height="34" />
+         </a>
+         <a href="https://www.wvu.edu/">
+            <img src="{{ '/images/wvu.svg' | relative_url }}" alt="West Virginia University" height="34" />
+         </a>
+      </div>
+
+      <p class="colophon">
+         Lessons are free to use. &copy; {{ site.time | date: "%Y" }} West Virginia University.
+      </p>
+   </div>
 </footer>
-<script type="text/javascript">
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("{{ '/sw.js' | relative_url }}")
-    }
-</script>

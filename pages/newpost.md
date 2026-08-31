@@ -18,13 +18,23 @@ date:       2020-07-09 21:21:29
 title:      Title of your Lesson
 summary:    Summary of your Lesson
 tags: ['School-Teachers', 'Students', 'Hobbyists' ]
-categories: ['Lessson Category']
+categories: ['Observing']
+order:      11
 ---
 ```
 
 - Make sure you do not have special characters like `:` in your title and/or summary quote any special characters, such as `:` like `title: "my awesome site: an adventure".`
-- Every *post* can have one `tag` or multiple `tags`. It will automatically split a string entry if it contains whitespace. The website software  Jekyll expects multiple items mapped to the key tags For example, while front matter `tag: classic hollywood` will be processed into a singular entity `"classic hollywood"`, front matter `tags: classic hollywood` will be processed into an array of entries `["classic", "hollywood"]`. 
-- `categories` or `category` work the same way as tags.
+- Every *post* can have one `tag` or multiple `tags`. It will automatically split a string entry if it contains whitespace. The website software, Jekyll, expects multiple items mapped to the key tags For example, while front matter `tag: classic hollywood` will be processed into a singular entity `"classic hollywood"`, front matter `tags: classic hollywood` will be processed into an array of entries `["classic", "hollywood"]`. 
+- `categories` does **not** work the way `tags` does. A lesson belongs to
+exactly one module, and the name has to match one of the `category:` entries in
+`_data/modules.yml` exactly — *Horn Construction*, *Receiver Electronics*,
+*Software Setup*, *Observing*, *Digital Signal Processing*, *Astronomy* or
+*Community Labs*. A name that matches nothing means the lesson appears in no
+module at all, and the build will say so.
+
+- `order` is where the lesson sits inside its module, counting from 1. Every
+index and the previous/next links sort by it. Take the next free number in the
+module, or renumber the others if your lesson belongs partway through.
 
 - After the front matter make your lesson post formatting it in `markdown` refer to this cheat sheet [https://github.com/WVURAIL/dspira-lessons/wiki/Markdown-Cheatsheet](https://github.com/WVURAIL/dspira-lessons/wiki/Markdown-Cheatsheet)
 
@@ -37,7 +47,7 @@ categories: ['Lessson Category']
 In Google Drive:
 - open document
 - click share button (upper right corner)
-- in dialogue box, change the get link attribute to Anyone with link with viewer priveleges. see screenshot below
+- in dialog box, change the get link attribute to Anyone with link with viewer privileges. see screenshot below
 
 ![screen shot of changing permissions of google document]({{ site.baseurl }}/images/SharedScreenshot.jpg)
 
@@ -48,30 +58,28 @@ EXAMPLE:
 ```
 
 - Add YouTube link:
-Add an embedded window of the youtube video to the page by simply paste the youtube link on the markdown page on its own. Please add a couple of lines describing the contents of the video at minimum. 
+Add an embedded window of the youtube video to the page by simply pasting the YouTube link on the markdown page on its own. Please add a couple of lines describing the contents of the video at minimum. 
 
 ```
 https://www.youtube.com/watch?v=jS5fTzMP_mg
 
-The above video is a video of Kermit the frog singing the rainbow connention
+The above video is a video of Kermit the frog singing the Rainbow Connection
 ```
-##### Addding images to the posts
+##### Adding images to the posts
 
-To add images to your post first upload your image to github by going to the link below  upload and commit an image to the the images directory: 
+To add images to your post first upload your image to github by going to the link below  upload and commit an image to the images directory: 
 
 [Upload image](https://github.com/WVURAIL/dspira-lessons/upload/master/images){: .button}
 
 Then add the following to the post you are editing
 ```
-![write-a-brief-alt-text-describing-your-image]({{ site.baseurl }}/images/name-of-you-image-file.FORMAT)
+![write-a-brief-alt-text-describing-your-image]({{ site.baseurl }}/images/name-of-your-image-file.FORMAT)
 ```
-### View the live webpage: [wvurail.org/dspira-lessons](http://wvurail.org/dspira-lessons/)
+### View the live webpage: [the live lessons site]({{ site.baseurl }}/)
 
 
 ##  Edit your post in the text area below 
 
-<html>
-<body>
 <div>
     <p>Date:</p><h2 id="date"></h2>
     <div>
@@ -93,7 +101,7 @@ Enter the Lesson posts here
     </div>
 </div>
 
-<div> Upload your saved file to the website by uploading and commiting on github.com: &nbsp;
+<div> Upload your saved file to the website by uploading and committing on github.com: &nbsp;
  <a href="https://github.com/WVURAIL/dspira-lessons/upload/master/_posts" class = "button">Upload to Website</a>
 </div>
 
@@ -139,5 +147,3 @@ function destroyClickedElement(event)
 
 </script>
  
-</body>
-</html>

@@ -1,0 +1,25 @@
+---
+# /lesson-modules/ and /all/ listed exactly the same lessons - a 100% overlap,
+# nothing on either page that was not on the other - so "Modules" and "All
+# lessons" were two nav entries for one page. The module photographs and blurbs
+# this page carried are on /all/ now.
+#
+# The address stays alive: it was in the nav and the footer for years and is
+# linked from the 404 page and the user-levels page.
+permalink: /lesson-modules/
+layout: null
+sitemap: false
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8" />
+   <title>Redirecting &middot; {{ site.title }}</title>
+   <link rel="canonical" href="{{ '/all/' | absolute_url }}" />
+   <meta http-equiv="refresh" content="0; url={{ '/all/' | relative_url }}" />
+   <meta name="robots" content="noindex" />
+</head>
+<body>
+   <p>The lesson index is now at <a href="{{ '/all/' | relative_url }}">Lessons</a>.</p>
+</body>
+</html>

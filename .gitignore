@@ -1,0 +1,19 @@
+# Windows writes an NTFS alternate data stream next to anything downloaded from
+# the internet. Copied out through WSL it becomes a real file named
+# "logo.svg:Zone.Identifier". Four of them were committed with the funder logos,
+# and a colon is illegal in a GitHub Actions artifact path, so the build stayed
+# red at the upload step even though Jekyll itself succeeded.
+*:Zone.Identifier
+
+# Jekyll
+_site/
+.jekyll-cache/
+.jekyll-metadata
+Gemfile.ci
+Gemfile.ci.lock
+vendor/
+
+# tools/check_links.py writes its report here; Python caches next to the script
+link-report.md
+__pycache__/
+*.pyc

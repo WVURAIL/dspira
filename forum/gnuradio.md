@@ -1,15 +1,9 @@
 ---
 layout: page
-title: GNURadio Forum
+title: GNU Radio Forum
 permalink: /forum/gnuradio/
 ---
 
-# Discussions on GNURadio and related SDR software
+## Discussions on GNU Radio and related SDR software
 
-<script src="https://utteranc.es/client.js"
-        repo="WVURAIL/dspira-lessons"
-        issue-term="pathname"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>
+{% include giscus.html room="gnuradio" %}

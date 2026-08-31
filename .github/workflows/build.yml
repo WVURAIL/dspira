@@ -1,0 +1,251 @@
+# Builds the site the way GitHub Pages actually builds it, on every push and
+# pull request.
+#
+# Why this exists: the Pages builder reports failures only by email, after the
+# fact, and keeps serving the last good build. A broken Liquid tag therefore
+# looks like "the site just didn't update" rather than like an error. This
+# makes that loud.
+#
+# Note it installs the `github-pages` gem rather than using the repo's Gemfile
+# directly: Pages runs Jekyll 3.9 through that gem, and building against
+# anything newer can go green on something 3.9 rejects.
+name: Build
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  jekyll:
+    name: Jekyll build (github-pages gem)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Pin the exact gems GitHub Pages uses
+        run: |
+          cat > Gemfile.ci <<'GEMFILE'
+          source "https://rubygems.org"
+          gem "github-pages", group: :jekyll_plugins
+          # Ruby 3.0+ dropped webrick from the stdlib; Jekyll 3.9 still wants it.
+          gem "webrick", "~> 1.8"
+          GEMFILE
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.1"
+          bundler-cache: true
+        env:
+          BUNDLE_GEMFILE: ${{ github.workspace }}/Gemfile.ci
+
+      - name: Build
+        run: bundle exec jekyll build --trace
+        env:
+          BUNDLE_GEMFILE: ${{ github.workspace }}/Gemfile.ci
+          JEKYLL_ENV: production
+
+      - name: Every lesson and index page built
+        run: |
+          set -euo pipefail
+          missing=0
+          for page in index.html all/index.html lesson-modules/index.html \
+                      about/index.html kits/index.html user-levels/index.html \
+                      404.html iq/index.html
+          do
+            [ -s "_site/$page" ] || { echo "::error::_site/$page missing or empty"; missing=1; }
+          done
+          # Every lesson in _posts must produce a page.
+          want=$(ls _posts | wc -l)
+          got=$(find _site -name index.html -newer _config.yml | wc -l)
+          echo "posts in _posts: $want"
+          [ "$want" -ge 40 ] || { echo "::error::only $want posts found — did _posts get truncated?"; missing=1; }
+          exit $missing
+
+      - name: The data-driven lists actually rendered
+        run: |
+          set -euo pipefail
+          fail=0
+          check() {  # name, file, pattern, minimum
+            n=$(grep -o "$3" "_site/$2" | wc -l || true)
+            echo "$1: $n"
+            if [ "$n" -lt "$4" ]; then
+              echo "::error::$1 rendered $n (expected >= $4) — data or a Liquid filter is broken"
+              fail=1
+            fi
+          }
+          # The module grid is driven by _data/modules.yml cross-referenced
+          # against post categories. A category renamed in one place and not the
+          # other still builds — it just silently drops a module.
+          #
+          # The expected number is read from _data/modules.yml rather than
+          # written down here. It used to be a hardcoded 9, which was right
+          # until the modules were consolidated and then quietly wrong: a check
+          # with a number copied into it has the same drift problem as the thing
+          # it is checking.
+          modules=$(grep -c '^- category:' _data/modules.yml)
+          echo "modules declared in _data/modules.yml: $modules"
+
+          check "modules on the front page" index.html     'class="module"'          "$modules"
+          # /all/ is the only lesson index now; /lesson-modules/ redirects to it,
+          # so the module headings live here.
+          check "module sections in /all/"  all/index.html  'class="module-toc__head"' "$modules"
+          check "lesson cards in /all/"     all/index.html  'class="lesson-card"'     40
+          check "nav links"                 index.html                'class="site-nav"'        1
+
+          # Every module the front page shows must also be a page you can open.
+          # tr -d CR because a checkout with core.autocrlf on yields CRLF, and a
+          # slug with a carriage return on the end matches no directory.
+          for slug in $(grep '^- category:' _data/modules.yml \
+                        | sed 's/^- category: *//' \
+                        | tr -d '\r' | tr 'A-Z' 'a-z' | tr ' ' '-'); do
+            [ -s "_site/categories/$slug/index.html" ] \
+              || { echo "::error::module '$slug' has no page at /categories/$slug/ — the name in _data/modules.yml and the lessons' categories: have diverged"; fail=1; }
+          done
+
+          exit $fail
+
+      # A lesson's place in its module is front matter now, not its date. The
+      # dates are publication dates and several lessons share one, so sorting by
+      # them put the two-horn interferometer first in Horn Construction. Liquid's
+      # sort puts a missing key first, so a lesson added without `order:` becomes
+      # lesson 1 of its module and nothing says so.
+      - name: Every lesson has one module and a position in it
+        run: |
+          python3 - <<'PY'
+          import glob, re, sys, collections
+          bad, by_module = [], collections.defaultdict(list)
+          for path in sorted(glob.glob("_posts/*.md")):
+              fm = open(path, encoding="utf-8").read().split("---")[1]
+              cats = re.search(r"^categories:\s*(.*)$", fm, re.M)
+              order = re.search(r"^order:\s*(\d+)\s*$", fm, re.M)
+              if not cats:
+                  bad.append("%s: no categories:" % path); continue
+              names = re.findall(r"'([^']+)'|\"([^\"]+)\"", cats.group(1))
+              names = [a or b for a, b in names]
+              if len(names) != 1:
+                  bad.append("%s: filed under %d modules (%s) — one only" % (path, len(names), ", ".join(names)))
+                  continue
+              if not order:
+                  bad.append("%s: no order: — it would sort to the front of %s" % (path, names[0]))
+                  continue
+              by_module[names[0]].append((int(order.group(1)), path))
+
+          for module, items in sorted(by_module.items()):
+              nums = sorted(n for n, _ in items)
+              if nums != list(range(1, len(nums) + 1)):
+                  dupes = [n for n in set(nums) if nums.count(n) > 1]
+                  bad.append("%s: order is %s, expected 1..%d%s"
+                             % (module, nums, len(nums),
+                                " (duplicated: %s)" % dupes if dupes else ""))
+
+          for b in bad:
+              print("::error::" + b)
+          print("%d lessons across %d modules" % (sum(len(v) for v in by_module.values()), len(by_module)))
+          sys.exit(1 if bad else 0)
+          PY
+
+      - name: The forum comment boxes are wired up
+        run: |
+          set -euo pipefail
+          # Each room's giscus box gets its repository and category id from
+          # _data/giscus.yml, looked up by category name. A name that does not
+          # match a key there does not fail the build: Liquid resolves the
+          # missing key to nothing, and the page ships data-category-id="".
+          # giscus then loads, renders an empty thread, and silently refuses to
+          # save anything — the exact failure this file exists to make loud.
+          fail=0
+          for room in forum/index.html forum/antennas/index.html \
+                      forum/astronomy/index.html forum/dsp/index.html \
+                      forum/electronics/index.html forum/gnuradio/index.html
+          do
+            f="_site/$room"
+            if [ ! -s "$f" ]; then
+              echo "::error::$room is missing or empty"; fail=1; continue
+            fi
+            for attr in data-repo-id data-category-id data-term; do
+              grep -q "$attr=\"[^\"]\+\"" "$f" \
+                || { echo "::error::$room has an empty or missing $attr"; fail=1; }
+            done
+          done
+          echo "forum rooms checked: 6"
+          exit $fail
+
+      - name: No unrendered Liquid escaped into the output
+        run: |
+          set -euo pipefail
+          # The exported notebook at /iq/ contains literal braces in its
+          # JavaScript, so it is excluded from this check.
+          if grep -rn '{%\|{{' _site --include='*.html' | grep -v '_site/iq/'; then
+            echo "::error::Found unrendered Liquid tags in the built site"
+            exit 1
+          fi
+          echo "No unrendered Liquid."
+
+      # Heading anchors are the one kind of broken link that is entirely our
+      # own doing and entirely silent: rename a section and every table of
+      # contents pointing at it stops working, while the page still loads and
+      # the build still passes. Gate on those. Missing PDFs and dead external
+      # links are reported by the same run but do not fail the build, because
+      # they depend on people and hosts outside this repository.
+      - name: Heading anchors resolve
+        run: python3 tools/check_links.py --offline --fail-on anchors
+
+      - name: The link checker itself still works
+        run: python3 tools/test_check_links.py
+
+      # kramdown only displays an equation when its $$ fence starts a block.
+      # Written directly under the sentence that introduces it, the same equation
+      # renders inline, mid-paragraph, at body size — and nothing says so: the
+      # build passes and the maths is correct, it is just in the wrong place.
+      # Three were like that, and one of them scrolled /dsplab-fourier1/ 211px
+      # sideways on a phone. Costs a tenth of a second and needs nothing
+      # installed, so it runs before the browser is fetched.
+      - name: The maths check itself still works
+        run: python3 tools/check_math.py --self-test
+
+      - name: Displayed equations are actually displayed
+        run: python3 tools/check_math.py
+
+      # Horizontal overflow is the other silent one. The page loads, nothing
+      # errors, and on a phone the whole thing slides sideways. This repository
+      # shipped two: a lesson title with an unbreakable filename in it, there
+      # since 2020, and a sixth navigation entry that only overflowed between
+      # 721 and 756px. Neither was found by looking at the site.
+      #
+      # This is the one step that needs a browser, and it is most of the extra
+      # time this job takes. That is the price of the 721-756px class of bug,
+      # which no amount of reading the CSS will find. The contrast check below
+      # rides along on the same browser for free.
+      - name: Install a browser for the rendered checks
+        run: |
+          python3 -m pip install --quiet playwright
+          python3 -m playwright install --with-deps chromium
+
+      - name: The layout check itself still works
+        run: python3 tools/check_layout.py --self-test
+
+      - name: No page scrolls sideways
+        run: python3 tools/check_layout.py --site _site
+
+      # Contrast cannot be read off the stylesheet: what matters is the pair of
+      # colours that actually meet, after inheritance and any translucent layer
+      # in between. These lessons get projected in classrooms, where a colour
+      # that is merely fine on a laptop stops being readable.
+      - name: The contrast check itself still works
+        run: python3 tools/check_contrast.py --self-test
+
+      - name: Every piece of text meets WCAG AA
+        run: python3 tools/check_contrast.py --site _site
+
+      - name: Upload the built site
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: site
+          path: _site
+          retention-days: 7

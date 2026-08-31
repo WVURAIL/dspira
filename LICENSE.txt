@@ -1,8 +1,57 @@
-Copyright (c) 2020 Sai Kiran Sripada
-Copyright (c) 2014-2019 John Otander
-Copyright (c) 2014 Daniel Eden for animate.css
-Copyright (c) 2014 Brent Jackson for Basscss
-Copyright (c) 2013 Twitter, Inc for CSS copied from Bootstrap
+Third-party material redistributed with this site.
+
+The site's own code and lessons are MIT — see LICENSE. This file covers the
+things in the repository that somebody else wrote. The MIT text below applies to
+the Bootstrap and Font Awesome stylesheets named in it.
+
+
+FONTS — SIL Open Font License 1.1
+---------------------------------
+assets/fonts/ holds four font files, three families: Instrument Serif, Inter and
+JetBrains Mono. The OFL requires that its text and each copyright notice travel
+with the font files, so both sit next to them, in assets/fonts/OFL.txt.
+
+
+BOOTSTRAP 3.3.6 and 3.3.7
+-------------------------
+  Copyright 2011-2015 Twitter, Inc.   (3.3.6)
+  Copyright 2011-2016 Twitter, Inc.   (3.3.7)
+  https://github.com/twbs/bootstrap/blob/master/LICENSE
+
+Inlined by nbconvert into the two exported notebooks, about 246 KB apiece:
+
+  pages/I_Q_quadrature_sampling.html
+  code/gbt_drift/gbt_rendered_2017.html
+
+Nothing else on the site uses it. css/style.scss is hand-written and depends on
+no framework, which is exactly why those two pages are served outside the site
+layout: their copy of Bootstrap redefines .container, .btn, body and h1, all of
+which the design system also uses.
+
+
+FONT AWESOME 4.2.0 — stylesheet only
+------------------------------------
+  Copyright Dave Gandy, http://fontawesome.io
+  http://fontawesome.io/license  (Font: SIL OFL 1.1, CSS: MIT)
+
+Also inlined into those same two notebook exports. Only the stylesheet is here;
+the font files it asks for are not in this repository, so the OFL half of that
+dual licence does not apply — and the few icons it styles do not render on those
+two pages.
+
+
+WHAT THIS FILE USED TO SAY
+--------------------------
+It credited Sai Kiran Sripada, John Otander, animate.css and Basscss: the Jekyll
+theme this site was built on, and the CSS framework that theme vendored. The
+theme was replaced and all 22 Basscss partials deleted when css/style.scss was
+written by hand, and none of those four has a line left in the repository.
+
+They are removed rather than left in out of politeness. A notice file that lists
+code which is not here is wrong in the same way as one that omits code which is,
+and this file was managing both at once — the fonts above were being
+redistributed with no notice at all.
+
 
 MIT License
 

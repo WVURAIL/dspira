@@ -4,12 +4,13 @@ date:   2020-07-24
 title: Horn Telescope Spectrometer Description
 summary:  Description of the spectrometer_w_cal.grc program features
 tags: ['School-Teachers', 'Students', 'Hobbyists' ]
-categories: ['Telescope Operation'] 
+categories: ['Observing']
+order: 4
 ---
 
-The program used to run the telescope is a Gnuradio program called *spectrometer_w_cal.grc*. It is available from the WVURAIL/gr-radio_astro repository in Github. The *spectrometer_w_cal.grc* program has several features to make data collection with the horn telescope user-friendly. Each feature on the display is described below.
+The program used to run the telescope is a GNU Radio program called *spectrometer_w_cal.grc*. It is available from the WVURAIL/gr-radio_astro repository in Github. The *spectrometer_w_cal.grc* program has several features to make data collection with the horn telescope user-friendly. Each feature on the display is described below.
 
-Set up the horn and connect the LNA to the Airspy with a cable, and the Airspy to the computer USB.  Then open the spectrum_w_cal.grc program in Gnuradio. 
+Set up the horn and connect the LNA to the Airspy with a cable, and the Airspy to the computer USB.  Then open the spectrometer_w_cal.grc program in GNU Radio. 
 [This video shows how to set up a horn and start the program.](https://youtu.be/Oo28QCEZe_g) 
 
 You can also watch [this video](https://youtu.be/50B2Uv-SoDY), which describes these user interface features in detail.
@@ -58,7 +59,7 @@ You can also watch [this video](https://youtu.be/50B2Uv-SoDY), which describes t
 
    * **Full or Clipped Spectrum**
 
-       - **Clipped spectrum** – In this display the ends of the spectrum, between 1414 and 1415 MHz and between 1423 and 1424 MHz, are clipped off. This removes the distracting background portions of the spectrum, as discussed in the *The System Background Signal* in the [What Can a Horn Telescope Measure?](http://wvurail.org/dspira-lessons/HornOperation_Intro) post.
+       - **Clipped spectrum** – In this display the ends of the spectrum, between 1414 and 1415 MHz and between 1423 and 1424 MHz, are clipped off. This removes the distracting background portions of the spectrum, as discussed in the *The System Background Signal* in the [What Can a Horn Telescope Measure?]({{ site.baseurl }}/HornOperation_Intro) post.
 
 
       - **Full spectrum** – This is self explanatory.

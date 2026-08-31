@@ -1,13 +1,24 @@
 ---
 layout: default
 ---
-<div class="post">
-  <header class="post-header">
-    <h1 class="h2">{{ page.title }}</h1>
-  </header>
-  <article class="post-content">
-  {{ content }}
-  </article>
+{%- comment -%}
+A plain content page. `hide_title: true` suppresses the heading for pages that
+render their own (the front page does).
+{%- endcomment -%}
+{%- unless page.hide_title %}
+<div class="page-head">
+   <div class="container container--narrow">
+      {%- if page.eyebrow %}<p class="eyebrow">{{ page.eyebrow }}</p>{% endif %}
+      <h1>{{ page.title }}</h1>
+      {%- if page.lead %}<p class="lead">{{ page.lead }}</p>{% endif %}
+   </div>
 </div>
+{%- endunless %}
 
-<br>
+<div class="section">
+   <div class="container container--narrow">
+      <div class="prose">
+         {{ content }}
+      </div>
+   </div>
+</div>
