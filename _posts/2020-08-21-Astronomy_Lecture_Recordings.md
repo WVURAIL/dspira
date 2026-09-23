@@ -75,7 +75,7 @@ textbooks, marked **© 2007 Thomson Higher Education** and **© 2005
 Brooks/Cole – Thomson** (both now Cengage Learning). They appear here with
 permission obtained by the lecturers; that permission covers this use and does
 not extend to reusing those figures elsewhere. Everything else on this site is
-under the repository's own licence.
+under the repository's own license.
 
 ---
 

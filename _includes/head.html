@@ -40,9 +40,10 @@ the tag page spaces its own heading.{% endcomment -%}
       {%- capture page_desc -%}{{ page_title }}: find DSPIRA radio astronomy resources from West Virginia University, with links to lessons, hardware guides, and community discussions.{%- endcapture -%}
    {%- endif -%}
 {%- endunless -%}
-{%- assign full_title = page_title | append: ' · DSPIRA' -%}
+{%- assign title_text = page.meta_title | default: page_title -%}
+{%- assign full_title = title_text | append: ' · DSPIRA' -%}
 {%- if full_title.size < 40 -%}
-   {%- assign full_title = page_title | append: ' · DSPIRA Radio Astronomy Lessons at WVU' -%}
+   {%- assign full_title = title_text | append: ' · DSPIRA Radio Astronomy Lessons at WVU' -%}
 {%- endif -%}
 <head>
    <meta charset="utf-8" />
@@ -124,7 +125,7 @@ is parsed. Only pages with an above-the-fold background photo preload it.
    </style>
 
    <meta property="og:type" content="{% if page.date %}article{% else %}website{% endif %}" />
-   <meta property="og:title" content="{{ page_title | xml_escape }}" />
+   <meta property="og:title" content="{{ title_text | xml_escape }}" />
    <meta property="og:description" content="{{ page_desc | strip_html | xml_escape }}" />
    <meta property="og:url" content="{{ page.url | absolute_url }}" />
    <meta property="og:site_name" content="{{ site.title | xml_escape }}" />

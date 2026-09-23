@@ -6,6 +6,7 @@ summary:  Instructions for copying the Ubuntu/spectrometer_w_cal image on a boot
 tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Software Setup']
 order: 5
+meta_title: "Install Ubuntu 22.04 and DSPIRA on a USB Drive"
 meta_description: "Set up a bootable USB drive with Ubuntu 22.04 and the DSPIRA spectrometer. Follow the image-writing steps to prepare a telescope computer."
 ---
 

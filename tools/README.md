@@ -259,3 +259,14 @@ on white, say — than a stylesheet rule, and the fix is in the page, not in
 
 It does not cover text over images, focus indicators, or anything needing a
 pointer or keyboard. One measurable slice, not the whole of accessibility.
+
+## I/Q notebook export
+
+The published I/Q notebook is a static export. Its Bootstrap stylesheet and
+13 unchanged plot images live in `iq/`. The HTML keeps its text, code samples,
+plot descriptions, MathJax, and accessibility overrides. The unused Jupyter
+widget scripts are omitted.
+
+When updating the export, preserve its metadata, skip link, heading IDs, image
+descriptions, and preview `noindex`. Keep plot files separate so they can load
+on demand. Compare all plots and rerun the layout and contrast checks.

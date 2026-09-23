@@ -11,7 +11,7 @@ Most of a horn telescope comes from a hardware store. Two pieces do not: a
 software-defined radio dongle, and a low-noise amplifier tuned for the 21&nbsp;cm
 hydrogen line.
 
-If you are an educator or a community organiser who is held up by access to that
+If you are an educator or a community organizer who is held up by access to that
 equipment, you can ask for a starter kit. Fill in the form with your shipping
 details and a short note on what you plan to do — or have already done — with your
 students or your group.

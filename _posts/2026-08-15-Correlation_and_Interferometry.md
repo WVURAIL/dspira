@@ -274,7 +274,7 @@ Closer to home, and worth doing in this order:
 
 The text, equations and code on this page were written by **Pranav Sanghavi**
 at the WVU Radio Astronomy Instrumentation Laboratory on 21 May 2018, and are
-published here under this site's MIT licence. The notebook was ported from
+published here under this site's MIT license. The notebook was ported from
 Python 2 to Python 3 in 2026; the autocorrelation figure was added then, and
 everything else is his.
 
