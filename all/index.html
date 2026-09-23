@@ -2,6 +2,7 @@
 layout: default
 title: Lessons
 permalink: /all/
+meta_description: "Browse all DSPIRA radio astronomy lessons by module. Find construction guides, receiver setup, observing activities, and signal processing labs."
 ---
 {%- comment -%}
 Every lesson, grouped by module, in curriculum order. This is the only page
@@ -28,7 +29,7 @@ Hooks other things depend on, kept exactly as written:
    <div class="container">
       <div class="row">
          <div class="col-24 col-lg-16">
-            <p class="wvu-b-label text-uppercase wvu-text-letter-spacing-lg text-wvu-gold mb-3">Browse</p>
+            <p class="fw-bold text-wvu-gold mb-3">Browse</p>
             <h1 class="antonia-light display-4 mb-4">Every lesson</h1>
             <p class="fs-4 mb-0">
                All {{ site.posts | size }} of them, in {{ site.data.modules | size }} modules,
@@ -82,7 +83,7 @@ forloop.index so it matches the front page and the category pages.
                     alt="{{ m.alt }}">
             </div>
             <div class="col-24 col-md-16 col-lg-18">
-               <p class="wvu-b-label text-uppercase wvu-text-letter-spacing-lg small text-wvu-blue mb-2">Module {{ forloop.index }} &middot;
+               <p class="fw-bold small text-wvu-blue mb-2">Module {{ forloop.index }} &middot;
                   {{ lessons | size }} lesson{% if lessons.size != 1 %}s{% endif %}</p>
                <h2 class="antonia-light display-6 mb-2"><a class="text-decoration-none" href="{{ href }}">{{ m.category }}</a></h2>
                <p class="fs-5 text-body-secondary mb-0">{{ m.blurb }}</p>
@@ -101,7 +102,7 @@ forloop.index so it matches the front page and the category pages.
          <li class="lesson-card" data-search="{{ post.title | downcase }} {{ post.summary | downcase }} {{ m.category | downcase }}">
             <div class="card h-100 {{ card_bg }}">
                <div class="card-body p-4">
-                  <span class="d-block wvu-b-label text-uppercase wvu-text-letter-spacing-lg small text-wvu-blue mb-2" aria-hidden="true">{% if post.order < 10 %}0{% endif %}{{ post.order }}</span>
+                  <span class="d-block fw-bold small text-wvu-blue mb-2" aria-hidden="true">{% if post.order < 10 %}0{% endif %}{{ post.order }}</span>
                   <h3 class="h5 helvetica-neue-bold"><a class="text-decoration-none" href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
                   {%- if post.summary %}<p class="mb-0 text-body-secondary">{{ post.summary }}</p>{% endif %}
                </div>

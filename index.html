@@ -1,10 +1,9 @@
 ---
 layout: default
 title: DSPIRA lessons
-meta_description: >
-  Free lessons on building and using a horn radio telescope — the antenna, the
-  amplifier, the software-defined radio and the astronomy. Written by high
-  school teachers for the WVU RAIL DSPIRA program.
+preload_image: /images/hero/night-horns.jpg
+
+meta_description: "Build and use a horn radio telescope with free DSPIRA lessons from WVU. Explore antennas, electronics, software, observing, and astronomy."
 ---
 {%- comment -%}
 The front page on the WVU Design System (v3, Bootstrap 5.3 on a 24-column
@@ -42,7 +41,7 @@ image layer, so the type never depends on the photograph for its contrast.
       <div class="container">
          <div class="row">
             <div class="col-24 col-lg-16">
-               <p class="wvu-b-label text-uppercase wvu-text-letter-spacing-lg text-wvu-gold mb-3">
+               <p class="fw-bold text-wvu-gold mb-3">
                   Digital Signal Processing in Radio Astronomy
                </p>
                <h1 class="antonia-light display-3 mb-4">Build a radio telescope. Point it at the Galaxy.</h1>
@@ -67,7 +66,7 @@ image layer, so the type never depends on the photograph for its contrast.
    <div class="container">
       <div class="row mb-5">
          <div class="col-24 col-lg-16">
-            <p class="wvu-b-label text-uppercase wvu-text-letter-spacing-lg text-wvu-blue mb-2">Curriculum</p>
+            <p class="fw-bold text-wvu-blue mb-2">Curriculum</p>
             <h2 class="antonia-light display-5">The seven modules</h2>
             <p class="fs-5 text-body-secondary mb-0">
                Start at the top and they take you from a flat sheet of insulation board to
@@ -93,7 +92,7 @@ image layer, so the type never depends on the photograph for its contrast.
                     src="{{ slug | prepend: '/images/modules/' | append: '.jpg' | relative_url }}"
                     alt="{{ m.alt }}">
                <div class="card-body d-flex flex-column p-4">
-                  <p class="wvu-b-label text-uppercase wvu-text-letter-spacing-lg small text-wvu-blue mb-2">Module {{ forloop.index }}</p>
+                  <p class="fw-bold small text-wvu-blue mb-2">Module {{ forloop.index }}</p>
                   <h3 class="h4 helvetica-neue-bold"><a class="text-decoration-none" href="{{ href }}">{{ m.category }}</a></h3>
                   <p class="text-body-secondary">{{ m.blurb }}</p>
                   <ul class="list-unstyled mb-4">
@@ -199,7 +198,7 @@ purpose, not through relative_url. Everything else here is this site's own.
    <div class="container">
       <div class="row mb-5">
          <div class="col-24 col-lg-16">
-            <p class="wvu-b-label text-uppercase wvu-text-letter-spacing-lg text-wvu-blue mb-2">Beyond the lessons</p>
+            <p class="fw-bold text-wvu-blue mb-2">Beyond the lessons</p>
             <h2 class="antonia-light display-5 mb-0">Also here</h2>
          </div>
       </div>
@@ -234,7 +233,7 @@ purpose, not through relative_url. Everything else here is this site's own.
          <li>
             <div class="card h-100 bg-white">
                <div class="card-body p-4">
-                  <h3 class="h5 helvetica-neue-bold"><a class="text-decoration-none" href="{{ site.lab_url }}/lightwork/">LightWork Memos</a></h3>
+                  <h3 class="h5 helvetica-neue-bold"><a class="text-decoration-none" href="/lightwork/">LightWork Memos</a></h3>
                   <p class="mb-0 text-body-secondary">An informal numbered memo series on citizen science with radio telescopes,
                      covering design, construction and operation.</p>
                </div>

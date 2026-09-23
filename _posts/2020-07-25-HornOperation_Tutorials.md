@@ -6,6 +6,7 @@ summary:  Documents and videos explaining the operation of the horn telescope
 tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Observing']
 order: 8
+meta_description: "Use DSPIRA videos and written guides to operate a horn radio telescope. Find help with setup, calibration, and spectrometer controls."
 ---
 
 [Introduction to the horn telescope]({{ site.baseurl }}/HornOperation_Intro){: .btn .btn-wvu-blue}

@@ -225,15 +225,10 @@ jobs:
           # A check that found nothing to check would pass for the wrong reason.
           [ "$checked" -ge 60 ] \
             || { echo "::error::only $checked pages checked — did _site build?"; fail=1; }
-          # The second page exempted above needs a check of its own. It has no
-          # front matter, so Liquid never runs in it and it cannot be given the
-          # conditional robots meta that every laid-out page gets; the
-          # sitemap: false default in _config.yml is then the only thing
-          # keeping a staging copy of it out of a search index, and a
-          # defaults: scope is one path string away from matching nothing at
-          # all. Assert on the built sitemap rather than on the config.
+          # The exported GBT notebook stays out of the sitemap. Preview builds
+          # separately verify its conditional noindex in the combined site.
           if [ ! -s _site/sitemap.xml ] || grep -q 'gbt_rendered_2017\.html' _site/sitemap.xml; then
-            echo "::error::_site/sitemap.xml is missing, or still lists gbt_rendered_2017.html — the sitemap: false default in _config.yml no longer matches that path"
+            echo "::error::_site/sitemap.xml is missing, or still lists gbt_rendered_2017.html — the notebook must retain sitemap: false in its front matter"
             fail=1
           fi
           exit $fail

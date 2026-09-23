@@ -6,6 +6,7 @@ summary:  Details for installing gr-radio_astro on Ubuntu 20.04
 tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Software Setup']
 order: 8
+meta_description: "Install gr-radio_astro on Ubuntu 20.04 for GNU Radio 3.8. Follow the setup and update steps for the DSPIRA radio astronomy software."
 ---
 
 This will install the spectrometer program *spectrometer_w_cal.grc* as well as other useful radio astronomy GNU Radio programs onto a system using Ubuntu 20.04.
@@ -57,7 +58,7 @@ Complete the following steps:
            `File --> Open --> gr-radio_astros --> examples --> *spectrometer_w_cal.grc* `
          - Plug an Airspy radio, with the LNA attached, into the USB port. Run the program by hitting the start triangle ("execute the flowgraph") on the menu bar at top. If no errors occur, you are all set!  
    
-#### How to Update files from the gr-radio_astro gr38 Repository
+## How to Update files from the gr-radio_astro gr38 Repository
 
    1. Open the terminal window.
       

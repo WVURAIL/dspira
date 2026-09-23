@@ -2,6 +2,7 @@
 layout: catpag
 category: Software Setup
 lead: Ubuntu, GNU Radio and the DSPIRA blocks, on a laptop, a flash drive or a Raspberry Pi.
+meta_description: "Set up a computer for DSPIRA radio astronomy. Install Ubuntu, GNU Radio, receiver drivers, and telescope software using the lesson sequence."
 ---
 
 **Overview Software Needed For the Horn Telescope** 

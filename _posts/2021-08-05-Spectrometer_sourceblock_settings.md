@@ -6,13 +6,14 @@ summary:  Settings in spectrometer for different SDR's
 tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Receiver Electronics']
 order: 5
+meta_description: "Configure the source block in the DSPIRA spectrometer for your receiver. Find the device settings needed to collect radio astronomy data."
 ---
 
 
 The default source block settings in the `spectrometer_w_cal.grc` GNU Radio program are for the [Airspy R2](https://airspy.com/airspy-r2) SDR. If a different SDR is used, changes in the source block, the `samp_rate Variable` block, and sometimes the `freq Variable` block may be needed. The settings for some common SDR's used with the horn telescopes are described below.
 
 > **Why `freq` sometimes has to change too.** The program records a band
-> `samp_rate` wide, centred on `freq`. The default is `freq` 1419 MHz with
+> `samp_rate` wide, centered on `freq`. The default is `freq` 1419 MHz with
 > `samp_rate` 10e6, which records 1414 – 1424 MHz — the hydrogen line at
 > 1420.4058 MHz sits comfortably inside. Narrow the sample rate without moving
 > the centre and the band shrinks around 1419 MHz, and at some point the line

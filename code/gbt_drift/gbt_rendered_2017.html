@@ -1,7 +1,14 @@
+---
+layout: null
+sitemap: false
+---
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="utf-8" />
-<title>gbt</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<head>
+{% if page.noindex or site.noindex_all %}<meta name="robots" content="noindex" />{% endif %}
+<meta name="description" content="Analyze a Green Bank Telescope drift scan from the 2017 DSPIRA program. Use the notebook to explore spectra, calibration, and recorded radio data." />
+<meta name="viewport" content="width=device-width, initial-scale=1" /><meta charset="utf-8" />
+<title>Green Bank Telescope Drift Scan Notebook · DSPIRA</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -9709,7 +9716,10 @@ div.input_area > div.highlight > pre {
   padding: 0px;
   background-color: transparent;
 }
-/* The following gets added to the <head> if it is detected that the user has a
+/* The following gets added to the <head>
+{% if page.noindex or site.noindex_all %}<meta name="robots" content="noindex" />{% endif %}
+<meta name="description" content="Analyze a Green Bank Telescope drift scan from the 2017 DSPIRA program. Use the notebook to explore spectra, calibration, and recorded radio data." />
+<meta name="viewport" content="width=device-width, initial-scale=1" /> if it is detected that the user has a
  * monospace font with inconsistent normal/bold/italic height.  See
  * notebookmain.js.  Such fonts will have keywords vertically offset with
  * respect to the rest of the text.  The user should select a better font.
@@ -11791,9 +11801,17 @@ div#notebook {
 .highlight .ow { color: #a71bff; }
 div.output_prompt, div.prompt.output_prompt { color: #d34215; }
 </style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "Green Bank Telescope Drift Scan Notebook · DSPIRA", "description": "Analyze a Green Bank Telescope drift scan from the 2017 DSPIRA program. Use the notebook to explore spectra, calibration, and recorded radio data.", "inLanguage": "en-US", "learningResourceType": "Notebook"}</script>
+<style>
+.notebook-skip { position: absolute; left: -10000px; }
+.notebook-skip:focus { position: fixed; left: 12px; top: 12px; z-index: 10000; padding: 12px; background: #fff; color: #002855; }
+#notebook-container { max-width: 100%; box-sizing: border-box; }
+.anchor-link { display: inline-block; min-width: 24px; min-height: 24px; text-align: center; }
+</style>
 </head>
 <body>
-  <div tabindex="-1" id="notebook" class="border-box-sizing">
+<a class="notebook-skip" href="#notebook">Skip to main content</a>
+  <div role="main" tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
 <div class="cell border-box-sizing text_cell rendered">
@@ -11801,7 +11819,7 @@ div.output_prompt, div.prompt.output_prompt { color: #d34215; }
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="GNU-Radio-and-GBT">GNU Radio and GBT<a class="anchor-link" href="#GNU-Radio-and-GBT">&#182;</a></h1><p>The RET-DSPiRA cohort of 2017 had the unique opportunity of using their own DSP spectrometer program they designed in GNU Radio to process signal from the Green Bank Telescope. We tapped into the Green Bank Telescope IF signal to the Airspy sdr dongle and recorded a drift scan with the GBT in the L-band. The <a href="http://www.gb.nrao.edu/vegas/">VEGAS spectrometer</a> back end usually fully connected from the IF rack had one of the polarizations sent to the tapped port. VEGAS also simultaniousy took the data. This notebook reduces the data taken. Feel free to download it and play around with it if you like.</p>
+<h1 id="GNU-Radio-and-GBT">GNU Radio and GBT<a class="anchor-link" aria-label="Link to GNU Radio and GBT" href="#GNU-Radio-and-GBT">&#182;</a></h1><p>The RET-DSPiRA cohort of 2017 had the unique opportunity of using their own DSP spectrometer program they designed in GNU Radio to process signal from the Green Bank Telescope. We tapped into the Green Bank Telescope IF signal to the Airspy sdr dongle and recorded a drift scan with the GBT in the L-band. The <a href="http://www.gb.nrao.edu/vegas/">VEGAS spectrometer</a> back end usually fully connected from the IF rack had one of the polarizations sent to the tapped port. VEGAS also simultaniousy took the data. This notebook reduces the data taken. Feel free to download it and play around with it if you like.</p>
 
 </div>
 </div>
@@ -12072,7 +12090,7 @@ Hours Observed = 10.704411181410153
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="The-Data">The Data<a class="anchor-link" href="#The-Data">&#182;</a></h2>
+<h2 id="The-Data">The Data<a class="anchor-link" aria-label="Link to The Data" href="#The-Data">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -12873,7 +12891,7 @@ mpl.find_output_cell = function(html_output) {
 
 // Register the function which deals with the matplotlib target/channel.
 // The kernel may be null if the page has been refreshed.
-if (IPython.notebook.kernel != null) {
+if (typeof IPython !== "undefined" && IPython.notebook && IPython.notebook.kernel != null) {
     IPython.notebook.kernel.comm_manager.register_target('matplotlib', mpl.mpl_figure_comm);
 }
 
@@ -13665,7 +13683,7 @@ mpl.find_output_cell = function(html_output) {
 
 // Register the function which deals with the matplotlib target/channel.
 // The kernel may be null if the page has been refreshed.
-if (IPython.notebook.kernel != null) {
+if (typeof IPython !== "undefined" && IPython.notebook && IPython.notebook.kernel != null) {
     IPython.notebook.kernel.comm_manager.register_target('matplotlib', mpl.mpl_figure_comm);
 }
 
@@ -13704,7 +13722,7 @@ if (IPython.notebook.kernel != null) {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Calibration">Calibration<a class="anchor-link" href="#Calibration">&#182;</a></h3><p>To have our data make physical sense need to calibrate the data. In practice the GBT has a noise diode injecting a known noise to the signal switching on and off continuously through time. But we did not have that for our setup. We will make some  assumptions.</p>
+<h3 id="Calibration">Calibration<a class="anchor-link" aria-label="Link to Calibration" href="#Calibration">&#182;</a></h3><p>To have our data make physical sense need to calibrate the data. In practice the GBT has a noise diode injecting a known noise to the signal switching on and off continuously through time. But we did not have that for our setup. We will make some  assumptions.</p>
 $$
 power = g(T_{sky}+T_{sys}) \\
 T_{sys} = assume( 143 K)
@@ -14532,7 +14550,7 @@ mpl.find_output_cell = function(html_output) {
 
 // Register the function which deals with the matplotlib target/channel.
 // The kernel may be null if the page has been refreshed.
-if (IPython.notebook.kernel != null) {
+if (typeof IPython !== "undefined" && IPython.notebook && IPython.notebook.kernel != null) {
     IPython.notebook.kernel.comm_manager.register_target('matplotlib', mpl.mpl_figure_comm);
 }
 
@@ -15391,7 +15409,7 @@ mpl.find_output_cell = function(html_output) {
 
 // Register the function which deals with the matplotlib target/channel.
 // The kernel may be null if the page has been refreshed.
-if (IPython.notebook.kernel != null) {
+if (typeof IPython !== "undefined" && IPython.notebook && IPython.notebook.kernel != null) {
     IPython.notebook.kernel.comm_manager.register_target('matplotlib', mpl.mpl_figure_comm);
 }
 
@@ -16183,7 +16201,7 @@ mpl.find_output_cell = function(html_output) {
 
 // Register the function which deals with the matplotlib target/channel.
 // The kernel may be null if the page has been refreshed.
-if (IPython.notebook.kernel != null) {
+if (typeof IPython !== "undefined" && IPython.notebook && IPython.notebook.kernel != null) {
     IPython.notebook.kernel.comm_manager.register_target('matplotlib', mpl.mpl_figure_comm);
 }
 
@@ -16975,7 +16993,7 @@ mpl.find_output_cell = function(html_output) {
 
 // Register the function which deals with the matplotlib target/channel.
 // The kernel may be null if the page has been refreshed.
-if (IPython.notebook.kernel != null) {
+if (typeof IPython !== "undefined" && IPython.notebook && IPython.notebook.kernel != null) {
     IPython.notebook.kernel.comm_manager.register_target('matplotlib', mpl.mpl_figure_comm);
 }
 
@@ -17808,7 +17826,7 @@ mpl.find_output_cell = function(html_output) {
 
 // Register the function which deals with the matplotlib target/channel.
 // The kernel may be null if the page has been refreshed.
-if (IPython.notebook.kernel != null) {
+if (typeof IPython !== "undefined" && IPython.notebook && IPython.notebook.kernel != null) {
     IPython.notebook.kernel.comm_manager.register_target('matplotlib', mpl.mpl_figure_comm);
 }
 
@@ -18600,7 +18618,7 @@ mpl.find_output_cell = function(html_output) {
 
 // Register the function which deals with the matplotlib target/channel.
 // The kernel may be null if the page has been refreshed.
-if (IPython.notebook.kernel != null) {
+if (typeof IPython !== "undefined" && IPython.notebook && IPython.notebook.kernel != null) {
     IPython.notebook.kernel.comm_manager.register_target('matplotlib', mpl.mpl_figure_comm);
 }
 
@@ -19429,7 +19447,7 @@ mpl.find_output_cell = function(html_output) {
 
 // Register the function which deals with the matplotlib target/channel.
 // The kernel may be null if the page has been refreshed.
-if (IPython.notebook.kernel != null) {
+if (typeof IPython !== "undefined" && IPython.notebook && IPython.notebook.kernel != null) {
     IPython.notebook.kernel.comm_manager.register_target('matplotlib', mpl.mpl_figure_comm);
 }
 
@@ -20254,7 +20272,7 @@ mpl.find_output_cell = function(html_output) {
 
 // Register the function which deals with the matplotlib target/channel.
 // The kernel may be null if the page has been refreshed.
-if (IPython.notebook.kernel != null) {
+if (typeof IPython !== "undefined" && IPython.notebook && IPython.notebook.kernel != null) {
     IPython.notebook.kernel.comm_manager.register_target('matplotlib', mpl.mpl_figure_comm);
 }
 

@@ -4,6 +4,7 @@ title: Where DSPIRA is used
 permalink: /labs/
 eyebrow: The record
 lead: Classrooms, clubs, courses and conference halls where this hardware and these lessons have turned up.
+meta_description: "See where DSPIRA telescopes and lessons are used. Explore classroom programs, research groups, presentations, and independent radio projects."
 ---
 
 The lessons are free and nobody has to tell us they are using them, so this is
@@ -25,10 +26,10 @@ resources. Fall 2021.
 
 *That server's certificate is out of date; a browser will warn before it loads.*
 
-**[For Teachers](https://greenbankobservatory.org/education/teachers/)** —
-Green Bank Observatory. DSPIRA is described there as the six-week summer
-research programme the observatory ran with WVU for ten high school teachers a
-year.
+**[Education programs](https://greenbankobservatory.org/education/)** —
+Green Bank Observatory's current educational programs and classroom resources.
+The observatory partnered with WVU on DSPIRA's six-week summer research
+program for high school teachers.
 
 ## Presented
 
@@ -65,5 +66,5 @@ hydrogen line work; theirs is
 and Development runs the telescopes alongside a cosmic ray detector;
 [their work is in Community Labs]({{ site.baseurl }}/WISRDUpdate).
 
-**[LightWork Memos]({{ site.lab_url }}/lightwork/)** — the numbered memo series
+**[LightWork Memos](/lightwork/)** — the numbered memo series
 on citizen science with radio telescopes, several of which use this hardware.

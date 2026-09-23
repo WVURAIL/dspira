@@ -2,6 +2,7 @@
 layout: catpag
 category: Horn Construction
 lead: The antenna itself, built from insulation board, lumber, and a can from the paint aisle.
+meta_description: "Build a DSPIRA horn antenna and stand. Follow the construction sequence, assemble the can antenna, and explore alternative telescope designs."
 ---
 
 The horn is the telescope. It is a pyramidal sheet-metal antenna on a wooden

@@ -4,6 +4,7 @@ title: About DSPIRA
 permalink: /about/
 eyebrow: The program
 lead: A three-summer NSF program that put radio telescopes in the hands of high school teachers.
+meta_description: "Learn about the DSPIRA summer program at West Virginia University. Meet the teacher cohorts who created these free radio astronomy lessons."
 ---
 
 Digital Signal Processing in Radio Astronomy (DSPIRA) was a National Science

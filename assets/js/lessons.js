@@ -21,6 +21,7 @@
       is left in place as the fallback rather than being replaced.        */
    var YT = /^https?:\/\/(?:www\.)?(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([\w-]{11})/;
 
+   var videoNumber = 0;
    document.querySelectorAll(".prose p").forEach(function (p) {
       var text = p.textContent.trim();
       var link = p.querySelector("a");
@@ -35,7 +36,13 @@
       wrap.className = "videoWrapper";
       var frame = document.createElement("iframe");
       frame.src = "https://www.youtube-nocookie.com/embed/" + m[1];
-      frame.title = "Video";
+      var heading = document.querySelector("h1");
+      document.querySelectorAll(".prose h2, .prose h3, .prose h4").forEach(function (candidate) {
+         // DOCUMENT_POSITION_FOLLOWING means the video follows this heading.
+         if (candidate.compareDocumentPosition(p) & 4) heading = candidate;
+      });
+      videoNumber++;
+      frame.title = (heading ? heading.textContent.trim() : "Lesson") + " — video " + videoNumber;
       frame.loading = "lazy";
       frame.allow = "accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
       frame.allowFullscreen = true;
@@ -122,7 +129,7 @@
       apply();
    }
 
-   /* --- Scrollable code blocks -------------------------------------------
+   /* --- Scrollable code blocks and tables --------------------------------
       A lesson's code samples are wider than the column on a narrow screen, so
       the stylesheet lets them scroll sideways. A region you can only scroll
       with a mouse or a finger is unreachable from the keyboard, which is
@@ -138,11 +145,23 @@
          if (overflows && !el.hasAttribute("tabindex")) {
             el.setAttribute("tabindex", "0");
             el.setAttribute("role", "region");
-            el.setAttribute("aria-label", "Code sample, scrollable");
+            el.setAttribute("aria-label", "Code sample " + (i + 1) + ", scrollable");
          } else if (!overflows && el.getAttribute("role") === "region") {
             el.removeAttribute("tabindex");
             el.removeAttribute("role");
             el.removeAttribute("aria-label");
+         }
+      }
+      // Keep native table semantics while allowing keyboard scrolling.
+      var tables = document.querySelectorAll(".prose table");
+      for (var j = 0; j < tables.length; j++) {
+         var table = tables[j];
+         if (table.scrollWidth > table.clientWidth + 1 && !table.hasAttribute("tabindex")) {
+            table.setAttribute("tabindex", "0");
+            table.setAttribute("data-scroll-focus", "true");
+         } else if (table.scrollWidth <= table.clientWidth + 1 && table.hasAttribute("data-scroll-focus")) {
+            table.removeAttribute("tabindex");
+            table.removeAttribute("data-scroll-focus");
          }
       }
    };

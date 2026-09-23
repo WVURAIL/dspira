@@ -6,6 +6,7 @@ summary:  Exploring how fast we are moving in the Milky Way Galaxy
 tags: ['School-Teachers', 'Students', 'Hobbyists']
 categories: ['Astronomy']
 order: 4
+meta_description: "Calculate how fast Earth and the Sun move through space. Use a classroom activity to compare rotation, orbital motion, and galactic motion."
 ---
 This lesson is designed at three different levels.  Each is mainly after the students being able to determine the speed of the Earth around the Sun.  
 

@@ -6,6 +6,7 @@ summary:  Instructions on how to use the *spectrometer_w_cal* program
 tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Observing']
 order: 6
+meta_description: "Use spectrometer_w_cal to view and calibrate radio telescope signals. Follow the DSPIRA guide to running the flowgraph and setting controls."
 ---
 
 + [Using the *spectrometer_w_cal* program]({{ site.baseurl }}/HornOperation_runningSpectrometer) - Describes how to use the *spectrometer_w_cal* program.

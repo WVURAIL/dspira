@@ -2,6 +2,7 @@
 layout: catpag
 category: Community Labs
 lead: Work contributed by the classrooms and clubs that have taken this hardware and run with it.
+meta_description: "Explore projects from schools, clubs, and student groups using DSPIRA hardware. Read about motorized mounts, cosmic rays, and telescope tests."
 ---
 
 The lessons in the other six modules came out of the DSPIRA summer cohorts.

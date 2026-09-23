@@ -6,11 +6,12 @@ summary:  Instructions on how to use the spectrometer_w_cal.grc program in GNU R
 tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Observing']
 order: 5
+meta_description: "Run the DSPIRA spectrometer in GNU Radio. Follow the startup steps, choose the receiver settings, and begin viewing radio telescope data."
 ---
 
 The video shown [here](https://youtu.be/50B2Uv-SoDY) explains the features in this program.
 
-#### Before Starting The Program
+## Before Starting The Program
 
 The video [here](https://youtu.be/Oo28QCEZe_g) explains how set up the horn and make adjustments to the user-defined settings referred to below.
 
@@ -47,7 +48,7 @@ The video [here](https://youtu.be/Oo28QCEZe_g) explains how set up the horn and 
    * CAUTION: If you run the program on a laptop without the power cord plugged in, the computer may go into a sleep mode and stop running the program, depending on the length of the run. Change the power settings on your computer so that it never suspends or goes to sleep.
 
 
-### After Starting The Program
+## After Starting The Program
 
    * The first screen that appears looks like the following:
 
@@ -67,7 +68,7 @@ The video [here](https://youtu.be/Oo28QCEZe_g) explains how set up the horn and 
 
    * The `Clipped Spectrum` is the better selection for most viewings. The `Full Spectrum` is good for demonstrating how the signal processing affects the spectrum. It also might be useful for the expert user who wants the full spectrum for some reason.
 
-### Saving a Spectrum to a Data File
+## Saving a Spectrum to a Data File
 
    * [Video](https://youtu.be/dWX0rRU99Z8) - describes how to save data
 

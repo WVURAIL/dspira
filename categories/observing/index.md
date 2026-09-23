@@ -2,6 +2,7 @@
 layout: catpag
 category: Observing
 lead: What to do once it is built and the software runs.
+meta_description: "Learn to operate a DSPIRA horn radio telescope. Set up the receiver, calibrate the spectrometer, record data, and work with two-horn observations."
 ---
 
 Once the horn is built and the receiver chain works, these lessons cover using

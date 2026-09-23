@@ -6,6 +6,7 @@ summary:  Step by Step instructions for downloading and installing Radio Astrono
 tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Software Setup']
 order: 11
+meta_description: "Download and install the WVU RAIL radio astronomy operating system for Raspberry Pi. Prepare a compact computer to run a horn telescope."
 ---
 
 ## Radio Astronomy with Raspberry Operating System
@@ -162,7 +163,7 @@ You have the opportunity to discover the Milky Way for yourself, with the tools 
 LightWork Memos
 The more detailed tests of the system are in a set of memos.  You’re invited to contribute to these memos:
 
-[The LightWork memo series]({{ site.lab_url }}/lightwork/)
+[The LightWork memo series](/lightwork/)
 Live Video Demo
 We gave a live demo of the current horn design in an online webinar during the American Astronomical Society Meeting in June 2020.   The demo shows the telescope in operation, easily finding our Milky Way Galaxy spiral arms in a few seconds.
 

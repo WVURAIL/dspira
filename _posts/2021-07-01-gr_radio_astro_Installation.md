@@ -6,6 +6,7 @@ summary:  Details for installing gr-radio_astro
 tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Software Setup']
 order: 7
+meta_description: "Install the DSPIRA gr-radio_astro blocks for GNU Radio. Follow the repository setup and update steps to prepare your telescope software."
 ---
 
 This will install the spectrometer program *spectrometer_w_cal.grc* as well as other useful radio astronomy GNU Radio programs from the *gr_radio_astro* repository in GitHub.
@@ -50,7 +51,7 @@ Complete the following steps:
 
 Occasionally the files in gr_radio_astro may change. Complete the following to update these files.
 
-#### How to Update files from the gr-radio_astro Repository
+## How to Update files from the gr-radio_astro Repository
 
    1. Open the terminal window.
       

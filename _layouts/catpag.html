@@ -27,29 +27,30 @@ CSS counter, so that on /all/ the filter cannot renumber the curriculum.
 {%- endcomment -%}
 {%- assign lessons = site.categories[page.category] | sort: 'order' -%}
 {%- assign slug = page.category | slugify -%}
+{%- assign module_info = site.data.modules | where: 'category', page.category | first -%}
 
 <!-- ===================== MODULE HEAD ===================== -->
 <div class="bg-wvu-blue text-white py-6">
    <div class="container">
       <div class="row align-items-center">
          <div class="col-24 col-lg-14 mb-4 mb-lg-0">
-            <p class="wvu-b-label text-uppercase wvu-text-letter-spacing-lg text-wvu-gold mb-3">Module</p>
+            <p class="fw-bold text-wvu-gold mb-3">Module</p>
             <h1 class="antonia-light display-4 mb-3">{{ page.category }}</h1>
             {%- if page.lead %}
             <p class="fs-5 mb-3">{{ page.lead }}</p>
             {%- endif %}
             {%- if lessons and lessons.size > 1 %}
-            <p class="wvu-b-label text-uppercase wvu-text-letter-spacing-lg small mb-0">
+            <p class="fw-bold small mb-0">
                {{ lessons | size }} lessons, in the order they are meant to be worked through
             </p>
             {%- elsif lessons and lessons.size == 1 %}
-            <p class="wvu-b-label text-uppercase wvu-text-letter-spacing-lg small mb-0">1 lesson</p>
+            <p class="fw-bold small mb-0">1 lesson</p>
             {%- endif %}
          </div>
          <div class="col-24 col-lg-9 offset-lg-1">
             <img class="img-fluid rounded w-100 object-fit-cover" loading="lazy" decoding="async"
                  src="{{ slug | prepend: '/images/modules/' | append: '.jpg' | relative_url }}"
-                 alt="" width="800" height="500" />
+                 alt="{{ module_info.alt | escape }}" width="800" height="500" />
          </div>
       </div>
    </div>
@@ -85,7 +86,7 @@ CSS counter, so that on /all/ the filter cannot renumber the curriculum.
          <li class="lesson-card">
             <div class="card h-100 {% if body != '' %}bg-white{% else %}bg-wvu-not-quite-white{% endif %}">
                <div class="card-body p-4">
-                  <p class="wvu-b-label text-uppercase wvu-text-letter-spacing-lg small text-wvu-blue mb-2" aria-hidden="true">{% if post.order < 10 %}0{% endif %}{{ post.order }}</p>
+                  <p class="fw-bold small text-wvu-blue mb-2" aria-hidden="true">{% if post.order < 10 %}0{% endif %}{{ post.order }}</p>
                   <h3 class="h5 helvetica-neue-bold mb-2"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
                   {%- if post.summary %}
                   <p class="text-body-secondary mb-0">{{ post.summary }}</p>

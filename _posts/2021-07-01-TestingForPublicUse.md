@@ -6,6 +6,7 @@ summary:  A WVU undergraduate tested the DSPIRA design against published values 
 tags: ['School-Teachers', 'Students', 'Hobbyists']
 categories: ['Community Labs']
 order: 2
+meta_description: "Read about a WVU student project that tested the DSPIRA horn telescope against published measurements to assess its use outside the classroom."
 ---
 
 Victoria Blanton spent the 2021 Summer Undergraduate Research Experience at WVU

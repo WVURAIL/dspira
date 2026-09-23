@@ -6,9 +6,10 @@ summary:  Instructions for copying the Ubuntu/spectrometer_w_cal image on a boot
 tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Software Setup']
 order: 5
+meta_description: "Set up a bootable USB drive with Ubuntu 22.04 and the DSPIRA spectrometer. Follow the image-writing steps to prepare a telescope computer."
 ---
 
-#### Image the Flashdrive:
+## Image the Flashdrive:
 
 1. Before starting, you will need the program *balenaEtcher*, which is an easy-to-use cross-platform tool for burning images to SD cards, USB drives and other removable devices. It can be downloaded from <https://www.balena.io/etcher/>.
 
@@ -25,7 +26,7 @@ order: 5
 
 7. The *Ubuntu with spectrometer_w_cal.grc* image should now be on this bootable flashdrive.
 
-#### How to Run GNU Radio and the spectrometer_w_cal.grc program from the flashdrive. 
+## How to Run GNU Radio and the spectrometer_w_cal.grc program from the flashdrive. 
 
 1. To run GNU Radio and the *spectrometer_w_cal.grc* program, place the bootable flash drive in a USB port. 
 

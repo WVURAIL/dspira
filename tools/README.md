@@ -91,10 +91,9 @@ library:
 pip install playwright && playwright install chromium
 ```
 
-It also needs the internet, which it did not before the move to the Design
-System: the stylesheet and the fonts load from designsystem.wvu.edu and
-use.typekit.net, and a page measured without them is not the page a visitor
-gets. The same goes for `check_contrast.py` below.
+Internet access is required for fonts from use.typekit.net. Design System CSS
+is served locally. Both this check and `check_contrast.py` need the fonts loaded
+to measure the rendered page correctly.
 
 Horizontal overflow is the quietest layout bug there is. Nothing errors, the
 page looks right on the machine it was written on, and on a phone the whole

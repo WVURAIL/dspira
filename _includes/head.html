@@ -6,19 +6,9 @@ Third-party requests this page makes, and why:
                                         JetBrains Mono files the old stylesheet
                                         shipped were deleted with it; the
                                         Design System sets the type.
-  designsystem.wvu.edu/scss/site.min.css
-                                     -> the Design System itself, consumed as
-                                        designsystem.wvu.edu/getting-started
-                                        documents for "other systems". It is
-                                        2.8 MB and unpinned; for production,
-                                        vendor a pinned copy so an upstream
-                                        change cannot alter the site
-                                        mid-review — SCM's own production
-                                        sites self-host an SRI-pinned build.
-  designsystem.wvu.edu/js/...        -> the Design System's navigation script,
-                                        loaded after <main> in default.html.
-                                        It drives the js-wvu-site-nav-* markup
-                                        in header.html and nothing else.
+  The Design System CSS and menu script are pinned local assets. Their source,
+  build commands, and license are in assets/wvu-design-system/README.md.
+
   MathJax 2.7.9 from cdnjs           -> about a megabyte, previously loaded on
                                         all the lessons. Seven contain maths, so
                                         it loads only where the page sets
@@ -42,12 +32,23 @@ hyphenated in the data ("School-Teachers"), so it is spaced here the same way
 the tag page spaces its own heading.{% endcomment -%}
 {%- assign tag_title = page.tag | replace: "-", " " -%}
 {%- assign page_title = page.title | default: page.category | default: tag_title | default: site.title | strip_html -%}
-{%- assign page_desc = page.meta_description | default: page.summary | default: site.description -%}
+{%- assign page_desc = page.meta_description | default: site.data.page_descriptions[page.path] | default: page.summary -%}
+{%- unless page_desc -%}
+   {%- if page.tag -%}
+      {%- capture page_desc -%}Browse DSPIRA radio astronomy lessons for {{ tag_title | downcase }}. Find activities on telescope construction, software, observing, and the radio sky.{%- endcapture -%}
+   {%- else -%}
+      {%- capture page_desc -%}{{ page_title }}: find DSPIRA radio astronomy resources from West Virginia University, with links to lessons, hardware guides, and community discussions.{%- endcapture -%}
+   {%- endif -%}
+{%- endunless -%}
+{%- assign full_title = page_title | append: ' · DSPIRA' -%}
+{%- if full_title.size < 40 -%}
+   {%- assign full_title = page_title | append: ' · DSPIRA Radio Astronomy Lessons at WVU' -%}
+{%- endif -%}
 <head>
    <meta charset="utf-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1" />
    <meta name="theme-color" content="#002855" />
-   <title>{% if page.title or page.category or page.tag %}{{ page.title | default: page.category | default: tag_title | strip_html }} &middot; {% endif %}{{ site.title | strip_html }}</title>
+   <title>{{ full_title | escape }}</title>
 
    <meta name="description" content="{{ page_desc | strip_html | xml_escape }}" />
    {%- comment %}
@@ -67,8 +68,16 @@ the tag page spaces its own heading.{% endcomment -%}
    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}" />
    <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="any" />
 
+{%- comment %}
+Start the required font connection before its stylesheet
+is parsed. Only pages with an above-the-fold background photo preload it.
+{% endcomment -%}
+<link rel="preconnect" href="https://use.typekit.net" crossorigin>
+{%- if page.preload_image %}
+<link rel="preload" as="image" href="{{ page.preload_image | relative_url }}" fetchpriority="high">
+{%- endif %}
    <link rel="stylesheet" href="https://use.typekit.net/yys7vri.css" />
-   <link rel="stylesheet" href="https://designsystem.wvu.edu/scss/site.min.css" />
+   <link rel="stylesheet" href="{{ '/assets/wvu-design-system/site.min.css' | relative_url }}" />
    {%- comment %}
    What little the Design System does not cover — compiled by Jekyll from
    css/lessons.scss. Loaded last so it can override.
@@ -125,9 +134,31 @@ the tag page spaces its own heading.{% endcomment -%}
    <meta property="og:image:alt" content="DSPIRA - Digital Signal Processing in Radio Astronomy" />
    <meta name="twitter:card" content="summary_large_image" />
 
+   <script type="application/ld+json">
+   {
+      "@context": "https://schema.org",
+      "@type": "{% if page.layout == 'post' %}LearningResource{% else %}WebPage{% endif %}",
+      "name": {{ page_title | jsonify }},
+      "description": {{ page_desc | strip_html | strip | jsonify }},
+      "url": {{ page.url | absolute_url | jsonify }},
+      "inLanguage": "en-US",
+      "isPartOf": {
+         "@type": "WebSite",
+         "name": "DSPIRA Radio Astronomy Lessons",
+         "url": {{ '/' | absolute_url | jsonify }}
+      },
+      "publisher": {
+         "@type": "Organization",
+         "name": "West Virginia University Radio Astronomy Instrumentation Laboratory",
+         "url": {{ site.lab_url | append: '/' | prepend: site.url | jsonify }}
+      }
+   }
+   </script>
+
    {%- if page.usemathjax %}
    <script>
       window.MathJax = {
+         messageStyle: "none",
          tex2jax: {
             /* Deliberately no ['$','$'] — the lessons quote prices. */
             inlineMath: [["\\(", "\\)"]],

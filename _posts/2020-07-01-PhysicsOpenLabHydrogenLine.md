@@ -6,6 +6,7 @@ summary:  An independent write-up of a 21 cm hydrogen line receiver, published a
 tags: ['Students', 'Hobbyists']
 categories: ['Community Labs']
 order: 3
+meta_description: "Explore an independent PhysicsOpenLab project that receives the 21 cm hydrogen line. Find the project documentation and hardware context."
 ---
 
 [PhysicsOpenLab](https://physicsopenlab.org/) publishes worked experiments for

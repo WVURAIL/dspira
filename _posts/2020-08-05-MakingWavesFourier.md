@@ -6,6 +6,7 @@ summary:  Students make complex waves by adding various sine cosine waves
 tags: ['School-Teachers', 'Students', 'Hobbyists']
 categories: ['Digital Signal Processing']
 order: 2
+meta_description: "Build complex waves by adding sine and cosine signals. Use this classroom activity to explore Fourier series and how waveforms are formed."
 ---
 
 To access the classroom activity click on the following link:  

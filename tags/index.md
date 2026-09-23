@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Who these are written for
+meta_description: "Find DSPIRA radio astronomy lessons for high school teachers, students, and hobbyists. Learn what background helps and where to begin."
 permalink: /user-levels/
 eyebrow: Audience
 lead: Written for high school teachers, and usable well beyond them.

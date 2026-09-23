@@ -17,7 +17,7 @@ row-cols grid, which sizes its children without a column class on each.
    <div class="container">
       <div class="row">
          <div class="col-24 col-lg-16">
-            <p class="wvu-b-label text-uppercase wvu-text-letter-spacing-lg text-wvu-gold mb-3">Written for</p>
+            <p class="fw-bold text-wvu-gold mb-3">Written for</p>
             <h1 class="antonia-light display-4 mb-3">{{ page.tag | replace: '-', ' ' }}</h1>
             {%- if page.lead %}
             <p class="fs-5 mb-0">{{ page.lead }}</p>
@@ -43,7 +43,7 @@ row-cols grid, which sizes its children without a column class on each.
                   {%- if post.summary %}
                   <p class="text-body-secondary mb-0">{{ post.summary }}</p>
                   {%- endif %}
-                  <p class="wvu-b-label text-uppercase wvu-text-letter-spacing-lg small text-body-secondary mt-auto pt-3 mb-0">
+                  <p class="fw-bold small text-body-secondary mt-auto pt-3 mb-0">
                      {%- assign m = post.categories | first -%}
                      {%- if m %}{{ m }}{% else %}Lesson{% endif -%}
                   </p>

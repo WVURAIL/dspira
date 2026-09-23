@@ -6,6 +6,7 @@ summary:  Introductory GNU Radio lessons are presented along with steps for buil
 tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Software Setup']
 order: 9
+meta_description: "Build a simple radio astronomy spectrometer in GNU Radio. Follow introductory lessons and connect the processing blocks into a flowgraph."
 ---
 
 

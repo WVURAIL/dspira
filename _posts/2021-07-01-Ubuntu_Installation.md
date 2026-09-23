@@ -6,6 +6,7 @@ summary:  Details for partitioning a hard drive and installing Ubuntu OS on a Wi
 tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Software Setup']
 order: 4
+meta_description: "Prepare a Windows computer to run Ubuntu for radio astronomy. Follow the DSPIRA guide to partitioning the drive and installing the system."
 ---
 
   *Our software works under Ubuntu versions 22.04 LTS and older.*

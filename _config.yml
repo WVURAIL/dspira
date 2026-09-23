@@ -39,12 +39,10 @@ contact:
 
 baseurl:     "/dspira-lessons"
 
-# The lab site is a SEPARATE GitHub Pages site sharing this host at its root.
-# Its paths must not take this site's baseurl (that would give
-# /dspira-lessons/lightwork/), and they must still work under the staging
-# prefix, so they are written as {{ site.lab_url }}/lightwork/ rather than as
-# bare root-absolute paths. At cutover this stays empty: rail.wvu.edu serves
-# the lab site at its root exactly as wvurail.org does today.
+# The lab site is a separate site on this host. Links to its education pages
+# use lab_url so preview builds can point back to /rail-preview. LightWork is
+# another GitHub Pages project, not part of the lab preview, and stays at
+# /lightwork/ in both production and staging.
 lab_url: ""
 # THE CUTOVER SWITCH. Serving does not read this (the domain is inherited from
 # the org site's CNAME); canonicals, og:url, the sitemap and the feed do. Change
@@ -66,21 +64,8 @@ sass:
 plugins:
   - jekyll-sitemap
 
-# The exported notebook at code/gbt_drift/gbt_rendered_2017.html is a 1.5 MB
-# static file with no front matter, so Liquid never runs in it: it cannot be
-# given the conditional robots meta that _includes/head.html writes for every
-# page that does go through a layout, and a staging copy served from another
-# path would therefore be indexable. Keeping it out of the sitemap is the only
-# lever left, and jekyll-sitemap reads `sitemap: false` off a static file via
-# front matter defaults. Nothing is lost by omitting it: it is reachable only
-# from code/gbt_drift/index.html, which is itself in the sitemap. (/iq/, the
-# other standalone export, asks for the same in its own front matter, which it
-# can do because it has some.)
-defaults:
-  - scope:
-      path: "code/gbt_drift/gbt_rendered_2017.html"
-    values:
-      sitemap: false
+# Both exported notebooks have front matter, conditional noindex for preview
+# builds, and sitemap: false. Keep those fields when regenerating the exports.
 
 # The READMEs under code/, tools/ and images/programme/ carry no front matter,
 # so the github-pages gem's own plugins publish them: as pages
@@ -94,6 +79,8 @@ titles_from_headings:
   strip_title: true
 
 exclude:
+  - assets/wvu-design-system/README.md
+  - assets/wvu-design-system/LICENSE
   # Belt and braces with .gitignore: if one of these is ever committed again it
   # still must not reach _site, or the artifact upload fails on the colon.
   - "*:Zone.Identifier"

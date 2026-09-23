@@ -6,6 +6,7 @@ summary:  Basic theory and instructions for operating a 2-horn interferometer
 tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Astronomy']
 order: 7
+meta_description: "Learn how two horn telescopes work as an interferometer. Explore the theory, operating steps, and ways to interpret the measured spectra."
 ---
 
 Two horns a few metres apart, pointed at the same patch of sky, make an interferometer. As a source drifts across their beams the path length to each horn changes, the two signals move in and out of step, and the combined power rises and falls in a fringe pattern. The spacing of the fringes is set by how far apart the horns are, which is what makes the arrangement worth building.

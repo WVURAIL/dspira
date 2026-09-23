@@ -6,6 +6,7 @@ summary:  Overview of the different parts of a horn telescope
 tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Horn Construction']
 order: 1
+meta_description: "Plan a horn radio telescope with this guide to the antenna, amplifier, receiver, and computer. Find links to DSPIRA construction lessons."
 ---
 A list of the components that are needed to build and operate a horn radio telescope system is presented below. Links to documentation and instructional videos are provided where applicable.
 
@@ -13,7 +14,7 @@ For the reasoning behind the design — why the horn has the dimensions it does,
 and how that follows from observing the 21 cm line — see
 [Horn Telescope Design]({{ site.baseurl }}/FilesUploaded/HornTelescope_Design.pdf){: .btn .btn-wvu-blue}
 
-### What's Needed for a Complete Horn Radio Telescope System
+## What's Needed for a Complete Horn Radio Telescope System
    - the horn & antenna assembly
 
       * the front end horn [Click here for horn details](https://drive.google.com/file/d/1qdc5lhKErFyIsc8b52ZIkCPJLi-XykSb/view?usp=sharing)

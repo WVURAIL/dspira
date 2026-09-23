@@ -52,6 +52,13 @@ h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
 
 .prose { overflow-wrap: break-word; }
 .prose a { overflow-wrap: anywhere; }
+.prose :not(pre) > code { color: inherit; }
+.prose .reversefootnote {
+   display: inline-block;
+   min-width: 24px;
+   min-height: 24px;
+   text-align: center;
+}
 
 /* 02. Images --------------------------------------------------------------- */
 

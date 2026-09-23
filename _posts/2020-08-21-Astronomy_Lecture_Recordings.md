@@ -7,6 +7,7 @@ tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Astronomy']
 order: 8
 permalink: /Astronomy_Lecture_Recordings/
+meta_description: "Watch six astronomy lectures from the DSPIRA summer institute. Find the slides, speaker information, and resources for further study."
 ---
 
 The astronomy taught alongside the telescope building at the DSPIRA summer
@@ -27,7 +28,7 @@ want one.
 The [DSP lecture recordings]({{ site.baseurl }}/dsp) are the other half of the
 institute, covering sampling, Fourier analysis and filters.
 
-### Who gave them
+## Who gave them
 
 **Dr. Loren Anderson**, WVU Department of Physics and Astronomy — units and
 scales, motion of the sky, time and planning observations, gravity, dark matter,
@@ -43,7 +44,7 @@ small, galaxy interactions and dark matter.
 
 All thirteen, in the order they were given.
 
-### Dr. Loren Anderson
+## Dr. Loren Anderson
 
 * [Units and Scales]({{ site.baseurl }}/FilesUploaded/AstronomyLectures/Astronomy_UnitsAndScales.pdf){: .btn .btn-wvu-blue}
 * [Motion of the Sky]({{ site.baseurl }}/FilesUploaded/AstronomyLectures/Astronomy_MotionOfTheSky.pdf){: .btn .btn-wvu-blue}
@@ -57,7 +58,7 @@ Gravity, Dark Matter and Rotation Curves are the three that the
 toward. If you are teaching that unit and want the physics behind it at a level
 above the student handouts, start there.
 
-### Dr. D. J. Pisano
+## Dr. D. J. Pisano
 
 * [Light and Telescopes]({{ site.baseurl }}/FilesUploaded/AstronomyLectures/Astronomy_LightAndTelescopes.pdf){: .btn .btn-wvu-blue}
 * [Doppler Effect and Telescopes]({{ site.baseurl }}/FilesUploaded/AstronomyLectures/Astronomy_DopplerEffectAndTelescopes.pdf){: .btn .btn-wvu-blue}
@@ -67,7 +68,7 @@ above the student handouts, start there.
 * [All Galaxies Great and Small]({{ site.baseurl }}/FilesUploaded/AstronomyLectures/Astronomy_AllGalaxiesGreatAndSmall.pdf){: .btn .btn-wvu-blue}
 * [Galaxy Interactions and Dark Matter]({{ site.baseurl }}/FilesUploaded/AstronomyLectures/Astronomy_GalaxyInteractionsAndDarkMatter.pdf){: .btn .btn-wvu-blue}
 
-### Figure credits
+## Figure credits
 
 Some slides in these decks reproduce figures from published astronomy
 textbooks, marked **© 2007 Thomson Higher Education** and **© 2005

@@ -6,13 +6,14 @@ summary:  The procedure for calibrating the telescope using the spectrometer_w_c
 tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Observing']
 order: 7
+meta_description: "Calibrate a horn radio telescope with the DSPIRA spectrometer. Follow the setup steps to prepare the system for measuring hydrogen signals."
 ---
 
 [Instructional video](https://youtu.be/r8iYuaiFOd8) - Demonstrates steps for calibrating the horn telescope.
 
 [<img alt="Watch the horn telescope calibration instructional video on YouTube" src="{{ '/images/CHIME_dishes.jpg' | relative_url }}" width="400" height="300" />](https://youtu.be/r8iYuaiFOd8)
 
-#### Some preliminary pointers: 
+## Some preliminary pointers: 
 
    * For the best results, after starting the program, allow the system to warm up for approximately 20 minutes before calibrating.
 
@@ -20,7 +21,7 @@ order: 7
 
    * For consistency, it is recommended to re-calibrate occasionally during a viewing session.
 
-#### Procedure 
+## Procedure 
 
    1. Point the telescope toward the ground. The video above shows how this is done.
 
@@ -38,7 +39,7 @@ order: 7
 
    8. The spectrometer is now calibrated, and the graph should now be showing only signals from the galaxy.
 
-#### Some More Things to Note: 
+## Some More Things to Note: 
 
    * After completing a calibration, the signal is in units of Kelvin (K). This sounds odd, but it is how radio astronomers quantify radio signals. (For most amateur applications, it is not necessary to get bogged down trying to understand why the units are Kelvin.)
 

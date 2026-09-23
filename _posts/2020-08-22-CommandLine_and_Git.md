@@ -7,6 +7,7 @@ tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Software Setup']
 order: 3
 permalink: /CommandLine_and_Git/
+meta_description: "Learn the Linux terminal commands and Git steps used in DSPIRA lessons. Navigate files, update software, and manage local changes."
 ---
 
 Several lessons here open a terminal and start typing. If that is unfamiliar

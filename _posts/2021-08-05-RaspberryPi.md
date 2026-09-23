@@ -6,6 +6,7 @@ summary:  Details for setting up Raspberry Pi for Radio Astronomy
 tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Software Setup']
 order: 10
+meta_description: "Set up a Raspberry Pi for DSPIRA radio astronomy. Find supported devices, Ubuntu installation steps, remote access tips, and software links."
 ---
 
 Raspberry Pi's are inexpensive and the more modern Pi's are powerful enough to keep up with the level of signal processing on GNU Radio associated with Radio Astronomy applications. 
@@ -45,15 +46,17 @@ This image requires a minimum of 16GB of space on the SD card.
 5. The default user name is `pi`, with password `raspberry`. Change the password after first boot. 
 
 
-## Setting OS and installing software from scratch. 
-## Operating system requirement
+## Setting OS and installing software from scratch.
+
+Use the sections below to choose an operating system, install Ubuntu, and set up the radio astronomy software.
+### Operating system requirement
 
 1. Ubuntu for Raspberry Pi [Click here for more Info](https://ubuntu.com/raspberry-pi)
 
 _Note_: The custom `gr-radio_astro` [software]({{ site.baseurl }}/gr_radio_astro_Installation)  is now only supported for `GNURadio 3.8` only. The Raspberry Pi OS by default installs `GNURadio 3.7` which is not longer supported. 
 
-## Installing Ubuntu on Raspberry Pi
-### Prerequisites
+### Installing Ubuntu on Raspberry Pi
+#### Prerequisites
 
 1. Support Raspberry Pi
 2. A microSD card (9GB minimum, 16GB recommended)
@@ -67,11 +70,11 @@ _Note_: The custom `gr-radio_astro` [software]({{ site.baseurl }}/gr_radio_astro
 
 _NOTE_: Firstly, for Ubuntu desktop a monitor and mouse and keyboard is required. If you do not want to access the full desktop interface of ubuntu and only interact via command line interface you can install Ubuntu Server [instruction for Ubuntu server installation here](https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#1-overview){:target="_blank"}. Secondly, Raspberry Pi is built on an ARM based architecture  any version of Ubuntu will not work. The OS has to specific to the Pi.
 
-## Post OS Installation actions: 
+### Post OS Installation actions: 
 
-### Interacting with the Raspberry Pi
+#### Interacting with the Raspberry Pi
 
-1. Using a moniter and mouse and keyboard like any other desktop. 
+1. Using a monitor and mouse and keyboard like any other desktop. 
 2. Using SSH:
    1. This method can be used on any machine with ssh server enabled.
    2. Install X server on your computer. [VcXcrv](https://sourceforge.net/projects/vcxsrv/){:target="_blank"} on windows and [XQuartz](https://www.xquartz.org/){:target="_blank"} for macOS. 
@@ -86,7 +89,7 @@ _NOTE_: Firstly, for Ubuntu desktop a monitor and mouse and keyboard is required
     
     
 
-### Installing gr-radio_astro
+#### Installing gr-radio_astro
 
 [Installing gr-radio_astro]({{ site.baseurl }}/gr_radio_astro_Installation){: .btn .btn-wvu-blue target="_blank"}
 

@@ -8,6 +8,7 @@ tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Observing']
 order: 9
 permalink: /Observations/
+meta_description: "Reduce data from a horn radio telescope. Follow DSPIRA examples to map the radio sky and measure the rotation curve of the Milky Way."
 ---
 
 Let's use our telescopes.

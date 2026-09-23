@@ -1,0 +1,16 @@
+{%- comment -%}
+Markdown lesson images should not all compete with the page head on a mobile
+connection. Keep the first image eager in case it appears in the viewport,
+and let the browser defer the rest until the reader approaches them. Add the
+hints at build time so the preload scanner sees them, without JavaScript or a
+custom Jekyll plugin. Preserve any loading or decoding choice in the lesson.
+{%- endcomment -%}
+{%- assign image_parts = content | split: '<img ' -%}
+{%- for part in image_parts -%}
+   {%- if forloop.first -%}
+      {{- part -}}
+   {%- else -%}
+      {%- assign image_tag = part | split: '>' | first -%}
+      <img {% if forloop.index > 2 %}{% unless image_tag contains 'loading=' %}loading="lazy" {% endunless %}{% endif %}{% unless image_tag contains 'decoding=' %}decoding="async" {% endunless %}{{ part }}
+   {%- endif -%}
+{%- endfor -%}

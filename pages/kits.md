@@ -4,6 +4,7 @@ title: Telescope kits
 permalink: /kits/
 eyebrow: Hardware
 lead: The two parts that are hardest to source, sent to educators who ask.
+meta_description: "Find DSPIRA horn telescope kit information and parts resources. Plan the antenna, receiver electronics, and software for your classroom."
 ---
 
 Most of a horn telescope comes from a hardware store. Two pieces do not: a

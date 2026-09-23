@@ -8,6 +8,7 @@ tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Digital Signal Processing']
 order: 8
 permalink: /correlation-and-interferometry/
+meta_description: "Explore convolution, autocorrelation, and cross-correlation. Use GNU Radio labs to understand how two horn telescopes form an interferometer."
 ---
 
 Every measurement a radio telescope makes is a correlation of some kind. A
@@ -57,7 +58,7 @@ $$
 \,&=\, \int_{-\infty}^{+\infty} f({\bf x}-{\bf t})\,g({\bf t}) \,d^nt\end{align}
 $$
 
-#### Properties of convolution
+### Properties of convolution
 
 $$
 \begin{align}

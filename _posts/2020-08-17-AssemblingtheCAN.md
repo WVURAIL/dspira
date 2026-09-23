@@ -7,6 +7,7 @@ tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Horn Construction']
 order: 4
 permalink: "/assemblingcan"
+meta_description: "Build the can and feedthrough antenna for a DSPIRA horn telescope. Follow measured assembly steps and videos for cutting, drilling, and soldering."
 ---
 
 The CAN is the back end of the horn antenna. The CAN is made up of two parts: 

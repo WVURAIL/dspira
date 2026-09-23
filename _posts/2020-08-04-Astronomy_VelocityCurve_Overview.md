@@ -6,6 +6,7 @@ summary: Instructions and handouts for determining a velocity curve of the MWG
 tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Astronomy']
 order: 6
+meta_description: "Use horn telescope data to plot the Milky Way rotation curve. Find instructions and classroom handouts for this DSPIRA astronomy activity."
 ---
 
 **OVERVIEW FOR THE TEACHER**
@@ -79,7 +80,7 @@ order: 6
    c. This graph is compared to the graph expected in different models of mass distribution in the galaxy.
 
 
-### Intro Activities for Radio Astronomy
+## Intro Activities for Radio Astronomy
 
 OBJECTIVE: These activities allow this *Velocity Curve of the MWG* module be able to stand alone from start to finish. There is also some overlap with the *Basic Observational Tools* module. These basic activities will bring fuller understanding to creating the galactic velocity curve.
 
@@ -101,7 +102,7 @@ OBJECTIVE: These activities allow this *Velocity Curve of the MWG* module be abl
 * [Using Stellarium]({{ site.baseurl }}/FilesUploaded/VelocityCurve_Stellarium.pdf){: .btn .btn-wvu-blue}
 
 
-### Part 1: Galactic Quadrants II & III Observation
+## Part 1: Galactic Quadrants II & III Observation
 
 OBJECTIVE: In this activity, the students collect spectra of the MWG along the galactic plane in quadrants II & III. From these they should be able to deduce that the MWG is rotating and the direction of rotation.
 
@@ -113,7 +114,7 @@ OBJECTIVE: In this activity, the students collect spectra of the MWG along the g
 
 
 
-### Analysis Code (optional)
+## Analysis Code (optional)
 
 For classes that want to fit the data numerically rather than by eye, a Jupyter
 notebook is provided that performs the sine fit and plots the result:
@@ -125,7 +126,7 @@ their own measurements and re-run. The fitted amplitude and phase give a
 quantitative handle on the rotation the students deduced qualitatively above.
 
 
-### Part 2: Galactic Quadrant I Observation
+## Part 2: Galactic Quadrant I Observation
 
 OBJECTIVE: In this activity, the students collect spectra of the MWG along the galactic plane in quadrant I. The students will determine the speeds of the most red-shifted part of the spectra, and then apply the tangent method to determine the galaxy's velocity as a function of distance from the galactic center.
 
@@ -137,7 +138,7 @@ OBJECTIVE: In this activity, the students collect spectra of the MWG along the g
 
 
 
-### Example handouts from an earlier run
+## Example handouts from an earlier run
 
 The worksheets one class actually used for Part 1 in 2018, included as an
 **example of how a teacher structured the observation** — not as handouts to use
@@ -154,7 +155,7 @@ unchanged.
 * [Galactic Plane Observation 1: Conclusions, 2018]({{ site.baseurl }}/FilesUploaded/VelocityCurve_GalacticPlaneObservation1_Conclusions_2018.pdf){: .btn .btn-wvu-blue} — a real set of class results for quadrants II and III, with the uncertainty estimate and the conclusions questions.
 
 
-### All Velocity Curve handouts in one place
+## All Velocity Curve handouts in one place
 
    * [Galactic Plane Quadrants II&III Observations: Teacher Notes](https://docs.google.com/document/d/1h9is9YnnfDidLnlvs-DnXlyzXIjT0EhrLDdnONAByHg/edit?usp=sharing)
    

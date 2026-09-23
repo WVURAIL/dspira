@@ -2,6 +2,7 @@
 layout: catpag
 category: Astronomy
 lead: The science the telescope is for — coordinates, the Milky Way, and measuring its rotation.
+meta_description: "Explore DSPIRA astronomy activities about the Milky Way, celestial coordinates, and orbital motion. Connect classroom models to telescope data."
 ---
 
 
@@ -15,7 +16,7 @@ The DSPIRA program truly encompasses the full nature of this symbiotic relations
 
 This Astronomy Module delves into the topics within astronomy that will build a knowledge base to eventually allow the radio horn telescope to be used for some basic observation and research that could be done at the high school level, or for enthusiast hobbyists.
 
-### THE ASTRONOMY TOPICS
+## Astronomy topics
 From a high school or college class perspective, each topic has about one to two weeks of individual lessons within it. They are a combination of class assignments, online interactives, and information videos to give a solid foundation to understanding of radio astronomy. The Topics are reasonably sequential. The “Tools” is an essential starting point.  “Earth’s Speed” could be done on its own track.  “Milky Way” should be done before “Velocity Curve”.  The "Additive Interferometry" investigation involves some additional electronic equipment, but it is a neat demonstration of wave interference. 
 
 ### 1. Tools for Observational Astronomy 
@@ -24,7 +25,7 @@ From a high school or college class perspective, each topic has about one to two
 [Go to "Basic Tools" Activities]({{ site.baseurl }}/ObserveTools){: .btn .btn-wvu-blue}
 
 ### 2. Measuring the Earth's Speed around the Sun
-<img alt="" src="{{ '/images/EarthSun.png' | relative_url }}" align="left" width="150px"/> - The contains a traditional physics/astronomy examination of gravity to predict the speed of the Earth around the Sun. It also looks at the Doppler effect for measuring relative radial motion.  This all leads to using the radio horn telescope to observationally verify the speed of the Earth around the Sun by using the center of the Milky Way as a reference point.
+<img alt="Earth orbiting the Sun, with arrows showing the direction of motion" src="{{ '/images/EarthSun.png' | relative_url }}" align="left" width="150px"/> - Use gravity to predict Earth's speed around the Sun. Then use the Doppler effect to measure radial motion. A horn telescope can test the prediction using the center of the Milky Way as a reference.
 
 [Go to "Earth Around Sun" Activities]({{ site.baseurl }}/EarthAroundSun){: .btn .btn-wvu-blue}
  
@@ -46,7 +47,6 @@ The horn telescopes presented in the DSPIRA program can be used for interferomet
 A link to a LightWork memo that describes the theory and operation of a simple additive interferometer is included.
 
 [Go to Interferometry Lessons]({{ site.baseurl }}/Interferometry){: .btn .btn-wvu-blue}
-
 
 
 

@@ -6,6 +6,7 @@ summary:  Description of the spectrometer_w_cal.grc program features
 tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Observing']
 order: 4
+meta_description: "Explore the controls and displays in the DSPIRA horn spectrometer. Learn what the spectrum, calibration, and data recording settings do."
 ---
 
 The program used to run the telescope is a GNU Radio program called *spectrometer_w_cal.grc*. It is available from the WVURAIL/gr-radio_astro repository in Github. The *spectrometer_w_cal.grc* program has several features to make data collection with the horn telescope user-friendly. Each feature on the display is described below.
@@ -15,7 +16,7 @@ Set up the horn and connect the LNA to the Airspy with a cable, and the Airspy t
 
 You can also watch [this video](https://youtu.be/50B2Uv-SoDY), which describes these user interface features in detail.
 
-### **1.	Features of the *Spectrum* Tab**
+## **1.	Features of the *Spectrum* Tab**
 
 ![spectrometer screen]({{ site.baseurl }}/images/filtered_nocal.png)
 
@@ -75,7 +76,7 @@ You can also watch [this video](https://youtu.be/50B2Uv-SoDY), which describes t
        - See the video [Saving Data Using the *spectrometer_w_cal.grc* Program](https://youtu.be/dWX0rRU99Z8).
 
 
-### **2.	Features of the *System Temp/Gain* Tab**
+## **2.	Features of the *System Temp/Gain* Tab**
 
    ![System Temp/Gain screen]({{ site.baseurl }}/images/sys_T&G.png)
 

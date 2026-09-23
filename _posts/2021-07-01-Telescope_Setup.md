@@ -6,6 +6,7 @@ summary:  Details on setting up the telescope for use
 tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Observing']
 order: 3
+meta_description: "Prepare a DSPIRA horn telescope for observing. Follow the setup guide and video to connect the equipment and get ready to collect data."
 ---
 
 

@@ -11,10 +11,12 @@ permalink: /iq/
 sitemap: false
 ---
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head><meta charset="utf-8" />
 {% if page.noindex or site.noindex_all %}<meta name="robots" content="noindex" />{% endif %}
-<title>I_Q_quadrature_sampling</title>
+<title>I/Q Quadrature Sampling Notebook · DSPIRA</title>
+<meta name="description" content="Explore I/Q quadrature sampling with a Python notebook. Simulate mixing, filtering, and receiver imbalance for radio astronomy signals." />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -11777,16 +11779,26 @@ div#notebook {
 .highlight .ow { color: #a71bff; }
 div.output_prompt, div.prompt.output_prompt { color: #d34215; }
 </style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "I/Q Quadrature Sampling Notebook · DSPIRA", "description": "Explore I/Q quadrature sampling with a Python notebook. Simulate mixing, filtering, and receiver imbalance for radio astronomy signals.", "inLanguage": "en-US", "learningResourceType": "Notebook"}</script>
+<style>
+.notebook-skip { position: absolute; left: -10000px; }
+.notebook-skip:focus { position: fixed; left: 12px; top: 12px; z-index: 10000; padding: 12px; background: #fff; color: #002855; }
+#notebook-container { max-width: 100%; box-sizing: border-box; }
+div.inner_cell { min-width: 0; }
+.MathJax_Display { max-width: 100%; overflow-x: auto; overflow-y: hidden; }
+.anchor-link { display: inline-block; min-width: 24px; min-height: 24px; text-align: center; }
+</style>
 </head>
 <body>
-<div style="position:sticky;top:0;z-index:9999;background:#04070e;
+<a class="notebook-skip" href="#notebook">Skip to main content</a>
+<div role="navigation" aria-label="Notebook navigation" style="position:sticky;top:0;z-index:9999;background:#04070e;
      border-bottom:1px solid rgba(255,255,255,.1);padding:12px 20px;
      font:500 14px/1 -apple-system,'Segoe UI',sans-serif">
   <a href="{{ '/' | relative_url }}" style="color:#eaaa00;text-decoration:none">&larr; DSPIRA lessons</a>
   <span style="color:#7b8698;margin-left:14px">I/Q quadrature sampling</span>
 </div>
 
-  <div tabindex="-1" id="notebook" class="border-box-sizing">
+  <div role="main" tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
 <div class="cell border-box-sizing text_cell rendered">
@@ -11794,7 +11806,7 @@ div.output_prompt, div.prompt.output_prompt { color: #d34215; }
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="IQ-Mixing---Quadrature-Signals">IQ Mixing - Quadrature Signals<a class="anchor-link" href="#IQ-Mixing---Quadrature-Signals">&#182;</a></h1>
+<h1 id="IQ-Mixing---Quadrature-Signals">IQ Mixing - Quadrature Signals<a class="anchor-link" aria-label="Link to IQ Mixing - Quadrature Signals" href="#IQ-Mixing---Quadrature-Signals">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -11818,7 +11830,7 @@ div.output_prompt, div.prompt.output_prompt { color: #d34215; }
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="We'll-Simulate-IQ-sampling-at-200MHz,-with-an-LO-at-1.4GHz-and-inputs-signals-at-1.42-and-1.38GHz.--An-Airspy-is-the-same,-only-sampling-at-5-MHz.">We'll Simulate IQ sampling at 200MHz, with an LO at 1.4GHz and inputs signals at 1.42 and 1.38GHz.  An Airspy is the same, only sampling at 5 MHz.<a class="anchor-link" href="#We'll-Simulate-IQ-sampling-at-200MHz,-with-an-LO-at-1.4GHz-and-inputs-signals-at-1.42-and-1.38GHz.--An-Airspy-is-the-same,-only-sampling-at-5-MHz.">&#182;</a></h2>
+<h2 id="We'll-Simulate-IQ-sampling-at-200MHz,-with-an-LO-at-1.4GHz-and-inputs-signals-at-1.42-and-1.38GHz.--An-Airspy-is-the-same,-only-sampling-at-5-MHz.">We'll Simulate IQ sampling at 200MHz, with an LO at 1.4GHz and inputs signals at 1.42 and 1.38GHz.  An Airspy is the same, only sampling at 5 MHz.<a class="anchor-link" aria-label="Link to We'll Simulate IQ sampling at 200MHz, with an LO at 1.4GHz and inputs signals at 1.42 and 1.38GHz.  An Airspy is the same, only sampling at 5 MHz." href="#We'll-Simulate-IQ-sampling-at-200MHz,-with-an-LO-at-1.4GHz-and-inputs-signals-at-1.42-and-1.38GHz.--An-Airspy-is-the-same,-only-sampling-at-5-MHz.">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -12620,7 +12632,7 @@ mpl.find_output_cell = function(html_output) {
 
 // Register the function which deals with the matplotlib target/channel.
 // The kernel may be null if the page has been refreshed.
-if (IPython.notebook.kernel != null) {
+if (typeof IPython !== "undefined" && IPython.notebook && IPython.notebook.kernel != null) {
     IPython.notebook.kernel.comm_manager.register_target('matplotlib', mpl.mpl_figure_comm);
 }
 
@@ -12672,7 +12684,7 @@ if (IPython.notebook.kernel != null) {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Trig-product-to-sum-rules:">Trig product to sum rules:<a class="anchor-link" href="#Trig-product-to-sum-rules:">&#182;</a></h2>$$ cos(a) cos(b) = cos(a+b) + cos(a-b) $$$$ cos(a) sin(b) = sin(a+b) - sin(a-b) $$
+<h2 id="Trig-product-to-sum-rules:">Trig product to sum rules:<a class="anchor-link" aria-label="Link to Trig product to sum rules:" href="#Trig-product-to-sum-rules:">&#182;</a></h2>$$ cos(a) cos(b) = cos(a+b) + cos(a-b) $$$$ cos(a) sin(b) = sin(a+b) - sin(a-b) $$
 </div>
 </div>
 </div>
@@ -13452,7 +13464,7 @@ mpl.find_output_cell = function(html_output) {
 
 // Register the function which deals with the matplotlib target/channel.
 // The kernel may be null if the page has been refreshed.
-if (IPython.notebook.kernel != null) {
+if (typeof IPython !== "undefined" && IPython.notebook && IPython.notebook.kernel != null) {
     IPython.notebook.kernel.comm_manager.register_target('matplotlib', mpl.mpl_figure_comm);
 }
 
@@ -14256,7 +14268,7 @@ mpl.find_output_cell = function(html_output) {
 
 // Register the function which deals with the matplotlib target/channel.
 // The kernel may be null if the page has been refreshed.
-if (IPython.notebook.kernel != null) {
+if (typeof IPython !== "undefined" && IPython.notebook && IPython.notebook.kernel != null) {
     IPython.notebook.kernel.comm_manager.register_target('matplotlib', mpl.mpl_figure_comm);
 }
 
@@ -15072,7 +15084,7 @@ mpl.find_output_cell = function(html_output) {
 
 // Register the function which deals with the matplotlib target/channel.
 // The kernel may be null if the page has been refreshed.
-if (IPython.notebook.kernel != null) {
+if (typeof IPython !== "undefined" && IPython.notebook && IPython.notebook.kernel != null) {
     IPython.notebook.kernel.comm_manager.register_target('matplotlib', mpl.mpl_figure_comm);
 }
 
@@ -15877,7 +15889,7 @@ mpl.find_output_cell = function(html_output) {
 
 // Register the function which deals with the matplotlib target/channel.
 // The kernel may be null if the page has been refreshed.
-if (IPython.notebook.kernel != null) {
+if (typeof IPython !== "undefined" && IPython.notebook && IPython.notebook.kernel != null) {
     IPython.notebook.kernel.comm_manager.register_target('matplotlib', mpl.mpl_figure_comm);
 }
 
@@ -16680,7 +16692,7 @@ mpl.find_output_cell = function(html_output) {
 
 // Register the function which deals with the matplotlib target/channel.
 // The kernel may be null if the page has been refreshed.
-if (IPython.notebook.kernel != null) {
+if (typeof IPython !== "undefined" && IPython.notebook && IPython.notebook.kernel != null) {
     IPython.notebook.kernel.comm_manager.register_target('matplotlib', mpl.mpl_figure_comm);
 }
 
@@ -17492,7 +17504,7 @@ mpl.find_output_cell = function(html_output) {
 
 // Register the function which deals with the matplotlib target/channel.
 // The kernel may be null if the page has been refreshed.
-if (IPython.notebook.kernel != null) {
+if (typeof IPython !== "undefined" && IPython.notebook && IPython.notebook.kernel != null) {
     IPython.notebook.kernel.comm_manager.register_target('matplotlib', mpl.mpl_figure_comm);
 }
 
@@ -18325,7 +18337,7 @@ mpl.find_output_cell = function(html_output) {
 
 // Register the function which deals with the matplotlib target/channel.
 // The kernel may be null if the page has been refreshed.
-if (IPython.notebook.kernel != null) {
+if (typeof IPython !== "undefined" && IPython.notebook && IPython.notebook.kernel != null) {
     IPython.notebook.kernel.comm_manager.register_target('matplotlib', mpl.mpl_figure_comm);
 }
 
@@ -19148,7 +19160,7 @@ mpl.find_output_cell = function(html_output) {
 
 // Register the function which deals with the matplotlib target/channel.
 // The kernel may be null if the page has been refreshed.
-if (IPython.notebook.kernel != null) {
+if (typeof IPython !== "undefined" && IPython.notebook && IPython.notebook.kernel != null) {
     IPython.notebook.kernel.comm_manager.register_target('matplotlib', mpl.mpl_figure_comm);
 }
 
@@ -19183,7 +19195,7 @@ if (IPython.notebook.kernel != null) {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="I-Q-imbalance">I Q imbalance<a class="anchor-link" href="#I-Q-imbalance">&#182;</a></h1>
+<h2 id="I-Q-imbalance">I Q imbalance<a class="anchor-link" aria-label="Link to I Q imbalance" href="#I-Q-imbalance">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -19192,7 +19204,7 @@ if (IPython.notebook.kernel != null) {
 <div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Of course the I and Q pass through different analog filters/amplifers/mixers and ADC</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Of course the I and Q pass through different analog filters/amplifiers/mixers and ADC</span>
 <span class="c1"># The I and Q signal will be off by a bit.  </span>
 
 <span class="c1">#Let&#39;s simulate that.</span>
@@ -19984,7 +19996,7 @@ mpl.find_output_cell = function(html_output) {
 
 // Register the function which deals with the matplotlib target/channel.
 // The kernel may be null if the page has been refreshed.
-if (IPython.notebook.kernel != null) {
+if (typeof IPython !== "undefined" && IPython.notebook && IPython.notebook.kernel != null) {
     IPython.notebook.kernel.comm_manager.register_target('matplotlib', mpl.mpl_figure_comm);
 }
 
@@ -20788,7 +20800,7 @@ mpl.find_output_cell = function(html_output) {
 
 // Register the function which deals with the matplotlib target/channel.
 // The kernel may be null if the page has been refreshed.
-if (IPython.notebook.kernel != null) {
+if (typeof IPython !== "undefined" && IPython.notebook && IPython.notebook.kernel != null) {
     IPython.notebook.kernel.comm_manager.register_target('matplotlib', mpl.mpl_figure_comm);
 }
 
@@ -21606,7 +21618,7 @@ mpl.find_output_cell = function(html_output) {
 
 // Register the function which deals with the matplotlib target/channel.
 // The kernel may be null if the page has been refreshed.
-if (IPython.notebook.kernel != null) {
+if (typeof IPython !== "undefined" && IPython.notebook && IPython.notebook.kernel != null) {
     IPython.notebook.kernel.comm_manager.register_target('matplotlib', mpl.mpl_figure_comm);
 }
 
@@ -22409,7 +22421,7 @@ mpl.find_output_cell = function(html_output) {
 
 // Register the function which deals with the matplotlib target/channel.
 // The kernel may be null if the page has been refreshed.
-if (IPython.notebook.kernel != null) {
+if (typeof IPython !== "undefined" && IPython.notebook && IPython.notebook.kernel != null) {
     IPython.notebook.kernel.comm_manager.register_target('matplotlib', mpl.mpl_figure_comm);
 }
 

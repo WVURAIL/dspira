@@ -2,6 +2,7 @@
 layout: catpag
 category: Digital Signal Processing
 lead: Sampling, Fourier transforms and filters, built up in GNU Radio from first principles.
+meta_description: "Learn digital signal processing with DSPIRA lectures and GNU Radio labs. Explore sampling, Fourier analysis, filters, and interferometry."
 ---
 
 ***Note: These lessons were constructed using GNU Radio 3.8. They should be able to be done on different versions of GNU Radio, but be aware that there might be slight differences in some of the blocks.

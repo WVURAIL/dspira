@@ -3,6 +3,7 @@ layout: page
 title: GNU Radio Forum
 permalink: /forum/gnuradio/
 room: gnuradio
+meta_description: "GNU Radio Forum: ask questions and share radio astronomy projects on GitHub Discussions. Find the community room and related DSPIRA lessons."
 ---
 {%- comment -%}
 A room of the DSPIRA forum. Its GitHub Discussions category comes from

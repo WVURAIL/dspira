@@ -3,6 +3,7 @@ layout: page
 title: Digital Signal Processing Forum
 permalink: /forum/dsp/
 room: dsp
+meta_description: "Digital Signal Processing Forum: ask questions and share radio astronomy projects on GitHub Discussions. Find the community room and related DSPIRA lessons."
 ---
 {%- comment -%}
 A room of the DSPIRA forum. Its GitHub Discussions category comes from

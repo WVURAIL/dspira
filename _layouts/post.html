@@ -39,7 +39,7 @@ targets it for images, tables and figures in the markdown.
    <div class="container">
       <div class="row">
          <div class="col-24 col-lg-16">
-            <p class="wvu-b-label text-uppercase wvu-text-letter-spacing-lg text-wvu-gold mb-3">
+            <p class="fw-bold text-wvu-gold mb-3">
                {%- if module %}{{ module }}{% else %}Lesson{% endif -%}
             </p>
             <h1 class="antonia-light display-4 mb-3">{{ page.title }}</h1>
@@ -69,7 +69,7 @@ targets it for images, tables and figures in the markdown.
             </nav>
 
             <article class="prose">
-               {{ content }}
+               {% include lesson-content.html %}
             </article>
 
             {%- if page.tags and page.tags.size > 0 %}
@@ -79,7 +79,7 @@ targets it for images, tables and figures in the markdown.
             reset that, so nothing here switches it off.
             {%- endcomment -%}
             <div class="border-top mt-5 pt-4 no-print">
-               <h2 class="wvu-b-label text-uppercase wvu-text-letter-spacing-lg fs-6 text-wvu-blue mb-3">Written for</h2>
+               <h2 class="fw-bold fs-6 text-wvu-blue mb-3">Written for</h2>
                <ul class="list-inline mb-0">
                   {%- for tag in page.tags %}
                   <li class="list-inline-item mb-2">
@@ -103,7 +103,7 @@ targets it for images, tables and figures in the markdown.
                   <div class="col-24 col-md-12">
                      <a class="card h-100 bg-wvu-not-quite-white text-decoration-none" href="{{ prevpost.url | relative_url }}">
                         <div class="card-body p-4">
-                           <span class="d-block wvu-b-label text-uppercase wvu-text-letter-spacing-lg small text-body-secondary mb-2">&larr; Previous</span>
+                           <span class="d-block fw-bold small text-body-secondary mb-2">&larr; Previous</span>
                            <span class="d-block h5 helvetica-neue-bold text-wvu-blue text-decoration-underline mb-0">{{ prevpost.title }}</span>
                         </div>
                      </a>
@@ -113,7 +113,7 @@ targets it for images, tables and figures in the markdown.
                   <div class="col-24 col-md-12{% unless prevpost %} offset-md-12{% endunless %}">
                      <a class="card h-100 bg-wvu-not-quite-white text-decoration-none text-md-end" href="{{ nextpost.url | relative_url }}">
                         <div class="card-body p-4">
-                           <span class="d-block wvu-b-label text-uppercase wvu-text-letter-spacing-lg small text-body-secondary mb-2">Next &rarr;</span>
+                           <span class="d-block fw-bold small text-body-secondary mb-2">Next &rarr;</span>
                            <span class="d-block h5 helvetica-neue-bold text-wvu-blue text-decoration-underline mb-0">{{ nextpost.title }}</span>
                         </div>
                      </a>

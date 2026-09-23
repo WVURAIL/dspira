@@ -6,6 +6,7 @@ summary:  Details for installing GNU Radio
 tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Software Setup']
 order: 6
+meta_description: "Install GNU Radio for a DSPIRA horn telescope. Follow the software setup steps and prepare your computer to run radio astronomy flowgraphs."
 ---
 
 To install GNU Radio, complete the following:

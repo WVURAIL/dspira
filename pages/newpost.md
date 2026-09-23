@@ -2,6 +2,7 @@
 layout: page
 title: New Post
 permalink: /newpost/
+meta_description: "Write a new DSPIRA lesson in Markdown. Use the formatting guide and browser editor to prepare headings, images, links, and lesson metadata."
 ---
 
 These are instructions and a simple template to start creating a new post!
@@ -65,7 +66,7 @@ https://www.youtube.com/watch?v=jS5fTzMP_mg
 
 The above video is a video of Kermit the frog singing the Rainbow Connection
 ```
-##### Adding images to the posts
+### Adding images to the posts
 
 To add images to your post first upload your image to github by going to the link below  upload and commit an image to the images directory: 
 
@@ -81,7 +82,7 @@ Then add the following to the post you are editing
 ##  Edit your post in the text area below 
 
 <div>
-    <p>Date:</p><h2 id="date"></h2>
+    <p>Date: <span id="date"></span></p>
     <div>
     <label for="inputTextToSave" class="form-label helvetica-neue-bold">Your lesson, in Markdown</label>
     <textarea id="inputTextToSave" class="form-control" cols="80" rows="25">
