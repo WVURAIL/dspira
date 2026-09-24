@@ -115,7 +115,7 @@ h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
    length) get only a bottom margin from the reboot; .blockquote is a class
    kramdown cannot add. The rule is WVU Gold; the text stays the body colour. */
 .prose blockquote {
-   font-style: normal;
+   font-style: normal !important; /* Override the Design System blockquote rule. */
    margin: 1.5rem 0;
    padding: 0.25rem 0 0.25rem 1.25rem;
    border-left: 0.25rem solid var(--bs-wvu-gold);

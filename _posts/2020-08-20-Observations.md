@@ -215,7 +215,7 @@ with \\(f_e\\) the frequency emitted, \\(f_o\\) the frequency observed, and
 \\(c\\) = 300,000 km/s.
 
 You can now turn power against frequency into power against speed relative to
-us. *Does it matter what units the frequency is in?*
+us. **Does it matter what units the frequency is in?**
 
 ![Frequency against radial velocity for neutral hydrogen]({{ site.baseurl }}/images/freq_vs_radial_velocity.png)
 
@@ -246,8 +246,8 @@ orbital speed.
 
 Plot \\(V_l\\) against \\(R_l\\) and you have a rotation curve for the Milky Way.
 
-*What did you expect it to look like? Compare it against what a galaxy with all
-its mass in the visible disc would give you.*
+**What did you expect it to look like? Compare it against what a galaxy with all
+its mass in the visible disc would give you.**
 
 ---
 
