@@ -55,7 +55,7 @@ https://youtu.be/9CNtz4u5we0
 
 There are three different types of transistors to be soldered onto the circuit board. Each one has its own difficulties in soldering onto the circuit board. You should watch each of the following videos before soldering to determine the orientation of each transistor.
 
-#### Transistors U1 & U3
+#### Transistors U1 and U3
 
 https://youtu.be/DP3ABBXyuwY
 
@@ -63,7 +63,7 @@ https://youtu.be/DP3ABBXyuwY
 
 https://youtu.be/kvlXMtPB2FY
 
-#### Transistors U4 & U5
+#### Transistors U4 and U5
 
 https://youtu.be/xhfXKow-tOs
 

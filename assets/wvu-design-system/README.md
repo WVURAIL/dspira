@@ -24,3 +24,6 @@ SHA-256:
 
 - `site.min.css`: `5f62f1a3167f1f52005fc22aac565ef377209886ea7478a91af363a0f546afb8`
 - `navigation.min.js`: `f2ff7532fa7f8ed532fb265fc54c3f39bfa50ec6fb839e9be2b461003cdff5cf`
+
+The root `favicon.ico` and `favicon-wvu.ico` are copies of `static/favicon.ico`
+from the same upstream commit. Pages use the new filename to refresh cached icons.

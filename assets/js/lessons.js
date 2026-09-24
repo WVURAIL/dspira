@@ -67,64 +67,44 @@
       }
    }
 
-   /* --- Filter on /all/ ---------------------------------------------------
-      The page used to tell the reader to press Ctrl-F. Forty-eight cards is
-      past the point where that is a reasonable answer, and it is no answer at
-      all on a phone, where there is no Ctrl-F to press.
-
-      Progressive enhancement: the box is `hidden` in the markup and revealed
-      here, so with JavaScript off the reader gets the full list, which is what
-      the page did before. Matching is against a `data-search` attribute built
-      at render time from title, summary and module name -- cheaper than walking
-      the DOM for text on every keystroke, and it lets a search for "raspberry"
-      find a lesson whose title never says it.
-
-      Markup contract with all/index.html: the box carries data-lesson-filter,
-      the input is #lesson-filter, the counter is .filter__count[role=status],
-      each module section carries data-module and holds li.lesson-card
-      [data-search] items and one p.no-matches. The is-empty class this sets
-      on an emptied section is styled by the stylesheet.                    */
+   // Filter lessons and hide modules without matches.
    var filterBox = document.querySelector("[data-lesson-filter]");
    if (filterBox) {
       var input = filterBox.querySelector("#lesson-filter");
       var count = filterBox.querySelector(".filter__count");
+      var jump = filterBox.querySelector("[data-results-link]");
+      var clear = filterBox.querySelector("[data-clear-filter]");
       var cards = [].slice.call(document.querySelectorAll(".lesson-card[data-search]"));
       var groups = [].slice.call(document.querySelectorAll("[data-module]"));
-      var total = cards.length;
-
+      var intros = [].slice.call(document.querySelectorAll("[data-module-intro]"));
       filterBox.hidden = false;
 
       var apply = function () {
          var q = input.value.trim().toLowerCase();
          var shown = 0;
-
          cards.forEach(function (card) {
-            var hit = q === "" || card.getAttribute("data-search").indexOf(q) !== -1;
+            var hit = !q || card.getAttribute("data-search").indexOf(q) !== -1;
             card.hidden = !hit;
             if (hit) shown++;
          });
-
-         /* A module whose lessons all dropped out says so rather than
-            collapsing to a bare heading with nothing under it. */
-         groups.forEach(function (g) {
-            var any = g.querySelector(".lesson-card:not([hidden])") !== null;
-            var note = g.querySelector(".no-matches");
-            if (note) note.hidden = any;
-            g.classList.toggle("is-empty", !any);
+         groups.forEach(function (group) {
+            group.hidden = !group.querySelector(".lesson-card:not([hidden])");
          });
-
-         if (q === "") {
-            count.textContent = "";
-         } else {
-            count.textContent = shown === 0
-               ? "No lessons match \u201c" + input.value.trim() + "\u201d"
-               : shown + " of " + total + " lessons match";
-         }
+         intros.forEach(function (intro) { intro.hidden = !!q; });
+         jump.hidden = !q || !shown;
+         clear.hidden = !q;
+         count.textContent = !q ? "" : shown === 0
+            ? "No lessons match. Try another search or clear the filter."
+            : shown + " of " + cards.length + " lessons match";
       };
-
       input.addEventListener("input", apply);
-      input.addEventListener("keydown", function (e) {
-         if (e.key === "Escape") { input.value = ""; apply(); }
+      input.addEventListener("keydown", function (event) {
+         if (event.key === "Escape") { input.value = ""; apply(); }
+      });
+      clear.addEventListener("click", function () {
+         input.value = "";
+         apply();
+         input.focus();
       });
       apply();
    }

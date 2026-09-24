@@ -17,7 +17,7 @@ Set up and run a two-horn interferometer with a Lime SDR and GNU Radio. The GNU 
   
    - 2 Horn telescopes, each consisting of:
 
-     - horn & can antennae
+     - horn and can antennae
      - cradle
      - stand
      - bolts for cradle axle

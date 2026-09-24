@@ -23,7 +23,7 @@ Hooks other things depend on, kept exactly as written:
     lesson) are counted by CI (.github/workflows/build.yml); the Design System
     classes sit on the elements inside them.
   * data-lesson-filter, .filter__input, .filter__count, [data-module],
-    .lesson-card[data-search] and .no-matches are what lessons.js queries.
+    .lesson-card[data-search] are what lessons.js queries.
 {%- endcomment -%}
 <div class="bg-wvu-blue text-white py-6">
    <div class="container">
@@ -42,14 +42,17 @@ Hooks other things depend on, kept exactly as written:
          <div class="col-24 col-md-14 col-lg-10">
             <label class="form-label" for="lesson-filter">Filter lessons</label>
             <input class="form-control form-control-lg filter__input" id="lesson-filter" type="search"
-                   autocomplete="off" spellcheck="false"
+                   autocomplete="off" spellcheck="false" aria-controls="lesson-results"
                    placeholder="Type to filter by title, summary or module">
-            <p class="filter__count small mt-2 mb-0" role="status" aria-live="polite" style="min-height:1.5em"></p>
+            <p class="filter__count small mt-2 mb-0" role="status" aria-live="polite" aria-atomic="true" style="min-height:1.5em"></p>
+            <a href="#lesson-results" class="text-white" data-results-link hidden>Go to results</a>
+            <button type="button" class="btn btn-outline-light ms-3" data-clear-filter hidden>Clear filter</button>
          </div>
       </div>
    </div>
 </div>
 
+<div id="lesson-results" tabindex="-1" aria-label="Lesson results">
 {%- comment -%}
 Sections alternate white and not-quite-white the way the old page cycled
 section--tint; the cards take the other one so they stand off their band. The
@@ -76,17 +79,17 @@ forloop.index so it matches the front page and the category pages.
    <div class="container">
       <div class="module-toc__head">
          <div class="row align-items-center mb-4">
-            <div class="col-24 col-md-8 col-lg-6 mb-3 mb-md-0">
+            <div class="col-24 col-md-8 col-lg-6 mb-3 mb-md-0" data-module-intro>
                <img class="img-fluid rounded" loading="lazy" decoding="async"
                     width="800" height="500"
                     src="{{ slug | prepend: '/images/modules/' | append: '.jpg' | relative_url }}"
                     alt="{{ m.alt }}">
             </div>
             <div class="col-24 col-md-16 col-lg-18">
-               <p class="fw-bold small text-wvu-blue mb-2">Module {{ forloop.index }} &middot;
+               <p data-module-intro class="fw-bold small text-wvu-blue mb-2">Module {{ forloop.index }} &middot;
                   {{ lessons | size }} lesson{% if lessons.size != 1 %}s{% endif %}</p>
                <h2 class="antonia-light display-6 mb-2"><a class="text-decoration-none" href="{{ href }}">{{ m.category }}</a></h2>
-               <p class="fs-5 text-body-secondary mb-0">{{ m.blurb }}</p>
+               <p data-module-intro class="fs-5 text-body-secondary mb-0">{{ m.blurb }}</p>
             </div>
          </div>
       </div>
@@ -110,8 +113,9 @@ forloop.index so it matches the front page and the category pages.
          </li>
          {%- endfor %}
       </ol>
-      <p class="no-matches" hidden>No lessons in this module match.</p>
    </div>
 </div>
 {%- endif %}
 {%- endfor %}
+
+</div>

@@ -5,7 +5,7 @@ Code companion to the lesson
 
 | File | What it does |
 |---|---|
-| `galactic_plane_sine_fit.ipynb` | Fits a sine curve to HI Doppler velocity vs. galactic longitude (Part 1, Quadrants II & III) |
+| `galactic_plane_sine_fit.ipynb` | Fits a sine curve to HI Doppler velocity vs. galactic longitude (Part 1, Quadrants II and III) |
 | `quadII_III_velocity_vs_longitude.csv` | Sample dataset — replace with your class's measurements |
 
 ## Using it with your own data

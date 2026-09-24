@@ -13,7 +13,7 @@ A list of the components that are needed to build and operate a horn radio teles
 Why does the horn have these dimensions? How do they relate to observing the 21 cm line? See [Horn Telescope Design]({{ site.baseurl }}/FilesUploaded/HornTelescope_Design.pdf){: .btn .btn-wvu-blue}
 
 ## What's Needed for a Complete Horn Radio Telescope System
-   - the horn & antenna assembly
+   - the horn and antenna assembly
 
       * the front end horn [Click here for horn details](https://drive.google.com/file/d/1qdc5lhKErFyIsc8b52ZIkCPJLi-XykSb/view?usp=sharing)
       * the back end can and feedthrough antenna [Click here for CAN details]({{ site.baseurl }}/assemblingcan)
@@ -31,7 +31,7 @@ Why does the horn have these dimensions? How do they relate to observing the 21 
 
    - A [coaxial cable](https://www.coaxrf.com/shop/1-rf-coaxial-cables/times-microwave-lmr240/sma-male-times-microwave-lmr240/lmr240-sma-male-to-sma-male-coaxial-rf-pigtail-cable/) with SMA connectors is needed to connect the LNA to the SDR.
 
-   - computer & software options:
+   - computer and software options:
 
       * computer with a Linux (Ubuntu) operating system
 

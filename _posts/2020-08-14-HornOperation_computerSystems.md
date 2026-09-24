@@ -33,7 +33,7 @@ The options presented below include a brief description of the system requiremen
 
     - Click [the bootable USB guide]({{ site.baseurl }}/Install_Ubuntu_spectrometer_onFlashdrive) for installation instructions.
     
-2. [Install the free & open-source software, *GNU Radio*, on a Linux system operating Ubuntu 20.04.]({{ site.baseurl }}/BuildingHorn_SoftwareInfo)
+2. [Install the free and open-source software, *GNU Radio*, on a Linux system operating Ubuntu 20.04.]({{ site.baseurl }}/BuildingHorn_SoftwareInfo)
 
     - This option is for those who are more experienced with computers and feel comfortable installing software on a hard drive.
 

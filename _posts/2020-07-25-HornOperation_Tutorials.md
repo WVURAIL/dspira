@@ -21,6 +21,6 @@ meta_description: "Use DSPIRA videos and written guides to operate a horn radio 
 
 [How to save data using the spectrometer (video)](https://youtu.be/dWX0rRU99Z8){: .btn .btn-wvu-blue}
 
-[How to Calibrate the Horn Telescope (document & video)]({{ site.baseurl }}/HornOperation_Calibration){: .btn .btn-wvu-blue}
+[How to Calibrate the Horn Telescope (document and video)]({{ site.baseurl }}/HornOperation_Calibration){: .btn .btn-wvu-blue}
 
 
