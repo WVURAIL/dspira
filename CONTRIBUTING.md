@@ -14,4 +14,4 @@ request; the walkthrough with screenshots is at
 4. Open the pull request. The build check has to pass before it can merge; if it
    goes red, the log says which page broke.
 
-Questions: <wvurail@gmail.com>.
+Questions: <rail@wvu.edu>.

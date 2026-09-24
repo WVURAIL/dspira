@@ -11,7 +11,7 @@ description: >-
   Free lessons on building and using a horn radio telescope — the antenna, the
   amplifier, the software-defined radio and the astronomy. Written by the high
   school teachers of the DSPIRA program at West Virginia University.
-email:       wvurail@gmail.com
+email:       rail@wvu.edu
 author:      WVU Radio Astronomy Instrumentation Laboratory
 baseurl:     "/dspira-lessons"
 # THE CUTOVER SWITCH. Serving does not read this (the domain is inherited from
