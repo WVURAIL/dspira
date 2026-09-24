@@ -14,7 +14,8 @@
    wrapper to its link, where that role is valid. Keep doc-endnotes and
    doc-backlink on their existing elements.
    {% endcomment -%}
-      {{ content | replace: ' role="doc-endnote"', '' | replace: ' role="doc-biblioentry"', '' | replace: ' role="doc-noteref"', '' | replace: 'class="footnote"', 'class="footnote" role="doc-noteref"' }}
+      {%- assign accessible_content = content | replace: ' role="doc-endnote"', '' | replace: ' role="doc-biblioentry"', '' | replace: ' role="doc-noteref"', '' | replace: 'class="footnote"', 'class="footnote" role="doc-noteref"' -%}
+      {% include footnote-links.html html=accessible_content %}
    </main>
    {%- comment -%}
    The Design System's own navigation script, loaded after <main> exactly as
