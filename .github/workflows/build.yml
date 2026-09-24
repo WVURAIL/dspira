@@ -188,8 +188,7 @@ jobs:
           exit $fail
 
       # WVU's Common Elements rule: the masthead, the footer contact block
-      # (address, phone, fax, email), the copyright and the Equal Opportunity
-      # sentence on every page of the University domain. The layout carries
+      # (address, phone, fax, email), and copyright on every page. The layout carries
       # them, so a page can only lack them by being built outside the layout —
       # which `layout: null` does, silently. Two pages are, on purpose: the
       # exported notebooks at /iq/ and /code/gbt_drift/gbt_rendered_2017.html,
@@ -211,7 +210,7 @@ jobs:
             esac
             if grep -q '<title>Redirecting' "$f"; then continue; fi
             checked=$((checked + 1))
-            for want in "Equal Opportunity/Affirmative Action" \
+            for want in "favicon-wvu.ico" \
                         "(304) 293-9686" "Fax" "Skip to main content"
             do
               grep -qF -- "$want" "$f" \

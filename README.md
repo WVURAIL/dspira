@@ -79,9 +79,8 @@ local preview wants the internet: without it the pages render unstyled.
 - **The masthead and footer are the University's common elements**, the same
   ones the lab site carries. The footer's address, phone, fax and email come
   from the `contact:` block in `_config.yml`, so there is one place to change
-  them. The copyright line and the sentence "West Virginia University is an
-  Equal Opportunity/Affirmative Action Institution." are required on every
-  page. They are not decoration; do not remove them.
+  them. The footer retains the copyright line. The September 2026 design review
+  removed the Equal Opportunity/Affirmative Action sentence.
 - **Some obvious class names do not exist** and silently do nothing. The
   off-white band is `bg-wvu-not-quite-white` (there is no
   `bg-wvu-neutral-subtle`), and the display face is `antonia-light` /
