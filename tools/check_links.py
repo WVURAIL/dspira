@@ -270,6 +270,8 @@ def links_in(path, baseurl):
         text = open(path, encoding="utf-8", errors="replace").read()
     except OSError:
         return
+    # Liquid statements can contain HTML strings that are not emitted links.
+    text = re.sub(r"\{%.*?%\}", lambda m: "\n" * m[0].count("\n"), text, flags=re.S)
     in_fence = False
     for i, raw_line in enumerate(text.split("\n"), 1):
         # Fenced code blocks hold examples, not links - the newpost template
@@ -288,9 +290,11 @@ def links_in(path, baseurl):
         # how one of the broken anchors stayed hidden from this checker.
         for m in re.finditer(r"!?\[(?:[^\[\]]|\[[^\[\]]*\])*\]\(\s*([^)\s]+)",
                              line):
-            yield m.group(1), i
+            if "{{" not in m.group(1) and "{%" not in m.group(1):
+                yield m.group(1), i
         for m in re.finditer(r'(?:href|src)\s*=\s*["\']([^"\']+)', line):
-            yield m.group(1), i
+            if "{{" not in m.group(1) and "{%" not in m.group(1):
+                yield m.group(1), i
 
 
 # ---------------------------------------------------------------- checking
