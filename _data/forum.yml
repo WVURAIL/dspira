@@ -50,8 +50,7 @@ rooms:
     category: Astronomy
     slug: astronomy
     blurb: >-
-      The astronomy behind the observations: the 21 cm hydrogen line, the
-      rotation of the Milky Way, and making sense of a spectrum.
+      Explore the astronomy behind observations: neutral hydrogen's 21 cm line, Milky Way rotation, and spectral interpretation.
     # thread: "dspira-lessons/forum/astronomy/"
   dsp:
     category: DSP

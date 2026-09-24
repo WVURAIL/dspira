@@ -9,7 +9,7 @@ order: 10
 meta_description: "Set up a Raspberry Pi for DSPIRA radio astronomy. Find supported devices, Ubuntu installation steps, remote access tips, and software links."
 ---
 
-Raspberry Pi's are inexpensive and the more modern Pi's are powerful enough to keep up with the level of signal processing on GNU Radio associated with Radio Astronomy applications. 
+Raspberry Pis are inexpensive. Newer models can handle the GNU Radio signal processing needed for radio astronomy. 
 
 
   - [Supported Raspberry Pi Devices](#supported-raspberry-pi-devices)
@@ -68,7 +68,7 @@ _Note_: The custom `gr-radio_astro` [software]({{ site.baseurl }}/gr_radio_astro
 
 [Instructions from Ubuntu to install the OS on the Raspberry Pi 4](https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#1-overview){:target="_blank"}
 
-_NOTE_: Firstly, for Ubuntu desktop a monitor and mouse and keyboard is required. If you do not want to access the full desktop interface of ubuntu and only interact via command line interface you can install Ubuntu Server [instruction for Ubuntu server installation here](https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#1-overview){:target="_blank"}. Secondly, Raspberry Pi is built on an ARM based architecture  any version of Ubuntu will not work. The OS has to specific to the Pi.
+_NOTE_: Firstly, for Ubuntu desktop a monitor and mouse and keyboard is required. For command-line access without Ubuntu's desktop interface, install Ubuntu Server. See [instruction for Ubuntu server installation here](https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#1-overview){:target="_blank"}. Secondly, Raspberry Pi is built on an ARM based architecture  any version of Ubuntu will not work. The OS has to specific to the Pi.
 
 ### Post OS Installation actions: 
 
@@ -77,13 +77,13 @@ _NOTE_: Firstly, for Ubuntu desktop a monitor and mouse and keyboard is required
 1. Using a monitor and mouse and keyboard like any other desktop. 
 2. Using SSH:
    1. This method can be used on any machine with ssh server enabled.
-   2. Install X server on your computer. [VcXcrv](https://sourceforge.net/projects/vcxsrv/){:target="_blank"} on windows and [XQuartz](https://www.xquartz.org/){:target="_blank"} for macOS. 
+   2. Install X server on your computer. [VcXsrv](https://sourceforge.net/projects/vcxsrv/){:target="_blank"} on windows and [XQuartz](https://www.xquartz.org/){:target="_blank"} for macOS. 
    3. Power up the Raspberry Pi and connect your computer via ethernet cable
    4. First we need to determine the IP address of the raspberry PI: [How to determine Raspberry PI IP address](https://www.raspberrypi.org/documentation/remote-access/ip-address.md){:target="_blank"}
    5. If the determined IP address is `<IP address>` then in the terminal type `ssh -Y pi@<IP address>`
    6. More info on SSH [here](https://www.raspberrypi.org/documentation/remote-access/ssh/){:target="_blank"}
-3. Using PuTTy on Windows: 
-   1. [Download PuTTy](https://www.putty.org){:target="_blank"}.
+3. Using PuTTY on Windows: 
+   1. [Download PuTTY](https://www.putty.org){:target="_blank"}.
    2. Add IP address in the hostname field.
 4. Using VNC: More info [here](https://www.raspberrypi.org/documentation/remote-access/vnc/README.md){:target="_blank"} 
     

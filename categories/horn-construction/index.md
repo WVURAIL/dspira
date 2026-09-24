@@ -5,15 +5,10 @@ lead: The antenna itself, built from insulation board, lumber, and a can from th
 meta_description: "Build a DSPIRA horn antenna and stand. Follow the construction sequence, assemble the can antenna, and explore alternative telescope designs."
 ---
 
-The horn is the telescope. It is a pyramidal sheet-metal antenna on a wooden
-mount, and the design is deliberately constrained to materials and tools you can
-buy locally: foil-faced insulation board, aluminum tape, dimensional lumber and
-a one-gallon square paint-thinner can for the feed.
+The horn is the telescope. The antenna is pyramidal, with a wooden mount. It uses locally available tools and materials: foil-faced insulation board, aluminum tape, and dimensional lumber. A one-gallon square paint-thinner can forms the feed.
 
 The cradle holds the horn and lets it turn on one axis, so elevation is easy to
-set. It bolts to a base of your choosing; the wooden stand documented here is
-sturdy, cheap to build, and no more than 75 cm across so that it fits through a
-standard doorway.
+set. Bolt it to a base of your choosing. The wooden stand described here is sturdy and inexpensive. It is no wider than 75 cm, so it fits through a standard doorway.
 
 These lessons take it from a flat sheet to a finished, mounted instrument. The
 electronics that go behind it are in the

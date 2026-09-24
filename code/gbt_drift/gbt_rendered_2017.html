@@ -11827,7 +11827,7 @@ div.output_prompt, div.prompt.output_prompt { color: #d34215; }
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="GNU-Radio-and-GBT">GNU Radio and GBT<a class="anchor-link" aria-label="Link to GNU Radio and GBT" href="#GNU-Radio-and-GBT">&#182;</a></h1><p>The RET-DSPiRA cohort of 2017 had the unique opportunity of using their own DSP spectrometer program they designed in GNU Radio to process signal from the Green Bank Telescope. We tapped into the Green Bank Telescope IF signal to the Airspy sdr dongle and recorded a drift scan with the GBT in the L-band. The <a href="http://www.gb.nrao.edu/vegas/">VEGAS spectrometer</a> back end usually fully connected from the IF rack had one of the polarizations sent to the tapped port. VEGAS also simultaniousy took the data. This notebook reduces the data taken. Feel free to download it and play around with it if you like.</p>
+<h1 id="GNU-Radio-and-GBT">GNU Radio and GBT<a class="anchor-link" aria-label="Link to GNU Radio and GBT" href="#GNU-Radio-and-GBT">&#182;</a></h1><p>The 2017 RET-DSPIRA cohort processed Green Bank Telescope signals with their own GNU Radio spectrometer. We fed the Green Bank Telescope's IF signal into an Airspy SDR dongle. We recorded an L-band drift scan. The IF rack normally feeds the <a href="http://www.gb.nrao.edu/vegas/">VEGAS spectrometer</a>. One polarization was routed to the tapped port. VEGAS also simultaniousy took the data. This notebook reduces the data taken. Feel free to download it and play around with it if you like.</p>
 
 </div>
 </div>
@@ -13730,7 +13730,7 @@ if (typeof IPython !== "undefined" && IPython.notebook && IPython.notebook.kerne
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Calibration">Calibration<a class="anchor-link" aria-label="Link to Calibration" href="#Calibration">&#182;</a></h3><p>To have our data make physical sense need to calibrate the data. In practice the GBT has a noise diode injecting a known noise to the signal switching on and off continuously through time. But we did not have that for our setup. We will make some  assumptions.</p>
+<h3 id="Calibration">Calibration<a class="anchor-link" aria-label="Link to Calibration" href="#Calibration">&#182;</a></h3><p>To have our data make physical sense need to calibrate the data. The GBT injects known noise through a diode. It switches this diode on and off throughout observations. But we did not have that for our setup. We will make some  assumptions.</p>
 $$
 power = g(T_{sky}+T_{sys}) \\
 T_{sys} = assume( 143 K)

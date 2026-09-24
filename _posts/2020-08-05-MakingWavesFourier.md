@@ -17,6 +17,6 @@ A related paper-based exercise, which needs no software at all:
 
 [Fourier Transform Activity]({{ site.baseurl }}/FilesUploaded/FourierTransform_Activity.pdf){: .btn .btn-wvu-blue}
 
-The following link downloads the GNU Radio flowgraph for the activity. It is no longer zipped, so there is nothing to un-zip - save it to your Downloads folder and open it from GNU Radio Companion.  
+The following link downloads the GNU Radio flowgraph for the activity. The file is no longer zipped. Save it to your Downloads folder and open it in GNU Radio Companion.  
 
 [GNU Radio .grc file for Fourier Activity]({{ site.baseurl }}/images/Fourier_Series_Wave_Explorer.grc){: .btn .btn-wvu-blue download="Fourier_Series_Wave_Explorer.grc"}

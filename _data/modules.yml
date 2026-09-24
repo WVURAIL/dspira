@@ -43,20 +43,15 @@
 
 - category: Digital Signal Processing
   blurb: >-
-    Six lab exercises that build a spectrometer in GNU Radio one block at a
-    time: sampling, Fourier analysis, filters, and finally correlation, the
-    trick that turns two horns into an interferometer.
+    Six labs build a GNU Radio spectrometer one block at a time. Topics include sampling, Fourier analysis, filters, and correlation. Correlation turns two horns into an interferometer.
   alt: A spectrum with the 21 cm neutral hydrogen line standing above the noise.
 
 - category: Astronomy
   blurb: >-
-    The part it is all for. Where to point, what hydrogen looks like at 21 cm,
-    and how a rotation curve ends up as an argument for dark matter.
+    The part it is all for. Learn where to point and how hydrogen appears at 21 cm. Use a rotation curve to investigate dark matter.
   alt: Horn telescopes and a lit tent under a field of stars at Green Bank.
 
 - category: Community Labs
   blurb: >-
-    Schools, clubs and students who built the hardware and then went somewhere
-    the curriculum does not: cosmic rays, motorised mounts, and checking the
-    thing against the literature.
+    Schools, clubs, and students extend the curriculum with their own hardware. Projects cover cosmic rays, motorized mounts, and comparisons with published measurements.
   alt: Students setting up a horn telescope in a school parking lot.

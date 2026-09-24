@@ -12,4 +12,4 @@ meta_description: "Prepare a DSPIRA horn telescope for observing. Follow the set
 
 + [List of equipment needed]({{ site.baseurl }}/FilesUploaded/HornTelescopeEquipmentList.pdf)
 
-+ [How to set up the telescope](https://youtu.be/Oo28QCEZe_g) - video showing how to set up the telescope and check initial settings in the *spectrometer_w_cal* program.
++ [How to set up the telescope](https://youtu.be/Oo28QCEZe_g). This video covers telescope setup and initial *spectrometer_w_cal* settings.

@@ -16,7 +16,4 @@ electronics. Their hydrogen line project documents a 21 cm receiver end to end.
 [Hydrogen Line Project Documentation (PDF)](https://physicsopenlab.org/wp-content/uploads/2020/07/Hydrogen-Line-Project-Documentation.pdf){: .btn .btn-wvu-blue}
 
 It is worth reading next to the DSPIRA build for the parts where it makes
-different choices. Two people solving the same problem — get 1420 MHz out of
-the sky and into a computer — do not converge on the same hardware, and the
-places they diverge are usually the places where the constraint was cost,
-tooling or what happened to be in a drawer.
+different choices. Different builders solve the same problem: getting 1420 MHz signals from the sky into a computer. Their hardware choices differ with cost, available tools, and spare parts.

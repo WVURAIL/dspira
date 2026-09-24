@@ -12,10 +12,7 @@ python3 tools/check_links.py --offline    # skip the internet, about a second
 Run it from the top of the repository. It needs nothing installed — Python 3
 standard library only. Results go to `link-report.md`, which is gitignored.
 
-Links written out in full to the site's own address, under `/dspira-lessons/`,
-are checked as pages of this site, not fetched. The host name it treats as its
-own is written into the script, which is why the script is one line of the lab
-repository's `.github/CUTOVER.md` for the move to rail.wvu.edu.
+Full URLs pointing to this site's `/dspira-lessons/` pages are checked locally instead of fetched. The script defines its own host name. Update it during the rail.wvu.edu migration, as described in the lab repository's `.github/CUTOVER.md`.
 
 The offline half checks links between lesson pages, heading anchors, and
 whether referenced images and PDFs actually exist. That half is where most real
@@ -23,37 +20,25 @@ breakage shows up, and it is worth running before any push that touches links.
 
 ### Heading anchors
 
-The tables of contents at the head of the labs are nothing but in-page anchors,
-and they are the quietest thing on the site: rename a section and every link to
-it stops working, while the page still loads and the build still passes. Thirty
+Lab tables of contents use page anchors. Renaming a section can break those links even when the page loads and its build succeeds. Thirty
 of them were dead this way.
 
-The checker now resolves both `[1.6. Exercises](#16-exercises)` and
-`{{ site.baseurl }}/dsplab-sdr/#21-introduction` against the ids GitHub Pages
-really generates — lowercase, punctuation stripped, `-1`/`-2` on repeats. Those
-rules are not a guess: they are kramdown-parser-gfm's, and
-`test_check_links.py` pins them against output from the real gems.
+The checker resolves anchors such as `[1.6. Exercises](#16-exercises)` and `{{ site.baseurl }}/dsplab-sdr/#21-introduction`.
+GitHub Pages generates lowercase IDs with punctuation removed and `-1`/`-2` suffixes for duplicates. These rules come from kramdown-parser-gfm. `test_check_links.py` verifies them against output from the actual gems.
 
 ```bash
 python3 tools/test_check_links.py                          # fixtures + canaries
 python3 tools/check_links.py --offline --fail-on anchors    # what CI runs
 ```
 
-`--fail-on anchors` exits non-zero only for anchors. CI uses it so a build is
-never failed by a PDF somebody still owes us, while a broken table of contents
-stops the build the moment it is pushed.
+`--fail-on anchors` exits non-zero only for anchors. CI uses it to tolerate missing external PDFs. Broken table-of-contents links still fail the build immediately.
 
-If you write a table of contents by hand, or regenerate one with an editor
-extension, check the anchors are **lowercase**. Several editor plugins emit
-GitHub-style `#11-Installation-Guide`, which looks right and matches nothing —
-that is where most of the thirty came from.
+When writing or regenerating a table of contents, make its anchors **lowercase**. Some editor plugins produce anchors such as `#11-Installation-Guide`. They look plausible but match nothing here. Most of the thirty failures came from these anchors.
 
 Findings are split three ways:
 
 - **Broken** — confirmed dead, worth fixing.
-- **Needs a human** — could not be settled automatically. Google Drive, Google
-  Docs, YouTube and Mediasite all return "200 OK" for content that has been
-  deleted or made private, and some sites refuse automated requests outright.
+- **Needs a human** — could not be settled automatically. Google Drive, Google Docs, YouTube, and Mediasite may return "200 OK" for deleted or private content. Other sites reject automated requests.
   These are listed separately rather than guessed at.
 - **OK** — responded normally.
 
@@ -62,16 +47,11 @@ Hosts known to sit in that bucket permanently, so nobody re-investigates them:
 - `physicsopenlab.org` answers every automated request with 403 regardless of
   user agent. The pages are fine in a browser.
 - `home.ifa.hawaii.edu` serves an expired certificate, so the check cannot
-  verify it. That one is also flagged on `/labs/`, because a reader clicking it
-  gets a browser warning and should know it is expected.
+  verify it. The `/labs/` page also flags that link. Readers receive a browser warning, so the page explains that behavior.
 - `indico.phys.vt.edu` and `wiki.analog.com` refuse HEAD, with 400 and 500
-  respectively. The checker falls through to GET for any HEAD error, so these
-  come back OK; they are listed here only so the next 4xx-on-HEAD host is
-  recognised rather than treated as dead.
+  respectively. The checker retries HEAD errors with GET, so these links pass. This list helps identify similar hosts that reject HEAD requests.
 
-A link in the middle bucket is not evidence of a problem. If the run cannot
-reach the internet at all it says so and falls back to offline mode, rather
-than reporting every link as broken.
+A link in the middle bucket is not evidence of a problem. If internet access fails entirely, the checker reports that limitation and switches to offline mode. It avoids marking every external link broken.
 
 ## check_layout.py
 
@@ -95,87 +75,53 @@ Internet access is required for fonts from use.typekit.net. Design System CSS
 is served locally. Both this check and `check_contrast.py` need the fonts loaded
 to measure the rendered page correctly.
 
-Horizontal overflow is the quietest layout bug there is. Nothing errors, the
-page looks right on the machine it was written on, and on a phone the whole
-thing slides an inch to the left when you try to scroll down. It reads as the
+Horizontal overflow is the quietest layout bug there is. The author's computer shows no error. On a phone, however, scrolling down moves the whole page sideways. It reads as the
 site being janky rather than as a fault, so nobody reports it.
 
 Two shipped here, and neither was found by looking at the site:
 
-- A lesson title containing `spectrometer_w_cal.grc`. A heading is set at up to
-  3.1rem, and one unbreakable 25-character token is wider than a 320px phone.
+- A lesson title containing `spectrometer_w_cal.grc`. Headings can reach 3.1rem. One unbreakable 25-character word can exceed a 320px phone's width.
   The page leaked 54px, and had since 2020.
-- A sixth entry in the navigation. Five fitted; six overflowed by up to 38px —
-  but only between **721 and 756px**, in the band just above where the menu
-  collapses to a hamburger.
+- A sixth entry in the navigation. Five navigation items fit; six overflowed by up to 38px. This happened only between **721 and 756px**, just above the mobile-menu breakpoint.
 
 That second one is why the sweep is continuous rather than a handful of device
 sizes. A bug that lives between 721 and 756px is invisible to a check that tests
 375, 768 and 1280.
 
-Every page is checked at eight common widths; the front page, which carries the
-header and footer that appear everywhere, is also swept every 10px from 320 to
+Every page is checked at eight common widths. The front page also tests the shared header and footer every 10px from 320 to
 1440. `--fine` does that to every page.
 
-For speed it loads each page once and resizes rather than reloading — eight
-times faster for the same answer. `--self-test` is what keeps that shortcut
-honest: it builds a clean page and a deliberately broken one and checks the
-sweep stays quiet for the first and fails on the second. CI runs it before the
+Loading each page once and resizing is eight times faster than reloading. `--self-test` verifies this shortcut using clean and deliberately broken pages. The clean page must pass, and the broken page must fail. CI runs it before the
 real check, the same way `test_check_links.py` runs before the link check.
 
 **What "over" means, and what it does not.** The first version asked whether any
-element was wider than its own box. That is the wrong question. An element that
-scrolls its own content — a long equation, a wide table in a scroller, a code
-block — is wider than its box on purpose and moves the page not at all. The
-question is which boxes stick out past the right edge with nothing clipping them,
-and that is what is measured and named now: the deepest such element, at the width
-it is worst at, with how far past it reaches.
+element was wider than its own box. That is the wrong question. Some elements intentionally scroll their own content, such as equations, wide tables, and code blocks. They can exceed their containers without moving the page. The checker identifies unclipped boxes extending beyond the page's right edge. It reports the deepest offending element, its worst viewport width, and the overflow distance.
 
-That matters because the old report was confidently wrong. A maths lesson came
-back blaming two equations that were scrolling exactly as intended, while the real
-offender went unnamed. `--self-test` now includes that shape — wide content in a
-scroller next to a genuine 40px offender — and checks the report names the
-offender.
+That matters because the old report was confidently wrong. An earlier report blamed two correctly scrolling equations and missed the actual cause. `--self-test` now includes scrolling content beside a genuine 40px overflow. It verifies that the report identifies the real problem.
 
 **Pages are not finished when they load.** MathJax paints a rough preview and
-replaces it with the real equations a few hundred milliseconds later. Measure in
-that window and the answer depends on how fast a CDN replied: the same commit
-passed and failed, and the failing page is fine at every width once it lands. A
-check that answers differently for the same commit is worse than no check, because
-it teaches people to re-run it until it goes green.
+replaces it with the real equations a few hundred milliseconds later. Measuring during that interval made results depend on CDN response time. The same commit passed and failed. Once loading finished, the page fit every tested width. Inconsistent results encourage repeated runs until a check passes. Such a check provides little protection.
 
-So a page that looks over is watched for up to two seconds to see whether it comes
-back on its own. If it does, that is reported as `settling:` — worth knowing,
-since a visitor on a slow connection sees it — but it does not fail the build.
+The checker watches apparent overflow for up to two seconds to see whether it resolves itself. Resolved overflow is reported as `settling:` without failing the build. Visitors on slow connections may still see that temporary state.
 Only overflow that is still there when the page has arrived does.
 
-Waiting for the number to *stop changing* does not work, and `--self-test` has a
-case that proves it: between the preview arriving and the equations replacing it,
-nothing moves for a comfortable fraction of a second. Holding still is not the
+Waiting for a stable measurement is insufficient. Preview content can remain still briefly before equations replace it. `--self-test` covers this case. Holding still is not the
 same as being finished.
 
 **A failure worth knowing about.** Both browser checks measure every page on one
-shared browser page — far faster than a reload per width. A page that navigates
-itself breaks that: a meta-refresh stub does, and so does a load that timed out
-while its navigation carried on. The next `goto` then dies with "interrupted by
-another navigation", the page stays poisoned, and every page after it fails too.
+shared browser page — far faster than a reload per width. Automatic navigation breaks that approach. Examples include meta-refresh redirects and page loads whose navigation continues after a timeout. The next `goto` fails with "interrupted by another navigation". The browser page remains unusable, causing subsequent checks to fail.
 One flake became thirty-nine failures in CI that way, and the report blamed
 thirty-nine innocent pages.
 
-Two guards now. Meta-refresh stubs are detected by reading the file and skipped —
-there is no layout on them to measure — and reported rather than dropped
-silently. And after any failed load the page is parked at `about:blank`, or
-replaced outright if it will not park. Verified by forcing *every* load to fail
-on its first attempt: all 79 pages recover on the retry. `--self-test` includes a
-redirect stub sorted ahead of other pages, which is the exact shape that failed.
+Two guards now. The checker detects meta-refresh stubs from their files and reports them as skipped. These stubs have no layout to measure. And after any failed load the page is parked at `about:blank`, or
+replaced outright if it will not park. Forcing every first load to fail verified retry recovery on all 79 pages. `--self-test` includes a redirect stub before other pages, reproducing the original failure.
 
 Pages with an accepted overflow are listed in `ALLOW` at the top of the script,
 each with a reason. There are two, both exported Jupyter notebooks carrying
 their own inlined Bootstrap. Adding to that list is how you silence something —
 deliberately, in a place somebody will read.
 
-It only looks for horizontal overflow. It will not tell you whether a page looks
-good, and it cannot see overlapping text, poor contrast, or a squashed image.
+It only looks for horizontal overflow. It cannot assess appearance or detect overlapping text, poor contrast, and distorted images.
 
 ## check_math.py
 
@@ -197,24 +143,16 @@ $$
 ```
 
 as a displayed equation only when the opening `$$` starts a block — which means a
-blank line above it. Write the same three lines directly under the sentence that
-introduces them and kramdown reads it all as one paragraph, so the equation
-renders **inline**: body size, mid-sentence, where a centred line was meant.
+blank line above it. Without a blank line after the introduction, kramdown treats those three lines as part of the paragraph. The equation renders **inline** at body size instead of centered on its own line.
 
 Nothing warns you. The build passes, MathJax renders it happily, the maths is
-correct. It is just in the wrong place — and inline maths does not wrap, so on a
-phone it takes the page with it. `/dsplab-fourier1/` leaked 211px at 320px
-because a triangle-wave definition sat under "The triangular wave is defined as:".
-Three equations were like that, and the other two were merely wrong rather than
-wide, which is why the layout check alone was not enough to find them.
+correct. Inline math does not wrap and can cause overflow. At 320px, `/dsplab-fourier1/` overflowed by 211px. Its triangle-wave definition immediately followed "The triangular wave is defined as:".
+Three equations had this problem. Only one caused overflow, so layout checks alone missed the other two.
 
 It also flags a fence with prose immediately *below* it. That one is not a bug
-today — the paragraph after a closing fence parses fine. It is how the bug gets
-made: every trapped equation here sat under a line of prose that had itself been
-written under a closing fence.
+today — the paragraph after a closing fence parses fine. Every affected equation followed prose placed directly after a closing fence. This spacing pattern caused the bug.
 
-Two things it deliberately ignores: `$$` inside a code fence, which is a code
-sample, and `$$x(t)$$` inside a sentence, which is inline maths on purpose. Only
+The checker ignores `$$` inside code fences. It also ignores deliberate inline math such as `$$x(t)$$`. Only
 a `$$` alone on its line is a fence. Both cases are in `--self-test`, because a
 check that cries wolf gets switched off.
 
@@ -230,32 +168,18 @@ python3 tools/check_contrast.py --self-test   # break it on purpose
 
 Same browser as `check_layout.py`, so in CI it costs nothing extra.
 
-Contrast cannot be read off the stylesheet. What matters is the pair of colours
-that actually meet — a rule sets one, an ancestor four levels up supplies the
-background, and a translucent layer in between changes the answer. This measures
-the rendered result at 390px and 1280px. Thresholds are WCAG 2.1 AA: 4.5:1 for
-body text, 3:1 for large (24px, or 18.66px bold).
+Contrast cannot be read off the stylesheet. Contrast depends on the colors actually displayed together. Ancestor backgrounds and translucent layers can change the result of a text-color rule. This measures
+the rendered result at 390px and 1280px. WCAG 2.1 AA requires 4.5:1 for body text and 3:1 for large text. Large text means 24px, or 18.66px bold).
 
-It matters here more than on most sites: teachers project these lessons in
-classrooms, where a colour that is merely acceptable on a laptop stops being
-readable.
+Teachers project these lessons in classrooms. Marginal contrast on a laptop can become unreadable on a projector.
 
-**A warning worth keeping.** The first version measured every element with a
-text-node child, which includes containers whose visible words are in their
-children — those inherit a colour they never paint. It reported 81 of 82 pages
-broken, and every one was wrong. Only elements with their own non-whitespace
-text are measured now, and `--self-test` includes that exact case so the mistake
-cannot come back quietly.
+**A warning worth keeping.** The first version measured every element with a text-node child. This included containers inheriting colors used only by their descendants. It reported 81 of 82 pages
+broken, and every one was wrong. The checker now measures only elements with their own non-whitespace text. `--self-test` covers the earlier mistake.
 
-What it found on a correct first run: five colour pairs, all inside the two
-exported Jupyter notebooks, all near misses from the default Pygments palette —
-comments at 4.25:1, string interpolation at 3.65:1. They are corrected by an
+The corrected first run found five failing color pairs in two exported Jupyter notebooks. All came from the default Pygments palette. Comments measured 4.25:1; string interpolation measured 3.65:1. They are corrected by an
 override block near the top of each of those two files, which explains itself.
 
-Since the move to the Design System the colours are its own. A new failure is
-far more likely to be a utility class on the wrong background — `text-wvu-gold`
-on white, say — than a stylesheet rule, and the fix is in the page, not in
-`css/lessons.scss`.
+Since the move to the Design System the colours are its own. New failures are more likely to involve utility classes on unsuitable backgrounds, such as `text-wvu-gold` on white. Fix these in the page rather than `css/lessons.scss`.
 
 It does not cover text over images, focus indicators, or anything needing a
 pointer or keyboard. One measurable slice, not the whole of accessibility.

@@ -11,7 +11,7 @@ meta_description: "Set up two horn telescopes with a LimeSDR. Follow the equipme
 
 ## Procedure for Setting Up a 2 Horn Interferometer
 
-These are instructions for how to set up and run a 2 horn interferometer using a Lime SDR with GNU Radio. The GNU Radio spectrometer programs write time-stamped data files once every integration time. For the adding spectrometer, called [Interferometer_SimpleSpectrometer_Adding.grc](https://github.com/WVURAIL/dspira-lessons/blob/master/FilesUploaded/interferometer_simpleSpectrometer_Lime_adding.grc), the data includes horn A spectra, horn B spectra, and the power spectra from the sum of their signals. For the multiplying spectrometer, called [Interferometer_SimpleSpectrometer_Multiplying.grc](https://github.com/WVURAIL/dspira-lessons/blob/master/FilesUploaded/interferometer_simpleSpectrometer_Lime_multiplying.grc), the data includes horn A spectra, horn B spectra, the magnitude of the interference, and the phase of the interference.
+Set up and run a two-horn interferometer with a Lime SDR and GNU Radio. The GNU Radio spectrometer programs write time-stamped data files once every integration time. The adding spectrometer is [Interferometer_SimpleSpectrometer_Adding.grc](https://github.com/WVURAIL/dspira-lessons/blob/master/FilesUploaded/interferometer_simpleSpectrometer_Lime_adding.grc). Its data includes spectra for horns A and B, plus power spectra from their summed signals. The multiplying spectrometer is [Interferometer_SimpleSpectrometer_Multiplying.grc](https://github.com/WVURAIL/dspira-lessons/blob/master/FilesUploaded/interferometer_simpleSpectrometer_Lime_multiplying.grc). Its data includes spectra for horns A and B, plus interference magnitude and phase.
 
 1. List of Equipment
   
@@ -57,15 +57,15 @@ These are instructions for how to set up and run a 2 horn interferometer using a
 3. Setting up the horns
 
    - Assemble 2 horns as would be done for a single horn observation.
-   - For horns with a baseline along the east-west direction, set them parallel to each other, pointing at the same spot in the sky (e.g. the sun when it transits). 
+   - For an east-west baseline, align the horns in parallel toward the same sky position (e.g. the transiting Sun). 
    - Here are some tips:
      - Sometime before doing interferometry, establish the N-S direction marking the shadow of a vertical pole when the sun transits.
-     - If the horns are to be set up with an E-W baseline, use some sort of large compass or       -square to mark the E-W direction perpendicular to the N-S direction. A tape measure or string can be useful for doing this.
+     - For an east-west baseline, use a large compass or square. Mark the east-west direction perpendicular to north-south. A tape measure or string can be useful for doing this.
    
 4. Setting up the electrical connections - REFER TO THE PHOTO ABOVE
 
-   - Data for "Horn A" is collected on the cable that is plugged in to RX1 on the Lime SDR; RX2 is for Horn B.
-   - Be sure that the 5 V dc transformer for powering the bias-T's is plugged in, and check that the power strip is on.
+   - The cable connected to RX1 on the Lime SDR collects "Horn A" data. RX2 collects Horn B data.
+   - Plug in the 5 V dc transformer that powers the bias-T's. Check that the power strip is on.
    - The "RF"  terminal of each bias-T is connected to the respective RX1 and RX2 on the Lime.
    - The "RF + dc" terminal of each bias-T is connected to the respective LNA.
 
@@ -84,9 +84,9 @@ These are instructions for how to set up and run a 2 horn interferometer using a
 
      - Run GNU Radio: $ gnuradio-companion
 
-     - On the canvas in the Interferometer_SimpleSpectrometer_Adding.grc program, open the Variable boxes described below; these are in the upper left side of the GNU Radio canvas:
+     - Open the Variable boxes described below in Interferometer_SimpleSpectrometer_Adding.grc. They are at the upper left of the GNU Radio canvas:
 
-       - Open the "prefix_hornA" Variable block (double-click it). For "Value" type the pathname to the subfolder that will be used to collect the spectrum of Horn A. This must be in quotes. In the example below horn A data is written to the sub-folder "magnitude_july21" that is in the subfolder "sun_july21" which is a subfolder of "interferometer_data", etc. This will be written in the prefix-hornA Variable box as: "/home/john/dspira_2021/interferometer_data/sun_july21/hornA_july21/"
+       - Open the "prefix_hornA" Variable block (double-click it). For "Value" type the pathname to the subfolder that will be used to collect the spectrum of Horn A. This must be in quotes. In this example, horn A data goes into "magnitude_july21". That folder is inside "sun_july21", which is inside "interferometer_data". This will be written in the prefix-hornA Variable box as: "/home/john/dspira_2021/interferometer_data/sun_july21/hornA_july21/"
 
        - Set up similar file pathnames in the Variable blocks "prefix_hornB" and "prefix_adding".
 
@@ -108,9 +108,9 @@ These are instructions for how to set up and run a 2 horn interferometer using a
 
      - Run GNU Radio: $ gnuradio-companion
 
-     - On the canvas in the Interferometer_SimpleSpectrometer_Multiplying.grc program, open the Variable boxes described below; these are in the upper left side of the GNU Radio canvas:
+     - Open the Variable boxes described below in Interferometer_SimpleSpectrometer_Multiplying.grc. They are at the upper left of the GNU Radio canvas:
 
-       - Open the "prefix_mag" Variable block (double-click it). For "Value" type the pathname to the subfolder that will be used to collect the spectrum of Horn A. This must be in quotes. In the example below interference magnitude data is written to the sub-folder "magnitude_july21" that is in the subfolder "sun_july21" which is a subfolder of "interferometer_data", etc. This will be written in the prefix-mag Variable box as: "/home/john/dspira_2021/interferometer_data/sun_july21/magnitude_july21/"
+       - Open the "prefix_mag" Variable block (double-click it). For "Value" type the pathname to the subfolder that will be used to collect the spectrum of Horn A. This must be in quotes. In this example, interference magnitude data goes into "magnitude_july21". That folder is inside "sun_july21", which is inside "interferometer_data". This will be written in the prefix-mag Variable box as: "/home/john/dspira_2021/interferometer_data/sun_july21/magnitude_july21/"
 
        - Set up similar file pathnames in the Variable blocks "prefix_phase", "prefix_hornA", and "prefix_hornB". 
 

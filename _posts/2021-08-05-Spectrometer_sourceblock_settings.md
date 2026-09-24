@@ -10,21 +10,18 @@ meta_description: "Configure the source block in the DSPIRA spectrometer for you
 ---
 
 
-The default source block settings in the `spectrometer_w_cal.grc` GNU Radio program are for the [Airspy R2](https://airspy.com/airspy-r2) SDR. If a different SDR is used, changes in the source block, the `samp_rate Variable` block, and sometimes the `freq Variable` block may be needed. The settings for some common SDR's used with the horn telescopes are described below.
+The default source block settings in the `spectrometer_w_cal.grc` GNU Radio program are for the [Airspy R2](https://airspy.com/airspy-r2) SDR. A different SDR may require changes to the source and `samp_rate Variable` blocks. Sometimes the `freq Variable` block also needs changes. The settings for some common SDR's used with the horn telescopes are described below.
 
 > **Why `freq` sometimes has to change too.** The program records a band
-> `samp_rate` wide, centered on `freq`. The default is `freq` 1419 MHz with
-> `samp_rate` 10e6, which records 1414 – 1424 MHz — the hydrogen line at
-> 1420.4058 MHz sits comfortably inside. Narrow the sample rate without moving
-> the centre and the band shrinks around 1419 MHz, and at some point the line
-> falls off the end of it. Halve the sample rate to 2.4e6 and the band becomes
-> 1417.8 – 1420.2 MHz: **the line is 0.2 MHz outside it and the telescope
-> records no hydrogen at all.** That is why the RTL-SDR and Pluto settings
-> below change `freq` as well, and the Airspy Mini and Lime do not.
+> `samp_rate` wide, centered on `freq`. The defaults are `freq` 1419 MHz and `samp_rate` 10e6.
+> This records 1414 to 1424 MHz, comfortably including the hydrogen line at 1420.4058 MHz. Reducing the sample rate shrinks the band around 1419 MHz.
+> Without retuning the center, the hydrogen line eventually falls outside that band. Set the sample rate to 2.4e6 and the band becomes 1417.8 to 1420.2 MHz.
+> **The line lies about 0.2 MHz outside it.
+> The telescope records no hydrogen.** The RTL-SDR and Pluto settings therefore change `freq` too.
+> The Airspy Mini and Lime settings do not.
 >
-> A quick check: your band runs from `freq - samp_rate/2` to
-> `freq + samp_rate/2`, and 1420.4058 MHz needs to be inside it with room to
-> spare at both ends.
+> Your band runs from `freq - samp_rate/2` to `freq + samp_rate/2`.
+> It must include 1420.4058 MHz with room to spare at both ends.
 
 Options:
 
@@ -32,7 +29,7 @@ Options:
 
     - Source block: the `osmocom Source` block is used; the "Device Arguments" are the same as for the Airspy R2. So no changes are needed in this block.
 
-    - `samp_rate Variable` block: This block is in the upper left corner of the canvas in the `spectrometer_w_cal.grc` program next to the `Options` block. Open this block by double-clicking it. Change the "Value" to "6e6" (which is 6 MHz).
+    - `samp_rate Variable` block: Find it beside `Options`, at the canvas's upper left in `spectrometer_w_cal.grc`. Open this block by double-clicking it. Change the "Value" to "6e6" (which is 6 MHz).
 
     <img alt="samp_rate Variable block properties: Id samp_rate, Value 6e6" align="center" width="300" height="146" src="{{ '/images/AirspyMini_samp_rate.png' | relative_url }}">
 
@@ -47,7 +44,7 @@ Options:
 
     <img alt="osmocom Source properties: Device Arguments rtl=0,bias=1, Sample Rate samp_rate, Frequency freq, RF/IF/BB gains 17, 12, 10 dB" align="center" width="300" height="385" src="{{ '/images/RTL_SDR_source.png' | relative_url }}">
 
-    - `samp_rate Variable` block: This block is in the upper left corner of the canvas in the `spectrometer_w_cal.grc` program next to the `Options` block. Open this block by double-clicking it. Change the "Value" to "2.4e6" (which is 2.4 MHz).
+    - `samp_rate Variable` block: Find it beside `Options`, at the canvas's upper left in `spectrometer_w_cal.grc`. Open this block by double-clicking it. Change the "Value" to "2.4e6" (which is 2.4 MHz).
 
     <img alt="samp_rate Variable block properties: Id samp_rate, Value 2.4e6" align="center" width="300" height="149" src="{{ '/images/RTL_SDR_samp_rate.png' | relative_url }}">
 
@@ -55,28 +52,21 @@ Options:
       **"1420.5e6"**. The band then runs 1419.3 – 1421.7 MHz, with the line at
       1420.4058 MHz inside it.
 
-    - Two things to know about an RTL-SDR at this sample rate, neither of them
-      a fault you can fix in the flowgraph:
+    - An RTL-SDR has two limitations at this sample rate. Neither can be fixed in the flowgraph:
 
-        - The band is only ±230 km/s wide, so the faint wings of the line are
-          clipped and there is no stretch of it guaranteed free of Galactic
-          hydrogen to fit a baseline on. Maps are good for seeing where the
+        - The band covers only about ±230 km/s, clipping the line's faint wings. No region is guaranteed free of Galactic hydrogen for baseline fitting. Maps are good for seeing where the
           Milky Way is; treat the intensity numbers as indicative.
-        - Every SDR of this type puts a spurious tone at the exact centre of
-          its band, which at this tuning is 0.1 MHz from the line.
-          `map_h1_hdf5_drift.py` blanks a 120 kHz strip there, and because the
-          strip is next to the line that costs roughly a quarter of the
-          measured intensity. The comment on `DC_MASK_HALFWIDTH_HZ` in that
+        - These SDRs produce a spurious tone at the band's exact center. At this tuning, it sits 0.1 MHz from the line. `map_h1_hdf5_drift.py` blanks a 120 kHz strip around it. The strip's proximity to the line costs roughly one quarter of the measured intensity. The comment on `DC_MASK_HALFWIDTH_HZ` in that
           script has the measured figures and the two ways to improve it.
 
 + Lime 
 
-    - Source block: the Lime uses the `LimeSDR Source (RX)` block. Click on the `osmocom` block and hit Delete. Then in the search window on the tool bar at the top, type "LimeSDR". Grab the `LimeSDR Source (RX)` and drag it onto the canvas where the `osmocom` block was. Then one-by-one connect the blue output of the `LimeSDR Source (RX)` block to the `Stream to Vector` block, the three `Delay` blocks, and the `Complex to Real`. The final connections should look like the following:
+    - Source block: the Lime uses the `LimeSDR Source (RX)` block. Click on the `osmocom` block and hit Delete. Then in the search window on the tool bar at the top, type "LimeSDR". Grab the `LimeSDR Source (RX)` and drag it onto the canvas where the `osmocom` block was. Connect the blue output of `LimeSDR Source (RX)` to `Stream to Vector`. Also connect it to the three `Delay` blocks and `Complex to Real`. The final connections should look like the following:
 
     <img alt="LimeSDR Source (RX) output connected to Stream to Vector, three Delay blocks (4.096k, 8.192k, 12.288k), and Complex To Real" align="center" width="239" height="164" src="{{ '/images/Lime_connections.png' | relative_url }}">
  
     - Open the `LimeSDR Source (RX)` block (by double-clicking) and set the following:
-        - On the "General" tab, set "RF frequency" to "freq" [without the quotes], and check that the "Sample rate" is "samp_rate" [without the quotes]. "Channel" should be on "A" [without the quotes].
+        - On the "General" tab, set "RF frequency" to "freq" [without the quotes]. Check that "Sample rate" is "samp_rate" [without the quotes]. "Channel" should be on "A" [without the quotes].
 
         <img alt="LimeSDR Source General tab: Channel A, RF frequency freq, Sample rate samp_rate, Oversample Default, MIMO phase align Disabled" align="center" width="297" height="265" src="{{ '/images/Lime_General.png' | relative_url }}">
 
@@ -93,17 +83,17 @@ Options:
 
         - Type and enter: `sudo apt install gr-limesdr`
 
-    - POWER TO THE LNA: The Lime SDR does not power the LNA. Therefore, it is necessary to provide +5 V dc external power to the LNA through a [bias-T](https://www.minicircuits.com/WebStore/dashboard.html?model=ZFBT-282-1.5A%2B), which is connected to the LNA and Lime as shown:
+    - POWER TO THE LNA: The Lime SDR does not power the LNA. Supply external +5 V dc power through a [bias-T](https://www.minicircuits.com/WebStore/dashboard.html?model=ZFBT-282-1.5A%2B). Connect it to the LNA and Lime as shown:
         
         <img alt="Mini-Circuits ZFBT-282-1.5A+ bias-tee: one SMA port to the Lime SDR, the other through a female-female SMA adapter to the LNA, DC lead to +5 V power" align="center" width="329" height="199" src="{{ '/images/Bias_T_connections.png' | relative_url }}">
 
-        An [SMA female to female connector/adapter](https://www.data-alliance.net/sma-female-to-sma-female-adapter-coupler-gender-changer/) will be needed for the connection from the bias-T to the LNA cable, as indicated in the diagram above.
+        Use an [SMA female to female connector/adapter](https://www.data-alliance.net/sma-female-to-sma-female-adapter-coupler-gender-changer/) between the bias-T and LNA cable. Follow the diagram above.
 
 + ADALM-PLUTO 
 
     - The Adalm-Pluto SDR uses the `PlutoSDRSource` block that will need to be installed. Complete the [steps outlined here]({{ site.baseurl }}/PlutoSDR_installation) to install this block on your computer.
 
-    - Source block: the Adalm-Pluto uses the `PlutoSDRSource` block. Click on the `osmocom` block and hit Delete. Then in the search window on the tool bar at the top, type "PlutoSDR". Grab the `PlutoSDRSource` and drag it onto the canvas where the `osmocom` block was. Then one-by-one connect the blue output of the `PlutoSDRSource` block to the `Stream to Vector` block, the three `Delay` blocks, and the `Complex to Real`. The final connections should look like the following:
+    - Source block: the Adalm-Pluto uses the `PlutoSDRSource` block. Click on the `osmocom` block and hit Delete. Then in the search window on the tool bar at the top, type "PlutoSDR". Grab the `PlutoSDRSource` and drag it onto the canvas where the `osmocom` block was. Connect the blue output of `PlutoSDRSource` to `Stream to Vector`. Also connect it to the three `Delay` blocks and `Complex to Real`. The final connections should look like the following:
 
     <img alt="PlutoSDR Source output connected to Stream to Vector, three Delay blocks (4.096k, 8.192k, 12.288k), and Complex To Real" align="center" width="277" height="237" src="{{ '/images/PlutoSDR_sourceBlock_connections.png' | relative_url }}">
 
@@ -112,16 +102,16 @@ Options:
 
         <img alt="PlutoSDR Source properties: LO Frequency 2400000000, Sample Rate int(samp_rate), RF Bandwidth 20000000, Buffer size 32768, Manual Gain (RX1) 64 dB" align="center" width="300" height="267" src="{{ '/images/PlutoSDR_Source.png' | relative_url }}">
 
-    - The `samp_rate` and `freq` Variable blocks should be set to the values shown — `samp_rate` 3.5e6 **and** `freq` 1421e6. Both are needed: 3.5 MHz around the default 1419 MHz would stop at 1420.75 MHz and clip the line. At 1421 MHz the band is 1419.25 – 1422.75 MHz.
+    - The `samp_rate` and `freq` Variable blocks should be set to the values shown — `samp_rate` 3.5e6 **and** `freq` 1421e6. Both changes are needed. A 3.5 MHz band centered at 1419 MHz ends at 1420.75 MHz and clips the line. At 1421 MHz the band is 1419.25 – 1422.75 MHz.
 
         <img alt="samp_rate Variable block properties: Id samp_rate, Value 3.5e6" align="center" width="300" height="106" src="{{ '/images/PlutoSDR_samp_rate.png' | relative_url }}">
         <img alt="freq Variable block properties: Id freq, Value 1421e6" align="center" width="298" height="130" src="{{ '/images/PlutoSDR_freq.png' | relative_url }}">
     
-    - POWER TO THE LNA: The Pluto SDR does not power the LNA. Therefore, it is necessary to provide +5 V dc external power to the LNA through a [bias-T](https://www.minicircuits.com/WebStore/dashboard.html?model=ZFBT-282-1.5A%2B), which is connected to the LNA and Pluto SDR as shown:
+    - POWER TO THE LNA: The Pluto SDR does not power the LNA. Supply external +5 V dc power through a [bias-T](https://www.minicircuits.com/WebStore/dashboard.html?model=ZFBT-282-1.5A%2B). Connect it to the LNA and Pluto SDR as shown:
         
         <img alt="Mini-Circuits ZFBT-282-1.5A+ bias-tee: one SMA port to the Pluto SDR, the other through a female-female SMA adapter to the LNA, DC lead to +5 V power" align="center" width="329" height="199" src="{{ '/images/Bias_T_connections_PlutoSDR.png' | relative_url }}">
 
-        An [SMA female to female connector/adapter](https://www.data-alliance.net/sma-female-to-sma-female-adapter-coupler-gender-changer/) will be needed for the connection from the bias-T to the LNA cable, as indicated in the diagram above.
+        Use an [SMA female to female connector/adapter](https://www.data-alliance.net/sma-female-to-sma-female-adapter-coupler-gender-changer/) between the bias-T and LNA cable. Follow the diagram above.
 
 
 **Cable Hardware:** A [coaxial cable](https://www.coaxrf.com/shop/1-rf-coaxial-cables/times-microwave-lmr240/sma-male-times-microwave-lmr240/lmr240-sma-male-to-sma-male-coaxial-rf-pigtail-cable/) is needed to connect the LNA to the SDR. Typically a 10 ft length is adequate, but any length up to 25 ft should work fine.

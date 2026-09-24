@@ -16,9 +16,7 @@ antenna, the author is direct about where it came from:
 > signal. I could have used a typical satellite dish, and it would probably
 > work, but I used the design from DSPIRA.
 
-What the DSPIRA lessons do not cover is pointing the thing by machine. This
-build adds a motorized mount and drives it, which is the obvious next step
-after a few nights of turning a horn by hand and writing down the angle.
+What the DSPIRA lessons do not cover is pointing the thing by machine. This build adds a motorized mount and its drive. It provides a next step after turning the horn manually and recording angles.
 
 [Automated Radio Telescope, on Instructables](https://www.instructables.com/Automated-Radio-Telescope/){: .btn .btn-wvu-blue}
 

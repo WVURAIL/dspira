@@ -13,11 +13,7 @@ see forum/index.md for why.
 {%- assign room = site.data.forum.rooms[page.room] %}
 {%- assign url = "https://github.com/" | append: site.data.forum.repo | append: "/discussions/categories/" | append: room.slug %}
 
-This room is for GNU Radio and the software around it: installing it, the
-flowgraphs used in the lessons, the gr-radio_astro blocks, and getting a
-spectrometer to run on a particular computer or a Raspberry Pi. It is the GNU
-Radio category of the DSPIRA discussions on GitHub, open for anyone to read and
-for anyone with a free GitHub account to post in.
+Discuss GNU Radio installation, lesson flowgraphs, and gr-radio_astro blocks here. Get help running a spectrometer on your computer or Raspberry Pi. This links to the GNU Radio category in DSPIRA's GitHub discussions. Anyone can read it. Posting requires a free GitHub account.
 
 <p>
    <a class="btn btn-wvu-blue" href="{{ url }}">Open the {{ room.category }} discussions on GitHub</a>

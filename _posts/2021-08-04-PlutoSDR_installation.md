@@ -10,7 +10,7 @@ meta_description: "Install the software needed to use PlutoSDR with a DSPIRA tel
 ---
 
 
-The steps below outline the installation of software that is needed to run the Pluto SDR in GNU Radio. More information and support about GNU Radio and IIO Devices can be found at: [https://wiki.analog.com/resources/tools-software/linux-software/gnuradio](https://wiki.analog.com/resources/tools-software/linux-software/gnuradio)
+The steps below outline the installation of software that is needed to run the Pluto SDR in GNU Radio. Find GNU Radio and IIO device information at: [Analog Devices documentation](https://wiki.analog.com/resources/tools-software/linux-software/gnuradio)
 
 **Step 1: Install Dependencies**
 

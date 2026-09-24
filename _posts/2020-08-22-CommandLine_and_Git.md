@@ -90,8 +90,7 @@ git pull
 ### One rule worth following
 
 **If you change a file in a cloned repository, copy your version somewhere else
-before you pull.** Otherwise git has to reconcile your edits with the incoming
-ones, and that is a conversation you did not want to have today.
+before you pull.** Otherwise, git must reconcile your edits with incoming changes. Resolving those conflicts takes additional work.
 
 ### When `git pull` refuses
 

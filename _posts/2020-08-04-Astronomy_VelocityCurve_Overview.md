@@ -14,22 +14,21 @@ meta_description: "Use horn telescope data to plot the Milky Way rotation curve.
 * [Unit Description and Outline]({{ site.baseurl }}/FilesUploaded/VelocityCurve_UnitOutline.pdf){: .btn .btn-wvu-blue}
 
   The whole unit on two pages: what the students build toward, in what order, and
-  why. Written for AP Physics — the stated goal is that students deduce the
-  existence of dark matter in the Milky Way from its rotation curve.
+  why. Written for AP Physics. Students use the Milky Way's rotation curve to deduce the existence of dark matter.
 
 
 - **Level:** HS Advanced, College
 
-- **Objective:**  In this sequence of activities, using a horn telescope, the students will take measurements of HI spectra along the galactic plane of the Milky Way Galaxy. From their observations of galactic quadrants II & III the students will be able to deduce that the MWG is rotating. From their observations of galactic quadrant I the students will be able to determine a velocity curve of the MWG and compare it to expected curves for different galactic mass distributions.
+- **Objective:** Students use a horn telescope to measure HI spectra along the Milky Way's galactic plane. From their observations of galactic quadrants II & III the students will be able to deduce that the MWG is rotating. Students use observations of galactic quadrant I to determine a velocity curve. They compare it with expected curves for different galactic mass distributions.
 
 
 - **Pre-Knowledge of Students:** 
 
     + The students have been exposed to the horn telescope and understand how to read a spectrum. 
     
-    + The students understand what radio waves are, and they understand that the spin-flip in hydrogen atoms is the source of the 21-cm waves detected by the horn telescope. 
+    + Students understand radio waves and the hydrogen spin-flip transition. This transition produces the 21 cm waves detected by the horn telescope. 
 
-    + The students understand how to apply the Doppler shift to the spectrum peaks in order to find the relative velocity of the detected hydrogen.
+    + Students apply Doppler shifts to spectral peaks to find the detected hydrogen's relative velocity.
 
     + The students understand trigonometry.
 
@@ -37,12 +36,12 @@ meta_description: "Use horn telescope data to plot the Milky Way rotation curve.
 
     + The students understand Newton’s law of gravitation and can relate it to the orbital motion of satellites.
 
-- **Key Terms:**  horn telescope, HI spectrum, galactic coordinates, Horizontal Coordinates, Stellarium, Doppler Shift, red shift, blue shift, relative velocity, circular motion, law of gravitation, orbital motion
+- **Key Terms:** horn telescope, HI spectrum, galactic coordinates, horizontal coordinates, Stellarium. Doppler shift, red shift, blue shift, relative velocity. Circular motion, law of gravitation, orbital motion
 
 - **Related Videos for Teacher:** [Galaxy Survey Trailer](https://youtu.be/tDCPp8RIM4g)
 
 - **Teacher Preparation:**  
-    + This activity can be done with a single horn shared with the class, or with multiple horns assigned to groups of students.
+    + Share one horn with the class, or assign separate horns to student groups.
     
     + The students have used a horn telescope before. It is recommended that the following lessons have been completed:
         - Intro to the Horn Telescope
@@ -53,15 +52,15 @@ meta_description: "Use horn telescope data to plot the Milky Way rotation curve.
         
         - Understanding Coordinate Systems 
         
-    + The teacher should be familiar with the implications of red-shifted and blue-shifted signals, and understand that the general trend of blue-shifted peaks from quadrant II and red-shifted peaks from quadrant III imply that the galaxy rotates in a CW sense in reference to standard galactic coordinates.
+    + Teachers should understand red-shifted and blue-shifted signals. Quadrant II generally shows blue-shifted peaks, while quadrant III shows red-shifted peaks. Together, these trends imply clockwise galactic rotation in standard galactic coordinates.
 
-    + The teacher should be familiar with the tangent method and how the motion of an object along the line of sight at the tangent point — in quadrant I, motion away from the sun, hence the red-shifted peaks the students look for — is related to the galactic distances and angles involved. See the Teacher Notes under Part 2: Galactic Quadrant I Observation.
+    + Teachers should understand the tangent method and its relationship between galactic distances, angles, and line-of-sight motion. In quadrant I, tangent-point motion is away from the Sun. This produces the red-shifted peaks students seek. See the Teacher Notes under Part 2: Galactic Quadrant I Observation.
 
 - **Sequence of activities:** - The Teacher Notes for each part provide more details.
 
-**INTRO:** The students can run through this sequence of activities to build a rudimentary understanding of the concepts and exposure to the horn telescope
+**INTRO:** These activities introduce the concepts and give students experience with the horn telescope
     
-   a. These 4 activities could be grouped together so that smaller groups could work with the horn telescope for the one hands on activity.
+   a. Group these four activities together. Small groups can take turns using the horn telescope for the practical activity.
     
    b. The students may have had some of these experiences if other lesson modules have been done (Basic Observational Tools) 
        
@@ -84,7 +83,7 @@ meta_description: "Use horn telescope data to plot the Milky Way rotation curve.
 
 OBJECTIVE: These activities allow this *Velocity Curve of the MWG* module be able to stand alone from start to finish. There is also some overlap with the *Basic Observational Tools* module. These basic activities will bring fuller understanding to creating the galactic velocity curve.
 
-*Teacher Notes*  Since there is an activity with "discovering" what the horn telescope can do, it is suggested to assign all 4 activities so that students can be busy while other small groups are working with the scope(s) your have set up. (Most teachers very likely with have only one telescope.)
+*Teacher Notes* Assign all four activities so students have work to complete while others use the telescope. Small groups can then take turns discovering what the horn can do. (Most teachers very likely with have only one telescope.)
 
 * [Introduction to Horn Telescope]({{ site.baseurl }}/FilesUploaded/VelocityCurve_HornIntro.pdf){: .btn .btn-wvu-blue}
    
@@ -116,8 +115,7 @@ OBJECTIVE: In this activity, the students collect spectra of the MWG along the g
 
 ## Analysis Code (optional)
 
-For classes that want to fit the data numerically rather than by eye, a Jupyter
-notebook is provided that performs the sine fit and plots the result:
+A Jupyter notebook is available for classes that want a numerical fit. It performs a sine fit and plots the result:
 
 * [Galactic Plane Sine Fit notebook](https://github.com/WVURAIL/dspira-lessons/tree/master/code/velocity_curve){: .btn .btn-wvu-blue}
 
@@ -128,7 +126,7 @@ quantitative handle on the rotation the students deduced qualitatively above.
 
 ## Part 2: Galactic Quadrant I Observation
 
-OBJECTIVE: In this activity, the students collect spectra of the MWG along the galactic plane in quadrant I. The students will determine the speeds of the most red-shifted part of the spectra, and then apply the tangent method to determine the galaxy's velocity as a function of distance from the galactic center.
+OBJECTIVE: In this activity, the students collect spectra of the MWG along the galactic plane in quadrant I. Students determine the speeds represented by the spectra's most red-shifted features. They then use the tangent method to calculate galactic velocity at different distances from the galactic center.
 
 [Teacher Notes for Part 2](https://docs.google.com/document/d/1BSLoZjrFtA2qEoVzgvXjHdufQFRWmxtQWSAl8k1yJu8/edit?usp=sharing){: .btn .btn-wvu-blue}
 
@@ -140,19 +138,16 @@ OBJECTIVE: In this activity, the students collect spectra of the MWG along the g
 
 ## Example handouts from an earlier run
 
-The worksheets one class actually used for Part 1 in 2018, included as an
-**example of how a teacher structured the observation** — not as handouts to use
-unchanged.
+One class used these worksheets for Part 1 in 2018. They illustrate **how a teacher structured the observation**. Adapt them before using them with your class.
 
-> ⚠️ The observing sheet is built around that class's own dates and period — two
-> mornings in October, 8:00–8:45 am. Nothing in it is pre-computed for you: the
-> students look their own azimuth and altitude up in Stellarium and fill the
-> table in themselves. But the dates and times are that school's, so replace
+> ⚠️ The observing sheet uses that class's dates and schedule.
+> Observations took place on two October mornings, from 8:00 to 8:45 am. Nothing is pre-computed.
+> Students find their own azimuth and altitude in Stellarium and complete the table themselves. But the dates and times are that school's, so replace
 > them with yours. The Part 1 and Part 2 handouts above are the current version
 > of the lessons.
 
 * [Galactic Plane Observation 1, 2018]({{ site.baseurl }}/FilesUploaded/VelocityCurve_GalacticPlaneObservation1_2018.pdf){: .btn .btn-wvu-blue} — the observing sheet. Its spreadsheet analysis section is useful whatever dates you observe on.
-* [Galactic Plane Observation 1: Conclusions, 2018]({{ site.baseurl }}/FilesUploaded/VelocityCurve_GalacticPlaneObservation1_Conclusions_2018.pdf){: .btn .btn-wvu-blue} — a real set of class results for quadrants II and III, with the uncertainty estimate and the conclusions questions.
+* [Galactic Plane Observation 1: Conclusions, 2018]({{ site.baseurl }}/FilesUploaded/VelocityCurve_GalacticPlaneObservation1_Conclusions_2018.pdf){: .btn .btn-wvu-blue}. Class results for quadrants II and III, including uncertainty estimates and conclusion questions.
 
 
 ## All Velocity Curve handouts in one place
@@ -170,5 +165,4 @@ unchanged.
    * [Galactic Plane Quadrant I Observations: The Tangent Method](https://docs.google.com/document/d/1wA_tVKYrAyjvuVqUY9c_stwNpO1dGDFnIL6TiHq5hx8/edit?usp=sharing)   
    
    * [Galactic Plane Quadrant I Observations: Analysis & Conclusions](https://docs.google.com/document/d/1J9w1DH5fQW24XDvesYTzsR943Px_13uTZQQS5qi6rxg/edit)  
-
 

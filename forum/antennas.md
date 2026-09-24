@@ -13,11 +13,7 @@ see forum/index.md for why.
 {%- assign room = site.data.forum.rooms[page.room] %}
 {%- assign url = "https://github.com/" | append: site.data.forum.repo | append: "/discussions/categories/" | append: room.slug %}
 
-This room is for the antenna end of the telescope: horn designs and dimensions,
-building one and keeping the weather out of it, mounts and pointing, and how a
-finished horn performs on the sky. It is the Antennas category of the DSPIRA
-discussions on GitHub, open for anyone to read and for anyone with a free GitHub
-account to post in.
+Discuss horn designs, dimensions, construction, weatherproofing, mounts, and pointing here. This room also covers on-sky horn performance. This links to the Antennas category in DSPIRA's GitHub discussions. Anyone can read it. Posting requires a free GitHub account.
 
 <p>
    <a class="btn btn-wvu-blue" href="{{ url }}">Open the {{ room.category }} discussions on GitHub</a>

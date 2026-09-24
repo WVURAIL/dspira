@@ -11,8 +11,7 @@ meta_description: "Watch six astronomy lectures from the DSPIRA summer institute
 ---
 
 The astronomy taught alongside the telescope building at the DSPIRA summer
-institute, recorded. These are university lectures given to a room of high school
-teachers, so they assume no astronomy background but do not talk down.
+institute, recorded. These university lectures were given to high school teachers. They assume no astronomy background and retain university-level explanations.
 
 They run in order and build on each other, but each stands on its own if you only
 want one.
@@ -30,13 +29,9 @@ institute, covering sampling, Fourier analysis and filters.
 
 ## Who gave them
 
-**Dr. Loren Anderson**, WVU Department of Physics and Astronomy — units and
-scales, motion of the sky, time and planning observations, gravity, dark matter,
-rotation curves.
+**Dr. Loren Anderson**, WVU Department of Physics and Astronomy. Topics include units, scales, sky motion, observation planning, time, gravity, dark matter, and rotation curves.
 
-**Dr. D. J. Pisano**, then at WVU — light and telescopes, the Doppler effect,
-stars, stellar evolution, the discovery of the Milky Way, galaxies great and
-small, galaxy interactions and dark matter.
+**Dr. D. J. Pisano**, then at WVU. Topics include light, telescopes, the Doppler effect, stars, and stellar evolution. Other lectures cover the Milky Way's discovery, galaxies great and small, galaxy interactions, and dark matter.
 
 ---
 
@@ -55,8 +50,7 @@ All thirteen, in the order they were given.
 
 Gravity, Dark Matter and Rotation Curves are the three that the
 [Velocity Curve unit]({{ site.baseurl }}/Astronomy_VelocityCurve_Overview) builds
-toward. If you are teaching that unit and want the physics behind it at a level
-above the student handouts, start there.
+toward. Start there if you teach that unit and want more physics background than the student handouts provide.
 
 ## Dr. D. J. Pisano
 
@@ -70,11 +64,9 @@ above the student handouts, start there.
 
 ## Figure credits
 
-Some slides in these decks reproduce figures from published astronomy
-textbooks, marked **© 2007 Thomson Higher Education** and **© 2005
-Brooks/Cole – Thomson** (both now Cengage Learning). They appear here with
-permission obtained by the lecturers; that permission covers this use and does
-not extend to reusing those figures elsewhere. Everything else on this site is
+Some slides reproduce figures from published astronomy textbooks.
+Credits include **© 2007 Thomson Higher Education** and **© 2005 Brooks/Cole – Thomson**.
+Both publishers are now Cengage Learning. The lecturers obtained permission to reproduce these figures here. That permission does not cover their reuse elsewhere. Everything else on this site is
 under the repository's own license.
 
 ---
@@ -88,8 +80,7 @@ Two places worth knowing about, both free.
   lessons. The place to go when you want the derivation rather than the result.
 
 * [**Open Source Radio Telescopes**](http://opensourceradiotelescopes.org){: .btn .btn-wvu-blue}
-  — a collaborative collection of radio telescope designs and methods, aimed
-  deliberately at everyone from middle school upward. Other people's builds, and
+  provides collaborative telescope designs and methods for readers from middle school upward. Other people's builds, and
   somewhere to put yours.
 
 For the signal processing side, the [GNU Radio wiki](https://wiki.gnuradio.org/)

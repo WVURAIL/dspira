@@ -5,18 +5,11 @@ lead: "Everything between the antenna and the laptop: the amplifier, the SDR, an
 meta_description: "Prepare the electronics for a DSPIRA horn telescope. Compare amplifiers and receivers, assemble the LNA, and connect the signal path."
 ---
 
-A horn on a stand is an antenna, not yet a telescope. What makes it one is the
-receiver chain: a **low-noise amplifier** on the probe inside the can, which
-lifts a signal far too faint to digitise up to something an SDR can see, and a
-**software-defined radio** that samples the amplified signal and hands it to a
-computer over USB.
+A horn on a stand is an antenna, not yet a telescope. The receiver chain makes it a telescope. A **low-noise amplifier** on the can's probe boosts the faint signal until an SDR can detect it. A **software-defined radio** samples that signal and sends it to a computer over USB.
 
-The amplifier is the component that decides how good your telescope is, and it
-is the one most worth spending time on. There are three routes to one: build the
-DSPIRA board from parts for around $30, or buy one of two ready-made modules.
+The amplifier largely determines telescope performance. It deserves careful attention. Build the DSPIRA amplifier from parts for around $30. Alternatively, choose one of two ready-made modules.
 
-The SDR matters less. Several will work, but each has its own sample rate and
-gain, and the spectrometer has to be told which one you have. That is what the
+The SDR matters less. Several SDRs work, each with different sample rates and gains. Configure the spectrometer for your device. That is what the
 source-block settings lesson is for.
 
 Read this module alongside

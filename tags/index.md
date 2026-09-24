@@ -12,8 +12,7 @@ they are pitched at: a high school science or engineering class, no prior radio
 astronomy assumed.
 
 That has turned out to be about the right level for two other groups as well.
-Students work through most of them directly, and amateur radio astronomers and
-hobbyists use them to build the same instrument outside a school entirely.
+Students work through most lessons directly. Amateur radio astronomers and hobbyists also use them to build telescopes outside school.
 
 Because nearly every lesson suits all three, filtering by audience does not
 narrow things much. It is usually faster to

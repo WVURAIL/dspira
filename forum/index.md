@@ -3,8 +3,7 @@ layout: page
 title: DSPIRA Forum
 permalink: /forum/
 lead: >-
-  The forum runs on GitHub Discussions, where anyone can read the threads and
-  anyone with a free GitHub account can post.
+  The forum uses GitHub Discussions. Anyone can read the threads, and anyone with a free GitHub account can post.
 meta_description: "DSPIRA Forum: ask questions and share radio astronomy projects on GitHub Discussions. Find the community room and related DSPIRA lessons."
 ---
 {%- comment -%}

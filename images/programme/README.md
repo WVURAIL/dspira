@@ -1,8 +1,6 @@
 # Programme photographs
 
-Photographs of DSPIRA classroom work, migrated from the retired `cra`
-(Classroom Radio Astronomy) repository in 2026 so they stay available for use
-on this site.
+These photographs show DSPIRA classroom work. They moved from the retired `cra` (Classroom Radio Astronomy) repository in 2026 for continued use on this site.
 
 | File | Taken | Pixels | Size |
 |---|---|---|---|
@@ -40,18 +38,11 @@ rather than resampling a `-web` file again.
 | `Students_w_Horn_roof.jpg` (repo root) | Not migrated — see below |
 | `Students_w_Horn_parkinlot.jpg` (repo root) | Not migrated — see below |
 
-The two root-level files are not smaller crops or thumbnails. They are the same
-frames at the identical 5312 × 2988 resolution, re-saved at a lower JPEG quality
-with the EXIF stripped. They hold no pixel, no metadata and no detail that the
-originals here do not, so carrying them would add duplicate bytes and an
-inferior source for anyone generating a new size later. They remain in the
+The two root-level files are not smaller crops or thumbnails. They use the same frames at 5312 × 2988 resolution. They were saved with lower JPEG quality and stripped EXIF metadata. They contain no pixels, metadata, or detail beyond these originals. Keeping them would duplicate content and provide an inferior source for future resizing. They remain in the
 archived `cra` repository if they are ever wanted.
 
 ## Rights
 
-These are photographs of identifiable students. Copyright in the images sits
-with the DSPIRA programme, but copyright is not the only right involved:
-permission from the people depicted is a separate question from the licence on
-this repository, and this file does not record what releases exist. Before
+These are photographs of identifiable students. The DSPIRA program holds image copyright. Permission from depicted individuals is separate from the repository's license. This file does not document available releases. Before
 using either photograph in new outward-facing material, check with the DSPIRA
 programme leads at WVU.

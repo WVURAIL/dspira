@@ -9,7 +9,7 @@ order: 1
 meta_description: "Choose a computer and software for the DSPIRA horn spectrometer. Find setup guidance for laptops, desktop computers, and Raspberry Pi."
 ---
 
-- Installation of any of the following software options will allow the user to run the spectrometer program to operate a horn telescope that is equipped with an LNA, software defined radio (Airspy or equivalent), and the proper cables. See the document [What is Needed to Build a Horn Telescope]({{ site.baseurl }}/BuildingHornTelescope_Overview) and links therein for more details about the telescope system.
+- Each software option below can run the horn telescope's spectrometer program. The telescope needs an LNA, an Airspy or equivalent software defined radio, and appropriate cables. See [What is Needed to Build a Horn Telescope]({{ site.baseurl }}/BuildingHornTelescope_Overview) and its links for system details.
 
 - Different options for operating the horn telescope spectrometer program, *spectrometer_w_cal.grc*, are presented here. The options provided vary depending on the user's computer system and his or her comfort level working with computers.
 
@@ -37,11 +37,11 @@ The options presented below include a brief description of the system requiremen
 
     - This option is for those who are more experienced with computers and feel comfortable installing software on a hard drive.
 
-    - Requires a computer that either already runs on the Ubuntu operating system, or has a hard drive running Windows that can be partitioned.
+    - You need a computer running Ubuntu, or a Windows computer with a drive you can partition.
 
-    - It may require partitioning a hard drive in Windows and installing Ubuntu 20.04 on it, if the system is not already running Ubuntu.
+    - If Ubuntu is not installed, you may need to partition the Windows drive and install Ubuntu 20.04.
 
-    - Once Ubuntu is installed, further installations include installing the free & open-source software *GNU Radio*, and then installing the spectrometer program from Github.
+    - After installing Ubuntu, install the free, open-source *GNU Radio* software. Then install the spectrometer program from GitHub.
 
     - After installation, the computer will be able to run the telescope system directly.
 

@@ -9,20 +9,13 @@ order: 2
 meta_description: "Read about a WVU student project that tested the DSPIRA horn telescope against published measurements to assess its use outside the classroom."
 ---
 
-Victoria Blanton spent the 2021 Summer Undergraduate Research Experience at WVU
-asking a question the curriculum takes on trust: does this telescope actually
-work well enough to hand to somebody outside a classroom?
+Victoria Blanton joined WVU's 2021 Summer Undergraduate Research Experience to test the telescope's suitability outside classrooms.
 
-The approach was to observe with it and check the answers against the
-literature rather than against expectation — measure neutral hydrogen, derive
-column densities, and compare with published values for the same lines of
-sight. Agreement means the instrument is doing its job. Disagreement means
+She compared observations with published measurements. She measured neutral hydrogen, derived column densities, and checked literature values for the same sightlines. Agreement means the instrument is doing its job. Disagreement means
 either the sky is odd or the telescope is, and it is worth knowing which.
 
 [The poster](https://undergraduateresearch.wvu.edu/symposia/summer-2021/-poster-presentations/physical-sciences-poster-presentations-99-117/past-symposia/testing-the-effectiveness-of-the-dspira-radio-telescope-for-public-use){: .btn .btn-wvu-blue}
 [The talk (video)](https://www.youtube.com/watch?v=LJhsqkWALcc){: .btn .btn-wvu-blue}
 [Supplemental materials](https://drive.google.com/drive/folders/19uFeHImNC_nRXGhQv-8Bi2e9AXS4x81f){: .btn .btn-wvu-blue}
 
-If you are working through the
-[Observing]({{ '/categories/observing/' | relative_url }}) module and want to
-know whether your own spectra are any good, this is the comparison to copy.
+Use this comparison to check your spectra while working through the [Observing]({{ '/categories/observing/' | relative_url }}) module.

@@ -33,7 +33,7 @@ meta_description: "Calibrate a horn radio telescope with the DSPIRA spectrometer
 
    5. Switch the display to `Cold Calibration` and the integration to `Short Integration`.
 
-   6. Point the telescope at open sky. Continue to re-direct it until you find a patch of sky that does not show any hydrogen peak near 1420.4 MHz. After doing so, switch to `Long Integration`.
+   6. Point the telescope at open sky. Keep redirecting it until you find sky without a hydrogen peak near 1420.4 MHz. After doing so, switch to `Long Integration`.
 
    7. Wait for the graph to settle to a steady display. Then switch the `Spectrum Display` to `Spectrum with Calibration`.  DO NOT MOVE THE TELESCOPE UNTIL THE SPECTRUM DISPLAYED HAS BEE CHANGED TO `Spectrum with calibration`.
 
@@ -43,11 +43,11 @@ meta_description: "Calibrate a horn radio telescope with the DSPIRA spectrometer
 
    * After completing a calibration, the signal is in units of Kelvin (K). This sounds odd, but it is how radio astronomers quantify radio signals. (For most amateur applications, it is not necessary to get bogged down trying to understand why the units are Kelvin.)
 
-   * After completing a calibration, the baseline signal would theoretically be steady at approximately 10 K, which is the approximate temperature of empty space. However, in reality, the base level after calibration will drift up and down. This is due to several factors, but it is mostly due to the LNA because its temperature will fluctuate some over the span of a viewing session.
+   * After calibration, the baseline would ideally remain steady near 10 K. This approximates the cold sky's temperature. However, in reality, the base level after calibration will drift up and down. Several factors cause this drift. The main contributor is the LNA, whose temperature changes during an observing session.
 
    * The background level can actually go negative! No need to worry. Re-calibrating usually takes care of this and brings the base level back up to approximately 20 K. Also, the `y-min` value can be adjusted to negative values.
  
    * The value of the background level will not affect any peak positions or shapes.
 
-   * Even though the background level might not stay the same, the calibrated spectrum can still be used for quantitative analysis by offsetting the data so that the background level is zero. This is typically what is done when analyzing the area of the peaks.
+   * The calibrated spectrum remains useful for quantitative analysis despite baseline changes. Offset the data to bring the background level to zero. This is typically what is done when analyzing the area of the peaks.
     

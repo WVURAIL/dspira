@@ -24,20 +24,16 @@ order:      11
 ---
 ```
 
-- Make sure you do not have special characters like `:` in your title and/or summary quote any special characters, such as `:` like `title: "my awesome site: an adventure".`
-- Every *post* can have one `tag` or multiple `tags`. It will automatically split a string entry if it contains whitespace. The website software, Jekyll, expects multiple items mapped to the key tags For example, while front matter `tag: classic hollywood` will be processed into a singular entity `"classic hollywood"`, front matter `tags: classic hollywood` will be processed into an array of entries `["classic", "hollywood"]`. 
-- `categories` does **not** work the way `tags` does. A lesson belongs to
-exactly one module, and the name has to match one of the `category:` entries in
-`_data/modules.yml` exactly — *Horn Construction*, *Receiver Electronics*,
-*Software Setup*, *Observing*, *Digital Signal Processing*, *Astronomy* or
-*Community Labs*. A name that matches nothing means the lesson appears in no
+- Quote titles and summaries containing special characters such as `:`. For example: `title: "my awesome site: an adventure".`
+- Every *post* can have one `tag` or multiple `tags`. It will automatically split a string entry if it contains whitespace. Jekyll expects multiple entries under tags. The front matter `tag: classic hollywood` creates one entry, `"classic hollywood"`. By contrast, `tags: classic hollywood` creates the array `["classic", "hollywood"]`. 
+- `categories` does **not** work the way `tags` does. Each lesson belongs to one module. Its name must match a `category:` entry in `_data/modules.yml` exactly. Options include *Horn Construction*, *Receiver Electronics*, and *Software Setup*. Other options are *Observing*, *Digital Signal Processing*, *Astronomy*, and *Community Labs*. A name that matches nothing means the lesson appears in no
 module at all, and the build will say so.
 
 - `order` is where the lesson sits inside its module, counting from 1. Every
 index and the previous/next links sort by it. Take the next free number in the
 module, or renumber the others if your lesson belongs partway through.
 
-- After the front matter make your lesson post formatting it in `markdown` refer to this cheat sheet [https://github.com/WVURAIL/dspira-lessons/wiki/Markdown-Cheatsheet](https://github.com/WVURAIL/dspira-lessons/wiki/Markdown-Cheatsheet)
+- Write your lesson after the front matter using `markdown`. Consult the [Markdown cheat sheet](https://github.com/WVURAIL/dspira-lessons/wiki/Markdown-Cheatsheet)
 
 - Add buttons to link to a pdf of your document using this syntax
 
@@ -59,7 +55,8 @@ EXAMPLE:
 ```
 
 - Add YouTube link:
-Add an embedded window of the youtube video to the page by simply pasting the YouTube link on the markdown page on its own. Please add a couple of lines describing the contents of the video at minimum. 
+
+Paste a YouTube link on its own line in the Markdown page. This creates an embedded video window. Please add a couple of lines describing the contents of the video at minimum. 
 
 ```
 https://www.youtube.com/watch?v=jS5fTzMP_mg
@@ -68,7 +65,7 @@ The above video is a video of Kermit the frog singing the Rainbow Connection
 ```
 ### Adding images to the posts
 
-To add images to your post first upload your image to github by going to the link below  upload and commit an image to the images directory: 
+To add an image, upload it to GitHub's images directory using the link below. Commit the uploaded file: 
 
 [Upload image](https://github.com/WVURAIL/dspira-lessons/upload/master/images){: .btn .btn-wvu-blue}
 

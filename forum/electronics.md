@@ -13,11 +13,7 @@ see forum/index.md for why.
 {%- assign room = site.data.forum.rooms[page.room] %}
 {%- assign url = "https://github.com/" | append: site.data.forum.repo | append: "/discussions/categories/" | append: room.slug %}
 
-This room is for the electronics between the horn and the computer: low-noise
-amplifiers, filters, the software-defined radio, cables, connectors and power,
-and the noise and gain questions that come with them. It is the Electronics
-category of the DSPIRA discussions on GitHub, open for anyone to read and for
-anyone with a free GitHub account to post in.
+Discuss amplifiers, filters, SDRs, cables, connectors, and power here. This room covers receiver electronics and their noise and gain requirements. This links to the Electronics category in DSPIRA's GitHub discussions. Anyone can read it. Posting requires a free GitHub account.
 
 <p>
    <a class="btn btn-wvu-blue" href="{{ url }}">Open the {{ room.category }} discussions on GitHub</a>

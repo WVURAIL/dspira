@@ -7,18 +7,10 @@ lead: The two parts that are hardest to source, sent to educators who ask.
 meta_description: "Find DSPIRA horn telescope kit information and parts resources. Plan the antenna, receiver electronics, and software for your classroom."
 ---
 
-Most of a horn telescope comes from a hardware store. Two pieces do not: a
-software-defined radio dongle, and a low-noise amplifier tuned for the 21&nbsp;cm
-hydrogen line.
+Most of a horn telescope comes from a hardware store. Two pieces are harder to source: an SDR dongle and a low-noise amplifier for the 21 cm hydrogen line.
 
-If you are an educator or a community organizer who is held up by access to that
-equipment, you can ask for a starter kit. Fill in the form with your shipping
-details and a short note on what you plan to do — or have already done — with your
-students or your group.
+Educators and community organizers can request a starter kit if equipment access is holding them back. Provide your shipping details in the form. Briefly describe your plans or previous work with students or community groups.
 
 [Request a starter kit](https://forms.gle/qLDGCD8CXNvGo9hS6){: .btn .btn-wvu-gold}
 
-Kits are sent while supplies last. If they have run out, everything in the
-lessons still works with parts bought directly; the
-[Receiver Electronics]({{ '/categories/receiver-electronics/' | relative_url }})
-module lists what to get and where.
+Kits are sent while supplies last. If kits are unavailable, you can buy the parts directly. The [Receiver Electronics]({{ '/categories/receiver-electronics/' | relative_url }}) module lists parts and suppliers.

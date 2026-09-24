@@ -20,7 +20,7 @@ The feedthrough antenna is made up of two parts:
   - a 5.25 cm length of 4 gauge copper wire
   - a panel mount 4 hole male SMA connector
 
-The two parts are soldered together. The simplest way of doing this is by placing each part horizontally in the clips of the helping hands of your soldering stand. A small drop of solder is melted onto the tip of the SMA connector and onto the tip of copper wire. The two soldered ends are brought together and then soldered together. Make sure that the SMA connector and the copper wire are aligned horizontally before soldering. **Remember that the parts will be hot\!** Do not handle the parts too quickly after applying the solder to the tip of the SMA connector and the copper wire. Use tweezers or needle nose pliers to handle the hot parts. You can also let the parts cool before handling. Click on the video link to watch a demonstration of soldering the SMA connector to the copper wire.
+The two parts are soldered together. Place each part horizontally in the helping-hand clips on your soldering stand. Melt a small solder drop onto the SMA connector's tip and the copper wire's tip. The two soldered ends are brought together and then soldered together. Make sure that the SMA connector and the copper wire are aligned horizontally before soldering. **Remember that the parts will be hot\!** Let the SMA connector and copper wire cool after soldering before handling them. Use tweezers or needle nose pliers to handle the hot parts. You can also let the parts cool before handling. Click on the video link to watch a demonstration of soldering the SMA connector to the copper wire.
 
 https://youtu.be/lt63VYeqB38
 
@@ -34,13 +34,13 @@ Making the paint thinner can into the back end of the radio telescope requires f
 
 ### Removing the Bottom of the Paint Thinner Can
 
-Removing the bottom of the paint thinner can is best done with a smooth edge can opener. The OXO Smooth Edge Can Opener model number 2128100 works the best. This can opener cuts on the outside of the can instead of the inside and leaves a very smooth edge. This can opener also has a top turning knob. Do not get a side turning knob can opener. The side turning knob hits the side of the paint thinner can. A regular can opener will also not engage far enough down the inside edge of the paint thinner can to cut properly or at all. The rounded corners of a paint thinner can are also impossible for a regular can opener to navigate. Click on the video link to watch a demonstration of cutting the bottom off the paint thinner can.
+Removing the bottom of the paint thinner can is best done with a smooth edge can opener. The OXO Smooth Edge Can Opener model number 2128100 works the best. This can opener cuts on the outside of the can instead of the inside and leaves a very smooth edge. This can opener also has a top turning knob. Do not get a side turning knob can opener. The side turning knob hits the side of the paint thinner can. A regular can opener cannot reach far enough down the paint thinner can's inner edge to cut it properly. The rounded corners of a paint thinner can are also impossible for a regular can opener to navigate. Click on the video link to watch a demonstration of cutting the bottom off the paint thinner can.
 
 https://youtu.be/IFm9_-f6lvQ
 
 ### Drilling the Feedthrough Hole
 
-A hole needs to be drilled in the paint thinner can for the feedthrough antenna. The hole is 1/4 of an inch in diameter and is located 5.25cm from the edge of the top of the paint thinner can \(the uncut side\) and 3.25 inches from the side \(the centerline of the can\). You should also place a snuggly fitting wooden support block in the can under the spot where the hole is to be drilled. This will insure a clean, smooth, and circular hole. Click on the video link to watch a demonstration of drilling the feedthrough hole.
+A hole needs to be drilled in the paint thinner can for the feedthrough antenna. Drill a hole 1/4 inch in diameter. Locate it 5.25 cm from the can's uncut top edge. Position it 3.25 inches from the side \(the can's centerline\). Place a snug wooden support block inside the can beneath the drilling location. This will insure a clean, smooth, and circular hole. Click on the video link to watch a demonstration of drilling the feedthrough hole.
 
 https://youtu.be/nOl8OJEHZHQ
 
@@ -52,6 +52,6 @@ https://youtu.be/t-MNZw7UhMI
 
 ### Attaching the Feedthrough Antenna
 
-The feedthrough antenna is soldered onto the paint thinner can. First use the soldering iron or hot air gun to melt enough solder to surround the 1/4 inch hole and also be a pool of solder the size of the base of the SMA connector. Let the solder cool. Drop the feedthrough antenna into the hole  copper wire side down. Look into the paint thinner can and center the feedthrough antenna in the 1/4 inch hole. You do not want the copper wire or solder touching the metal can. Use the hot air gun to heat up the SMA connector, ring of solder, and metal can. When all three pieces are at the correct temperature, the solder will liquify and pull the SMA connector down level with the metal can. This should be  a solid connection between the metal can and the SMA connector. Click on the video link to watch a demonstration of attaching the feedthrough antenna.
+The feedthrough antenna is soldered onto the paint thinner can. Use the soldering iron or hot air gun to melt solder around the 1/4-inch hole. Make a solder pool as wide as the SMA connector's base. Let the solder cool. Drop the feedthrough antenna into the hole  copper wire side down. Look into the paint thinner can and center the feedthrough antenna in the 1/4 inch hole. You do not want the copper wire or solder touching the metal can. Use the hot air gun to heat up the SMA connector, ring of solder, and metal can. When all three pieces reach the correct temperature, the solder liquefies. It pulls the SMA connector level with the can. This should be  a solid connection between the metal can and the SMA connector. Click on the video link to watch a demonstration of attaching the feedthrough antenna.
 
 https://youtu.be/dH5D2EP3ODM

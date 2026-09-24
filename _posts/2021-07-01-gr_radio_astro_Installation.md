@@ -9,7 +9,7 @@ order: 7
 meta_description: "Install the DSPIRA gr-radio_astro blocks for GNU Radio. Follow the repository setup and update steps to prepare your telescope software."
 ---
 
-This will install the spectrometer program *spectrometer_w_cal.grc* as well as other useful radio astronomy GNU Radio programs from the *gr_radio_astro* repository in GitHub.
+This installs *spectrometer_w_cal.grc* and other useful GNU Radio astronomy programs from GitHub's *gr_radio_astro* repository.
 
 **NOTE:** The instructions on this page will install files for Ubuntu 22.04. If you are using Ubuntu 20.04 LTS, click [here]({{ site.baseurl }}/gr_radio_astro_Installation_Ubuntu20) for the installation.
 
@@ -19,7 +19,7 @@ Complete the following steps:
 
       **NOTE:** Most of the commands we use are entered in a *Terminal* window. We recommend adding the *Terminal* to your Favorites to be accessed easily.
 
-   2. If you have not already done so during the GNU Radio installation, install the GNU Radio external python dependencies and SDR drivers by typing the following and hit enter:
+   2. Install GNU Radio's external Python dependencies and SDR drivers if you have not already done so. Enter the commands below:
    
       `sudo apt install gnuradio gr-osmosdr airspy python3-h5py python3-ephem git cmake liborc-0.4-dev -y`
    
@@ -89,6 +89,6 @@ Occasionally the files in gr_radio_astro may change. Complete the following to u
       - Navigate to the` gr-radio_astro` folder.
       - Under `examples` open `DSPIRA`; then select `spectrometer_w_cal.grc`.
 
-   4. Connect an Airspy SDR to a USB port, and start the program running (Hit the black triangle at the top middle ribbon bar.)
+   4. Connect an Airspy SDR to USB. Start the program (click the black triangle at the top center of the ribbon bar.)
          
    
