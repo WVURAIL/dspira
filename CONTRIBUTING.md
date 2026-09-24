@@ -20,6 +20,6 @@ request; the walkthrough with screenshots is at
 6. Open the pull request. The build check has to pass before it can merge; if it
    goes red, the log says which page broke.
 
-Questions: <wvurail@gmail.com>, or a thread in
+Questions: <rail@wvu.edu>, or a thread in
 [GitHub Discussions](https://github.com/WVURAIL/dspira-lessons/discussions),
 which is where the site's forum pages point.
