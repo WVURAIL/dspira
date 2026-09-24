@@ -77,7 +77,8 @@ is parsed. Only pages with an above-the-fold background photo preload it.
 {%- if page.preload_image %}
 <link rel="preload" as="image" href="{{ page.preload_image | relative_url }}" fetchpriority="high">
 {%- endif %}
-   <link rel="stylesheet" href="https://use.typekit.net/yys7vri.css" />
+   <link rel="stylesheet" href="https://use.typekit.net/yys7vri.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://use.typekit.net/yys7vri.css"></noscript>
    <link rel="stylesheet" href="{{ '/assets/wvu-design-system/site.min.css' | relative_url }}" />
    {%- comment %}
    What little the Design System does not cover — compiled by Jekyll from
