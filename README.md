@@ -4,7 +4,7 @@ The lesson site for **Digital Signal Processing in Radio Astronomy** — free
 material on building and using a horn radio telescope, written by the high
 school teachers who did it.
 
-Live at <https://wvurail.org/dspira-lessons/>. Built by GitHub Pages from the
+Live at <https://wvurail.org/dspira/>. Built by GitHub Pages from the
 `master` branch.
 
 ## How it is put together
@@ -48,7 +48,7 @@ The build checks both, so a mistake here fails the pull request rather than
 quietly reordering the curriculum.
 
 The full walkthrough, with images and video, is at
-[`/newpost/`](https://wvurail.org/dspira-lessons/newpost/).
+[`/newpost/`](https://wvurail.org/dspira/newpost/).
 
 ## Things worth knowing before you edit
 

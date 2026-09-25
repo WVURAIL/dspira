@@ -7,7 +7,7 @@ rotation curve, or a plot of power against time. They came from the older
 They read the HDF5 files written by the `hdf5_sink` block in
 [gr-radio_astro](https://github.com/WVURAIL/gr-radio_astro). If you saved with a
 plain file sink instead, the reshaping recipe in the
-[Observations lesson](https://wvurail.org/dspira-lessons/Observations/) covers
+[Observations lesson](https://wvurail.org/dspira/Observations/) covers
 that case.
 
 ## What you need
@@ -86,7 +86,7 @@ how many samples landed in each pixel.
 > Either edit `SDR = "airspy"` near the top of `map_h1_hdf5_drift.py`, or pass
 > `--sdr airspy` / `airspy-mini` / `lime` / `pluto` / `rtlsdr` on the command
 > line. Each preset matches the setup on the [source block settings
-> page](https://wvurail.org/dspira-lessons/Spectrometer_sourceblock_settings),
+> page](https://wvurail.org/dspira/Spectrometer_sourceblock_settings),
 > not the old per-radio flowgraphs in the archived `dspira` repository — those
 > are GNU Radio 3.7 files that 3.8 and later will not open, and three of them
 > used different tunings. If the windows don't match the file, the script says

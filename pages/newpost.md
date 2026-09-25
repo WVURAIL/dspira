@@ -36,7 +36,7 @@ module at all, and the build will say so.
 index and the previous/next links sort by it. Take the next free number in the
 module, or renumber the others if your lesson belongs partway through.
 
-- After the front matter make your lesson post formatting it in `markdown` refer to this cheat sheet [https://github.com/WVURAIL/dspira-lessons/wiki/Markdown-Cheatsheet](https://github.com/WVURAIL/dspira-lessons/wiki/Markdown-Cheatsheet)
+- After the front matter make your lesson post formatting it in `markdown` refer to this cheat sheet [https://github.com/WVURAIL/dspira/wiki/Markdown-Cheatsheet](https://github.com/WVURAIL/dspira/wiki/Markdown-Cheatsheet)
 
 - Add buttons to link to a pdf of your document using this syntax
 
@@ -69,7 +69,7 @@ The above video is a video of Kermit the frog singing the Rainbow Connection
 
 To add images to your post first upload your image to github by going to the link below  upload and commit an image to the images directory: 
 
-[Upload image](https://github.com/WVURAIL/dspira-lessons/upload/master/images){: .button}
+[Upload image](https://github.com/WVURAIL/dspira/upload/master/images){: .button}
 
 Then add the following to the post you are editing
 ```
@@ -102,7 +102,7 @@ Enter the Lesson posts here
 </div>
 
 <div> Upload your saved file to the website by uploading and committing on github.com: &nbsp;
- <a href="https://github.com/WVURAIL/dspira-lessons/upload/master/_posts" class = "button">Upload to Website</a>
+ <a href="https://github.com/WVURAIL/dspira/upload/master/_posts" class = "button">Upload to Website</a>
 </div>
 
 <script type="text/javascript">

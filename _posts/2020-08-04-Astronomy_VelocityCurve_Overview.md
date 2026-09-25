@@ -85,20 +85,20 @@ OBJECTIVE: These activities allow this *Velocity Curve of the MWG* module be abl
 
 *Teacher Notes*  Since there is an activity with "discovering" what the horn telescope can do, it is suggested to assign all 4 activities so that students can be busy while other small groups are working with the scope(s) your have set up. (Most teachers very likely with have only one telescope.)
 
-* [Introduction to Horn Telescope](https://WVURAIL.org/dspira-lessons/FilesUploaded/VelocityCurve_HornIntro.pdf){: .button}
+* [Introduction to Horn Telescope](https://WVURAIL.org/dspira/FilesUploaded/VelocityCurve_HornIntro.pdf){: .button}
    
-* [Introduction to Horn Telescope Follow-up](https://WVURAIL.org/dspira-lessons/FilesUploaded/VelocityCurve_HornIntro_Followup.pdf)
+* [Introduction to Horn Telescope Follow-up](https://WVURAIL.org/dspira/FilesUploaded/VelocityCurve_HornIntro_Followup.pdf)
    
-* [The Electromagnetic Spectrum](https://WVURAIL.org/dspira-lessons/FilesUploaded/VelocityCurve_E%26MSpectrum.pdf){: .button}
+* [The Electromagnetic Spectrum](https://WVURAIL.org/dspira/FilesUploaded/VelocityCurve_E%26MSpectrum.pdf){: .button}
 
    Further reading for this activity:
    [introduction to wavelengths and radiation]({{ site.baseurl }}/FilesUploaded/EMSpectrum_Introduction.pdf).
    
-* [The 21 cm Wavelength of Neutral Hydrogen](https://WVURAIL.org/dspira-lessons/FilesUploaded/VelocityCurve_21cmHI.pdf){: .button}
+* [The 21 cm Wavelength of Neutral Hydrogen](https://WVURAIL.org/dspira/FilesUploaded/VelocityCurve_21cmHI.pdf){: .button}
    
-* [Celestial Coordinate Systems](https://WVURAIL.org/dspira-lessons/FilesUploaded/VelocityCurve_CoordinateSystems.pdf){: .button}
+* [Celestial Coordinate Systems](https://WVURAIL.org/dspira/FilesUploaded/VelocityCurve_CoordinateSystems.pdf){: .button}
    
-* [Using Stellarium](https://WVURAIL.org/dspira-lessons/FilesUploaded/VelocityCurve_Stellarium.pdf){: .button}
+* [Using Stellarium](https://WVURAIL.org/dspira/FilesUploaded/VelocityCurve_Stellarium.pdf){: .button}
 
 
 ### Part 1: Galactic Quadrants II & III Observation
@@ -118,7 +118,7 @@ OBJECTIVE: In this activity, the students collect spectra of the MWG along the g
 For classes that want to fit the data numerically rather than by eye, a Jupyter
 notebook is provided that performs the sine fit and plots the result:
 
-* [Galactic Plane Sine Fit notebook](https://github.com/WVURAIL/dspira-lessons/tree/master/code/velocity_curve){: .button}
+* [Galactic Plane Sine Fit notebook](https://github.com/WVURAIL/dspira/tree/master/code/velocity_curve){: .button}
 
 Students replace the sample data in `quadII_III_velocity_vs_longitude.csv` with
 their own measurements and re-run. The fitted amplitude and phase give a

@@ -1,10 +1,10 @@
 cff-version: 1.2.0
 message: "If you use DSPIRA lesson materials or curricula in your teaching or research, please cite it as below."
-title: "dspira-lessons: Digital Signal Processing in Radio Astronomy Curriculum"
+title: "dspira: Digital Signal Processing in Radio Astronomy Curriculum"
 authors:
   - name: "WVU Radio Astronomy Instrumentation Lab (WVURAIL)"
     website: "https://github.com/WVURAIL"
-repository-code: "https://github.com/WVURAIL/dspira-lessons"
+repository-code: "https://github.com/WVURAIL/dspira"
 url: "https://wvurail.github.io"
 license: "CC-BY-4.0"
 keywords:

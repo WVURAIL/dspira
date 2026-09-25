@@ -2,7 +2,7 @@
 
 Lessons are Markdown files in `_posts/`. The quickest route is to open a pull
 request; the walkthrough with screenshots is at
-<https://wvurail.org/dspira-lessons/newpost/>.
+<https://wvurail.org/dspira/newpost/>.
 
 1. Name the file `YYYY-MM-DD-Short-Name.md`.
 2. Give it front matter — `title`, `summary`, `categories`, `order`, `tags`.

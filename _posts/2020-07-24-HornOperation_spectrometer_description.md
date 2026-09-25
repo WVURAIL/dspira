@@ -17,7 +17,7 @@ You can also watch [this video](https://youtu.be/50B2Uv-SoDY), which describes t
 
 ### **1.	Features of the *Spectrum* Tab**
 
-![spectrometer screen](/dspira-lessons/images/filtered_nocal.png)
+![spectrometer screen](/dspira/images/filtered_nocal.png)
 
    * **Graphical Display** Boxes:
 
@@ -77,7 +77,7 @@ You can also watch [this video](https://youtu.be/50B2Uv-SoDY), which describes t
 
 ### **2.	Features of the *System Temp/Gain* Tab**
 
-   ![System Temp/Gain screen](/dspira-lessons/images/sys_T&G.png)
+   ![System Temp/Gain screen](/dspira/images/sys_T&G.png)
 
    * These graphs are not needed during most telescope runs. They are mainly for those who are interested in the quantitative performance of the telescope.
 

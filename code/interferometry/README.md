@@ -1,7 +1,7 @@
 # Correlation and the two-element interferometer
 
 The notebook behind
-[wvurail.org/dspira-lessons/correlation-and-interferometry](https://wvurail.org/dspira-lessons/correlation-and-interferometry/).
+[wvurail.org/dspira/correlation-and-interferometry](https://wvurail.org/dspira/correlation-and-interferometry/).
 
 Convolution, autocorrelation and cross-correlation, worked through with
 figures, and then applied to what a two-element interferometer measures.

@@ -20,7 +20,7 @@ order: 2
 3. Get a spool of solder. Most solders are a mixture of tin and lead. There are also solders made up of tin and silver, but they melt at a higher temperature and are much harder to use. Solder also comes in different thicknesses or diameters. A thickness of 0.025 inches is a good size for the soldering you'll be doing.  
 4. The following is a picture of a typical soldering station. It is also called a rework station. The setup shown was purchased from Amazon for about $100. You can also go online and search for soldering irons, hot air guns, rework stations, and soldering stations.   
      
-![A Typical Soldering Station](/dspira-lessons/images/SolderingStation.JPG)
+![A Typical Soldering Station](/dspira/images/SolderingStation.JPG)
 
 ### Third: Solder the Components onto the Circuit Board  
 
@@ -28,7 +28,7 @@ order: 2
 2. If you have some soldering experience, I would suggest soldering the hardest components first: transistors, ICs, inductors, resistors, capacitors, SMA connectors, and the cover.  
 3. The following is an easy to read diagram of the circuit board. Each type of component is color coded and labelled. The orientation of each component is also indicated (vertical or horizontal).
 
-![Image of the Component Locations on the Circuit Board](/dspira-lessons/FilesUploaded/circuit%20board%20componet%20locations%20Final1.jpg)
+![Image of the Component Locations on the Circuit Board](/dspira/FilesUploaded/circuit%20board%20componet%20locations%20Final1.jpg)
 
 ## Detailed Soldering Instructions for Each Component
 

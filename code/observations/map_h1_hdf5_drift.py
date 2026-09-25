@@ -33,7 +33,7 @@ SDR = "airspy"      # run with --help to see the full list
 #              in the band.
 #
 # Each entry matches the setup the lessons tell you to build, on
-#   wvurail.org/dspira-lessons/Spectrometer_sourceblock_settings
+#   wvurail.org/dspira/Spectrometer_sourceblock_settings
 # and NOT the old per-radio flowgraphs in the archived dspira repository.
 # Those are GNU Radio 3.7 files that 3.8 and later cannot open, and they used
 # different tunings from the documented procedure. If you have changed freq or
@@ -312,7 +312,7 @@ if __name__ == '__main__':
                 print("  other side of it. Nothing useful can be mapped from "
                       "it.")
                 print("  Check freq and samp_rate in the flowgraph against")
-                print("  wvurail.org/dspira-lessons/Spectrometer_sourceblock_settings")
+                print("  wvurail.org/dspira/Spectrometer_sourceblock_settings")
                 print("  - an RTL-SDR needs BOTH samp_rate 2.4e6 and freq "
                       "1420.5e6. Set only")
                 print("  the sample rate and you get exactly this band.")

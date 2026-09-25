@@ -19,7 +19,7 @@ Because we are primarily interested in signals that are coming from astronomical
 
 The graph below shows a typical spectrum of radio waves from neutral hydrogen detected using the DSPIRA spectrometer program with a horn.
 
-![sample spectrum](/dspira-lessons/images/Sample_spectrum.png)
+![sample spectrum](/dspira/images/Sample_spectrum.png)
 
 This graph displays the amplitude of radio wave signals collected as the spectrometer scans across frequencies ranging from 1414 MHz to 1424 MHz. The neutral hydrogen signal appears at approximately 1420.4 MHz.
 
@@ -29,7 +29,7 @@ So what are the features appearing in this graph?
 
 As mentioned above, part of the signal displayed in the graph is from sources that are not from the galaxy. This can be from noise sources in the local environment as well as signals from the horn detector system itself. The part of the signal that comes from the horn system itself, which includes the electronics and data signal processing, is highlighted in red in the graph below, which is typical for the Airspy software defined radio device used with the DSPIRA telescope.
 
-![spectrum background](/dspira-lessons/images/Sample_spectrum_Fig2.png)
+![spectrum background](/dspira/images/Sample_spectrum_Fig2.png)
 
 If the telescope is pointed in many different directions, such as different parts of the sky, at the ground, at a building or a tree, the viewer will notice that the characteristic feature highlighted in the spectrum above does not change in shape. For stronger signals, the height of the graph will increase, but this general background shape is always there. This is a result of the data signal processing electronics of the telescope system.
 
@@ -41,6 +41,6 @@ The *spectrometer_w_cal.grc* spectrometer program is designed with the capabilit
 
 For spectral line viewing, the peak that we are interested in is the small peak that may appear at a frequency of approximately 1420.4 MHz. This is the peak identified in the spectrum below.
 
-![spectrum HI peak](/dspira-lessons/images/HornIntro_Fig3.png)
+![spectrum HI peak](/dspira/images/HornIntro_Fig3.png)
 
 This 1420.4 MHz signal is from radio waves detected from neutral hydrogen atoms in our galaxy. These radio waves are emitted from these hydrogen atoms as a result of a transition that takes place with the electrons in the atoms. The signal emitted from each atom is extremely weak. Fortunately there is a very large amount of neutral hydrogen in our galaxy; so we are able to detect this hydrogen with our radio telescope here on earth. We cannot see these hydrogen atoms directly with the naked eye. This is where the horn radio telescope becomes useful!

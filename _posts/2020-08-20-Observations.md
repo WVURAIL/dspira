@@ -23,9 +23,9 @@ summer workshop, and it is the command-line route through the data.
 > if you are teaching this to a class; read this one if you want the pipeline.
 
 The scripts referred to throughout live in
-[`code/observations/`](https://github.com/WVURAIL/dspira-lessons/tree/master/code/observations)
+[`code/observations/`](https://github.com/WVURAIL/dspira/tree/master/code/observations)
 in this repository, together with a
-[README](https://github.com/WVURAIL/dspira-lessons/blob/master/code/observations/README.md)
+[README](https://github.com/WVURAIL/dspira/blob/master/code/observations/README.md)
 covering what to install and what each one writes out.
 
 ---
@@ -273,7 +273,7 @@ The 2017 DSPIRA cohort ran the spectrometer they had just built against the
 **Green Bank Telescope** and took a 24-hour drift scan with it. That notebook is
 here, with the calibration worked through:
 
-* [GBT drift scan notebook](https://github.com/WVURAIL/dspira-lessons/tree/master/code/gbt_drift){: .button}
+* [GBT drift scan notebook](https://github.com/WVURAIL/dspira/tree/master/code/gbt_drift){: .button}
 
 The data file is not included — it lives on Green Bank's systems — and the
 notebook is tuned to that one observation: it undoes the GBT's

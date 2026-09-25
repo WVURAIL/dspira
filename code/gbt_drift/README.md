@@ -9,7 +9,7 @@ It is worth reading even if you never run it. The calibration section explains
 how the GBT's noise diode — a source of known temperature switched on and off
 through the observation — turns arbitrary units into kelvin. That is the same
 idea as the hot/cold load calibration in
-[the Observations lesson](https://wvurail.org/dspira-lessons/Observations/), done
+[the Observations lesson](https://wvurail.org/dspira/Observations/), done
 by an instrument that can do it continuously.
 
 The observation ran from 2017-08-01 09:25:56 to the following morning, and the

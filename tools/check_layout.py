@@ -3,7 +3,7 @@
 Does any page scroll sideways?
 
     python3 tools/check_layout.py                 # against _site
-    python3 tools/check_layout.py --site _site --baseurl /dspira-lessons
+    python3 tools/check_layout.py --site _site --baseurl /dspira
     python3 tools/check_layout.py --fine          # sweep every width, slower
 
 Needs playwright:  pip install playwright && playwright install chromium
