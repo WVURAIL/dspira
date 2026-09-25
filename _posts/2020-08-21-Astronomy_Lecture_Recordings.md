@@ -85,3 +85,8 @@ Two places worth knowing about, both free.
 
 For the signal processing side, the [GNU Radio wiki](https://wiki.gnuradio.org/)
 is the reference, with tutorials from beginner to advanced.
+
+## Additional institute slides
+
+Download the [2018 astronomy PowerPoint decks]({{ '/teaching-resources/#astronomy-slides' | relative_url }}).
+The teaching resources page also includes observation figures and a preparation checklist.

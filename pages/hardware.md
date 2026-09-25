@@ -37,3 +37,13 @@ Keep older revisions available for people maintaining existing telescopes.
 Classroom instructions belong in the [DSPIRA lesson repository](https://github.com/WVURAIL/dspira).
 Telescope applications are available through the [software guide]({{ '/software/' | relative_url }}).
 The [repository map]({{ '/repository-map/' | relative_url }}) lists current names and older addresses.
+
+## Amplifier design notes
+
+These institute documents describe early design and assembly choices. Match each document to your board revision.
+
+- [Amplifier assembly notes (PDF)](https://raw.githubusercontent.com/WVURAIL/dspira-hardware/main/docs/institute/lna-assembly.pdf)
+- [June 2018 assembly guide (PDF)](https://raw.githubusercontent.com/WVURAIL/dspira-hardware/main/docs/institute/lna-assembly-2018-06-22.pdf)
+- [2017 amplifier design and measurements (PDF)](https://raw.githubusercontent.com/WVURAIL/dspira-hardware/main/docs/institute/lna-design-memo-2017.pdf)
+
+Use the current construction lesson for classroom assembly. Earlier bias settings, component choices, and prices may differ.
