@@ -26,8 +26,9 @@ The public map is generated from `_data/repository_links.json` and available at
 - GitHub redirects os_radio_astro_hw to dspira-hardware. Do not reuse the old name.
 - Individual GitHub file moves have no redirect. The map includes replacement
   flowgraph URLs and immutable original commit links.
-- dspira-lessons serves compatibility redirects and download assets for the site.
-- gr-dspira, gr-transient, cra, and dspira-archive remain historical records.
+- wvurail.github.io serves the old dspira-lessons, dspira-archive, cra, and gr-transient website paths.
+- The retired repositories contain forwarding notices. Their recovery packages live in a DSPIRA release.
+- See ARCHIVE_RETIREMENT.md for restoration, hosting ownership, and deletion limits.
 - Original commit messages, tags, citations, binary documents, and frozen research
   instructions retain historical names. Their continued presence is intentional.
 - Ubuntu 20.04 instructions use the preserved gr38 release line. They do not refer

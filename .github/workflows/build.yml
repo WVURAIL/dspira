@@ -44,7 +44,9 @@ jobs:
           BUNDLE_GEMFILE: ${{ github.workspace }}/Gemfile.ci
 
       - name: Test migration compatibility
-        run: python3 tools/test_publish_pages.py
+        run: |
+          python3 tools/test_publish_pages.py
+          python3 tools/test_retired_sites.py
 
       - name: Build
         run: bundle exec jekyll build --trace

@@ -1,0 +1,125 @@
+{
+  "date": "2026-09-25",
+  "repositories": [
+    {
+      "repository": "WVURAIL/dspira-archive",
+      "commit": "a1835060b2dca0c077e00714c922436da8245124",
+      "default_branch": "main",
+      "files": 189,
+      "source_bytes": 222551758,
+      "refs": 25,
+      "lfs_objects": 35,
+      "wiki": true,
+      "exported": {
+        "issues": 21,
+        "pulls": 21,
+        "issue-comments": 0,
+        "review-comments": 0,
+        "commit-comments": 0,
+        "milestones": 0,
+        "labels": 7,
+        "forks": 8
+      },
+      "restoration_verified": true,
+      "package": "dspira-archive-preserved.zip",
+      "sha256": "6ac182908a312a2d180081e2f5a6cbc82ffa5da452eab736d2e3559f43daca90",
+      "bytes": 582695161
+    },
+    {
+      "repository": "WVURAIL/cra",
+      "commit": "9e60fa3f05d0e428f4fcee9b62756954bb936b5e",
+      "default_branch": "main",
+      "files": 39,
+      "source_bytes": 25065928,
+      "refs": 1,
+      "lfs_objects": 0,
+      "wiki": false,
+      "exported": {
+        "issues": 0,
+        "pulls": 0,
+        "issue-comments": 0,
+        "review-comments": 0,
+        "commit-comments": 0,
+        "milestones": 0,
+        "labels": 8,
+        "forks": 3
+      },
+      "restoration_verified": true,
+      "package": "cra-preserved.zip",
+      "sha256": "a36435e5b52d4dfbbdf02f3ff25b4e1a73de2353ffee00c6e0e470c06e83b2d4",
+      "bytes": 44218925
+    },
+    {
+      "repository": "WVURAIL/gr-dspira",
+      "commit": "13a2f311143247019be691bd7bef21352389237f",
+      "default_branch": "main",
+      "files": 154,
+      "source_bytes": 2254304,
+      "refs": 2,
+      "lfs_objects": 0,
+      "wiki": false,
+      "exported": {
+        "issues": 0,
+        "pulls": 0,
+        "issue-comments": 0,
+        "review-comments": 0,
+        "commit-comments": 0,
+        "milestones": 0,
+        "labels": 8,
+        "forks": 1
+      },
+      "restoration_verified": true,
+      "package": "gr-dspira-preserved.zip",
+      "sha256": "9a53054ae39753cb7305b893ab2bdec2ca0b23ea59079e84426a8817a203cf04",
+      "bytes": 814005
+    },
+    {
+      "repository": "WVURAIL/gr-transient",
+      "commit": "7505f42afb22db82f025ee1e56d0b82e6f024a84",
+      "default_branch": "main",
+      "files": 189,
+      "source_bytes": 34961227,
+      "refs": 2,
+      "lfs_objects": 0,
+      "wiki": false,
+      "exported": {
+        "issues": 0,
+        "pulls": 0,
+        "issue-comments": 0,
+        "review-comments": 0,
+        "commit-comments": 0,
+        "milestones": 0,
+        "labels": 9,
+        "forks": 0
+      },
+      "restoration_verified": true,
+      "package": "gr-transient-preserved.zip",
+      "sha256": "bff9120acb2806d89d0f0a0acdb06e0076946ff85e1b5b5a88d3612307a332bd",
+      "bytes": 109699811
+    },
+    {
+      "repository": "WVURAIL/dspira-lessons",
+      "commit": "49105d856bccc4a83065fa30092e707d69f4518a",
+      "default_branch": "main",
+      "files": 2,
+      "source_bytes": 1992,
+      "refs": 1,
+      "lfs_objects": 0,
+      "wiki": false,
+      "exported": {
+        "issues": 0,
+        "pulls": 0,
+        "issue-comments": 0,
+        "review-comments": 0,
+        "commit-comments": 0,
+        "milestones": 0,
+        "labels": 9,
+        "forks": 0
+      },
+      "restoration_verified": true,
+      "package": "dspira-lessons-preserved.zip",
+      "sha256": "422f141b311c94d9807b9bf6757d5d9a9acde78fe8287c9492110e24060c7c37",
+      "bytes": 8670
+    }
+  ]
+}

@@ -19,12 +19,6 @@ jobs:
         with:
           path: site
           lfs: true
-      - uses: actions/checkout@v5
-        with:
-          repository: WVURAIL/dspira-archive
-          ref: main
-          path: archive
-          lfs: true
 
       - name: Install the GitHub Pages gems
         run: |
@@ -57,16 +51,15 @@ jobs:
         run: |
           npm ci --prefix checks
           node checks/scripts/trim_styles.mjs _site assets/wvu-design-system/site.min.css
-      - name: Build historical material
-        working-directory: archive
-        run: bundle exec jekyll build --trace -d ../_archive
-        env:
-          BUNDLE_GEMFILE: ${{ github.workspace }}/Gemfile.ci
-          JEKYLL_ENV: production
+      - name: Load verified historical material
+        run: |
+          python3 site/tools/test_retired_sites.py
+          python3 site/tools/retired_sites.py fetch --destination _retired
+          python3 site/tools/retired_sites.py history --source _retired --site _site
       - name: Preserve old institute addresses
         run: |
           python3 site/tools/test_publish_pages.py
-          python3 site/tools/publish_pages.py --site _site --archive _archive
+          python3 site/tools/publish_pages.py --site _site --archive _retired/dspira-archive --archive-url https://wvurail.org/dspira/history/sites/dspira-archive/
           test -s _site/index.html
           test -s _site/teach/index.html
           test -s _site/labs/01/index.html
