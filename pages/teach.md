@@ -37,6 +37,6 @@ Find board designs and fabrication downloads in the [hardware guide]({{ '/hardwa
 - [Ask the community]({{ '/forum/' | relative_url }}) for help with equipment or activities.
 - Read [LightWork technical memos](/lightwork/) for detailed construction, testing, and observing notes.
 - Learn about [the DSPIRA program]({{ '/about/' | relative_url }}).
-- Browse the [summer institute archive](/dspira-archive/) for historical lectures, labs, and flowgraphs.
+- Download [teaching slides, figures, and exercises]({{ '/teaching-resources/' | relative_url }}).
 
 Contact the lab at [rail@wvu.edu](mailto:rail@wvu.edu).

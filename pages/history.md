@@ -7,6 +7,8 @@ lead: Find earlier course materials, experimental software, and complete recover
 meta_description: "Explore historical DSPIRA lessons and radio astronomy experiments. Download preserved source files, Git history, and recovery instructions."
 ---
 
+Useful course materials now have active homes. Browse [teaching downloads]({{ '/teaching-resources/' | relative_url }}) and [research examples]({{ '/research-examples/' | relative_url }}).
+
 Start with the [current lessons]({{ '/' | relative_url }}) when planning a class.
 The material below records earlier courses and research projects. Historical software may need older tools or unsupported hardware.
 

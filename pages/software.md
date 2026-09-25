@@ -42,3 +42,8 @@ For schematics and fabrication files, use the [hardware guide]({{ '/hardware/' |
 
 The [repository map]({{ '/repository-map/' | relative_url }}) lists replacement addresses for files moved from the shared library.
 Historical releases and commit links retain their original files. Older GNU Radio 3.8 instructions refer to the separate `gr38` release line.
+
+## More examples
+
+Browse [DSP lesson flowgraphs]({{ '/dsp-examples/' | relative_url }}) for signal-processing exercises.
+Explore [transient research notebooks and data]({{ '/research-examples/' | relative_url }}) for advanced experiments.
