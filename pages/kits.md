@@ -9,8 +9,8 @@ meta_description: "Find DSPIRA horn telescope kit information and parts resource
 
 Most of a horn telescope comes from a hardware store. Two pieces are harder to source: an SDR dongle and a low-noise amplifier for the 21 cm hydrogen line.
 
-Educators and community organizers can request a starter kit if equipment access is holding them back. Provide your shipping details in the form. Briefly describe your plans or previous work with students or community groups.
+Educators and community organizers can request a starter kit if equipment access is holding them back.
 
-[Request a starter kit](https://forms.gle/qLDGCD8CXNvGo9hS6){: .btn .btn-wvu-gold}
+To request a kit, email us at [rail@wvu.edu](mailto:rail@wvu.edu).
 
 Kits are sent while supplies last. If kits are unavailable, you can buy the parts directly. The [Receiver Electronics]({{ '/categories/receiver-electronics/' | relative_url }}) module lists parts and suppliers.
