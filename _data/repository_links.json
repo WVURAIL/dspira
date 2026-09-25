@@ -1,0 +1,106 @@
+[
+  {
+    "old": "https://github.com/WVURAIL/os_radio_astro_hw",
+    "new": "https://github.com/WVURAIL/dspira-hardware",
+    "behavior": "GitHub repository redirect"
+  },
+  {
+    "old": "https://wvurail.org/dspira-lessons/",
+    "new": "https://wvurail.org/dspira/",
+    "behavior": "Website compatibility redirects and downloads"
+  },
+  {
+    "old": "https://github.com/WVURAIL/gr-dspira",
+    "new": "https://github.com/WVURAIL/dspira-software",
+    "behavior": "Historical repository retained with a current-project link"
+  },
+  {
+    "old": "https://github.com/WVURAIL/cra",
+    "new": "https://wvurail.org/dspira/",
+    "behavior": "Historical repository retained with current lesson links"
+  },
+  {
+    "old": "https://github.com/WVURAIL/gr-radio_astro/blob/main/examples/DSPIRA/interferometer_simpleSpectrometer_Lime_adding.grc",
+    "new": "https://github.com/WVURAIL/dspira-software/blob/main/flowgraphs/interferometer_simpleSpectrometer_Lime_adding.grc",
+    "behavior": "File moved; update the saved link",
+    "original": "https://github.com/WVURAIL/gr-radio_astro/blob/9de98c9c8a281293792ae4dfc3910b6dc6c15c81/examples/DSPIRA/interferometer_simpleSpectrometer_Lime_adding.grc"
+  },
+  {
+    "old": "https://raw.githubusercontent.com/WVURAIL/gr-radio_astro/main/examples/DSPIRA/interferometer_simpleSpectrometer_Lime_adding.grc",
+    "new": "https://github.com/WVURAIL/dspira-software/blob/main/flowgraphs/interferometer_simpleSpectrometer_Lime_adding.grc",
+    "behavior": "File moved; update the saved link",
+    "original": "https://github.com/WVURAIL/gr-radio_astro/blob/9de98c9c8a281293792ae4dfc3910b6dc6c15c81/examples/DSPIRA/interferometer_simpleSpectrometer_Lime_adding.grc"
+  },
+  {
+    "old": "https://github.com/WVURAIL/gr-radio_astro/blob/main/examples/DSPIRA/interferometer_simpleSpectrometer_Lime_multiplying.grc",
+    "new": "https://github.com/WVURAIL/dspira-software/blob/main/flowgraphs/interferometer_simpleSpectrometer_Lime_multiplying.grc",
+    "behavior": "File moved; update the saved link",
+    "original": "https://github.com/WVURAIL/gr-radio_astro/blob/9de98c9c8a281293792ae4dfc3910b6dc6c15c81/examples/DSPIRA/interferometer_simpleSpectrometer_Lime_multiplying.grc"
+  },
+  {
+    "old": "https://raw.githubusercontent.com/WVURAIL/gr-radio_astro/main/examples/DSPIRA/interferometer_simpleSpectrometer_Lime_multiplying.grc",
+    "new": "https://github.com/WVURAIL/dspira-software/blob/main/flowgraphs/interferometer_simpleSpectrometer_Lime_multiplying.grc",
+    "behavior": "File moved; update the saved link",
+    "original": "https://github.com/WVURAIL/gr-radio_astro/blob/9de98c9c8a281293792ae4dfc3910b6dc6c15c81/examples/DSPIRA/interferometer_simpleSpectrometer_Lime_multiplying.grc"
+  },
+  {
+    "old": "https://github.com/WVURAIL/gr-radio_astro/blob/main/examples/DSPIRA/lightning_detector_amplitude.grc",
+    "new": "https://github.com/WVURAIL/dspira-software/blob/main/flowgraphs/lightning_detector_amplitude.grc",
+    "behavior": "File moved; update the saved link",
+    "original": "https://github.com/WVURAIL/gr-radio_astro/blob/9de98c9c8a281293792ae4dfc3910b6dc6c15c81/examples/DSPIRA/lightning_detector_amplitude.grc"
+  },
+  {
+    "old": "https://raw.githubusercontent.com/WVURAIL/gr-radio_astro/main/examples/DSPIRA/lightning_detector_amplitude.grc",
+    "new": "https://github.com/WVURAIL/dspira-software/blob/main/flowgraphs/lightning_detector_amplitude.grc",
+    "behavior": "File moved; update the saved link",
+    "original": "https://github.com/WVURAIL/gr-radio_astro/blob/9de98c9c8a281293792ae4dfc3910b6dc6c15c81/examples/DSPIRA/lightning_detector_amplitude.grc"
+  },
+  {
+    "old": "https://github.com/WVURAIL/gr-radio_astro/blob/main/examples/DSPIRA/lightning_detector_coincident_deriv.grc",
+    "new": "https://github.com/WVURAIL/dspira-software/blob/main/flowgraphs/lightning_detector_coincident_deriv.grc",
+    "behavior": "File moved; update the saved link",
+    "original": "https://github.com/WVURAIL/gr-radio_astro/blob/9de98c9c8a281293792ae4dfc3910b6dc6c15c81/examples/DSPIRA/lightning_detector_coincident_deriv.grc"
+  },
+  {
+    "old": "https://raw.githubusercontent.com/WVURAIL/gr-radio_astro/main/examples/DSPIRA/lightning_detector_coincident_deriv.grc",
+    "new": "https://github.com/WVURAIL/dspira-software/blob/main/flowgraphs/lightning_detector_coincident_deriv.grc",
+    "behavior": "File moved; update the saved link",
+    "original": "https://github.com/WVURAIL/gr-radio_astro/blob/9de98c9c8a281293792ae4dfc3910b6dc6c15c81/examples/DSPIRA/lightning_detector_coincident_deriv.grc"
+  },
+  {
+    "old": "https://github.com/WVURAIL/gr-radio_astro/blob/main/examples/DSPIRA/lightning_detector_cross_corr_deriv.grc",
+    "new": "https://github.com/WVURAIL/dspira-software/blob/main/flowgraphs/lightning_detector_cross_corr_deriv.grc",
+    "behavior": "File moved; update the saved link",
+    "original": "https://github.com/WVURAIL/gr-radio_astro/blob/9de98c9c8a281293792ae4dfc3910b6dc6c15c81/examples/DSPIRA/lightning_detector_cross_corr_deriv.grc"
+  },
+  {
+    "old": "https://raw.githubusercontent.com/WVURAIL/gr-radio_astro/main/examples/DSPIRA/lightning_detector_cross_corr_deriv.grc",
+    "new": "https://github.com/WVURAIL/dspira-software/blob/main/flowgraphs/lightning_detector_cross_corr_deriv.grc",
+    "behavior": "File moved; update the saved link",
+    "original": "https://github.com/WVURAIL/gr-radio_astro/blob/9de98c9c8a281293792ae4dfc3910b6dc6c15c81/examples/DSPIRA/lightning_detector_cross_corr_deriv.grc"
+  },
+  {
+    "old": "https://github.com/WVURAIL/gr-radio_astro/blob/main/examples/DSPIRA/lightning_detector_std.grc",
+    "new": "https://github.com/WVURAIL/dspira-software/blob/main/flowgraphs/lightning_detector_std.grc",
+    "behavior": "File moved; update the saved link",
+    "original": "https://github.com/WVURAIL/gr-radio_astro/blob/9de98c9c8a281293792ae4dfc3910b6dc6c15c81/examples/DSPIRA/lightning_detector_std.grc"
+  },
+  {
+    "old": "https://raw.githubusercontent.com/WVURAIL/gr-radio_astro/main/examples/DSPIRA/lightning_detector_std.grc",
+    "new": "https://github.com/WVURAIL/dspira-software/blob/main/flowgraphs/lightning_detector_std.grc",
+    "behavior": "File moved; update the saved link",
+    "original": "https://github.com/WVURAIL/gr-radio_astro/blob/9de98c9c8a281293792ae4dfc3910b6dc6c15c81/examples/DSPIRA/lightning_detector_std.grc"
+  },
+  {
+    "old": "https://github.com/WVURAIL/gr-radio_astro/blob/main/examples/DSPIRA/spectrometer_w_cal.grc",
+    "new": "https://github.com/WVURAIL/dspira-software/blob/main/flowgraphs/spectrometer_w_cal.grc",
+    "behavior": "File moved; update the saved link",
+    "original": "https://github.com/WVURAIL/gr-radio_astro/blob/9de98c9c8a281293792ae4dfc3910b6dc6c15c81/examples/DSPIRA/spectrometer_w_cal.grc"
+  },
+  {
+    "old": "https://raw.githubusercontent.com/WVURAIL/gr-radio_astro/main/examples/DSPIRA/spectrometer_w_cal.grc",
+    "new": "https://github.com/WVURAIL/dspira-software/blob/main/flowgraphs/spectrometer_w_cal.grc",
+    "behavior": "File moved; update the saved link",
+    "original": "https://github.com/WVURAIL/gr-radio_astro/blob/9de98c9c8a281293792ae4dfc3910b6dc6c15c81/examples/DSPIRA/spectrometer_w_cal.grc"
+  }
+]

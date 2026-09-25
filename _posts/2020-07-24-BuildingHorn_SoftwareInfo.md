@@ -15,4 +15,4 @@ A. [**Install Ubuntu 22.04**]({{ site.baseurl }}/Ubuntu_Installation) - Partitio
 
 B. [**Install *GNU Radio***]({{ site.baseurl }}/GNURadio_Installation) - Install *GNU Radio* on a computer.
 
-C. [**Install gr-radio_astro**]({{ site.baseurl }}/gr_radio_astro_Installation) - Install the gr-radio_astro *GNU Radio* files, which includes the *spectrometer_w_cal.grc* program.
+C. [**Install gr-radio_astro**]({{ site.baseurl }}/gr_radio_astro_Installation) - Install the shared GNU Radio blocks. Then download the classroom applications from the [software guide]({{ '/software/' | relative_url }}).

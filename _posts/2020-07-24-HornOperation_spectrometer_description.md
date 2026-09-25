@@ -9,7 +9,7 @@ order: 4
 meta_description: "Explore the controls and displays in the DSPIRA horn spectrometer. Learn what the spectrum, calibration, and data recording settings do."
 ---
 
-The program used to run the telescope is a GNU Radio program called *spectrometer_w_cal.grc*. It is available from the WVURAIL/gr-radio_astro repository in Github. The *spectrometer_w_cal.grc* program has several features to make data collection with the horn telescope user-friendly. Each feature on the display is described below.
+The program used to run the telescope is a GNU Radio program called *spectrometer_w_cal.grc*. Get it from the [DSPIRA software guide]({{ '/software/' | relative_url }}). The *spectrometer_w_cal.grc* program has several features to make data collection with the horn telescope user-friendly. Each feature on the display is described below.
 
 Set up the horn. Cable the LNA to the Airspy, then connect the Airspy to the computer's USB port.  Then open the spectrometer_w_cal.grc program in GNU Radio. 
 [This video shows how to set up a horn and start the program.](https://youtu.be/Oo28QCEZe_g) 

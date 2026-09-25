@@ -9,86 +9,66 @@ order: 7
 meta_description: "Install the DSPIRA gr-radio_astro blocks for GNU Radio. Follow the repository setup and update steps to prepare your telescope software."
 ---
 
-This installs *spectrometer_w_cal.grc* and other useful GNU Radio astronomy programs from GitHub's *gr_radio_astro* repository.
+The shared `gr-radio_astro` library supplies GNU Radio blocks. Classroom applications now come from `dspira-software`.
+Install the library first, then download the applications separately.
 
-**NOTE:** The instructions on this page will install files for Ubuntu 22.04. If you are using Ubuntu 20.04 LTS, click [here]({{ site.baseurl }}/gr_radio_astro_Installation_Ubuntu20) for the installation.
+These instructions target GNU Radio 3.10 on Ubuntu. For an older installation, see the
+[Ubuntu 20.04 and GNU Radio 3.8 guide]({{ '/gr_radio_astro_Installation_Ubuntu20' | relative_url }}).
 
-Complete the following steps:
+## Install the shared library
 
-   1. Open a *Terminal* window. This can be found in the *Show Applications* waffle in the lower left corner of the screen.
+Follow the [current library build instructions](https://github.com/WVURAIL/gr-radio_astro#installing-from-source)
+to install GNU Radio, receiver drivers, and build dependencies.
+Clone and build the shared library:
 
-      **NOTE:** Most of the commands we use are entered in a *Terminal* window. We recommend adding the *Terminal* to your Favorites to be accessed easily.
+```sh
+git clone https://github.com/WVURAIL/gr-radio_astro.git
+cd gr-radio_astro
+cmake -S . -B build
+cmake --build build
+sudo cmake --install build
+```
 
-   2. Install GNU Radio's external Python dependencies and SDR drivers if you have not already done so. Enter the commands below:
-   
-      `sudo apt install gnuradio gr-osmosdr airspy python3-h5py python3-ephem git cmake liborc-0.4-dev -y`
-   
-   3. In the terminal type and enter:
+Check the repository's Python environment instructions if GNU Radio cannot find the installed blocks.
 
-      `git clone https://github.com/WVURAIL/gr-radio_astro.git`
+## Get the DSPIRA applications
 
-   5. Switch to the gr-radio_astro directory: `cd gr-radio_astro`
+Use the [software download page]({{ '/software/' | relative_url }}) or clone the application repository from your home directory:
 
-   6. Type and enter: `git branch` to verify that you are on the "main" branch. If you are NOT on the main branch, then type and enter: `git checkout main`.
+```sh
+cd
+git clone https://github.com/WVURAIL/dspira-software.git
+```
 
-   7. Make a build directory: `mkdir build`, and then move to it: `cd build`  
-      
-   8. Then run the following in the build directory:
+Open `dspira-software/flowgraphs/spectrometer_w_cal.grc` in GNU Radio Companion.
+The file no longer lives in `gr-radio_astro/examples/DSPIRA/`.
+Review the [known compatibility findings](https://github.com/WVURAIL/dspira-software/blob/main/docs/KNOWN_ISSUES.md)
+before attempting to run it. Configure your receiver, output folders, and calibration settings.
 
-      ```
-      cmake ..
-      make
-      sudo make install
-      ```
- 
-   9. To check that the installation was successful, type and enter `cd` to get to the home directory. Run the program in GNU Radio:
-   * In a terminal window type `gnuradio-companion`
-   * Open the *spectrometer_w_cal.grc* program as follows from the File menu:
-            
-           File --> Open --> gr-radio_astros --> examples --> DSPIRA --> *spectrometer_w_cal.grc*
-   
-      * Plug an Airspy radio, with the LNA attached, into the USB port. Run the program by hitting the start triangle ("execute the flowgraph") on the menu bar at top. If no errors occur, you are all set!
+## Update the applications
 
-Occasionally the files in gr_radio_astro may change. Complete the following to update these files.
+Keep a separate copy of any local receiver settings or customized flowgraphs before updating.
+From the application checkout, run:
 
-## How to Update files from the gr-radio_astro Repository
+```sh
+git status
+git pull --ff-only
+```
 
-   1. Open the terminal window.
-      
-   2. From your home directory (cd ), go to the gr-radio_astro folder: `cd gr-radio_astro`
-   
-   3. Type `git status`. Check the "On branch ..." statement at the top. You want to be in the "main" branch. To get there, type `git checkout main`.
+If Git reports local changes, review and preserve them before continuing.
+Application updates do not require rebuilding the shared library.
 
-   4. Type `git pull`. 
-      - If a warning message shows up about local changes made that could overwrite files, type `git stash`. 
-      - Then type `git pull` again.
+## Update the shared library
 
-   5. Change to the `build` directory: `cd build`
+From the `gr-radio_astro` checkout, review local changes and pull the update:
 
-   6. Type `rm -rf *`. **NOTE:** Make sure you are in the `build` directory before typing `rm -rf *`!
+```sh
+git status
+git pull --ff-only
+cmake -S . -B build
+cmake --build build
+sudo cmake --install build
+```
 
-   7. Then run the following:
-         ```
-      cmake ..
-      make
-      sudo make install
-      ```
-
-   8. The update is complete.
-
-   
-   **To Run the __spectrometer_w_cal.grc__ program in GNU Radio After Updating:**
-   
-   1. In a terminal window type `gnuradio-companion`.
-
-   2. Close any previous version of `spectrometer_w_cal.grc` that might be open in GNU Radio.
-   
-   3. Open the new version of `spectrometer_w_cal.grc` from the folder `/gr-radio_astro/examples/DSPIRA/`
-            
-      - under `File` select `Open`; 
-      - Navigate to the` gr-radio_astro` folder.
-      - Under `examples` open `DSPIRA`; then select `spectrometer_w_cal.grc`.
-
-   4. Connect an Airspy SDR to USB. Start the program (click the black triangle at the top center of the ribbon bar.)
-         
-   
+Close and reopen GNU Radio Companion after installing updated blocks.
+Test the application with your equipment before relying on it in class.

@@ -53,7 +53,7 @@ Use the sections below to choose an operating system, install Ubuntu, and set up
 
 1. Ubuntu for Raspberry Pi [Click here for more Info](https://ubuntu.com/raspberry-pi)
 
-_Note_: The custom `gr-radio_astro` [software]({{ site.baseurl }}/gr_radio_astro_Installation)  is now only supported for `GNURadio 3.8` only. The Raspberry Pi OS by default installs `GNURadio 3.7` which is not longer supported. 
+This historical setup guide describes older GNU Radio versions. For the maintained library and classroom applications, use the [software guide]({{ '/software/' | relative_url }}).
 
 ### Installing Ubuntu on Raspberry Pi
 #### Prerequisites
@@ -95,4 +95,4 @@ _NOTE_: Firstly, for Ubuntu desktop a monitor and mouse and keyboard is required
 
 Notes: run `volk_profile` after installing everything to make sure GNU Radio is optimized to work on your device.
 
-. 
+.

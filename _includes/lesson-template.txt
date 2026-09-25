@@ -1,0 +1,30 @@
+---
+layout: post
+title: "Your lesson title"
+summary: "Describe what students will learn in one short sentence."
+categories: ['Observing']
+order: 100
+tags: ['School-Teachers', 'Students', 'Hobbyists']
+permalink: /lessons/your-lesson/
+---
+
+## Learning objectives
+
+Describe what students will learn.
+
+## Equipment and preparation
+
+List equipment, prerequisites, class time, and tested software versions.
+
+## Student activity
+
+1. Describe the first step.
+2. Describe the next step.
+
+## Teacher notes
+
+Explain preparation and expected results. All published materials are public.
+
+## Downloads and references
+
+Add worksheets, editable originals, image descriptions, and source credits.
