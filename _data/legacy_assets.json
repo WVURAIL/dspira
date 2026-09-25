@@ -1,0 +1,329 @@
+{
+  "source_revision": "08b58638e1c3b65e5512f0547b32cd48172afde3",
+  "description": "Former download addresses. Source files live with their lessons or owning projects; compatibility copies are generated during publication.",
+  "removed": [
+    {
+      "path": "FilesUploaded/blankfile",
+      "reason": "Unused twelve-byte placeholder with no teaching content."
+    }
+  ],
+  "files": [
+    {
+      "legacy": "FilesUploaded/2Horn_AddingInterferometry_LightWorkMemo31.pdf",
+      "original_sha256": "7f8210d81c3075e97d1b698631aefff53dbe7334972adf75847fa51c5ac42bb6",
+      "url": "https://raw.githubusercontent.com/WVURAIL/dspira/08b58638e1c3b65e5512f0547b32cd48172afde3/FilesUploaded/2Horn_AddingInterferometry_LightWorkMemo31.pdf",
+      "canonical": "/lightwork/memos/LightWorkMemo031.pdf",
+      "owner": "lightwork",
+      "destination": "memos/LightWorkMemo031.pdf",
+      "sha256": "7f8210d81c3075e97d1b698631aefff53dbe7334972adf75847fa51c5ac42bb6"
+    },
+    {
+      "legacy": "FilesUploaded/APPhysics_AstroLesson7_GalacticPlaneObservation2_2019.pdf",
+      "original_sha256": "b446d159966397a670ce6ca5aa61f0c104260314c641028a8b2bec763634ca23",
+      "source": "assets/lessons/velocity-curve/galactic-plane-observation-2-2019.pdf"
+    },
+    {
+      "legacy": "FilesUploaded/AstronomyLectures/Astronomy_AllGalaxiesGreatAndSmall.pdf",
+      "original_sha256": "f9b6ffb88206ddaa3136296c740d400d048128c9871bc9ec390e8d0434ccfada",
+      "source": "assets/teaching/astronomy-lectures/all-galaxies-great-and-small.pdf"
+    },
+    {
+      "legacy": "FilesUploaded/AstronomyLectures/Astronomy_DarkMatter.pdf",
+      "original_sha256": "7006a01dab939c7abe20d596279e51ed9bd90ec74f313afca87da3421781fbf9",
+      "source": "assets/teaching/astronomy-lectures/dark-matter.pdf"
+    },
+    {
+      "legacy": "FilesUploaded/AstronomyLectures/Astronomy_DiscoveryOfTheMilkyWay.pdf",
+      "original_sha256": "7fd226c395b2abfacc2a3f6fc2706f79ec7f40d947a6611f3c44900ba2b2e4bb",
+      "source": "assets/teaching/astronomy-lectures/discovery-of-the-milky-way.pdf"
+    },
+    {
+      "legacy": "FilesUploaded/AstronomyLectures/Astronomy_DopplerEffectAndTelescopes.pdf",
+      "original_sha256": "4d1fd60abddbbc25ebf662fac9127f0ca8c1fa034377f176afd0aa84745fade1",
+      "source": "assets/teaching/astronomy-lectures/doppler-effect-and-telescopes.pdf"
+    },
+    {
+      "legacy": "FilesUploaded/AstronomyLectures/Astronomy_GalaxyInteractionsAndDarkMatter.pdf",
+      "original_sha256": "3f79cecb57e2082d50219e73e6dec1a36047681805208eceacd28befff9a105e",
+      "source": "assets/teaching/astronomy-lectures/galaxy-interactions-and-dark-matter.pdf"
+    },
+    {
+      "legacy": "FilesUploaded/AstronomyLectures/Astronomy_Gravity.pdf",
+      "original_sha256": "3b15506db2688fd27df0a799b69ef18e7709d9922e9d79bb6ef83eca2f5bc7cb",
+      "source": "assets/teaching/astronomy-lectures/gravity.pdf"
+    },
+    {
+      "legacy": "FilesUploaded/AstronomyLectures/Astronomy_LightAndTelescopes.pdf",
+      "original_sha256": "4e9e7791584bcfdf919b46759b3f7551ff1befec22f99e07e7f32169bcad9b4c",
+      "source": "assets/teaching/astronomy-lectures/light-and-telescopes.pdf"
+    },
+    {
+      "legacy": "FilesUploaded/AstronomyLectures/Astronomy_MotionOfTheSky.pdf",
+      "original_sha256": "c21b398c8b1167a42545b7d12237cc2a20ede21ee36cec60b7b624114e4fb160",
+      "source": "assets/teaching/astronomy-lectures/motion-of-the-sky.pdf"
+    },
+    {
+      "legacy": "FilesUploaded/AstronomyLectures/Astronomy_RotationCurves.pdf",
+      "original_sha256": "f29e3d228bce19e09d18fe6e049624dc065f63e9ef72134538f9ef060a17705c",
+      "source": "assets/teaching/astronomy-lectures/rotation-curves.pdf"
+    },
+    {
+      "legacy": "FilesUploaded/AstronomyLectures/Astronomy_Stars.pdf",
+      "original_sha256": "85866445b7dae898a7083a3c454df29cf3801c23b7c490d6c085100924189f37",
+      "source": "assets/teaching/astronomy-lectures/stars.pdf"
+    },
+    {
+      "legacy": "FilesUploaded/AstronomyLectures/Astronomy_StellarEvolution.pdf",
+      "original_sha256": "a0307aa133597dd287e3258c700e15090b28f2a22f950666c7760c4d2a1e499a",
+      "source": "assets/teaching/astronomy-lectures/stellar-evolution.pdf"
+    },
+    {
+      "legacy": "FilesUploaded/AstronomyLectures/Astronomy_TimeAndPlanningObservations.pdf",
+      "original_sha256": "ca1f06974109da05419c6873b0e5aa1c32f12d349d9d94763a01e63d0b7823de",
+      "source": "assets/teaching/astronomy-lectures/time-and-planning-observations.pdf"
+    },
+    {
+      "legacy": "FilesUploaded/AstronomyLectures/Astronomy_UnitsAndScales.pdf",
+      "original_sha256": "6ded84da64b1d684ff88074d9be9012fa22579dea87b7c28f3e5ec44f1aac92c",
+      "source": "assets/teaching/astronomy-lectures/units-and-scales.pdf"
+    },
+    {
+      "legacy": "FilesUploaded/BuildingSimpleSpectrometer_Explained.pdf",
+      "original_sha256": "82befaa2ebd077acc7b934fed0ae132bfd639728aeb779759c02681ec0266e0f",
+      "source": "assets/lessons/simple-spectrometer/build-a-spectrometer.pdf"
+    },
+    {
+      "legacy": "FilesUploaded/Cradle_Assembly_2021.pdf",
+      "original_sha256": "424de3d46ce455e0206464bec89b7f631585a5d23de952b5e0cdf7bf9031caf6",
+      "source": "assets/lessons/horn-construction/cradle-assembly-2021.pdf"
+    },
+    {
+      "legacy": "FilesUploaded/EMSpectrum_Introduction.pdf",
+      "original_sha256": "a13588aff625b495610b5f4b918453b50331c1a59f8ce559d926cbb46dd3e169",
+      "source": "assets/lessons/electromagnetic-spectrum/introduction.pdf"
+    },
+    {
+      "legacy": "FilesUploaded/EM_spectrum.jpg",
+      "original_sha256": "9a03f9144a9b4bcb010675ba61dee38ca4d96e49be738eb0a84c2187eb5231dc",
+      "source": "assets/lessons/electromagnetic-spectrum/spectrum.jpg"
+    },
+    {
+      "legacy": "FilesUploaded/EM_spectrum_Worksheet.jpg",
+      "original_sha256": "fbd3da25af187b195f83e02d45971a3bbd7f3ee80eacc7ec7d946c5ff189aa17",
+      "source": "assets/lessons/electromagnetic-spectrum/worksheet.jpg"
+    },
+    {
+      "legacy": "FilesUploaded/EM_spectrum_worksheet_key.jpg",
+      "original_sha256": "b6de12a0e4a22c15acbf39a9bc695dfd08473d67ede78e44b1efb62d610d3dd7",
+      "source": "assets/lessons/electromagnetic-spectrum/worksheet-key.jpg"
+    },
+    {
+      "legacy": "FilesUploaded/FourierTransform_Activity.pdf",
+      "original_sha256": "70b3ca33eda681f60efc246750494d7560e62b3816778490686d35d027a88ff6",
+      "source": "assets/lessons/fourier-activity/worksheet.pdf"
+    },
+    {
+      "legacy": "FilesUploaded/Gnuradio_Lesson1_simpleWaveform.docx",
+      "original_sha256": "09161b894f60b6fe42569968086ace3e1c20b2da7f8a3429fa79f09409b12c05",
+      "source": "assets/lessons/simple-spectrometer/01-simple-waveform.docx"
+    },
+    {
+      "legacy": "FilesUploaded/Gnuradio_Lesson1_simpleWaveform.pdf",
+      "original_sha256": "de7d1d3ae910f7e857c99350d36b7a4836bcbca784e05b6a402633a869e8efbc",
+      "source": "assets/lessons/simple-spectrometer/01-simple-waveform.pdf"
+    },
+    {
+      "legacy": "FilesUploaded/Gnuradio_Lesson2_MultipleSources.docx",
+      "original_sha256": "bca04af2ee85fe9de0aab5bc2507305541ccb3a1354de729e04c4fc15522fb9d",
+      "source": "assets/lessons/simple-spectrometer/02-multiple-sources.docx"
+    },
+    {
+      "legacy": "FilesUploaded/Gnuradio_Lesson2_MultipleSources.pdf",
+      "original_sha256": "c437763412bf7e2ca986b5f6646e3e35ffce73df189f4cef48dfdf0780f3ae2c",
+      "source": "assets/lessons/simple-spectrometer/02-multiple-sources.pdf"
+    },
+    {
+      "legacy": "FilesUploaded/Gnuradio_Lesson3_FourierSeries.docx",
+      "original_sha256": "8eca5647018ba9d191f04ec729d0979a9a9483027ef8336dcfeb41f90053dd90",
+      "source": "assets/lessons/simple-spectrometer/03-fourier-series.docx"
+    },
+    {
+      "legacy": "FilesUploaded/Gnuradio_Lesson3_FourierSeries.pdf",
+      "original_sha256": "a4622d745c9bcb5730ac8e2ca28d15a63ecaa7f6b03cce2a54619226becf409b",
+      "source": "assets/lessons/simple-spectrometer/03-fourier-series.pdf"
+    },
+    {
+      "legacy": "FilesUploaded/Gnuradio_Lesson4_FFT.docx",
+      "original_sha256": "f4a1ffbb4133f66057089f50e29568b87a2ad699e1017f847907aabc35935658",
+      "source": "assets/lessons/simple-spectrometer/04-fft.docx"
+    },
+    {
+      "legacy": "FilesUploaded/Gnuradio_Lesson4_FFT.pdf",
+      "original_sha256": "7e25eac1908781a5c2e710e9d361a0b93b7ecc998ec8cff73de6b4a432461236",
+      "source": "assets/lessons/simple-spectrometer/04-fft.pdf"
+    },
+    {
+      "legacy": "FilesUploaded/Gnuradio_Lesson5_Filters.docx",
+      "original_sha256": "1ed0f22a9c8df27f6663b8ab5a19fde677993f7a253ec76910b4333e48db08c4",
+      "source": "assets/lessons/simple-spectrometer/05-filters.docx"
+    },
+    {
+      "legacy": "FilesUploaded/Gnuradio_Lesson5_Filters.pdf",
+      "original_sha256": "2306507081f20d97b1569b3ef887d3cb68ec035327535998f865e8caa30d4aa4",
+      "source": "assets/lessons/simple-spectrometer/05-filters.pdf"
+    },
+    {
+      "legacy": "FilesUploaded/Horn&Can_Assembly_2021.pdf",
+      "original_sha256": "98c635959e3706d503b695a1ad2ff7fab3ed6e820ddea81132093ad28c9a3f55",
+      "source": "assets/lessons/horn-construction/horn-and-can-assembly-2021.pdf"
+    },
+    {
+      "legacy": "FilesUploaded/HornTelescopeEquipmentList.pdf",
+      "original_sha256": "d7bd14f3af99cc6002092c889ee7f1944632637f0a110d87839419eb589cc5f2",
+      "source": "assets/lessons/telescope-setup/equipment-list.pdf"
+    },
+    {
+      "legacy": "FilesUploaded/HornTelescope_Design.pdf",
+      "original_sha256": "74508d5076f3e89ab217077c5a548793f6dd339da638ce3029dffb262c1bbc66",
+      "source": "assets/lessons/horn-construction/horn-design.pdf"
+    },
+    {
+      "legacy": "FilesUploaded/Interferometer_electrical_schematic.png",
+      "original_sha256": "fa4c6c2d90ae7a800def4bee601a7b0a2711c2fc82fcac547aa05c6c5ca725ff",
+      "source": "assets/lessons/two-horn-interferometer/electrical-schematic.png"
+    },
+    {
+      "legacy": "FilesUploaded/LNA_OrderingParts_Info_3.pdf",
+      "original_sha256": "f622e8468a4eb107a2af36c9d5368ef49414f8c4637ab630ef4f5720ee5fc580",
+      "url": "https://raw.githubusercontent.com/WVURAIL/dspira-hardware/c61eb7a74ab0a659dc0ce6df278c01334b64485a/docs/assembly/history/parts-guide-v3.pdf",
+      "canonical": "https://raw.githubusercontent.com/WVURAIL/dspira-hardware/main/docs/assembly/history/parts-guide-v3.pdf",
+      "owner": "dspira-hardware",
+      "destination": "docs/assembly/history/parts-guide-v3.pdf",
+      "sha256": "f622e8468a4eb107a2af36c9d5368ef49414f8c4637ab630ef4f5720ee5fc580"
+    },
+    {
+      "legacy": "FilesUploaded/LNA_OrderingParts_Info_4.pdf",
+      "original_sha256": "e2c175601ffa5437e47fb3d63b55955f4c29b6ab902efc445f3b73e63bb8133a",
+      "url": "https://raw.githubusercontent.com/WVURAIL/dspira-hardware/c61eb7a74ab0a659dc0ce6df278c01334b64485a/docs/assembly/parts-guide-v4.pdf",
+      "canonical": "https://raw.githubusercontent.com/WVURAIL/dspira-hardware/main/docs/assembly/parts-guide-v4.pdf",
+      "owner": "dspira-hardware",
+      "destination": "docs/assembly/parts-guide-v4.pdf",
+      "sha256": "e2c175601ffa5437e47fb3d63b55955f4c29b6ab902efc445f3b73e63bb8133a"
+    },
+    {
+      "legacy": "FilesUploaded/MiniHorn_construction.pdf",
+      "original_sha256": "391397a01290332be3208abd680bb7972d55bdf293e4ffff925621699489263a",
+      "source": "assets/lessons/horn-construction/mini-horn-construction.pdf"
+    },
+    {
+      "legacy": "FilesUploaded/Neutral_Hydrogen_amplifier_v3.pdf",
+      "original_sha256": "8b4081ee1e8e29a31c9a83db934db9618bfc6303b23959cf55ecda3a36282a49",
+      "url": "https://raw.githubusercontent.com/WVURAIL/dspira-hardware/c61eb7a74ab0a659dc0ce6df278c01334b64485a/Neutral_Hydrogen_amplifier_v3.pdf",
+      "canonical": "https://raw.githubusercontent.com/WVURAIL/dspira-hardware/main/Neutral_Hydrogen_amplifier_v3.pdf",
+      "owner": "dspira-hardware",
+      "destination": "Neutral_Hydrogen_amplifier_v3.pdf",
+      "sha256": "8b4081ee1e8e29a31c9a83db934db9618bfc6303b23959cf55ecda3a36282a49"
+    },
+    {
+      "legacy": "FilesUploaded/SettingUp_2 Horn_Interferometer.pdf",
+      "original_sha256": "7997e1cc124e07418a94b97ff1ab050b17b7c66885c30b49c4f25684a431e775",
+      "source": "assets/lessons/two-horn-interferometer/setup-guide.pdf"
+    },
+    {
+      "legacy": "FilesUploaded/Stand_Assembly_2021.pdf",
+      "original_sha256": "da691c7ced3071d68fdc93c21e267688c72a1dc10780b0d1bef42f5834a047c2",
+      "source": "assets/lessons/horn-construction/stand-assembly-2021.pdf"
+    },
+    {
+      "legacy": "FilesUploaded/VelocityCurve_21cmHI.pdf",
+      "original_sha256": "cf3c6991362228d5fc15f07373a48b6da9d78553c60854fb65558a32148fe7a0",
+      "source": "assets/lessons/velocity-curve/hydrogen-21cm.pdf"
+    },
+    {
+      "legacy": "FilesUploaded/VelocityCurve_CoordinateSystems.pdf",
+      "original_sha256": "22d20528e54f783cd3e67dfeac4f7e6e20fb601562842150e0d878cfdcbb5531",
+      "source": "assets/lessons/velocity-curve/coordinate-systems.pdf"
+    },
+    {
+      "legacy": "FilesUploaded/VelocityCurve_E&MSpectrum.pdf",
+      "original_sha256": "586056806e3a99b023dc3611a61b63b4f898ade519f89e0f0ce87ee1918fcd07",
+      "source": "assets/lessons/velocity-curve/electromagnetic-spectrum.pdf"
+    },
+    {
+      "legacy": "FilesUploaded/VelocityCurve_GalacticPlaneObservation1_2018.pdf",
+      "original_sha256": "f4d6574f9f32b1e44444028ca833af35003e99e3edc003e5ae84554b23ccb9b9",
+      "source": "assets/lessons/velocity-curve/galactic-plane-observation-1-2018.pdf"
+    },
+    {
+      "legacy": "FilesUploaded/VelocityCurve_GalacticPlaneObservation1_Conclusions_2018.pdf",
+      "original_sha256": "c447bef0bc294bf509a52b955c5408a47db3e1669c5efac6fbd463fbc7bf7411",
+      "source": "assets/lessons/velocity-curve/galactic-plane-observation-1-conclusions-2018.pdf"
+    },
+    {
+      "legacy": "FilesUploaded/VelocityCurve_HornIntro.pdf",
+      "original_sha256": "da945af90b7cec404fe5a1f98e48f6133a721462c8655ff8d8112bb9d9aca1b8",
+      "source": "assets/lessons/velocity-curve/horn-introduction.pdf"
+    },
+    {
+      "legacy": "FilesUploaded/VelocityCurve_HornIntro_Followup.pdf",
+      "original_sha256": "b3d973b611ae636a9842aa36ceae5ca941e72977c3637749a2aba7f8562d93db",
+      "source": "assets/lessons/velocity-curve/horn-introduction-followup.pdf"
+    },
+    {
+      "legacy": "FilesUploaded/VelocityCurve_Stellarium.pdf",
+      "original_sha256": "b10c7d784a6f572b644a2d00c93f8ebb286e060cfb75da82cf646711103188b9",
+      "source": "assets/lessons/velocity-curve/stellarium.pdf"
+    },
+    {
+      "legacy": "FilesUploaded/VelocityCurve_UnitOutline.pdf",
+      "original_sha256": "828a84d921d8fbae623fb6652f4a7b6de468778b98458c3595134718b7679e08",
+      "source": "assets/lessons/velocity-curve/unit-outline.pdf"
+    },
+    {
+      "legacy": "FilesUploaded/circuit board componet locations Final1.jpg",
+      "original_sha256": "f1f98a2294991c817ea7709a7abc263483538eb96f72bc13c9cc5407db4018a0",
+      "url": "https://raw.githubusercontent.com/WVURAIL/dspira-hardware/c61eb7a74ab0a659dc0ce6df278c01334b64485a/docs/assembly/component-locations.jpg",
+      "canonical": "https://raw.githubusercontent.com/WVURAIL/dspira-hardware/main/docs/assembly/component-locations.jpg",
+      "owner": "dspira-hardware",
+      "destination": "docs/assembly/component-locations.jpg",
+      "sha256": "f1f98a2294991c817ea7709a7abc263483538eb96f72bc13c9cc5407db4018a0"
+    },
+    {
+      "legacy": "FilesUploaded/colors_we_see_spectrum.jpg",
+      "original_sha256": "7454dd654de10db7e314a58458275b1f1c0603245ee99ea5eeed037546497b39",
+      "source": "assets/lessons/electromagnetic-spectrum/visible-colors.jpg"
+    },
+    {
+      "legacy": "FilesUploaded/interferometer_electrical_connections_photo.png",
+      "original_sha256": "84e77a81170965062759719365dee2fc5901d6889fa6a8856e9b9ba3dbe2869c",
+      "source": "assets/lessons/two-horn-interferometer/electrical-connections.png"
+    },
+    {
+      "legacy": "FilesUploaded/interferometer_simpleSpectrometer_Lime_adding.grc",
+      "original_sha256": "ba8b5026247c43bdaee1cb7302c3aaf618f7d2216e420a68dbe76362a90e6fa0",
+      "url": "https://raw.githubusercontent.com/WVURAIL/dspira/08b58638e1c3b65e5512f0547b32cd48172afde3/FilesUploaded/interferometer_simpleSpectrometer_Lime_adding.grc",
+      "canonical": "https://raw.githubusercontent.com/WVURAIL/dspira-software/main/flowgraphs/interferometer_simpleSpectrometer_Lime_adding.grc",
+      "owner": "dspira-software",
+      "destination": "flowgraphs/interferometer_simpleSpectrometer_Lime_adding.grc",
+      "sha256": "ba8b5026247c43bdaee1cb7302c3aaf618f7d2216e420a68dbe76362a90e6fa0"
+    },
+    {
+      "legacy": "FilesUploaded/interferometer_simpleSpectrometer_Lime_multiplying.grc",
+      "original_sha256": "c7cc31991cb0a5383bd903083ba37f40ff165a980ce2b97aab91e21258000469",
+      "url": "https://raw.githubusercontent.com/WVURAIL/dspira/08b58638e1c3b65e5512f0547b32cd48172afde3/FilesUploaded/interferometer_simpleSpectrometer_Lime_multiplying.grc",
+      "canonical": "https://raw.githubusercontent.com/WVURAIL/dspira-software/main/flowgraphs/interferometer_simpleSpectrometer_Lime_multiplying.grc",
+      "owner": "dspira-software",
+      "destination": "flowgraphs/interferometer_simpleSpectrometer_Lime_multiplying.grc",
+      "sha256": "c7cc31991cb0a5383bd903083ba37f40ff165a980ce2b97aab91e21258000469"
+    },
+    {
+      "legacy": "images/Fourier_Series_Wave_Explorer.grc",
+      "original_sha256": "172d8809b81f3d2365334c5e05c1d3490017c5808720831f5347ca983e68f812",
+      "url": "https://raw.githubusercontent.com/WVURAIL/dspira-software/06c18a0e014c3eb3b67f4cab61139d2cc345f56d/examples/fourier-wave-explorer/Fourier_Series_Wave_Explorer.grc",
+      "canonical": "https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/fourier-wave-explorer/Fourier_Series_Wave_Explorer.grc",
+      "owner": "dspira-software",
+      "destination": "examples/fourier-wave-explorer/Fourier_Series_Wave_Explorer.grc",
+      "sha256": "172d8809b81f3d2365334c5e05c1d3490017c5808720831f5347ca983e68f812"
+    }
+  ]
+}

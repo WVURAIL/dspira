@@ -12,7 +12,7 @@ equipment: "The selected design guide and its parts list. Materials and tools de
 preparation: "Choose one horn design. These alternatives are not additional required builds."
 ---
 
-*  __Baby DSPIRA Horn__ is a smaller version of the design above. Find instructions in this [PDF]({{ site.baseurl }}/FilesUploaded/MiniHorn_construction.pdf) and these [videos](https://youtube.com/playlist?list=PLxSg3s3C3JCH2yBC_kHLGCpd0tqQ6gM1h). This includes a cradle and stand as part of its construction. This design uses the same components and software as the standard DSPIRA horn described here. It provides easy use and is good for demonstrations.
+*  __Baby DSPIRA Horn__ is a smaller version of the design above. Find instructions in this [PDF]({{ site.baseurl }}/assets/lessons/horn-construction/mini-horn-construction.pdf) and these [videos](https://youtube.com/playlist?list=PLxSg3s3C3JCH2yBC_kHLGCpd0tqQ6gM1h). This includes a cradle and stand as part of its construction. This design uses the same components and software as the standard DSPIRA horn described here. It provides easy use and is good for demonstrations.
 
 *  [Radio Telescope Base Construction Guide](/lightwork/memos/LightWorkMemo021-r6.pdf) - Instructions for building a radio horn telescope similar in design to the DSPIRA horn.
 

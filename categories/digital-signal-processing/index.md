@@ -11,11 +11,11 @@ meta_description: "Learn digital signal processing with DSPIRA lectures and GNU 
 
 * These are the lessons that appear on the [Build a Simple Spectrometer]({{ site.baseurl }}/Simple_Spectrometer) page.
 
-    - [Lesson 1]({{ site.baseurl }}/FilesUploaded/Gnuradio_Lesson1_simpleWaveform.pdf) - Introduction to GNU Radio basics.
-    - [Lesson 2]({{ site.baseurl }}/FilesUploaded/Gnuradio_Lesson2_MultipleSources.pdf) - Learning more GNU Radio tools building a multiple waveform source.
-    - [Lesson 3]({{ site.baseurl }}/FilesUploaded/Gnuradio_Lesson3_FourierSeries.pdf) - Demonstration of Fourier series.
-    - [Lesson 4]({{ site.baseurl }}/FilesUploaded/Gnuradio_Lesson4_FFT.pdf) - Demonstration of how an FFT block works.
-    - [Lesson 5]({{ site.baseurl }}/FilesUploaded/Gnuradio_Lesson5_Filters.pdf) - Filter basics.
+    - [Lesson 1]({{ site.baseurl }}/assets/lessons/simple-spectrometer/01-simple-waveform.pdf) - Introduction to GNU Radio basics.
+    - [Lesson 2]({{ site.baseurl }}/assets/lessons/simple-spectrometer/02-multiple-sources.pdf) - Learning more GNU Radio tools building a multiple waveform source.
+    - [Lesson 3]({{ site.baseurl }}/assets/lessons/simple-spectrometer/03-fourier-series.pdf) - Demonstration of Fourier series.
+    - [Lesson 4]({{ site.baseurl }}/assets/lessons/simple-spectrometer/04-fft.pdf) - Demonstration of how an FFT block works.
+    - [Lesson 5]({{ site.baseurl }}/assets/lessons/simple-spectrometer/05-filters.pdf) - Filter basics.
 
 **B. Quadrature sampling**
 

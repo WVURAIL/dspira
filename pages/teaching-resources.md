@@ -16,6 +16,24 @@ Use the [Velocity Curve unit]({{ '/Astronomy_VelocityCurve_Overview' | relative_
 The [astronomy recordings]({{ '/Astronomy_Lecture_Recordings/' | relative_url }}) include thirteen PDF slide decks.
 The [DSP recordings]({{ '/dsp' | relative_url }}) connect theory with laboratory exercises.
 
+## Editable GNU Radio worksheets
+
+These five worksheets accompany [Build a Simple Spectrometer]({{ '/Simple_Spectrometer' | relative_url }}).
+Use the PDF for printing or the Word file when adapting an activity.
+
+<details markdown="1">
+<summary>Choose a printable or editable worksheet</summary>
+
+| Activity | Printable PDF | Editable Word file |
+| --- | --- | --- |
+| 1. Simple waveform | [Print waveform worksheet]({{ '/assets/lessons/simple-spectrometer/01-simple-waveform.pdf' | relative_url }}) | [Edit waveform worksheet]({{ '/assets/lessons/simple-spectrometer/01-simple-waveform.docx' | relative_url }}) |
+| 2. Multiple sources | [Print multiple sources worksheet]({{ '/assets/lessons/simple-spectrometer/02-multiple-sources.pdf' | relative_url }}) | [Edit multiple sources worksheet]({{ '/assets/lessons/simple-spectrometer/02-multiple-sources.docx' | relative_url }}) |
+| 3. Fourier series | [Print Fourier series worksheet]({{ '/assets/lessons/simple-spectrometer/03-fourier-series.pdf' | relative_url }}) | [Edit Fourier series worksheet]({{ '/assets/lessons/simple-spectrometer/03-fourier-series.docx' | relative_url }}) |
+| 4. FFT | [Print FFT worksheet]({{ '/assets/lessons/simple-spectrometer/04-fft.pdf' | relative_url }}) | [Edit FFT worksheet]({{ '/assets/lessons/simple-spectrometer/04-fft.docx' | relative_url }}) |
+| 5. Filters | [Print filters worksheet]({{ '/assets/lessons/simple-spectrometer/05-filters.pdf' | relative_url }}) | [Edit filters worksheet]({{ '/assets/lessons/simple-spectrometer/05-filters.docx' | relative_url }}) |
+
+</details>
+
 ## 2018 institute slide decks
 
 These PowerPoint files accompany the institute courses presented by Loren Anderson and Natalia Schmid.

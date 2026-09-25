@@ -80,6 +80,7 @@ titles_from_headings:
 
 exclude:
   - tools/
+  - assets/README.md
   - images/programme/README.md
   - assets/wvu-design-system/README.md
   - assets/wvu-design-system/LICENSE

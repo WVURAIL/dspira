@@ -49,7 +49,10 @@ jobs:
           python3 tools/test_retired_sites.py
 
       - name: Build
-        run: bundle exec jekyll build --trace
+        run: |
+          bundle exec jekyll build --trace
+          python3 tools/test_publish_assets.py
+          python3 tools/publish_assets.py --site _site
         env:
           BUNDLE_GEMFILE: ${{ github.workspace }}/Gemfile.ci
           JEKYLL_ENV: production

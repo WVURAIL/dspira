@@ -12,6 +12,6 @@ preparation: "Review the checklist and setup video. Confirm amplifier power and 
 ---
 
 
-+ [List of equipment needed]({{ site.baseurl }}/FilesUploaded/HornTelescopeEquipmentList.pdf)
++ [List of equipment needed]({{ site.baseurl }}/assets/lessons/telescope-setup/equipment-list.pdf)
 
 + [How to set up the telescope](https://youtu.be/Oo28QCEZe_g). This video covers telescope setup and initial *spectrometer_w_cal* settings.

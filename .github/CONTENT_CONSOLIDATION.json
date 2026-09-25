@@ -2328,7 +2328,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "FilesUploaded/AstronomyLectures/Astronomy_LightAndTelescopes.pdf"
+          "path": "assets/teaching/astronomy-lectures/light-and-telescopes.pdf"
         }
       ]
     },
@@ -2342,7 +2342,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "FilesUploaded/AstronomyLectures/Astronomy_DopplerEffectAndTelescopes.pdf"
+          "path": "assets/teaching/astronomy-lectures/doppler-effect-and-telescopes.pdf"
         }
       ]
     },
@@ -2356,7 +2356,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "FilesUploaded/AstronomyLectures/Astronomy_Stars.pdf"
+          "path": "assets/teaching/astronomy-lectures/stars.pdf"
         }
       ]
     },
@@ -2370,7 +2370,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "FilesUploaded/AstronomyLectures/Astronomy_StellarEvolution.pdf"
+          "path": "assets/teaching/astronomy-lectures/stellar-evolution.pdf"
         }
       ]
     },
@@ -2384,7 +2384,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "FilesUploaded/AstronomyLectures/Astronomy_DiscoveryOfTheMilkyWay.pdf"
+          "path": "assets/teaching/astronomy-lectures/discovery-of-the-milky-way.pdf"
         }
       ]
     },
@@ -2398,7 +2398,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "FilesUploaded/AstronomyLectures/Astronomy_AllGalaxiesGreatAndSmall.pdf"
+          "path": "assets/teaching/astronomy-lectures/all-galaxies-great-and-small.pdf"
         }
       ]
     },
@@ -2412,7 +2412,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "FilesUploaded/AstronomyLectures/Astronomy_GalaxyInteractionsAndDarkMatter.pdf"
+          "path": "assets/teaching/astronomy-lectures/galaxy-interactions-and-dark-matter.pdf"
         }
       ]
     },
@@ -2426,7 +2426,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "FilesUploaded/AstronomyLectures/Astronomy_DarkMatter.pdf"
+          "path": "assets/teaching/astronomy-lectures/dark-matter.pdf"
         }
       ]
     },
@@ -2440,7 +2440,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "FilesUploaded/AstronomyLectures/Astronomy_Gravity.pdf"
+          "path": "assets/teaching/astronomy-lectures/gravity.pdf"
         }
       ]
     },
@@ -2454,7 +2454,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "FilesUploaded/AstronomyLectures/Astronomy_UnitsAndScales.pdf"
+          "path": "assets/teaching/astronomy-lectures/units-and-scales.pdf"
         }
       ]
     },
@@ -2468,7 +2468,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "FilesUploaded/AstronomyLectures/Astronomy_MotionOfTheSky.pdf"
+          "path": "assets/teaching/astronomy-lectures/motion-of-the-sky.pdf"
         }
       ]
     },
@@ -2482,7 +2482,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "FilesUploaded/AstronomyLectures/Astronomy_RotationCurves.pdf"
+          "path": "assets/teaching/astronomy-lectures/rotation-curves.pdf"
         }
       ]
     },
@@ -2496,7 +2496,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "FilesUploaded/AstronomyLectures/Astronomy_TimeAndPlanningObservations.pdf"
+          "path": "assets/teaching/astronomy-lectures/time-and-planning-observations.pdf"
         }
       ]
     },
@@ -2678,7 +2678,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "FilesUploaded/APPhysics_AstroLesson7_GalacticPlaneObservation2_2019.pdf"
+          "path": "assets/lessons/velocity-curve/galactic-plane-observation-2-2019.pdf"
         }
       ]
     },
@@ -2692,7 +2692,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "FilesUploaded/BuildingSimpleSpectrometer_Explained.pdf"
+          "path": "assets/lessons/simple-spectrometer/build-a-spectrometer.pdf"
         }
       ]
     },
@@ -2706,7 +2706,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "FilesUploaded/BuildingSimpleSpectrometer_Explained.pdf"
+          "path": "assets/lessons/simple-spectrometer/build-a-spectrometer.pdf"
         }
       ]
     },
@@ -2720,7 +2720,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "FilesUploaded/Horn&Can_Assembly_2021.pdf"
+          "path": "assets/lessons/horn-construction/horn-and-can-assembly-2021.pdf"
         }
       ]
     },
@@ -2734,7 +2734,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "FilesUploaded/Horn&Can_Assembly_2021.pdf"
+          "path": "assets/lessons/horn-construction/horn-and-can-assembly-2021.pdf"
         }
       ]
     },
@@ -2748,7 +2748,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "FilesUploaded/Horn&Can_Assembly_2021.pdf"
+          "path": "assets/lessons/horn-construction/horn-and-can-assembly-2021.pdf"
         }
       ]
     },
@@ -2762,7 +2762,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "FilesUploaded/EM_spectrum.jpg"
+          "path": "assets/lessons/electromagnetic-spectrum/spectrum.jpg"
         }
       ]
     },
@@ -2776,7 +2776,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "FilesUploaded/EM_spectrum_Worksheet.jpg"
+          "path": "assets/lessons/electromagnetic-spectrum/worksheet.jpg"
         }
       ]
     },
@@ -2790,7 +2790,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "FilesUploaded/EM_spectrum_worksheet_key.jpg"
+          "path": "assets/lessons/electromagnetic-spectrum/worksheet-key.jpg"
         }
       ]
     },
@@ -2804,7 +2804,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "FilesUploaded/FourierTransform_Activity.pdf"
+          "path": "assets/lessons/fourier-activity/worksheet.pdf"
         }
       ]
     },
@@ -2846,7 +2846,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "FilesUploaded/HornTelescope_Design.pdf"
+          "path": "assets/lessons/horn-construction/horn-design.pdf"
         }
       ]
     },
@@ -2887,8 +2887,8 @@
       "reason": "Replaced by the updated ordering guide; do not reintroduce obsolete part lists.",
       "destinations": [
         {
-          "repository": "dspira",
-          "path": "FilesUploaded/LNA_OrderingParts_Info_4.pdf"
+          "repository": "dspira-hardware",
+          "path": "docs/assembly/parts-guide-v4.pdf"
         }
       ]
     },
@@ -2901,8 +2901,8 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "dspira",
-          "path": "FilesUploaded/Neutral_Hydrogen_amplifier_v3.pdf"
+          "repository": "dspira-hardware",
+          "path": "Neutral_Hydrogen_amplifier_v3.pdf"
         },
         {
           "repository": "dspira-hardware",
@@ -2976,7 +2976,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "FilesUploaded/VelocityCurve_HornIntro.pdf"
+          "path": "assets/lessons/velocity-curve/horn-introduction.pdf"
         }
       ]
     },
@@ -2990,7 +2990,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "FilesUploaded/VelocityCurve_HornIntro_Followup.pdf"
+          "path": "assets/lessons/velocity-curve/horn-introduction-followup.pdf"
         }
       ]
     },
@@ -3004,7 +3004,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "FilesUploaded/VelocityCurve_E&MSpectrum.pdf"
+          "path": "assets/lessons/velocity-curve/electromagnetic-spectrum.pdf"
         }
       ]
     },
@@ -3018,7 +3018,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "FilesUploaded/VelocityCurve_21cmHI.pdf"
+          "path": "assets/lessons/velocity-curve/hydrogen-21cm.pdf"
         }
       ]
     },
@@ -3032,7 +3032,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "FilesUploaded/VelocityCurve_CoordinateSystems.pdf"
+          "path": "assets/lessons/velocity-curve/coordinate-systems.pdf"
         }
       ]
     },
@@ -3046,7 +3046,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "FilesUploaded/VelocityCurve_Stellarium.pdf"
+          "path": "assets/lessons/velocity-curve/stellarium.pdf"
         }
       ]
     },
@@ -3060,7 +3060,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "FilesUploaded/VelocityCurve_GalacticPlaneObservation1_2018.pdf"
+          "path": "assets/lessons/velocity-curve/galactic-plane-observation-1-2018.pdf"
         }
       ]
     },
@@ -3074,7 +3074,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "FilesUploaded/VelocityCurve_GalacticPlaneObservation1_Conclusions_2018.pdf"
+          "path": "assets/lessons/velocity-curve/galactic-plane-observation-1-conclusions-2018.pdf"
         }
       ]
     },
@@ -3088,7 +3088,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "FilesUploaded/VelocityCurve_UnitOutline.pdf"
+          "path": "assets/lessons/velocity-curve/unit-outline.pdf"
         }
       ]
     },
@@ -3102,7 +3102,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "FilesUploaded/colors_we_see_spectrum.jpg"
+          "path": "assets/lessons/electromagnetic-spectrum/visible-colors.jpg"
         }
       ]
     },
@@ -3116,7 +3116,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "FilesUploaded/EMSpectrum_Introduction.pdf"
+          "path": "assets/lessons/electromagnetic-spectrum/introduction.pdf"
         }
       ]
     },
@@ -3291,8 +3291,8 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "dspira",
-          "path": "images/Fourier_Series_Wave_Explorer.grc"
+          "repository": "dspira-software",
+          "path": "examples/fourier-wave-explorer/Fourier_Series_Wave_Explorer.grc"
         }
       ]
     },

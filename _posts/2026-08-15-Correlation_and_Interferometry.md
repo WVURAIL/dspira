@@ -229,7 +229,7 @@ See [**Fundamentals of Radio Interferometry**](https://github.com/ratt-ru/foi-co
 
 Closer to home, and worth doing in this order:
 
-* [Additive Interferometry Using Two DSPIRA Radio Horn Telescopes]({{ site.baseurl }}/FilesUploaded/2Horn_AddingInterferometry_LightWorkMemo31.pdf) — LightWork Memo 31. This is a measured version of the fringe pattern above. A solar transit on a 5.0 m baseline produced 0.043 rad spacing, compared with 0.042 rad predicted. This is what the theory on this page looks like when it comes out of a real horn.
+* [Additive Interferometry Using Two DSPIRA Radio Horn Telescopes](/lightwork/memos/LightWorkMemo031.pdf) — LightWork Memo 31. This is a measured version of the fringe pattern above. A solar transit on a 5.0 m baseline produced 0.043 rad spacing, compared with 0.042 rad predicted. This is what the theory on this page looks like when it comes out of a real horn.
 * [Setting up a 2 Horn Interferometer]({{ site.baseurl }}/SettingUp2HornInterferometer) — building one and running it
 * [Interferometry]({{ site.baseurl }}/Interferometry) — the rest of the interferometry material on this site
 * [Fourier Analysis]({{ site.baseurl }}/dsplab-fourier1/) and [Expert Mode]({{ site.baseurl }}/dsplab-fourier2/) — the transforms this page leans on

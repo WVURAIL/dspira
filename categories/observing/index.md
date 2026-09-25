@@ -14,9 +14,9 @@ The module ends with two extensions to single-horn observing. First, turn drift 
 
 Two operating procedures are documented as PDFs rather than as lessons:
 
-* [Setting up and operating a 2-horn interferometer]({{ site.baseurl }}/FilesUploaded/SettingUp_2%20Horn_Interferometer.pdf) —
+* [Setting up and operating a 2-horn interferometer]({{ site.baseurl }}/assets/lessons/two-horn-interferometer/setup-guide.pdf) —
   covers both the adding and the multiplying spectrometer programs.
-* [Adding interferometry to a 2-horn system]({{ site.baseurl }}/FilesUploaded/2Horn_AddingInterferometry_LightWorkMemo31.pdf) —
+* [Adding interferometry to a 2-horn system](/lightwork/memos/LightWorkMemo031.pdf) —
   LightWork Memo 31.
 
 For what an interferometer is actually good for, see

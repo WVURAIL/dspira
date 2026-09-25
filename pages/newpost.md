@@ -48,6 +48,8 @@ Use the [Markdown template]({{ '/assets/templates/lesson-template.txt' | relativ
 Replace the template prompts. Choose one existing module and an unused order value. Ask a maintainer if either choice is unclear.
 Add activity-specific equipment and preparation to the template. Include timing and tested setup details only when confirmed.
 Save the file as `YYYY-MM-DD-Short-Name.md` in `_posts/`. Choose a stable lesson address before publication.
+Keep its worksheets, editable originals, and images together in `assets/lessons/<lesson-slug>/`.
+Use lowercase filenames with hyphens, and link to existing software or hardware files instead of copying them.
 
 [Open the lesson submission form](https://github.com/WVURAIL/dspira/issues/new?template=lesson-submission.yml)
 if you prefer to discuss a draft first. GitHub submissions are public and require an account.

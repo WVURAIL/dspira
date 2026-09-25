@@ -18,7 +18,7 @@ Compare [amplifier options]({{ '/LNA' | relative_url }}) before ordering parts.
 You can build the DSPIRA amplifier or choose a listed ready-made option.
 
 - [Build the DSPIRA amplifier]({{ '/DetailedLNAInstructions' | relative_url }}).
-- [Review the parts ordering guide (PDF)]({{ '/FilesUploaded/LNA_OrderingParts_Info_4.pdf' | relative_url }}).
+- [Review the parts ordering guide (PDF)](https://raw.githubusercontent.com/WVURAIL/dspira-hardware/main/docs/assembly/parts-guide-v4.pdf).
 - [Ask about a starter kit]({{ '/kits/' | relative_url }}).
 
 ## Maintain or fabricate a board

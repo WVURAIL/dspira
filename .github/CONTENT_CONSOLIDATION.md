@@ -8,7 +8,7 @@ Recovery ZIPs are additional history, not the only location of these resources.
 - DSPIRA: thirteen PowerPoint slide decks, two observing figures, and Wilner's imaging lecture.
 - dspira-software: 29 additional institute GRC exercises; 16 passed GNU Radio 3.10.9.2 generation checks.
 - dspira-hardware: three early amplifier design and assembly PDFs, with revision context.
-- gr-radio_astro: three complementary transient notebooks, six binary samples, full detection source/diagram, and research notes.
+- radio-research-software: three complementary transient notebooks, six binary samples, full detection source/diagram, and research notes.
 
 The teacher guide links the new downloads. Software and hardware guides link their respective resources.
 Current CRA worksheets, astronomy PDF decks, observation scripts, and the GBT notebook were reused.

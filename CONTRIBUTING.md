@@ -24,6 +24,7 @@ system images need a separate download location, linked from the lesson page.
 3. Set `title`, `summary`, `categories`, `order`, and a permanent `permalink`.
 4. Choose exactly one category from `_data/modules.yml`. Use an unused order value in that module.
 5. Group new lesson attachments under `assets/lessons/<lesson-slug>/`.
+   Keep printable PDFs beside their editable originals. Use lowercase filenames with hyphens.
 6. Use `{{ '/assets/lessons/<lesson-slug>/worksheet.pdf' | relative_url }}` for attachment links.
 7. Start section headings at `##`. The layout supplies the page's main heading.
 8. Describe images with useful alt text. Keep prose sentences at 20 words or fewer.
@@ -42,6 +43,16 @@ Record these reviews in the pull request or submission discussion.
 These materials are public. Keep student records and restricted answer keys out of
 the repository, issues, attachments, and preview. Teacher-only navigation does not
 provide access control.
+
+## Where files belong
+
+Use [the asset directory guide](assets/README.md) before adding a download.
+Shared lecture slides belong in `assets/teaching/`. Activity-specific worksheets and images belong beside their lesson's other attachments.
+GNU Radio applications and flowgraphs belong in `dspira-software`; board designs and amplifier assembly references belong in `dspira-hardware`.
+Technical memos belong in `lightwork`. Link to their maintained files instead of uploading another copy.
+
+The former `FilesUploaded` directory is generated during publication for old links.
+Add new material to its proper source folder. Record future moves in `_data/legacy_assets.json` when existing public addresses must survive.
 
 ## Prepare the first contribution trial
 

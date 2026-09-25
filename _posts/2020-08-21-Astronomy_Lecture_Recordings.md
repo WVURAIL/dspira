@@ -43,12 +43,12 @@ All thirteen, in the order they were given.
 
 ## Dr. Loren Anderson
 
-* [Units and Scales]({{ site.baseurl }}/FilesUploaded/AstronomyLectures/Astronomy_UnitsAndScales.pdf){: .btn .btn-wvu-blue}
-* [Motion of the Sky]({{ site.baseurl }}/FilesUploaded/AstronomyLectures/Astronomy_MotionOfTheSky.pdf){: .btn .btn-wvu-blue}
-* [Time and Planning Observations]({{ site.baseurl }}/FilesUploaded/AstronomyLectures/Astronomy_TimeAndPlanningObservations.pdf){: .btn .btn-wvu-blue}
-* [Gravity]({{ site.baseurl }}/FilesUploaded/AstronomyLectures/Astronomy_Gravity.pdf){: .btn .btn-wvu-blue}
-* [Dark Matter]({{ site.baseurl }}/FilesUploaded/AstronomyLectures/Astronomy_DarkMatter.pdf){: .btn .btn-wvu-blue}
-* [Galactic Rotation Curves]({{ site.baseurl }}/FilesUploaded/AstronomyLectures/Astronomy_RotationCurves.pdf){: .btn .btn-wvu-blue}
+* [Units and Scales]({{ site.baseurl }}/assets/teaching/astronomy-lectures/units-and-scales.pdf){: .btn .btn-wvu-blue}
+* [Motion of the Sky]({{ site.baseurl }}/assets/teaching/astronomy-lectures/motion-of-the-sky.pdf){: .btn .btn-wvu-blue}
+* [Time and Planning Observations]({{ site.baseurl }}/assets/teaching/astronomy-lectures/time-and-planning-observations.pdf){: .btn .btn-wvu-blue}
+* [Gravity]({{ site.baseurl }}/assets/teaching/astronomy-lectures/gravity.pdf){: .btn .btn-wvu-blue}
+* [Dark Matter]({{ site.baseurl }}/assets/teaching/astronomy-lectures/dark-matter.pdf){: .btn .btn-wvu-blue}
+* [Galactic Rotation Curves]({{ site.baseurl }}/assets/teaching/astronomy-lectures/rotation-curves.pdf){: .btn .btn-wvu-blue}
 
 Gravity, Dark Matter and Rotation Curves are the three that the
 [Velocity Curve unit]({{ site.baseurl }}/Astronomy_VelocityCurve_Overview) builds
@@ -56,13 +56,13 @@ toward. Start there if you teach that unit and want more physics background than
 
 ## Dr. D. J. Pisano
 
-* [Light and Telescopes]({{ site.baseurl }}/FilesUploaded/AstronomyLectures/Astronomy_LightAndTelescopes.pdf){: .btn .btn-wvu-blue}
-* [Doppler Effect and Telescopes]({{ site.baseurl }}/FilesUploaded/AstronomyLectures/Astronomy_DopplerEffectAndTelescopes.pdf){: .btn .btn-wvu-blue}
-* [Stars]({{ site.baseurl }}/FilesUploaded/AstronomyLectures/Astronomy_Stars.pdf){: .btn .btn-wvu-blue}
-* [Stellar Evolution]({{ site.baseurl }}/FilesUploaded/AstronomyLectures/Astronomy_StellarEvolution.pdf){: .btn .btn-wvu-blue}
-* [Discovery of the Milky Way]({{ site.baseurl }}/FilesUploaded/AstronomyLectures/Astronomy_DiscoveryOfTheMilkyWay.pdf){: .btn .btn-wvu-blue}
-* [All Galaxies Great and Small]({{ site.baseurl }}/FilesUploaded/AstronomyLectures/Astronomy_AllGalaxiesGreatAndSmall.pdf){: .btn .btn-wvu-blue}
-* [Galaxy Interactions and Dark Matter]({{ site.baseurl }}/FilesUploaded/AstronomyLectures/Astronomy_GalaxyInteractionsAndDarkMatter.pdf){: .btn .btn-wvu-blue}
+* [Light and Telescopes]({{ site.baseurl }}/assets/teaching/astronomy-lectures/light-and-telescopes.pdf){: .btn .btn-wvu-blue}
+* [Doppler Effect and Telescopes]({{ site.baseurl }}/assets/teaching/astronomy-lectures/doppler-effect-and-telescopes.pdf){: .btn .btn-wvu-blue}
+* [Stars]({{ site.baseurl }}/assets/teaching/astronomy-lectures/stars.pdf){: .btn .btn-wvu-blue}
+* [Stellar Evolution]({{ site.baseurl }}/assets/teaching/astronomy-lectures/stellar-evolution.pdf){: .btn .btn-wvu-blue}
+* [Discovery of the Milky Way]({{ site.baseurl }}/assets/teaching/astronomy-lectures/discovery-of-the-milky-way.pdf){: .btn .btn-wvu-blue}
+* [All Galaxies Great and Small]({{ site.baseurl }}/assets/teaching/astronomy-lectures/all-galaxies-great-and-small.pdf){: .btn .btn-wvu-blue}
+* [Galaxy Interactions and Dark Matter]({{ site.baseurl }}/assets/teaching/astronomy-lectures/galaxy-interactions-and-dark-matter.pdf){: .btn .btn-wvu-blue}
 
 ## Figure credits
 

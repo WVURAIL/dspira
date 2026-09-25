@@ -204,3 +204,10 @@ The publication step removes that reference only when the stylesheet is missing.
 If a future source package includes the override, it is copied and retained.
 
 The preserved source and ZIP remain unchanged. Run `python3 tools/test_retired_sites.py` to check this behavior.
+## Preserve moved download addresses
+
+`publish_assets.py` rebuilds old file addresses from `_data/legacy_assets.json` after Jekyll runs.
+It copies local lesson assets and verifies pinned downloads from active repositories.
+It rejects missing sources, conflicting destinations, unsafe paths, and checksum mismatches.
+Run `python3 tools/test_publish_assets.py`, then `python3 tools/publish_assets.py --site _site`.
+See [the asset guide](../assets/README.md) before moving an existing download.

@@ -14,7 +14,7 @@ optional: true
 
 ## Procedure for Setting Up a 2 Horn Interferometer
 
-Set up and run a two-horn interferometer with a Lime SDR and GNU Radio. The GNU Radio spectrometer programs write time-stamped data files once every integration time. The adding spectrometer is [Interferometer_SimpleSpectrometer_Adding.grc](https://github.com/WVURAIL/dspira/blob/master/FilesUploaded/interferometer_simpleSpectrometer_Lime_adding.grc). Its data includes spectra for horns A and B, plus power spectra from their summed signals. The multiplying spectrometer is [Interferometer_SimpleSpectrometer_Multiplying.grc](https://github.com/WVURAIL/dspira/blob/master/FilesUploaded/interferometer_simpleSpectrometer_Lime_multiplying.grc). Its data includes spectra for horns A and B, plus interference magnitude and phase.
+Set up and run a two-horn interferometer with a Lime SDR and GNU Radio. The GNU Radio spectrometer programs write time-stamped data files once every integration time. The adding spectrometer is [Interferometer_SimpleSpectrometer_Adding.grc](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/flowgraphs/interferometer_simpleSpectrometer_Lime_adding.grc). Its data includes spectra for horns A and B, plus power spectra from their summed signals. The multiplying spectrometer is [Interferometer_SimpleSpectrometer_Multiplying.grc](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/flowgraphs/interferometer_simpleSpectrometer_Lime_multiplying.grc). Its data includes spectra for horns A and B, plus interference magnitude and phase.
 
 1. List of Equipment
   
@@ -28,8 +28,8 @@ Set up and run a two-horn interferometer with a Lime SDR and GNU Radio. The GNU 
    - Electronics
 
      - computer with the GNU Radio spectrometer program on it:
-       - adding spectrometer program:  [Interferometer_SimpleSpectrometer_Adding.grc](https://github.com/WVURAIL/dspira/blob/master/FilesUploaded/interferometer_simpleSpectrometer_Lime_adding.grc)
-       - multiplying spectrometer program: [Interferometer_SimpleSpectrometer_Multiplying.grc](https://github.com/WVURAIL/dspira/blob/master/FilesUploaded/interferometer_simpleSpectrometer_Lime_multiplying.grc)
+       - adding spectrometer program:  [Interferometer_SimpleSpectrometer_Adding.grc](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/flowgraphs/interferometer_simpleSpectrometer_Lime_adding.grc)
+       - multiplying spectrometer program: [Interferometer_SimpleSpectrometer_Multiplying.grc](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/flowgraphs/interferometer_simpleSpectrometer_Lime_multiplying.grc)
      - Lime SDR with USB cable to connect to a computer – This SDR can digitize 2 channels.
      - 2 bias T's for powering the LNA's; the Lime does not provide power to the LNA’s.
      - 5 V transformer to power the bias T's
@@ -52,9 +52,9 @@ Set up and run a two-horn interferometer with a Lime SDR and GNU Radio. The GNU 
 
 2. Schematic Diagram and photo of the electrical connections
 
-   ![electrical connection schematic]({{ site.baseurl }}/FilesUploaded/Interferometer_electrical_schematic.png)
+   ![electrical connection schematic]({{ site.baseurl }}/assets/lessons/two-horn-interferometer/electrical-schematic.png)
 
-   ![electrical connection photo]({{ site.baseurl }}/FilesUploaded/interferometer_electrical_connections_photo.png)
+   ![electrical connection photo]({{ site.baseurl }}/assets/lessons/two-horn-interferometer/electrical-connections.png)
       
       
 3. Setting up the horns
