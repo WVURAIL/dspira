@@ -41,16 +41,16 @@ jobs:
           JEKYLL_ENV: production
       - uses: actions/checkout@v5
         with:
-          repository: WVURAIL/rail-preview
-          ref: 333d0da721f1fa6cc8b679e60f0f2b678c3fb3ec
+          repository: WVURAIL/wvurail.github.io
+          ref: ebaef70170bc770905f01e5f7bff1432d3a6a51f
           path: checks
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
       - name: Trim unused Design System styles
         run: |
-          npm ci --prefix checks
-          node checks/scripts/trim_styles.mjs _site assets/wvu-design-system/site.min.css
+          npm ci --prefix checks/.github/site-tools
+          node checks/.github/site-tools/scripts/trim_styles.mjs _site assets/wvu-design-system/site.min.css
       - name: Load verified historical material
         run: |
           python3 site/tools/test_retired_sites.py
