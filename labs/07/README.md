@@ -117,7 +117,7 @@ After 24hrs of data (shorter is ok, but won't be the entire sky), you can then p
 
 In the python directory:
 
-[https://github.com/WVURAIL/dspira/tree/master/python](https://github.com/WVURAIL/dspira/tree/master/python)
+[https://github.com/WVURAIL/dspira-archive/tree/master/python](https://github.com/WVURAIL/dspira-archive/tree/master/python)
 
 There is a program called map_h1_hdf5_drift.py.  This can be used to take your
 drift scan data, and turn it into 2 csv (excel) files, h1map.csv and hitmap.csv.

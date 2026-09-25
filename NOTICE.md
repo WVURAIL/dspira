@@ -5,7 +5,7 @@ institute, an NSF-funded Research Experiences for Teachers programme at the
 Lane Department of Computer Science and Electrical Engineering, West Virginia
 University, run with the Green Bank Observatory.
 
-The maintained material is at <https://wvurail.org/dspira-lessons/>. See
+The maintained material is at <https://wvurail.org/dspira/>. See
 [`README.md`](README.md) for the redirect table and for what deliberately
 stayed here.
 

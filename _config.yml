@@ -9,3 +9,6 @@ gems:
   - jekyll-sitemap
   - jekyll-readme-index
   - jekyll-relative-links
+
+url: "https://wvurail.org"
+baseurl: "/dspira-archive"

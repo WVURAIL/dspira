@@ -1,0 +1,54 @@
+name: Publish Pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          path: site
+          lfs: true
+
+      - name: Install the GitHub Pages gems
+        run: |
+          cat > Gemfile.ci <<'GEMFILE'
+          source "https://rubygems.org"
+          gem "github-pages", group: :jekyll_plugins
+          gem "webrick", "~> 1.8"
+          GEMFILE
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.1"
+          bundler-cache: true
+        env:
+          BUNDLE_GEMFILE: ${{ github.workspace }}/Gemfile.ci
+      - name: Build the site
+        working-directory: site
+        run: bundle exec jekyll build --trace -d ../_site
+        env:
+          BUNDLE_GEMFILE: ${{ github.workspace }}/Gemfile.ci
+          JEKYLL_ENV: production
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

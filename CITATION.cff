@@ -4,5 +4,5 @@ title: "DSPIRA: Digital Signal Processing in Radio Astronomy"
 authors:
   - name: "WVU Radio Astronomy Instrumentation Lab (WVURAIL)"
     website: "https://github.com/WVURAIL"
-repository-code: "https://github.com/WVURAIL/dspira"
+repository-code: "https://github.com/WVURAIL/dspira-archive"
 license: "MIT"
