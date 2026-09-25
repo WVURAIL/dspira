@@ -12,7 +12,7 @@ python3 tools/check_links.py --offline    # skip the internet, about a second
 Run it from the top of the repository. It needs nothing installed — Python 3
 standard library only. Results go to `link-report.md`, which is gitignored.
 
-Full URLs pointing to this site's `/dspira-lessons/` pages are checked locally instead of fetched. The script defines its own host name. Update it during the rail.wvu.edu migration, as described in the lab repository's `.github/CUTOVER.md`.
+Full URLs pointing to this site's `/dspira/` pages are checked locally instead of fetched. The script defines its own host name. Update it during the rail.wvu.edu migration, as described in the lab repository's `.github/CUTOVER.md`.
 
 The offline half checks links between lesson pages, heading anchors, and
 whether referenced images and PDFs actually exist. That half is where most real

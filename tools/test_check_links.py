@@ -30,7 +30,7 @@ ROOT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
 import check_links as C                                        # noqa: E402
 
-BASEURL = "/dspira-lessons"
+BASEURL = "/dspira"
 
 # heading source (as written in the markdown)  ->  id kramdown really emits
 FIXTURES = [
@@ -116,7 +116,7 @@ def main():
         fixture.write(template)
         fixture.flush()
         links = list(C.links_in(fixture.name, BASEURL))
-    if links != [("/dspira-lessons/all/", 3), ("#real-heading", 4)]:
+    if links != [("/dspira/all/", 3), ("#real-heading", 4)]:
         fails.append("Liquid link extraction: %r" % (links,))
 
     print("fixtures - ids against the real kramdown output")

@@ -43,6 +43,9 @@ jobs:
         env:
           BUNDLE_GEMFILE: ${{ github.workspace }}/Gemfile.ci
 
+      - name: Test migration compatibility
+        run: python3 tools/test_publish_pages.py
+
       - name: Build
         run: bundle exec jekyll build --trace
         env:
@@ -175,7 +178,7 @@ jobs:
             if [ ! -s "$f" ]; then
               echo "::error::$f is missing or empty"; fail=1; continue
             fi
-            grep -qF "href=\"https://github.com/WVURAIL/dspira-lessons/discussions/categories/$slug\"" "$f" \
+            grep -qF "href=\"https://github.com/WVURAIL/dspira/discussions/categories/$slug\"" "$f" \
               || { echo "::error::$f does not link to the '$slug' Discussions category"; fail=1; }
           done
           echo "forum rooms checked: 6"

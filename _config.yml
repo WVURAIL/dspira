@@ -37,7 +37,7 @@ contact:
   fax: "(304) 293-8602"
   fax_note: Lane Department
 
-baseurl:     "/dspira-lessons"
+baseurl:     "/dspira"
 
 # The lab site is a separate site on this host. Links to its education pages
 # use lab_url so preview builds can point back to /rail-preview. LightWork is

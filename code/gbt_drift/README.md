@@ -2,7 +2,7 @@
 
 `gbt_drift_scan.ipynb` analyzes a real observation. The 2017 RET-DSPIRA cohort fixed the **Green Bank Telescope** on one position for a 24-hour drift scan. They recorded it with their own GNU Radio spectrometer.
 
-It is worth reading even if you never run it. The calibration section shows how the GBT's noise diode converts arbitrary units to kelvin. This known-temperature source switches on and off throughout the observation. This follows the hot/cold calibration principle in [the Observations lesson](https://wvurail.org/dspira-lessons/Observations/). The instrument can perform it continuously.
+It is worth reading even if you never run it. The calibration section shows how the GBT's noise diode converts arbitrary units to kelvin. This known-temperature source switches on and off throughout the observation. This follows the hot/cold calibration principle in [the Observations lesson](https://wvurail.org/dspira/Observations/). The instrument can perform it continuously.
 
 The observation began at 2017-08-01 09:25:56 and ended the following morning. Its dataset contains 19,280 integrations of 4,096 channels.
 

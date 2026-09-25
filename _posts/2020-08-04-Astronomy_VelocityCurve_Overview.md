@@ -118,7 +118,7 @@ OBJECTIVE: In this activity, the students collect spectra of the MWG along the g
 
 A Jupyter notebook is available for classes that want a numerical fit. It performs a sine fit and plots the result:
 
-* [Galactic Plane Sine Fit notebook](https://github.com/WVURAIL/dspira-lessons/tree/master/code/velocity_curve){: .btn .btn-wvu-blue}
+* [Galactic Plane Sine Fit notebook](https://github.com/WVURAIL/dspira/tree/master/code/velocity_curve){: .btn .btn-wvu-blue}
 
 Students replace the sample data in `quadII_III_velocity_vs_longitude.csv` with
 their own measurements and re-run. The fitted amplitude and phase give a

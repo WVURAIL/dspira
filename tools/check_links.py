@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-Link checker for the dspira-lessons site.
+Link checker for the dspira site.
 
-Run it from the top of a dspira-lessons checkout:
+Run it from the top of a dspira checkout:
 
     python3 check_links.py              # check everything
     python3 check_links.py --offline    # skip the internet, ~1 second
@@ -213,7 +213,7 @@ def body_lines(path):
 IAL_ID_RE = re.compile(r"\{:\s*[^}]*#([A-Za-z0-9_.:-]+)[^}]*\}")
 
 
-def anchors_in(path, baseurl="/dspira-lessons"):
+def anchors_in(path, baseurl="/dspira"):
     """Every fragment this page will answer to."""
     lines = list(body_lines(path))
     out, counter = set(), {}
@@ -342,7 +342,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--offline", action="store_true",
                     help="skip external URLs (internal checks only)")
-    ap.add_argument("--baseurl", default="/dspira-lessons")
+    ap.add_argument("--baseurl", default="/dspira")
     ap.add_argument("--fail-on", choices=("all", "anchors", "none"),
                     default="all",
                     help="what makes the exit code non-zero. 'anchors' is for "
@@ -354,7 +354,7 @@ def main():
 
     if not os.path.isdir("_posts"):
         sys.exit("No _posts/ directory here. Run this from the top of a "
-                 "dspira-lessons checkout.")
+                 "dspira checkout.")
 
     files = source_files()
     slugs, anchors, own = {}, {}, {}
@@ -422,7 +422,7 @@ def main():
             path = urllib.parse.unquote(parsed.path)
             frag = parsed.fragment
             # Collapse duplicate slashes first: links in the wild are written
-            # as wvurail.org//dspira-lessons/... fairly often, and the server
+            # as wvurail.org//dspira/... fairly often, and the server
             # serves those fine, so they must not be reported as broken.
             path = re.sub(r"/{2,}", "/", path)
             path = re.sub(rf"^/?{re.escape(base)}/?", "", path).strip("/")

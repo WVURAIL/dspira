@@ -16,7 +16,7 @@
 #
 #   category  the category's display name on GitHub
 #   slug      its path segment under
-#             https://github.com/WVURAIL/dspira-lessons/discussions/categories/
+#             https://github.com/WVURAIL/dspira/discussions/categories/
 #             A wrong slug is a 404 on GitHub, not a build error — check the
 #             page before editing one. The build does assert that each room
 #             links to the URL it expects, so a change here must be made in
@@ -29,7 +29,7 @@
 # that the old conversations can be found by title and so that the giscus
 # `data-term` values are written down somewhere if a box is ever allowed again.
 
-repo: "WVURAIL/dspira-lessons"
+repo: "WVURAIL/dspira"
 
 rooms:
   index:
@@ -38,38 +38,38 @@ rooms:
     blurb: >-
       Questions about the lessons or the program, introductions, and anything
       that does not belong in one of the other rooms.
-    # thread: "dspira-lessons/forum/"
+    # thread: "dspira/forum/"
   antennas:
     category: Antennas
     slug: antennas
     blurb: >-
       Horn telescopes and other antennas: designs, construction, mounts, and how
       they perform on the sky.
-    # thread: "dspira-lessons/forum/antennas/"
+    # thread: "dspira/forum/antennas/"
   astronomy:
     category: Astronomy
     slug: astronomy
     blurb: >-
       Explore the astronomy behind observations: neutral hydrogen's 21 cm line, Milky Way rotation, and spectral interpretation.
-    # thread: "dspira-lessons/forum/astronomy/"
+    # thread: "dspira/forum/astronomy/"
   dsp:
     category: DSP
     slug: dsp
     blurb: >-
       Digital signal processing in general: sampling, the Fourier transform,
       filters, and how a spectrometer works.
-    # thread: "dspira-lessons/forum/dsp/"
+    # thread: "dspira/forum/dsp/"
   electronics:
     category: Electronics
     slug: electronics
     blurb: >-
       The electronics between the horn and the computer: low-noise amplifiers,
       filters, software-defined radios, cables and power.
-    # thread: "dspira-lessons/forum/electronics/"
+    # thread: "dspira/forum/electronics/"
   gnuradio:
     category: GNU Radio
     slug: gnu-radio
     blurb: >-
       GNU Radio and related software-defined radio tools: installing them, the
       flowgraphs in the lessons, and the gr-radio_astro blocks.
-    # thread: "dspira-lessons/forum/gnuradio/"
+    # thread: "dspira/forum/gnuradio/"

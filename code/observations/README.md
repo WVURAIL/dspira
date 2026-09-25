@@ -6,7 +6,7 @@ Six scripts convert spectrometer files into sky maps, rotation curves, or plots 
 They read the HDF5 files written by the `hdf5_sink` block in
 [gr-radio_astro](https://github.com/WVURAIL/gr-radio_astro). If you saved with a
 plain file sink instead, the reshaping recipe in the
-[Observations lesson](https://wvurail.org/dspira-lessons/Observations/) covers
+[Observations lesson](https://wvurail.org/dspira/Observations/) covers
 that case.
 
 ## What you need
@@ -76,7 +76,7 @@ Writes `h1map_drift.csv` and `hitmap_drift.csv` into the current directory. Use 
 > At 2.4 MHz, an RTL-SDR covers barely ±230 km/s.
 > Edit `SDR = "airspy"` near the top of `map_h1_hdf5_drift.py`.
 > Alternatively, pass `--sdr airspy` on the command line.
-> Other supported values are `airspy-mini`, `lime`, `pluto`, and `rtlsdr`. Each preset matches the [source block settings page](https://wvurail.org/dspira-lessons/Spectrometer_sourceblock_settings).
+> Other supported values are `airspy-mini`, `lime`, `pluto`, and `rtlsdr`. Each preset matches the [source block settings page](https://wvurail.org/dspira/Spectrometer_sourceblock_settings).
 > Archived per-radio flowgraphs in the `dspira` repository use GNU Radio 3.7.
 > Versions 3.8 and later cannot open them.
 > Three archived flowgraphs also used different tunings. If the windows don't match the file, the script says

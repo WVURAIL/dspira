@@ -1,7 +1,7 @@
 # Velocity Curve — analysis code
 
 Code companion to the lesson
-[*Determining a Velocity Curve of the Milky Way Galaxy*](https://wvurail.org/dspira-lessons/Astronomy_VelocityCurve_Overview).
+[*Determining a Velocity Curve of the Milky Way Galaxy*](https://wvurail.org/dspira/Astronomy_VelocityCurve_Overview).
 
 | File | What it does |
 |---|---|

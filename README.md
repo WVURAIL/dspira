@@ -4,8 +4,8 @@ The lesson site for **Digital Signal Processing in Radio Astronomy** — free
 material on building and using a horn radio telescope, written by the high
 school teachers who did it.
 
-Live at <https://wvurail.org/dspira-lessons/>, built by GitHub Pages from the
-`main` branch. The site is moving to <https://rail.wvu.edu/dspira-lessons/>
+Live at <https://wvurail.org/dspira/>, built by GitHub Pages from the
+`main` branch. The site is moving to <https://rail.wvu.edu/dspira/>
 together with the lab site, and the `wvu` branch is the build for the
 University domain: the WVU Design System, the standard masthead and footer, and
 the University's accessibility bar. The checklist for the move is
@@ -64,7 +64,7 @@ pages — and `.btn-wvu-gold` is for the one primary action on a page, if there
 is one. Write it that way, not the old `{: .button}`.
 
 The full walkthrough, with images and video, is at
-[`/newpost/`](https://wvurail.org/dspira-lessons/newpost/).
+[`/newpost/`](https://wvurail.org/dspira/newpost/).
 
 ## The Design System
 
@@ -131,5 +131,5 @@ local preview wants the internet: without it the pages render unstyled.
 ```bash
 bundle install
 bundle exec jekyll serve
-# open http://localhost:4000/dspira-lessons/
+# open http://localhost:4000/dspira/
 ```
