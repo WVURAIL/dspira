@@ -82,8 +82,6 @@ CANARIES = [
      "/dsplab-sdr/#24-fun-sdrgnu-radio-things", "/dsplab-sdr/#24-fun-nonsense", True),
     ("heading renamed, contents left behind", "_posts/2020-08-14-dsplab2.md",
      "## 2.1. Introduction", "## 2.1. Introduction and Setup", True),
-    ("underscore dropped from an id", "_posts/2021-08-05-RaspberryPi.md",
-     "(#installing-gr-radio_astro)", "(#installing-gr-radioastro)", True),
     ("anchor inside a code fence is an example, not a link",
      "_posts/2020-08-14-dsplab1.md",
      "```bash", "```bash\n# see [nothing](#no-such-heading)", False),
@@ -138,6 +136,24 @@ def main():
         fails.append("duplicate numbering model is wrong: %r" % (out,))
     print("  ok   duplicate headings numbered a, a-1, b, a-2")
 
+    # Keep underscore coverage independent of lesson titles.
+    fixture_source = ('---\nlayout: page\ntitle: Link check fixture\n'
+                      'permalink: /link-check-fixture/\n---\n'
+                      '## Test_heading\n\n[Example](#test_heading)\n')
+    with tempfile.NamedTemporaryFile(mode="w+", suffix=".md", dir="pages",
+                                     encoding="utf-8") as fixture:
+        fixture.write(fixture_source)
+        fixture.flush()
+        correct = broken_count()
+        fixture.seek(0)
+        fixture.truncate()
+        fixture.write(fixture_source.replace('(#test_heading)', '(#testheading)'))
+        fixture.flush()
+        if broken_count() <= correct:
+            fails.append("underscore canary: broken fragment was not caught")
+        else:
+            print("  ok   underscore dropped from an id caught")
+
     print("\ncanaries - break it, check the checker notices")
     base = broken_count()
     print("  baseline: %d finding(s)" % base)
@@ -171,7 +187,7 @@ def main():
             print("FAIL: %s" % f)
         return 1
     print("all %d fixtures and %d canaries pass; tree restored"
-          % (len(FIXTURES), len(CANARIES)))
+          % (len(FIXTURES), len(CANARIES) + 1))
     return 0
 
 
