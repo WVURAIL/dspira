@@ -28,8 +28,8 @@ The historical DSPIRA application folder now points to the new software reposito
 GitHub redirects the former hardware repository name. Keep that old name unused so the redirect continues working.
 Moved GitHub files cannot redirect individually. Use their replacement links below or the original commit links in the downloadable map.
 
-The archived `gr-dspira`, `gr-transient`, `cra`, and `dspira-archive` repositories retain historical material.
-They are not places for new classroom contributions. `dspira-lessons` preserves older website addresses and downloads.
+The retired repositories contain forwarding notices. Their files and history are preserved through the active DSPIRA project.
+The lab site handles their old website addresses. See [historical material and recovery packages]({{ '/history/' | relative_url }}).
 
 [Download the link map as JSON]({{ '/repository-links.json' | relative_url }}).
 
