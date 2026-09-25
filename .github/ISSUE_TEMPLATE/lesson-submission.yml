@@ -1,0 +1,34 @@
+name: Lesson or worksheet contribution
+description: Share a draft, correction, or classroom improvement.
+title: "Lesson contribution: "
+body:
+  - type: markdown
+    attributes:
+      value: "This submission is public. For a private draft, email rail@wvu.edu. Do not include student records."
+  - type: textarea
+    id: contribution
+    attributes:
+      label: Activity or correction
+      description: Describe your contribution and include the existing lesson address, if applicable.
+    validations:
+      required: true
+  - type: textarea
+    id: audience
+    attributes:
+      label: Students and preparation
+      description: Include experience level, class time, equipment, and learning objectives.
+  - type: textarea
+    id: materials
+    attributes:
+      label: Draft and supporting materials
+      description: Attach public drafts or share accessible links. Include editable originals and source credits.
+  - type: textarea
+    id: testing
+    attributes:
+      label: Classroom testing
+      description: Describe testing and software versions, or state that the activity has not been tested.
+  - type: input
+    id: credit
+    attributes:
+      label: Public author credit
+      description: How should contributors be credited on the lesson?

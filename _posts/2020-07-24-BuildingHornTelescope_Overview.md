@@ -37,7 +37,7 @@ Why does the horn have these dimensions? How do they relate to observing the 21 
 
          + install GNU Radio 3.8
 
-         + install the program *spectrometer_w_cal.grc* from the Github repository gr-radio_astro
+         + get *spectrometer_w_cal.grc* from the [DSPIRA software guide]({{ '/software/' | relative_url }})
 
 
       * computer with Windows operating system - the GNU Radio and spectrometer_w_cal.grc program can be run from a bootable flash drive

@@ -22,6 +22,16 @@ Lessons include instructions, supporting files, and teacher materials where avai
 
 [Request a telescope kit]({{ '/kits/' | relative_url }}) if equipment access is a barrier.
 
+## Share an activity
+
+[Contribute a lesson or worksheet]({{ '/newpost/' | relative_url }}).
+Use the planning template and email route, or submit a draft through GitHub.
+
+## Get software and hardware
+
+Use the [software guide]({{ '/software/' | relative_url }}) for classroom applications and shared GNU Radio blocks.
+Find board designs and fabrication downloads in the [hardware guide]({{ '/hardware/' | relative_url }}).
+
 ## Find support and background
 
 - [Ask the community]({{ '/forum/' | relative_url }}) for help with equipment or activities.
