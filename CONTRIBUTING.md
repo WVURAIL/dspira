@@ -7,8 +7,8 @@ GitHub is optional for lesson authors.
 ## Repository responsibilities
 
 - `dspira`: lessons, worksheets, teacher guides, small activity code, and website templates.
-- `dspira-software`: classroom telescope applications.
-- `gr-radio_astro`: reusable GNU Radio blocks and related research applications.
+- `dspira-software`: classroom telescope applications and DSPIRA processing blocks.
+- `radio-research-software`: research applications, event detection, and transient experiments.
 - `dspira-hardware`: board designs and fabrication files.
 - `lightwork`: numbered technical memos.
 - `wvurail.github.io`: the lab website.
@@ -30,8 +30,8 @@ system images need a separate download location, linked from the lesson page.
 9. Include author credit and source information. Preserve existing licenses and quoted material.
 10. Open a pull request against `main` and describe the classroom testing performed.
 
-The `wvu` branch feeds staging. A maintainer should apply approved source changes
-there too, and run the combined preview workflow before publication.
+The `main` branch publishes the website after its checks pass.
+Use a local preview when reviewing changes. The former approval preview is archived.
 
 ## Review and publication
 

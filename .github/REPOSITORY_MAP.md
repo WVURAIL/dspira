@@ -5,18 +5,18 @@
 | Repository | Responsibility |
 | --- | --- |
 | dspira | Educational site, lessons, worksheets, teacher guides, small lesson-specific code |
-| dspira-software | The seven extracted classroom telescope applications |
-| gr-radio_astro | Shared GNU Radio blocks and remaining research applications |
+| dspira-software | Seven classroom telescope applications and twelve DSPIRA processing blocks |
+| radio-research-software | Research acquisition, event detection, and transient experiments; formerly gr-radio_astro |
 | dspira-hardware | Physical designs and fabrication files; formerly os_radio_astro_hw |
 | lightwork | Numbered technical memos |
 | wvurail.github.io | Lab website |
-| rail-preview | Staging assembly and automated website checks |
+| rail-preview | Archived approval preview; build tools now belong to wvurail.github.io |
 
-The library's main branch retains only a signpost at examples/DSPIRA. The
-applications have one maintained home in dspira-software/flowgraphs. Their
-extracted directory history and original byte hashes are retained there.
-Do not rename the radio_astro Python module or GNU Radio block identifiers:
-those are the shared runtime interface, not obsolete repository names.
+DSPIRA applications and blocks have one maintained home in dspira-software.
+Migration manifests there record original paths and byte hashes.
+DSPIRA installs `gnuradio.dspira`; research retains `gnuradio.radio_astro`.
+Existing GRC identifiers are preserved so saved flowgraphs can be reopened.
+Regenerate saved flowgraphs after installing the new DSPIRA package.
 
 ## Compatibility policy
 
@@ -24,6 +24,7 @@ The public map is generated from `_data/repository_links.json` and available at
 `/dspira/repository-map/` and `/dspira/repository-links.json`.
 
 - GitHub redirects os_radio_astro_hw to dspira-hardware. Do not reuse the old name.
+- GitHub redirects gr-radio_astro to radio-research-software. Keep that old name unused too.
 - Individual GitHub file moves have no redirect. The map includes replacement
   flowgraph URLs and immutable original commit links.
 - wvurail.github.io serves the old dspira-lessons, dspira-archive, cra, and gr-transient website paths.
@@ -36,8 +37,9 @@ The public map is generated from `_data/repository_links.json` and available at
 
 ## Audit scope
 
-Reviewed the current text in all 24 organization repositories, plus the DSPIRA
-and gr-radio_astro wikis. Production and staging website branches are kept in sync.
+The original audit reviewed text in all 24 organization repositories, plus the DSPIRA
+and gr-radio_astro wikis. The approval preview has since been archived.
+Active websites publish from main; their shared build tools belong to wvurail.github.io.
 Binary attachments were preserved. Search counts below identify repositories that
 contained relevant names before the reorganization; they are not broken-link counts.
 
@@ -77,7 +79,8 @@ The first teacher trial is prepared but has not been conducted.
 
 ## Software validation boundary
 
-The shared library passes its 18 QA tests after extraction. The application
-catalog passes structural checks and matches the original seven file hashes.
-GNU Radio generation exposed pre-existing compatibility errors; they are listed
-in dspira-software/docs/KNOWN_ISSUES.md. No receiver operation was validated here.
+The remaining research package passes nine QA tests.
+DSPIRA's moved implementations retain their original bytes and file notices.
+All seven applications generate and pass syntax checks using the DSPIRA package alone.
+Block checks cover exports, averaging, and single-vector calibration and CSV capture.
+See dspira-software/docs/KNOWN_ISSUES.md for compatibility results and remaining hardware checks.

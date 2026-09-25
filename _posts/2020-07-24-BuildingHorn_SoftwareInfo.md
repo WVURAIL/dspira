@@ -17,4 +17,4 @@ A. [**Install Ubuntu 22.04**]({{ site.baseurl }}/Ubuntu_Installation) - Partitio
 
 B. [**Install *GNU Radio***]({{ site.baseurl }}/GNURadio_Installation) - Install *GNU Radio* on a computer.
 
-C. [**Install gr-radio_astro**]({{ site.baseurl }}/gr_radio_astro_Installation) - Install the shared GNU Radio blocks. Then download the classroom applications from the [software guide]({{ '/software/' | relative_url }}).
+C. [**Install DSPIRA software**]({{ site.baseurl }}/install-software/) - Install the processing blocks and classroom applications together. Find compatibility information from the [software guide]({{ '/software/' | relative_url }}).

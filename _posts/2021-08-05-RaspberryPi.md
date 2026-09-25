@@ -23,7 +23,7 @@ Raspberry Pis are inexpensive. Newer models can handle the GNU Radio signal proc
       - [Prerequisites](#prerequisites)
     - [Post OS Installation actions](#post-os-installation-actions)
       - [Interacting with the Raspberry Pi](#interacting-with-the-raspberry-pi)
-      - [Installing gr-radio_astro](#installing-gr-radio_astro)
+      - [Installing DSPIRA software](#installing-dspira-software)
 
 
 ## Supported Raspberry Pi Devices
@@ -92,9 +92,9 @@ _NOTE_: Firstly, for Ubuntu desktop a monitor and mouse and keyboard is required
     
     
 
-#### Installing gr-radio_astro
+#### Installing DSPIRA software
 
-[Installing gr-radio_astro]({{ site.baseurl }}/gr_radio_astro_Installation){: .btn .btn-wvu-blue target="_blank"}
+[Installing DSPIRA software]({{ site.baseurl }}/install-software/){: .btn .btn-wvu-blue target="_blank"}
 
 Notes: run `volk_profile` after installing everything to make sure GNU Radio is optimized to work on your device.
 

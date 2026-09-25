@@ -76,7 +76,7 @@ Most of what these lessons ask of git is "get a copy" and "get the updates".
 Open a terminal, move to wherever you want the copy to live, and:
 
 ```bash
-git clone https://github.com/WVURAIL/gr-radio_astro.git
+git clone https://github.com/WVURAIL/dspira-software.git
 ```
 
 That makes a directory named after the repository, containing everything.
@@ -131,18 +131,18 @@ Do exactly that, with your own name and email, then run `git stash` and
 
 ## Updating the GNU Radio blocks
 
-The full sequence for picking up new versions of `gr-radio_astro`:
+The full sequence for picking up new versions of `dspira-software`:
 
 ```bash
-cd gr-radio_astro
-git pull
-cd build
-cmake ..
-make
-sudo make install
+cd dspira-software
+git pull --ff-only
+cmake -S . -B build -DPYTHON_EXECUTABLE=/usr/bin/python3
+cmake --build build
+ctest --test-dir build --output-on-failure
+sudo cmake --install build
 ```
 
-The [installation lesson]({{ site.baseurl }}/gr_radio_astro_Installation) covers
+The [installation lesson]({{ site.baseurl }}/install-software/) covers
 the first install, including what to do when `cmake` cannot find something.
 
 ## If you want to go further

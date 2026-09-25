@@ -11,7 +11,7 @@ lead: Check compatibility before choosing an installation route or scheduling cl
 The existing telescope lessons describe Ubuntu and GNU Radio with a compatible SDR receiver.
 Check your computer, receiver model, and GNU Radio version together. Installation success alone does not verify receiver operation or calibration.
 
-**Generation checks pass on GNU Radio 3.10.9.2.** All seven applications generate Python successfully with their required block definitions installed.
+**Generation checks pass on GNU Radio 3.10.9.2.** All seven applications generate Python successfully with the DSPIRA blocks installed.
 Generated Python also passes syntax checks. Receiver operation and hardware calibration still need testing.
 Read the [compatibility results and remaining checks](https://github.com/WVURAIL/dspira-software/blob/main/docs/KNOWN_ISSUES.md) before using these applications in class.
 
@@ -21,18 +21,18 @@ Email [rail@wvu.edu](mailto:rail@wvu.edu) with your operating system, GNU Radio 
 
 1. Review [computer requirements]({{ '/HornOperation_computerSystems' | relative_url }}).
 2. Choose [an installation route]({{ '/BuildingHorn_SoftwareInfo' | relative_url }}) appropriate for your computer.
-3. Install [GNU Radio]({{ '/GNURadio_Installation' | relative_url }}) and the [radio astronomy blocks]({{ '/gr_radio_astro_Installation' | relative_url }}).
-4. Download the applications below and open `flowgraphs/spectrometer_w_cal.grc`.
+3. [Install DSPIRA software]({{ '/install-software/' | relative_url }}), including GNU Radio dependencies, processing blocks, and applications.
+4. Open `flowgraphs/spectrometer_w_cal.grc` from your `dspira-software` folder.
 5. Set [your receiver source block]({{ '/Spectrometer_sourceblock_settings' | relative_url }}) and follow [the running instructions]({{ '/HornOperation_runningSpectrometer' | relative_url }}).
 
 Older instructions may target GNU Radio 3.8. Do not assume they apply unchanged to newer releases.
 
-### Application download
+### Software download
 
-[Download the application ZIP](https://github.com/WVURAIL/dspira-software/archive/refs/heads/main.zip){: .btn .btn-wvu-blue}
+[Download DSPIRA software](https://github.com/WVURAIL/dspira-software/archive/refs/heads/main.zip){: .btn .btn-wvu-blue}
 
 **Review compatibility before opening these files.** Extract the ZIP and find the `flowgraphs` folder.
-The shared `radio_astro` blocks are a separate installation required by the telescope applications.
+The download includes the processing blocks and applications. Follow the [installation steps]({{ '/install-software/' | relative_url }}) before opening a flowgraph.
 Install the receiver's GNU Radio plugin too. Osmocom and LimeSDR source blocks come from `gr-osmosdr` and `gr-limesdr`, respectively.
 
 ### Choose where observations are saved
@@ -59,8 +59,7 @@ Use [DSP lesson examples]({{ '/dsp-examples/' | relative_url }}) for signal-proc
 
 ## Contribute or find older files
 
-Application changes belong in [dspira-software](https://github.com/WVURAIL/dspira-software).
-Shared block changes belong in [gr-radio_astro](https://github.com/WVURAIL/gr-radio_astro).
+Application and DSPIRA block changes belong in [dspira-software](https://github.com/WVURAIL/dspira-software).
 Include software versions, receiver details, and test results.
 
 The [repository map]({{ '/repository-map/' | relative_url }}) explains older addresses and releases.

@@ -3,8 +3,8 @@ layout: page
 title: DSPIRA repository map
 permalink: /repository-map/
 eyebrow: Project organization
-lead: Find the current home for lessons, applications, shared software, hardware, and historical material.
-meta_description: "Find current DSPIRA repositories and replacement links. See where classroom software, shared GNU Radio blocks, hardware designs, and lessons are maintained."
+lead: Find the current home for lessons, applications, research software, hardware, and historical material.
+meta_description: "Find current DSPIRA repositories and replacement links. See where classroom software, research software, hardware designs, and lessons are maintained."
 ---
 
 Start with the DSPIRA website for lessons and downloads. Contributors can use this map to find the right source repository.
@@ -14,18 +14,18 @@ Start with the DSPIRA website for lessons and downloads. Contributors can use th
 | Repository | What belongs there |
 | --- | --- |
 | [dspira](https://github.com/WVURAIL/dspira) | Lessons, worksheets, teacher guides, and the educational website |
-| [dspira-software](https://github.com/WVURAIL/dspira-software) | Classroom telescope applications |
-| [gr-radio_astro](https://github.com/WVURAIL/gr-radio_astro) | Shared GNU Radio blocks and other astronomy applications |
+| [dspira-software](https://github.com/WVURAIL/dspira-software) | Classroom applications and all DSPIRA processing blocks |
+| [radio-research-software](https://github.com/WVURAIL/radio-research-software) | Research acquisition, event detection, and transient experiments |
 | [dspira-hardware](https://github.com/WVURAIL/dspira-hardware) | Schematics, board layouts, and fabrication files |
 | [lightwork](https://github.com/WVURAIL/lightwork) | Numbered technical memos |
 | [wvurail.github.io](https://github.com/WVURAIL/wvurail.github.io) | Lab people, research, publications, and contact information |
 
-The classroom applications use the shared blocks without copying them.
-The historical DSPIRA application folder now points to the new software repository.
+Install classroom applications and their blocks together from `dspira-software`.
+Research applications have a separate home in `radio-research-software`.
 
 ## Older names and links
 
-GitHub redirects the former hardware repository name. Keep that old name unused so the redirect continues working.
+GitHub redirects the former hardware name and `gr-radio_astro` repository name. Keep those old names unused so the redirects continue working.
 Moved GitHub files cannot redirect individually. Use their replacement links below or the original commit links in the downloadable map.
 
 The retired repositories contain forwarding notices. Their files and history are preserved through the active DSPIRA project.
@@ -33,6 +33,8 @@ The lab site handles their old website addresses. See [historical material and r
 
 [Download the link map as JSON]({{ '/repository-links.json' | relative_url }}).
 
+<details>
+<summary>Find replacement links for older addresses</summary>
 <div class="table-responsive">
 <table class="table">
 <caption>Previous addresses and their current destinations</caption>
@@ -44,6 +46,7 @@ The lab site handles their old website addresses. See [historical material and r
 </tbody>
 </table>
 </div>
+</details>
 
 ## Contribute in the right place
 

@@ -47,7 +47,7 @@ See the [release and verification records](https://github.com/WVURAIL/dspira/rel
 ## Finding current resources
 
 Use the [repository map]({{ '/repository-map/' | relative_url }}) to find maintained projects.
-The [software guide]({{ '/software/' | relative_url }}) covers classroom applications and shared GNU Radio blocks.
+The [software guide]({{ '/software/' | relative_url }}) covers classroom applications and DSPIRA processing blocks.
 The [hardware guide]({{ '/hardware/' | relative_url }}) covers telescope construction and circuit designs.
 
 GitHub repository links differ from website addresses. Deleting an original repository would remove its GitHub browsing and discussion URLs.

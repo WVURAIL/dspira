@@ -1,18 +1,18 @@
 ---
 layout: post
 date: 2023-06-27
-title: Installing gr-radio_astro on Ubuntu 20.04
-summary:  Details for installing gr-radio_astro on Ubuntu 20.04
+title: Historical GNU Radio 3.8 Setup on Ubuntu 20.04
+summary: Recover the older combined package for an existing GNU Radio 3.8 environment.
 tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Software Setup']
 order: 8
-meta_description: "Install gr-radio_astro on Ubuntu 20.04 for GNU Radio 3.8. Follow the setup and update steps for the DSPIRA radio astronomy software."
+meta_description: "Recover a historical DSPIRA setup on Ubuntu 20.04 with GNU Radio 3.8. Use the preserved gr38 release for an existing telescope environment."
 optional: true
 equipment: "An Ubuntu 20.04 computer with GNU Radio 3.8 and the listed build dependencies."
-preparation: "Use this optional historical route only for the matching environment. Otherwise, follow the current shared-library installation guide."
+preparation: "Use this optional historical route only for the matching environment. Otherwise, follow the current DSPIRA installation guide."
 ---
 
-This historical guide uses the `gr38` release line. Its application paths refer to that preserved version.
+This historical guide uses the frozen `gr38` tag. It preserves the older combined package and its application paths.
 For current software, use the [DSPIRA software guide]({{ '/software/' | relative_url }}).
 
 
@@ -26,11 +26,11 @@ Complete the following steps:
    ```
       sudo apt install gnuradio gr-osmosdr airspy python3-h5py python3-ephem git cmake liborc-0.4-dev -y
    ```
-   3. To clone the repository: in the terminal, type and Enter: `git clone https://github.com/WVURAIL/gr-radio_astro.git`
+   3. To clone the repository: in the terminal, type and Enter: `git clone --branch gr38 https://github.com/WVURAIL/radio-research-software.git gr-radio_astro`
 
    4. Switch to the gr-radio_astro directory: `cd gr-radio_astro`
 
-   5. Switch to the gr-radio_astro 3.8 branch by typing: `git checkout gr38`
+   5. Confirm the historical release by typing: `git describe --tags --exact-match`
 
    6. Make a build directory: `mkdir build`, and then move to it: `cd build`  
       
@@ -62,50 +62,12 @@ Complete the following steps:
          - In a terminal window type `gnuradio-companion`
          - Open the *spectrometer_w_cal.grc* program as follows: 
             
-           `File --> Open --> gr-radio_astros --> examples --> *spectrometer_w_cal.grc* `
+           `File --> Open --> gr-radio_astro --> examples --> DSPIRA --> spectrometer_w_cal.grc `
          - Plug an Airspy radio, with the LNA attached, into the USB port. Run the program by hitting the start triangle ("execute the flowgraph") on the menu bar at top. If no errors occur, you are all set!  
    
-## How to Update files from the gr-radio_astro gr38 Repository
+## Updating an older installation
 
-   1. Open the terminal window.
-      
-   2. From your home directory (cd ), go to the gr-radio_astro folder: `cd gr-radio_astro`
-   
-   3. Type `git status`. Check the "On branch ..." statement at the top. You want to be in the gr38 branch. To get there, type `git checkout gr38`.
-
-   4. If a warning message shows up about local changes made that could overwrite files, type `git stash`.
-
-   5. Type `git status` to check that you are "On branch gr38".
-
-   6. Type `git pull`. 
-      - If a warning message shows up about local changes made that could overwrite files, type `git stash`. 
-      - Then type `git pull` again.
-
-   7. Change to the `build` directory: `cd build`
-
-   8. Type `rm -rf *`. NOTE: Make sure you are in the `build` directory before typing `rm -rf *`!
-
-   9. Then run the following:
-         ```
-      cmake ..
-      sudo make
-      sudo make install
-      ```
-
-   10. The update is complete.
-
-   
-   **To Run the __spectrometer_w_cal.grc__ program in GNU Radio After Updating:**
-   
-   1. In a terminal window type `gnuradio-companion`.
-
-   2. Close any previous version of `spectrometer_w_cal.grc` that might be open in GNU Radio.
-   
-   3. Open the new version of `spectrometer_w_cal.grc` from the folder `/gr-radio_astro/examples/`
-            
-      - under `File` select `Open`; 
-      - Navigate to the` gr-radio_astro` folder.
-      - Under `examples` open `DSPIRA`; then select `spectrometer_w_cal.grc`.
-
-   4. Connect an Airspy SDR to USB. Start the program (click the black triangle at the top center of the ribbon bar.)
-         
+The `gr38` tag is a frozen release, not an update branch.
+Keep existing receiver settings and customized flowgraphs before changing environments.
+For current development, use the [DSPIRA installation guide]({{ '/install-software/' | relative_url }}) with GNU Radio 3.10.
+Do not use `git pull` to update this historical tag.

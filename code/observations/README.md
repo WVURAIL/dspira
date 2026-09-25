@@ -4,7 +4,7 @@ Six scripts convert spectrometer files into sky maps, rotation curves, or plots 
 `dspira` repository, which is being retired.
 
 They read the HDF5 files written by the `hdf5_sink` block in
-[gr-radio_astro](https://github.com/WVURAIL/gr-radio_astro). If you saved with a
+[dspira-software](https://github.com/WVURAIL/dspira-software). If you saved with a
 plain file sink instead, the reshaping recipe in the
 [Observations lesson](https://wvurail.org/dspira/Observations/) covers
 that case.

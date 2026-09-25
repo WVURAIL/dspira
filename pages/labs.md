@@ -30,7 +30,7 @@ program for high school teachers.
 **[Interferometry Using Very Affordable Radio Horn Telescopes](https://indico.phys.vt.edu/event/55/contributions/1314/attachments/1030/1441/CSAAPT_Presentation_F2023_Makous.pdf)**
 — John Makous, Concord University. Sixteen slides introduce two-horn interferometry, the Green Bank setup, and measured fringes. Presented at the [CSAAPT Fall 2023 meeting](https://indico.phys.vt.edu/event/55/timetable/?print=1&view=standard).
 Makous also wrote LightWork Memo 31 and contributed to
-[gr-radio_astro](https://github.com/WVURAIL/gr-radio_astro).
+[the DSPIRA software](https://github.com/WVURAIL/dspira-software).
 
 **[Observing Galactic Neutral Hydrogen Using Radioastronomy](https://meetings-archive.aps.org/eglss/2023/k01/4)**
 — poster, 2023 Spring Meeting of the APS Eastern Great Lakes Section. A former student built this portable DSPIRA telescope. They measured 21 cm column densities and compared them with published values.

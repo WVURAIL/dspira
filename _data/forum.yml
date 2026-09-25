@@ -71,5 +71,5 @@ rooms:
     slug: gnu-radio
     blurb: >-
       GNU Radio and related software-defined radio tools: installing them, the
-      flowgraphs in the lessons, and the gr-radio_astro blocks.
+      flowgraphs in the lessons, and the DSPIRA processing blocks.
     # thread: "dspira/forum/gnuradio/"
