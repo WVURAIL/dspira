@@ -2,23 +2,42 @@
 layout: default
 ---
 {%- comment -%}
-A plain content page. `hide_title: true` suppresses the heading for pages that
-render their own (the front page does).
+A plain content page on the WVU Design System: a blue page-head band (optional
+`eyebrow`, the title, optional `lead`), then the markdown in the 16-of-24
+reading column. `hide_title: true` suppresses the band for pages that render
+their own heading — a page that sets it must supply the page's one h1 itself.
+
+The wrapper class "prose" stays: the residual stylesheet targets it for images,
+tables and figures in the markdown.
 {%- endcomment -%}
 {%- unless page.hide_title %}
-<div class="page-head">
-   <div class="container container--narrow">
-      {%- if page.eyebrow %}<p class="eyebrow">{{ page.eyebrow }}</p>{% endif %}
-      <h1>{{ page.title }}</h1>
-      {%- if page.lead %}<p class="lead">{{ page.lead }}</p>{% endif %}
+<!-- ===================== PAGE HEAD ===================== -->
+<div class="bg-wvu-blue text-white py-6">
+   <div class="container">
+      <div class="row">
+         <div class="col-24 col-lg-16">
+            {%- if page.eyebrow %}
+            <p class="fw-bold text-wvu-gold mb-3">{{ page.eyebrow }}</p>
+            {%- endif %}
+            <h1 class="antonia-light display-4 mb-3">{{ page.title }}</h1>
+            {%- if page.lead %}
+            <p class="fs-5 mb-0">{{ page.lead }}</p>
+            {%- endif %}
+         </div>
+      </div>
    </div>
 </div>
 {%- endunless %}
 
-<div class="section">
-   <div class="container container--narrow">
-      <div class="prose">
-         {{ content }}
+<!-- ===================== CONTENT ===================== -->
+<div class="py-6">
+   <div class="container">
+      <div class="row">
+         <div class="col-24 col-lg-16">
+            <div class="prose">
+               {{ content }}
+            </div>
+         </div>
       </div>
    </div>
 </div>

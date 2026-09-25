@@ -73,7 +73,12 @@ def source_files():
                 "tags/*.md", "all/index.html",
                 "_includes/*.html", "_layouts/*.html"):
         out += glob.glob(pat)
-    return sorted(set(p for p in out if os.path.isfile(p)))
+    # glob joins with the host's separator, so on Windows these come back
+    # with backslashes and the startswith("_includes/") tests in main()
+    # never match - the skip link is then reported as a broken anchor there
+    # and nowhere else. Normalise, so the checker says the same thing on
+    # every host.
+    return sorted(set(p.replace(os.sep, "/") for p in out if os.path.isfile(p)))
 
 
 def front_matter(path):
@@ -265,6 +270,8 @@ def links_in(path, baseurl):
         text = open(path, encoding="utf-8", errors="replace").read()
     except OSError:
         return
+    # Liquid statements can contain HTML strings that are not emitted links.
+    text = re.sub(r"\{%.*?%\}", lambda m: "\n" * m[0].count("\n"), text, flags=re.S)
     in_fence = False
     for i, raw_line in enumerate(text.split("\n"), 1):
         # Fenced code blocks hold examples, not links - the newpost template
@@ -283,9 +290,11 @@ def links_in(path, baseurl):
         # how one of the broken anchors stayed hidden from this checker.
         for m in re.finditer(r"!?\[(?:[^\[\]]|\[[^\[\]]*\])*\]\(\s*([^)\s]+)",
                              line):
-            yield m.group(1), i
+            if "{{" not in m.group(1) and "{%" not in m.group(1):
+                yield m.group(1), i
         for m in re.finditer(r'(?:href|src)\s*=\s*["\']([^"\']+)', line):
-            yield m.group(1), i
+            if "{{" not in m.group(1) and "{%" not in m.group(1):
+                yield m.group(1), i
 
 
 # ---------------------------------------------------------------- checking
@@ -421,7 +430,7 @@ def main():
                 continue
 
             if re.search(r"\.\w{2,5}$", path):     # looks like a file
-                # Jekyll compiles css/style.scss to css/style.css at build
+                # Jekyll compiles css/lessons.scss to css/lessons.css at build
                 # time, so the .css the pages link is real even though only
                 # the .scss is in the repo.
                 scss_twin = path.endswith(".css") and os.path.exists(path[:-4] + ".scss")

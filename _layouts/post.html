@@ -2,6 +2,10 @@
 layout: default
 ---
 {%- comment -%}
+A lesson, on the WVU Design System: a blue page-head band (module eyebrow,
+title, summary), then the breadcrumb, the lesson body, the audience tags, the
+previous/next pager and the tail, all in the 16-of-24 reading column.
+
 Previous/next walk the lesson's own module, in curriculum order. A curriculum is
 read in module order, and the dates are publication dates — several lessons
 share one to the day — so a chronological pager was close to random: "Next"
@@ -13,6 +17,11 @@ through a module is unambiguous.
 Only core Liquid here — one sort and one pass over the sibling list — because
 GitHub Pages runs Jekyll 3.9 and anything newer fails the build silently,
 serving the last good copy of the site.
+
+The `no-print` class marks the navigation furniture (breadcrumb, tags, pager)
+that a printed or save-as-PDF copy of a lesson does not want; the layout's
+print rules hide it. The wrapper class "prose" stays: the residual stylesheet
+targets it for images, tables and figures in the markdown.
 {%- endcomment -%}
 {%- assign module = page.categories | first -%}
 {%- assign siblings = site.categories[module] | sort: 'order' -%}
@@ -23,68 +32,104 @@ serving the last good copy of the site.
    {%- if s.url == page.url %}{% assign found = true %}{% assign takenext = true %}{% endif -%}
    {%- unless found %}{% assign prevpost = s %}{% endunless -%}
 {%- endfor -%}
+{%- assign module_url = module | slugify | prepend: '/categories/' | append: '/' | relative_url -%}
 
-<div class="page-head">
-   <div class="container container--narrow">
-      {%- if module %}
-      <p class="eyebrow">{{ module }}</p>
-      {%- else %}
-      <p class="eyebrow">Lesson</p>
-      {%- endif %}
-      <h1>{{ page.title }}</h1>
-      {%- if page.summary %}<p class="lead">{{ page.summary }}</p>{% endif %}
+<!-- ===================== PAGE HEAD ===================== -->
+<div class="bg-wvu-blue text-white py-6">
+   <div class="container">
+      <div class="row">
+         <div class="col-24 col-lg-16">
+            <p class="fw-bold text-wvu-gold mb-3">
+               {%- if module %}{{ module }}{% else %}Lesson{% endif -%}
+            </p>
+            <h1 class="antonia-light display-4 mb-3">{{ page.title }}</h1>
+            {%- if page.summary %}
+            <p class="fs-5 mb-0">{{ page.summary }}</p>
+            {%- endif %}
+         </div>
+      </div>
    </div>
 </div>
 
-<div class="section">
-   <div class="container container--narrow">
-      <nav class="crumbs" aria-label="Breadcrumb">
-         <a href="{{ '/all/' | relative_url }}">Lessons</a>
-         {%- if module %}
-         <span aria-hidden="true">/</span>
-         <a href="{{ module | slugify | prepend: '/categories/' | append: '/' | relative_url }}">{{ module }}</a>
-         {%- if page.order %}
-         <span aria-hidden="true">/</span>
-         <span>Lesson {{ page.order }} of {{ siblings | size }}</span>
-         {%- endif %}
-         {%- endif %}
-      </nav>
+<!-- ===================== LESSON ===================== -->
+<div class="py-6">
+   <div class="container">
+      <div class="row">
+         <div class="col-24 col-lg-16">
+            <nav class="no-print" aria-label="Breadcrumb">
+               <ol class="breadcrumb small mb-4">
+                  <li class="breadcrumb-item"><a href="{{ '/all/' | relative_url }}">Lessons</a></li>
+                  {%- if module %}
+                  <li class="breadcrumb-item"><a href="{{ module_url }}">{{ module }}</a></li>
+                  {%- if page.order %}
+                  <li class="breadcrumb-item active" aria-current="page">Lesson {{ page.order }} of {{ siblings | size }}</li>
+                  {%- endif %}
+                  {%- endif %}
+               </ol>
+            </nav>
 
-      <article class="prose">
-         {{ content }}
-      </article>
+            <article class="prose">
+               {% include lesson-content.html %}
+            </article>
 
-      {%- if page.tags and page.tags.size > 0 %}
-      <p class="audience">
-         <span>Written for</span>
-         {%- for tag in page.tags %}
-         <a class="tag" href="{{ tag | slugify | prepend: '/tags/' | append: '/' | relative_url }}">{{ tag | replace: '-', ' ' }}</a>
-         {%- endfor %}
-      </p>
-      {%- endif %}
+            {%- if page.tags and page.tags.size > 0 %}
+            {%- comment -%}
+            The audience tags are badges, but they are still real, underlined
+            links: the Design System underlines every link and .badge does not
+            reset that, so nothing here switches it off.
+            {%- endcomment -%}
+            <div class="border-top mt-5 pt-4 no-print">
+               <h2 class="fw-bold fs-6 text-wvu-blue mb-3">Written for</h2>
+               <ul class="list-inline mb-0">
+                  {%- for tag in page.tags %}
+                  <li class="list-inline-item mb-2">
+                     <a class="badge rounded-pill text-bg-wvu-blue fw-normal fs-6"
+                        href="{{ tag | slugify | prepend: '/tags/' | append: '/' | relative_url }}">{{ tag | replace: '-', ' ' }}</a>
+                  </li>
+                  {%- endfor %}
+               </ul>
+            </div>
+            {%- endif %}
 
-      {%- if prevpost or nextpost %}
-      <nav class="pager" aria-label="Lessons in this module">
-         {%- if prevpost %}
-         <a href="{{ prevpost.url | relative_url }}">
-            <span class="dir">&larr; Previous</span>
-            <span class="t">{{ prevpost.title }}</span>
-         </a>
-         {%- endif %}
-         {%- if nextpost %}
-         <a class="next" href="{{ nextpost.url | relative_url }}">
-            <span class="dir">Next &rarr;</span>
-            <span class="t">{{ nextpost.title }}</span>
-         </a>
-         {%- endif %}
-      </nav>
-      {%- endif %}
+            {%- if prevpost or nextpost %}
+            {%- comment -%}
+            Two cards, each one link, so the accessible name is the direction and
+            the title together. "Next" alone sits in the right-hand column, as it
+            did before, so the two never swap sides between lessons.
+            {%- endcomment -%}
+            <nav class="mt-5 no-print" aria-label="Lessons in this module">
+               <div class="row g-3">
+                  {%- if prevpost %}
+                  <div class="col-24 col-md-12">
+                     <a class="card h-100 bg-wvu-not-quite-white text-decoration-none" href="{{ prevpost.url | relative_url }}">
+                        <div class="card-body p-4">
+                           <span class="d-block fw-bold small text-body-secondary mb-2">&larr; Previous</span>
+                           <span class="d-block h5 helvetica-neue-bold text-wvu-blue text-decoration-underline mb-0">{{ prevpost.title }}</span>
+                        </div>
+                     </a>
+                  </div>
+                  {%- endif %}
+                  {%- if nextpost %}
+                  <div class="col-24 col-md-12{% unless prevpost %} offset-md-12{% endunless %}">
+                     <a class="card h-100 bg-wvu-not-quite-white text-decoration-none text-md-end" href="{{ nextpost.url | relative_url }}">
+                        <div class="card-body p-4">
+                           <span class="d-block fw-bold small text-body-secondary mb-2">Next &rarr;</span>
+                           <span class="d-block h5 helvetica-neue-bold text-wvu-blue text-decoration-underline mb-0">{{ nextpost.title }}</span>
+                        </div>
+                     </a>
+                  </div>
+                  {%- endif %}
+               </div>
+            </nav>
+            {%- endif %}
 
-      <p class="post-tail">
-         <a href="{{ module | slugify | prepend: '/categories/' | append: '/' | relative_url }}">
-            {% include icon.html name="arrow-left" %} All {{ siblings | size }} lessons in {{ module }}
-         </a>
-         <span class="post-tail__date">Published {{ page.date | date: site.date_format }}</span>
-      </p>
+            <p class="d-flex flex-wrap justify-content-between align-items-baseline gap-3 mt-5 mb-0">
+               <a href="{{ module_url }}">
+                  {% include icon.html name="arrow-left" %} All {{ siblings | size }} lessons in {{ module }}
+               </a>
+               <span class="small text-body-secondary">Published {{ page.date | date: site.date_format }}</span>
+            </p>
+         </div>
+      </div>
    </div>
 </div>

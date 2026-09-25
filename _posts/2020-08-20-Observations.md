@@ -8,25 +8,21 @@ tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Observing']
 order: 9
 permalink: /Observations/
+meta_description: "Reduce data from a horn radio telescope. Follow DSPIRA examples to map the radio sky and measure the rotation curve of the Milky Way."
 ---
 
 Let's use our telescopes.
 
-This is the lab that comes after the spectrometer works: taking the files it
-saves and getting science out of them. It was DSPIRA's Lab 7, written for the
+Use this lab once the spectrometer works. It shows how to extract scientific results from saved observations. It was DSPIRA's Lab 7, written for the
 summer workshop, and it is the command-line route through the data.
 
 > Looking for the classroom version? The
-> [Velocity Curve of the Milky Way]({{ site.baseurl }}/Astronomy_VelocityCurve_Overview)
-> lesson covers the same rotation-curve measurement with student handouts and a
-> spreadsheet instead of Python. Same physics, different audience. Read that one
+> [Velocity Curve of the Milky Way]({{ site.baseurl }}/Astronomy_VelocityCurve_Overview) lesson covers the same measurement.
+> It uses student handouts and a spreadsheet instead of Python. Same physics, different audience. Read that one
 > if you are teaching this to a class; read this one if you want the pipeline.
 
-The scripts referred to throughout live in
-[`code/observations/`](https://github.com/WVURAIL/dspira/tree/master/code/observations)
-in this repository, together with a
-[README](https://github.com/WVURAIL/dspira/blob/master/code/observations/README.md)
-covering what to install and what each one writes out.
+The scripts are in [`code/observations/`](https://github.com/WVURAIL/dspira/tree/master/code/observations).
+The [README](https://github.com/WVURAIL/dspira/blob/master/code/observations/README.md) explains installation and each script's output.
 
 ---
 
@@ -124,25 +120,22 @@ plot(freq, 10.0*np.log10(spectrum.mean(axis=0)))   # take the log here, for a dB
 
 ## 2. A drift map of the sky
 
-Calibrate first. Take a pointing at the ground — that is your hot load — and a
-pointing at an empty patch of sky for the cold one. That lets you put the data in
+Calibrate first. Point at the ground for the hot load. Use an empty patch of sky for the cold load. That lets you put the data in
 units of temperature, which is what makes separate observations combinable.
 
 ```bash
 python3 convert_to_temperature.py -g gnd.h5 -s sky.h5 -o tsys.pdf
 ```
 
-Then observe. Point the telescope at a fixed spot — south along the meridian is a
-good choice — and record for as long as you can. That is **drift scanning**: you
+Then observe. Point the telescope at a fixed spot and record for as long as possible. South along the meridian works well. That is **drift scanning**: you
 hold still and let the sky turn past you.
 
 After 24 hours you have a full circle of sky at that elevation. Move up by 10
 degrees, about half a beam width, and go again. A few weeks of that maps the
 whole sky.
 
-> **Write down the pointing.** Not in a notebook — in the file. The `pointing`
-> box in the `hdf5_sink` block is the only record of where the telescope was
-> aimed, and the map script needs it. Write azimuth then elevation in degrees,
+> **Write down the pointing.** Not in a notebook — in the file. The `pointing` box in the `hdf5_sink` block is the only record of the telescope's aim.
+> The map script needs this information. Write azimuth then elevation in degrees,
 > like `A180E40`, **before** you start recording.
 >
 > The block ships with `AZ,EL` in that box. That is a placeholder. A file saved
@@ -158,18 +151,15 @@ python3 map_h1_hdf5_drift.py -d ~/my_observation/ -n -79.872 -l 39.659 \
         -s airspy -g tsys_gain.csv -t tsys_Tsys.csv
 ```
 
-`-n` is your longitude, negative if west. `-l` is your latitude. Both default to
-Green Bank. **`-s` is which radio you used** — `airspy`, `airspy-mini`,
-`pluto`, `lime` or `rtlsdr` — and it matters, because they record very
-different amounts of band and the script's frequency windows follow from that.
-Get it wrong and the script tells you rather than handing you an empty map.
-`-g` and `-t` are the calibration files from the previous step — leave
-them off and the map is in raw units instead of temperature.
+`-n` is your longitude, negative if west. `-l` is your latitude. Both default to Green Bank. **`-s` selects your radio**: `airspy`, `airspy-mini`, `pluto`, `lime` or `rtlsdr`. Their recorded bandwidths differ, so this setting determines the script's frequency windows.
+An incorrect setting produces an error instead of an empty map.
+`-g` and `-t` specify the previous step's calibration files.
+Without them, the map uses raw units instead of temperature.
 
 > **If you use an RTL-SDR, check `freq` in the flowgraph before you observe.**
-> It has to be `1420.5e6`, not the default `1419e6`. At 2.4 MHz sample rate the
-> default records 1417.8 – 1420.2 MHz, and the hydrogen line at 1420.4058 MHz
-> is outside that — the telescope works perfectly and records no hydrogen. The
+> It has to be `1420.5e6`, not the default `1419e6`. At a 2.4 MHz sample rate, the default records 1417.8 to 1420.2 MHz.
+> The hydrogen line at 1420.4058 MHz lies outside that band.
+> The telescope works but records no hydrogen. The
 > [source block settings page]({{ site.baseurl }}/Spectrometer_sourceblock_settings)
 > has the full list per radio.
 
@@ -203,11 +193,8 @@ have no hits, so they come out blank. A partial map is supposed to have holes.
 ## 3. The rotation curve of the Milky Way
 
 Use Stellarium or similar to plan. **Stay in quadrant I — galactic longitude
-between 0° and 90°.** The tangent point method below only works where the line
-of sight passes inside the Sun's orbit, and that means \\(|l| < 90°\\).
-(Quadrants II and III still show you that the Galaxy rotates — that is Part 1
-of the classroom lesson — but no line of sight there has a tangent point, so
-they cannot give you a rotation curve this way.)
+between 0° and 90°.** The tangent point method requires a line of sight inside the Sun's orbit. This means \\(|l| < 90°\\).
+(Quadrants II and III reveal galactic rotation, as shown in Part 1 of the classroom lesson. Their lines of sight have no tangent point. They cannot yield a rotation curve with this method.)
 
 Point along the galactic equator, step by 10 degrees, and record 30 seconds to
 5 minutes at each pointing. Record the pointing in the file, as above.
@@ -228,7 +215,7 @@ with \\(f_e\\) the frequency emitted, \\(f_o\\) the frequency observed, and
 \\(c\\) = 300,000 km/s.
 
 You can now turn power against frequency into power against speed relative to
-us. *Does it matter what units the frequency is in?*
+us. **Does it matter what units the frequency is in?**
 
 ![Frequency against radial velocity for neutral hydrogen]({{ site.baseurl }}/images/freq_vs_radial_velocity.png)
 
@@ -237,15 +224,12 @@ us. *Does it matter what units the frequency is in?*
 What we want is how fast hydrogen orbits the galactic centre, as a function of
 how far out it is. What we measure is its speed along one line of sight.
 
-Take the Sun's orbital speed as 200 km/s — current estimates run 180 to 250 —
-at a radius of 8 kpc, give or take a kpc. (The Earth's 30 km/s around the Sun
+Use 200 km/s for the Sun's orbital speed; estimates range from 180 to 250 km/s. Use an orbital radius of 8 kpc, with roughly 1 kpc uncertainty. (The Earth's 30 km/s around the Sun
 matters for a careful measurement. Skip it for now.)
 
 ![The tangent point method]({{ site.baseurl }}/images/galactic_rotation.png)
 
-Use the **tangent point method**. Assume the fastest-moving hydrogen along a
-given line of sight is the parcel closest to the galactic centre, since that is
-where the orbit runs along your line of sight. So take the most extreme velocity
+Use the **tangent point method**. Assume the fastest hydrogen along a sightline lies closest to the galactic center. Its orbital motion follows your line of sight there. So take the most extreme velocity
 you measured — most negative or most positive — at each galactic longitude.
 
 The radius that corresponds to is
@@ -262,32 +246,24 @@ orbital speed.
 
 Plot \\(V_l\\) against \\(R_l\\) and you have a rotation curve for the Milky Way.
 
-*What did you expect it to look like? Compare it against what a galaxy with all
-its mass in the visible disc would give you.*
+**What did you expect it to look like? Compare it against what a galaxy with all
+its mass in the visible disc would give you.**
 
 ---
 
 ## A worked example: the Green Bank Telescope
 
-The 2017 DSPIRA cohort ran the spectrometer they had just built against the
-**Green Bank Telescope** and took a 24-hour drift scan with it. That notebook is
+The 2017 DSPIRA cohort connected their new spectrometer to the **Green Bank Telescope**. They recorded a 24-hour drift scan. That notebook is
 here, with the calibration worked through:
 
-* [GBT drift scan notebook](https://github.com/WVURAIL/dspira/tree/master/code/gbt_drift){: .button}
+* [GBT drift scan notebook](https://github.com/WVURAIL/dspira/tree/master/code/gbt_drift){: .btn .btn-wvu-blue}
 
-The data file is not included — it lives on Green Bank's systems — and the
-notebook is tuned to that one observation: it undoes the GBT's
-intermediate-frequency downconversion, corrects a mis-set clock, and slices
-integration ranges that only exist in that file. Read it as a worked example
-of the method rather than a program to run on your own data — its README says
-exactly what to change. Comparing a horn telescope's spectrum against a 100 m
+The data file remains on Green Bank's systems and is not included. This notebook reverses that observation's intermediate-frequency downconversion and corrects a clock error. It also selects integration ranges specific to that file. Read it as a worked example. Before applying it to your data, follow the README's instructions for adapting it. Comparing a horn telescope's spectrum against a 100 m
 dish's is worth the detour.
 
 ## Where this lab stops
 
-The original version of this lab listed three more sections — beam pattern
-measurement, horn improvements, and combining multiple horns — as headings with
-nothing under them. They were never written.
+The original lab had three empty sections: beam pattern measurement, horn improvements, and combining multiple horns. They were never written.
 
 Two of the three are covered elsewhere on this site:
 

@@ -7,6 +7,7 @@ tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Software Setup']
 order: 3
 permalink: /CommandLine_and_Git/
+meta_description: "Learn the Linux terminal commands and Git steps used in DSPIRA lessons. Navigate files, update software, and manage local changes."
 ---
 
 Several lessons here open a terminal and start typing. If that is unfamiliar
@@ -89,8 +90,7 @@ git pull
 ### One rule worth following
 
 **If you change a file in a cloned repository, copy your version somewhere else
-before you pull.** Otherwise git has to reconcile your edits with the incoming
-ones, and that is a conversation you did not want to have today.
+before you pull.** Otherwise, git must reconcile your edits with incoming changes. Resolving those conflicts takes additional work.
 
 ### When `git pull` refuses
 

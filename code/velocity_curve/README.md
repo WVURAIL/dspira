@@ -5,14 +5,12 @@ Code companion to the lesson
 
 | File | What it does |
 |---|---|
-| `galactic_plane_sine_fit.ipynb` | Fits a sine curve to HI Doppler velocity vs. galactic longitude (Part 1, Quadrants II & III) |
+| `galactic_plane_sine_fit.ipynb` | Fits a sine curve to HI Doppler velocity vs. galactic longitude (Part 1, Quadrants II and III) |
 | `quadII_III_velocity_vs_longitude.csv` | Sample dataset — replace with your class's measurements |
 
 ## Using it with your own data
 
-Open `quadII_III_velocity_vs_longitude.csv`, replace the rows with your measurements
-(one row per pointing: galactic longitude in degrees, velocity in km/s), and re-run the
-notebook from the top. No code changes needed.
+Open `quadII_III_velocity_vs_longitude.csv` and replace its rows with your measurements. Each pointing needs galactic longitude in degrees and velocity in km/s. Rerun the notebook from the top. No code changes needed.
 
 ## Running it
 
@@ -25,8 +23,5 @@ Verified against numpy 2.x / scipy 1.17 / matplotlib 3.10.
 
 ## Provenance
 
-Originally written for the DSPIRA programme and previously kept in the (now archived)
-`dspira-jupyter` repository, where it sat alongside unrelated JupyterLite demo content
-and was not linked from any lesson. Moved here so it lives with the lesson it belongs
-to. Rewritten to read its data from CSV rather than hard-coding it, and fixed for
-matplotlib 3.5+ (`plt.grid(b=...)` was removed).
+Originally written for DSPIRA, this notebook lived in the now-archived `dspira-jupyter` repository. It appeared alongside unrelated JupyterLite demonstrations and had no lesson links. Moved here so it lives with the lesson it belongs
+to. It now reads data from CSV instead of hard-coding values. It also supports matplotlib 3.5+ (`plt.grid(b=...)` was removed).

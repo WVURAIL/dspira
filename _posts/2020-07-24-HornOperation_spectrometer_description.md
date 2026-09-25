@@ -6,18 +6,19 @@ summary:  Description of the spectrometer_w_cal.grc program features
 tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Observing']
 order: 4
+meta_description: "Explore the controls and displays in the DSPIRA horn spectrometer. Learn what the spectrum, calibration, and data recording settings do."
 ---
 
 The program used to run the telescope is a GNU Radio program called *spectrometer_w_cal.grc*. It is available from the WVURAIL/gr-radio_astro repository in Github. The *spectrometer_w_cal.grc* program has several features to make data collection with the horn telescope user-friendly. Each feature on the display is described below.
 
-Set up the horn and connect the LNA to the Airspy with a cable, and the Airspy to the computer USB.  Then open the spectrometer_w_cal.grc program in GNU Radio. 
+Set up the horn. Cable the LNA to the Airspy, then connect the Airspy to the computer's USB port.  Then open the spectrometer_w_cal.grc program in GNU Radio. 
 [This video shows how to set up a horn and start the program.](https://youtu.be/Oo28QCEZe_g) 
 
 You can also watch [this video](https://youtu.be/50B2Uv-SoDY), which describes these user interface features in detail.
 
-### **1.	Features of the *Spectrum* Tab**
+## **1.	Features of the *Spectrum* Tab**
 
-![spectrometer screen](/dspira/images/filtered_nocal.png)
+![spectrometer screen]({{ site.baseurl }}/images/filtered_nocal.png)
 
    * **Graphical Display** Boxes:
 
@@ -41,7 +42,7 @@ You can also watch [this video](https://youtu.be/50B2Uv-SoDY), which describes t
 
    * **Integration Time** options:
 
-        - Because the radio signals being detected are extremely weak, it is necessary for the software to add together (integrate) the signals detected over a period of time. This is the integration time. This averages out the noise in the signal, making the galaxy signal more prominent. The user has the option of setting two different integration times when using this spectrometer. 
+        - The detected radio signals are extremely weak. The software therefore adds signals together, or integrates them, over time. This is the integration time. This averages out the noise in the signal, making the galaxy signal more prominent. The user has the option of setting two different integration times when using this spectrometer. 
 
         - The user can change these settings in the integration variable blocks before starting the program.
 
@@ -55,32 +56,32 @@ You can also watch [this video](https://youtu.be/50B2Uv-SoDY), which describes t
            
            + The default setting for the longer integration time is 10 s. 
 
-   * **Integration Reset** – This resets the data averaging when the long integration time is selected. This is needed if the telescope pointing is changed in the middle of a long integration to assure the spectrum displayed is the average of the new pointing.
+   * **Integration Reset** – This resets the data averaging when the long integration time is selected. Use this when you change the telescope's pointing during a long integration. It ensures the displayed average represents the new pointing.
 
    * **Full or Clipped Spectrum**
 
-       - **Clipped spectrum** – In this display the ends of the spectrum, between 1414 and 1415 MHz and between 1423 and 1424 MHz, are clipped off. This removes the distracting background portions of the spectrum, as discussed in the *The System Background Signal* in the [What Can a Horn Telescope Measure?]({{ site.baseurl }}/HornOperation_Intro) post.
+       - **Clipped spectrum** removes both ends of the spectrum: 1414 to 1415 MHz and 1423 to 1424 MHz. This removes distracting background features. See *The System Background Signal* in [What Can a Horn Telescope Measure?]({{ site.baseurl }}/HornOperation_Intro).
 
 
       - **Full spectrum** – This is self explanatory.
 
    * **Capture Current Spectrum** button
 
-       - The live spectrum being displayed on the main graph can be captured in a .csv text file for easy access later.
+       - Save the main graph's live spectrum in a .csv text file for later use.
 
    * **Write to .csv File**
 
-       - This option enables the spectrum to be written to newly created files once every integration time so that data can be collected without the user’s presence.
+       - This option saves the spectrum to a new file after each integration period. It supports unattended data collection.
 
        - See the video [Saving Data Using the *spectrometer_w_cal.grc* Program](https://youtu.be/dWX0rRU99Z8).
 
 
-### **2.	Features of the *System Temp/Gain* Tab**
+## **2.	Features of the *System Temp/Gain* Tab**
 
-   ![System Temp/Gain screen](/dspira/images/sys_T&G.png)
+   ![System Temp/Gain screen]({{ site.baseurl }}/images/sys_T&G.png)
 
    * These graphs are not needed during most telescope runs. They are mainly for those who are interested in the quantitative performance of the telescope.
 
-   * **System Temperature Spectrum** – This graph is an indication of the amount of signal that is coming from the telescope system itself. 
+   * **System Temperature Spectrum** shows the signal contributed by the telescope system itself. 
 
    * **Gain** – This is the factor that is used by the spectrometer to scale the detected signal into known astronomical units.

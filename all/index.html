@@ -2,10 +2,12 @@
 layout: default
 title: Lessons
 permalink: /all/
+meta_description: "Browse all DSPIRA radio astronomy lessons by module. Find construction guides, receiver setup, observing activities, and signal processing labs."
 ---
 {%- comment -%}
 Every lesson, grouped by module, in curriculum order. This is the only page
-that lists them all.
+that lists them all. Built on the WVU Design System (v3, Bootstrap 5.3 on a
+24-column grid) with stock classes only — no site CSS.
 
 There used to be two: /lesson-modules/ rendered the same set with module
 photographs instead of summaries, which made "Modules" and "All lessons" two
@@ -15,58 +17,105 @@ blurb it carried are at the head of each section below.
 The filter box is progressive enhancement — assets/js/lessons.js reveals it and
 wires it up. With JavaScript off the box never appears and the full list is
 there to read.
+
+Hooks other things depend on, kept exactly as written:
+  * class="module-toc__head" (one per module) and class="lesson-card" (one per
+    lesson) are counted by CI (.github/workflows/build.yml); the Design System
+    classes sit on the elements inside them.
+  * data-lesson-filter, .filter__input, .filter__count, [data-module],
+    .lesson-card[data-search] are what lessons.js queries.
 {%- endcomment -%}
-<div class="page-head">
+<div class="bg-wvu-blue text-white py-6">
    <div class="container">
-      <p class="eyebrow">Browse</p>
-      <h1>Every lesson</h1>
-      <p class="lead">
-         All {{ site.posts | size }} of them, in {{ site.data.modules | size }} modules,
-         each in the order it is meant to be worked through. Start at the top of module
-         one, or filter for what you need.
-      </p>
-      <div class="filter" data-lesson-filter hidden>
-         <label class="filter__label" for="lesson-filter">Filter lessons</label>
-         <input class="filter__input" id="lesson-filter" type="search" autocomplete="off"
-                placeholder="Type to filter by title, summary or module" />
-         <p class="filter__count" role="status" aria-live="polite"></p>
+      <div class="row">
+         <div class="col-24 col-lg-16">
+            <p class="fw-bold text-wvu-gold mb-3">Browse</p>
+            <h1 class="antonia-light display-4 mb-4">Every lesson</h1>
+            <p class="fs-4 mb-0">
+               All {{ site.posts | size }} of them, in {{ site.data.modules | size }} modules,
+               each in the order it is meant to be worked through. Start at the top of module
+               one, or filter for what you need.
+            </p>
+         </div>
+      </div>
+      <div class="row mt-4" role="search" data-lesson-filter hidden>
+         <div class="col-24 col-md-14 col-lg-10">
+            <label class="form-label" for="lesson-filter">Filter lessons</label>
+            <input class="form-control form-control-lg filter__input" id="lesson-filter" type="search"
+                   autocomplete="off" spellcheck="false" aria-controls="lesson-results"
+                   placeholder="Type to filter by title, summary or module">
+            <p class="filter__count small mt-2 mb-0" role="status" aria-live="polite" aria-atomic="true" style="min-height:1.5em"></p>
+            <a href="#lesson-results" class="text-white" data-results-link hidden>Go to results</a>
+            <button type="button" class="btn btn-outline-light ms-3" data-clear-filter hidden>Clear filter</button>
+         </div>
       </div>
    </div>
 </div>
 
+<div id="lesson-results" tabindex="-1" aria-label="Lesson results">
+{%- comment -%}
+Sections alternate white and not-quite-white the way the old page cycled
+section--tint; the cards take the other one so they stand off their band. The
+counter is incremented only for a module that actually renders, so a module
+with no lessons cannot break the alternation. The "Module N" number stays on
+forloop.index so it matches the front page and the category pages.
+{%- endcomment -%}
+{%- assign shown = 0 %}
 {%- for m in site.data.modules %}
 {%- assign lessons = site.categories[m.category] | sort: 'order' %}
 {%- if lessons and lessons.size > 0 %}
+{%- assign shown = shown | plus: 1 %}
+{%- assign odd = shown | modulo: 2 %}
+{%- if odd == 1 %}
+{%- assign band = '' %}
+{%- assign card_bg = 'bg-wvu-not-quite-white' %}
+{%- else %}
+{%- assign band = ' bg-wvu-not-quite-white' %}
+{%- assign card_bg = 'bg-white' %}
+{%- endif %}
 {%- assign slug = m.category | slugify %}
 {%- assign href = slug | prepend: '/categories/' | append: '/' | relative_url %}
-<div class="section {% cycle 'plain', 'section--tint' %}" data-module="{{ m.category }}">
+<div class="py-6{{ band }}" data-module="{{ m.category }}">
    <div class="container">
       <div class="module-toc__head">
-         <a href="{{ href }}" tabindex="-1" aria-hidden="true">
-            <img class="module-toc__img" loading="lazy" decoding="async"
-                 width="800" height="500"
-                 src="{{ slug | prepend: '/images/modules/' | append: '.jpg' | relative_url }}"
-                 alt="{{ m.alt }}" />
-         </a>
-         <div>
-            <p class="module__n">Module {{ forloop.index }} &middot;
-               {{ lessons | size }} lesson{% if lessons.size != 1 %}s{% endif %}</p>
-            <h2><a href="{{ href }}">{{ m.category }}</a></h2>
-            <p class="module__blurb">{{ m.blurb }}</p>
+         <div class="row align-items-center mb-4">
+            <div class="col-24 col-md-8 col-lg-6 mb-3 mb-md-0" data-module-intro>
+               <img class="img-fluid rounded" loading="lazy" decoding="async"
+                    width="800" height="500"
+                    src="{{ slug | prepend: '/images/modules/' | append: '.jpg' | relative_url }}"
+                    alt="{{ m.alt }}">
+            </div>
+            <div class="col-24 col-md-16 col-lg-18">
+               <p data-module-intro class="fw-bold small text-wvu-blue mb-2">Module {{ forloop.index }} &middot;
+                  {{ lessons | size }} lesson{% if lessons.size != 1 %}s{% endif %}</p>
+               <h2 class="antonia-light display-6 mb-2"><a class="text-decoration-none" href="{{ href }}">{{ m.category }}</a></h2>
+               <p data-module-intro class="fs-5 text-body-secondary mb-0">{{ m.blurb }}</p>
+            </div>
          </div>
       </div>
 
-      <ol class="lesson-grid lesson-grid--numbered">
+      {%- comment -%}
+      The number is printed by Liquid from the lesson's own `order`, not by a
+      CSS counter or the list marker: the filter hides cards, and a counter
+      would renumber whatever is left, so searching would quietly renumber the
+      curriculum. row-cols-* sizes the <li>s as columns without a class on them.
+      {%- endcomment -%}
+      <ol class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 list-unstyled mb-0">
          {%- for post in lessons %}
          <li class="lesson-card" data-search="{{ post.title | downcase }} {{ post.summary | downcase }} {{ m.category | downcase }}">
-            <span class="lesson-card__n" aria-hidden="true">{% if post.order < 10 %}0{% endif %}{{ post.order }}</span>
-            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-            {%- if post.summary %}<p>{{ post.summary }}</p>{% endif %}
+            <div class="card h-100 {{ card_bg }}">
+               <div class="card-body p-4">
+                  <span class="d-block fw-bold small text-wvu-blue mb-2" aria-hidden="true">{% if post.order < 10 %}0{% endif %}{{ post.order }}</span>
+                  <h3 class="h5 helvetica-neue-bold"><a class="text-decoration-none" href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+                  {%- if post.summary %}<p class="mb-0 text-body-secondary">{{ post.summary }}</p>{% endif %}
+               </div>
+            </div>
          </li>
          {%- endfor %}
       </ol>
-      <p class="no-matches" hidden>No lessons in this module match.</p>
    </div>
 </div>
 {%- endif %}
 {%- endfor %}
+
+</div>

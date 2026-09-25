@@ -1,24 +1,78 @@
-<a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header">
-   <div class="container">
-      <a class="brand" href="{{ '/' | relative_url }}">
-         DSPIRA <small>Lessons</small>
-      </a>
+{%- comment -%}
+The Design System masthead and site navigation, after the lab site's layout.
+The lockup is one link to the lessons home; the small line names the
+University and the lab, the bold line names this site.
 
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"
-              aria-label="Menu">{% include icon.html name="menu" %}</button>
+Navigation comes from _data/nav.yml. The entry flagged `home: true` is the
+link back to the lab site, which is a sibling GitHub Pages site on the same
+host, so it is root-absolute on purpose (no relative_url) and rendered last,
+pushed to the far side on large screens with an arrow so it reads as leaving.
 
-      <nav class="site-nav" id="site-nav" aria-label="Main">
-         {%- for item in site.data.nav %}
-         {%- if item.home %}
-         <a class="nav-home" href="{{ item.url }}">
-            {% include icon.html name="arrow-left" %} {{ item.text }}
-         </a>
-         {%- else %}
-         <a href="{{ item.url | relative_url }}"
-            {% if page.url == item.url %}aria-current="page"{% endif %}>{{ item.text }}</a>
-         {%- endif %}
-         {%- endfor %}
-      </nav>
+.github/workflows/build.yml counts js-wvu-site-nav-items on the front page to
+prove the navigation rendered; the Design System's script needs the same
+class, so the two cannot drift apart.
+{%- endcomment -%}
+<a href="#main" class="visually-hidden-focusable">Skip to main content</a>
+
+<header class="bg-wvu-blue">
+   <div class="wvu-masthead">
+      <div class="container">
+         <div class="row">
+            <div class="align-self-center col-24 col-lg">
+               <a href="{{ '/' | relative_url }}" class="d-flex position-relative my-4 align-items-center justify-content-center justify-content-lg-start text-decoration-none text-white">
+                  <span class="visually-hidden">West Virginia University</span>
+                  <img class="me-4" src="https://static.wvu.edu/global/images/logos/wvu/flying-wv-r-small--1.0.0.svg"
+                       height="70px" width="65px" alt="Flying WV">
+                  <div class="border-start border-1 border-white py-1 ps-4">
+                     <span class="d-block mb-2 small">West Virginia University &middot; Radio Astronomy Instrumentation Laboratory</span>
+                     <span class="mt-n2 helvetica-neue-bold fs-4 lh-1">
+                        <span class="d-block">DSPIRA</span>
+                     </span>
+                  </div>
+               </a>
+            </div>
+         </div>
+      </div>
    </div>
+
+   <nav aria-label="Main navigation" id="nav-primary"
+        class="position-relative wvu-site-nav navbar navbar-expand-lg p-0 navbar-dark w-100 bg-black"
+        style="--bs-bg-opacity:.15">
+      <div class="container">
+         {%- comment %}
+         Below the lg breakpoint the Design System hides .wvu-site-nav__items
+         until its script adds is-opened; this button is the DS's own toggle
+         markup, class for class, so that script drives it. Without JavaScript
+         the footer still lists every route.
+         {% endcomment %}
+         <button aria-controls="wvu-site-nav__items" aria-expanded="false" type="button"
+                 class="wvu-site-nav__toggle js-wvu-site-nav-toggle border-0 bg-transparent text-white position-relative ps-0 pe-3 d-flex d-lg-none align-items-center">
+            <span aria-hidden="true" class="wvu-hamburger js-wvu-hamburger">
+               <span class="wvu-hamburger__line wvu-hamburger__line--top js-wvu-hamburger__line--top"></span>
+               <span class="wvu-hamburger__line wvu-hamburger__line--middle"></span>
+               <span class="wvu-hamburger__line wvu-hamburger__line--bottom js-wvu-hamburger__line--bottom"></span>
+            </span>
+            <span class="js-wvu-site-nav-toggle-text">Open Menu</span>
+         </button>
+         <ul id="wvu-site-nav__items" class="wvu-site-nav__items js-wvu-site-nav-items position-static list-unstyled d-lg-flex align-items-lg-center flex-lg-wrap mb-0">
+            {%- for item in site.data.nav %}
+            {%- unless item.home %}
+            <li class="open position-relative d-lg-flex">
+               <a class="nav-link text-white px-3 py-3 fw-normal flex-grow-1" href="{{ item.url | relative_url }}"
+                  {%- if page.url == item.url %} aria-current="page"{% elsif item.url != "/" and page.url contains item.url %} aria-current="true"{% endif %}>{{ item.text }}</a>
+            </li>
+            {%- endunless %}
+            {%- endfor %}
+            {%- for item in site.data.nav %}
+            {%- if item.home %}
+            <li class="open position-relative d-lg-flex ms-lg-auto">
+               <a class="nav-link text-white px-3 py-3 fw-normal flex-grow-1 d-flex align-items-center" href="{{ site.lab_url }}{{ item.url }}">
+                  <span class="me-2 d-inline-flex" aria-hidden="true">{% include icon.html name="arrow-left" %}</span>{{ item.text }}
+               </a>
+            </li>
+            {%- endif %}
+            {%- endfor %}
+         </ul>
+      </div>
+   </nav>
 </header>

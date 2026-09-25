@@ -6,6 +6,7 @@ summary:  Details of horn telescope software installation on a computer
 tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Software Setup']
 order: 2
+meta_description: "Choose a software setup for your horn radio telescope. Compare Ubuntu installation options and find the GNU Radio tools used by DSPIRA."
 ---
 
 Complete the following steps as needed:

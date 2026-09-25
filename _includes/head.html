@@ -1,14 +1,23 @@
 {%- comment -%}
-Third-party requests this page used to make, and why they are gone:
+Third-party requests this page makes, and why:
 
-  Google Fonts (Merriweather, Lato)  -> the typefaces are self-hosted in
-                                        assets/fonts/, matching the lab site.
-  Font Awesome 5.13 from cdnjs       -> replaced by _includes/icon.html, a few
-                                        hundred bytes of inline SVG.
+  Typekit (use.typekit.net)          -> the WVU Design System's typefaces. The
+                                        self-hosted Inter / Instrument Serif /
+                                        JetBrains Mono files the old stylesheet
+                                        shipped were deleted with it; the
+                                        Design System sets the type.
+  The Design System CSS and menu script are pinned local assets. Their source,
+  build commands, and license are in assets/wvu-design-system/README.md.
+
   MathJax 2.7.9 from cdnjs           -> about a megabyte, previously loaded on
-                                        all the lessons. Six contain maths, so
-                                        it now loads only where the page sets
+                                        all the lessons. Seven contain maths, so
+                                        it loads only where the page sets
                                         `usemathjax: true`.
+
+Not made: the Font Awesome Pro kit the Design System's docs list is
+account-bound and 403s from any non-allowlisted origin, so icons are inline SVG
+from _includes/icon.html, a few hundred bytes. Typekit is not domain-locked at
+the network layer.
 
 The single-dollar inline delimiter is gone too. It was matching prices in the
 parts lists — "$30 ... $54" turned everything between them into an equation.
@@ -16,25 +25,108 @@ parts lists — "$30 ... $54" turned everything between them into an equation.
 {%- comment %}Category pages set `category`, not `title` — without the extra
 fallback every one of them shares the bare site title, which fails a reader
 navigating by window title (WCAG 2.4.2).{% endcomment -%}
-{%- assign page_title = page.title | default: page.category | default: site.title | strip_html -%}
-{%- assign page_desc = page.meta_description | default: page.summary | default: site.description -%}
+{%- comment %}Tag pages set `tag`, category pages set `category`, and neither sets
+`title` — without both fallbacks every one of them shipped the bare site title,
+which fails a reader navigating by window title (WCAG 2.4.2). The tag is
+hyphenated in the data ("School-Teachers"), so it is spaced here the same way
+the tag page spaces its own heading.{% endcomment -%}
+{%- assign tag_title = page.tag | replace: "-", " " -%}
+{%- assign page_title = page.title | default: page.category | default: tag_title | default: site.title | strip_html -%}
+{%- assign page_desc = page.meta_description | default: site.data.page_descriptions[page.path] | default: page.summary -%}
+{%- unless page_desc -%}
+   {%- if page.tag -%}
+      {%- capture page_desc -%}Browse DSPIRA radio astronomy lessons for {{ tag_title | downcase }}. Find activities on telescope construction, software, observing, and the radio sky.{%- endcapture -%}
+   {%- else -%}
+      {%- capture page_desc -%}{{ page_title }}: find DSPIRA radio astronomy resources from West Virginia University, with links to lessons, hardware guides, and community discussions.{%- endcapture -%}
+   {%- endif -%}
+{%- endunless -%}
+{%- assign title_text = page.meta_title | default: page_title -%}
+{%- assign full_title = title_text | append: ' · DSPIRA' -%}
+{%- if full_title.size < 40 -%}
+   {%- assign full_title = title_text | append: ' · DSPIRA Radio Astronomy Lessons at WVU' -%}
+{%- endif -%}
 <head>
    <meta charset="utf-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1" />
-   <title>{% if page.title or page.category %}{{ page.title | default: page.category | strip_html }} &middot; {% endif %}{{ site.title | strip_html }}</title>
+   <meta name="theme-color" content="#002855" />
+   <title>{{ full_title | escape }}</title>
 
    <meta name="description" content="{{ page_desc | strip_html | xml_escape }}" />
+   {%- comment %}
+   One robots meta, never two. page.noindex is per page; site.noindex_all is
+   set only by a staging build's config override, so a review copy under
+   another path never gets indexed — a project site cannot serve the host's
+   robots.txt, so this is the only tool for it. Either one wins outright;
+   otherwise a page may still ask for something other than "all" with
+   meta_robots.
+   {% endcomment -%}
+   {%- if page.noindex or site.noindex_all %}
+   <meta name="robots" content="noindex" />
+   {%- else %}
    <meta name="robots" content="{{ page.meta_robots | default: 'all' }}" />
+   {%- endif %}
    <link rel="canonical" href="{{ page.url | absolute_url }}" />
    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}" />
-   <link rel="shortcut icon" href="{{ '/favicon.ico' | relative_url }}" />
+   <link rel="icon" href="{{ '/favicon-wvu.ico' | relative_url }}" sizes="any" />
 
-   <link rel="preload" as="font" type="font/woff2" crossorigin
-         href="{{ '/assets/fonts/inter-var.woff2' | relative_url }}" />
-   <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}" />
+{%- comment %}
+Start the required font connection before its stylesheet
+is parsed. Only pages with an above-the-fold background photo preload it.
+{% endcomment -%}
+<link rel="preconnect" href="https://use.typekit.net" crossorigin>
+{%- if page.preload_image %}
+<link rel="preload" as="image" href="{{ page.preload_image | relative_url }}" fetchpriority="high">
+{%- endif %}
+   <link rel="stylesheet" href="https://use.typekit.net/yys7vri.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://use.typekit.net/yys7vri.css"></noscript>
+   <link rel="stylesheet" href="{{ '/assets/wvu-design-system/site.min.css' | relative_url }}" />
+   {%- comment %}
+   What little the Design System does not cover — compiled by Jekyll from
+   css/lessons.scss. Loaded last so it can override.
+   {% endcomment %}
+   <link rel="stylesheet" href="{{ '/css/lessons.css' | relative_url }}" />
+
+   {%- comment %}
+   The only inline CSS. Print: drop the site chrome. SCM confirmed for the lab
+   site (Adam Glenn, 2 Sep 2026) that there is no requirement for the masthead
+   or footer on a printed page, so a printed or save-as-PDF copy of any page is
+   just its content. The selectors are scoped to the shell's own masthead, nav
+   and footer so a page's own <header> is not swallowed. .no-print is what the
+   inner layouts put on the breadcrumb, the pager and the audience line; the
+   filter on /all/ is a control paper cannot use.
+
+   Teachers print these lessons for students, so the printed page is a real
+   target, and the old stylesheet's print intent carries over: black text on
+   plain paper. The Design System's blue and off-white bands lose their
+   background and their white and gold text turns black — browsers drop
+   background colours when printing, which would otherwise leave a white title
+   on a white page — and the deep bands shrink so the title is not alone at
+   the top of the sheet. The pagination rules keep a heading with what follows
+   it and an image or list item on one page; .row is deliberately not in that
+   list, because a lesson's whole body is one .row, and a block taller than a
+   page that must not break gets pushed to a fresh page first, leaving a blank
+   one behind. Everything about the content itself — tables and code that must
+   not scroll, video embeds, an off-site link followed by its address — is in
+   css/lessons.scss, section 09.
+   {% endcomment -%}
+   <style>
+      @media print {
+         body > header, #nav-primary, body > footer, .no-print, [data-lesson-filter] { display: none !important; }
+         main { padding: 0 !important; }
+         body { font-size: 11pt; line-height: 1.45; color: #000; }
+         main [class*="bg-"] { background: none !important; }
+         main .text-white, main .text-wvu-gold, main .text-wvu-blue { color: #000 !important; }
+         main .py-6 { padding-top: 0 !important; padding-bottom: 1.5rem !important; }
+         a { color: inherit; text-decoration: none; }
+         h2, h3 { break-after: avoid; page-break-after: avoid; }
+         li, img { break-inside: avoid; page-break-inside: avoid; }
+         p, li { orphans: 2; widows: 2; }
+         @page { size: letter; margin: 0.7in; }
+      }
+   </style>
 
    <meta property="og:type" content="{% if page.date %}article{% else %}website{% endif %}" />
-   <meta property="og:title" content="{{ page_title | xml_escape }}" />
+   <meta property="og:title" content="{{ title_text | xml_escape }}" />
    <meta property="og:description" content="{{ page_desc | strip_html | xml_escape }}" />
    <meta property="og:url" content="{{ page.url | absolute_url }}" />
    <meta property="og:site_name" content="{{ site.title | xml_escape }}" />
@@ -44,9 +136,31 @@ navigating by window title (WCAG 2.4.2).{% endcomment -%}
    <meta property="og:image:alt" content="DSPIRA - Digital Signal Processing in Radio Astronomy" />
    <meta name="twitter:card" content="summary_large_image" />
 
+   <script type="application/ld+json">
+   {
+      "@context": "https://schema.org",
+      "@type": "{% if page.layout == 'post' %}LearningResource{% else %}WebPage{% endif %}",
+      "name": {{ page_title | jsonify }},
+      "description": {{ page_desc | strip_html | strip | jsonify }},
+      "url": {{ page.url | absolute_url | jsonify }},
+      "inLanguage": "en-US",
+      "isPartOf": {
+         "@type": "WebSite",
+         "name": "DSPIRA Radio Astronomy Lessons",
+         "url": {{ '/' | absolute_url | jsonify }}
+      },
+      "publisher": {
+         "@type": "Organization",
+         "name": "West Virginia University Radio Astronomy Instrumentation Laboratory",
+         "url": {{ site.lab_url | append: '/' | prepend: site.url | jsonify }}
+      }
+   }
+   </script>
+
    {%- if page.usemathjax %}
    <script>
       window.MathJax = {
+         messageStyle: "none",
          tex2jax: {
             /* Deliberately no ['$','$'] — the lessons quote prices. */
             inlineMath: [["\\(", "\\)"]],

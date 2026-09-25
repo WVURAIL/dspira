@@ -5,13 +5,6 @@ things in the repository that somebody else wrote. The MIT text below applies to
 the Bootstrap and Font Awesome stylesheets named in it.
 
 
-FONTS — SIL Open Font License 1.1
----------------------------------
-assets/fonts/ holds four font files, three families: Instrument Serif, Inter and
-JetBrains Mono. The OFL requires that its text and each copyright notice travel
-with the font files, so both sit next to them, in assets/fonts/OFL.txt.
-
-
 BOOTSTRAP 3.3.6 and 3.3.7
 -------------------------
   Copyright 2011-2015 Twitter, Inc.   (3.3.6)
@@ -23,10 +16,12 @@ Inlined by nbconvert into the two exported notebooks, about 246 KB apiece:
   pages/I_Q_quadrature_sampling.html
   code/gbt_drift/gbt_rendered_2017.html
 
-Nothing else on the site uses it. css/style.scss is hand-written and depends on
-no framework, which is exactly why those two pages are served outside the site
-layout: their copy of Bootstrap redefines .container, .btn, body and h1, all of
-which the design system also uses.
+Nothing else on the site uses it. The site itself is styled by the WVU Design
+System (a Bootstrap 5.3 fork) linked from designsystem.wvu.edu and not
+redistributed here, plus the hand-written css/lessons.scss — which is exactly
+why those two pages are served outside the site layout: their copy of
+Bootstrap 3 redefines .container, .btn, body and h1, all of which the Design
+System also uses.
 
 
 FONT AWESOME 4.2.0 — stylesheet only
@@ -49,8 +44,12 @@ written by hand, and none of those four has a line left in the repository.
 
 They are removed rather than left in out of politeness. A notice file that lists
 code which is not here is wrong in the same way as one that omits code which is,
-and this file was managing both at once — the fonts above were being
-redistributed with no notice at all.
+and this file was managing both at once — the four font files the old
+stylesheet self-hosted (Instrument Serif, Inter, JetBrains Mono, under the SIL
+Open Font License) were being redistributed with no notice at all. The notice
+this file then carried for them went in turn when the site moved to the WVU
+Design System in 2026: its typefaces are served by Typekit, and no font file is
+in the repository any more.
 
 
 MIT License

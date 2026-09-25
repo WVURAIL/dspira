@@ -23,7 +23,7 @@ Every test restores the tree, so a run leaves the checkout exactly as it found
 it. Python 3 standard library only.
 """
 
-import os, re, shutil, subprocess, sys
+import os, re, shutil, subprocess, sys, tempfile
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -106,6 +106,18 @@ def broken_count():
 def main():
     os.chdir(ROOT)
     fails = []
+
+    template = """{% assign parts = content | split: '<a href="#fnref:' %}
+<a href="#fnref:{{ target }}">Return</a>
+<a href="{{ site.baseurl }}/all/">Lessons</a>
+<a href="#real-heading">Heading</a>
+"""
+    with tempfile.NamedTemporaryFile(mode="w", suffix=".html", encoding="utf-8") as fixture:
+        fixture.write(template)
+        fixture.flush()
+        links = list(C.links_in(fixture.name, BASEURL))
+    if links != [("/dspira/all/", 3), ("#real-heading", 4)]:
+        fails.append("Liquid link extraction: %r" % (links,))
 
     print("fixtures - ids against the real kramdown output")
     for src, want in FIXTURES:

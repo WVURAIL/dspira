@@ -3,9 +3,28 @@
 {% include head.html %}
 <body>
    {% include header.html %}
-   <main id="main">
-      {{ content }}
+   <main id="main" tabindex="-1">
+{%- comment %}
+   kramdown labels every footnote <li> role="doc-endnote" and its list
+   role="doc-endnotes". ARIA 1.2 deprecated doc-endnote (and
+   doc-biblioentry), so an accessibility checker reports one violation per
+   footnote — four lessons carry them. The role adds nothing a list item
+   does not already convey, and there is no kramdown switch for it, so it
+   is stripped from the rendered page here. Move doc-noteref from the sup
+   wrapper to its link, where that role is valid. Keep doc-endnotes and
+   doc-backlink on their existing elements.
+   {% endcomment -%}
+      {%- assign accessible_content = content | replace: ' role="doc-endnote"', '' | replace: ' role="doc-biblioentry"', '' | replace: ' role="doc-noteref"', '' | replace: 'class="footnote"', 'class="footnote" role="doc-noteref"' -%}
+      {% include footnote-links.html html=accessible_content %}
    </main>
+   {%- comment -%}
+   The Design System's own navigation script, loaded after <main> exactly as
+   the lab site loads it. It self-initialises on the js-wvu-site-nav-* classes
+   in header.html: toggles is-opened and aria-expanded on the menu button, swaps
+   "Open Menu" / "Close Menu", and closes on Escape. The site's own script,
+   lessons.js, is loaded from head.html with defer and stays there.
+   {%- endcomment %}
+   <script src="{{ '/assets/wvu-design-system/navigation.min.js' | relative_url }}" defer></script>
    {% include footer.html %}
 </body>
 </html>

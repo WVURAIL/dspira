@@ -127,7 +127,17 @@ def settle(page, browser):
             page.close()
         except Exception:                                # noqa: BLE001
             pass
-        return browser.new_page()
+        return new_page(browser)
+
+# Use a browser user agent for external fonts and media. Design System CSS is local.
+BROWSER_UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+              " (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36")
+
+
+def new_page(browser):
+    """Create a page with a browser user agent."""
+    return browser.new_page(user_agent=BROWSER_UA)
+
 
 def baseurl_from_config(path="_config.yml"):
     try:
@@ -369,7 +379,7 @@ def run_sweep(site, base, fine=False, quiet=False, report=None):
 
     with sync_playwright() as pw:
         browser = pw.chromium.launch()
-        page = browser.new_page()
+        page = new_page(browser)
         try:
             plan = {u: set(COARSE) for u in pages}
             for u in (pages if fine else [chrome_page]):

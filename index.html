@@ -1,77 +1,113 @@
 ---
 layout: default
 title: DSPIRA lessons
-meta_description: >
-  Free lessons on building and using a horn radio telescope — the antenna, the
-  amplifier, the software-defined radio and the astronomy. Written by high
-  school teachers for the WVU RAIL DSPIRA program.
+preload_image: /images/hero/night-horns.webp
+
+meta_description: "Build and use a horn radio telescope with free DSPIRA lessons from WVU. Explore antennas, electronics, software, observing, and astronomy."
 ---
 {%- comment -%}
+The front page on the WVU Design System (v3, Bootstrap 5.3 on a 24-column
+grid). Stock DS / Bootstrap classes only — no site CSS — following the lab
+site's home page, which is the model for this port.
+
 The module cards carry the first three lesson titles as well as the blurb. The
 old front page listed module names only, so a reader could not see what was
 actually in the curriculum without two more clicks — and the page those clicks
 led to was a copy of this grid. Showing the first few titles is what makes the
 front page a table of contents again.
+
+CI (.github/workflows/build.yml) counts `class="module"` on this page against
+_data/modules.yml, so that attribute stays exactly as written on the <li>; the
+Design System classes go on the card inside it.
 {%- endcomment -%}
-<div class="page-head page-head--hero">
-   <div class="container">
-      <p class="eyebrow">Digital Signal Processing in Radio Astronomy</p>
-      <h1>Build a radio telescope. Point it at the Galaxy.</h1>
-      <p class="lead">
-         {{ site.posts | size }} free lessons. You fold the antenna out of insulation
-         board, solder your own amplifier, and then use the thing to measure how fast
-         the Milky Way turns. The high school teachers who wrote these did all of it
-         first.
-      </p>
-      <p class="btn-row">
-         <a class="btn btn--primary" href="{{ '/categories/horn-construction/' | relative_url }}">
-            Start learning {% include icon.html name="arrow" %}
-         </a>
-         <a class="btn btn--ghost" href="{{ '/teach/' | relative_url }}">Teach with DSPIRA</a>
-         <a class="btn btn--ghost" href="{{ '/all/' | relative_url }}">See all {{ site.posts | size }} lessons</a>
-      </p>
+
+{%- assign lesson_count = site.posts | size %}
+{%- assign first_module = site.data.modules | first %}
+{%- assign first_slug = first_module.category | slugify %}
+{%- assign first_href = first_slug | prepend: '/categories/' | append: '/' | relative_url %}
+
+<!-- ===================== HERO ===================== -->
+{%- comment -%}
+The photograph is images/hero/night-horns.jpg, a row of horn telescopes under
+the stars at Green Bank — the whole programme in one frame — under the same
+blue overlay the lab home page uses. bg-wvu-blue on the outer wrapper is what
+the contrast check measures the white text against: the gradient is only an
+image layer, so the type never depends on the photograph for its contrast.
+{%- endcomment -%}
+<div class="wvu-bg-size-cover position-relative bg-wvu-blue text-white"
+     style="background-image:url('{{ '/images/hero/night-horns.webp' | relative_url }}');background-position:center 62%">
+   <div class="wvu-z-index-content position-relative py-6"
+        style="background:linear-gradient(to bottom, rgba(0,32,91,.86), rgba(0,32,91,.94))">
+      <div class="container">
+         <div class="row">
+            <div class="col-24 col-lg-16">
+               <p class="fw-bold text-wvu-gold mb-3">
+                  Digital Signal Processing in Radio Astronomy
+               </p>
+               <h1 class="antonia-light display-3 mb-4">Build a radio telescope. Point it at the Galaxy.</h1>
+               <p class="fs-4 mb-4">
+                  {{ lesson_count }} free lessons. Fold the antenna from insulation board and solder your amplifier. Then use the telescope to measure the Milky Way's rotation. The high school teachers who wrote these did all of it
+                  first.
+               </p>
+               <a href="{{ first_href }}" class="btn btn-wvu-gold me-2 mb-2">
+                  Start learning <span class="ms-1">{% include icon.html name="arrow" %}</span>
+               </a>
+               <a href="{{ '/teach/' | relative_url }}" class="btn btn-light me-2 mb-2">Teach with DSPIRA</a>
+               <a href="{{ '/all/' | relative_url }}" class="btn btn-light mb-2">See all {{ lesson_count }} lessons</a>
+            </div>
+         </div>
+      </div>
    </div>
 </div>
 
-<div class="section">
+<!-- ===================== THE SEVEN MODULES ===================== -->
+<div class="py-6">
    <div class="container">
-      <div class="section-head">
-         <h2>The seven modules</h2>
-         <p class="lead">
-            Start at the top and they take you from a flat sheet of insulation board to
-            a velocity curve of the Milky Way. Or take any one on its own; most stand up
-            as a couple of weeks of classroom material.
-         </p>
+      <div class="row mb-5">
+         <div class="col-24 col-lg-16">
+            <p class="fw-bold text-wvu-blue mb-2">Curriculum</p>
+            <h2 class="antonia-light display-5">The seven modules</h2>
+            <p class="fs-5 text-body-secondary mb-0">
+               Work through the modules to progress from a flat insulation board to a Milky Way velocity curve. Or take any one on its own; most stand up
+               as a couple of weeks of classroom material.
+            </p>
+         </div>
       </div>
 
-      <ol class="module-grid">
+      {%- comment -%}
+      row-cols-* sizes the <li>s as columns without a class on them, which is
+      what lets the wrapper keep the bare class="module" the build counts.
+      {%- endcomment -%}
+      <ol class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 list-unstyled mb-0">
          {%- for m in site.data.modules %}
          {%- assign lessons = site.categories[m.category] | sort: 'order' %}
          {%- if lessons and lessons.size > 0 %}
          {%- assign slug = m.category | slugify %}
          {%- assign href = slug | prepend: '/categories/' | append: '/' | relative_url %}
          <li class="module">
-            <a class="module__media" href="{{ href }}" tabindex="-1" aria-hidden="true">
-               <img loading="lazy" decoding="async" width="800" height="500"
+            <div class="card h-100 bg-wvu-not-quite-white">
+               <img class="card-img-top" loading="lazy" decoding="async" width="800" height="500"
                     src="{{ slug | prepend: '/images/modules/' | append: '.jpg' | relative_url }}"
-                    alt="{{ m.alt }}" />
-            </a>
-            <div class="module__body">
-               <p class="module__n">Module {{ forloop.index }}</p>
-               <h3><a href="{{ href }}">{{ m.category }}</a></h3>
-               <p class="module__blurb">{{ m.blurb }}</p>
-               <ul class="module__lessons">
-                  {%- for post in lessons limit: 3 %}
-                  <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-                  {%- endfor %}
-               </ul>
-               <a class="module__more" href="{{ href }}">
-                  {%- if lessons.size > 3 -%}
-                  All {{ lessons | size }} lessons {% include icon.html name="arrow" %}
-                  {%- else -%}
-                  Open the module {% include icon.html name="arrow" %}
-                  {%- endif -%}
-               </a>
+                    alt="{{ m.alt }}">
+               <div class="card-body d-flex flex-column p-4">
+                  <p class="fw-bold small text-wvu-blue mb-2">Module {{ forloop.index }}</p>
+                  <h3 class="h4 helvetica-neue-bold"><a class="text-decoration-none" href="{{ href }}">{{ m.category }}</a></h3>
+                  <p class="text-body-secondary">{{ m.blurb }}</p>
+                  <ul class="list-unstyled mb-4">
+                     {%- for post in lessons limit: 3 %}
+                     <li class="mb-2"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+                     {%- endfor %}
+                  </ul>
+                  <p class="mt-auto mb-0">
+                     <a class="btn btn-outline-wvu-blue" href="{{ href }}">
+                        {%- if lessons.size > 3 -%}
+                        All {{ lessons | size }} lessons
+                        {%- else -%}
+                        Open the module
+                        {%- endif %} <span class="ms-1">{% include icon.html name="arrow" %}</span>
+                     </a>
+                  </p>
+               </div>
             </div>
          </li>
          {%- endif %}
@@ -80,103 +116,131 @@ front page a table of contents again.
    </div>
 </div>
 
-<div class="section section--tint">
+<!-- ===================== WHAT THE TELESCOPE IS ===================== -->
+<div class="bg-wvu-not-quite-white py-6">
    <div class="container">
-      <div class="split">
-         <div class="prose">
-            <h2>What the telescope is</h2>
+      <div class="row align-items-center">
+         <div class="col-24 col-lg-13 mb-4 mb-lg-0">
+            <h2 class="antonia-light display-6 mb-3">What the telescope is</h2>
             <p>
-               A horn telescope has three parts: the <strong>antenna</strong>, a pyramidal
-               horn folded from foil-faced insulation board; the <strong>stand</strong>,
-               built from dimensional lumber; and the <strong>back-end electronics</strong>,
-               a low-noise amplifier and a software-defined radio dongle. Parts run to a
-               few hundred dollars, and everything can be sourced from a hardware store and
-               a couple of online suppliers.
+               A horn telescope has three parts. The <strong>antenna</strong> is a pyramidal horn folded from foil-faced insulation board. The <strong>stand</strong> uses dimensional lumber. The <strong>back-end electronics</strong> combine a low-noise amplifier with a software-defined radio dongle. Parts cost a few hundred dollars. A hardware store and a couple of online suppliers provide everything needed.
             </p>
-            <p>
-               Pointed at the sky, it detects the 21&nbsp;cm line of neutral hydrogen —
-               enough to map the hydrogen in the Milky Way and measure how fast the Galaxy
-               turns.
+            <p class="mb-0">
+               It detects neutral hydrogen's 21 cm line in the sky. Use this signal to map hydrogen in the Milky Way and measure the galaxy's rotation.
             </p>
          </div>
-
-         <figure class="split__figure">
-            <img loading="lazy" decoding="async" width="1000" height="780"
-                 src="{{ '/images/programme/horn-on-stand.jpg' | relative_url }}"
-                 alt="A pyramidal horn antenna of foil-faced insulation board, mounted on a
-                      wooden cradle and stand in a field." />
-            <figcaption>The whole instrument: horn, cradle, stand and feed can.</figcaption>
-         </figure>
+         <div class="col-24 col-lg-10 offset-lg-1">
+            <figure class="figure mb-0">
+               <img class="figure-img img-fluid rounded" loading="lazy" decoding="async"
+                    width="1000" height="780"
+                    src="{{ '/images/programme/horn-on-stand.jpg' | relative_url }}"
+                    alt="A pyramidal horn antenna of foil-faced insulation board, mounted on a wooden cradle and stand in a field.">
+               <figcaption class="figure-caption text-body">The whole instrument: horn, cradle, stand and feed can.</figcaption>
+            </figure>
+         </div>
       </div>
    </div>
 </div>
 
-<div class="section">
+<!-- ===================== WHERE THESE CAME FROM ===================== -->
+{%- comment -%}
+Image on the left this time. The prose stays first in the source and the
+columns swap with order-lg-*, so a screen reader and the print stylesheet
+still meet the words before the picture.
+{%- endcomment -%}
+<div class="py-6">
    <div class="container">
-      <div class="split split--reverse">
-         <div class="prose">
-            <h2>Where these came from</h2>
+      <div class="row align-items-center">
+         <div class="col-24 col-lg-13 offset-lg-1 order-lg-2 mb-4 mb-lg-0">
+            <h2 class="antonia-light display-6 mb-3">Where these came from</h2>
             <p>
-               DSPIRA was a National Science Foundation Research Experiences for Teachers
-               site at West Virginia University, run with the
-               <a href="https://greenbankobservatory.org/">Green Bank Observatory</a>. Over
-               three summers, fifteen high school teachers built these telescopes, learned
-               the signal processing behind them, observed with them at Green Bank, and then
-               wrote these lessons from what they had done.
+               DSPIRA was a National Science Foundation Research Experiences for Teachers site at West Virginia University. It ran with the <a href="https://greenbankobservatory.org/">Green Bank Observatory</a>. Over three summers, fifteen high school teachers built these telescopes and learned their signal processing. They observed at Green Bank, then wrote lessons based on their experience.
             </p>
-            <p>
+            <p class="mb-0">
                The cohort programme concluded in 2019. The lessons are still here, still
-               free, and still maintained. <a href="/education/">More
+               free, and still maintained. <a href="{{ site.lab_url }}/education/">More
                about the programme</a>.
             </p>
          </div>
-
-         <figure class="split__figure">
-            <img loading="lazy" decoding="async" width="1200" height="724"
-                 src="{{ '/images/programme/green-bank-night.jpg' | relative_url }}"
-                 alt="The Milky Way over the Green Bank Observatory site, with DSPIRA
-                      written in the air by a hand-held light." />
-            <figcaption>Green Bank, West Virginia, where the cohorts observed.</figcaption>
-         </figure>
+         <div class="col-24 col-lg-10 order-lg-1">
+            <figure class="figure mb-0">
+               <img class="figure-img img-fluid rounded" loading="lazy" decoding="async"
+                    width="1200" height="724"
+                    src="{{ '/images/programme/green-bank-night.jpg' | relative_url }}"
+                    alt="The Milky Way over the Green Bank Observatory site, with DSPIRA written in the air by a hand-held light.">
+               <figcaption class="figure-caption text-body">Green Bank, West Virginia, where the cohorts observed.</figcaption>
+            </figure>
+         </div>
       </div>
    </div>
 </div>
 
-<div class="section">
+<!-- ===================== ALSO HERE ===================== -->
+{%- comment -%}
+/lightwork/ is a sibling GitHub Pages site on the same host — root-absolute on
+purpose, not through relative_url. Everything else here is this site's own.
+{%- endcomment -%}
+<div class="bg-wvu-not-quite-white py-6">
    <div class="container">
-      <div class="section-head">
-         <h2>Also here</h2>
+      <div class="row mb-5">
+         <div class="col-24 col-lg-16">
+            <p class="fw-bold text-wvu-blue mb-2">Beyond the lessons</p>
+            <h2 class="antonia-light display-5 mb-0">Also here</h2>
+         </div>
       </div>
-      <ul class="lesson-grid">
-         <li class="lesson-card">
-            <h3><a href="{{ '/kits/' | relative_url }}">Telescope kits</a></h3>
-            <p>Educators and community organisers can request a starter kit of the parts
-               that are hardest to source — an SDR dongle and a 21&nbsp;cm amplifier.</p>
+      <ul class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 list-unstyled mb-0">
+         <li>
+            <div class="card h-100 bg-white">
+               <div class="card-body p-4">
+                  <h3 class="h5 helvetica-neue-bold"><a class="text-decoration-none" href="{{ '/kits/' | relative_url }}">Telescope kits</a></h3>
+                  <p class="mb-0 text-body-secondary">Educators and community organizers can request a starter kit. It supplies the hardest-to-source parts: an SDR dongle and a 21 cm amplifier.</p>
+               </div>
+            </div>
          </li>
-         <li class="lesson-card">
-            <h3><a href="{{ '/user-levels/' | relative_url }}">Who these are written for</a></h3>
-            <p>Every lesson is tagged for school teachers, students or hobbyists. This is
-               the same {{ site.posts | size }} lessons sorted by who they were written for.</p>
+         <li>
+            <div class="card h-100 bg-white">
+               <div class="card-body p-4">
+                  <h3 class="h5 helvetica-neue-bold"><a class="text-decoration-none" href="{{ '/user-levels/' | relative_url }}">Who these are written for</a></h3>
+                  <p class="mb-0 text-body-secondary">Every lesson is tagged for school teachers, students or hobbyists. This is
+                     the same {{ lesson_count }} lessons sorted by who they were written for.</p>
+               </div>
+            </div>
          </li>
-         <li class="lesson-card">
-            <h3><a href="{{ '/labs/' | relative_url }}">Associate research labs</a></h3>
-            <p>Classrooms and hobbyist groups that have taken this hardware and these
-               lessons and built their own programmes on them.</p>
+         <li>
+            <div class="card h-100 bg-white">
+               <div class="card-body p-4">
+                  <h3 class="h5 helvetica-neue-bold"><a class="text-decoration-none" href="{{ '/labs/' | relative_url }}">Associate research labs</a></h3>
+                  <p class="mb-0 text-body-secondary">Classrooms and hobbyist groups that have taken this hardware and these
+                     lessons and built their own programmes on them.</p>
+               </div>
+            </div>
          </li>
-         <li class="lesson-card">
-            <h3><a href="/lightwork/">LightWork Memos</a></h3>
-            <p>An informal numbered memo series on citizen science with radio telescopes,
-               covering design, construction and operation.</p>
+         <li>
+            <div class="card h-100 bg-white">
+               <div class="card-body p-4">
+                  <h3 class="h5 helvetica-neue-bold"><a class="text-decoration-none" href="/lightwork/">LightWork Memos</a></h3>
+                  <p class="mb-0 text-body-secondary">An informal numbered memo series on citizen science with radio telescopes,
+                     covering design, construction and operation.</p>
+               </div>
+            </div>
          </li>
-         <li class="lesson-card">
-            <h3><a href="{{ '/forum/' | relative_url }}">The forum</a></h3>
-            <p>Questions, build reports and troubleshooting, running on GitHub
-               Discussions. Threads go back to 2020.</p>
+         <li>
+            <div class="card h-100 bg-white">
+               <div class="card-body p-4">
+                  <h3 class="h5 helvetica-neue-bold"><a class="text-decoration-none" href="{{ '/forum/' | relative_url }}">The forum</a></h3>
+                  <p class="mb-0 text-body-secondary">Questions, build reports and troubleshooting, on the project&rsquo;s
+                     GitHub Discussions. Threads go back to 2020.</p>
+               </div>
+            </div>
          </li>
-         <li class="lesson-card">
-            <h3><a href="{{ '/newpost/' | relative_url }}">Contribute a lesson</a></h3>
-            <p>The whole site is Markdown in a public repository. This is how to add
-               your own lesson to it.</p>
+         <li>
+            <div class="card h-100 bg-white">
+               <div class="card-body p-4">
+                  <h3 class="h5 helvetica-neue-bold"><a class="text-decoration-none" href="{{ '/newpost/' | relative_url }}">Contribute a lesson</a></h3>
+                  <p class="mb-0 text-body-secondary">The whole site is Markdown in a public repository. This is how to add
+                     your own lesson to it.</p>
+               </div>
+            </div>
          </li>
       </ul>
    </div>

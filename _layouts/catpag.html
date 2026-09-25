@@ -11,69 +11,101 @@ are publication dates — six of the DSP lessons share one to the day — so
 sorting by them put the two-horn interferometer first in Horn Construction and
 "Steps for Installing Software on a Computer" last in Software Setup. `order:`
 is set in each lesson's front matter and is the curriculum sequence.
+
+Layout, on the WVU Design System: a blue page-head band with the module
+photograph beside the text, the intro prose (when there is any) in the
+16-of-24 reading column, then the numbered lesson list. The list band is
+not-quite-white when prose precedes it, so the two sections read as two, and
+white when it follows the band directly.
+
+The list item carries the class lesson-card and nothing else, on purpose: the build
+workflow counts that exact attribute on /all/, which uses the same markup. The
+Design System classes go on the card inside it; the list itself is a Bootstrap
+row-cols grid, which sizes its children without a column class on each. The
+two-digit number is printed by Liquid from the lesson's own `order`, not by a
+CSS counter, so that on /all/ the filter cannot renumber the curriculum.
 {%- endcomment -%}
 {%- assign lessons = site.categories[page.category] | sort: 'order' -%}
 {%- assign slug = page.category | slugify -%}
-<div class="page-head page-head--module">
+{%- assign module_info = site.data.modules | where: 'category', page.category | first -%}
+
+<!-- ===================== MODULE HEAD ===================== -->
+<div class="bg-wvu-blue text-white py-6">
    <div class="container">
-      <div class="module-head">
-         <div class="module-head__text">
-            <p class="eyebrow">Module</p>
-            <h1>{{ page.category }}</h1>
-            {%- if page.lead %}<p class="lead">{{ page.lead }}</p>{% endif %}
+      <div class="row align-items-center">
+         <div class="col-24 col-lg-14 mb-4 mb-lg-0">
+            <p class="fw-bold text-wvu-gold mb-3">Module</p>
+            <h1 class="antonia-light display-4 mb-3">{{ page.category }}</h1>
+            {%- if page.lead %}
+            <p class="fs-5 mb-3">{{ page.lead }}</p>
+            {%- endif %}
             {%- if lessons and lessons.size > 1 %}
-            <p class="module-head__count">
+            <p class="fw-bold small mb-0">
                {{ lessons | size }} lessons, in the order they are meant to be worked through
             </p>
             {%- elsif lessons and lessons.size == 1 %}
-            <p class="module-head__count">1 lesson</p>
+            <p class="fw-bold small mb-0">1 lesson</p>
             {%- endif %}
          </div>
-         <img class="module-head__img" loading="lazy" decoding="async"
-              src="{{ slug | prepend: '/images/modules/' | append: '.jpg' | relative_url }}"
-              alt="" width="800" height="500" />
+         <div class="col-24 col-lg-9 offset-lg-1">
+            <img class="img-fluid rounded w-100 object-fit-cover" loading="lazy" decoding="async"
+                 src="{{ slug | prepend: '/images/modules/' | append: '.jpg' | relative_url }}"
+                 alt="{{ module_info.alt | escape }}" width="800" height="500" />
+         </div>
       </div>
    </div>
 </div>
 
 {%- assign body = content | strip_newlines | strip %}
 {%- if body != "" %}
-<div class="section">
+<!-- ===================== INTRO ===================== -->
+<div class="py-6">
    <div class="container">
-      <div class="prose">
-         {{ content }}
+      <div class="row">
+         <div class="col-24 col-lg-16">
+            <div class="prose">
+               {{ content }}
+            </div>
+         </div>
       </div>
    </div>
 </div>
 {%- endif %}
 
-<div class="section {% if body != '' %}section--tint{% endif %}">
+<!-- ===================== LESSONS ===================== -->
+<div class="py-6{% if body != '' %} bg-wvu-not-quite-white{% endif %}">
    <div class="container">
-      <h2>
+      <h2 class="antonia-light display-6 mb-4">
          {%- if lessons %}{{ lessons | size }} lesson{% if lessons.size != 1 %}s{% endif %} in this module
          {%- else %}Lessons{% endif %}
       </h2>
 
       {%- if lessons and lessons.size > 0 %}
-      <ol class="lesson-grid lesson-grid--numbered">
+      <ol class="list-unstyled row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-0">
          {%- for post in lessons %}
          <li class="lesson-card">
-            <span class="lesson-card__n" aria-hidden="true">{% if post.order < 10 %}0{% endif %}{{ post.order }}</span>
-            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-            {%- if post.summary %}<p>{{ post.summary }}</p>{% endif %}
+            <div class="card h-100 {% if body != '' %}bg-white{% else %}bg-wvu-not-quite-white{% endif %}">
+               <div class="card-body p-4">
+                  <p class="fw-bold small text-wvu-blue mb-2" aria-hidden="true">{% if post.order < 10 %}0{% endif %}{{ post.order }}</p>
+                  <h3 class="h5 helvetica-neue-bold mb-2"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+                  {%- if post.summary %}
+                  <p class="text-body-secondary mb-0">{{ post.summary }}</p>
+                  {%- endif %}
+               </div>
+            </div>
          </li>
          {%- endfor %}
       </ol>
       {%- else %}
-      <p class="lead">
+      <p class="fs-5 text-body-secondary">
          Nothing has been filed under this module yet.
          <a href="{{ '/all/' | relative_url }}">Browse all lessons</a> instead.
       </p>
       {%- endif %}
 
-      <p class="btn-row">
-         <a class="button" href="{{ '/all/' | relative_url }}">
-            {% include icon.html name="arrow-left" %} All lessons
+      <p class="mt-5 mb-0 no-print">
+         <a class="btn btn-outline-wvu-blue d-inline-flex align-items-center" href="{{ '/all/' | relative_url }}">
+            {% include icon.html name="arrow-left" %}<span class="ms-2">All lessons</span>
          </a>
       </p>
    </div>

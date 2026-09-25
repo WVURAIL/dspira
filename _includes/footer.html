@@ -1,62 +1,141 @@
-<footer class="site-footer">
-   <div class="container">
-      <div class="footer-grid">
-         <div>
-            <h2>DSPIRA</h2>
-            <p>
-               Free lessons on building and using a horn radio telescope, written by the
-               high school teachers who did it. Produced by
-               <a href="/">WVU RAIL</a> with the
-               <a href="https://greenbankobservatory.org/">Green Bank Observatory</a>,
-               funded by the National Science Foundation.
-            </p>
-         </div>
+{%- comment -%}
+The Design System footer, after the lab site's layout. Two bands: the coal
+band with the site's own columns and the contact block, then the bottom bar
+WVU's Common Elements require on every page — copyright and the four University links.
 
-         <div>
-            <h2>Lessons</h2>
-            <ul>
-               <li><a href="{{ '/all/' | relative_url }}">All lessons</a></li>
-               <li><a href="{{ '/kits/' | relative_url }}">Telescope kits</a></li>
-               <li><a href="{{ '/user-levels/' | relative_url }}">Who these are for</a></li>
-               <li><a href="{{ '/labs/' | relative_url }}">Associate research labs</a></li>
-               <li><a href="{{ '/forum/' | relative_url }}">Ask in the forum</a></li>
-               <li><a href="{{ '/feed.xml' | relative_url }}">RSS feed</a></li>
-            </ul>
-         </div>
+Links to the lab site — "/", "/education/", "/accessibility/" — are
+root-absolute on purpose: it is a sibling GitHub Pages site on the same host,
+so relative_url would wrongly put this site's baseurl in front of them. The
+accessibility statement is the lab's and covers this site too.
+{%- endcomment -%}
+<footer>
+   <div class="py-6 bg-wvu-coal text-white">
+      <div class="container">
+         <div class="row small">
 
-         <div>
-            <h2>Elsewhere</h2>
-            <ul>
-               <li><a href="{{ '/about/' | relative_url }}">About DSPIRA</a></li>
-               <li><a href="/education/">The program</a></li>
-               <li>
-                  <a href="https://github.com/{{ site.github_username }}/dspira">
-                     {% include icon.html name="github" %} Source on GitHub
-                  </a>
-               </li>
-               <li>
-                  <a href="mailto:{{ site.email }}">
-                     {% include icon.html name="mail" %} {{ site.email }}
-                  </a>
-               </li>
-            </ul>
+            <div class="col-md-24 col-xl-8 me-auto mb-5">
+               <div class="mb-4">
+                  <h2 class="helvetica-neue-bold h4"><span class="d-block">DSPIRA</span></h2>
+                  <p class="fs-5">Digital Signal Processing in Radio Astronomy</p>
+                  <p>
+                     Free lessons on building and using a horn radio telescope, written by the
+                     high school teachers who did it. Produced by
+                     <a href="{{ site.lab_url }}/">WVU RAIL</a> with the
+                     <a href="https://greenbankobservatory.org/">Green Bank Observatory</a>,
+                     funded by the National Science Foundation.
+                  </p>
+                  <p>Lessons are free to use.</p>
+
+                  {%- comment %}
+                  The funders, as the old footer showed them. The three logos ship
+                  in their own colourways — the WVU one is dark blue — so each sits
+                  on a white tile rather than vanishing into the coal. The widths
+                  are the logos' own aspect ratios at 34px tall, so the row does
+                  not shift as they arrive.
+                  {% endcomment %}
+                  <ul class="funders list-inline mb-0">
+                     <li class="list-inline-item me-3 mb-2">
+                        <a class="d-inline-block bg-white rounded p-2" href="https://greenbankobservatory.org/">
+                           <img src="{{ '/images/GBO.svg' | relative_url }}" alt="Green Bank Observatory" height="34" width="63" loading="lazy" />
+                        </a>
+                     </li>
+                     <li class="list-inline-item me-3 mb-2">
+                        <a class="d-inline-block bg-white rounded p-2" href="https://www.nsf.gov/">
+                           <img src="{{ '/images/nsf.svg' | relative_url }}" alt="National Science Foundation" height="34" width="34" loading="lazy" />
+                        </a>
+                     </li>
+                     <li class="list-inline-item mb-2">
+                        <a class="d-inline-block bg-white rounded p-2" href="https://www.wvu.edu/">
+                           <img src="{{ '/images/wvu.svg' | relative_url }}" alt="West Virginia University" height="34" width="223" loading="lazy" />
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+
+               {%- comment %}
+               Common Elements requires physical address, mailing address, email,
+               phone and fax on EVERY page. Every value comes from the contact:
+               block in _config.yml, copied from the lab site's — the lab and the
+               lessons share one address. The fax is the department's; the lab
+               has none.
+               {% endcomment -%}
+               <address class="mb-0">
+                  {{ site.contact.building }}<br>
+                  {{ site.contact.street }}<br>
+                  {{ site.contact.mailing }}, {{ site.contact.city }}, {{ site.contact.state }} {{ site.contact.zip }}<br>
+                  Phone <a class="d-inline-block py-1" href="tel:{{ site.contact.phone_tel }}">{{ site.contact.phone }}</a> &middot;
+                  Fax {{ site.contact.fax }} ({{ site.contact.fax_note }})<br>
+                  <a class="d-inline-block py-1" href="mailto:{{ site.email }}">{{ site.email }}</a>
+               </address>
+            </div>
+
+            <div class="col-md-8 col-xl-4 mb-4 mb-md-0">
+               <h2 class="h6 fw-bold text-wvu-gold mb-3">Lessons</h2>
+               <ul class="list-unstyled mb-0 lh-sm">
+                  <li class="mb-3"><a class="text-decoration-none" href="{{ '/all/' | relative_url }}">All lessons</a></li>
+                  <li class="mb-3"><a class="text-decoration-none" href="{{ '/kits/' | relative_url }}">Telescope kits</a></li>
+                  <li class="mb-3"><a class="text-decoration-none" href="{{ '/user-levels/' | relative_url }}">Who these are for</a></li>
+                  <li class="mb-3"><a class="text-decoration-none" href="{{ '/labs/' | relative_url }}">Associate research labs</a></li>
+                  <li class="mb-3"><a class="text-decoration-none" href="{{ '/forum/' | relative_url }}">Ask on GitHub Discussions</a></li>
+                  <li class="mb-3"><a class="text-decoration-none" href="{{ '/feed.xml' | relative_url }}">RSS feed</a></li>
+               </ul>
+            </div>
+
+            <div class="col-md-8 col-xl-4 mb-4 mb-md-0">
+               <h2 class="h6 fw-bold text-wvu-gold mb-3">Elsewhere</h2>
+               <ul class="list-unstyled mb-0 lh-sm">
+                  <li class="mb-3"><a class="text-decoration-none" href="{{ '/about/' | relative_url }}">About DSPIRA</a></li>
+                  <li class="mb-3"><a class="text-decoration-none" href="{{ site.lab_url }}/education/">The program</a></li>
+                  <li class="mb-3">
+                     <a class="text-decoration-none" href="https://github.com/{{ site.github_username }}/dspira">
+                        <span class="me-1" aria-hidden="true">{% include icon.html name="github" %}</span>Source on GitHub
+                     </a>
+                  </li>
+                  <li class="mb-3">
+                     <a class="text-decoration-none" href="mailto:{{ site.email }}">
+                        <span class="me-1" aria-hidden="true">{% include icon.html name="mail" %}</span>{{ site.email }}
+                     </a>
+                  </li>
+                  <li class="mb-3"><a class="text-decoration-none" href="{{ site.lab_url }}/accessibility/">Accessibility</a></li>
+               </ul>
+            </div>
+
+            <div class="col-md-8 col-xl-4">
+               <h2 class="h6 fw-bold text-wvu-gold mb-3">University</h2>
+               <ul class="list-unstyled mb-0 lh-sm">
+                  <li class="mb-3"><a class="text-decoration-none" href="https://lcsee.statler.wvu.edu/">Lane Dept. of CSEE</a></li>
+                  <li class="mb-3"><a class="text-decoration-none" href="https://gwac.wvu.edu/">Center for Gravitational Waves and Cosmology</a></li>
+                  <li class="mb-3"><a class="text-decoration-none" href="https://www.wvu.edu">West Virginia University</a></li>
+               </ul>
+            </div>
          </div>
       </div>
+   </div>
 
-      <div class="funders">
-         <a href="https://greenbankobservatory.org/">
-            <img src="{{ '/images/GBO.svg' | relative_url }}" alt="Green Bank Observatory" height="34" />
-         </a>
-         <a href="https://www.nsf.gov/">
-            <img src="{{ '/images/nsf.svg' | relative_url }}" alt="National Science Foundation" height="34" />
-         </a>
-         <a href="https://www.wvu.edu/">
-            <img src="{{ '/images/wvu.svg' | relative_url }}" alt="West Virginia University" height="34" />
-         </a>
+   <div class="py-5 bg-wvu-coal-subtle text-white position-relative lh-lg">
+      <div class="container wvu-z-index-content py-2">
+         <div class="row small">
+            <div class="col-md-8 mx-auto text-center align-items-center">
+               <div class="d-inline-flex mb-4">
+                  <img class="me-3" src="https://static.wvu.edu/global/images/logos/let-s-go_gold--1.0.0.svg"
+                       loading="lazy" decoding="async" height="54px" width="250px" alt="Let's go! wordmark">
+               </div>
+               <h2 class="visually-hidden">West Virginia University</h2>
+               <p class="mb-1">&copy; {{ 'now' | date: "%Y" }} <a href="https://www.wvu.edu/">West Virginia University</a>.</p>
+
+               {%- comment %}
+               REQUIRED, and absent from both the official Hugo theme and
+               designsystem.wvu.edu's own footer — verified. Do not remove.
+               {% endcomment -%}
+
+               <ul class="list-inline mb-3">
+                  <li class="list-inline-item"><a href="https://about.wvu.edu/wvu-facts">Accreditations</a></li>
+                  <li class="list-inline-item"><a href="https://webstandards.wvu.edu">Web Standards</a></li>
+                  <li class="list-inline-item"><a href="https://www.wvu.edu/privacy">Privacy Notice</a></li>
+                  <li class="list-inline-item"><a href="https://www.wvu.edu/contact-us">Questions or Comments?</a></li>
+               </ul>
+            </div>
+         </div>
       </div>
-
-      <p class="colophon">
-         Lessons are free to use. &copy; {{ site.time | date: "%Y" }} West Virginia University.
-      </p>
    </div>
 </footer>

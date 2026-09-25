@@ -6,19 +6,20 @@ summary:  Exploring how fast we are moving in the Milky Way Galaxy
 tags: ['School-Teachers', 'Students', 'Hobbyists']
 categories: ['Astronomy']
 order: 4
+meta_description: "Calculate how fast Earth and the Sun move through space. Use a classroom activity to compare rotation, orbital motion, and galactic motion."
 ---
 This lesson is designed at three different levels.  Each is mainly after the students being able to determine the speed of the Earth around the Sun.  
 
-[Basic Version](https://drive.google.com/file/d/16kOIq_1x2TTggZz2ao1H7ypAyL5KdrFu/view?usp=sharing){: .button}
-The Basic version gets to the point in the most direct way, still asking the students to search for some info on the Internet.
+[Basic Version](https://drive.google.com/file/d/16kOIq_1x2TTggZz2ao1H7ypAyL5KdrFu/view?usp=sharing){: .btn .btn-wvu-blue}
+The basic version introduces the task directly. Students find some information online.
 
-[Advanced Version](https://drive.google.com/file/d/1LanYTHlZKrMlAsa0Ofu3uTW39kQYeUhb/view?usp=sharing){: .button}
-The Advanced version is asking the students to think a little bit more before searching for information in the Internet.  The outcome is the same.
+[Advanced Version](https://drive.google.com/file/d/1LanYTHlZKrMlAsa0Ofu3uTW39kQYeUhb/view?usp=sharing){: .btn .btn-wvu-blue}
+The advanced version asks students to reason through the problem before searching online. The outcome is the same.
 
-[Physics Version](https://docs.google.com/document/d/15UM0xx6I1MEU0DSmq8ptyxpJwmIa3muMem8us5xnG0E/edit?usp=sharing){: .button}
-Students already exposed to the Universal Law of Gravity and Circular Motion will be able to do this activity.
+[Physics Version](https://docs.google.com/document/d/15UM0xx6I1MEU0DSmq8ptyxpJwmIa3muMem8us5xnG0E/edit?usp=sharing){: .btn .btn-wvu-blue}
+This version suits students familiar with universal gravitation and circular motion.
 
-[Teacher Notes](https://docs.google.com/document/d/1wpvKYHrdWjpbbzHOWjYOjCK95BkYc4WE0pzj2UZ3auI/edit?usp=sharing){: .button}
+[Teacher Notes](https://docs.google.com/document/d/1wpvKYHrdWjpbbzHOWjYOjCK95BkYc4WE0pzj2UZ3auI/edit?usp=sharing){: .btn .btn-wvu-blue}
 
 https://www.youtube.com/watch?v=uZ9iNsjyw7k&feature=youtu.be
 

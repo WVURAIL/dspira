@@ -13,7 +13,37 @@ description: >-
   school teachers of the DSPIRA program at West Virginia University.
 email:       rail@wvu.edu
 author:      WVU Radio Astronomy Instrumentation Laboratory
+
+# Copied verbatim from the lab site's _config.yml (rail-site), comment and all:
+# the lab and the lessons share one address, so keep the two files in step.
+# There is no /contact/ page here; the footer is this block's only reader.
+# The lab's contact block. Rendered in the footer of every page and on
+# /contact/, from this one place so the two cannot disagree. WVU's Common
+# Elements rule wants physical address, mailing address, email, phone and fax
+# on every page. Street and mailing address are the Lane Department's, as
+# published at lcsee.statler.wvu.edu (the AERB is 1220 Evansdale Drive per WVU
+# Facilities Planning — not 1306, which is the Engineering Sciences Building).
+# The phone is the PI's office line, as the old contact page listed it; the
+# fax is the department's, since the lab has none of its own.
+contact:
+  building: Advanced Engineering Research Building, Room 304
+  street: 1220 Evansdale Drive
+  mailing: PO Box 6109
+  city: Morgantown
+  state: WV
+  zip: "26506-6109"
+  phone: "(304) 293-9686"
+  phone_tel: "+13042939686"
+  fax: "(304) 293-8602"
+  fax_note: Lane Department
+
 baseurl:     "/dspira"
+
+# The lab site is a separate site on this host. Links to its education pages
+# use lab_url so preview builds can point back to /rail-preview. LightWork is
+# another GitHub Pages project, not part of the lab preview, and stays at
+# /lightwork/ in both production and staging.
+lab_url: ""
 # THE CUTOVER SWITCH. Serving does not read this (the domain is inherited from
 # the org site's CNAME); canonicals, og:url, the sitemap and the feed do. Change
 # to https://rail.wvu.edu in the same commit as the org repo's CNAME move — the
@@ -34,7 +64,23 @@ sass:
 plugins:
   - jekyll-sitemap
 
+# Both exported notebooks have front matter, conditional noindex for preview
+# builds, and sitemap: false. Keep those fields when regenerating the exports.
+
+# The READMEs under code/, tools/ and images/programme/ carry no front matter,
+# so the github-pages gem's own plugins publish them: as pages
+# (optional-front-matter), at their directory's index (readme-index), in the
+# `page` layout (default-layout), titled from their opening "# Heading"
+# (titles-from-headings). The layout writes that title as the page's h1, so
+# unless the heading is stripped from the body it renders a second time and
+# each of those pages has two h1s — which .github/workflows/build.yml rejects.
+# Stripping changes nothing on GitHub, where the heading is still wanted.
+titles_from_headings:
+  strip_title: true
+
 exclude:
+  - assets/wvu-design-system/README.md
+  - assets/wvu-design-system/LICENSE
   # Belt and braces with .gitignore: if one of these is ever committed again it
   # still must not reach _site, or the artifact upload fails on the colon.
   - "*:Zone.Identifier"
@@ -45,3 +91,6 @@ exclude:
   - README.md
   - CONTRIBUTING.md
   - vendor
+  # Written at the top of the checkout by tools/check_links.py. It is
+  # gitignored, but a build after a local run would otherwise publish it.
+  - link-report.md

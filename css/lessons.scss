@@ -1,0 +1,289 @@
+---
+# Front matter so Jekyll runs this through Sass and serves it as css/lessons.css.
+# Plain CSS in a .scss wrapper: nothing here needs Sass, and it has to compile
+# under the Ruby Sass that GitHub Pages' Jekyll 3.9 still uses.
+---
+
+/* ==========================================================================
+   DSPIRA lessons — residual stylesheet
+
+   The WVU Design System (site.min.css, linked by the layout) styles the
+   masthead, navigation, footer, page heads, cards, buttons and grids. This
+   file is only what the Design System cannot express for lesson content
+   written in Markdown: kramdown emits bare <img>, <table>, <pre>,
+   <blockquote> and <figure> with no class on them, so .img-fluid, .table,
+   .table-responsive, .ratio and .figure-caption are out of reach, and the
+   equivalent has to come from element selectors scoped to .prose — the
+   wrapper the post, page and module layouts put round rendered Markdown.
+
+   Colours, borders and radii are the Design System's own tokens (--bs-*),
+   so the content follows the DS rather than carrying a second palette.
+
+   Contents
+     01. Text and links
+     02. Images, and the inline floats the original pages carried
+     03. Code blocks and blockquotes
+     04. Tables
+     05. Figures
+     06. Form controls in content
+     07. Exported notebooks and video embeds
+     08. Mathematics
+     09. Print
+   ========================================================================== */
+
+/* 01. Text and links ------------------------------------------------------- */
+
+/* Lesson copy carries filenames (spectrometer_w_cal.grc, gr-radio_astro) and
+   bare URLs (CASPER wiki pages, dsprelated articles) wider than a 320px phone.
+   break-word splits a word only when it has nowhere else to go, so ordinary
+   text still wraps between words; a link gets `anywhere` because a 580px URL
+   has no natural break at all and would push the whole page sideways.
+   Underlines need nothing here: the DS reboot underlines every link. */
+/* A lesson title can be a filename with no spaces in it — spectrometer_w_cal.grc,
+   gr_radio_astro_Installation_Ubuntu20 — and the Design System sets a page-head
+   h1 large enough that one such token is wider than a 320px phone. The whole
+   page then slides sideways, which reads as the site being broken rather than as
+   a bug. The old hand-written stylesheet carried this rule and the port dropped
+   it; four lesson pages leaked up to 172px before it came back. break-word only
+   splits a word that has nowhere else to go, so ordinary titles still wrap
+   between words. Headings are not inside .prose, so the rule below does not
+   cover them. */
+h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
+
+.prose { overflow-wrap: break-word; }
+.prose a { overflow-wrap: anywhere; }
+.prose :not(pre) > code { color: inherit; }
+.prose .reversefootnote {
+   display: inline-block;
+   min-width: 24px;
+   min-height: 24px;
+   text-align: center;
+}
+
+/* 02. Images --------------------------------------------------------------- */
+
+/* The DS reboot only sets vertical-align on <img>; .img-fluid is a class
+   Markdown cannot add. Several lessons also hard-code width="300"-style
+   attributes, which height:auto keeps in proportion once max-width bites.
+   The hairline border is for the GNU Radio dialog screenshots: a white window
+   on a white page has no visible edge without one. */
+.prose img {
+   max-width: 100%;
+   height: auto;
+   border: var(--bs-border-width) solid var(--bs-border-color);
+   border-radius: var(--bs-border-radius);
+}
+
+/* Inline floats carried over from the original pages: align="left" on an
+   <img>, and the .img-circle portraits on the Astronomy module page, which
+   float by inline style. Below md they are un-floated — a 170px float beside
+   a 320px column leaves no room for the sentence — with !important because
+   the inline style="float:…" would otherwise win. */
+.prose img[align="left"]  { float: left;  margin: 0.3rem 1.4rem 1rem 0; }
+.prose img[align="right"] { float: right; margin: 0.3rem 0 1rem 1.4rem; }
+.prose .img-circle {
+   width: 170px;
+   height: 170px;
+   object-fit: cover;
+   border-radius: 50%;
+   margin: 0.3rem 1.5rem 1rem 0;
+}
+@media (max-width: 767.98px) {
+   .prose img[align="left"],
+   .prose img[align="right"],
+   .prose .img-circle {
+      float: none !important;
+      display: block;
+      margin: 1.25rem auto;
+   }
+}
+
+/* 03. Code blocks and blockquotes ------------------------------------------ */
+
+/* The reboot gives <pre> its overflow and size but no box, so a code block on
+   white reads as a stray monospace paragraph, and Rouge's spans arrive with no
+   colour theme. A tinted panel with a hairline border is enough to say "type
+   this". */
+.prose pre {
+   padding: 1rem 1.25rem;
+   background: var(--bs-tertiary-bg);
+   border: var(--bs-border-width) solid var(--bs-border-color);
+   border-radius: var(--bs-border-radius);
+}
+
+/* Markdown blockquotes (the observing lesson quotes terminal sessions at
+   length) get only a bottom margin from the reboot; .blockquote is a class
+   kramdown cannot add. The rule is WVU Gold; the text stays the body colour. */
+.prose blockquote {
+   font-style: normal !important; /* Override the Design System blockquote rule. */
+   margin: 1.5rem 0;
+   padding: 0.25rem 0 0.25rem 1.25rem;
+   border-left: 0.25rem solid var(--bs-wvu-gold);
+}
+
+/* 04. Tables --------------------------------------------------------------- */
+
+/* Markdown tables come out as a bare <table>, so the DS's .table is out of
+   reach; this is the same look on element selectors. Parts lists and
+   flowgraph settings run to five or six columns, wider than a phone: below md
+   the table becomes a block that scrolls sideways inside the column instead
+   of dragging the page with it (thead and tbody still share one anonymous
+   table box, so the columns stay aligned). At md and up it is a real table
+   again, so width:100% means something. */
+.prose table {
+   width: 100%;
+   margin-bottom: 1rem;
+   vertical-align: top;
+}
+.prose th,
+.prose td {
+   padding: 0.5rem;
+   text-align: left;
+   vertical-align: top;
+   border-bottom: var(--bs-border-width) solid var(--bs-border-color);
+}
+.prose thead th { border-bottom-width: 2px; }
+@media (max-width: 767.98px) {
+   .prose table {
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+   }
+}
+
+/* 05. Figures -------------------------------------------------------------- */
+
+/* A <figure> written into a lesson's HTML has no .figure class, so the caption
+   gets the .figure-caption treatment by element: smaller and quieter than the
+   body copy, kept with its image. */
+.prose figure { margin: 1.5rem 0; }
+.prose figcaption {
+   margin-top: 0.5rem;
+   font-size: 0.875rem;
+   color: var(--bs-secondary-color);
+}
+
+/* 06. Form controls in content --------------------------------------------- */
+
+/* The contributor guide (/newpost/) has a raw <textarea cols="80"> and an
+   <input> with no .form-control on them. A textarea keeps its `cols` width
+   and will not shrink on its own, which pushed that page 294px off the side
+   of a phone. */
+.prose textarea {
+   display: block;
+   width: 100%;
+   max-width: 100%;
+   font-family: var(--bs-font-monospace);
+}
+.prose input,
+.prose select { max-width: 100%; }
+
+/* 07. Exported notebooks and video embeds ---------------------------------- */
+
+/* Exported Jupyter notebooks ship their own fixed widths; let them scroll
+   inside the column rather than the page. (/iq/ is standalone and does not
+   use this; it is for a notebook pasted into a lesson.) */
+.prose .output_subarea,
+.prose .output_wrapper,
+.prose .rendered_html {
+   max-width: 100%;
+   overflow-x: auto;
+}
+
+/* assets/js/lessons.js turns a bare YouTube URL into
+   <div class="videoWrapper"><iframe>. The DS has .ratio.ratio-16x9 for exactly
+   this, but the class name is the script's, so the same 16:9 box is built
+   here. With JavaScript off the URL stays a plain link and none of this
+   applies. */
+.videoWrapper {
+   position: relative;
+   height: 0;
+   padding-bottom: 56.25%;
+   margin: 1.5rem 0;
+   overflow: hidden;
+   background: var(--bs-wvu-coal);
+}
+.videoWrapper iframe {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   border: 0;
+}
+
+/* The filter on /all/ needs nothing here: it ships with the `hidden`
+   attribute and the DS reboot's [hidden] { display: none !important } keeps
+   it out of the way until lessons.js removes the attribute. */
+
+/* 08. Mathematics ---------------------------------------------------------- */
+
+/* A displayed equation is exactly as wide as the equation. On a 320px phone
+   the convolution integral in the correlation lesson is 465px and the Fourier
+   series in dsplab-fourier1 673px, and with nothing constraining them the
+   whole page slid sideways on four lessons. Scrolling the equation in its own
+   box is the fix: shrinking makes a 20-term expansion unreadable and wrapping
+   mid-equation is worse than either.
+
+   The four class names are MathJax 2.7's, one per output path; MJXp- is the
+   fast preview a reader is left looking at permanently if the CDN is blocked,
+   which on a school network it sometimes is. mjx-container is MathJax 3/4,
+   should head.html ever move to it. The small vertical padding stops a
+   browser that reserves scrollbar space from clipping integral signs and
+   descenders. */
+.MathJax_Display,
+.MathJax_SVG_Display,
+.MJXc-display,
+.MJXp-display,
+mjx-container[display="true"] {
+   display: block;
+   max-width: 100%;
+   overflow-x: auto;
+   overflow-y: hidden;
+   -webkit-overflow-scrolling: touch;
+   padding: 0.2rem 0;
+}
+
+/* 09. Print ---------------------------------------------------------------- */
+
+/* Teachers print lessons for students, so paper is a real target. The
+   layout's own print block drops the masthead, navigation and footer; these
+   rules are about the content. */
+@media print {
+   /* Nothing scrolls on paper. A printed page is narrower than the md
+      breakpoint, so the phone-width scroll boxes above would otherwise apply
+      and cut the content off at the box edge: turn them back into flow, and
+      let code wrap rather than be truncated. */
+   .prose table { display: table; overflow: visible; }
+   .prose pre { white-space: pre-wrap; overflow: visible; }
+   .MathJax_Display,
+   .MathJax_SVG_Display,
+   .MJXc-display,
+   .MJXp-display,
+   mjx-container[display="true"] { overflow: visible; }
+
+   /* Keep a code block, figure, table or quotation on one page, and a heading
+      with what follows it. */
+   .prose pre,
+   .prose figure,
+   .prose table,
+   .prose blockquote { break-inside: avoid; page-break-inside: avoid; }
+   .prose h2,
+   .prose h3,
+   .prose h4 { break-after: avoid; page-break-after: avoid; }
+
+   /* An embedded video is a black rectangle on paper. */
+   .videoWrapper { display: none; }
+
+   /* A link's destination is invisible on paper, so print it after the link
+      text. Off-site links only: the internal ones are navigation a reader
+      cannot follow from a printout anyway. */
+   .prose a[href^="http"]::after {
+      content: " (" attr(href) ")";
+      font-size: 85%;
+      word-break: break-all;
+   }
+}
+
+.wvu-text-letter-spacing-lg { letter-spacing: 3px !important; }

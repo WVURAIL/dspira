@@ -2,9 +2,10 @@
 layout: catpag
 category: Digital Signal Processing
 lead: Sampling, Fourier transforms and filters, built up in GNU Radio from first principles.
+meta_description: "Learn digital signal processing with DSPIRA lectures and GNU Radio labs. Explore sampling, Fourier analysis, filters, and interferometry."
 ---
 
-***Note: These lessons were constructed using GNU Radio 3.8. They should be able to be done on different versions of GNU Radio, but be aware that there might be slight differences in some of the blocks.
+***Note: These lessons were constructed using GNU Radio 3.8. The exercises should work across GNU Radio versions. Some blocks may differ slightly.
 
 **A. Introduction to GNU Radio and Some Basic DSP**
 
@@ -18,6 +19,4 @@ lead: Sampling, Fourier transforms and filters, built up in GNU Radio from first
 
 **B. Quadrature sampling**
 
-* [I/Q sampling, worked through in a notebook]({{ '/iq/' | relative_url }}) — why
-a receiver keeps two channels a quarter cycle apart, and what the imaginary part
-of a sample actually is. Runnable Python with the plots already rendered.
+* [I/Q sampling, worked through in a notebook]({{ '/iq/' | relative_url }}). Learn why a receiver uses channels a quarter-cycle apart and what a sample's imaginary part represents. Runnable Python with the plots already rendered.

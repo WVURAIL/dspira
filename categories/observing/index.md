@@ -2,19 +2,15 @@
 layout: catpag
 category: Observing
 lead: What to do once it is built and the software runs.
+meta_description: "Learn to operate a DSPIRA horn radio telescope. Set up the receiver, calibrate the spectrometer, record data, and work with two-horn observations."
 ---
 
-Once the horn is built and the receiver chain works, these lessons cover using
-it: where to set up, how to point, what a good spectrum looks like, how to
-calibrate against a known load, and how to tell a real signal from interference.
+Once your horn and receiver work, these lessons introduce observing. Learn site selection, pointing, spectrum assessment, calibration against a known load, and interference recognition.
 
-The telescope works in any environment, rural or city, as long as there is open
-sky to look at, and it works in daylight and in rain. Radio astronomy is not a
+The telescope works in rural and urban locations with open sky. It also works in daylight and rain. Radio astronomy is not a
 clear-night hobby.
 
-The module ends with the two things worth doing once single-horn observing is
-routine: reducing a run of drift scans into a map of the sky and a rotation
-curve, and standing a second horn next to the first to make an interferometer.
+The module ends with two extensions to single-horn observing. First, turn drift scans into a sky map and rotation curve. Then add a second horn to make an interferometer.
 
 Two operating procedures are documented as PDFs rather than as lessons:
 

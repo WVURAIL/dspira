@@ -8,13 +8,12 @@ tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Digital Signal Processing']
 order: 8
 permalink: /correlation-and-interferometry/
+meta_description: "Explore convolution, autocorrelation, and cross-correlation. Use GNU Radio labs to understand how two horn telescopes form an interferometer."
 ---
 
 Every measurement a radio telescope makes is a correlation of some kind. A
 single horn correlates a signal with itself; two horns correlate one against
-the other. This lesson works through the three operations that underlie both —
-convolution, autocorrelation and cross-correlation — and then uses them to
-explain what a two-element interferometer actually measures.
+the other. This lesson explains convolution, autocorrelation, and cross-correlation. It then uses these operations to explain what a two-element interferometer measures.
 
 It was written by **Pranav Sanghavi** at this lab in 2018. Everything here can
 be run yourself: the notebook is at
@@ -57,7 +56,7 @@ $$
 \,&=\, \int_{-\infty}^{+\infty} f({\bf x}-{\bf t})\,g({\bf t}) \,d^nt\end{align}
 $$
 
-#### Properties of convolution
+### Properties of convolution
 
 $$
 \begin{align}
@@ -68,9 +67,7 @@ f * (g + h) \,&=\, (f * g) + (f * h) &\qquad (\text{distributivity})\\
 \end{align}
 $$
 
-Convolution smooths. Convolve a rectangle with itself and you get a triangle;
-convolve that with the rectangle again and you are most of the way to a
-Gaussian. That is the central limit theorem happening in front of you — repeated
+Convolution smooths. Convolving a rectangle with itself produces a triangle. Convolving that result with the rectangle again approaches a Gaussian. That is the central limit theorem happening in front of you — repeated
 convolution drives almost anything towards a bell curve.
 
 ![A boxcar convolved with itself, twice]({{ site.baseurl }}/images/interferometry/convolution-boxcar.png)
@@ -120,23 +117,16 @@ R\{f\}(x) \,&=\, (f\star f)(x)\\
 \end{split}\qquad \text{.}
 $$
 
-Note the difference from convolution: cross-correlation does **not** flip one of
-the functions, which is why \\( f \star g \neq g \star f \\) while
-\\( f * g = g * f \\).
+Unlike convolution, cross-correlation does **not** flip a function. Thus, \\( f \star g \neq g \star f \\), while \\( f * g = g * f \\).
 
 Autocorrelation is how a radio telescope finds signal underneath noise. Below
 is a sine wave three times smaller than the noise it sits in — invisible in the
-raw trace. Its autocorrelation still shows the period, because the noise is
-uncorrelated with itself at any non-zero lag and the sine wave is not.
+raw trace. Its autocorrelation still reveals the period. The noise is uncorrelated at nonzero lags, while the sine wave remains correlated.
 
 ![Autocorrelation recovering a period from noise]({{ site.baseurl }}/images/interferometry/autocorrelation.png)
 
 This is not an analogy for what the spectrometer does — it is what the
-spectrometer does. The power spectrum you watch in
-[`spectrometer_w_cal.grc`]({{ site.baseurl }}/spectrometer_w_cal_Instructions)
-is the Fourier transform of the autocorrelation of the voltage coming out of
-the horn. That equivalence is the Wiener–Khinchin theorem, and it is why the
-hydrogen line rises out of a noise floor far larger than itself.
+spectrometer does. [`spectrometer_w_cal.grc`]({{ site.baseurl }}/spectrometer_w_cal_Instructions) displays a power spectrum. This is the Fourier transform of the horn voltage's autocorrelation. The Wiener–Khinchin theorem establishes this equivalence. It explains how the hydrogen line emerges from a much larger noise floor.
 
 [↑ Go to the Top of the Page](#)
 
@@ -161,14 +151,10 @@ need:
 | 15 milliarcseconds | 3,523 km |
 
 The last row is the resolution the VLA reaches routinely. A single dish that
-did the same would be a quarter of the diameter of the Earth. You cannot build
-it, and this is not a matter of budget — it is a matter of the planet not being
-large enough.
+did the same would be a quarter of the diameter of the Earth. A dish of that size is impractical, regardless of budget.
 
 The way out is to stop trying to fill the aperture and instead sample it at a
-few points. Two horns a distance \\( b \\) apart resolve detail on the scale
-\\( \lambda / b \\), with none of the collecting area of a dish that size, but
-all of the resolution.
+few points. Two horns separated by \\( b \\) resolve detail on the scale \\( \lambda / b \\). They match that large dish's resolution, but not its collecting area.
 
 [↑ Go to the Top of the Page](#)
 
@@ -189,13 +175,10 @@ $$R_c= \langle V_1 V_2 \rangle_t$$
 
 $$R_c =\frac{V_0^2}{2}\cos{\omega \tau}=\frac{V_0^2}{2}\cos \Delta \Phi$$
 
-where \\( \tau \\) is the time delay in the signal path. The delay is
-geometric: a source at angle \\( \theta \\) from the zenith reaches one antenna
-before the other, by \\( \tau = b\cos\theta / c \\). As the Earth turns, that
+where \\( \tau \\) is the time delay in the signal path. A source at angle \\( \theta \\) from the zenith reaches one antenna first. The geometric delay is \\( \tau = b\cos\theta / c \\). As the Earth turns, that
 delay sweeps, and the output oscillates — the **fringe**.
 
-This is a cosine correlator. Introduce an artificial phase delay of
-\\( \pi/2 \\) in one of the two signal paths and you get a sine correlator:
+This is a cosine correlator. Add a phase delay of \\( \pi/2 \\) to one signal path to make a sine correlator:
 
 $$V_1=V_{01} \cos (\omega (t + \tau))  \quad V_2 = V_{02} \cos (\omega t + \frac{\pi}{2} )$$
 
@@ -228,41 +211,23 @@ two paths arrive in phase.
 ## The effect of bandwidth
 
 The right panel above is the same interferometer observing across a wide band
-rather than at one frequency. The baseline measured in wavelengths changes
-across the band, so each frequency puts its lobes in a slightly different
-place, and averaging them washes the pattern out — except near
-\\( \theta = 90^\circ \\), where the geometric delay is zero and every
-frequency agrees.
+rather than at one frequency. Across the band, the baseline length in wavelengths changes. Each frequency places its lobes differently, so averaging washes out the pattern. Near \\( \theta = 90^\circ \\), the geometric delay is zero and all frequencies agree.
 
-This is **bandwidth decorrelation**, and it has a practical consequence: a
-broadband interferometer only sees clearly near the direction where its delays
-are matched. Real arrays fix this by inserting a compensating delay that tracks
-the source, so the zero-delay direction follows what you are looking at instead
-of sitting at the zenith.
+This is **bandwidth decorrelation**. A broadband interferometer sees clearly only near the direction where its delays match. Arrays compensate with a delay that tracks the source. The zero-delay direction follows the target instead of remaining at the zenith.
 
-For the DSPIRA two-horn setup, the equivalent lesson is that the fringes are
-sharpest for sources transiting near the phase centre, and that narrowing the
-band widens the region over which fringes survive — at the cost of sensitivity.
+DSPIRA's two-horn setup produces its sharpest fringes for sources transiting near the phase center. Narrowing the band preserves fringes across a wider region, at the cost of sensitivity.
 
 [↑ Go to the Top of the Page](#)
 
 ## Where to go next
 
-Two elements give you one spatial frequency at a time. Rotating the Earth
-sweeps that baseline through the Fourier plane, and adding antennas fills it in
-faster — that is aperture synthesis, and it is where this subject really opens
-up.
+Two elements give you one spatial frequency at a time. Earth's rotation sweeps the baseline through the Fourier plane. More antennas fill that plane faster. This process is aperture synthesis.
 
-The standard treatment is
-[**Fundamentals of Radio Interferometry**](https://github.com/ratt-ru/foi-course),
-the course book from Rhodes University and the National Astrophysics and Space
-Science Programme. It is free to read, it is written as runnable notebooks like
-this one, and chapter 4, *Visibility Space*, picks up exactly where this page
-stops. Start there.
+See [**Fundamentals of Radio Interferometry**](https://github.com/ratt-ru/foi-course) for the standard treatment. Rhodes University and the National Astrophysics and Space Science Programme produced this course book. It is free to read and uses runnable notebooks. Chapter 4, *Visibility Space*, continues from this page. Start there.
 
 Closer to home, and worth doing in this order:
 
-* [Additive Interferometry Using Two DSPIRA Radio Horn Telescopes]({{ site.baseurl }}/FilesUploaded/2Horn_AddingInterferometry_LightWorkMemo31.pdf) — LightWork Memo 31. The same fringe pattern as above, but measured: a transit of the sun on a 5.0 m baseline, fringe spacing 0.043 rad against 0.042 rad predicted. This is what the theory on this page looks like when it comes out of a real horn.
+* [Additive Interferometry Using Two DSPIRA Radio Horn Telescopes]({{ site.baseurl }}/FilesUploaded/2Horn_AddingInterferometry_LightWorkMemo31.pdf) — LightWork Memo 31. This is a measured version of the fringe pattern above. A solar transit on a 5.0 m baseline produced 0.043 rad spacing, compared with 0.042 rad predicted. This is what the theory on this page looks like when it comes out of a real horn.
 * [Setting up a 2 Horn Interferometer]({{ site.baseurl }}/SettingUp2HornInterferometer) — building one and running it
 * [Interferometry]({{ site.baseurl }}/Interferometry) — the rest of the interferometry material on this site
 * [Fourier Analysis]({{ site.baseurl }}/dsplab-fourier1/) and [Expert Mode]({{ site.baseurl }}/dsplab-fourier2/) — the transforms this page leans on
@@ -271,15 +236,9 @@ Closer to home, and worth doing in this order:
 
 ## Credits
 
-The text, equations and code on this page were written by **Pranav Sanghavi**
-at the WVU Radio Astronomy Instrumentation Laboratory on 21 May 2018, and are
-published here under this site's MIT licence. The notebook was ported from
-Python 2 to Python 3 in 2026; the autocorrelation figure was added then, and
-everything else is his.
+**Pranav Sanghavi** wrote this page's text, equations, and code at WVU's Radio Astronomy Instrumentation Laboratory on May 21, 2018. They are published under this site's MIT license. The notebook was ported from Python 2 to Python 3 in 2026. The autocorrelation figure was added then; the remaining material is his.
 
 The definition of convolution is quoted from
 [Wikipedia](https://en.wikipedia.org/wiki/Convolution) under CC BY-SA 4.0.
 
-*Fundamentals of Radio Interferometry* is a separate work by the Rhodes
-University Centre for Radio Astronomy Techniques & Technologies and the NASSP
-community, licensed GPL v2. It is linked above rather than reproduced.
+*Fundamentals of Radio Interferometry* is a separate work licensed under GPL v2. Its authors are the Rhodes University Centre for Radio Astronomy Techniques & Technologies and the NASSP community. It is linked above rather than reproduced.

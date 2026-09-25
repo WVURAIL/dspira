@@ -1,32 +1,59 @@
 ---
 layout: default
 ---
+{%- comment -%}
+An audience page: every lesson carrying `page.tag`, as the same card list the
+module pages use, with the lesson's module as the card's meta line.
+
+The list item carries the class lesson-card and nothing else, on purpose: the build
+workflow counts that exact attribute on /all/, which uses the same markup. The
+Design System classes go on the card inside it; the list itself is a Bootstrap
+row-cols grid, which sizes its children without a column class on each.
+{%- endcomment -%}
 {%- assign lessons = site.tags[page.tag] -%}
-<div class="page-head">
+
+<!-- ===================== PAGE HEAD ===================== -->
+<div class="bg-wvu-blue text-white py-6">
    <div class="container">
-      <p class="eyebrow">Written for</p>
-      <h1>{{ page.tag | replace: '-', ' ' }}</h1>
-      {%- if page.lead %}<p class="lead">{{ page.lead }}</p>{% endif %}
+      <div class="row">
+         <div class="col-24 col-lg-16">
+            <p class="fw-bold text-wvu-gold mb-3">Written for</p>
+            <h1 class="antonia-light display-4 mb-3">{{ page.tag | replace: '-', ' ' }}</h1>
+            {%- if page.lead %}
+            <p class="fs-5 mb-0">{{ page.lead }}</p>
+            {%- endif %}
+         </div>
+      </div>
    </div>
 </div>
 
-<div class="section">
+<!-- ===================== LESSONS ===================== -->
+<div class="py-6">
    <div class="container">
       {%- if lessons and lessons.size > 0 %}
-      <ul class="lesson-grid">
+      <h2 class="antonia-light display-6 mb-4">
+         {{ lessons | size }} lesson{% if lessons.size != 1 %}s{% endif %}
+      </h2>
+      <ul class="list-unstyled row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-0">
          {%- for post in lessons %}
          <li class="lesson-card">
-            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-            {%- if post.summary %}<p>{{ post.summary }}</p>{% endif %}
-            <p class="card-meta">
-               {%- assign m = post.categories | first -%}
-               {%- if m %}{{ m }}{% else %}Lesson{% endif %}
-            </p>
+            <div class="card h-100 bg-wvu-not-quite-white">
+               <div class="card-body p-4 d-flex flex-column">
+                  <h3 class="h5 helvetica-neue-bold mb-2"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+                  {%- if post.summary %}
+                  <p class="text-body-secondary mb-0">{{ post.summary }}</p>
+                  {%- endif %}
+                  <p class="fw-bold small text-body-secondary mt-auto pt-3 mb-0">
+                     {%- assign m = post.categories | first -%}
+                     {%- if m %}{{ m }}{% else %}Lesson{% endif -%}
+                  </p>
+               </div>
+            </div>
          </li>
          {%- endfor %}
       </ul>
       {%- else %}
-      <p class="lead">Nothing is tagged this way yet.</p>
+      <p class="fs-5 text-body-secondary mb-0">Nothing is tagged this way yet.</p>
       {%- endif %}
    </div>
 </div>

@@ -45,6 +45,18 @@ jobs:
         env:
           BUNDLE_GEMFILE: ${{ github.workspace }}/Gemfile.ci
           JEKYLL_ENV: production
+      - uses: actions/checkout@v5
+        with:
+          repository: WVURAIL/rail-preview
+          ref: 333d0da721f1fa6cc8b679e60f0f2b678c3fb3ec
+          path: checks
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Trim unused Design System styles
+        run: |
+          npm ci --prefix checks
+          node checks/scripts/trim_styles.mjs _site assets/wvu-design-system/site.min.css
       - name: Build historical material
         working-directory: archive
         run: bundle exec jekyll build --trace -d ../_archive
@@ -59,6 +71,8 @@ jobs:
           test -s _site/teach/index.html
           test -s _site/labs/01/index.html
           test ! -e _site/CNAME
+          if grep -q 'name="robots" content="noindex"' _site/index.html; then exit 1; fi
+          grep -q 'href="/dspira/' _site/index.html
 
       - uses: actions/upload-pages-artifact@v3
         with:

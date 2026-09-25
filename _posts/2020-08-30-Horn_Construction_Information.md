@@ -6,15 +6,16 @@ summary:  An overview of horn construction is described, with appropriate links
 tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Horn Construction']
 order: 2
+meta_description: "Find plans and resources for building a DSPIRA horn telescope. Follow links to the antenna, amplifier, receiver, and computer setup guides."
 ---
 
-A complete horn telescope system can be built for a few hundred dollars, the actual cost depending on the options you choose and whether or not you have a computer. 
+A complete horn telescope system can cost a few hundred dollars. The total depends on your chosen components and whether you already own a computer. 
 
 A horn telescope consists of 3 major parts: the antenna, the support stand, and the back-end electronics. The first two are what you see below; the third sits behind the can, out of shot.
 
 ![A finished horn telescope standing in a field. The pyramidal antenna is folded from foil-faced insulation board and feeds a square paint-thinner can at its throat; below it, a wooden cradle lets the horn turn in elevation on a stand of dimensional lumber.]({{ site.baseurl }}/images/programme/horn-on-stand.jpg)
 
-Below we present descriptions of the different parts with links to details how to purchase the parts and how to assemble them.
+The descriptions below link to purchasing information and assembly instructions for each part.
 
 ## The Antenna
     
@@ -22,16 +23,16 @@ The antenna consists of the horn panels, a metal can, the wire probe, and a low 
 
 The **horn panels and metal can** are assembled as a single unit. Detailed instructions on the parts involved and their assembly can be found [here.](https://drive.google.com/file/d/1qdc5lhKErFyIsc8b52ZIkCPJLi-XykSb/view?usp=sharing)
 
-The **low noise amplifier** (LNA) is an electronic circuit that connects to the antenna probe through a standard SMA connector that is part of the can assembly. (See above.) 
+The **low noise amplifier** (LNA) connects to the antenna probe through an SMA connector. This connector belongs to the can assembly. (See above.) 
     
-Some options for obtaining a low noise amplifier include the following. All of these will work with the dSPIRA horn telescope and software.
+Some options for obtaining a low noise amplifier include the following. All of these will work with the DSPIRA horn telescope and software.
 
-+ Best option: the DSPIRA LNA – This amplifier was designed for a 1420 MHz radio telescope by Professor Kevin Bandura at WVU. This option requires ordering the circuit board and components, and then assembling the components by soldering. Details on ordering the parts and instructions on how to solder the circuit are provided [here.]({{ site.baseurl }}/DetailedLNAInstructions)
++ Best option: the DSPIRA LNA. WVU Professor Kevin Bandura designed this amplifier for a 1420 MHz radio telescope. This option requires ordering the circuit board and components, and then assembling the components by soldering. Details on ordering the parts and instructions on how to solder the circuit are provided [here.]({{ site.baseurl }}/DetailedLNAInstructions)
 
     The total cost for the parts of this circuit is approximately $30.
 
 + Next best option: [Low Noise Amplifier Filtered Hydrogen Line 1420 MHz LNA *32 dB* Gain LNA with Bias Tee](https://gpio.com/products/hydrogen-line-lna-with-bias-tee); $54.
-+ Next best option: [Nooelec SAWbird+ H1](https://www.nooelec.com/store/sdr/sdr-addons/sawbird-h1.html) - Premium SAW Filter & Cascaded Ultra-Low Noise Amplifier (LNA) Module for Hydrogen Line (21cm) Applications; $44.95.
++ Next best option: [Nooelec SAWbird+ H1](https://www.nooelec.com/store/sdr/sdr-addons/sawbird-h1.html). This module combines a SAW filter and cascaded low-noise amplifiers for hydrogen line observations; $44.95.
 
 
 
@@ -47,7 +48,7 @@ The cost of the parts is under $50.
   
 ## The Back-end Electronics
 
-The radio signals detected by the horn telescope are digitized by a **software defined radio** (SDR) and then processed by a digital signaling processing software.
+A **software defined radio** (SDR) digitizes the horn's radio signals. Digital signal processing software then processes those samples.
 
 The SDR we prefer is the [Airspy R2](https://airspy.com/airspy-r2), $169. This operates with a 10 MHz bandwidth and is the SDR that the DSPIRA software is coded for.
 

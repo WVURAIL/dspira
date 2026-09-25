@@ -98,7 +98,9 @@ jobs:
           # so the module headings live here.
           check "module sections in /all/"  all/index.html  'class="module-toc__head"' "$modules"
           check "lesson cards in /all/"     all/index.html  'class="lesson-card"'     40
-          check "nav links"                 index.html                'class="site-nav"'        1
+          # The Design System's navigation script drives the list that carries
+          # this class. grep -o counts substrings, so 1 means "the nav is there".
+          check "nav links"                 index.html      'js-wvu-site-nav-items'   1
 
           # Every module the front page shows must also be a page you can open.
           # tr -d CR because a checkout with core.autocrlf on yields CRLF, and a
@@ -152,30 +154,85 @@ jobs:
           sys.exit(1 if bad else 0)
           PY
 
-      - name: The forum comment boxes are wired up
+      - name: The forum rooms send people to their GitHub Discussions category
         run: |
           set -euo pipefail
-          # Each room's giscus box gets its repository and category id from
-          # _data/giscus.yml, looked up by category name. A name that does not
-          # match a key there does not fail the build: Liquid resolves the
-          # missing key to nothing, and the page ships data-category-id="".
-          # giscus then loads, renders an empty thread, and silently refuses to
-          # save anything — the exact failure this file exists to make loud.
+          # The rooms are plain pages now. SCM ruled that nothing forum-like may
+          # be served from the University domain, so the giscus comment boxes
+          # went; each room links to the Discussions category on GitHub where
+          # its threads have always lived. The slug comes from _data/forum.yml,
+          # and a wrong one is a 404 on GitHub rather than a build error — so
+          # the six URLs are spelled out here as well, verified live, and the
+          # two copies have to agree.
           fail=0
-          for room in forum/index.html forum/antennas/index.html \
-                      forum/astronomy/index.html forum/dsp/index.html \
-                      forum/electronics/index.html forum/gnuradio/index.html
+          for pair in index:general antennas:antennas astronomy:astronomy \
+                      dsp:dsp electronics:electronics gnuradio:gnu-radio
           do
-            f="_site/$room"
-            if [ ! -s "$f" ]; then
-              echo "::error::$room is missing or empty"; fail=1; continue
+            room=${pair%%:*}
+            slug=${pair##*:}
+            if [ "$room" = index ]; then
+              f="_site/forum/index.html"
+            else
+              f="_site/forum/$room/index.html"
             fi
-            for attr in data-repo-id data-category-id data-term; do
-              grep -q "$attr=\"[^\"]\+\"" "$f" \
-                || { echo "::error::$room has an empty or missing $attr"; fail=1; }
-            done
+            if [ ! -s "$f" ]; then
+              echo "::error::$f is missing or empty"; fail=1; continue
+            fi
+            grep -qF "href=\"https://github.com/WVURAIL/dspira/discussions/categories/$slug\"" "$f" \
+              || { echo "::error::$f does not link to the '$slug' Discussions category"; fail=1; }
           done
           echo "forum rooms checked: 6"
+          # And no page may mention giscus at all. If the word is back, so is a
+          # comment box, or the include that made one.
+          if grep -rli 'giscus' _site --include='*.html'; then
+            echo "::error::giscus is back in the built site — see the pages listed above"
+            fail=1
+          fi
+          exit $fail
+
+      # WVU's Common Elements rule: the masthead, the footer contact block
+      # (address, phone, fax, email), and copyright on every page. The layout carries
+      # them, so a page can only lack them by being built outside the layout —
+      # which `layout: null` does, silently. Two pages are, on purpose: the
+      # exported notebooks at /iq/ and /code/gbt_drift/gbt_rendered_2017.html,
+      # which tools/check_layout.py already exempts for the same reason (their
+      # inlined Bootstrap 3 would rewrite the shell). The redirect stubs under
+      # /categories/ and /lesson-modules/ are not pages anyone reads.
+      #
+      # One <h1> per page is housekeeping of the same kind: the layout writes
+      # the title as the h1, so a second one is a body that opens with its own
+      # '# Title' — which is what a README rendered as a page does.
+      - name: WVU common elements on every page
+        run: |
+          set -euo pipefail
+          fail=0
+          checked=0
+          while IFS= read -r f; do
+            case "$f" in
+              _site/iq/*|_site/code/gbt_drift/gbt_rendered_2017.html) continue ;;
+            esac
+            if grep -q '<title>Redirecting' "$f"; then continue; fi
+            checked=$((checked + 1))
+            for want in "favicon-wvu.ico" \
+                        "(304) 293-9686" "Fax" "Skip to main content"
+            do
+              grep -qF -- "$want" "$f" \
+                || { echo "::error::$f lacks \"$want\""; fail=1; }
+            done
+            n=$(grep -o '<h1' "$f" | wc -l || true)
+            [ "$n" -eq 1 ] \
+              || { echo "::error::$f has $n <h1> headings, expected exactly 1"; fail=1; }
+          done < <(find _site -name '*.html' | sort)
+          echo "pages checked: $checked"
+          # A check that found nothing to check would pass for the wrong reason.
+          [ "$checked" -ge 60 ] \
+            || { echo "::error::only $checked pages checked — did _site build?"; fail=1; }
+          # The exported GBT notebook stays out of the sitemap. Preview builds
+          # separately verify its conditional noindex in the combined site.
+          if [ ! -s _site/sitemap.xml ] || grep -q 'gbt_rendered_2017\.html' _site/sitemap.xml; then
+            echo "::error::_site/sitemap.xml is missing, or still lists gbt_rendered_2017.html — the notebook must retain sitemap: false in its front matter"
+            fail=1
+          fi
           exit $fail
 
       - name: No unrendered Liquid escaped into the output

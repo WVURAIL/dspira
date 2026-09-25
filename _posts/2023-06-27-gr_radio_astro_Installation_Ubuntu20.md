@@ -6,9 +6,10 @@ summary:  Details for installing gr-radio_astro on Ubuntu 20.04
 tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Software Setup']
 order: 8
+meta_description: "Install gr-radio_astro on Ubuntu 20.04 for GNU Radio 3.8. Follow the setup and update steps for the DSPIRA radio astronomy software."
 ---
 
-This will install the spectrometer program *spectrometer_w_cal.grc* as well as other useful radio astronomy GNU Radio programs onto a system using Ubuntu 20.04.
+This installs *spectrometer_w_cal.grc* and other GNU Radio astronomy programs on Ubuntu 20.04.
 
 Complete the following steps:
 
@@ -39,13 +40,13 @@ Complete the following steps:
    
    9. Make sure you are at the home directory (type and Enter `cd` ). Then type `gedit .bashrc` to open the *.bashrc* file in an editor.
    
-   10. Scroll to the very bottom of this file, add a blank line, and then copy and paste the following code: `export PYTHONPATH=/usr/local/lib/python3/dist-packages:/usr/local/lib/python3.8/dist-packages:$PYTHONPATH`
+   10. Scroll to the file's bottom and add a blank line. Paste this code: `export PYTHONPATH=/usr/local/lib/python3/dist-packages:/usr/local/lib/python3.8/dist-packages:$PYTHONPATH`
 
    11. Save and close (x in upper right corner).
    
    12. Additionally you can create appropriate symbolic links
-       1.  Check which python is the installed version of GNU Radio by opening  `gnuradio-companion` in a terminal window and click on `Help --> About` and noting the python version on the dialog box that opens.  
-       2.  Go to the following by typing: `cd /usr/local/lib/python3.8/dist-packages` or `cd /usr/local/lib/python3.9/dist-packages` for the appropriate python version. 
+       1.  Open `gnuradio-companion` in a terminal, then click `Help --> About`. Note the Python version in the dialog.  
+       2.  For Python 3.8, type `cd /usr/local/lib/python3.8/dist-packages`. For Python 3.9, use `cd /usr/local/lib/python3.9/dist-packages`. 
        3.  Type `ln -s /usr/local/lib/python3/dist-packages/radio_astro`   
  
 **Check that the Installation was Successful**
@@ -57,7 +58,7 @@ Complete the following steps:
            `File --> Open --> gr-radio_astros --> examples --> *spectrometer_w_cal.grc* `
          - Plug an Airspy radio, with the LNA attached, into the USB port. Run the program by hitting the start triangle ("execute the flowgraph") on the menu bar at top. If no errors occur, you are all set!  
    
-#### How to Update files from the gr-radio_astro gr38 Repository
+## How to Update files from the gr-radio_astro gr38 Repository
 
    1. Open the terminal window.
       
@@ -99,5 +100,5 @@ Complete the following steps:
       - Navigate to the` gr-radio_astro` folder.
       - Under `examples` open `DSPIRA`; then select `spectrometer_w_cal.grc`.
 
-   4. Connect an Airspy SDR to a USB port, and start the program running (Hit the black triangle at the top middle ribbon bar.)
+   4. Connect an Airspy SDR to USB. Start the program (click the black triangle at the top center of the ribbon bar.)
          
