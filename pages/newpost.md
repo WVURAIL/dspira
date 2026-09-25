@@ -46,6 +46,7 @@ Use the [Markdown template]({{ '/assets/templates/lesson-template.txt' | relativ
 [contributor guide](https://github.com/WVURAIL/dspira/blob/main/CONTRIBUTING.md).
 
 Replace the template prompts. Choose one existing module and an unused order value. Ask a maintainer if either choice is unclear.
+Add activity-specific equipment and preparation to the template. Include timing and tested setup details only when confirmed.
 Save the file as `YYYY-MM-DD-Short-Name.md` in `_posts/`. Choose a stable lesson address before publication.
 
 [Open the lesson submission form](https://github.com/WVURAIL/dspira/issues/new?template=lesson-submission.yml)

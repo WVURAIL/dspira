@@ -2,41 +2,37 @@
 layout: page
 title: Teach with DSPIRA
 permalink: /teach/
-eyebrow: For educators
-lead: Use the shared lessons to build a radio astronomy project with your students.
-meta_description: "Teach radio astronomy with DSPIRA classroom lessons, telescope projects, and teacher resources. Find activities, kit information, and community support."
+meta_description: "Plan a radio astronomy class with DSPIRA. Choose activities for your equipment, review teacher notes, prepare downloads, and share classroom materials."
+lead: Choose an activity, review its materials, and prepare it for your class.
 ---
 
-The same lessons serve students, educators, and independent learners. Choose a module that fits your class and available equipment.
+## Choose your starting point
 
-## Plan your project
+| Your class has | Start here | Prepare first |
+|---|---|---|
+| Internet access, no telescope | [How Fast Are We Moving?]({{ '/HowFastAreWeMoving' | relative_url }}) | Choose a worksheet level and read the teacher notes. |
+| Computers with GNU Radio | [Signals and sound lab]({{ '/dsplab-intro/' | relative_url }}) | Install the software and try the first flowgraph. |
+| Time and workspace for construction | [Build a telescope]({{ '/start/#build' | relative_url }}) | Review parts, costs, tools, and software compatibility. |
+| A working horn telescope | [Observe the radio sky]({{ '/categories/observing/' | relative_url }}) | Check setup, calibration, and data storage. |
 
-- [Browse the seven lesson modules]({{ '/all/' | relative_url }}).
-- Start with [Horn Construction]({{ '/categories/horn-construction/' | relative_url }}) to build a telescope.
-- Use [Astronomy activities]({{ '/categories/astronomy/' | relative_url }}) to connect observations with classroom physics.
-- Explore [Digital Signal Processing]({{ '/categories/digital-signal-processing/' | relative_url }}) for more advanced labs.
+These routes use the same lessons students read. Teacher notes and worksheets stay beside the relevant activity.
 
 ## Prepare for class
 
-Lessons include instructions, supporting files, and teacher materials where available. Check each activity before teaching it to confirm equipment and preparation needs.
+1. Open every worksheet, video, and download you plan to use.
+2. Choose the tasks that fit your students' preparation.
+3. Check equipment access and any installation permissions.
+4. Work through the selected tasks and allow time for questions and setup.
 
-[Request a telescope kit]({{ '/kits/' | relative_url }}) if equipment access is a barrier.
+Classroom timings have not been confirmed across this collection. Plan from your selected tasks instead of assuming a whole module fits one class.
+For telescope sessions, review [software compatibility]({{ '/software/' | relative_url }}) before scheduling observations.
 
-## Share an activity
+[Request a starter kit]({{ '/kits/' | relative_url }}) if equipment access is a barrier.
+[Teaching slides and exercises]({{ '/teaching-resources/' | relative_url }}) provide additional materials.
 
-[Contribute a lesson or worksheet]({{ '/newpost/' | relative_url }}).
-Use the planning template and email route, or submit a draft through GitHub.
+## Share or ask
 
-## Get software and hardware
+[Contribute an activity]({{ '/newpost/' | relative_url }}) using an ordinary document and email. GitHub is optional.
+Send preparation notes, equipment requirements, and classroom timings when available.
 
-Use the [software guide]({{ '/software/' | relative_url }}) for classroom applications and shared GNU Radio blocks.
-Find board designs and fabrication downloads in the [hardware guide]({{ '/hardware/' | relative_url }}).
-
-## Find support and background
-
-- [Ask the community]({{ '/forum/' | relative_url }}) for help with equipment or activities.
-- Read [LightWork technical memos](/lightwork/) for detailed construction, testing, and observing notes.
-- Learn about [the DSPIRA program]({{ '/about/' | relative_url }}).
-- Download [teaching slides, figures, and exercises]({{ '/teaching-resources/' | relative_url }}).
-
-Contact the lab at [rail@wvu.edu](mailto:rail@wvu.edu).
+Email [rail@wvu.edu](mailto:rail@wvu.edu), or [ask the community]({{ '/forum/' | relative_url }}).

@@ -30,12 +30,12 @@ CSS counter, so that on /all/ the filter cannot renumber the curriculum.
 {%- assign module_info = site.data.modules | where: 'category', page.category | first -%}
 
 <!-- ===================== MODULE HEAD ===================== -->
-<div class="bg-wvu-blue text-white py-6">
+<div class="bg-wvu-blue text-white interior-head">
    <div class="container">
       <div class="row align-items-center">
          <div class="col-24 col-lg-14 mb-4 mb-lg-0">
             <p class="fw-bold text-wvu-gold mb-3">Module</p>
-            <h1 class="antonia-light display-4 mb-3">{{ page.category }}</h1>
+            <h1 class="antonia-light interior-title mb-3">{{ page.category }}</h1>
             {%- if page.lead %}
             <p class="fs-5 mb-3">{{ page.lead }}</p>
             {%- endif %}
@@ -59,7 +59,7 @@ CSS counter, so that on /all/ the filter cannot renumber the curriculum.
 {%- assign body = content | strip_newlines | strip %}
 {%- if body != "" %}
 <!-- ===================== INTRO ===================== -->
-<div class="py-6">
+<div class="py-4">
    <div class="container">
       <div class="row">
          <div class="col-24 col-lg-16">
@@ -73,7 +73,7 @@ CSS counter, so that on /all/ the filter cannot renumber the curriculum.
 {%- endif %}
 
 <!-- ===================== LESSONS ===================== -->
-<div class="py-6{% if body != '' %} bg-wvu-not-quite-white{% endif %}">
+<div class="py-4{% if body != '' %} bg-wvu-not-quite-white{% endif %}">
    <div class="container">
       <h2 class="antonia-light display-6 mb-4">
          {%- if lessons %}{{ lessons | size }} lesson{% if lessons.size != 1 %}s{% endif %} in this module
@@ -86,7 +86,7 @@ CSS counter, so that on /all/ the filter cannot renumber the curriculum.
          <li class="lesson-card">
             <div class="card h-100 {% if body != '' %}bg-white{% else %}bg-wvu-not-quite-white{% endif %}">
                <div class="card-body p-4">
-                  <p class="fw-bold small text-wvu-blue mb-2" aria-hidden="true">{% if post.order < 10 %}0{% endif %}{{ post.order }}</p>
+                  <p class="fw-bold small text-wvu-blue mb-2" aria-hidden="true">{% if post.order < 10 %}0{% endif %}{{ post.order }}</p>{% if post.optional %}<p class="small fw-bold">Optional activity</p>{% endif %}
                   <h3 class="h5 helvetica-neue-bold mb-2"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
                   {%- if post.summary %}
                   <p class="text-body-secondary mb-0">{{ post.summary }}</p>
@@ -103,6 +103,9 @@ CSS counter, so that on /all/ the filter cannot renumber the curriculum.
       </p>
       {%- endif %}
 
+      {%- if module_info.next_module %}
+      <p class="mt-4"><a class="btn btn-wvu-blue" href="{{ module_info.next_module | slugify | prepend: '/categories/' | append: '/' | relative_url }}">Next module: {{ module_info.next_module }}</a></p>
+      {%- endif %}
       <p class="mt-5 mb-0 no-print">
          <a class="btn btn-outline-wvu-blue d-inline-flex align-items-center" href="{{ '/all/' | relative_url }}">
             {% include icon.html name="arrow-left" %}<span class="ms-2">All lessons</span>

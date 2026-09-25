@@ -254,6 +254,9 @@ jobs:
       # the build still passes. Gate on those. Missing PDFs and dead external
       # links are reported by the same run but do not fail the build, because
       # they depend on people and hosts outside this repository.
+      - name: Lesson search and history
+        run: node --test tools/test_lesson_filter.js
+
       - name: Heading anchors resolve
         run: python3 tools/check_links.py --offline --fail-on anchors
 

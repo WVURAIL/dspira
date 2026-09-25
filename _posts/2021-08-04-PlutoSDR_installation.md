@@ -7,6 +7,7 @@ tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Receiver Electronics']
 order: 4
 meta_description: "Install the software needed to use PlutoSDR with a DSPIRA telescope. Follow the setup steps to connect the receiver to your computer."
+optional: true
 ---
 
 

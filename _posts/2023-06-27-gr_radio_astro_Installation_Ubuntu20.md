@@ -7,6 +7,7 @@ tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Software Setup']
 order: 8
 meta_description: "Install gr-radio_astro on Ubuntu 20.04 for GNU Radio 3.8. Follow the setup and update steps for the DSPIRA radio astronomy software."
+optional: true
 ---
 
 This historical guide uses the `gr38` release line. Its application paths refer to that preserved version.

@@ -7,6 +7,7 @@ tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Software Setup']
 order: 11
 meta_description: "Download and install the WVU RAIL radio astronomy operating system for Raspberry Pi. Prepare a compact computer to run a horn telescope."
+optional: true
 ---
 
 ## Radio Astronomy with Raspberry Operating System

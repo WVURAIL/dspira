@@ -287,3 +287,15 @@ mjx-container[display="true"] {
 }
 
 .wvu-text-letter-spacing-lg { letter-spacing: 3px !important; }
+
+/* Keep working pages close to their content. */
+.interior-head { padding: 1.5rem 0; }
+.interior-title { font-size: clamp(1.8rem, 4vw, 2.65rem); line-height: 1.15; }
+.lesson-plan summary { cursor: pointer; font-weight: bold; }
+.lesson-plan dl { margin: 1rem 0 0; }
+.lesson-plan dt { font-weight: bold; }
+.lesson-plan dd { margin: 0 0 .75rem; }
+@media (max-width: 767px) {
+  [data-module-intro] img { display: none; }
+  .interior-head .fs-4, .interior-head .fs-5 { font-size: 1.05rem !important; }
+}

@@ -79,11 +79,20 @@
       var intros = [].slice.call(document.querySelectorAll("[data-module-intro]"));
       filterBox.hidden = false;
 
+      var normalize = function (text) {
+         return text.toLowerCase()
+            .replace(/calibrat(?:ions?|ing|ed|e)?/g, "calibrat")
+            .replace(/install(?:ations?|ing|ed)?/g, "install")
+            .replace(/observ(?:ations?|ing|ed|e)/g, "observ")
+            .replace(/[^a-z0-9]+/g, " ").trim();
+      };
       var apply = function () {
-         var q = input.value.trim().toLowerCase();
+         var q = input.value.trim();
+         var terms = normalize(q).split(/\s+/).filter(Boolean);
          var shown = 0;
          cards.forEach(function (card) {
-            var hit = !q || card.getAttribute("data-search").indexOf(q) !== -1;
+            var words = normalize(card.getAttribute("data-search"));
+            var hit = terms.every(function (term) { return words.indexOf(term) !== -1; });
             card.hidden = !hit;
             if (hit) shown++;
          });
@@ -97,16 +106,29 @@
             ? "No lessons match. Try another search or clear the filter."
             : shown + " of " + cards.length + " lessons match";
       };
-      input.addEventListener("input", apply);
+      var update = function () {
+         var url = new URL(window.location.href);
+         if (input.value.trim()) url.searchParams.set("q", input.value.trim());
+         else url.searchParams.delete("q");
+         window.history.replaceState(window.history.state, "", url.toString());
+         apply();
+      };
+      var restore = function () {
+         input.value = new URL(window.location.href).searchParams.get("q") || "";
+         apply();
+      };
+      input.addEventListener("input", update);
+      window.addEventListener("pageshow", restore);
+      window.addEventListener("popstate", restore);
       input.addEventListener("keydown", function (event) {
-         if (event.key === "Escape") { input.value = ""; apply(); }
+         if (event.key === "Escape") { input.value = ""; update(); }
       });
       clear.addEventListener("click", function () {
          input.value = "";
-         apply();
+         update();
          input.focus();
       });
-      apply();
+      restore();
    }
 
    /* --- Scrollable code blocks and tables --------------------------------

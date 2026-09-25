@@ -1,0 +1,11 @@
+{%- assign plan = site.data.modules | where: 'category', module | first -%}
+<details class="lesson-plan border rounded p-3 mb-4">
+  <summary>Equipment and preparation{% if page.optional %} · Optional activity{% endif %}</summary>
+  <dl>
+    <dt>Equipment</dt><dd>{{ page.equipment | default: plan.equipment }}</dd>
+    <dt>Before you start</dt><dd>{{ page.preparation | default: plan.preparation }}</dd>
+    <dt>Planning your time</dt><dd>{{ page.timing | default: 'Review the tasks before scheduling a class. A classroom duration has not been confirmed for this lesson.' }}</dd>
+    {%- if page.tested_setup %}<dt>Last tested setup</dt><dd>{{ page.tested_setup }}{% if page.tested_date %} · {{ page.tested_date }}{% endif %}</dd>{% endif -%}
+  </dl>
+  <p class="small mb-0"><a href="{{ '/teach/' | relative_url }}">Teaching guidance</a>{% if module == 'Software Setup' or module == 'Observing' or module == 'Receiver Electronics' %} · <a href="{{ '/software/' | relative_url }}">Software compatibility</a>{% endif %}</p>
+</details>

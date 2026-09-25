@@ -25,16 +25,15 @@ Hooks other things depend on, kept exactly as written:
   * data-lesson-filter, .filter__input, .filter__count, [data-module],
     .lesson-card[data-search] are what lessons.js queries.
 {%- endcomment -%}
-<div class="bg-wvu-blue text-white py-6">
+<div class="bg-wvu-blue text-white interior-head">
    <div class="container">
       <div class="row">
          <div class="col-24 col-lg-16">
             <p class="fw-bold text-wvu-gold mb-3">Browse</p>
-            <h1 class="antonia-light display-4 mb-4">Every lesson</h1>
+            <h1 class="antonia-light interior-title mb-4">Every lesson</h1>
             <p class="fs-4 mb-0">
-               All {{ site.posts | size }} of them, in {{ site.data.modules | size }} modules,
-               each in the order it is meant to be worked through. Start at the top of module
-               one, or filter for what you need.
+               {{ site.posts | size }} lessons in {{ site.data.modules | size }} modules. Search for a topic or browse below.
+               <a class="text-white" href="{{ '/start/' | relative_url }}">Find a starting point</a>.
             </p>
          </div>
       </div>
@@ -43,7 +42,7 @@ Hooks other things depend on, kept exactly as written:
             <label class="form-label" for="lesson-filter">Filter lessons</label>
             <input class="form-control form-control-lg filter__input" id="lesson-filter" type="search"
                    autocomplete="off" spellcheck="false" aria-controls="lesson-results"
-                   placeholder="Type to filter by title, summary or module">
+                   placeholder="Try calibration, Fourier, or antenna">
             <p class="filter__count small mt-2 mb-0" role="status" aria-live="polite" aria-atomic="true" style="min-height:1.5em"></p>
             <a href="#lesson-results" class="text-white" data-results-link hidden>Go to results</a>
             <button type="button" class="btn btn-outline-light ms-3" data-clear-filter hidden>Clear filter</button>
@@ -75,7 +74,7 @@ forloop.index so it matches the front page and the category pages.
 {%- endif %}
 {%- assign slug = m.category | slugify %}
 {%- assign href = slug | prepend: '/categories/' | append: '/' | relative_url %}
-<div class="py-6{{ band }}" data-module="{{ m.category }}">
+<div class="py-4{{ band }}" data-module="{{ m.category }}">
    <div class="container">
       <div class="module-toc__head">
          <div class="row align-items-center mb-4">
@@ -102,10 +101,10 @@ forloop.index so it matches the front page and the category pages.
       {%- endcomment -%}
       <ol class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 list-unstyled mb-0">
          {%- for post in lessons %}
-         <li class="lesson-card" data-search="{{ post.title | downcase }} {{ post.summary | downcase }} {{ m.category | downcase }}">
+         <li class="lesson-card" data-search="{{ post.title | escape }} {{ post.summary | escape }} {{ m.category | escape }} {{ post.keywords | join: ' ' | escape }}">
             <div class="card h-100 {{ card_bg }}">
                <div class="card-body p-4">
-                  <span class="d-block fw-bold small text-wvu-blue mb-2" aria-hidden="true">{% if post.order < 10 %}0{% endif %}{{ post.order }}</span>
+                  <span class="d-block fw-bold small text-wvu-blue mb-2" aria-hidden="true">{% if post.order < 10 %}0{% endif %}{{ post.order }}</span>{% if post.optional %}<p class="small fw-bold">Optional activity</p>{% endif %}
                   <h3 class="h5 helvetica-neue-bold"><a class="text-decoration-none" href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
                   {%- if post.summary %}<p class="mb-0 text-body-secondary">{{ post.summary }}</p>{% endif %}
                </div>

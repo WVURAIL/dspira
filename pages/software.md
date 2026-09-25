@@ -1,49 +1,52 @@
 ---
 layout: page
-title: DSPIRA telescope software
+title: Set up telescope software
 permalink: /software/
-eyebrow: Telescope resources
-lead: Find classroom applications, the shared GNU Radio blocks, and the instructions for using them together.
-meta_description: "Get DSPIRA classroom telescope applications and shared GNU Radio blocks. Find downloads, installation guidance, compatibility notes, and software support."
+meta_description: "Prepare DSPIRA telescope software with compatibility guidance. Find installation steps, application downloads, receiver settings, and support."
+lead: Check compatibility before choosing an installation route or scheduling classroom observations.
 ---
 
-DSPIRA applications are GNU Radio flowgraphs. They describe how signal-processing blocks connect to form a spectrometer or another telescope instrument.
-The applications live in `dspira-software`. Their reusable `radio_astro` blocks are installed from `gr-radio_astro`.
+## Before you install
 
-## Download the classroom applications
+The existing telescope lessons describe Ubuntu and GNU Radio with a compatible SDR receiver.
+Check your computer, receiver model, and GNU Radio version together. Installation success alone does not verify receiver operation or calibration.
 
-[Download the application files as a ZIP](https://github.com/WVURAIL/dspira-software/archive/refs/heads/main.zip){: .btn .btn-wvu-blue}
+**Compatibility review is still needed.** Current checks found errors in the classroom applications on newer GNU Radio versions.
+Receiver operation and calibration have not been verified for the migrated collection.
+Read the [known compatibility issues](https://github.com/WVURAIL/dspira-software/blob/main/docs/KNOWN_ISSUES.md) before using these applications in class.
 
-Extract the ZIP and open its `flowgraphs` folder. The collection includes a calibrated spectrometer, two interferometers, and four experimental lightning detectors.
+Email [rail@wvu.edu](mailto:rail@wvu.edu) with your operating system, GNU Radio version, and receiver model for setup guidance.
 
-The repository move preserved these files unchanged. Current GNU Radio checks found existing compatibility errors.
-Review the [compatibility findings](https://github.com/WVURAIL/dspira-software/blob/main/docs/KNOWN_ISSUES.md) before using them in class.
-Receiver operation and calibration have not been verified for this migration.
+## Prepare a single-horn spectrometer
 
-## Install the shared blocks
+1. Review [computer requirements]({{ '/HornOperation_computerSystems' | relative_url }}).
+2. Choose [an installation route]({{ '/BuildingHorn_SoftwareInfo' | relative_url }}) appropriate for your computer.
+3. Install [GNU Radio]({{ '/GNURadio_Installation' | relative_url }}) and the [radio astronomy blocks]({{ '/gr_radio_astro_Installation' | relative_url }}).
+4. Download the applications below and open `flowgraphs/spectrometer_w_cal.grc`.
+5. Set [your receiver source block]({{ '/Spectrometer_sourceblock_settings' | relative_url }}) and follow [the running instructions]({{ '/HornOperation_runningSpectrometer' | relative_url }}).
 
-Follow [the installation lesson]({{ '/gr_radio_astro_Installation' | relative_url }}) to prepare GNU Radio and the shared library.
-Then open the desired application from the downloaded `flowgraphs` folder.
-Choose the receiver, output folders, and calibration settings for your equipment.
+Older instructions may target GNU Radio 3.8. Do not assume they apply unchanged to newer releases.
 
-The shared library remains in `gr-radio_astro`. It also supports astronomy applications outside DSPIRA.
-Install it once; the classroom repository does not contain another copy.
+### Application download
 
-## Update or contribute
+[Download the application ZIP](https://github.com/WVURAIL/dspira-software/archive/refs/heads/main.zip){: .btn .btn-wvu-blue}
+
+**Review compatibility before opening these files.** Extract the ZIP and find the `flowgraphs` folder.
+The shared `radio_astro` blocks are a separate installation required by the telescope applications.
+
+## Additional and experimental applications
+
+The ZIP also contains two interferometers and four experimental lightning detectors.
+These are not required for a first single-horn observation.
+
+Use [DSP lesson examples]({{ '/dsp-examples/' | relative_url }}) for signal-processing exercises.
+[Transient notebooks and data]({{ '/research-examples/' | relative_url }}) support advanced exploration.
+
+## Contribute or find older files
 
 Application changes belong in [dspira-software](https://github.com/WVURAIL/dspira-software).
-Reusable block changes belong in [gr-radio_astro](https://github.com/WVURAIL/gr-radio_astro).
-Include the GNU Radio version, receiver model, and test results with a software contribution.
+Shared block changes belong in [gr-radio_astro](https://github.com/WVURAIL/gr-radio_astro).
+Include software versions, receiver details, and test results.
 
-For a lesson or worksheet, use the [teacher contribution guide]({{ '/newpost/' | relative_url }}).
-For schematics and fabrication files, use the [hardware guide]({{ '/hardware/' | relative_url }}).
-
-## Find an older download
-
-The [repository map]({{ '/repository-map/' | relative_url }}) lists replacement addresses for files moved from the shared library.
-Historical releases and commit links retain their original files. Older GNU Radio 3.8 instructions refer to the separate `gr38` release line.
-
-## More examples
-
-Browse [DSP lesson flowgraphs]({{ '/dsp-examples/' | relative_url }}) for signal-processing exercises.
-Explore [transient research notebooks and data]({{ '/research-examples/' | relative_url }}) for advanced experiments.
+The [repository map]({{ '/repository-map/' | relative_url }}) explains older addresses and releases.
+For physical designs, use the [hardware guide]({{ '/hardware/' | relative_url }}).

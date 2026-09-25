@@ -7,6 +7,9 @@ tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Astronomy']
 order: 2
 meta_description: "Learn how celestial coordinates describe the sky. Use student activities, teacher notes, and short videos from the DSPIRA astronomy program."
+equipment: "The student worksheet and a computer for the supporting videos."
+preparation: "Read the teacher notes before introducing celestial coordinates."
+keywords: ["coordinates", "celestial sphere"]
 ---
 
 [Student Activity Document](https://docs.google.com/document/d/1hlc1SBIF0k_CGa8UhYB3Bi1jVJp1-mBKM7ouzOqZ1gY/edit?usp=sharing){: .btn .btn-wvu-blue}

@@ -78,6 +78,6 @@ A working DSPIRA Radio Horn Telescope lets students collect their own galactic-c
 Students Observing the Galactic Center with a Radio Horn.
 The **Observing** module covers choosing a target, setting up the telescope, and taking observations.
 [Setting up the Telescope]({{ site.baseurl }}/Telescope_Setup) provides the video.
-[Horn Operation Tutorials]({{ site.baseurl }}/HornOperation_Tutorials) collects the remaining walkthroughs.
+[Horn Operation Tutorials]({{ site.baseurl }}/categories/observing/) collects the remaining walkthroughs.
 
 

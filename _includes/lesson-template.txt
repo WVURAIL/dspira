@@ -4,7 +4,13 @@ title: "Your lesson title"
 summary: "Describe what students will learn in one short sentence."
 categories: ['Observing']
 order: 100
-tags: ['School-Teachers', 'Students', 'Hobbyists']
+# Add verified details; omit fields that are not known yet.
+equipment: "List the equipment needed for this activity."
+preparation: "Describe prerequisites and setup."
+# timing: "Confirmed class duration and preparation time."
+# tested_setup: "Software versions and receiver used."
+# tested_date: "YYYY-MM-DD"
+# optional: true
 permalink: /lessons/your-lesson/
 ---
 

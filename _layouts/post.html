@@ -35,14 +35,14 @@ targets it for images, tables and figures in the markdown.
 {%- assign module_url = module | slugify | prepend: '/categories/' | append: '/' | relative_url -%}
 
 <!-- ===================== PAGE HEAD ===================== -->
-<div class="bg-wvu-blue text-white py-6">
+<div class="bg-wvu-blue text-white interior-head">
    <div class="container">
       <div class="row">
          <div class="col-24 col-lg-16">
             <p class="fw-bold text-wvu-gold mb-3">
                {%- if module %}{{ module }}{% else %}Lesson{% endif -%}
             </p>
-            <h1 class="antonia-light display-4 mb-3">{{ page.title }}</h1>
+            <h1 class="antonia-light interior-title mb-3">{{ page.title }}</h1>
             {%- if page.summary %}
             <p class="fs-5 mb-0">{{ page.summary }}</p>
             {%- endif %}
@@ -52,7 +52,7 @@ targets it for images, tables and figures in the markdown.
 </div>
 
 <!-- ===================== LESSON ===================== -->
-<div class="py-6">
+<div class="py-4">
    <div class="container">
       <div class="row">
          <div class="col-24 col-lg-16">
@@ -68,28 +68,10 @@ targets it for images, tables and figures in the markdown.
                </ol>
             </nav>
 
+            {% include lesson-plan.html %}
             <article class="prose">
                {% include lesson-content.html %}
             </article>
-
-            {%- if page.tags and page.tags.size > 0 %}
-            {%- comment -%}
-            The audience tags are badges, but they are still real, underlined
-            links: the Design System underlines every link and .badge does not
-            reset that, so nothing here switches it off.
-            {%- endcomment -%}
-            <div class="border-top mt-5 pt-4 no-print">
-               <h2 class="fw-bold fs-6 text-wvu-blue mb-3">Written for</h2>
-               <ul class="list-inline mb-0">
-                  {%- for tag in page.tags %}
-                  <li class="list-inline-item mb-2">
-                     <a class="badge rounded-pill text-bg-wvu-blue fw-normal fs-6"
-                        href="{{ tag | slugify | prepend: '/tags/' | append: '/' | relative_url }}">{{ tag | replace: '-', ' ' }}</a>
-                  </li>
-                  {%- endfor %}
-               </ul>
-            </div>
-            {%- endif %}
 
             {%- if prevpost or nextpost %}
             {%- comment -%}
@@ -123,6 +105,14 @@ targets it for images, tables and figures in the markdown.
             </nav>
             {%- endif %}
 
+            {%- unless nextpost -%}
+            {%- assign module_info = site.data.modules | where: 'category', module | first -%}
+            {%- if module_info.next_module -%}
+            <p class="mt-4 no-print"><a class="btn btn-wvu-blue" href="{{ module_info.next_module | slugify | prepend: '/categories/' | append: '/' | relative_url }}">Continue to {{ module_info.next_module }}</a></p>
+            {%- else -%}
+            <p class="mt-4 no-print"><a href="{{ '/start/' | relative_url }}">Choose your next activity</a></p>
+            {%- endif -%}
+            {%- endunless -%}
             <p class="d-flex flex-wrap justify-content-between align-items-baseline gap-3 mt-5 mb-0">
                <a href="{{ module_url }}">
                   {% include icon.html name="arrow-left" %} All {{ siblings | size }} lessons in {{ module }}

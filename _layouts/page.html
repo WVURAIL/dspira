@@ -12,14 +12,14 @@ tables and figures in the markdown.
 {%- endcomment -%}
 {%- unless page.hide_title %}
 <!-- ===================== PAGE HEAD ===================== -->
-<div class="bg-wvu-blue text-white py-6">
+<div class="bg-wvu-blue text-white interior-head">
    <div class="container">
       <div class="row">
          <div class="col-24 col-lg-16">
             {%- if page.eyebrow %}
             <p class="fw-bold text-wvu-gold mb-3">{{ page.eyebrow }}</p>
             {%- endif %}
-            <h1 class="antonia-light display-4 mb-3">{{ page.title }}</h1>
+            <h1 class="antonia-light interior-title mb-3">{{ page.title }}</h1>
             {%- if page.lead %}
             <p class="fs-5 mb-0">{{ page.lead }}</p>
             {%- endif %}
@@ -30,7 +30,7 @@ tables and figures in the markdown.
 {%- endunless %}
 
 <!-- ===================== CONTENT ===================== -->
-<div class="py-6">
+<div class="py-4">
    <div class="container">
       <div class="row">
          <div class="col-24 col-lg-16">

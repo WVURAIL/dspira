@@ -7,6 +7,7 @@ tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Software Setup']
 order: 10
 meta_description: "Set up a Raspberry Pi for DSPIRA radio astronomy. Find supported devices, Ubuntu installation steps, remote access tips, and software links."
+optional: true
 ---
 
 Raspberry Pis are inexpensive. Newer models can handle the GNU Radio signal processing needed for radio astronomy. 

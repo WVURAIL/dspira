@@ -5,7 +5,7 @@ title: Setting Up a 2 Horn Interferometer
 summary:  Details of setting up 2 horns for doing interferometry
 tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Observing']
-order: 10
+order: 8
 meta_description: "Set up two horn telescopes with a LimeSDR. Follow the equipment checklist, cable connections, alignment steps, and data recording procedure."
 ---
 

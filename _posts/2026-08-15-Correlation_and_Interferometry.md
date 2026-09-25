@@ -126,7 +126,7 @@ raw trace. Its autocorrelation still reveals the period. The noise is uncorrelat
 ![Autocorrelation recovering a period from noise]({{ site.baseurl }}/images/interferometry/autocorrelation.png)
 
 This is not an analogy for what the spectrometer does — it is what the
-spectrometer does. [`spectrometer_w_cal.grc`]({{ site.baseurl }}/spectrometer_w_cal_Instructions) displays a power spectrum. This is the Fourier transform of the horn voltage's autocorrelation. The Wiener–Khinchin theorem establishes this equivalence. It explains how the hydrogen line emerges from a much larger noise floor.
+spectrometer does. [`spectrometer_w_cal.grc`]({{ site.baseurl }}/HornOperation_runningSpectrometer) displays a power spectrum. This is the Fourier transform of the horn voltage's autocorrelation. The Wiener–Khinchin theorem establishes this equivalence. It explains how the hydrogen line emerges from a much larger noise floor.
 
 [↑ Go to the Top of the Page](#)
 

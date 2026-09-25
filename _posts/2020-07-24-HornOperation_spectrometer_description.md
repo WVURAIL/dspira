@@ -36,7 +36,7 @@ You can also watch [this video](https://youtu.be/50B2Uv-SoDY), which describes t
 
         - **_hot calibration_** - Select when pointing the telescope at the “hot” source (the ground) during the calibration procedure.
 
-        - **_cold calibration_** - Select when pointing the telescope at the “hot” source (the ground) during the calibration procedure.
+        - **_cold calibration_** - Use this mode for the cold-sky measurement. Follow the [calibration procedure]({{ site.baseurl }}/HornOperation_Calibration) for the switching and pointing sequence.
 
         - **_unfiltered spectrum with no calibration_** - the raw spectrum collected is displayed with no changes made to it.
 

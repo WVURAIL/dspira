@@ -79,6 +79,8 @@ titles_from_headings:
   strip_title: true
 
 exclude:
+  - tools/
+  - images/programme/README.md
   - assets/wvu-design-system/README.md
   - assets/wvu-design-system/LICENSE
   # Belt and braces with .gitignore: if one of these is ever committed again it

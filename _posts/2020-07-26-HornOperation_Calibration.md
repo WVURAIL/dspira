@@ -5,8 +5,10 @@ title: How to Calibrate the Horn Telescope
 summary:  The procedure for calibrating the telescope using the spectrometer_w_cal program is outlined.
 tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Observing']
-order: 7
+order: 6
 meta_description: "Calibrate a horn radio telescope with the DSPIRA spectrometer. Follow the setup steps to prepare the system for measuring hydrogen signals."
+timing: "Allow about 20 minutes for warm-up before calibrating. Wait for the display to settle during each measurement."
+keywords: ["calibration", "calibrate", "hot cold"]
 ---
 
 [Instructional video](https://youtu.be/r8iYuaiFOd8) - Demonstrates steps for calibrating the horn telescope.
@@ -35,7 +37,7 @@ meta_description: "Calibrate a horn radio telescope with the DSPIRA spectrometer
 
    6. Point the telescope at open sky. Keep redirecting it until you find sky without a hydrogen peak near 1420.4 MHz. After doing so, switch to `Long Integration`.
 
-   7. Wait for the graph to settle to a steady display. Then switch the `Spectrum Display` to `Spectrum with Calibration`.  DO NOT MOVE THE TELESCOPE UNTIL THE SPECTRUM DISPLAYED HAS BEE CHANGED TO `Spectrum with calibration`.
+   7. Wait for the graph to settle to a steady display. Then switch the `Spectrum Display` to `Spectrum with Calibration`.  DO NOT MOVE THE TELESCOPE UNTIL THE SPECTRUM DISPLAYED HAS BEEN CHANGED TO `Spectrum with calibration`.
 
    8. The spectrometer is now calibrated, and the graph should now be showing only signals from the galaxy.
 
