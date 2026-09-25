@@ -8,6 +8,8 @@ categories: ['Software Setup']
 order: 10
 meta_description: "Set up a Raspberry Pi for DSPIRA radio astronomy. Find supported devices, Ubuntu installation steps, remote access tips, and software links."
 optional: true
+equipment: "A Raspberry Pi, power supply, microSD card, and computer with a card reader. Desktop use also needs display and input devices."
+preparation: "Choose an image or manual installation. Check device and image requirements before using this optional historical setup route."
 ---
 
 Raspberry Pis are inexpensive. Newer models can handle the GNU Radio signal processing needed for radio astronomy. 

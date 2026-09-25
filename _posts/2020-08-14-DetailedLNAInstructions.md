@@ -7,6 +7,8 @@ tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Receiver Electronics']
 order: 2
 meta_description: "Build the DSPIRA low-noise amplifier with component-by-component soldering instructions, circuit diagrams, and demonstration videos."
+equipment: "The LNA parts list, circuit board, components, soldering tools, and assembly materials listed in the instructions."
+preparation: "Use this route when building an amplifier. Review soldering steps and arrange appropriate tools and supervision before assembly."
 ---
 
 ## First: Order the Components of the LNA  

@@ -8,6 +8,7 @@ categories: ['Horn Construction']
 order: 5
 meta_description: "Explore alternative radio horn telescope designs. Find construction guides for a smaller DSPIRA horn, telescope bases, and cylindrical horns."
 optional: true
+equipment: "The selected design guide and its parts list. Materials and tools depend on which horn you build."
 preparation: "Choose one horn design. These alternatives are not additional required builds."
 ---
 

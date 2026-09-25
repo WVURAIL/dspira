@@ -7,6 +7,9 @@ tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Observing']
 order: 8
 meta_description: "Set up two horn telescopes with a LimeSDR. Follow the equipment checklist, cable connections, alignment steps, and data recording procedure."
+equipment: "Two horn telescopes, amplifiers, stands, cables, a two-channel LimeSDR, and a computer with the interferometer software."
+preparation: "Use this as an optional extension after single-horn setup. Review the wiring, alignment, and software compatibility before connecting both horns."
+optional: true
 ---
 
 ## Procedure for Setting Up a 2 Horn Interferometer

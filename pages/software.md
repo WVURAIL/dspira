@@ -11,9 +11,9 @@ lead: Check compatibility before choosing an installation route or scheduling cl
 The existing telescope lessons describe Ubuntu and GNU Radio with a compatible SDR receiver.
 Check your computer, receiver model, and GNU Radio version together. Installation success alone does not verify receiver operation or calibration.
 
-**Compatibility review is still needed.** Current checks found errors in the classroom applications on newer GNU Radio versions.
-Receiver operation and calibration have not been verified for the migrated collection.
-Read the [known compatibility issues](https://github.com/WVURAIL/dspira-software/blob/main/docs/KNOWN_ISSUES.md) before using these applications in class.
+**Generation checks pass on GNU Radio 3.10.9.2.** All seven applications generate Python successfully with their required block definitions installed.
+Generated Python also passes syntax checks. Receiver operation and hardware calibration still need testing.
+Read the [compatibility results and remaining checks](https://github.com/WVURAIL/dspira-software/blob/main/docs/KNOWN_ISSUES.md) before using these applications in class.
 
 Email [rail@wvu.edu](mailto:rail@wvu.edu) with your operating system, GNU Radio version, and receiver model for setup guidance.
 
@@ -33,6 +33,21 @@ Older instructions may target GNU Radio 3.8. Do not assume they apply unchanged 
 
 **Review compatibility before opening these files.** Extract the ZIP and find the `flowgraphs` folder.
 The shared `radio_astro` blocks are a separate installation required by the telescope applications.
+Install the receiver's GNU Radio plugin too. Osmocom and LimeSDR source blocks come from `gr-osmosdr` and `gr-limesdr`, respectively.
+
+### Choose where observations are saved
+
+Current spectrometer and interferometer downloads save files in your home folder by default.
+To choose another folder, create it and set `DSPIRA_OUTPUT_DIR` before launching GNU Radio Companion:
+
+```bash
+mkdir -p "$HOME/dspira-data"
+export DSPIRA_OUTPUT_DIR="$HOME/dspira-data"
+gnuradio-companion
+```
+
+The folder must exist and be writable. Older downloaded applications may still contain someone else's output path.
+Check the [recording instructions]({{ '/HornOperation_runningSpectrometer' | relative_url }}) before collecting data.
 
 ## Additional and experimental applications
 

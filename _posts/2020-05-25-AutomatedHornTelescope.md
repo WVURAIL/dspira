@@ -7,6 +7,9 @@ tags: ['Students', 'Hobbyists']
 categories: ['Community Labs']
 order: 4
 meta_description: "See an independent project that added a motorized mount to a DSPIRA horn telescope. Follow the build notes and links to its design."
+equipment: "A browser for the project reference. Reproducing the build requires a horn telescope and the linked motorization parts."
+preparation: "Treat this as an optional extension. Review the external build instructions after completing a working telescope."
+optional: true
 ---
 
 A twenty-three step Instructables build of an automated radio telescope. On the

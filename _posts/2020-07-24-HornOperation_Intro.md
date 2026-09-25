@@ -7,6 +7,8 @@ tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Observing']
 order: 2
 meta_description: "Find out what a horn radio telescope can measure. Explore hydrogen signals from the Milky Way and the main parts of the DSPIRA receiver."
+equipment: "A browser to read the example spectrum. No telescope is needed for this introduction."
+preparation: "Review what the hydrogen line and background represent before operating the spectrometer."
 ---
 
 ## The Horn Telescope: An Overview

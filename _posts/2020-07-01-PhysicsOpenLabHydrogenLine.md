@@ -7,6 +7,9 @@ tags: ['Students', 'Hobbyists']
 categories: ['Community Labs']
 order: 3
 meta_description: "Explore an independent PhysicsOpenLab project that receives the 21 cm hydrogen line. Find the project documentation and hardware context."
+equipment: "A browser and PDF reader for the project report. Its receiver and construction choices differ from the DSPIRA route."
+preparation: "Use this as an optional project reference. Compare its equipment list with your telescope before adapting the design."
+optional: true
 ---
 
 [PhysicsOpenLab](https://physicsopenlab.org/) publishes worked experiments for

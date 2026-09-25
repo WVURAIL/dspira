@@ -7,6 +7,8 @@ tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Software Setup']
 order: 9
 meta_description: "Build a simple radio astronomy spectrometer in GNU Radio. Follow introductory lessons and connect the processing blocks into a flowgraph."
+equipment: "GNU Radio and the linked lesson PDFs. The waveform exercises need no receiver; live telescope input requires an SDR."
+preparation: "Begin with the introductory waveform lessons. Review FFTs and filters before building the spectrometer."
 ---
 
 

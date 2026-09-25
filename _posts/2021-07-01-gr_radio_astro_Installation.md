@@ -7,6 +7,8 @@ tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Software Setup']
 order: 7
 meta_description: "Install the DSPIRA gr-radio_astro blocks for GNU Radio. Follow the repository setup and update steps to prepare your telescope software."
+equipment: "A computer with GNU Radio, Git, build tools, and the dependencies listed in the installation steps."
+preparation: "Install GNU Radio first. Check its version before choosing the shared-library branch, then obtain the separate classroom applications."
 ---
 
 The shared `gr-radio_astro` library supplies GNU Radio blocks. Classroom applications now come from `dspira-software`.

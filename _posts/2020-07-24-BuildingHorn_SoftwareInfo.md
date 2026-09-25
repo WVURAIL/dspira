@@ -7,6 +7,8 @@ tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Software Setup']
 order: 2
 meta_description: "Choose a software setup for your horn radio telescope. Compare Ubuntu installation options and find the GNU Radio tools used by DSPIRA."
+equipment: "A computer with internet access. Removable storage is needed only for the bootable-drive installation route."
+preparation: "Choose one installation route for your computer. Read the software compatibility guide before changing an existing system."
 ---
 
 Complete the following steps as needed:

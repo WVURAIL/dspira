@@ -7,6 +7,9 @@ tags: ['School-Teachers', 'Students', 'Hobbyists']
 categories: ['Community Labs']
 order: 1
 meta_description: "See how the WISRD student lab uses horn telescopes with a cosmic ray detector. Explore its search for radio signals from air showers."
+equipment: "A browser for the student project reference. Reproducing the experiment requires its radio and cosmic-ray detection equipment."
+preparation: "Use this as an optional research example. Review the linked project details before planning a similar experiment."
+optional: true
 ---
 
 The Wildwood Institute for STEM Research and Development is a student research

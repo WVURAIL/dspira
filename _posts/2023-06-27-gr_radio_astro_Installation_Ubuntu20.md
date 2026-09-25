@@ -8,6 +8,8 @@ categories: ['Software Setup']
 order: 8
 meta_description: "Install gr-radio_astro on Ubuntu 20.04 for GNU Radio 3.8. Follow the setup and update steps for the DSPIRA radio astronomy software."
 optional: true
+equipment: "An Ubuntu 20.04 computer with GNU Radio 3.8 and the listed build dependencies."
+preparation: "Use this optional historical route only for the matching environment. Otherwise, follow the current shared-library installation guide."
 ---
 
 This historical guide uses the `gr38` release line. Its application paths refer to that preserved version.

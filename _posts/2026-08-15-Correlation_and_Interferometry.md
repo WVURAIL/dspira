@@ -9,6 +9,8 @@ categories: ['Digital Signal Processing']
 order: 8
 permalink: /correlation-and-interferometry/
 meta_description: "Explore convolution, autocorrelation, and cross-correlation. Use GNU Radio labs to understand how two horn telescopes form an interferometer."
+equipment: "A computer with Jupyter, NumPy, SciPy, and Matplotlib to run the notebook. Simulations require no telescope."
+preparation: "Review waves, phase, and Fourier analysis. Read the theory alongside the notebook before attempting the optional hardware extension."
 ---
 
 Every measurement a radio telescope makes is a correlation of some kind. A

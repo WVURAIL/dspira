@@ -19,12 +19,16 @@ These routes use the same lessons students read. Teacher notes and worksheets st
 
 ## Prepare for class
 
+Open **Equipment and preparation** near the top of each lesson for activity-specific requirements.
+These notes summarize the written activities. They identify software-only exercises, receiver requirements, and optional alternatives.
+
 1. Open every worksheet, video, and download you plan to use.
 2. Choose the tasks that fit your students' preparation.
 3. Check equipment access and any installation permissions.
 4. Work through the selected tasks and allow time for questions and setup.
 
 Classroom timings have not been confirmed across this collection. Plan from your selected tasks instead of assuming a whole module fits one class.
+Allow setup time separately from student activity time. Hardware testing and classroom use have not been verified by reviewing the written instructions.
 For telescope sessions, review [software compatibility]({{ '/software/' | relative_url }}) before scheduling observations.
 
 [Request a starter kit]({{ '/kits/' | relative_url }}) if equipment access is a barrier.

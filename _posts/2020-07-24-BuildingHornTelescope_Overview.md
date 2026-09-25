@@ -7,6 +7,8 @@ tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Horn Construction']
 order: 1
 meta_description: "Plan a horn radio telescope with this guide to the antenna, amplifier, receiver, and computer. Find links to DSPIRA construction lessons."
+equipment: "A browser for the parts overview. The complete system includes a horn, amplifier, receiver, cables, and computer."
+preparation: "Review the complete system before ordering parts. Choose a horn design and check the receiver and software requirements."
 ---
 A list of the components that are needed to build and operate a horn radio telescope system is presented below. Links to documentation and instructional videos are provided where applicable.
 

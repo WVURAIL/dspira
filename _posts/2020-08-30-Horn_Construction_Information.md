@@ -7,6 +7,8 @@ tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Horn Construction']
 order: 2
 meta_description: "Find plans and resources for building a DSPIRA horn telescope. Follow links to the antenna, amplifier, receiver, and computer setup guides."
+equipment: "The parts lists and drawings for the horn, can, and stand. Assembly requires the listed materials and tools."
+preparation: "Review dimensions, assembly steps, and current parts availability before purchasing or cutting materials."
 ---
 
 A complete horn telescope system can cost a few hundred dollars. The total depends on your chosen components and whether you already own a computer. 

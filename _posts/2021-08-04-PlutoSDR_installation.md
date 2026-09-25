@@ -8,6 +8,8 @@ categories: ['Receiver Electronics']
 order: 4
 meta_description: "Install the software needed to use PlutoSDR with a DSPIRA telescope. Follow the setup steps to connect the receiver to your computer."
 optional: true
+equipment: "An ADALM-PLUTO receiver and a computer with GNU Radio, internet access, and software installation permissions."
+preparation: "Use this optional route only for PlutoSDR. These historical commands target older GNU Radio versions; check compatibility before installing."
 ---
 
 

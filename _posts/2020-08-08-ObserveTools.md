@@ -7,6 +7,8 @@ tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Astronomy']
 order: 3
 meta_description: "Build the skills needed for radio astronomy observations. Explore the electromagnetic spectrum, Doppler shifts, and celestial coordinates."
+equipment: "Internet access, student worksheets, and Stellarium Web. These introductory activities do not require a telescope."
+preparation: "Read the teacher notes. Choose activities covering the electromagnetic spectrum, Doppler shifts, coordinates, and sky planning."
 ---
 
 The DSPIRA Astronomy Lessons Module helps teachers and students make sky observations with the DSPIRA Radio Horn Telescope.  Beginners need some basic tools first. These include finding targets in their local sky, understanding electromagnetic radiation, and learning what it reveals.  

@@ -7,9 +7,9 @@ tags: ['School-Teachers', 'Students', 'Hobbyists']
 categories: ['Astronomy']
 order: 4
 meta_description: "Calculate how fast Earth and the Sun move through space. Use a classroom activity to compare rotation, orbital motion, and galactic motion."
-equipment: "Internet access and the selected worksheet. No telescope is needed."
-preparation: "Choose the basic, advanced, or physics version. Read the teacher notes first."
 keywords: ["orbital speed", "no telescope", "beginner", "classroom"]
+equipment: "Internet access, a calculator, and the selected worksheet. No telescope is needed."
+preparation: "Choose the basic, advanced, or physics version. Read the teacher notes and check the mathematics required by your selection."
 ---
 This lesson is designed at three different levels.  Each is mainly after the students being able to determine the speed of the Earth around the Sun.  
 

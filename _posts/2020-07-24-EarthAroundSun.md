@@ -7,6 +7,8 @@ tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Astronomy']
 order: 5
 meta_description: "Measure the speed of Earth around the Sun with radio telescope data. Use classroom models, Doppler shifts, and guided student activities."
+equipment: "Student worksheets, Stellarium, and the linked class spreadsheet. Supplied telescope data support the analysis without a telescope."
+preparation: "Start with motion, coordinate systems, and Doppler shifts. Collecting your own telescope data is an optional final activity."
 ---
 This intensive activity sequence is intended for high school students and above. Students eventually use the DSPIRA Radio Horn Telescope to measure Earth's speed around the Sun. The reference point to measure this speed with be the Center of the Galaxy (GC).   
 Click here for a complete document of [Teacher's Notes](https://docs.google.com/document/d/10zVMqpykbRbOjKvXGvWoZxYcacZ31Ay5AIp2mx70VOk/edit?usp=sharing) for this whole activity sequence

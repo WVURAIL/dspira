@@ -7,6 +7,8 @@ tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Astronomy']
 order: 6
 meta_description: "Use horn telescope data to plot the Milky Way rotation curve. Find instructions and classroom handouts for this DSPIRA astronomy activity."
+equipment: "Observation handouts, Stellarium, and a calibrated horn telescope for collecting spectra. Analysis uses a spreadsheet or the optional notebook."
+preparation: "Review Doppler shifts and galactic coordinates. Replace the historical observing dates and locations before planning your own observations."
 ---
 
 **OVERVIEW FOR THE TEACHER**

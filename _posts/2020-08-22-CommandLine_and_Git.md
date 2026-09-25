@@ -8,6 +8,8 @@ categories: ['Software Setup']
 order: 3
 permalink: /CommandLine_and_Git/
 meta_description: "Learn the Linux terminal commands and Git steps used in DSPIRA lessons. Navigate files, update software, and manage local changes."
+equipment: "A computer with a terminal and Git for the commands. No telescope or radio receiver is needed."
+preparation: "Use this introduction before source-based installation. Experienced terminal and Git users can continue to their chosen installation guide."
 ---
 
 Several lessons here open a terminal and start typing. If that is unfamiliar

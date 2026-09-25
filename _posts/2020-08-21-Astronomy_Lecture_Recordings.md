@@ -8,6 +8,8 @@ categories: ['Astronomy']
 order: 8
 permalink: /Astronomy_Lecture_Recordings/
 meta_description: "Watch six astronomy lectures from the DSPIRA summer institute. Find the slides, speaker information, and resources for further study."
+equipment: "A browser for watching the lecture recordings. No telescope is needed."
+preparation: "Choose lecture topics that match your class. Preview the selected recordings before scheduling discussion."
 ---
 
 The astronomy taught alongside the telescope building at the DSPIRA summer

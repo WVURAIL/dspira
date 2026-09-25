@@ -7,6 +7,8 @@ tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Receiver Electronics']
 order: 5
 meta_description: "Configure the source block in the DSPIRA spectrometer for your receiver. Find the device settings needed to collect radio astronomy data."
+equipment: "The spectrometer flowgraph, your SDR receiver, its driver, and amplifier connections. Some receivers also require external amplifier power."
+preparation: "Identify your receiver model first. Apply both sample-rate and frequency changes where specified, and check amplifier power requirements."
 ---
 
 

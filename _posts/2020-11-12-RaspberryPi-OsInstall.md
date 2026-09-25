@@ -8,6 +8,8 @@ categories: ['Software Setup']
 order: 11
 meta_description: "Download and install the WVU RAIL radio astronomy operating system for Raspberry Pi. Prepare a compact computer to run a horn telescope."
 optional: true
+equipment: "A Raspberry Pi 4, power supply, and SD card of at least 16 GB. Also provide a computer and card reader."
+preparation: "This is an optional historical setup route. Review image compatibility, remote access, and the software guide before writing the card."
 ---
 
 ## Radio Astronomy with Raspberry Operating System

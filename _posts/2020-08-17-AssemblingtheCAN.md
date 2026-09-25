@@ -8,6 +8,8 @@ categories: ['Horn Construction']
 order: 4
 permalink: "/assemblingcan"
 meta_description: "Build the can and feedthrough antenna for a DSPIRA horn telescope. Follow measured assembly steps and videos for cutting, drilling, and soldering."
+equipment: "A metal can, copper probe, SMA connector, soldering tools, drill, and the other listed assembly supplies."
+preparation: "Review probe dimensions and the assembly video. Prepare the tools and appropriate soldering supervision before starting."
 ---
 
 The CAN is the back end of the horn antenna. The CAN is made up of two parts: 

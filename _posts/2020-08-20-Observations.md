@@ -9,6 +9,8 @@ categories: ['Observing']
 order: 7
 permalink: /Observations/
 meta_description: "Reduce data from a horn radio telescope. Follow DSPIRA examples to map the radio sky and measure the rotation curve of the Milky Way."
+equipment: "Recorded telescope spectra and Python with Jupyter, NumPy, plotting tools, and h5py for the analysis examples."
+preparation: "Review the data-reading examples and your file format. A working telescope is needed only when collecting new observations."
 ---
 
 Let's use our telescopes.

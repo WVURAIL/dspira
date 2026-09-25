@@ -7,6 +7,8 @@ tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Observing']
 order: 3
 meta_description: "Prepare a DSPIRA horn telescope for observing. Follow the setup guide and video to connect the equipment and get ready to collect data."
+equipment: "The equipment checklist, assembled horn, amplifier, receiver, cables, and computer with telescope software."
+preparation: "Review the checklist and setup video. Confirm amplifier power and receiver connections before starting the spectrometer."
 ---
 
 

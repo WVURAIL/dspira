@@ -7,6 +7,8 @@ tags: ['School-Teachers', 'Students', 'Hobbyists']
 categories: ['Digital Signal Processing']
 order: 2
 meta_description: "Build complex waves by adding sine and cosine signals. Use this classroom activity to explore Fourier series and how waveforms are formed."
+equipment: "GNU Radio for the flowgraph activity, or the linked worksheet for the paper exercise. No receiver is needed."
+preparation: "Choose the software or paper route. Review sine waves before combining harmonics."
 ---
 
 To access the classroom activity click on the following link:  

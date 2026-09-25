@@ -8,6 +8,8 @@ categories: ['Software Setup']
 order: 5
 meta_title: "Install Ubuntu 22.04 and DSPIRA on a USB Drive"
 meta_description: "Set up a bootable USB drive with Ubuntu 22.04 and the DSPIRA spectrometer. Follow the image-writing steps to prepare a telescope computer."
+equipment: "A USB-bootable computer and image-writing software. The supplied Ubuntu 22.04 image needs 32 GB; Ubuntu 24.04 needs 128 GB."
+preparation: "Choose an image and check computer boot support. Back up the selected USB drive before overwriting it."
 ---
 
 ## Image the Flashdrive:

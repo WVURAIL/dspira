@@ -7,6 +7,9 @@ tags: ['School-Teachers', 'Students', 'Hobbyists']
 categories: ['Community Labs']
 order: 2
 meta_description: "Read about a WVU student project that tested the DSPIRA horn telescope against published measurements to assess its use outside the classroom."
+equipment: "A browser for the research poster and video. Repeating the analysis requires calibrated observations and the comparison references."
+preparation: "Read this as an optional project example. Review calibration and hydrogen measurements before adapting the analysis."
+optional: true
 ---
 
 Victoria Blanton joined WVU's 2021 Summer Undergraduate Research Experience to test the telescope's suitability outside classrooms.

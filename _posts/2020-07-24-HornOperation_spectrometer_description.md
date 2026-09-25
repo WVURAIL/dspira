@@ -7,6 +7,8 @@ tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Observing']
 order: 4
 meta_description: "Explore the controls and displays in the DSPIRA horn spectrometer. Learn what the spectrum, calibration, and data recording settings do."
+equipment: "A browser for this controls reference. Following along requires the spectrometer application and a configured telescope receiver."
+preparation: "Complete software and receiver setup before using the controls. Read the separate calibration procedure before calibrating."
 ---
 
 The program used to run the telescope is a GNU Radio program called *spectrometer_w_cal.grc*. Get it from the [DSPIRA software guide]({{ '/software/' | relative_url }}). The *spectrometer_w_cal.grc* program has several features to make data collection with the horn telescope user-friendly. Each feature on the display is described below.

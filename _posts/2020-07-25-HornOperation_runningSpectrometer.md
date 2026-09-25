@@ -7,6 +7,8 @@ tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Observing']
 order: 5
 meta_description: "Run the DSPIRA spectrometer in GNU Radio. Follow the startup steps, choose the receiver settings, and begin viewing radio telescope data."
+equipment: "An assembled telescope, powered amplifier, configured receiver, and computer with the spectrometer application. Provide a writable data folder."
+preparation: "Complete telescope and software setup. Check receiver settings, output paths, and computer power settings before starting an observation."
 ---
 
 The video shown [here](https://youtu.be/50B2Uv-SoDY) explains the features in this program.
@@ -23,27 +25,17 @@ The video [here](https://youtu.be/Oo28QCEZe_g) explains how set up the horn and 
 
       - `integration_time1` is the short integration time, and `integration_time2` is the long integration time. These can be changed to any value at 0.4 s or above.
 
-      - Be sure that the file path in the `prefix` box is correct. This is the folder where the data files will be saved.
+      - Check the `prefix` variable before recording. It combines the output folder with an optional filename prefix.
 
-        Hints on setting the file path correctly:
-        (These steps are explained in the [setting up the horn video](https://youtu.be/Oo28QCEZe_g).)
-        1. Open the File Navigation window (folder icon).
-        2. Navigate to the folder to which you want to save the spectrum files.
-        3. Right click on the folder.
-        4. Select `Properties`. 
-        5. Double click the `Parent folder:` path and copy it to the clipboard.
-        6. In the `prefix` variable box paste the path name inside quotes in the `Value` box. (Delete any existing path name.)
-        7. Then append the actual folder name to the end of the parent path. Be sure to separate folder names with / and end with /.
+        Current application downloads use your home folder and begin filenames with `spectrum_`.
+        Follow the [software guide]({{ '/software/#choose-where-observations-are-saved' | relative_url }}) to choose a folder with `DSPIRA_OUTPUT_DIR`.
+        Create that folder before launching GNU Radio Companion.
 
-            EXAMPLE:
-            
-            Parent folder: `home/Jansky/radio_astronomy`
-            
-            data folder name: `horn_data_2020`
+        You can also edit `prefix` directly. Enter an absolute path inside quotes, such as `"/home/jansky/horn_data/spectrum_"`.
+        Replace the example with your own existing, writable folder.
+        Use a trailing slash instead of `spectrum_` if you want filenames to begin with the timestamp.
 
-            Value to put into the `prefix` variable box:   
-	    "home/Jansky/radio_astronomy/horn_data_2020/"
-	    (Include the quotes)
+        Older images and videos may show a different default path. Check your installed flowgraph before collecting data.
 
    * CAUTION: Plug your laptop into power. Otherwise, it may enter sleep mode and stop the program during a long run. Change the power settings on your computer so that it never suspends or goes to sleep.
 
