@@ -194,3 +194,13 @@ widget scripts are omitted.
 When updating the export, preserve its metadata, skip link, heading IDs, image
 descriptions, and preview `noindex`. Keep plot files separate so they can load
 on demand. Compare all plots and rerun the layout and contrast checks.
+
+## Historical notebook styles
+
+`retired_sites.py history` repairs two optional stylesheet references in the published archive:
+`dspira-archive/gbtdrift/index.html` and `dspira-archive/labs/05/I_Q_quadrature_sampling.html`.
+Both notebook exports embed their styles but also request an absent `custom.css` override.
+The publication step removes that reference only when the stylesheet is missing.
+If a future source package includes the override, it is copied and retained.
+
+The preserved source and ZIP remain unchanged. Run `python3 tools/test_retired_sites.py` to check this behavior.

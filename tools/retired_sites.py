@@ -17,6 +17,7 @@ NAMES = ('dspira-archive', 'cra', 'gr-transient')
 BASE = 'https://wvurail.org/dspira/history/sites/'
 RELEASE = 'https://github.com/WVURAIL/dspira/releases/tag/preserved-repositories-2026-09-25'
 MANIFEST = Path(__file__).resolve().parents[1] / '_data/retired_sites.json'
+NOTEBOOK_EXPORTS = {'gbtdrift/index.html', 'labs/05/I_Q_quadrature_sampling.html'}
 
 
 def extract_verified(package, destination, expected_sha256):
@@ -80,7 +81,14 @@ def install_history(source, site):
         target = Path(site) / 'history/sites' / name
         shutil.copytree(Path(source) / name, target)
         for path in target.rglob('*.html'):
-            path.write_text(historical_html(path.read_text(), name, path.relative_to(target)), encoding='utf-8')
+            relative = path.relative_to(target)
+            text = path.read_text()
+            if (name == 'dspira-archive' and relative.as_posix() in NOTEBOOK_EXPORTS
+                    and not (path.parent / 'custom.css').exists()):
+                # These exports embed their styles; custom.css was an optional override.
+                text = text.replace('<!-- Custom stylesheet, it must be in the same directory as the html file -->', '')
+                text = text.replace('<link rel="stylesheet" href="custom.css">', '')
+            path.write_text(historical_html(text, name, relative), encoding='utf-8')
         for unwanted in ('CNAME', 'sitemap.xml', 'sitemap.xml.gz', 'feed.xml', 'robots.txt'):
             (target / unwanted).unlink(missing_ok=True)
 

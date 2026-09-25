@@ -35,6 +35,36 @@ class PreservationTests(unittest.TestCase):
                 self.assertEqual((alias / 'worksheet.pdf').read_bytes(), b'%PDF-original')
                 self.assertEqual((historical / 'worksheet.pdf').read_bytes(), b'%PDF-original')
 
+    def test_removes_only_missing_notebook_overrides_from_published_copies(self):
+        original = ('<html><head><style>body { color: black; }</style>'
+                    '<link rel="stylesheet" href="custom.css"></head><body>Lesson</body></html>')
+        exports = ('gbtdrift/index.html', 'labs/05/I_Q_quadrature_sampling.html')
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            package, digest = self.archive(root)
+            extract_verified(package, root / 'source', digest)
+            archive = root / 'source/dspira-archive'
+            for relative in (*exports, 'other/index.html'):
+                page = archive / relative
+                page.parent.mkdir(parents=True, exist_ok=True)
+                page.write_text(original)
+            install_history(root / 'source', root / 'active')
+            published = root / 'active/history/sites/dspira-archive'
+            for relative in exports:
+                self.assertNotIn('href="custom.css"', (published / relative).read_text())
+                self.assertIn('<style>body { color: black; }</style>', (published / relative).read_text())
+                self.assertIn('<body>', (published / relative).read_text())
+                self.assertIn('Lesson</body>', (published / relative).read_text())
+                self.assertEqual((archive / relative).read_text(), original)
+            self.assertIn('href="custom.css"', (published / 'other/index.html').read_text())
+            self.assertEqual(hashlib.sha256(package.read_bytes()).hexdigest(), digest)
+
+            (archive / 'gbtdrift/custom.css').write_text('body { color: navy; }')
+            install_history(root / 'source', root / 'with-override')
+            restored = root / 'with-override/history/sites/dspira-archive/gbtdrift'
+            self.assertIn('href="custom.css"', (restored / 'index.html').read_text())
+            self.assertEqual((restored / 'custom.css').read_text(), 'body { color: navy; }')
+
     def test_rejects_wrong_checksum_and_traversal(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
