@@ -1209,7 +1209,7 @@
     },
     {
       "legacy": "images/landing.png",
-      "source": "images/hero/night-horns-original.png",
+      "source": "images/night-horn/night-horns-original.png",
       "original_sha256": "81b7ba6c51a3a4c975398df62d58424f7b902ec6a03bb024d593844acb49c943",
       "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
     },
@@ -1692,6 +1692,24 @@
       "canonical": "https://github.com/WVURAIL/dspira/blob/main/assets/lessons/lectures/README.md",
       "owner": "dspira",
       "destination": "assets/lessons/lectures/README.md"
+    },
+    {
+      "legacy": "images/hero/night-horns-original.png",
+      "source": "images/night-horn/night-horns-original.png",
+      "original_sha256": "81b7ba6c51a3a4c975398df62d58424f7b902ec6a03bb024d593844acb49c943",
+      "source_revision": "d58b9b67a3c4c8d50251f7f2bcba6c0f2148d6f6"
+    },
+    {
+      "legacy": "images/hero/night-horns.jpg",
+      "source": "images/night-horn/night-horns.jpg",
+      "original_sha256": "017a26f4544d3154657465b167b9ff3493f15bfc948880e9d30c55eb4f9e8f51",
+      "source_revision": "d58b9b67a3c4c8d50251f7f2bcba6c0f2148d6f6"
+    },
+    {
+      "legacy": "images/hero/night-horns.webp",
+      "source": "images/night-horn/night-horns.webp",
+      "original_sha256": "30df52f67e14e6cc1469c2fe51c5a007c736f27cdbb1cb3a49e4e8e0e245129f",
+      "source_revision": "d58b9b67a3c4c8d50251f7f2bcba6c0f2148d6f6"
     }
   ]
 }

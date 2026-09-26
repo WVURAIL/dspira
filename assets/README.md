@@ -54,7 +54,8 @@ I/Q notebook figures live in `images/iq/`. Its separate stylesheet lives in `css
 The notebook page remains available at `/dspira/iq/`.
 
 `images/branding/` holds logos and the social card; `images/program/` holds program photographs.
-`images/modules/` contains module thumbnails, and `images/hero/` contains the homepage photographs and their originals.
+`images/modules/` contains module thumbnails.
+`images/night-horn/` contains the nighttime horn photograph and its homepage display versions.
 Photo and diagram bytes remain unchanged when files move.
 
 ## Templates and website files

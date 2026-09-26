@@ -24,7 +24,7 @@ summer workshop, and it is the command-line route through the data.
 > if you are teaching this to a class; read this one if you want the pipeline.
 
 The scripts are in [`code/observations/`](https://github.com/WVURAIL/dspira/tree/main/code/observations).
-The [README](https://github.com/WVURAIL/dspira/blob/master/code/observations/README.md) explains installation and each script's output.
+The [README](https://github.com/WVURAIL/dspira/blob/main/code/observations/README.md) explains installation and each script's output.
 
 ---
 
