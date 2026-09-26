@@ -19,7 +19,7 @@ Passing a software check does not establish receiver compatibility or scientific
 - The velocity-curve and interferometry notebooks executed all ten code cells. Five figure scripts produced their PNGs.
 - All 19 IQ example code cells executed. Numerical checks recover the expected ±20 MHz tones and increased image leakage with gain imbalance.
 - A finite FM test recovered a 1 kHz input at 999.88 Hz after the corrected conversion to 48 kHz audio.
-- Current-site mobile overflow and text-contrast checks pass. Search/history, math formatting, asset compatibility, and redirect tests pass.
+- Current-site mobile overflow and text-contrast checks pass. Search/history, math formatting, asset compatibility, and redirect tests pass. Browser checks confirm FM equations render and search handles matches, no matches, and clearing.
 
 ## Repairs
 
@@ -95,11 +95,11 @@ External exceptions and checks requiring equipment are stated explicitly.
 | --- | ---: | --- |
 | 1. [Digital Signal Processing Lectures and Demonstrations](https://wvurail.org/dspira/dsp) | 27 | Lecture PDFs open; recording player APIs and media segments checked. See shared recording coverage below. |
 | 2. [Making Waves with Fourier Series](https://wvurail.org/dspira/MakingWavesFourier) | 8 | Activity resources accessible. Relevant Fourier examples generate and run without receiver hardware. |
-| 3. [Digital Signal Processing using GNU Radio - Introductory Lab](https://wvurail.org/dspira/dsplab-intro/) | 77 | Software examples run; pulse expression tested at multiple widths. Corrected FFT size, pulse units, and GLFSR name. GNU Radio wiki checks blocked by its security service. |
+| 3. [Digital Signal Processing using GNU Radio - Introductory Lab](https://wvurail.org/dspira/dsplab-intro/) | 77 | Software examples run; pulse expression tested at multiple widths. Corrected FFT size, pulse units, and GLFSR name. GNU Radio reference pages verified in a browser after script checks were blocked. |
 | 4. [Digital Signal Processing using GNU Radio - Software Defined Radio](https://wvurail.org/dspira/dsplab-sdr/) | 23 | Corrected FM phase equation and rates. Synthetic 1 kHz FM tone recovered at 999.88 Hz. Receiver/audio operation remains untested; retired satellite exercise labeled. |
 | 5. [Digital Signal Processing using GNU Radio - Fourier Analysis](https://wvurail.org/dspira/dsplab-fourier1/) | 25 | Fourier examples generate/run. Fixed square-wave section links and summation indices; old section anchor preserved. |
 | 6. [Digital Signal Processing using GNU Radio - Digital Filter](https://wvurail.org/dspira/dsplab-filters/) | 36 | Filter examples generate/run, including the hierarchy on a clean setup. Corrected filter-tool dependency and normalized-frequency description. |
-| 7. [Digital Signal Processing using GNU Radio - Fourier Analysis and Radio Astronomy](https://wvurail.org/dspira/dsplab-fourier2/) | 37 | IQ example: 19 cells run with expected opposite-frequency peaks. Corrected DFT/autocorrelation equations and PFB anchor. Receiver examples generate; CASPER reference needs follow-up. |
+| 7. [Digital Signal Processing using GNU Radio - Fourier Analysis and Radio Astronomy](https://wvurail.org/dspira/dsplab-fourier2/) | 37 | IQ example: 19 cells run with expected opposite-frequency peaks. Corrected DFT/autocorrelation equations and PFB anchor. Receiver examples generate; CASPER reference renders in a browser. |
 | 8. [Correlation and the Two-Element Interferometer](https://wvurail.org/dspira/correlation-and-interferometry/) | 26 | All six notebook code cells and five figure generators run. Corrected angle definition and phase term. Physical interferometry remains untested. |
 
 ### Astronomy
@@ -121,19 +121,19 @@ External exceptions and checks requiring equipment are stated explicitly.
 | --- | ---: | --- |
 | 1. [Cosmic rays and radio, at the WISRD lab](https://wvurail.org/dspira/WISRDUpdate) | 11 | Linked journal and poster downloads are public. External experiment was not reproduced. |
 | 2. [Is the telescope good enough for the public?](https://wvurail.org/dspira/TestingForPublicUse) | 9 | Referenced article/video destinations checked. Reported field performance was not independently reproduced. |
-| 3. [A hydrogen line project at PhysicsOpenLab](https://wvurail.org/dspira/PhysicsOpenLabHydrogenLine) | 7 | Project page is reachable in a normal browser. The linked external PDF could not be independently rendered during this audit. |
+| 3. [A hydrogen line project at PhysicsOpenLab](https://wvurail.org/dspira/PhysicsOpenLabHydrogenLine) | 7 | Project pages render in a browser. The linked 34-page PDF is readable through the web document reader despite script blocking. |
 | 4. [Somebody motorized a horn telescope](https://wvurail.org/dspira/AutomatedHornTelescope) | 7 | Project/video destinations checked. Motor hardware and third-party control software were not tested. |
 
 ## Follow-up and limitations
 
 1. **Receiver and calibration verification:** [software issue 1](https://github.com/WVURAIL/dspira-software/issues/1). Test an actual receiver from installation through saved observations. Record OS, driver, application revision, receiver, amplifier, and calibration reference. Two-horn, lightning, audio-device, Raspberry Pi, and boot-image operation remain unverified.
-2. **External references and older PDFs:** [lesson issue 36](https://github.com/WVURAIL/dspira/issues/36). Covers the private mini-horn software folder, two unavailable slide links, the Flash Rotating Sky Explorer, CASPER certificate failures, and spectrometer PDF corrections. Existing PDFs were preserved; the website supplies alternatives or corrections.
+2. **External references and older PDFs:** [lesson issue 36](https://github.com/WVURAIL/dspira/issues/36). Covers the private mini-horn software folder, two unavailable slide links, the Flash Rotating Sky Explorer, and spectrometer PDF corrections. Existing PDFs were preserved; the website supplies alternatives or corrections.
 3. **Historical observation file:** [lesson issue 37](https://github.com/WVURAIL/dspira/issues/37). The 2017 GBT notebook's 16 code cells pass syntax checks, but its observation file is missing. Its original rendered results remain readable.
 
-The GNU Radio wiki returned a security-verification page. Its links remain unchanged because blocked automated access does not prove they are broken.
-PhysicsOpenLab's Milky Way article rendered in a browser despite HTTP 403 responses to scripts. Its project PDF remains unverified.
+All four GNU Radio wiki destinations rendered in a browser after initially returning security-verification pages.
+PhysicsOpenLab's homepage and Milky Way article rendered in a browser despite HTTP 403 responses to scripts. Its 34-page project PDF was retrieved through the web document reader.
 Raspberry Pi's replacement documentation rendered in a browser; its IP, SSH, and VNC section anchors were checked directly.
-The CASPER reference failed TLS validation on both known hosts; no insecure bypass was used.
+The CASPER reference rendered in a browser. Script checks failed TLS validation, but no insecure bypass was needed.
 Optional third-party software and activities, including classroom simulations, were not exhaustively installed or executed.
 
 The combined lab/DSPIRA/LightWork link check found 688 internal targets and zero missing files.
