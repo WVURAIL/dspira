@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-Link checker for the dspira-lessons site.
+Link checker for the dspira site.
 
-Run it from the top of a dspira-lessons checkout:
+Run it from the top of a dspira checkout:
 
     python3 check_links.py              # check everything
     python3 check_links.py --offline    # skip the internet, ~1 second
@@ -60,11 +60,8 @@ def source_files():
     # top-level directory of pages needs a line here. forum/ and the
     # categories/*/index.html redirect stubs were invisible until 2026.
     #
-    # README.md, CONTRIBUTING.md and the READMEs under tools/ and code/ are
-    # deliberately absent: _config.yml excludes the first two and the rest carry
-    # no front matter, so none of them is a page. tools/README.md would also
-    # report a false positive, because it quotes '#16-exercises' as an example
-    # of the kind of anchor this script catches.
+    # Root documentation and tools/ are excluded from the site build.
+    # The combined-site checker covers generated lesson-example README pages.
     out = []
     for pat in ("_posts/*.md", "_posts/*.markdown", "pages/*.md",
                 "pages/*.html", "*.md", "index.html",
@@ -73,7 +70,12 @@ def source_files():
                 "tags/*.md", "all/index.html",
                 "_includes/*.html", "_layouts/*.html"):
         out += glob.glob(pat)
-    return sorted(set(p for p in out if os.path.isfile(p)))
+    # glob joins with the host's separator, so on Windows these come back
+    # with backslashes and the startswith("_includes/") tests in main()
+    # never match - the skip link is then reported as a broken anchor there
+    # and nowhere else. Normalise, so the checker says the same thing on
+    # every host.
+    return sorted(set(p.replace(os.sep, "/") for p in out if os.path.isfile(p)))
 
 
 def front_matter(path):
@@ -208,7 +210,7 @@ def body_lines(path):
 IAL_ID_RE = re.compile(r"\{:\s*[^}]*#([A-Za-z0-9_.:-]+)[^}]*\}")
 
 
-def anchors_in(path, baseurl="/dspira-lessons"):
+def anchors_in(path, baseurl="/dspira"):
     """Every fragment this page will answer to."""
     lines = list(body_lines(path))
     out, counter = set(), {}
@@ -265,6 +267,8 @@ def links_in(path, baseurl):
         text = open(path, encoding="utf-8", errors="replace").read()
     except OSError:
         return
+    # Liquid statements can contain HTML strings that are not emitted links.
+    text = re.sub(r"\{%.*?%\}", lambda m: "\n" * m[0].count("\n"), text, flags=re.S)
     in_fence = False
     for i, raw_line in enumerate(text.split("\n"), 1):
         # Fenced code blocks hold examples, not links - the newpost template
@@ -283,9 +287,11 @@ def links_in(path, baseurl):
         # how one of the broken anchors stayed hidden from this checker.
         for m in re.finditer(r"!?\[(?:[^\[\]]|\[[^\[\]]*\])*\]\(\s*([^)\s]+)",
                              line):
-            yield m.group(1), i
+            if "{{" not in m.group(1) and "{%" not in m.group(1):
+                yield m.group(1), i
         for m in re.finditer(r'(?:href|src)\s*=\s*["\']([^"\']+)', line):
-            yield m.group(1), i
+            if "{{" not in m.group(1) and "{%" not in m.group(1):
+                yield m.group(1), i
 
 
 # ---------------------------------------------------------------- checking
@@ -333,7 +339,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--offline", action="store_true",
                     help="skip external URLs (internal checks only)")
-    ap.add_argument("--baseurl", default="/dspira-lessons")
+    ap.add_argument("--baseurl", default="/dspira")
     ap.add_argument("--fail-on", choices=("all", "anchors", "none"),
                     default="all",
                     help="what makes the exit code non-zero. 'anchors' is for "
@@ -345,7 +351,7 @@ def main():
 
     if not os.path.isdir("_posts"):
         sys.exit("No _posts/ directory here. Run this from the top of a "
-                 "dspira-lessons checkout.")
+                 "dspira checkout.")
 
     files = source_files()
     slugs, anchors, own = {}, {}, {}
@@ -413,7 +419,7 @@ def main():
             path = urllib.parse.unquote(parsed.path)
             frag = parsed.fragment
             # Collapse duplicate slashes first: links in the wild are written
-            # as wvurail.org//dspira-lessons/... fairly often, and the server
+            # as wvurail.org//dspira/... fairly often, and the server
             # serves those fine, so they must not be reported as broken.
             path = re.sub(r"/{2,}", "/", path)
             path = re.sub(rf"^/?{re.escape(base)}/?", "", path).strip("/")
@@ -421,7 +427,7 @@ def main():
                 continue
 
             if re.search(r"\.\w{2,5}$", path):     # looks like a file
-                # Jekyll compiles css/style.scss to css/style.css at build
+                # Jekyll compiles css/lessons.scss to css/lessons.css at build
                 # time, so the .css the pages link is real even though only
                 # the .scss is in the repo.
                 scss_twin = path.endswith(".css") and os.path.exists(path[:-4] + ".scss")

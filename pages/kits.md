@@ -1,23 +1,31 @@
 ---
 layout: page
-title: Telescope kits
+title: Request a telescope kit
 permalink: /kits/
-eyebrow: Hardware
-lead: The two parts that are hardest to source, sent to educators who ask.
+meta_description: "Request a DSPIRA receiver and amplifier kit by email. Learn what to include, which telescope parts you still need, and how to confirm availability."
+lead: Ask about a starter receiver and amplifier for your classroom or community project.
 ---
 
-Most of a horn telescope comes from a hardware store. Two pieces do not: a
-software-defined radio dongle, and a low-noise amplifier tuned for the 21&nbsp;cm
-hydrogen line.
+Email [rail@wvu.edu](mailto:rail@wvu.edu?subject=DSPIRA%20kit%20request) to request a kit.
+Educators and community organizers can ask while supplies last.
 
-If you are an educator or a community organiser who is held up by access to that
-equipment, you can ask for a starter kit. Fill in the form with your shipping
-details and a short note on what you plan to do — or have already done — with your
-students or your group.
+## Include in your email
 
-[Request a starter kit](https://forms.gle/qLDGCD8CXNvGo9hS6){: .button .primary}
+- Your school, organization, or community group.
+- Your city and country.
+- How you plan to use the telescope and when you hope to start.
+- Equipment you already have and the number of kits requested.
 
-Kits are sent while supplies last. If they have run out, everything in the
-lessons still works with parts bought directly; the
-[Receiver Electronics]({{ '/categories/receiver-electronics/' | relative_url }})
-module lists what to get and where.
+## What the starter kit includes
+
+The kit supplies an SDR receiver and a low-noise amplifier for the 21 cm hydrogen line.
+It is not a complete telescope. You also need the horn, stand, cables, and a compatible computer.
+Review [the complete parts overview]({{ '/BuildingHornTelescope_Overview' | relative_url }}) before planning your build.
+
+## Availability and delivery
+
+The lab will confirm availability, eligibility, any costs, shipping arrangements, and expected timing by email.
+Please wait for confirmation before relying on a kit for a scheduled class.
+
+If kits are unavailable, [Receiver Electronics]({{ '/categories/receiver-electronics/' | relative_url }}) lists parts and suppliers.
+[Start a telescope build]({{ '/start/#build' | relative_url }}) when your parts and software plan are ready.

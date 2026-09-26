@@ -23,14 +23,14 @@ Every test restores the tree, so a run leaves the checkout exactly as it found
 it. Python 3 standard library only.
 """
 
-import os, re, shutil, subprocess, sys
+import os, re, shutil, subprocess, sys, tempfile
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
 import check_links as C                                        # noqa: E402
 
-BASEURL = "/dspira-lessons"
+BASEURL = "/dspira"
 
 # heading source (as written in the markdown)  ->  id kramdown really emits
 FIXTURES = [
@@ -72,22 +72,20 @@ FIXTURES = [
 
 # (name, file, find, replace, should the checker's count go up?)
 CANARIES = [
-    ("case-sensitive anchor", "_posts/2020-08-14-dsplab1.md",
+    ("case-sensitive anchor", "_posts/2020-08-14-dsp-lab-introduction.md",
      "(#16-exercises)", "(#16-Exercises)", True),
-    ("renumbered heading", "_posts/2020-08-14-dsplab5.md",
+    ("renumbered heading", "_posts/2020-08-14-dsp-lab-radio-astronomy.md",
      "(#54-the-spectrometers-purpose)", "(#55-the-spectrometers-purpose)", True),
-    ("nested brackets in the label", "_posts/2020-08-14-dsplab5.md",
+    ("nested brackets in the label", "_posts/2020-08-14-dsp-lab-radio-astronomy.md",
      "**[OPTIONAL]**](#521-8-point", "**[OPTIONAL]**](#999-8-point", True),
-    ("cross-page fragment", "_posts/2020-08-14-dsplab1.md",
+    ("cross-page fragment", "_posts/2020-08-14-dsp-lab-introduction.md",
      "/dsplab-sdr/#24-fun-sdrgnu-radio-things", "/dsplab-sdr/#24-fun-nonsense", True),
-    ("heading renamed, contents left behind", "_posts/2020-08-14-dsplab2.md",
+    ("heading renamed, contents left behind", "_posts/2020-08-14-dsp-lab-software-defined-radio.md",
      "## 2.1. Introduction", "## 2.1. Introduction and Setup", True),
-    ("underscore dropped from an id", "_posts/2021-08-05-RaspberryPi.md",
-     "(#installing-gr-radio_astro)", "(#installing-gr-radioastro)", True),
     ("anchor inside a code fence is an example, not a link",
-     "_posts/2020-08-14-dsplab1.md",
+     "_posts/2020-08-14-dsp-lab-introduction.md",
      "```bash", "```bash\n# see [nothing](#no-such-heading)", False),
-    ("bare '#' is the back-to-top link", "_posts/2020-08-14-dsplab1.md",
+    ("bare '#' is the back-to-top link", "_posts/2020-08-14-dsp-lab-introduction.md",
      "[↑ Go to the Top of the Page](#)", "[↑ Top](#)", False),
     ("skip link in _includes points into _layouts", "_includes/header.html",
      'href="#main"', 'href="#main"', False),
@@ -107,6 +105,18 @@ def main():
     os.chdir(ROOT)
     fails = []
 
+    template = """{% assign parts = content | split: '<a href="#fnref:' %}
+<a href="#fnref:{{ target }}">Return</a>
+<a href="{{ site.baseurl }}/all/">Lessons</a>
+<a href="#real-heading">Heading</a>
+"""
+    with tempfile.NamedTemporaryFile(mode="w", suffix=".html", encoding="utf-8") as fixture:
+        fixture.write(template)
+        fixture.flush()
+        links = list(C.links_in(fixture.name, BASEURL))
+    if links != [("/dspira/all/", 3), ("#real-heading", 4)]:
+        fails.append("Liquid link extraction: %r" % (links,))
+
     print("fixtures - ids against the real kramdown output")
     for src, want in FIXTURES:
         got = C.gfm_id(C.heading_raw_text(src, BASEURL))
@@ -125,6 +135,24 @@ def main():
     if out != ["a", "a-1", "b", "a-2"]:
         fails.append("duplicate numbering model is wrong: %r" % (out,))
     print("  ok   duplicate headings numbered a, a-1, b, a-2")
+
+    # Keep underscore coverage independent of lesson titles.
+    fixture_source = ('---\nlayout: page\ntitle: Link check fixture\n'
+                      'permalink: /link-check-fixture/\n---\n'
+                      '## Test_heading\n\n[Example](#test_heading)\n')
+    with tempfile.NamedTemporaryFile(mode="w+", suffix=".md", dir="pages",
+                                     encoding="utf-8") as fixture:
+        fixture.write(fixture_source)
+        fixture.flush()
+        correct = broken_count()
+        fixture.seek(0)
+        fixture.truncate()
+        fixture.write(fixture_source.replace('(#test_heading)', '(#testheading)'))
+        fixture.flush()
+        if broken_count() <= correct:
+            fails.append("underscore canary: broken fragment was not caught")
+        else:
+            print("  ok   underscore dropped from an id caught")
 
     print("\ncanaries - break it, check the checker notices")
     base = broken_count()
@@ -159,7 +187,7 @@ def main():
             print("FAIL: %s" % f)
         return 1
     print("all %d fixtures and %d canaries pass; tree restored"
-          % (len(FIXTURES), len(CANARIES)))
+          % (len(FIXTURES), len(CANARIES) + 1))
     return 0
 
 

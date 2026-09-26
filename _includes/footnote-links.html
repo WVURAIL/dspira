@@ -1,0 +1,21 @@
+{%- comment -%}Give generated return arrows descriptive text without JavaScript.{%- endcomment -%}
+{%- assign backlink_parts = include.html | split: '<a href="#fnref:' -%}
+{%- for backlink_part in backlink_parts -%}
+  {%- if forloop.first -%}
+    {{- backlink_part -}}
+  {%- else -%}
+    {%- assign backlink_open = backlink_part | split: '>' | first -%}
+    {%- assign backlink_prefix = backlink_open | append: '>' -%}
+    {%- assign backlink_rest = backlink_part | remove_first: backlink_prefix -%}
+    {%- assign backlink_symbol = backlink_rest | split: '</a>' | first -%}
+    {%- assign backlink_end = backlink_symbol | append: '</a>' -%}
+    {%- assign backlink_target = backlink_open | split: '"' | first | prepend: 'fnref:' -%}
+    {%- assign reference_marker = '<sup id="' | append: backlink_target | append: '">' -%}
+    {%- assign reference_number = '' -%}
+    {%- if include.html contains reference_marker -%}
+      {%- assign reference_number = include.html | split: reference_marker | last | split: '</sup>' | first | strip_html | strip -%}
+    {%- endif -%}
+    {%- assign reference_repeat = backlink_symbol | strip_html | remove: '&#8617;' | strip -%}
+    <a href="#fnref:{{ backlink_open }}><span aria-hidden="true">{{ backlink_symbol }}</span><span class="visually-hidden">Return to {% if reference_number != '' %}footnote {{ reference_number }}{% else %}the footnote reference{% endif %} in the text{% if reference_repeat != '' %} (reference {{ reference_repeat }}){% endif %}</span></a>{{ backlink_rest | remove_first: backlink_end }}
+  {%- endif -%}
+{%- endfor -%}

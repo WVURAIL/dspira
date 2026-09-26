@@ -1,182 +1,46 @@
 ---
 layout: default
 title: DSPIRA lessons
-meta_description: >
-  Free lessons on building and using a horn radio telescope — the antenna, the
-  amplifier, the software-defined radio and the astronomy. Written by high
-  school teachers for the WVU RAIL DSPIRA program.
+preload_image: /images/night-horn/night-horns.webp
+meta_description: "Explore radio astronomy with DSPIRA. Choose a classroom activity, build a horn telescope, or learn to observe the Milky Way."
 ---
-{%- comment -%}
-The module cards carry the first three lesson titles as well as the blurb. The
-old front page listed module names only, so a reader could not see what was
-actually in the curriculum without two more clicks — and the page those clicks
-led to was a copy of this grid. Showing the first few titles is what makes the
-front page a table of contents again.
-{%- endcomment -%}
-<div class="page-head page-head--hero">
-   <div class="container">
-      <p class="eyebrow">Digital Signal Processing in Radio Astronomy</p>
-      <h1>Build a radio telescope. Point it at the Galaxy.</h1>
-      <p class="lead">
-         {{ site.posts | size }} free lessons. You fold the antenna out of insulation
-         board, solder your own amplifier, and then use the thing to measure how fast
-         the Milky Way turns. The high school teachers who wrote these did all of it
-         first.
-      </p>
-      <p class="btn-row">
-         <a class="btn btn--primary" href="{{ '/categories/horn-construction/' | relative_url }}">
-            Start at lesson one {% include icon.html name="arrow" %}
-         </a>
-         <a class="btn btn--ghost" href="{{ '/all/' | relative_url }}">See all {{ site.posts | size }} lessons</a>
-      </p>
-   </div>
+{%- assign lesson_count = site.posts | size -%}
+<div class="wvu-bg-size-cover bg-wvu-blue text-white" style="background-image:linear-gradient(rgba(0,32,91,.90),rgba(0,32,91,.94)),url('{{ '/images/night-horn/night-horns.webp' | relative_url }}');background-position:center">
+  <div class="container py-5">
+    <div class="col-24 col-lg-17">
+      <p class="fw-bold text-wvu-gold">Digital Signal Processing in Radio Astronomy</p>
+      <h1 class="antonia-light display-3 mb-4">Explore the radio sky.</h1>
+      <p class="fs-4">Start with a classroom activity, build a telescope, or observe the Milky Way. Our {{ lesson_count }} lessons are free.</p>
+      <a class="btn btn-wvu-gold me-2 mb-2" href="{{ '/start/#try' | relative_url }}">Try an activity</a>
+      <a class="btn btn-light me-2 mb-2" href="{{ '/start/#build' | relative_url }}">Build a telescope</a>
+      <a class="btn btn-light mb-2" href="{{ '/start/#observe' | relative_url }}">Use your telescope</a>
+      <p class="mt-3 mb-0">Planning a class? <a class="text-white" href="{{ '/teach/' | relative_url }}">Find teaching guidance</a>.</p>
+    </div>
+  </div>
 </div>
-
-<div class="section">
-   <div class="container">
-      <div class="section-head">
-         <h2>The seven modules</h2>
-         <p class="lead">
-            Start at the top and they take you from a flat sheet of insulation board to
-            a velocity curve of the Milky Way. Or take any one on its own; most stand up
-            as a couple of weeks of classroom material.
-         </p>
-      </div>
-
-      <ol class="module-grid">
-         {%- for m in site.data.modules %}
-         {%- assign lessons = site.categories[m.category] | sort: 'order' %}
-         {%- if lessons and lessons.size > 0 %}
-         {%- assign slug = m.category | slugify %}
-         {%- assign href = slug | prepend: '/categories/' | append: '/' | relative_url %}
-         <li class="module">
-            <a class="module__media" href="{{ href }}" tabindex="-1" aria-hidden="true">
-               <img loading="lazy" decoding="async" width="800" height="500"
-                    src="{{ slug | prepend: '/images/modules/' | append: '.jpg' | relative_url }}"
-                    alt="{{ m.alt }}" />
-            </a>
-            <div class="module__body">
-               <p class="module__n">Module {{ forloop.index }}</p>
-               <h3><a href="{{ href }}">{{ m.category }}</a></h3>
-               <p class="module__blurb">{{ m.blurb }}</p>
-               <ul class="module__lessons">
-                  {%- for post in lessons limit: 3 %}
-                  <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-                  {%- endfor %}
-               </ul>
-               <a class="module__more" href="{{ href }}">
-                  {%- if lessons.size > 3 -%}
-                  All {{ lessons | size }} lessons {% include icon.html name="arrow" %}
-                  {%- else -%}
-                  Open the module {% include icon.html name="arrow" %}
-                  {%- endif -%}
-               </a>
-            </div>
-         </li>
-         {%- endif %}
-         {%- endfor %}
-      </ol>
-   </div>
+<div class="container py-5">
+  <h2 class="antonia-light display-5">Explore the modules</h2>
+  <p>Browse a topic or <a href="{{ '/all/' | relative_url }}">search every lesson</a>. Optional designs and advanced projects can wait.</p>
+  <ol class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 list-unstyled">
+    {%- for m in site.data.modules -%}
+    {%- assign lessons = site.categories[m.category] | sort: 'order' -%}
+    <li class="module">
+      <div class="card h-100 bg-wvu-not-quite-white"><div class="card-body p-4">
+        <h3 class="h5 helvetica-neue-bold"><a href="{{ m.category | slugify | prepend: '/categories/' | append: '/' | relative_url }}">{{ m.category }}</a></h3>
+        <p>{{ m.blurb }}</p>
+        <p class="small mb-0">{{ lessons | size }} lessons</p>
+      </div></div>
+    </li>
+    {%- endfor -%}
+  </ol>
 </div>
-
-<div class="section section--tint">
-   <div class="container">
-      <div class="split">
-         <div class="prose">
-            <h2>What the telescope is</h2>
-            <p>
-               A horn telescope has three parts: the <strong>antenna</strong>, a pyramidal
-               horn folded from foil-faced insulation board; the <strong>stand</strong>,
-               built from dimensional lumber; and the <strong>back-end electronics</strong>,
-               a low-noise amplifier and a software-defined radio dongle. Parts run to a
-               few hundred dollars, and everything can be sourced from a hardware store and
-               a couple of online suppliers.
-            </p>
-            <p>
-               Pointed at the sky, it detects the 21&nbsp;cm line of neutral hydrogen —
-               enough to map the hydrogen in the Milky Way and measure how fast the Galaxy
-               turns.
-            </p>
-         </div>
-
-         <figure class="split__figure">
-            <img loading="lazy" decoding="async" width="1000" height="780"
-                 src="{{ '/images/programme/horn-on-stand.jpg' | relative_url }}"
-                 alt="A pyramidal horn antenna of foil-faced insulation board, mounted on a
-                      wooden cradle and stand in a field." />
-            <figcaption>The whole instrument: horn, cradle, stand and feed can.</figcaption>
-         </figure>
-      </div>
-   </div>
-</div>
-
-<div class="section">
-   <div class="container">
-      <div class="split split--reverse">
-         <div class="prose">
-            <h2>Where these came from</h2>
-            <p>
-               DSPIRA was a National Science Foundation Research Experiences for Teachers
-               site at West Virginia University, run with the
-               <a href="https://greenbankobservatory.org/">Green Bank Observatory</a>. Over
-               three summers, fifteen high school teachers built these telescopes, learned
-               the signal processing behind them, observed with them at Green Bank, and then
-               wrote these lessons from what they had done.
-            </p>
-            <p>
-               The cohort programme concluded in 2019. The lessons are still here, still
-               free, and still maintained. <a href="/education/">More
-               about the programme</a>.
-            </p>
-         </div>
-
-         <figure class="split__figure">
-            <img loading="lazy" decoding="async" width="1200" height="724"
-                 src="{{ '/images/programme/green-bank-night.jpg' | relative_url }}"
-                 alt="The Milky Way over the Green Bank Observatory site, with DSPIRA
-                      written in the air by a hand-held light." />
-            <figcaption>Green Bank, West Virginia, where the cohorts observed.</figcaption>
-         </figure>
-      </div>
-   </div>
-</div>
-
-<div class="section">
-   <div class="container">
-      <div class="section-head">
-         <h2>Also here</h2>
-      </div>
-      <ul class="lesson-grid">
-         <li class="lesson-card">
-            <h3><a href="{{ '/kits/' | relative_url }}">Telescope kits</a></h3>
-            <p>Educators and community organisers can request a starter kit of the parts
-               that are hardest to source — an SDR dongle and a 21&nbsp;cm amplifier.</p>
-         </li>
-         <li class="lesson-card">
-            <h3><a href="{{ '/user-levels/' | relative_url }}">Who these are written for</a></h3>
-            <p>Every lesson is tagged for school teachers, students or hobbyists. This is
-               the same {{ site.posts | size }} lessons sorted by who they were written for.</p>
-         </li>
-         <li class="lesson-card">
-            <h3><a href="{{ '/labs/' | relative_url }}">Associate research labs</a></h3>
-            <p>Classrooms and hobbyist groups that have taken this hardware and these
-               lessons and built their own programmes on them.</p>
-         </li>
-         <li class="lesson-card">
-            <h3><a href="/lightwork/">LightWork Memos</a></h3>
-            <p>An informal numbered memo series on citizen science with radio telescopes,
-               covering design, construction and operation.</p>
-         </li>
-         <li class="lesson-card">
-            <h3><a href="{{ '/forum/' | relative_url }}">The forum</a></h3>
-            <p>Questions, build reports and troubleshooting, running on GitHub
-               Discussions. Threads go back to 2020.</p>
-         </li>
-         <li class="lesson-card">
-            <h3><a href="{{ '/newpost/' | relative_url }}">Contribute a lesson</a></h3>
-            <p>The whole site is Markdown in a public repository. This is how to add
-               your own lesson to it.</p>
-         </li>
-      </ul>
-   </div>
-</div>
+<div class="bg-wvu-not-quite-white py-5"><div class="container">
+  <h2 class="antonia-light display-6">Help for your next step</h2>
+  <ul>
+    <li><a href="{{ '/kits/' | relative_url }}">Request a starter receiver and amplifier kit</a>.</li>
+    <li><a href="/lightwork/">Explore LightWork technical guides</a> for construction and measurement references.</li>
+    <li><a href="{{ '/newpost/' | relative_url }}">Share an activity</a> using a document and email.</li>
+    <li><a href="{{ '/forum/' | relative_url }}">Ask the community</a> or email <a href="mailto:rail@wvu.edu">rail@wvu.edu</a>.</li>
+  </ul>
+  <p class="mb-0">Teachers developed these lessons with WVU RAIL and Green Bank Observatory. <a href="{{ '/about/' | relative_url }}">About DSPIRA</a>.</p>
+</div></div>

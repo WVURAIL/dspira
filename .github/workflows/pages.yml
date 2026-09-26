@@ -1,0 +1,84 @@
+name: Publish Pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          path: site
+          lfs: true
+
+      - name: Install the GitHub Pages gems
+        run: |
+          cat > Gemfile.ci <<'GEMFILE'
+          source "https://rubygems.org"
+          gem "github-pages", group: :jekyll_plugins
+          gem "webrick", "~> 1.8"
+          GEMFILE
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.1"
+          bundler-cache: true
+        env:
+          BUNDLE_GEMFILE: ${{ github.workspace }}/Gemfile.ci
+      - name: Build the site
+        working-directory: site
+        run: |
+          bundle exec jekyll build --trace -d ../_site
+          python3 tools/test_publish_assets.py
+          python3 tools/publish_assets.py --site ../_site
+        env:
+          BUNDLE_GEMFILE: ${{ github.workspace }}/Gemfile.ci
+          JEKYLL_ENV: production
+      - uses: actions/checkout@v5
+        with:
+          repository: WVURAIL/wvurail.github.io
+          ref: ebaef70170bc770905f01e5f7bff1432d3a6a51f
+          path: checks
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Trim unused Design System styles
+        run: |
+          npm ci --prefix checks/.github/site-tools
+          node checks/.github/site-tools/scripts/trim_styles.mjs _site assets/wvu-design-system/site.min.css
+      - name: Load verified historical material
+        run: |
+          python3 site/tools/test_retired_sites.py
+          python3 site/tools/retired_sites.py fetch --destination _retired
+          python3 site/tools/retired_sites.py history --source _retired --site _site
+      - name: Preserve old institute addresses
+        run: |
+          python3 site/tools/test_publish_pages.py
+          python3 site/tools/publish_pages.py --site _site --archive _retired/dspira-archive --archive-url https://wvurail.org/dspira/history/sites/dspira-archive/
+          test -s _site/index.html
+          test -s _site/teach/index.html
+          test -s _site/labs/01/index.html
+          test ! -e _site/CNAME
+          if grep -q 'name="robots" content="noindex"' _site/index.html; then exit 1; fi
+          grep -q 'href="/dspira/' _site/index.html
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

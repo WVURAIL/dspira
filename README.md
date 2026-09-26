@@ -1,79 +1,86 @@
 # DSPIRA lessons
 
-The lesson site for **Digital Signal Processing in Radio Astronomy** — free
-material on building and using a horn radio telescope, written by the high
-school teachers who did it.
+Lessons and classroom resources for Digital Signal Processing in Radio Astronomy.
+Visit the [DSPIRA website](https://wvurail.org/dspira/) for teaching materials and downloads.
+Start with [CONTRIBUTING.md](CONTRIBUTING.md) to suggest changes or submit a lesson.
 
-Live at <https://wvurail.org/dspira-lessons/>. Built by GitHub Pages from the
-`master` branch.
+The approved site publishes from `main`. The former approval preview is archived.
+A future move to `rail.wvu.edu` follows the [lab's cutover checklist](https://github.com/WVURAIL/wvurail.github.io/blob/main/.github/CUTOVER.md).
 
-## How it is put together
+## Find the right files
 
-| Path | What it is |
-|---|---|
-| `_posts/` | The lessons - 48 at last count. One Markdown file each. |
-| `_data/modules.yml` | The module order and blurbs. Drives the front page and `/all/`. |
-| `_data/nav.yml` | Site navigation. Edit here, every page follows. |
-| `categories/*/index.md` | One page per module: intro prose plus a generated lesson list. |
-| `_layouts/`, `_includes/` | Six layouts, four includes. No theme gem. |
-| `css/style.scss` | The whole stylesheet, hand-written, plain CSS in a `.scss` wrapper. |
-| `assets/fonts/` | Self-hosted typefaces. No Google Fonts request. Their OFL notices are in `assets/fonts/OFL.txt`, which has to stay with them. |
+| Path | Purpose |
+| --- | --- |
+| [_posts](_posts/) | Individual lesson pages |
+| [assets/lessons](assets/lessons/) | Lesson guides, background handouts, and construction instructions |
+| [assets/lessons/lectures](assets/lessons/lectures/) | Lecture slides grouped by subject, with known years in filenames |
+| [assets/worksheets](assets/worksheets/) | Student exercises, answer keys, and editable originals |
+| [assets/templates](assets/templates/) | Lesson contribution templates |
+| [images](images/) | Figures, screenshots, photographs, and branding, grouped by topic |
+| [lesson-examples](lesson-examples/) | Lesson notebooks, sample data, and figure generators |
+| [pages](pages/) | Teaching, installation, hardware, history, and contribution guides |
+| [categories](categories/) | Module introduction pages |
+| [_data](_data/) | Navigation, module definitions, resource catalogs, and compatibility maps |
+| [_layouts](_layouts/), [_includes](_includes/) | Shared page templates and common elements |
+| [css](css/), [assets/js](assets/js/) | Site styles and behavior |
+| [tools](tools/) | Build helpers and link, layout, math, and contrast checks |
+| [.github](.github/) | Publishing workflows, issue templates, and migration records |
 
-## Adding a lesson
+The [asset directory guide](assets/README.md) lists the attachment folders and explains old download addresses.
+`FilesUploaded` has been replaced by folders grouped by lesson or topic.
 
-Write a Markdown file in `_posts/` named `YYYY-MM-DD-Short-Name.md`:
+## Keep each resource in one project
 
-```yaml
----
-layout: post
-title: "What the lesson is called"
-summary: One sentence, shown on every index page.
-categories: ['Observing']
-order: 11
-tags: ['School-Teachers', 'Students', 'Hobbyists']
-usemathjax: true      # only if the lesson contains LaTeX
----
-```
+- Lesson pages, worksheets, and teacher materials belong here.
+- Telescope applications, GNU Radio flowgraphs, and reusable observation-processing scripts belong in [dspira-software](https://github.com/WVURAIL/dspira-software).
+- Board designs and amplifier assembly references belong in [dspira-hardware](https://github.com/WVURAIL/dspira-hardware).
+- Technical memos belong in [LightWork](https://github.com/WVURAIL/lightwork).
 
-`categories` takes exactly one name and it has to match a `category:` in
-`_data/modules.yml` character for character. Get it wrong and the lesson still
-builds — it just turns up in no module at all.
+Link to the maintained resource instead of uploading another copy.
+Keep original author credits, licenses, and editable files with the material.
 
-`order` is its place in that module, from 1. Take the next free number, or
-renumber the module if your lesson belongs partway through. (Don't be tempted
-to let the date do it: the dates are publication dates and six lessons share
-one.)
+## Add or update a lesson
 
-The build checks both, so a mistake here fails the pull request rather than
-quietly reordering the curriculum.
+Teachers can use the [submission guide](https://wvurail.org/dspira/newpost/) without using GitHub.
+For repository contributions, follow [CONTRIBUTING.md](CONTRIBUTING.md) and the [lesson template](_includes/lesson-template.txt).
 
-The full walkthrough, with images and video, is at
-[`/newpost/`](https://wvurail.org/dspira-lessons/newpost/).
+Each lesson needs one module, a position within that module, and a stable public address.
+Store worksheets under `assets/worksheets/<lesson-slug>/`, keeping printable PDFs beside their editable originals.
+Put instructional guides under `assets/lessons/<lesson-slug>/` and illustrations under `images/<topic>/`.
+Use lowercase filenames with hyphens, such as `2026-09-25-horn-calibration.md` or `receiver-settings.png`.
+Published lesson addresses are set by `permalink`, independently of source filenames.
+Start body headings at `##`; the layout supplies the page title.
 
-## Things worth knowing before you edit
+All published material is public. Keep student records and restricted answer keys in your school's classroom system.
 
-- **GitHub Pages runs Jekyll 3.9**, via the `github-pages` gem — not the newest
-  Jekyll. A filter or tag that needs anything newer fails the build *silently*:
-  Pages emails the repository owner and keeps serving the last good copy, so the
-  site simply stops updating. The Actions workflow in `.github/workflows/`
-  builds against the same gem so this shows up as a red check instead.
-- **MathJax loads only where `usemathjax: true` is set.** It also no longer
-  treats a single `$` as an inline maths delimiter — that was matching the
-  prices in the parts lists, so `$30 ... $54` turned everything between them
-  into an equation.
-- **Video**: put a YouTube URL alone on its own line and it becomes a responsive
-  embed. With JavaScript off it stays a plain clickable link.
-- **Images** belong in `images/`. Reference them as
-  `{{ site.baseurl }}/images/name.png` — a bare relative path resolves against
-  the lesson's own URL and 404s.
-- There used to be a service worker here. It cached the stylesheet and the front
-  page and had no `skipWaiting()`, so returning visitors could be served the old
-  site indefinitely. It is gone, and `assets/js/lessons.js` actively unregisters
-  any copy still installed in a visitor's browser.
+## Preview and validation
 
-## Local preview
+The site uses the GitHub Pages gem and Jekyll. For a local preview:
 
-```bash
+```sh
 bundle install
 bundle exec jekyll serve
 ```
+
+Open `http://localhost:4000/dspira/`.
+For old download addresses, also follow the [compatibility build instructions](assets/README.md#old-download-addresses).
+See [the tools guide](tools/README.md) for checks run by CI.
+
+The WVU Design System stylesheet is vendored under `assets/wvu-design-system`.
+Page layouts use the common masthead, footer, and contact settings from `_config.yml`.
+Site publishing trims unused stylesheet rules and checks the resulting pages.
+
+## Naming conventions
+
+Use lowercase, hyphenated names for lesson sources, web pages, images, and teaching downloads.
+Lesson sources retain Jekyll's required `YYYY-MM-DD-` prefix.
+Python scripts, notebooks, and their data use lowercase names with underscores under `lesson-examples/`.
+Jekyll directories and data keys retain their required underscores.
+Standard project files such as `README.md`, `LICENSE`, `CITATION.cff`, and `Gemfile` keep their conventional names.
+Preserved source notices and vendored libraries retain their original naming.
+
+## Historical material
+
+The [history page](https://wvurail.org/dspira/history/) links preserved material and recovery ZIPs.
+Retired repository snapshots remain separate from current lesson assets.
+The [repository map](https://wvurail.org/dspira/repository-map/) explains old names and current ownership.

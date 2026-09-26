@@ -2,26 +2,33 @@
 layout: catpag
 category: Observing
 lead: What to do once it is built and the software runs.
+meta_description: "Learn to operate a DSPIRA horn radio telescope. Set up the receiver, calibrate the spectrometer, record data, and work with two-horn observations."
 ---
 
-Once the horn is built and the receiver chain works, these lessons cover using
-it: where to set up, how to point, what a good spectrum looks like, how to
-calibrate against a known load, and how to tell a real signal from interference.
+Once your horn and receiver work, these lessons introduce observing. Learn site selection, pointing, spectrum assessment, calibration against a known load, and interference recognition.
 
-The telescope works in any environment, rural or city, as long as there is open
-sky to look at, and it works in daylight and in rain. Radio astronomy is not a
-clear-night hobby.
+You can observe in daylight from locations with open sky. Local radio interference can affect your measurements.
+Protect your electronics from weather and follow the equipment instructions.
 
-The module ends with the two things worth doing once single-horn observing is
-routine: reducing a run of drift scans into a map of the sky and a rotation
-curve, and standing a second horn next to the first to make an interferometer.
+The module ends with two extensions to single-horn observing. First, turn drift scans into a sky map and rotation curve. Then add a second horn to make an interferometer.
 
 Two operating procedures are documented as PDFs rather than as lessons:
 
-* [Setting up and operating a 2-horn interferometer]({{ site.baseurl }}/FilesUploaded/SettingUp_2%20Horn_Interferometer.pdf) —
+* [Setting up and operating a 2-horn interferometer]({{ site.baseurl }}/assets/lessons/two-horn-interferometer/setup-guide.pdf) —
   covers both the adding and the multiplying spectrometer programs.
-* [Adding interferometry to a 2-horn system]({{ site.baseurl }}/FilesUploaded/2Horn_AddingInterferometry_LightWorkMemo31.pdf) —
+* [Adding interferometry to a 2-horn system](/lightwork/memos/memo-031.pdf) —
   LightWork Memo 31.
 
 For what an interferometer is actually good for, see
 [Interferometry]({{ site.baseurl }}/Interferometry) in the Astronomy module.
+
+## Choose what you need
+
+Follow the lessons below for the complete observing sequence. For a specific task:
+
+- [Set up the telescope]({{ '/Telescope_Setup' | relative_url }}) · [Watch the setup video](https://youtu.be/Oo28QCEZe_g).
+- [Learn the spectrometer controls]({{ '/HornOperation_spectrometer_description' | relative_url }}) · [Watch the controls video](https://youtu.be/50B2Uv-SoDY).
+- [Run and save observations]({{ '/HornOperation_runningSpectrometer' | relative_url }}) · [Watch the saving-data video](https://youtu.be/dWX0rRU99Z8).
+- [Calibrate the telescope]({{ '/HornOperation_Calibration' | relative_url }}).
+
+Use your browser's Print command to print a lesson or save it as a PDF.

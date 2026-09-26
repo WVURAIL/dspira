@@ -2,17 +2,13 @@
 layout: catpag
 category: Horn Construction
 lead: The antenna itself, built from insulation board, lumber, and a can from the paint aisle.
+meta_description: "Build a DSPIRA horn antenna and stand. Follow the construction sequence, assemble the can antenna, and explore alternative telescope designs."
 ---
 
-The horn is the telescope. It is a pyramidal sheet-metal antenna on a wooden
-mount, and the design is deliberately constrained to materials and tools you can
-buy locally: foil-faced insulation board, aluminium tape, dimensional lumber and
-a one-gallon square paint-thinner can for the feed.
+The horn is the telescope. The antenna is pyramidal, with a wooden mount. It uses locally available tools and materials: foil-faced insulation board, aluminum tape, and dimensional lumber. A one-gallon square paint-thinner can forms the feed.
 
 The cradle holds the horn and lets it turn on one axis, so elevation is easy to
-set. It bolts to a base of your choosing; the wooden stand documented here is
-sturdy, cheap to build, and no more than 75 cm across so that it fits through a
-standard doorway.
+set. Bolt it to a base of your choosing. The wooden stand described here is sturdy and inexpensive. It is no wider than 75 cm, so it fits through a standard doorway.
 
 These lessons take it from a flat sheet to a finished, mounted instrument. The
 electronics that go behind it are in the
@@ -21,9 +17,9 @@ module.
 
 Two parts of the build are documented as drawings rather than as lessons:
 
-* [The horn cradle]({{ site.baseurl }}/FilesUploaded/Cradle_Assembly_2021.pdf) —
+* [The horn cradle]({{ site.baseurl }}/assets/lessons/horn-construction/cradle-assembly-2021.pdf) —
   the frame that carries the horn and sets its elevation.
-* [The base stand]({{ site.baseurl }}/FilesUploaded/Stand_Assembly_2021.pdf) —
+* [The base stand]({{ site.baseurl }}/assets/lessons/horn-construction/stand-assembly-2021.pdf) —
   a simple, sturdy base for the cradle to bolt to.
 
 [A completed horn assembled](https://youtu.be/LT0h3Frd-_k) is a short video
