@@ -35,6 +35,23 @@
     ]
   },
   {
+    "title": "Software setup",
+    "documents": [
+      {
+        "title": "Understanding Ubuntu",
+        "pdf": "/assets/lessons/software-setup/understanding-ubuntu.pdf",
+        "editable": "/assets/lessons/software-setup/understanding-ubuntu.docx",
+        "format": "Word"
+      },
+      {
+        "title": "Raspberry Pi radio astronomy guide 2020",
+        "pdf": "/assets/lessons/software-setup/raspberry-pi-guide-2020.pdf",
+        "editable": "/assets/lessons/software-setup/raspberry-pi-guide-2020.docx",
+        "format": "Word"
+      }
+    ]
+  },
+  {
     "title": "Electromagnetic spectrum",
     "documents": [
       {
@@ -53,6 +70,18 @@
         "title": "Electromagnetic spectrum activity",
         "pdf": "/assets/worksheets/electromagnetic-spectrum/worksheet.pdf",
         "editable": "/assets/worksheets/electromagnetic-spectrum/worksheet.docx",
+        "format": "Word"
+      },
+      {
+        "title": "The Doppler effect",
+        "pdf": "/assets/worksheets/electromagnetic-spectrum/doppler-effect.pdf",
+        "editable": "/assets/worksheets/electromagnetic-spectrum/doppler-effect.docx",
+        "format": "Word"
+      },
+      {
+        "title": "Introduction to electromagnetic radiation",
+        "pdf": "/assets/worksheets/electromagnetic-spectrum/radiation-introduction.pdf",
+        "editable": "/assets/worksheets/electromagnetic-spectrum/radiation-introduction.docx",
         "format": "Word"
       }
     ]
@@ -105,6 +134,152 @@
         "title": "Fourier transform activity",
         "pdf": "/assets/worksheets/fourier-series/worksheet.pdf",
         "editable": "/assets/worksheets/fourier-series/worksheet.docx",
+        "format": "Word"
+      },
+      {
+        "title": "Making waves with Fourier series teacher notes",
+        "pdf": "/assets/lessons/fourier-series/teacher-notes.pdf",
+        "editable": "/assets/lessons/fourier-series/teacher-notes.docx",
+        "format": "Word"
+      }
+    ]
+  },
+  {
+    "title": "Earth motion",
+    "documents": [
+      {
+        "title": "Finding Earth speed using physics",
+        "pdf": "/assets/worksheets/earth-motion/physics.pdf",
+        "editable": "/assets/worksheets/earth-motion/physics.docx",
+        "format": "Word"
+      },
+      {
+        "title": "How fast are we moving basic activity",
+        "pdf": "/assets/worksheets/earth-motion/basic.pdf",
+        "editable": "/assets/worksheets/earth-motion/basic.docx",
+        "format": "Word"
+      },
+      {
+        "title": "How fast are we moving advanced activity",
+        "pdf": "/assets/worksheets/earth-motion/advanced.pdf",
+        "editable": "/assets/worksheets/earth-motion/advanced.docx",
+        "format": "Word"
+      },
+      {
+        "title": "How fast are we moving teacher notes",
+        "pdf": "/assets/lessons/earth-motion/teacher-notes.pdf",
+        "editable": "/assets/lessons/earth-motion/teacher-notes.docx",
+        "format": "Word"
+      }
+    ]
+  },
+  {
+    "title": "Earth orbit",
+    "documents": [
+      {
+        "title": "Measuring Earth speed around the Sun teacher notes",
+        "pdf": "/assets/lessons/earth-orbit/teacher-notes.pdf",
+        "editable": "/assets/lessons/earth-orbit/teacher-notes.docx",
+        "format": "Word"
+      },
+      {
+        "title": "Finding the galactic center",
+        "pdf": "/assets/worksheets/earth-orbit/finding-the-galactic-center.pdf",
+        "editable": "/assets/worksheets/earth-orbit/finding-the-galactic-center.docx",
+        "format": "Word"
+      },
+      {
+        "title": "Measuring Earth speed using the Doppler effect",
+        "pdf": "/assets/worksheets/earth-orbit/doppler-measurements.pdf",
+        "editable": "/assets/worksheets/earth-orbit/doppler-measurements.docx",
+        "format": "Word"
+      },
+      {
+        "title": "Earth speed comparing model and measurements",
+        "pdf": "/assets/worksheets/earth-orbit/final-comparison.pdf",
+        "editable": "/assets/worksheets/earth-orbit/final-comparison.docx",
+        "format": "Word"
+      },
+      {
+        "title": "Modeling Earth orbit around the Sun",
+        "pdf": "/assets/worksheets/earth-orbit/modeling-earth-orbit.pdf",
+        "editable": "/assets/worksheets/earth-orbit/modeling-earth-orbit.docx",
+        "format": "Word"
+      },
+      {
+        "title": "Earth orbit model diagram",
+        "pdf": "/assets/worksheets/earth-orbit/model-diagram.pdf",
+        "editable": "/assets/worksheets/earth-orbit/model-diagram.docx",
+        "format": "Word"
+      }
+    ]
+  },
+  {
+    "title": "Observation planning",
+    "documents": [
+      {
+        "title": "Celestial coordinate systems teacher notes",
+        "pdf": "/assets/lessons/observation-planning/coordinate-systems-teacher-notes.pdf",
+        "editable": "/assets/lessons/observation-planning/coordinate-systems-teacher-notes.docx",
+        "format": "Word"
+      },
+      {
+        "title": "Exploring celestial coordinates with Stellarium",
+        "pdf": "/assets/worksheets/observation-planning/stellarium-coordinates.pdf",
+        "editable": "/assets/worksheets/observation-planning/stellarium-coordinates.docx",
+        "format": "Word"
+      },
+      {
+        "title": "Stellarium teacher notes",
+        "pdf": "/assets/lessons/observation-planning/stellarium-teacher-notes.pdf",
+        "editable": "/assets/lessons/observation-planning/stellarium-teacher-notes.docx",
+        "format": "Word"
+      },
+      {
+        "title": "Celestial coordinate systems",
+        "pdf": "/assets/worksheets/observation-planning/coordinate-systems.pdf",
+        "editable": "/assets/worksheets/observation-planning/coordinate-systems.docx",
+        "format": "Word"
+      },
+      {
+        "title": "Tools for observational astronomy teacher notes",
+        "pdf": "/assets/lessons/observation-planning/tools-teacher-notes.pdf",
+        "editable": "/assets/lessons/observation-planning/tools-teacher-notes.docx",
+        "format": "Word"
+      }
+    ]
+  },
+  {
+    "title": "Milky Way",
+    "documents": [
+      {
+        "title": "Introduction to the Milky Way",
+        "pdf": "/assets/worksheets/milky-way/introduction.pdf",
+        "editable": "/assets/worksheets/milky-way/introduction.docx",
+        "format": "Word"
+      },
+      {
+        "title": "Modeling motion in the Milky Way",
+        "pdf": "/assets/worksheets/milky-way/modeling-motion.pdf",
+        "editable": "/assets/worksheets/milky-way/modeling-motion.docx",
+        "format": "Word"
+      },
+      {
+        "title": "Exploring the Milky Way teacher notes",
+        "pdf": "/assets/lessons/milky-way/teacher-notes.pdf",
+        "editable": "/assets/lessons/milky-way/teacher-notes.docx",
+        "format": "Word"
+      },
+      {
+        "title": "Exploring galactic rotation",
+        "pdf": "/assets/worksheets/milky-way/galactic-rotation.pdf",
+        "editable": "/assets/worksheets/milky-way/galactic-rotation.docx",
+        "format": "Word"
+      },
+      {
+        "title": "Milky Way model diagram",
+        "pdf": "/assets/worksheets/milky-way/model-diagram.pdf",
+        "editable": "/assets/worksheets/milky-way/model-diagram.docx",
         "format": "Word"
       }
     ]
@@ -171,6 +346,82 @@
         "pdf": "/assets/worksheets/velocity-curve/stellarium.pdf",
         "editable": "/assets/worksheets/velocity-curve/stellarium.docx",
         "format": "Word"
+      },
+      {
+        "title": "Velocity curve part 2 teacher notes",
+        "pdf": "/assets/lessons/velocity-curve/part-2-teacher-notes.pdf",
+        "editable": "/assets/lessons/velocity-curve/part-2-teacher-notes.docx",
+        "format": "Word"
+      },
+      {
+        "title": "Velocity curve part 2 conclusions",
+        "pdf": "/assets/worksheets/velocity-curve/part-2-conclusions.pdf",
+        "editable": "/assets/worksheets/velocity-curve/part-2-conclusions.docx",
+        "format": "Word"
+      },
+      {
+        "title": "Velocity curve part 2 observations",
+        "pdf": "/assets/worksheets/velocity-curve/part-2-observations.pdf",
+        "editable": "/assets/worksheets/velocity-curve/part-2-observations.docx",
+        "format": "Word"
+      },
+      {
+        "title": "Velocity curve part 1 conclusions",
+        "pdf": "/assets/worksheets/velocity-curve/part-1-conclusions.pdf",
+        "editable": "/assets/worksheets/velocity-curve/part-1-conclusions.docx",
+        "format": "Word"
+      },
+      {
+        "title": "Velocity curve part 1 teacher notes",
+        "pdf": "/assets/lessons/velocity-curve/part-1-teacher-notes.pdf",
+        "editable": "/assets/lessons/velocity-curve/part-1-teacher-notes.docx",
+        "format": "Word"
+      },
+      {
+        "title": "Velocity curve part 1 observations",
+        "pdf": "/assets/worksheets/velocity-curve/part-1-observations.pdf",
+        "editable": "/assets/worksheets/velocity-curve/part-1-observations.docx",
+        "format": "Word"
+      },
+      {
+        "title": "The tangent method for galactic rotation",
+        "pdf": "/assets/worksheets/velocity-curve/tangent-method.pdf",
+        "editable": "/assets/worksheets/velocity-curve/tangent-method.docx",
+        "format": "Word"
+      }
+    ]
+  },
+  {
+    "title": "Teaching figures",
+    "documents": [
+      {
+        "title": "Frequency and radial velocity",
+        "pdf": "/assets/lessons/astronomy-figures/frequency-and-radial-velocity.pdf",
+        "editable": "/assets/lessons/astronomy-figures/frequency-and-radial-velocity.docx",
+        "format": "Word"
+      },
+      {
+        "title": "Galactic rotation geometry",
+        "pdf": "/assets/lessons/astronomy-figures/galactic-rotation.pdf",
+        "editable": "/assets/lessons/astronomy-figures/galactic-rotation.docx",
+        "format": "Word"
+      }
+    ]
+  },
+  {
+    "title": "Telescope research",
+    "documents": [
+      {
+        "title": "Telescope public use study report",
+        "pdf": "/assets/lessons/telescope-research/public-use-report.pdf",
+        "editable": "/assets/lessons/telescope-research/public-use-report.docx",
+        "format": "Word"
+      },
+      {
+        "title": "Telescope public use study poster",
+        "pdf": "/assets/lessons/telescope-research/public-use-poster.pdf",
+        "editable": "/assets/lessons/telescope-research/public-use-poster.pptx",
+        "format": "PowerPoint"
       }
     ]
   },
@@ -344,7 +595,7 @@
     "title": "Radio astronomy slides",
     "documents": [
       {
-        "title": "Imaging and deconvolution — David J. Wilner, 2014",
+        "title": "Imaging and deconvolution \u2014 David J. Wilner, 2014",
         "pdf": "/assets/lessons/lectures/radio-astronomy/imaging-and-deconvolution-wilner-2014.pdf",
         "editable": "/assets/lessons/lectures/radio-astronomy/imaging-and-deconvolution-wilner-2014.pptx",
         "format": "PowerPoint"

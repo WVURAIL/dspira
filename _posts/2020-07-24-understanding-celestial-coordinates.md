@@ -13,9 +13,9 @@ equipment: "The student worksheet and a computer for the supporting videos. No t
 preparation: "Read the teacher notes before introducing celestial coordinates. Select the video clips that support your worksheet discussion."
 ---
 
-[Student Activity Document](https://docs.google.com/document/d/1hlc1SBIF0k_CGa8UhYB3Bi1jVJp1-mBKM7ouzOqZ1gY/edit?usp=sharing){: .btn .btn-wvu-blue}
+[Student Activity Document]({{ site.baseurl }}/assets/worksheets/observation-planning/coordinate-systems.pdf){: .btn .btn-wvu-blue}
 
-[Teacher Notes](https://docs.google.com/document/d/1JVFn5d4mhCN-fU2JmSMRD95g3N5xwSbFM94TUpAUe3k/edit?usp=sharing){: .btn .btn-wvu-blue}
+[Teacher Notes]({{ site.baseurl }}/assets/lessons/observation-planning/coordinate-systems-teacher-notes.pdf){: .btn .btn-wvu-blue}
 
 The following are videos from Dr. Loren Anderson AT West Virginia University's Astronomy department.  
 They are short clips from the his 2nd lecture given to the DSPIRA Teachers during July 2019.

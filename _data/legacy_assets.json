@@ -197,20 +197,20 @@
     {
       "legacy": "FilesUploaded/LNA_OrderingParts_Info_3.pdf",
       "original_sha256": "f622e8468a4eb107a2af36c9d5368ef49414f8c4637ab630ef4f5720ee5fc580",
-      "url": "https://raw.githubusercontent.com/WVURAIL/dspira-hardware/c61eb7a74ab0a659dc0ce6df278c01334b64485a/docs/assembly/history/parts-guide-v3.pdf",
+      "url": "https://raw.githubusercontent.com/WVURAIL/dspira-hardware/7a23586e17d760a64ad22f4582560b3903a104f2/assembly/reference/parts-guide-v3.pdf",
       "canonical": "https://raw.githubusercontent.com/WVURAIL/dspira-hardware/main/assembly/reference/parts-guide-v3.pdf",
       "owner": "dspira-hardware",
       "destination": "assembly/reference/parts-guide-v3.pdf",
-      "sha256": "f622e8468a4eb107a2af36c9d5368ef49414f8c4637ab630ef4f5720ee5fc580"
+      "sha256": "7f4ce904e4399900c66ffc2bb7d4b0e682e20688f9741a52c24063940cbccf89"
     },
     {
       "legacy": "FilesUploaded/LNA_OrderingParts_Info_4.pdf",
       "original_sha256": "e2c175601ffa5437e47fb3d63b55955f4c29b6ab902efc445f3b73e63bb8133a",
-      "url": "https://raw.githubusercontent.com/WVURAIL/dspira-hardware/c61eb7a74ab0a659dc0ce6df278c01334b64485a/docs/assembly/parts-guide-v4.pdf",
+      "url": "https://raw.githubusercontent.com/WVURAIL/dspira-hardware/7a23586e17d760a64ad22f4582560b3903a104f2/assembly/parts-guide-v4.pdf",
       "canonical": "https://raw.githubusercontent.com/WVURAIL/dspira-hardware/main/assembly/parts-guide-v4.pdf",
       "owner": "dspira-hardware",
       "destination": "assembly/parts-guide-v4.pdf",
-      "sha256": "e2c175601ffa5437e47fb3d63b55955f4c29b6ab902efc445f3b73e63bb8133a"
+      "sha256": "a4a15589063093e82b6cd4b2b7ee0d74418aa140ec8720f1cbef9863e8cfbe41"
     },
     {
       "legacy": "FilesUploaded/MiniHorn_construction.pdf",
@@ -1587,13 +1587,13 @@
     },
     {
       "legacy": "assets/teaching/freq-vs-radial-velocity.pdf",
-      "source": "images/astronomy/frequency-versus-radial-velocity.pdf",
+      "source": "assets/lessons/astronomy-figures/frequency-and-radial-velocity.pdf",
       "original_sha256": "6d2c54eac3e490db7d88b11d8b7dc59786e2f5a71d308879223c194b04bcd32c",
       "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
     },
     {
       "legacy": "assets/teaching/galactic-rotation.pdf",
-      "source": "images/astronomy/galactic-rotation.pdf",
+      "source": "assets/lessons/astronomy-figures/galactic-rotation.pdf",
       "original_sha256": "03f2beea17ccb6e2ac032e73ecd6ba38a8997f7545f287894b3311508f41dc3a",
       "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
     },
@@ -1854,6 +1854,14 @@
       "url": "https://raw.githubusercontent.com/WVURAIL/dspira/303f0f990e43876bc0b5fb71937be9a823b8c622/assets/lessons/two-horn-interferometer/setup-guide.pdf",
       "sha256": "7997e1cc124e07418a94b97ff1ab050b17b7c66885c30b49c4f25684a431e775",
       "canonical": "/dspira/SettingUp2HornInterferometer"
+    },
+    {
+      "legacy": "images/astronomy/frequency-versus-radial-velocity.pdf",
+      "source": "assets/lessons/astronomy-figures/frequency-and-radial-velocity.pdf"
+    },
+    {
+      "legacy": "images/astronomy/galactic-rotation.pdf",
+      "source": "assets/lessons/astronomy-figures/galactic-rotation.pdf"
     }
   ]
 }

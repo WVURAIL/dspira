@@ -22,6 +22,7 @@ The [DSP recordings]({{ '/dsp' | relative_url }}) connect theory with laboratory
 Use Word for handouts and worksheets. Use PowerPoint for presentations.
 
 Some diagrams and legacy equations remain images within the editable files.
+Print measuring models at actual size; each model lists its paper and scaling instructions.
 Keep author credits and check third-party permissions when adapting materials.
 <p id="2018-institute-slide-decks">Dates identify source editions; older decks may differ from later recordings.</p>
 
@@ -50,10 +51,24 @@ Keep author credits and check third-party permissions when adapting materials.
 </details>
 {% endfor %}
 
-## Additional teaching figures
-
-- [Frequency and radial velocity figure (PDF)]({{ '/images/astronomy/frequency-versus-radial-velocity.pdf' | relative_url }})
-- [Galactic rotation figure (PDF)]({{ '/images/astronomy/galactic-rotation.pdf' | relative_url }})
+<details class="teaching-downloads" id="amplifier-assembly">
+<summary>Amplifier assembly ({{ site.data.hardware_documents | size }})</summary>
+<p>Match the guide to your board revision. Circuit drawings retain their original labels and component values.</p>
+<table>
+<caption class="visually-hidden">Amplifier assembly downloads</caption>
+<thead><tr><th scope="col">Resource</th><th scope="col">Print</th><th scope="col">Edit</th></tr></thead>
+<tbody>
+{% for document in site.data.hardware_documents %}
+{% assign source = 'https://raw.githubusercontent.com/WVURAIL/dspira-hardware/main/' | append: document.path %}
+<tr>
+<th scope="row">{{ document.title }}</th>
+<td><a href="{{ source }}.pdf" aria-label="Download {{ document.title | escape }} as PDF">PDF</a></td>
+<td><a href="{{ source }}.docx" aria-label="Edit {{ document.title | escape }} in Word">Word</a></td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</details>
 
 ## Practice with signals
 

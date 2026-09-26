@@ -14,7 +14,7 @@ preparation: "Choose the software or paper route. Review sine waves before combi
 
 To access the classroom activity click on the following link:  
 
-[Making Waves with Fourier Series](https://docs.google.com/document/d/15jXZiNi-5c7DPsuN7TeNhTUL93faWo4_k8ZufcIDNSY/edit?usp=sharing){: .btn .btn-wvu-blue}
+[Making Waves with Fourier Series]({{ site.baseurl }}/assets/lessons/fourier-series/teacher-notes.pdf){: .btn .btn-wvu-blue}
 
 A related paper-based exercise, which needs no software at all:
 

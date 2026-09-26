@@ -14,7 +14,7 @@ preparation: "Read the teacher notes. Choose activities covering the electromagn
 
 The DSPIRA Astronomy Lessons Module helps teachers and students make sky observations with the DSPIRA Radio Horn Telescope.  Beginners need some basic tools first. These include finding targets in their local sky, understanding electromagnetic radiation, and learning what it reveals.  
 
-Click here for a complete document of [Teacher's Notes](https://docs.google.com/document/d/1ml9wJJ3wSbEf1A7UIMpiVHuxSqeQe7dbE3UrJ_Wq-hk/edit?usp=sharing) for this whole activity sequence
+Click here for a complete document of [Teacher's Notes]({{ site.baseurl }}/assets/lessons/observation-planning/tools-teacher-notes.pdf) for this whole activity sequence
 
 **_Activity List_**
    1. Introduction to the ElectroMagnetic Spectrum
@@ -29,7 +29,7 @@ Click here for a complete document of [Teacher's Notes](https://docs.google.com/
 
 This introductory activity asks students to research the full electromagnetic spectrum online. 
 
-Click for link to [Intro to the EM Spectrum](https://drive.google.com/file/d/1iS-GHQtLvbfvYz1GLT67Ofp9SjeH1XYB/view?usp=sharing) Student Activity Document
+Click for link to [Intro to the EM Spectrum]({{ site.baseurl }}/assets/worksheets/electromagnetic-spectrum/radiation-introduction.pdf) Student Activity Document
 
 ### Intro Video to the Importance of Spectroscopy 
 _To get to main point, go to time 7:13 on the video_ 
@@ -43,16 +43,16 @@ _To get to main point, go to time 7:13 on the video_
 Many lessons introduce the Doppler effect. This DSPIRA lesson uses actual radio telescope data collected by DSPIRA teachers.
 
 
-Click for link to [The Doppler Effect](https://drive.google.com/file/d/1gbDCY0ZIlvnDZP1k5oq9_Hr0P6gqWSqr/view?usp=sharing) Student Activity Document
+Click for link to [The Doppler Effect]({{ site.baseurl }}/assets/worksheets/electromagnetic-spectrum/doppler-effect.pdf) Student Activity Document
 
 
 ## 3. Understanding Celestial Coordinate Systems
 
 The next activities introduce sky coordinate systems. Students learn to combine those coordinates with their location to plan observations.
 
-[Understanding Celestial Coordinate Systems student activity](https://docs.google.com/document/d/1hlc1SBIF0k_CGa8UhYB3Bi1jVJp1-mBKM7ouzOqZ1gY/edit?usp=sharing)
+[Understanding Celestial Coordinate Systems student activity]({{ site.baseurl }}/assets/worksheets/observation-planning/coordinate-systems.pdf)
 
-[Teacher Notes](https://docs.google.com/document/d/1JVFn5d4mhCN-fU2JmSMRD95g3N5xwSbFM94TUpAUe3k/edit?usp=sharing)
+[Teacher Notes]({{ site.baseurl }}/assets/lessons/observation-planning/coordinate-systems-teacher-notes.pdf)
 
 The following are videos from Dr. Loren Anderson at West Virginia University's Astronomy department.  
 They are short clips from the his 2nd lecture given to the DSPIRA Teachers during July 2019.
@@ -82,9 +82,9 @@ They are short clips from the his 2nd lecture given to the DSPIRA Teachers durin
 
 This activity is a nice introduction to using the Stellarium Web Online planetarium program 
 
-Click here for [Observing Celestial Coordinates using Stellarium student activity](https://docs.google.com/document/d/1_AqfrH3EmqX0GnkzMcA-iTKe62dqW4h8mwduzmP6hu4/edit?usp=sharing) 
+Click here for [Observing Celestial Coordinates using Stellarium student activity]({{ site.baseurl }}/assets/worksheets/observation-planning/stellarium-coordinates.pdf)
 
-Click here for [Teacher Notes Document](https://docs.google.com/document/d/1_rUbPuXiTXhHVkVDIOzbh-0F8xSCeMn5sbd4OHJzIrg/edit?usp=sharing) 
+Click here for [Teacher Notes Document]({{ site.baseurl }}/assets/lessons/observation-planning/stellarium-teacher-notes.pdf)
 
 A tutorial video [Using Stellarium Online](#video-ApKA6kWlFuQ)
 

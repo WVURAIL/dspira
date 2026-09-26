@@ -26,7 +26,8 @@ Their `permalink` fields preserve public addresses independently of source filen
 Files sit directly in each subject folder. Known years go at the end of filenames, such as `dark-matter-2018.pptx`.
 The [lecture index](lessons/lectures/README.md) records titles, credits, and available date information.
 Do not infer a year for undated material. Original source notices remain with the lecture collection.
-The two teaching figures under `images/astronomy/` retain the same original rights and credits.
+Printable teaching figures live in `lessons/astronomy-figures/` and retain their original rights and credits.
+Teacher notes share their topic's lesson folder. Student activities belong in `worksheets/`.
 
 The telescope equipment checklist and two-horn setup instructions now live directly on their lesson pages.
 Their former PDF addresses remain available through pinned compatibility downloads.
@@ -47,6 +48,28 @@ A complete worksheet belongs here even when its original format is an image.
 An illustration used within a page belongs in `images/` instead.
 Use a matching base name for editable and printable versions, such as `01-simple-waveform.docx` and `01-simple-waveform.pdf`.
 Existing public answer keys stay with their worksheets. Keep restricted classroom materials outside this public repository.
+
+## Teaching document style
+
+Use the existing Word or PowerPoint file as a starting point. Keep the navy WVU DSPIRA header, Arial text, and numbered footer.
+Preserve author credits, diagrams, equations, and space for student answers.
+Measuring models must retain their physical scale and include printing instructions.
+
+Export the matching PDF with Arial installed. Inspect every page for wrapping, missing symbols, clipped figures, and blank pages.
+Word theme fonts can override an explicit font, so check the exported PDF as well as the editable file.
+Original equations and labels within diagrams may retain their mathematical typefaces.
+
+Register each pair in [`_data/teaching_documents.json`](../_data/teaching_documents.json).
+Lesson pages link to PDFs; editable downloads appear only in the [teacher catalog](https://wvurail.org/dspira/teaching-resources/).
+Maintain these local teaching files instead of sending readers to older Google document copies.
+External publications and historical research references retain their publisher's formatting.
+
+After building the site, run the document checks:
+
+```sh
+python3 -m pip install PyMuPDF==1.28.2
+python3 tools/check_teaching_documents.py --site _site --style
+```
 
 ## Images and styles
 

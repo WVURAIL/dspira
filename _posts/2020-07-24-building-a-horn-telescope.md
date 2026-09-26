@@ -18,9 +18,9 @@ Why does the horn have these dimensions? How do they relate to observing the 21 
 ## What's Needed for a Complete Horn Radio Telescope System
    - the horn and antenna assembly
 
-      * the front end horn [Click here for horn details](https://drive.google.com/file/d/1qdc5lhKErFyIsc8b52ZIkCPJLi-XykSb/view?usp=sharing)
+      * the front end horn [Click here for horn details]({{ site.baseurl }}/assets/lessons/horn-construction/horn-and-can-assembly-2021.pdf)
       * the back end can and feedthrough antenna [Click here for CAN details]({{ site.baseurl }}/assemblingcan)
-      * the front end and back end support stand [Click here for stand details](https://drive.google.com/file/d/1qdc5lhKErFyIsc8b52ZIkCPJLi-XykSb/view?usp=sharing)
+      * the front end and back end support stand [Click here for stand details]({{ site.baseurl }}/assets/lessons/horn-construction/stand-assembly-2021.pdf)
 
    - a low noise amplifier (LNA)
    

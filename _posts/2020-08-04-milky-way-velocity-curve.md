@@ -113,11 +113,11 @@ OBJECTIVE: These activities allow this *Velocity Curve of the MWG* module be abl
 
 OBJECTIVE: In this activity, the students collect spectra of the MWG along the galactic plane in quadrants II and III. From these they should be able to deduce that the MWG is rotating and the direction of rotation.
 
-[Teacher Notes for Part 1](https://docs.google.com/document/d/1h9is9YnnfDidLnlvs-DnXlyzXIjT0EhrLDdnONAByHg/edit?usp=sharing){: .btn .btn-wvu-blue}
+[Teacher Notes for Part 1]({{ site.baseurl }}/assets/lessons/velocity-curve/part-1-teacher-notes.pdf){: .btn .btn-wvu-blue}
 
-[Student Handout for Part 1 Observation](https://docs.google.com/document/d/1jcMV-8X8Cd7rryGCsednTlc0fFRrgvAGkFyJUQAGJh8/edit?usp=sharing){: .btn .btn-wvu-blue}
+[Student Handout for Part 1 Observation]({{ site.baseurl }}/assets/worksheets/velocity-curve/part-1-observations.pdf){: .btn .btn-wvu-blue}
 
-[Student Handout for Part 1 Analysis and Interpretation](https://docs.google.com/document/d/1aVUFzAvC14gPeV6RSYumYPlkclgILeoaI5LpUZNSV5U/edit?usp=sharing){: .btn .btn-wvu-blue}
+[Student Handout for Part 1 Analysis and Interpretation]({{ site.baseurl }}/assets/worksheets/velocity-curve/part-1-conclusions.pdf){: .btn .btn-wvu-blue}
 
 
 
@@ -136,11 +136,11 @@ quantitative handle on the rotation the students deduced qualitatively above.
 
 OBJECTIVE: In this activity, the students collect spectra of the MWG along the galactic plane in quadrant I. Students determine the speeds represented by the spectra's most red-shifted features. They then use the tangent method to calculate galactic velocity at different distances from the galactic center.
 
-[Teacher Notes for Part 2](https://docs.google.com/document/d/1BSLoZjrFtA2qEoVzgvXjHdufQFRWmxtQWSAl8k1yJu8/edit?usp=sharing){: .btn .btn-wvu-blue}
+[Teacher Notes for Part 2]({{ site.baseurl }}/assets/lessons/velocity-curve/part-2-teacher-notes.pdf){: .btn .btn-wvu-blue}
 
-[Student Handout for Part 2 Observation](https://docs.google.com/document/d/1V4wUx8VtX358x-gIWdH9FaYi3579bz_Unl38_ShrbKE/edit?usp=sharing){: .btn .btn-wvu-blue}
+[Student Handout for Part 2 Observation]({{ site.baseurl }}/assets/worksheets/velocity-curve/part-2-observations.pdf){: .btn .btn-wvu-blue}
 
-[Student Handout for Part 2 Analysis and Interpretation](https://docs.google.com/document/d/1J9w1DH5fQW24XDvesYTzsR943Px_13uTZQQS5qi6rxg/edit?usp=sharing){: .btn .btn-wvu-blue}
+[Student Handout for Part 2 Analysis and Interpretation]({{ site.baseurl }}/assets/worksheets/velocity-curve/part-2-conclusions.pdf){: .btn .btn-wvu-blue}
 
 
 
@@ -163,16 +163,16 @@ An earlier Part 2 worksheet from 2019 is also available:
 [PDF]({{ '/assets/worksheets/velocity-curve/galactic-plane-observation-2-2019.pdf' | relative_url }}).
 It includes teacher notes and an observation plan. Adapt its class-specific details before use.
 
-   * [Galactic Plane Quadrants II and III Observations: Teacher Notes](https://docs.google.com/document/d/1h9is9YnnfDidLnlvs-DnXlyzXIjT0EhrLDdnONAByHg/edit?usp=sharing)
+   * [Galactic Plane Quadrants II and III Observations: Teacher Notes]({{ site.baseurl }}/assets/lessons/velocity-curve/part-1-teacher-notes.pdf)
 
-   * [Galactic Plane Quadrants II and III Observations](https://docs.google.com/document/d/1jcMV-8X8Cd7rryGCsednTlc0fFRrgvAGkFyJUQAGJh8/edit)
+   * [Galactic Plane Quadrants II and III Observations]({{ site.baseurl }}/assets/worksheets/velocity-curve/part-1-observations.pdf)
 
-   * [Galactic Plane Quadrants II and III Observations: Conclusions](https://docs.google.com/document/d/1aVUFzAvC14gPeV6RSYumYPlkclgILeoaI5LpUZNSV5U/edit)
+   * [Galactic Plane Quadrants II and III Observations: Conclusions]({{ site.baseurl }}/assets/worksheets/velocity-curve/part-1-conclusions.pdf)
 
-   * [Galactic Plane Quadrant I Observations: Teacher Notes](https://docs.google.com/document/d/1BSLoZjrFtA2qEoVzgvXjHdufQFRWmxtQWSAl8k1yJu8/edit)
+   * [Galactic Plane Quadrant I Observations: Teacher Notes]({{ site.baseurl }}/assets/lessons/velocity-curve/part-2-teacher-notes.pdf)
 
-   * [Galactic Plane Quadrant I Observations](https://docs.google.com/document/d/1V4wUx8VtX358x-gIWdH9FaYi3579bz_Unl38_ShrbKE/edit)
+   * [Galactic Plane Quadrant I Observations]({{ site.baseurl }}/assets/worksheets/velocity-curve/part-2-observations.pdf)
 
-   * [Galactic Plane Quadrant I Observations: The Tangent Method](https://docs.google.com/document/d/1wA_tVKYrAyjvuVqUY9c_stwNpO1dGDFnIL6TiHq5hx8/edit?usp=sharing)   
+   * [Galactic Plane Quadrant I Observations: The Tangent Method]({{ site.baseurl }}/assets/worksheets/velocity-curve/tangent-method.pdf)
 
-   * [Galactic Plane Quadrant I Observations: Analysis and Conclusions](https://docs.google.com/document/d/1J9w1DH5fQW24XDvesYTzsR943Px_13uTZQQS5qi6rxg/edit)
+   * [Galactic Plane Quadrant I Observations: Analysis and Conclusions]({{ site.baseurl }}/assets/worksheets/velocity-curve/part-2-conclusions.pdf)
