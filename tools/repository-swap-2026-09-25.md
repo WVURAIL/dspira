@@ -36,5 +36,5 @@ It also contains discussion exports, this number mapping, and public pull reques
 The old repository's open coverage draft contained no file changes; its records and branch are included in the backup.
 The [preserved project downloads](https://github.com/WVURAIL/dspira/releases/tag/preserved-repositories-2026-09-25) remain available under the active name.
 
-The repository left at `WVURAIL/dspira-lessons` contains a forwarding notice.
+The repository left at `WVURAIL/dspira-lessons` was deleted after the active project and backups were verified.
 Old website addresses are served by the lab website and do not depend on that repository.
