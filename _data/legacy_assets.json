@@ -197,20 +197,20 @@
     {
       "legacy": "FilesUploaded/LNA_OrderingParts_Info_3.pdf",
       "original_sha256": "f622e8468a4eb107a2af36c9d5368ef49414f8c4637ab630ef4f5720ee5fc580",
-      "url": "https://raw.githubusercontent.com/WVURAIL/dspira-hardware/7a23586e17d760a64ad22f4582560b3903a104f2/assembly/reference/parts-guide-v3.pdf",
+      "url": "https://raw.githubusercontent.com/WVURAIL/dspira-hardware/c5d7183aa82e18bc99f4c48ef9b36f4e5ba9a3a4/assembly/reference/parts-guide-v3.pdf",
       "canonical": "https://raw.githubusercontent.com/WVURAIL/dspira-hardware/main/assembly/reference/parts-guide-v3.pdf",
       "owner": "dspira-hardware",
       "destination": "assembly/reference/parts-guide-v3.pdf",
-      "sha256": "7f4ce904e4399900c66ffc2bb7d4b0e682e20688f9741a52c24063940cbccf89"
+      "sha256": "d394f0b7dc02b821cf58ec921a64afe5e1f9feda6993a3ce4c5462c7e7cf4ed9"
     },
     {
       "legacy": "FilesUploaded/LNA_OrderingParts_Info_4.pdf",
       "original_sha256": "e2c175601ffa5437e47fb3d63b55955f4c29b6ab902efc445f3b73e63bb8133a",
-      "url": "https://raw.githubusercontent.com/WVURAIL/dspira-hardware/7a23586e17d760a64ad22f4582560b3903a104f2/assembly/parts-guide-v4.pdf",
+      "url": "https://raw.githubusercontent.com/WVURAIL/dspira-hardware/c5d7183aa82e18bc99f4c48ef9b36f4e5ba9a3a4/assembly/parts-guide-v4.pdf",
       "canonical": "https://raw.githubusercontent.com/WVURAIL/dspira-hardware/main/assembly/parts-guide-v4.pdf",
       "owner": "dspira-hardware",
       "destination": "assembly/parts-guide-v4.pdf",
-      "sha256": "a4a15589063093e82b6cd4b2b7ee0d74418aa140ec8720f1cbef9863e8cfbe41"
+      "sha256": "02d8f5776ed43508339c34636e224bf35444c7abb14731fbed79ed28b9e1102e"
     },
     {
       "legacy": "FilesUploaded/MiniHorn_construction.pdf",

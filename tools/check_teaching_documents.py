@@ -31,9 +31,29 @@ def check_pdf_style(path, word_document):
     with pymupdf.open(path) as pdf:
         assert len(pdf), f'{path}: empty PDF'
         for page in pdf:
-            header = pymupdf.Rect(0, 0, page.rect.width, page.rect.height * 0.15)
+            header = pymupdf.Rect(0, 0, page.rect.width, min(80, page.rect.height * 0.15))
             text = re.sub(r'\s+', ' ', page.get_text(clip=header))
             assert 'WVU DSPIRA' in text, f'{path}, page {page.number + 1}: missing header'
+            spans = [span for block in page.get_text('dict', clip=header)['blocks']
+                     for line in block.get('lines', []) for span in line['spans']]
+            brand = [span for span in spans if span['text'].strip() == 'WVU DSPIRA']
+            assert len(brand) == 1 and brand[0]['size'] >= 15.5 and brand[0]['color'] == 0xffffff, (
+                f'{path}, page {page.number + 1}: header must use prominent white lettering')
+            assert 'WEST VIRGINIA UNIVERSITY' in text, f'{path}, page {page.number + 1}: missing university name'
+            shapes = [shape for shape in page.get_drawings()
+                      if shape.get('fill') and shape['rect'].y1 <= header.y1]
+
+            def matches_color(shape, color):
+                return all(abs(actual - expected / 255) < .01
+                           for actual, expected in zip(shape['fill'], color))
+
+            assert any(matches_color(shape, (0, 40, 85))
+                       and shape['rect'].width >= page.rect.width * .75
+                       and shape['rect'].contains(pymupdf.Rect(brand[0]['bbox'])) for shape in shapes), (
+                f'{path}, page {page.number + 1}: missing navy header band')
+            assert any(matches_color(shape, (238, 170, 0))
+                       and shape['rect'].width >= page.rect.width * .75 for shape in shapes), (
+                f'{path}, page {page.number + 1}: missing gold header rule')
             # Equations and original slide diagrams retain their mathematical typefaces.
             if not word_document:
                 continue

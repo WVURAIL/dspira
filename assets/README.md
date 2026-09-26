@@ -51,7 +51,11 @@ Existing public answer keys stay with their worksheets. Keep restricted classroo
 
 ## Teaching document style
 
-Use the existing Word or PowerPoint file as a starting point. Keep the navy WVU DSPIRA header, Arial text, and numbered footer.
+Use the existing Word or PowerPoint file as a starting point. Keep Arial text and the numbered footer.
+Every page needs a navy header band with a gold rule, white 16-point WVU DSPIRA lettering, and the university name.
+Fit the banner within the existing header space so worksheet content and diagrams do not move or shrink.
+The colors follow [WVU's visual identity](https://scm.wvu.edu/brand/visual-identity/): navy `#002855` and gold `#EEAA00` for digital documents.
+Arial is an [accepted Helvetica substitute](https://wvu.atlassian.net/wiki/spaces/ITS/pages/301465848) for editable classroom files.
 Preserve author credits, diagrams, equations, and space for student answers.
 Measuring models must retain their physical scale and include printing instructions.
 
