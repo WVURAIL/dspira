@@ -15,8 +15,8 @@ Passing a software check does not establish receiver compatibility or scientific
 - Seven applications and all 29 teaching flowgraphs generated and passed Python syntax checks with GNU Radio 3.10.9.2.
 - Eighteen software-only teaching examples ran briefly with an offscreen Qt display. The moving-average hierarchy was generated without a preexisting user cache.
 - DSPIRA built and installed into an isolated prefix. Imports and all 36 generation checks passed using that installation.
-- Twelve processing-block tests pass, including finite CSV/HDF5 recording and calibration batching. Thirty pointing-parser cases and two end-to-end processing tests pass.
-- The velocity-curve and interferometry notebooks executed all ten code cells. Five figure scripts produced their PNGs.
+- Twelve block regression tests and eleven original block checks pass, including finite CSV/HDF5 recording and calibration batching. Thirty pointing-parser cases and two end-to-end processing tests pass.
+- The velocity-curve and interferometry notebooks executed all ten code cells. The figure generator produced all five PNGs.
 - All 19 IQ example code cells executed. Numerical checks recover the expected ±20 MHz tones and increased image leakage with gain imbalance.
 - A finite FM test recovered a 1 kHz input at 999.88 Hz after the corrected conversion to 48 kHz audio.
 - Current-site mobile overflow and text-contrast checks pass. Search/history, math formatting, asset compatibility, and redirect tests pass. Browser checks confirm FM equations render and search handles matches, no matches, and clearing.
@@ -139,6 +139,12 @@ Optional third-party software and activities, including classroom simulations, w
 The combined lab/DSPIRA/LightWork link check found 688 internal targets and zero missing files.
 The source-only checker reports eleven sibling LightWork destinations because it cannot see that separate site; the combined build resolves them.
 Frozen historical HTML copies are outside the current-lesson layout gate. Their older templates retain some overflow/contrast findings; they were not rewritten.
+
+## Publication verification
+
+The software fixes passed [GitHub CI](https://github.com/WVURAIL/dspira-software/actions/runs/36219675859).
+The lesson changes passed [the site build and browser checks](https://github.com/WVURAIL/dspira/actions/runs/36219979856) and [deployed successfully](https://github.com/WVURAIL/dspira/actions/runs/36219979878).
+After deployment, all 49 public lesson headings and main-content regions matched the tested local build.
 
 ## Repeating the core checks
 
