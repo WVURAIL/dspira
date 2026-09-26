@@ -19,7 +19,7 @@ A related paper-based exercise, which needs no software at all:
 
 [Fourier Transform Activity]({{ site.baseurl }}/assets/lessons/fourier-activity/worksheet.pdf){: .btn .btn-wvu-blue}
 
-The following link downloads the original GNU Radio 3.7 flowgraph for the activity.
+Open the original GNU Radio 3.7 flowgraph below. Save the file from your browser before opening it in GNU Radio Companion.
 Review compatibility before using it with a newer installation. The software repository retains its source and revision notes.
 
-[GNU Radio .grc file for Fourier Activity](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/fourier-wave-explorer/Fourier_Series_Wave_Explorer.grc){: .btn .btn-wvu-blue download="Fourier_Series_Wave_Explorer.grc"}
+[GNU Radio .grc file for Fourier Activity](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/fourier-wave-explorer/Fourier_Series_Wave_Explorer.grc){: .btn .btn-wvu-blue}

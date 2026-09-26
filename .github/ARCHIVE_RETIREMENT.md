@@ -5,6 +5,22 @@ packages for dspira-archive, cra, gr-dspira, gr-transient, and dspira-lessons.
 The retired repositories' default branches contain forwarding notices only.
 Their Git history is intentionally retained until a separate deletion decision.
 
+## Software repository name swap
+
+On September 25, the original `gr-dspira` repository became the active
+`dspira-software` repository. Its GitHub repository ID is `139190089`.
+Its default branch includes the current software and both projects' Git histories.
+Its original star, fork, and contributor history remain attached to that repository.
+
+The former `dspira-software` repository now uses the name `gr-dspira`.
+Its GitHub repository ID is `1386771762`. It is archived and contains only the
+forwarding notice on its default branch. Both software issues moved to the
+active repository and retained their numbers.
+
+The `gr-dspira-preserved.zip` package remains an unchanged historical snapshot
+from before this swap. Verify repository IDs before any future deletion.
+Do not delete the active `dspira-software` repository.
+
 ## What was preserved
 
 `_data/preserved_repositories.json` records the original commits and checksums.
@@ -31,7 +47,7 @@ are retained in Git, even where the convenience source folder uses plain files.
   cannot send configurable HTTP redirects for individual static download files.
 - Historical HTML redirects preserve query strings and fragments.
 - The lab workflow runs hourly to refresh current lesson redirects.
-- DSPIRA and the preview load the pinned `retired-sites.zip` release asset.
+- DSPIRA and the lab site load the pinned `retired-sites.zip` release asset.
   They never check out a retired repository.
 - `_data/retired_sites.json` pins the release URL and SHA256. Extraction validates
   the checksum and rejects unsafe archive paths before writing files.
@@ -63,7 +79,7 @@ pushing Git alone does not recreate issues, pull requests, or release pages.
 ## Before any future deletion
 
 Keep a downloaded copy of the recovery release outside GitHub. Recheck release
-asset hashes and the latest DSPIRA, lab, and preview deployments. Verify old
+asset hashes and the latest DSPIRA and lab deployments. Verify old
 HTML addresses and representative PDF/data downloads after disabling each
 retired repository's Pages deployment. Search active workflow files for old
 repository checkouts. Check for any new refs or changes since the snapshot.

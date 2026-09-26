@@ -51,6 +51,10 @@
     },
     {
       "repository": "WVURAIL/gr-dspira",
+      "repository_id": 139190089,
+      "current_repository": "WVURAIL/dspira-software",
+      "forwarding_repository_id": 1386771762,
+      "note": "Historical snapshot before the repository name swap. The original repository now hosts active DSPIRA software.",
       "commit": "13a2f311143247019be691bd7bef21352389237f",
       "default_branch": "main",
       "files": 154,
