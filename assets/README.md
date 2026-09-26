@@ -21,12 +21,13 @@ Their `permalink` fields preserve public addresses independently of source filen
 
 [`lessons/lectures`](lessons/lectures/) groups lecture slides by subject:
 
-- [astronomy](lessons/lectures/astronomy/): PDF lecture decks, with editable 2018 institute slides under `2018/`.
-- [digital-signal-processing/2018](lessons/lectures/digital-signal-processing/2018/): institute DSP slides and the Fourier project.
-- [radio-astronomy/2014](lessons/lectures/radio-astronomy/2014/): the Imaging and Deconvolution lecture.
+- [astronomy](lessons/lectures/astronomy/): PDF lecture decks and editable institute slides.
+- [digital-signal-processing](lessons/lectures/digital-signal-processing/): institute DSP slides and the Fourier project.
+- [radio-astronomy](lessons/lectures/radio-astronomy/): the Imaging and Deconvolution lecture.
 
-Keep known course years. Do not infer a year for undated material.
-Original author credits and the institute's source notices remain with the lecture collection.
+Files sit directly in each subject folder. Known years go at the end of filenames, such as `dark-matter-2018.pptx`.
+The [lecture index](lessons/lectures/README.md) records titles, credits, and available date information.
+Do not infer a year for undated material. Original source notices remain with the lecture collection.
 The two teaching figures under `images/astronomy/` retain the same original rights and credits.
 
 ## Worksheets

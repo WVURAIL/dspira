@@ -2090,7 +2090,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/lessons/lectures/astronomy/2018/introduction-to-astronomy.pptx"
+          "path": "assets/lessons/lectures/astronomy/introduction-to-astronomy-2018.pptx"
         }
       ]
     },
@@ -2104,7 +2104,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/lessons/lectures/astronomy/2018/motion-of-the-sky.pptx"
+          "path": "assets/lessons/lectures/astronomy/motion-of-the-sky-2018.pptx"
         }
       ]
     },
@@ -2132,7 +2132,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/lessons/lectures/astronomy/2018/planning-observations.pptx"
+          "path": "assets/lessons/lectures/astronomy/planning-observations-2018.pptx"
         }
       ]
     },
@@ -2146,7 +2146,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/lessons/lectures/astronomy/2018/dark-matter.pptx"
+          "path": "assets/lessons/lectures/astronomy/dark-matter-2018.pptx"
         }
       ]
     },
@@ -2160,7 +2160,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/lessons/lectures/astronomy/2018/galactic-rotation.pptx"
+          "path": "assets/lessons/lectures/astronomy/galactic-rotation-2018.pptx"
         }
       ]
     },
@@ -2174,7 +2174,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/lessons/lectures/astronomy/2018/your-observations.pptx"
+          "path": "assets/lessons/lectures/astronomy/your-observations-2018.pptx"
         }
       ]
     },
@@ -2188,7 +2188,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/lessons/lectures/digital-signal-processing/2018/fourier-transform.pptx"
+          "path": "assets/lessons/lectures/digital-signal-processing/fourier-transform-2018.pptx"
         }
       ]
     },
@@ -2202,7 +2202,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/lessons/lectures/radio-astronomy/2014/imaging-and-deconvolution-wilner.pdf"
+          "path": "assets/lessons/lectures/radio-astronomy/imaging-and-deconvolution-wilner-2014.pdf"
         }
       ]
     },
@@ -2216,7 +2216,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/lessons/lectures/digital-signal-processing/2018/signals.pptx"
+          "path": "assets/lessons/lectures/digital-signal-processing/signals-2018.pptx"
         }
       ]
     },
@@ -2230,7 +2230,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/lessons/lectures/digital-signal-processing/2018/fourier-series.pptx"
+          "path": "assets/lessons/lectures/digital-signal-processing/fourier-series-2018.pptx"
         }
       ]
     },
@@ -2244,7 +2244,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/lessons/lectures/digital-signal-processing/2018/fourier-transform.pptx"
+          "path": "assets/lessons/lectures/digital-signal-processing/fourier-transform-2018.pptx"
         }
       ]
     },
@@ -2258,7 +2258,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/lessons/lectures/digital-signal-processing/2018/fourier-project.pptx"
+          "path": "assets/lessons/lectures/digital-signal-processing/fourier-project-2018.pptx"
         }
       ]
     },
@@ -2272,7 +2272,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/lessons/lectures/digital-signal-processing/2018/filters.pptx"
+          "path": "assets/lessons/lectures/digital-signal-processing/filters-2018.pptx"
         }
       ]
     },
@@ -2286,7 +2286,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/lessons/lectures/digital-signal-processing/2018/sampling.pptx"
+          "path": "assets/lessons/lectures/digital-signal-processing/sampling-2018.pptx"
         }
       ]
     },
@@ -2300,7 +2300,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/lessons/lectures/digital-signal-processing/2018/mixing.pptx"
+          "path": "assets/lessons/lectures/digital-signal-processing/mixing-2018.pptx"
         }
       ]
     },

@@ -48,7 +48,9 @@ provide access control.
 ## Where files belong
 
 Use [the asset directory guide](assets/README.md) before adding a download.
-Lecture slides belong in `assets/lessons/lectures/<subject>/`, grouped by course year when known.
+Lecture slides belong directly in `assets/lessons/lectures/<subject>/`.
+Put a known year at the end of the filename, such as `dark-matter-2018.pptx`.
+Record presenters, authors, and source details in the lecture README. Do not create a folder for a single course year.
 Worksheets belong in `assets/worksheets/<lesson-slug>/`, including complete worksheets saved as images.
 Figures, screenshots, and photographs belong in `images/<topic>/`.
 Guides and background handouts belong in `assets/lessons/<lesson-slug>/`.

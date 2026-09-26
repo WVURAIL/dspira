@@ -13,7 +13,7 @@ A future move to `rail.wvu.edu` follows the [lab's cutover checklist](https://gi
 | --- | --- |
 | [_posts](_posts/) | Individual lesson pages |
 | [assets/lessons](assets/lessons/) | Lesson guides, background handouts, and construction instructions |
-| [assets/lessons/lectures](assets/lessons/lectures/) | Lecture slides grouped by subject and known course year |
+| [assets/lessons/lectures](assets/lessons/lectures/) | Lecture slides grouped by subject, with known years in filenames |
 | [assets/worksheets](assets/worksheets/) | Student exercises, answer keys, and editable originals |
 | [assets/templates](assets/templates/) | Lesson contribution templates |
 | [images](images/) | Figures, screenshots, photographs, and branding, grouped by topic |

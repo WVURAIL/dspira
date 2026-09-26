@@ -42,30 +42,33 @@ The decks reflect the 2018 courses; they may differ from later recordings.
 
 ### Astronomy slides
 
-- [Introduction to Astronomy (PowerPoint)]({{ '/assets/lessons/lectures/astronomy/2018/introduction-to-astronomy.pptx' | relative_url }})
-- [Motion of the Sky (PowerPoint)]({{ '/assets/lessons/lectures/astronomy/2018/motion-of-the-sky.pptx' | relative_url }})
-- [Time, Planning Observations, and Coordinate Systems (PowerPoint)]({{ '/assets/lessons/lectures/astronomy/2018/planning-observations.pptx' | relative_url }})
-- [Dark Matter (PowerPoint)]({{ '/assets/lessons/lectures/astronomy/2018/dark-matter.pptx' | relative_url }})
-- [Galactic Rotation (PowerPoint)]({{ '/assets/lessons/lectures/astronomy/2018/galactic-rotation.pptx' | relative_url }})
-- [Your Observations (PowerPoint)]({{ '/assets/lessons/lectures/astronomy/2018/your-observations.pptx' | relative_url }})
+- [Introduction to Astronomy (PowerPoint)]({{ '/assets/lessons/lectures/astronomy/introduction-to-astronomy-2018.pptx' | relative_url }})
+- [Motion of the Sky (PowerPoint)]({{ '/assets/lessons/lectures/astronomy/motion-of-the-sky-2018.pptx' | relative_url }})
+- [Time, Planning Observations, and Coordinate Systems (PowerPoint)]({{ '/assets/lessons/lectures/astronomy/planning-observations-2018.pptx' | relative_url }})
+- [Dark Matter (PowerPoint)]({{ '/assets/lessons/lectures/astronomy/dark-matter-2018.pptx' | relative_url }})
+- [Galactic Rotation (PowerPoint)]({{ '/assets/lessons/lectures/astronomy/galactic-rotation-2018.pptx' | relative_url }})
+- [Your Observations (PowerPoint)]({{ '/assets/lessons/lectures/astronomy/your-observations-2018.pptx' | relative_url }})
 
 ### DSP slides
 
-- [Signal Processing for Radio Astronomy Applications (PowerPoint)]({{ '/assets/lessons/lectures/digital-signal-processing/2018/signals.pptx' | relative_url }})
-- [Periodic and Nonperiodic Signals: Fourier Series (PowerPoint)]({{ '/assets/lessons/lectures/digital-signal-processing/2018/fourier-series.pptx' | relative_url }})
-- [Frequency Content of Nonperiodic Signals (PowerPoint)]({{ '/assets/lessons/lectures/digital-signal-processing/2018/fourier-transform.pptx' | relative_url }})
-- [Fourier Series Project (PowerPoint)]({{ '/assets/lessons/lectures/digital-signal-processing/2018/fourier-project.pptx' | relative_url }})
-- [Filters (PowerPoint)]({{ '/assets/lessons/lectures/digital-signal-processing/2018/filters.pptx' | relative_url }})
-- [Sampling (PowerPoint)]({{ '/assets/lessons/lectures/digital-signal-processing/2018/sampling.pptx' | relative_url }})
-- [Mixing and Modulation (PowerPoint)]({{ '/assets/lessons/lectures/digital-signal-processing/2018/mixing.pptx' | relative_url }})
+- [Signal Processing for Radio Astronomy Applications (PowerPoint)]({{ '/assets/lessons/lectures/digital-signal-processing/signals-2018.pptx' | relative_url }})
+- [Periodic and Nonperiodic Signals: Fourier Series (PowerPoint)]({{ '/assets/lessons/lectures/digital-signal-processing/fourier-series-2018.pptx' | relative_url }})
+- [Frequency Content of Nonperiodic Signals (PowerPoint)]({{ '/assets/lessons/lectures/digital-signal-processing/fourier-transform-2018.pptx' | relative_url }})
+- [Fourier Series Project (PowerPoint)]({{ '/assets/lessons/lectures/digital-signal-processing/fourier-project-2018.pptx' | relative_url }})
+- [Filters (PowerPoint)]({{ '/assets/lessons/lectures/digital-signal-processing/filters-2018.pptx' | relative_url }})
+- [Sampling (PowerPoint)]({{ '/assets/lessons/lectures/digital-signal-processing/sampling-2018.pptx' | relative_url }})
+- [Mixing and Modulation (PowerPoint)]({{ '/assets/lessons/lectures/digital-signal-processing/mixing-2018.pptx' | relative_url }})
+
+## Radio astronomy lecture
+
+- [Imaging and Deconvolution, David J. Wilner, 2014 (PDF)]({{ '/assets/lessons/lectures/radio-astronomy/imaging-and-deconvolution-wilner-2014.pdf' | relative_url }})
+
+Wilner's lecture provides advanced background from the Synthesis Imaging Workshop.
 
 ## Additional teaching figures
 
 - [Frequency and radial velocity figure (PDF)]({{ '/images/astronomy/frequency-versus-radial-velocity.pdf' | relative_url }})
 - [Galactic rotation figure (PDF)]({{ '/images/astronomy/galactic-rotation.pdf' | relative_url }})
-- [Imaging and Deconvolution, David J. Wilner, 2014 (PDF)]({{ '/assets/lessons/lectures/radio-astronomy/2014/imaging-and-deconvolution-wilner.pdf' | relative_url }})
-
-Wilner's lecture provides advanced background from the Synthesis Imaging Workshop.
 
 ## Practice with signals
 

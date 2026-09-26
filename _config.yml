@@ -81,6 +81,7 @@ titles_from_headings:
 exclude:
   - tools/
   - assets/README.md
+  - assets/lessons/lectures/README.md
   - images/program/README.md
   - assets/wvu-design-system/README.md
   - assets/wvu-design-system/LICENSE

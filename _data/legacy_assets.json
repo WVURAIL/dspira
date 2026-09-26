@@ -1483,87 +1483,91 @@
     },
     {
       "legacy": "assets/teaching/2018/dsp-filters.pptx",
-      "source": "assets/lessons/lectures/digital-signal-processing/2018/filters.pptx",
+      "source": "assets/lessons/lectures/digital-signal-processing/filters-2018.pptx",
       "original_sha256": "b85a8accd450ed710705d135222b3cc05d5dab77efe0555e5b0295b5ef511256",
       "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
     },
     {
       "legacy": "assets/teaching/2018/dsp-mixing.pptx",
-      "source": "assets/lessons/lectures/digital-signal-processing/2018/mixing.pptx",
+      "source": "assets/lessons/lectures/digital-signal-processing/mixing-2018.pptx",
       "original_sha256": "8754aa527e767833b537fdc926d9ac17a6840f6fd9e9590e9bf91979f4e4d046",
       "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
     },
     {
       "legacy": "assets/teaching/2018/astronomy-introduction-to-astronomy.pptx",
-      "source": "assets/lessons/lectures/astronomy/2018/introduction-to-astronomy.pptx",
+      "source": "assets/lessons/lectures/astronomy/introduction-to-astronomy-2018.pptx",
       "original_sha256": "160909cd43e5d9611c124e47b7d8ad7baefcb2213cb7467507f39df6fe11a6b4",
       "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
     },
     {
       "legacy": "assets/teaching/2018/dsp-sampling.pptx",
-      "source": "assets/lessons/lectures/digital-signal-processing/2018/sampling.pptx",
+      "source": "assets/lessons/lectures/digital-signal-processing/sampling-2018.pptx",
       "original_sha256": "37331738b555b881f7ca6883c2845f8942478ec9d68fce8527aef1a5b0403286",
       "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
     },
     {
       "legacy": "assets/teaching/2018/astronomy-galactic-rotation.pptx",
-      "source": "assets/lessons/lectures/astronomy/2018/galactic-rotation.pptx",
+      "source": "assets/lessons/lectures/astronomy/galactic-rotation-2018.pptx",
       "original_sha256": "68321491762e1565edaae8e0bec329a95d6308b79d511774223a490ff543108e",
       "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
     },
     {
       "legacy": "assets/teaching/2018/astronomy-motion-of-the-sky.pptx",
-      "source": "assets/lessons/lectures/astronomy/2018/motion-of-the-sky.pptx",
+      "source": "assets/lessons/lectures/astronomy/motion-of-the-sky-2018.pptx",
       "original_sha256": "6eb326fc9f81379dbef9811231f11112fc0cb0cc1c9a3a95e778b0e644c0e7b0",
       "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
     },
     {
       "legacy": "assets/teaching/2018/dsp-signals.pptx",
-      "source": "assets/lessons/lectures/digital-signal-processing/2018/signals.pptx",
+      "source": "assets/lessons/lectures/digital-signal-processing/signals-2018.pptx",
       "original_sha256": "29283e48d4398bd08790307254a01e865b69003334c519b0c0c128e1a170b0c7",
       "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
     },
     {
       "legacy": "assets/teaching/2018/dsp-fourier-transform.pptx",
-      "source": "assets/lessons/lectures/digital-signal-processing/2018/fourier-transform.pptx",
+      "source": "assets/lessons/lectures/digital-signal-processing/fourier-transform-2018.pptx",
       "original_sha256": "5c83ed86a3214461d34615da107dff72b26d3bd231a3bc6d00bd7018ea5daf3b",
       "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
     },
     {
       "legacy": "assets/teaching/2018/astronomy-planning-observations.pptx",
-      "source": "assets/lessons/lectures/astronomy/2018/planning-observations.pptx",
+      "source": "assets/lessons/lectures/astronomy/planning-observations-2018.pptx",
       "original_sha256": "ddd5a4fddaae2e50341048c12f03e3bb7ef43ddd2b1250fb077c1e9f02bf1431",
       "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
     },
     {
       "legacy": "assets/teaching/2018/dsp-fourier-project.pptx",
-      "source": "assets/lessons/lectures/digital-signal-processing/2018/fourier-project.pptx",
+      "source": "assets/lessons/lectures/digital-signal-processing/fourier-project-2018.pptx",
       "original_sha256": "3642bcaa5c3785b84f82364c1f330ae2ac48b5bd595de3fb80a785ccec82e4cb",
       "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
     },
     {
       "legacy": "assets/teaching/2018/astronomy-your-observations.pptx",
-      "source": "assets/lessons/lectures/astronomy/2018/your-observations.pptx",
+      "source": "assets/lessons/lectures/astronomy/your-observations-2018.pptx",
       "original_sha256": "a031b435eeb4c698bdeeebc1145c3ecbae7c51dc5f3e711cd0fe75248900a639",
       "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
     },
     {
       "legacy": "assets/teaching/2018/astronomy-dark-matter.pptx",
-      "source": "assets/lessons/lectures/astronomy/2018/dark-matter.pptx",
+      "source": "assets/lessons/lectures/astronomy/dark-matter-2018.pptx",
       "original_sha256": "63157ccc8bb4896d18f36a4168c280474bc314eea00e0553129c21bd5ef31894",
       "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
     },
     {
       "legacy": "assets/teaching/2018/dsp-fourier-series.pptx",
-      "source": "assets/lessons/lectures/digital-signal-processing/2018/fourier-series.pptx",
+      "source": "assets/lessons/lectures/digital-signal-processing/fourier-series-2018.pptx",
       "original_sha256": "c919e31fc97ea84074a07cdd4d50f501da346a7b70ac11d7027b738d75c0a8d3",
       "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
     },
     {
       "legacy": "assets/teaching/README.txt",
-      "source": "assets/lessons/lectures/README.txt",
       "original_sha256": "485b53786e208492dfa7ca58367d74ce5540570583a7d9c0a3a25105f7c5c9ab",
-      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c",
+      "url": "https://raw.githubusercontent.com/WVURAIL/dspira/03a631722c23f02a339bcbbbb6df2a12f4b3270c/assets/lessons/lectures/README.txt",
+      "sha256": "485b53786e208492dfa7ca58367d74ce5540570583a7d9c0a3a25105f7c5c9ab",
+      "canonical": "https://github.com/WVURAIL/dspira/blob/main/assets/lessons/lectures/README.md",
+      "owner": "dspira",
+      "destination": "assets/lessons/lectures/README.md"
     },
     {
       "legacy": "assets/teaching/SOURCE-LICENSE.txt",
@@ -1591,9 +1595,103 @@
     },
     {
       "legacy": "assets/teaching/imaging-and-deconvolution-wilner-2014.pdf",
-      "source": "assets/lessons/lectures/radio-astronomy/2014/imaging-and-deconvolution-wilner.pdf",
+      "source": "assets/lessons/lectures/radio-astronomy/imaging-and-deconvolution-wilner-2014.pdf",
       "original_sha256": "06a12075424cf2d2086cf83e145419d6d153bd780fae7eb65bce3c34f6bb2dd1",
       "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/lessons/lectures/digital-signal-processing/2018/signals.pptx",
+      "original_sha256": "29283e48d4398bd08790307254a01e865b69003334c519b0c0c128e1a170b0c7",
+      "source_revision": "03a631722c23f02a339bcbbbb6df2a12f4b3270c",
+      "source": "assets/lessons/lectures/digital-signal-processing/signals-2018.pptx"
+    },
+    {
+      "legacy": "assets/lessons/lectures/digital-signal-processing/2018/mixing.pptx",
+      "original_sha256": "8754aa527e767833b537fdc926d9ac17a6840f6fd9e9590e9bf91979f4e4d046",
+      "source_revision": "03a631722c23f02a339bcbbbb6df2a12f4b3270c",
+      "source": "assets/lessons/lectures/digital-signal-processing/mixing-2018.pptx"
+    },
+    {
+      "legacy": "assets/lessons/lectures/digital-signal-processing/2018/fourier-series.pptx",
+      "original_sha256": "c919e31fc97ea84074a07cdd4d50f501da346a7b70ac11d7027b738d75c0a8d3",
+      "source_revision": "03a631722c23f02a339bcbbbb6df2a12f4b3270c",
+      "source": "assets/lessons/lectures/digital-signal-processing/fourier-series-2018.pptx"
+    },
+    {
+      "legacy": "assets/lessons/lectures/digital-signal-processing/2018/fourier-transform.pptx",
+      "original_sha256": "5c83ed86a3214461d34615da107dff72b26d3bd231a3bc6d00bd7018ea5daf3b",
+      "source_revision": "03a631722c23f02a339bcbbbb6df2a12f4b3270c",
+      "source": "assets/lessons/lectures/digital-signal-processing/fourier-transform-2018.pptx"
+    },
+    {
+      "legacy": "assets/lessons/lectures/digital-signal-processing/2018/fourier-project.pptx",
+      "original_sha256": "3642bcaa5c3785b84f82364c1f330ae2ac48b5bd595de3fb80a785ccec82e4cb",
+      "source_revision": "03a631722c23f02a339bcbbbb6df2a12f4b3270c",
+      "source": "assets/lessons/lectures/digital-signal-processing/fourier-project-2018.pptx"
+    },
+    {
+      "legacy": "assets/lessons/lectures/digital-signal-processing/2018/filters.pptx",
+      "original_sha256": "b85a8accd450ed710705d135222b3cc05d5dab77efe0555e5b0295b5ef511256",
+      "source_revision": "03a631722c23f02a339bcbbbb6df2a12f4b3270c",
+      "source": "assets/lessons/lectures/digital-signal-processing/filters-2018.pptx"
+    },
+    {
+      "legacy": "assets/lessons/lectures/digital-signal-processing/2018/sampling.pptx",
+      "original_sha256": "37331738b555b881f7ca6883c2845f8942478ec9d68fce8527aef1a5b0403286",
+      "source_revision": "03a631722c23f02a339bcbbbb6df2a12f4b3270c",
+      "source": "assets/lessons/lectures/digital-signal-processing/sampling-2018.pptx"
+    },
+    {
+      "legacy": "assets/lessons/lectures/astronomy/2018/your-observations.pptx",
+      "original_sha256": "a031b435eeb4c698bdeeebc1145c3ecbae7c51dc5f3e711cd0fe75248900a639",
+      "source_revision": "03a631722c23f02a339bcbbbb6df2a12f4b3270c",
+      "source": "assets/lessons/lectures/astronomy/your-observations-2018.pptx"
+    },
+    {
+      "legacy": "assets/lessons/lectures/astronomy/2018/planning-observations.pptx",
+      "original_sha256": "ddd5a4fddaae2e50341048c12f03e3bb7ef43ddd2b1250fb077c1e9f02bf1431",
+      "source_revision": "03a631722c23f02a339bcbbbb6df2a12f4b3270c",
+      "source": "assets/lessons/lectures/astronomy/planning-observations-2018.pptx"
+    },
+    {
+      "legacy": "assets/lessons/lectures/astronomy/2018/galactic-rotation.pptx",
+      "original_sha256": "68321491762e1565edaae8e0bec329a95d6308b79d511774223a490ff543108e",
+      "source_revision": "03a631722c23f02a339bcbbbb6df2a12f4b3270c",
+      "source": "assets/lessons/lectures/astronomy/galactic-rotation-2018.pptx"
+    },
+    {
+      "legacy": "assets/lessons/lectures/astronomy/2018/introduction-to-astronomy.pptx",
+      "original_sha256": "160909cd43e5d9611c124e47b7d8ad7baefcb2213cb7467507f39df6fe11a6b4",
+      "source_revision": "03a631722c23f02a339bcbbbb6df2a12f4b3270c",
+      "source": "assets/lessons/lectures/astronomy/introduction-to-astronomy-2018.pptx"
+    },
+    {
+      "legacy": "assets/lessons/lectures/astronomy/2018/dark-matter.pptx",
+      "original_sha256": "63157ccc8bb4896d18f36a4168c280474bc314eea00e0553129c21bd5ef31894",
+      "source_revision": "03a631722c23f02a339bcbbbb6df2a12f4b3270c",
+      "source": "assets/lessons/lectures/astronomy/dark-matter-2018.pptx"
+    },
+    {
+      "legacy": "assets/lessons/lectures/astronomy/2018/motion-of-the-sky.pptx",
+      "original_sha256": "6eb326fc9f81379dbef9811231f11112fc0cb0cc1c9a3a95e778b0e644c0e7b0",
+      "source_revision": "03a631722c23f02a339bcbbbb6df2a12f4b3270c",
+      "source": "assets/lessons/lectures/astronomy/motion-of-the-sky-2018.pptx"
+    },
+    {
+      "legacy": "assets/lessons/lectures/radio-astronomy/2014/imaging-and-deconvolution-wilner.pdf",
+      "original_sha256": "06a12075424cf2d2086cf83e145419d6d153bd780fae7eb65bce3c34f6bb2dd1",
+      "source_revision": "03a631722c23f02a339bcbbbb6df2a12f4b3270c",
+      "source": "assets/lessons/lectures/radio-astronomy/imaging-and-deconvolution-wilner-2014.pdf"
+    },
+    {
+      "legacy": "assets/lessons/lectures/README.txt",
+      "original_sha256": "485b53786e208492dfa7ca58367d74ce5540570583a7d9c0a3a25105f7c5c9ab",
+      "source_revision": "03a631722c23f02a339bcbbbb6df2a12f4b3270c",
+      "url": "https://raw.githubusercontent.com/WVURAIL/dspira/03a631722c23f02a339bcbbbb6df2a12f4b3270c/assets/lessons/lectures/README.txt",
+      "sha256": "485b53786e208492dfa7ca58367d74ce5540570583a7d9c0a3a25105f7c5c9ab",
+      "canonical": "https://github.com/WVURAIL/dspira/blob/main/assets/lessons/lectures/README.md",
+      "owner": "dspira",
+      "destination": "assets/lessons/lectures/README.md"
     }
   ]
 }
