@@ -22,7 +22,7 @@ Fourier Analysis is a very powerful tool that comes into play when we discuss pe
 - [1. Fourier Analysis](#1-fourier-analysis)
     - [3.1. Introduction](#31-introduction)
     - [3.2. Fourier Series](#32-fourier-series)
-        - [3.2.1. A Square Wave](#321-a-sqaure-wave)
+        - [3.2.1. A Square Wave](#321-a-square-wave)
         - [3.2.2. A Triangle Wave](#322-a-triangle-wave)
         - [3.2.3. A Sawtooth wave.](#323-a-sawtooth-wave)
     - [3.3. Fourier Series and Fourier Transforms](#33-fourier-series-and-fourier-transforms)
@@ -60,7 +60,7 @@ $$
 We shall explore this concept by making two waveforms using sinusoids:
 
 ### 3.2.1. A Square Wave
-{: #321-a-sqaure-wave}
+<span id="321-a-sqaure-wave"></span>
 
 From [Lab 1]({{ site.baseurl }}/dsplab-intro/), we have the function generator. We use that to make a square wave of amplitude = 1. 
 
@@ -88,14 +88,14 @@ $$
 The corresponding Fourier series of the square wave with period $$2\pi$$
 
 $$
-f(x) = \frac{1}{2} + \sum_{n=1}^{\infty} \frac{2}{(2k-1)\pi} sin[(2k-1)x] \\
+f(x) = \frac{1}{2} + \sum_{k=1}^{\infty} \frac{2}{(2k-1)\pi} sin[(2k-1)x] \\
 \ \ \ = \frac{1}{2} + \frac{2}{\pi}sin(x) + \frac{2}{3\pi}sin(3x) + \frac{2}{5\pi}sin(5x) + \frac{2}{7\pi}sin(7x) + ... + + \frac{2}{n\pi}sin(nx)\ (\ n\ is\ odd)
 $$
 
 and for arbitrary period P:
 
 $$
-f(x) = \frac{1}{2} + \sum_{n=1}^{\infty} \frac{2}{(2k-1)\pi} sin[\frac{2\pi}{P}(2k-1)x] \\
+f(x) = \frac{1}{2} + \sum_{k=1}^{\infty} \frac{2}{(2k-1)\pi} sin[\frac{2\pi}{P}(2k-1)x] \\
 \ \ \ = \frac{1}{2} + \frac{2}{\pi}sin(\frac{2\pi}{P}x) + \frac{2}{3\pi}sin(\frac{2\pi}{P}3x) + \frac{2}{5\pi}sin(\frac{2\pi}{P}5x) + \frac{2}{7\pi}sin(\frac{2\pi}{P}7x) + ... + + \frac{2}{n\pi}sin(\frac{2\pi}{P}nx)\ (\ n\ is\ odd)
 $$
 
@@ -124,7 +124,7 @@ $$
 Its corresponding fourier series is:
 
 $$
-f(x) = \frac{1}{2} - \sum_{n=1}^{\infty} \frac{4}{(2k-1)^2\pi^2} cos[(2k-1)\pi x] \\
+f(x) = \frac{1}{2} - \sum_{k=1}^{\infty} \frac{4}{(2k-1)^2\pi^2} cos[(2k-1)\pi x] \\
 = \frac{1}{2} - \frac{4}{\pi^2}cos(\pi x) - \frac{4}{9\pi^2}cos(3 \pi x) - \frac{4}{25\pi^2}cos(5\pi x) - ...
 $$
 
@@ -173,7 +173,7 @@ where $$X(\omega)$$ is the Fourier transform and $$\omega_o = \frac{2\pi}{T}$$
 
 ### 3.3.1. Fourier Transform
 
-Use the [Square Wave](#321-a-sqaure-wave) and the [Triangle Wave](#322-a-triangle-wave) flowgraphs from the previous exercise.
+Use the [Square Wave](#321-a-square-wave) and the [Triangle Wave](#322-a-triangle-wave) flowgraphs from the previous exercise.
 
 First use a ``signal source`` block to make a square wave and feed the signal into a ``QT frequency sink``
 

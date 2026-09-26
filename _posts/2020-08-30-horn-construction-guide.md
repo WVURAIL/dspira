@@ -55,7 +55,7 @@ A **software defined radio** (SDR) digitizes the horn's radio signals. Digital s
 
 The SDR we prefer is the [Airspy R2](https://airspy.com/airspy-r2), $169. This operates with a 10 MHz bandwidth and is the SDR that the DSPIRA software is coded for.
 
-A less expensive option is the [Airspy Mini](https://airspy.com/airspy-r2), $99. It operates with a 6 MHz bandwidth. Only a minor adjustment to the software is needed if this SDR is used. Contact us for more information about the changes that would need to be done.
+A less expensive option is the [Airspy Mini](https://airspy.com/airspy-mini/), $99. It operates with a 6 MHz bandwidth. Only a minor adjustment to the software is needed if this SDR is used. Contact us for more information about the changes that would need to be done.
 
 A [coaxial cable](https://www.coaxrf.com/shop/1-rf-coaxial-cables/times-microwave-lmr240/sma-male-times-microwave-lmr240/lmr240-sma-male-to-sma-male-coaxial-rf-pigtail-cable/) is needed to connect the LNA to the SDR. Refer to the diagram above. Typically a 10 ft length is adequate, but any length up to 25 ft should work fine.
 

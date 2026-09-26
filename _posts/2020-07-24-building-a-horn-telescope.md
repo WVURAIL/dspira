@@ -38,12 +38,9 @@ Why does the horn have these dimensions? How do they relate to observing the 21 
 
       * computer with a Linux (Ubuntu) operating system
 
-         + install GNU Radio 3.8
+         + install GNU Radio 3.10
 
-         + get *spectrometer_w_cal.grc* from the [DSPIRA software guide]({{ '/software/' | relative_url }})
+         + get *calibrated-spectrometer.grc* from the [DSPIRA software guide]({{ '/software/' | relative_url }})
 
 
-      * computer with Windows operating system - the GNU Radio and spectrometer_w_cal.grc program can be run from a bootable flash drive
-
-      * computer with Mac operating system - the GNU Radio and spectrometer_w_cal.grc program can be run from a bootable flash drive
-
+      * other computers: review the [computer and software options]({{ site.baseurl }}/HornOperation_computerSystems). Check hardware compatibility before choosing a bootable image.

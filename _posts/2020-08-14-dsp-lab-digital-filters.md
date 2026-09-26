@@ -85,7 +85,7 @@ Use a sine wave from the ``signal source`` and add noise to it (Discussed in Lab
 Observe the signal before and after the filtering.
 Cascade multiple 8 point average filters (i.e. connect end to start). Save the filter as a 'hier block'. Give it two 'pad sources' and two 'pad sinks' (why two?).  Once the block is compiled, reload the blocks (refresh button in gnuradio-companion).  There should now be a "GRC Hier Blocks" section with your block named.  How does the signal change adding more and more averaging?
 
-*Note: There are two options for 'heir' block with or without 'QT GUI' appending heir. Choose the one without the 'QT GUI. Male sure you have to disabled blocks in your flowgraph *
+Choose **Hier Block**, without the QT GUI option, in the Options block. Remove unused blocks before generating the hierarchy.
 
 [↑ Go to the Top of the Page](#)
 
@@ -101,7 +101,7 @@ The FIR flow diagram is below. $$ x[n]\ and\ y[n] $$ are input and output, respe
 
 FIR filters are mathematically fast and relatively easier to design and implement digitally. 
 
-We shall design FIR filters using the graphical tool that ships with GNU Radio. Install the additional dependency in a terminal: ``sudo apt install python-qwt5-qt4``. After installation, move the mouse to the window's top. In the taskbar, click ``tools``, then ``filter design tool``
+We shall design FIR filters using the graphical tool that ships with GNU Radio. Install the additional dependency in a terminal: ``sudo apt install python3-pyqtgraph``. After installation, move the mouse to the window's top. In the taskbar, click ``tools``, then ``filter design tool``
 
 ![filterdesign]({{ site.baseurl }}/images/digital-filters/filter-design-tool.png)
 
@@ -204,6 +204,6 @@ IIR or Infinite response filters are the closest digital implementations of thes
 
 ### 4.4.2. IIR Filter Design
 
-Now create an IIR filter to again pull out the fundamental frequency of the C-chord.  Do this again using the 'Filter design tool'.  When you use an IIR filter, the design is now in 'normalized' units of 'cycles/sample'. To get units of frequency, you must multiply by the sample rate/2 (fs/2) you are using.  So with a sample rate of 48000, you divide the frequency you want by 24000.  Use the "IIR Filter" block. Its feed-forward taps are the "b's", and its feedback taps are the "a's".  Be sure to also select the 'new' style of taps.  Compare the tap counts of IIR and FIR filters with similar response functions. How many coefficients does each need?  More? Less?  Why?
+Now create an IIR filter to again pull out the fundamental frequency of the C-chord.  Do this again using the 'Filter design tool'.  When you use an IIR filter, frequencies are normalized to the Nyquist frequency. To get units of frequency, you must multiply by the sample rate/2 (fs/2) you are using.  So with a sample rate of 48000, you divide the frequency you want by 24000.  Use the "IIR Filter" block. Its feed-forward taps are the "b's", and its feedback taps are the "a's".  Be sure to also select the 'new' style of taps.  Compare the tap counts of IIR and FIR filters with similar response functions. How many coefficients does each need?  More? Less?  Why?
 
 [↑ Go to the Top of the Page](#) ... [Next Lab]({{ site.baseurl }}/dsplab-fourier2/)

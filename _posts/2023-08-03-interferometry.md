@@ -13,7 +13,7 @@ preparation: "Review single-horn observations before this optional extension. Us
 optional: true
 ---
 
-Two horns a few metres apart, pointed at the same patch of sky, make an interferometer. As a source drifts across the beams, the path length to each horn changes. The two signals move in and out of step. Their combined power rises and falls in a fringe pattern. The distance between the horns sets the fringe spacing. That relationship makes this arrangement useful.
+Two horns a few meters apart, pointed at the same patch of sky, make an interferometer. As a source drifts across the beams, the path length to each horn changes. The two signals move in and out of step. Their combined power rises and falls in a fringe pattern. The distance between the horns sets the fringe spacing. That relationship makes this arrangement useful.
 
 + [Correlation and the Two-Element Interferometer]({{ site.baseurl }}/correlation-and-interferometry/) - Where the fringes come from. Covers convolution, autocorrelation, and cross-correlation. Explains resolution limits for a single dish, adding and multiplying arrangements, and the effects of finite bandwidth. Comes with a notebook you can run.
 

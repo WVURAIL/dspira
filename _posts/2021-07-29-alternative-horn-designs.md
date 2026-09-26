@@ -19,3 +19,6 @@ preparation: "Choose one horn design. These alternatives are not additional requ
 
 *  [Cone Horn Construction](/lightwork/memos/history/memo-022-r13.pdf) - Instructions for building a cylindrical radio horn with a cylindrical can.
 
+
+The mini-horn PDF's software folder requires a Google sign-in.
+Use the public [software installation guide]({{ '/install-software/' | relative_url }}) or [bootable images]({{ '/Install_Ubuntu_spectrometer_onFlashdrive' | relative_url }}) instead.

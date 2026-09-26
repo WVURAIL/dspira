@@ -226,7 +226,7 @@ This give the following Output:
 
 ## 1.4. GNU Radio and Python
 
-GNU Radio is written in python and the final code that does the magic is all in Python. Python is very powerful programing language known for its readability and versatility. The flow graphs created in GNU radio companion are converted into a Python script. All the predefined blocks are written in Python and/or C. One can make their own GNU Radio blocks by coding in Python or C. For more detail, read the [GNU Radio Python guided tutorial](https://wiki.gnuradio.org/index.php/Guided_Tutorial_GNU_Radio_in_Python)
+GNU Radio Companion generates Python flowgraphs. Processing blocks use C++ or Python. You can also write your own blocks. For details, read the [GNU Radio Python guided tutorial](https://wiki.gnuradio.org/index.php/Guided_Tutorial_GNU_Radio_in_Python).
 
 
 ### 1.4.1. Arbitrary Function generation 
@@ -241,12 +241,12 @@ We shall import a standard library called ``numpy``. It allows us to make matric
 
 ![numpy]({{ site.baseurl }}/images/dsp-intro/numpy-import.png)
 
-Create a rectangular pulse with adjustable width ``tau`` from 0 to 10 ms. Set that range using the "QT GUI Range block"  
+Create a rectangular pulse with adjustable width `tau` from 0 to 0.01 seconds (10 ms). Set that range using the "QT GUI Range block"
 
-The function shall be generated shall be generated using the following python code:
+Generate the pulse with this Python expression:
 
 ```python
-np.hstack((np.ones(int(tau*samp_rate)), np.zeros(int((1-tau)*samp_rate))))
+np.hstack((np.ones(int(tau*samp_rate)), np.zeros(int(samp_rate) - int(tau*samp_rate))))
 ```
 
 Before placing the blocks, consider a "Tag Object" block [^stream]. It helps synchronize the sinks using a *stream tag* from the vector source. This lets us observe the generated pulse. Set the Vector Source "Repeat" field to "Yes" to repeat the pulse of width tau. Note the "Tag" field in the block properties shown below.
@@ -257,7 +257,7 @@ Before placing the blocks, consider a "Tag Object" block [^stream]. It helps syn
 ![tag]({{ site.baseurl }}/images/dsp-intro/tag-settings.png)
 ![vector]({{ site.baseurl }}/images/dsp-intro/vector-settings.png)
 
-Set each sink's trigger mode to "tag" and its "Tag Key" to ``t0``. Set the time sink's "Number of Points" to "samp_rate". For the frequency sink, use "1024 * 6". This is to properly visualize the signal and its frequency components.  
+Set each sink's trigger mode to "tag" and its "Tag Key" to ``t0``. Set the time sink's "Number of Points" to "samp_rate". For the frequency sink, use `8192`. Its FFT size must be a power of two. This is to properly visualize the signal and its frequency components.
 
 ![timetrigger]({{ site.baseurl }}/images/dsp-intro/time-trigger.png)
 ![freqtrigger]({{ site.baseurl }}/images/dsp-intro/frequency-trigger.png)
@@ -319,7 +319,7 @@ Now again use a cosine input signal as you've used in a previous exercise.  What
 You are now ready to try to make your own gaussian noise block out of other blocks.  
 
 Create a new flowgraph in grc.
- We'll start by using a just a QLFSR block.  This is a 'linear feedback shift register'  block, which is a very simple way to create 'pseudorandom' noise.  Read about [linear-feedback shift registers](https://en.wikipedia.org/wiki/Linear-feedback_shift_register) for more details.  Set the type to float, the degree (how many elements in the shift register) to 32, repeat yes.  Change the seed to any number.  Leave the 'mask' at zero to get an 'optimal' source that wont repeat.  Try using other numbers to compare, 1075838979 is a nice choice for random looking data.  Use a histogram sink and a gui sink to look at the output.  The output is only -1 or 1. It remains unpredictable without the initial seed and elapsed cycle count.
+ We'll start by using a just a GLFSR Source block.  This is a 'linear feedback shift register'  block, which is a very simple way to create 'pseudorandom' noise.  Read about [linear-feedback shift registers](https://en.wikipedia.org/wiki/Linear-feedback_shift_register) for more details.  Set the type to float, the degree (how many elements in the shift register) to 32, repeat yes.  Change the seed to any number.  Leave the mask at zero to select GNU Radio's default polynomial. The sequence repeats after its finite period.  Try using other numbers to compare, 1075838979 is a nice choice for random looking data.  Use a histogram sink and a gui sink to look at the output.  The output is only -1 or 1. It remains unpredictable without the initial seed and elapsed cycle count.
 
  Add a number of these sources together:
  ![gaussian]({{ site.baseurl }}/images/dsp-intro/lfsr-noise.png)

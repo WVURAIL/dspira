@@ -64,6 +64,12 @@ toward. Start there if you teach that unit and want more physics background than
 * [All Galaxies Great and Small]({{ site.baseurl }}/assets/lessons/lectures/astronomy/all-galaxies-great-and-small.pdf){: .btn .btn-wvu-blue}
 * [Galaxy Interactions and Dark Matter]({{ site.baseurl }}/assets/lessons/lectures/astronomy/galaxy-interactions-and-dark-matter.pdf){: .btn .btn-wvu-blue}
 
+## Older interactive links in the slides
+
+The slides retain historical external references. Two resources are unavailable: the sidereal-time calculator and an orbital-motion Flash animation.
+Use [Stellarium](https://stellarium.org/) for observation planning and the [Milky Way activities]({{ '/Astro_MWG' | relative_url }}) for motion models.
+The older Rotating Sky Explorer also uses Flash. See the [celestial coordinates activity]({{ '/A2UnderstandingCeleCoords' | relative_url }}) for the current classroom route.
+
 ## Figure credits
 
 Some slides reproduce figures from published astronomy textbooks.

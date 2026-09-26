@@ -64,7 +64,7 @@ $$
 f(t) = A \sin(\omega t + \phi).
 $$
 
-This sinusoid has 3 variables that can be altered ti change the function f(t). The first term, A, is called the magnitude, or amplitude of the sinusoid. The next term, $$\omega$$ is known as the frequency, and the last term, $$\phi$$ is known as the phase angle. We can encode our message in either of these three parameters.
+This sinusoid has 3 variables that can be altered to change the function f(t). The first term, A, is called the magnitude, or amplitude of the sinusoid. The next term, $$\omega$$ is known as the frequency, and the last term, $$\phi$$ is known as the phase angle. We can encode our message in either of these three parameters.
 
 The sinusoidal signal that is used in the modulation is known as the carrier signal, or simply "the carrier". The signal modulating the sinusoidal carrier is the "data signal" or "message signal".
 
@@ -110,45 +110,27 @@ Demodulation or extracting the message from the carrier involves simply filterin
 
 #### 2.3.1.2 Frequency Modulation
 
-The message is encoded in the carrier's frequency: $$x(t) = a \sin (f(t)t + \phi) $$. Let the message signal be $$x_m(t)$$ and the carrier be $$x_c(t) = A_c \cos (2 \pi f_c t)$$. Here, $$f_c$$ is the carrier frequency, and $$A_c$$ is its amplitude. The modulator combines the carrier and message to produce the transmitted signal
+The message changes the carrier's instantaneous frequency:
+
+$$ f_i(t) = f_c + f_\Delta x_m(t). $$
+
+Here, \\(f_c\\) is the carrier frequency and \\(f_\Delta\\) sets the frequency deviation.
+Phase is the integral of angular frequency, so the transmitted signal is
 
 $$
-\begin{align} 
-y(t) & = A_c \cos \left( 2 \pi f(t) t \right) \\ 
-     & = A_{c} \cos \left( 2 \pi \left[ f_{c} + f_{\Delta} x_{m}(t) \right] t\right)\\ 
-     & = A_{c} \cos \left( 2 \pi f_{c} t + 2 \pi f_{\Delta} x_{m}(t) t \right) \\ 
-\end{align}
+y(t) = A_c \cos\left(2\pi f_c t + 2\pi f_\Delta\int_0^t x_m(u)\,du + \phi\right).
 $$
-
-where $$f_{\Delta}$$ is the sensitivity of the frequency modulator which adjusts how much bandwidth is used for the signal.
 
 ### 2.3.2 Let's Make our FM Radio
 
-Demodulation extracts the message encoded in the sinusoid's changing frequency. That can be achieved by "fast" differentiating the sine wave, treating the message as a constant. Consider the following:
+An FM demodulator recovers the message from changes in phase.
+Writing the phase as \\(\theta(t)\\) gives
 
 $$
-x(t) = a \sin (f(t)t + \phi) \\
-\frac{d x(t)}{dt} = af(t) \cos(f(t)t + \phi) \\
-\ \ \  = A(t) \cos(f(t) + \phi)
+\theta'(t) = 2\pi\left[f_c + f_\Delta x_m(t)\right].
 $$
 
-For the FM signal 
-
-$$
-y(t) = A_c \cos \left( 2 \pi f_c t + 2 \pi f_{\Delta} x_{m} (t) t  \right) \\
- \ \ \  = A_c cos ( \theta(t) )
-$$
-
-$$
-\begin{align} 
-y'(t) & = -A_c \theta ' (t) \sin(\theta (t) ) \\
-    & = -2 \pi A_c ( f_c + f_{\Delta} x_m(t) ) \sin (\theta (t))
-\end{align}
-$$
-
-The converted signal is $$ y(t) = [1 + m(t)]\cdot c(t) $$. This is an AM signal. We can easily demodulate this AM signal by filtering out the AM "carrier". It follows the following flow:
-
-FM ---->|Differentiator|---->|Envelope Detector|----> Signal
+Subtract the carrier term and scale by \\(2\pi f_\Delta\\) to recover \\(x_m(t)\\).
 
 A similar operation can be achieved in GNU radio using the following flow:
 
@@ -156,66 +138,28 @@ FM ---> |Filter out the signal of interest| ---> |Resample Signal| ---> |Quadrat
 
 The quadrature demodulator handles complex input, so it uses a method other than differentiation. Its output is still proportional to changes in input frequency. (That GNU Radio block actually has a good explanation of the math in the description. )   
 
-**Hints:**
+**Settings for an Airspy R2:**
 
+Close GQRX before opening the receiver in GNU Radio.
+Create `samp_rate = 2500000`, `quad_rate = 240000`, and `audio_rate = 48000`.
+Use the following settings for the chain above:
 
-**Source**: Since we are using a hardware source we have to use the appropriate block. Search for the ``osmocom Source`` block. The Device arguments should be ``airspy=0``. **NOTE: The Sample rate supported by this dongle is either 2.5 MHz or 10 MHz. We shall set our ``samp_freq`` variable to ``2500000``**. The ``Ch0: Frequency (Hz)`` is the frequency you want to tune to. 
+| Block | Settings | Output sample rate |
+| --- | --- | --- |
+| Osmocom Source | Device `airspy=0`; sample rate `samp_rate`; tune to a local FM station | 2,500,000 samples/s |
+| Low Pass Filter | Complex input; gain 1; cutoff 100000 Hz; transition 20000 Hz; decimation 10 | 250,000 samples/s |
+| Rational Resampler | Complex input; interpolation 24; decimation 25 | 240,000 samples/s |
+| Quadrature Demod | Gain `quad_rate/(2*math.pi*75000)`; import `math` with an Import block | 240,000 samples/s |
+| Low Pass Filter | Float input; sample rate `quad_rate`; cutoff 15000 Hz; transition 3000 Hz; decimation 5 | 48,000 samples/s |
+| Audio Sink | Sample rate `audio_rate` | 48,000 samples/s |
 
-![source]({{ site.baseurl }}/images/software-defined-radio/receiver-source.png)
+Add a Multiply Const block before the Audio Sink to control volume. Start with a small gain.
+Every filter must use its input sample rate when calculating taps.
+The second filter reduces the audio rate by five: `240000 / 5 = 48000`.
 
-**Low Pass Filter**: This filters out all the frequencies apart from the one we want to tune our radio to. Note that I have another variable called ``channel_width`` which is equal to ``200e3``. It is to filter out at a data rate 200kHz. 
-
-![LP Filter]({{ site.baseurl }}/images/software-defined-radio/low-pass-filter.png)
- 
-**Resampling Signal**: Use the 'Rational Resampler' block. Resample the signal such that the frequency of the signal is a multiple of out output frequency. The output sample rate ('out_rate') matches the sound card's input rate: 48 kHz for audio playback. The output frequency should still be near to the bandwidth of the message i.e. 200kHz. 192kHz ie 'out_rate' is the closest multiple of 48kHz to it. As noticed on the screen shot here is a new variable 'decimation == int(samp_rate/(2*channel_width))' 
-
-![resample]({{ site.baseurl }}/images/software-defined-radio/resampler.png)
-
-
-**Quadrature demodulation** extracts the changing frequency component, which carries the audio. In the quad demod block, set gain to '(out_rate/(2*math.pi*channel_width))'
-
-![quaddemod]({{ site.baseurl }}/images/software-defined-radio/quadrature-demodulator.png)
-
-**Lowpass Filter**: Set the cutoff to 18 kHz (near the upper limit of human hearing). Set decimation to reduce the 192 kHz input to the sound card's 48 kHz sample rate. 
-
-![lp2]({{ site.baseurl }}/images/software-defined-radio/audio-low-pass-filter.png)
-
-
-**_Play audio from an audio sink_**
-
-Lets capture some sweet tunes! 
-
-<!--
-Our FM Radio design GRC in its most basic has the following flow:
-
-[Source]--(Low Pass Filter)---(Resampler)--(FM demodulator)---(Volume Gain)---[Audio Sink]
-
-Find the corresponding blocks and connect them according to the flow given above. Use appropraite variables and GUI elements. USe the QT GUI Sink to visually show the signal in the flow before and after modulation. 
-
-*Hints for reference*
-
-**Source**: Since we are using a hardware source we have to use the appropriate block. Search for the ``osmocom Source`` block. The Device arguments should be ``airspy=0``. **NOTE: The Sample rate supported by this dongle is either 2.5 MHz or 10 MHz. We shall set our ``samp_freq`` variable to ``2500000``**. The ``Ch0: Frequency (Hz)`` is the frequency you want to tune to. 
-
-![source]({{ site.baseurl }}/images/software-defined-radio/receiver-source.png)
-
-**Low Pass Filter**: This filters out all the frequencies apart from the one we want to tune our radio to. Note that I have another variable called ``channel_width`` which is equal to ``200e3``. It is to filter out at a data rate 200kHz. 
-
-![LP Filter]({{ site.baseurl }}/images/software-defined-radio/low-pass-filter.png)
-
-**Resampler**: We are attempting to change the data rate to 480kHz which is 10 times (a nice multiple of) the soundcard's working frequency for all audio data files, and will still contain all the information left after we filtered to 200kHz. We do this because the sample rate is 2.5MHz and 480kHZ is not divisor of it i.e. they aren't integral multiples ( 2.5MHz/480kHz = 5.208).  Continuing the resampling we started earlier. we 'decimate' the input by dividing ``5`` and 'interpolate' it by mulitplying by ``12`` to resample to 480kHz!
-
-![resampler]({{ site.baseurl }}/images/software-defined-radio/resampler-settings.png)
-
-**FM demodulator**: This is the most important part of the radio, well, it is essentially the radio as it decodes the signals to audio!
-
-![demod]({{ site.baseurl }}/images/software-defined-radio/demodulator-settings.png)
-
-**Volume Gain**: Raise the roof people! It's a simple multiply constant block.
-
-**Audio Sink**: To listen to the sweet tunes!
-
-The choices made so far here may seem a bit arbitrary.  In the future we'll go into filters and filter design, and you can return to your FM radio, and possibly improve it!
--->
+The [FM receiver example](https://github.com/WVURAIL/dspira-software/blob/main/examples/receivers/fm-receiver.grc) uses the same rate conversion.
+Its WBFM Receive block combines demodulation, audio filtering, and de-emphasis.
+Radio reception and audio playback still require compatible hardware.
 
 [↑ Go to the Top of the Page](#)
 
@@ -228,12 +172,9 @@ To check it out on your own get this software: [dump1090](https://github.com/Mal
 4. Listen to HAM radio chatter ( usually amplitude modulated )
 5. EMS and police and local services radio. [local scanners and frequencies](https://www.radioreference.com/apps/db/)
 6. WeatherFAX. Get latest images of weather data from naval bases! [http://www.rtl-sdr.com/receiving-weather-rtty-rtl-sdr/](http://www.rtl-sdr.com/receiving-weather-rtty-rtl-sdr/)  
-7. Get satellite data: receive and decode live images of Earth.
-These satellites transmit at the following frequencies:
-
-- NOAA 15: 137.6200 MHz
-- NOAA 18: 137.9125 MHz
-- NOAA 19: 137.1000 MHz
+7. Explore satellite reception using a currently operating satellite and compatible equipment.
+The former NOAA-15, NOAA-18, and NOAA-19 APT examples no longer receive live images.
+[NOAA retired those satellites in 2025](https://ospo.noaa.gov/operations/poes/status.html).
 
 8. If transmitted nearby get a newspaper over the radio!
 9. [Decode high definition radio](https://github.com/theori-io/nrsc5) with `nrsc5`

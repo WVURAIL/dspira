@@ -23,3 +23,13 @@ preparation: "Begin with the introductory waveform lessons. Review FFTs and filt
 + [Build a Simple Spectrometer]({{ site.baseurl }}/assets/lessons/simple-spectrometer/build-a-spectrometer.pdf) - Directions on building a simple spectrometer for a horn telescope, with detailed explanations of the blocks.
 
 Teachers can download [editable Word versions of all five worksheets]({{ '/teaching-resources/#editable-gnu-radio-worksheets' | relative_url }}).
+
+## Notes for the spectrometer guide
+
+The PDF uses older GNU Radio screenshots. Use the [current receiver settings]({{ '/Spectrometer_sourceblock_settings' | relative_url }}) when configuring your SDR.
+
+- `bias=1` enables power on the antenna cable for a compatible amplifier. USB powers the Airspy itself.
+- A 4096-point FFT has 4096 channels. At 10 MHz bandwidth, each channel is about 2441 Hz wide.
+- Integrating power spectra reduces random fluctuations relative to the mean. It does not cancel the noise power itself.
+
+The [current examples]({{ '/dsp-examples/' | relative_url }}) include flowgraphs checked with GNU Radio 3.10.

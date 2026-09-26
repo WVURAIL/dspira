@@ -33,7 +33,7 @@ Older instructions may target GNU Radio 3.8. Do not assume they apply unchanged 
 
 [Download DSPIRA software](https://github.com/WVURAIL/dspira-software/archive/refs/heads/main.zip){: .btn .btn-wvu-blue}
 
-**Review compatibility before opening these files.** Extract the ZIP and find the `flowgraphs` folder.
+**Review compatibility before opening these files.** Extract the ZIP and find the `applications` folder.
 The download includes the processing blocks and applications. Follow the [installation steps]({{ '/install-software/' | relative_url }}) before opening a flowgraph.
 Install the receiver's GNU Radio plugin too. Osmocom and LimeSDR source blocks come from `gr-osmosdr` and `gr-limesdr`, respectively.
 

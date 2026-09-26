@@ -19,7 +19,7 @@ Options:
 
 + The SDR we prefer is the [Airspy R2](https://airspy.com/airspy-r2), $169. This operates in a 10 MHz bandwidth and is the SDR that the DSPIRA software is coded for.
 
-+ A less expensive option is the [Airspy Mini](https://airspy.com/airspy-r2), $99. It operates in a 6 MHz bandwidth. Only a minor adjustment to the software is needed if this SDR is used. For details see the [Spectrometer Source Block Settings page here]({{ site.baseurl }}/Spectrometer_sourceblock_settings).
++ A less expensive option is the [Airspy Mini](https://airspy.com/airspy-mini/), $99. It operates in a 6 MHz bandwidth. Only a minor adjustment to the software is needed if this SDR is used. For details see the [Spectrometer Source Block Settings page here]({{ site.baseurl }}/Spectrometer_sourceblock_settings).
 
 + RTL-SDR - the cheapest option, and the one that needs the most care. Three settings have to change: the source block, the sample rate, **and** the tuning frequency. Its 2.4 MHz band is narrow. The default `freq` setting places the hydrogen line outside the recorded band. The telescope works but detects no hydrogen. For details see the [Spectrometer Source Block Settings page here]({{ site.baseurl }}/Spectrometer_sourceblock_settings).
 

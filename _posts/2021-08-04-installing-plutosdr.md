@@ -10,70 +10,41 @@ order: 4
 meta_description: "Install the software needed to use PlutoSDR with a DSPIRA telescope. Follow the setup steps to connect the receiver to your computer."
 optional: true
 equipment: "An ADALM-PLUTO receiver and a computer with GNU Radio, internet access, and software installation permissions."
-preparation: "Use this optional route only for PlutoSDR. These historical commands target older GNU Radio versions; check compatibility before installing."
+preparation: "Use this optional route only for PlutoSDR. Use GNU Radio 3.10 with its included IIO blocks. Check the USB connection before configuring telescope reception."
 ---
 
+GNU Radio 3.10 includes the IIO blocks used by PlutoSDR.
+Follow the [DSPIRA installation guide]({{ '/install-software/' | relative_url }}) first.
+The [Analog Devices guide](https://wiki.analog.com/resources/tools-software/linux-software/gnuradio) explains version compatibility.
 
-The steps below outline the installation of software that is needed to run the Pluto SDR in GNU Radio. Find GNU Radio and IIO device information at: [Analog Devices documentation](https://wiki.analog.com/resources/tools-software/linux-software/gnuradio)
+## Check the installed blocks
 
-**Step 1: Install Dependencies**
+On Ubuntu, install the device inspection utility:
 
-Open a terminal window. Then type (or copy and paste) and enter the following:
+```sh
+sudo apt install libiio-utils
+python3 -c "from gnuradio import iio; print(iio.__file__)"
+```
 
-1. `sudo apt install libxml2 libxml2-dev bison flex cmake git libaio-dev libboost-all-dev`
+Restart GNU Radio Companion and search for **PlutoSDR Source**.
+Use the block from the installed GNU Radio IIO package.
+The older `upgrade-3.8` source-build instructions apply to GNU Radio 3.8, not the current DSPIRA setup.
 
-2. `sudo apt install libusb-1.0-0-dev`
+## Connect the receiver
 
-3. `sudo apt install libavahi-common-dev libavahi-client-dev`
+Connect the PlutoSDR to the computer with a USB data cable.
+List available IIO contexts:
 
-4. `git clone https://github.com/analogdevicesinc/libiio.git`
+```sh
+iio_info -s
+```
 
-5. `cd libiio`
+Copy the detected receiver's URI into the source block's **IIO context URI** field.
+If no receiver appears, follow Analog Devices' USB and device-access troubleshooting guidance.
 
-6. `cmake .`
+## Configure the telescope
 
-7. `make`
-
-8. `sudo make install`
-
-9. `cd ..`
-
-**Download and build libad9361-iio**
-
-1. `git clone https://github.com/analogdevicesinc/libad9361-iio.git`
-
-2. `cd libad9361-iio`
-
-3. `cmake .`
-
-4. `make`
-
-5. `sudo make install`
-
-6. `cd ..`
-
-
-**Additional Installations**
-
-1. `sudo apt install bison flex cmake git libgmp-dev`
-
-2. `sudo apt install liborc-dev`
-
-
-**Build and install gr-iio from source:**
-
-1. `git clone -b upgrade-3.8 https://github.com/analogdevicesinc/gr-iio.git`
-
-2. `cd gr-iio`
-
-3. `cmake .`
-
-4. `make`
-
-5. `sudo make install`
-
-6. `cd ..`
-
-7. `sudo ldconfig`
-
-Your system should now be ready to install the PlutoSDR Source block in GNU Radio. If there are any problems, refer to the information at: [https://wiki.analog.com/resources/tools-software/linux-software/gnuradio](https://wiki.analog.com/resources/tools-software/linux-software/gnuradio)
+Follow the [receiver settings]({{ '/Spectrometer_sourceblock_settings' | relative_url }}) for tuning, sample rate, connections, and amplifier power.
+Set **LO Frequency** to `int(freq)` and **Sample Rate** to `int(samp_rate)`.
+Use `freq = 1421e6` and `samp_rate = 3.5e6` for this lesson.
+Confirm reception and calibration with your equipment before collecting observations.

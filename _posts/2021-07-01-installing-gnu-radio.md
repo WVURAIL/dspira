@@ -9,7 +9,7 @@ categories: ['Software Setup']
 order: 6
 meta_description: "Install GNU Radio for a DSPIRA horn telescope. Follow the software setup steps and prepare your computer to run radio astronomy flowgraphs."
 equipment: "An Ubuntu computer with internet access and permission to install software."
-preparation: "Review software compatibility first. Install GNU Radio before building the shared radio astronomy blocks."
+preparation: "Review software compatibility first. Install GNU Radio before building the DSPIRA processing blocks."
 ---
 
 To install GNU Radio, complete the following:

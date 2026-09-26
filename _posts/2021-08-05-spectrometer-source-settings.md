@@ -13,7 +13,7 @@ preparation: "Identify your receiver model first. Apply both sample-rate and fre
 ---
 
 
-The default source block settings in the `spectrometer_w_cal.grc` GNU Radio program are for the [Airspy R2](https://airspy.com/airspy-r2) SDR. A different SDR may require changes to the source and `samp_rate Variable` blocks. Sometimes the `freq Variable` block also needs changes. The settings for some common SDR's used with the horn telescopes are described below.
+The default source block settings in the `calibrated-spectrometer.grc` GNU Radio program are for the [Airspy R2](https://airspy.com/airspy-r2) SDR. A different SDR may require changes to the source and `samp_rate Variable` blocks. Sometimes the `freq Variable` block also needs changes. The settings for some common SDR's used with the horn telescopes are described below.
 
 > **Why `freq` sometimes has to change too.** The program records a band
 > `samp_rate` wide, centered on `freq`. The defaults are `freq` 1419 MHz and `samp_rate` 10e6.
@@ -28,11 +28,11 @@ The default source block settings in the `spectrometer_w_cal.grc` GNU Radio prog
 
 Options:
 
-+ The [Airspy Mini](https://airspy.com/airspy-r2)
++ The [Airspy Mini](https://airspy.com/airspy-mini/)
 
     - Source block: the `osmocom Source` block is used; the "Device Arguments" are the same as for the Airspy R2. So no changes are needed in this block.
 
-    - `samp_rate Variable` block: Find it beside `Options`, at the canvas's upper left in `spectrometer_w_cal.grc`. Open this block by double-clicking it. Change the "Value" to "6e6" (which is 6 MHz).
+    - `samp_rate Variable` block: Find it beside `Options`, at the canvas's upper left in `calibrated-spectrometer.grc`. Open this block by double-clicking it. Change the "Value" to "6e6" (which is 6 MHz).
 
     <img alt="samp_rate Variable block properties: Id samp_rate, Value 6e6" align="center" width="300" height="146" src="{{ '/images/receiver-electronics/airspy-mini-sample-rate.png' | relative_url }}">
 
@@ -47,7 +47,7 @@ Options:
 
     <img alt="osmocom Source properties: Device Arguments rtl=0,bias=1, Sample Rate samp_rate, Frequency freq, RF/IF/BB gains 17, 12, 10 dB" align="center" width="300" height="385" src="{{ '/images/receiver-electronics/rtl-sdr-source.png' | relative_url }}">
 
-    - `samp_rate Variable` block: Find it beside `Options`, at the canvas's upper left in `spectrometer_w_cal.grc`. Open this block by double-clicking it. Change the "Value" to "2.4e6" (which is 2.4 MHz).
+    - `samp_rate Variable` block: Find it beside `Options`, at the canvas's upper left in `calibrated-spectrometer.grc`. Open this block by double-clicking it. Change the "Value" to "2.4e6" (which is 2.4 MHz).
 
     <img alt="samp_rate Variable block properties: Id samp_rate, Value 2.4e6" align="center" width="300" height="149" src="{{ '/images/receiver-electronics/rtl-sdr-sample-rate.png' | relative_url }}">
 
@@ -101,11 +101,13 @@ Options:
     <img alt="PlutoSDR Source output connected to Stream to Vector, three Delay blocks (4.096k, 8.192k, 12.288k), and Complex To Real" align="center" width="277" height="237" src="{{ '/images/receiver-electronics/plutosdr-source-connections.png' | relative_url }}">
 
     - Open the `PlutoSDRSource` block (by double-clicking) and set the following:
-        - On the "General" tab, set the values as shown:
+        - On the "General" tab, set **LO Frequency** to `int(freq)` and **Sample Rate** to `int(samp_rate)`.
+        - Set **IIO context URI** to the receiver URI found during installation.
+        - The older screenshot below shows the layout. Its 2.4 GHz LO value is not the hydrogen-line setting.
 
         <img alt="PlutoSDR Source properties: LO Frequency 2400000000, Sample Rate int(samp_rate), RF Bandwidth 20000000, Buffer size 32768, Manual Gain (RX1) 64 dB" align="center" width="300" height="267" src="{{ '/images/receiver-electronics/plutosdr-source.png' | relative_url }}">
 
-    - The `samp_rate` and `freq` Variable blocks should be set to the values shown — `samp_rate` 3.5e6 **and** `freq` 1421e6. Both changes are needed. A 3.5 MHz band centered at 1419 MHz ends at 1420.75 MHz and clips the line. At 1421 MHz the band is 1419.25 – 1422.75 MHz.
+    - The `samp_rate` and `freq` Variable blocks should be set to the values shown — `samp_rate` 3.5e6 **and** `freq` 1421e6. Both changes are needed. Centering at 1419 MHz includes the line but leaves less room on its high-frequency side. At 1421 MHz the band is 1419.25 – 1422.75 MHz.
 
         <img alt="samp_rate Variable block properties: Id samp_rate, Value 3.5e6" align="center" width="300" height="106" src="{{ '/images/receiver-electronics/plutosdr-sample-rate.png' | relative_url }}">
         <img alt="freq Variable block properties: Id freq, Value 1421e6" align="center" width="298" height="130" src="{{ '/images/receiver-electronics/plutosdr-frequency.png' | relative_url }}">

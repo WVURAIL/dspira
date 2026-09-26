@@ -29,7 +29,8 @@ Raspberry Pis are inexpensive. Newer models can handle the GNU Radio signal proc
 
 ## Supported Raspberry Pi Devices
 
-*All devices must have RAM greater than 4GB*
+These historical examples use at least 4 GB of RAM. The [Raspberry Pi 400](https://www.raspberrypi.com/products/raspberry-pi-400-unit/) has 4 GB.
+Check the selected operating system's requirements. The current DSPIRA release still needs a Raspberry Pi hardware test.
 1. Raspberry Pi 4 Model B
 2. Raspberry Pi 400
 
@@ -38,14 +39,14 @@ Raspberry Pis are inexpensive. Newer models can handle the GNU Radio signal proc
 This image requires a minimum of 16GB of space on the SD card. 
 1. Download the image [here](https://drive.google.com/file/d/1KzfgMEwgwTTZUaCeNR5kRgLj9MfMKyAh/view?usp=sharing)
 2. Unzip the `.zip` file.
-3. Use [Raspberry Pi Imager](https://www.raspberrypi.org/software/) to install this image. 
+3. Use [Raspberry Pi Imager](https://www.raspberrypi.com/software/) to install this image.
    1. Insert SD card into your card reader on your computer
    2. Open Raspberry Pi imager.
    3. Click `Choose OS`, and choose `Use Custom`. 
    4. Select the correct image file downloaded in step 1 and 2 from your system.
    5. Click `Choose storage` and select your inserted SD card.
    6. Click write. 
-   7. More info [here](https://www.raspberrypi.org/documentation/installation/installing-images/) and a [video](https://www.youtube.com/watch?v=ntaXWS8Lk34) 
+   7. More info [here](https://www.raspberrypi.com/documentation/computers/getting-started.html) and a [video](https://www.youtube.com/watch?v=ntaXWS8Lk34)
 4. Insert SD card to Raspberry Pi and power it up.
 5. The default user name is `pi`, with password `raspberry`. Change the password after first boot. 
 
@@ -65,7 +66,7 @@ This historical setup guide describes older GNU Radio versions. For the maintain
 1. Support Raspberry Pi
 2. A microSD card (9GB minimum, 16GB recommended)
 3. A computer with a microSD card drive
-4. A micro USB-C power cable 
+4. A USB-C power supply suitable for your Raspberry Pi
 5. A monitor with an HDMI interface (Optionally for installing Ubuntu Server)
 6. A micro HDMI cable (Optionally for installing Ubuntu Server)
 7. A USB keyboard and mouse (Optionally for installing Ubuntu Server)
@@ -83,13 +84,13 @@ _NOTE_: Firstly, for Ubuntu desktop a monitor and mouse and keyboard is required
    1. This method can be used on any machine with ssh server enabled.
    2. Install X server on your computer. [VcXsrv](https://sourceforge.net/projects/vcxsrv/){:target="_blank"} on windows and [XQuartz](https://www.xquartz.org/){:target="_blank"} for macOS. 
    3. Power up the Raspberry Pi and connect your computer via ethernet cable
-   4. First we need to determine the IP address of the raspberry PI: [How to determine Raspberry PI IP address](https://www.raspberrypi.org/documentation/remote-access/ip-address.md){:target="_blank"}
+   4. First we need to determine the IP address of the raspberry PI: [How to determine Raspberry PI IP address](https://www.raspberrypi.com/documentation/computers/remote-access.html#ip-address){:target="_blank"}
    5. If the determined IP address is `<IP address>` then in the terminal type `ssh -Y pi@<IP address>`
-   6. More info on SSH [here](https://www.raspberrypi.org/documentation/remote-access/ssh/){:target="_blank"}
+   6. More info on SSH [here](https://www.raspberrypi.com/documentation/computers/remote-access.html#ssh){:target="_blank"}
 3. Using PuTTY on Windows: 
-   1. [Download PuTTY](https://www.putty.org){:target="_blank"}.
+   1. [Download PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/){:target="_blank"}.
    2. Add IP address in the hostname field.
-4. Using VNC: More info [here](https://www.raspberrypi.org/documentation/remote-access/vnc/README.md){:target="_blank"} 
+4. Using VNC: More info [here](https://www.raspberrypi.com/documentation/computers/remote-access.html#vnc){:target="_blank"}
     
     
 

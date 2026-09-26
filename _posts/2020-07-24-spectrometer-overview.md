@@ -3,7 +3,7 @@ permalink: /HornOperation_spectrometer_description
 layout: post
 date:   2020-07-24
 title: Horn Telescope Spectrometer Description
-summary:  Description of the spectrometer_w_cal.grc program features
+summary:  Description of the calibrated-spectrometer.grc program features
 tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Observing']
 order: 4
@@ -12,9 +12,9 @@ equipment: "A browser for this controls reference. Following along requires the 
 preparation: "Complete software and receiver setup before using the controls. Read the separate calibration procedure before calibrating."
 ---
 
-The program used to run the telescope is a GNU Radio program called *spectrometer_w_cal.grc*. Get it from the [DSPIRA software guide]({{ '/software/' | relative_url }}). The *spectrometer_w_cal.grc* program has several features to make data collection with the horn telescope user-friendly. Each feature on the display is described below.
+The program used to run the telescope is a GNU Radio program called *calibrated-spectrometer.grc*. Get it from the [DSPIRA software guide]({{ '/software/' | relative_url }}). The *calibrated-spectrometer.grc* program has several features to make data collection with the horn telescope user-friendly. Each feature on the display is described below. Older videos call this program `spectrometer_w_cal.grc`.
 
-Set up the horn. Cable the LNA to the Airspy, then connect the Airspy to the computer's USB port.  Then open the spectrometer_w_cal.grc program in GNU Radio. 
+Set up the horn. Cable the LNA to the Airspy, then connect the Airspy to the computer's USB port.  Then open the calibrated-spectrometer.grc program in GNU Radio.
 [This video shows how to set up a horn and start the program.](https://youtu.be/Oo28QCEZe_g) 
 
 You can also watch [this video](https://youtu.be/50B2Uv-SoDY), which describes these user interface features in detail.

@@ -12,7 +12,10 @@ equipment: "A computer, installation USB drive, and storage space for the chosen
 preparation: "This guide describes an older installation route. Back up existing data and confirm partitioning permissions before changing disk layouts."
 ---
 
-  *Our software works under Ubuntu versions 22.04 LTS and older.*
+The steps below describe an older Ubuntu 22.04 installation.
+Current software checks use Ubuntu 24.04 and GNU Radio 3.10.
+See the [tested software setup]({{ "/software/" | relative_url }}) before choosing a version.
+Use [Ubuntu's current installation guide](https://ubuntu.com/tutorials/install-ubuntu-desktop) for current installer screens and disk-encryption guidance.
 
 Installing Ubuntu on a Windows computer requires three steps. Partition the hard drive, create a bootable Ubuntu flash drive, and install Ubuntu on the partition:
 

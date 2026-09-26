@@ -17,7 +17,7 @@ preparation: "Review what the hydrogen line and background represent before oper
 A horn telescope is simply an antenna designed to pick up radio waves. The DSPIRA horn detects radio waves from neutral hydrogen in the Milky Way. These waves have a frequency near 1420 MHz. 
 A horn is an antenna, so it receives incident radio waves from any source. The displayed spectrum therefore includes signals from space and the local environment on Earth. Some of these signals are inherent in the data processing system. 
 
-We want to study signals from astronomical objects, such as our galaxy. We therefore subtract other signals the telescope receives. The spectrometer_w_cal.grc GNU Radio program performs this subtraction. It lets us view spectra from the astronomical object of interest.
+We want to study signals from astronomical objects, such as our galaxy. We therefore subtract other signals the telescope receives. The calibrated-spectrometer.grc GNU Radio program performs this subtraction. It lets us view spectra from the astronomical object of interest.
 
 ## What Can a Horn Telescope Measure?
 
@@ -39,7 +39,7 @@ Point the telescope toward different sky regions, the ground, a building, or a t
 
 The Airspy SDR also typically produces a single spike at 1420.0 MHz. This comes from the Airspy electronics and is not of interest to us.
 
-The *spectrometer_w_cal.grc* program can reduce noise spikes and subtract the characteristic background signal. This allows the user to display the spectrum of signals that come from only the galaxy.
+The *calibrated-spectrometer.grc* program can reduce noise spikes and subtract the characteristic background signal. This allows the user to display the spectrum of signals that come from only the galaxy.
 
 ### The Signal from Neutral Hydrogen
 

@@ -30,8 +30,8 @@ These images may contain older application files. Check receiver settings and re
 
 ## Install on an Ubuntu computer
 
-Follow the [software installation steps]({{ site.baseurl }}/BuildingHorn_SoftwareInfo) to install GNU Radio and the shared radio astronomy blocks.
-Download the classroom applications separately through the [software guide]({{ '/software/' | relative_url }}).
+Follow the [software installation steps]({{ site.baseurl }}/BuildingHorn_SoftwareInfo) to install GNU Radio, DSPIRA processing blocks, and the classroom applications.
+Review receiver support through the [software guide]({{ '/software/' | relative_url }}).
 Check the Ubuntu and GNU Radio versions expected by each instruction page.
 
 Installing or repartitioning an operating system requires preparation and permission on school computers.

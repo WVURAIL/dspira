@@ -34,10 +34,16 @@ Download [DSPIRA software](https://github.com/WVURAIL/dspira-software/archive/re
 Install Python and Jupyter:
 
 ```bash
-sudo apt install ipython3 jupyter
+sudo apt install ipython3 jupyter python3-numpy python3-h5py python3-matplotlib python3-ephem
 ```
 
 What you do next depends on which sink you used.
+The current calibrated spectrometer saves two-column CSV files by default.
+Open those directly in a spreadsheet, or load them with `np.loadtxt(filename, delimiter=",")`.
+The HDF5 mapping commands below require raw, uncalibrated HDF5 spectra with frequency metadata and recorded pointing.
+The [polyphase spectrometer examples](https://github.com/WVURAIL/dspira-software/tree/main/examples/spectrometry) include HDF5 recording.
+Set their output folder, receiver settings, pointing, and notes before collecting data.
+Do not feed already calibrated CSV spectra into the HDF5 calibration procedure.
 
 ### If you used the plain file sink
 
@@ -69,7 +75,8 @@ np.savetxt("reshapeddata.csv", np.transpose(spec), delimiter=',')
 ##############################################
 
 plot(spec[0])   # the first integration
-plot(spec[i])   # the i-th integration
+i = 0          # choose an integration from 0 to len(spec) - 1
+plot(spec[i])   # the selected integration
 ```
 
 ### If you used the `hdf5_sink` out-of-tree module
@@ -111,7 +118,7 @@ np.savetxt("reshapeddata.csv", np.transpose(spectrum), delimiter=',')
 
 fstart = f.attrs['freq_start']    # first channel, in Hz
 fstep = f.attrs['freq_step']      # channel width, in Hz
-flength = 4096                    # number of channels
+flength = spectrum.shape[1]      # number of channels recorded
 freq = np.arange(flength)*fstep + fstart
 rcParams['axes.formatter.useoffset'] = False
 plot(freq, 10.0*np.log10(spectrum.mean(axis=0)))   # take the log here, for a dB display
@@ -224,7 +231,7 @@ us. **Does it matter what units the frequency is in?**
 
 ### From velocity relative to us, to velocity around the galaxy
 
-What we want is how fast hydrogen orbits the galactic centre, as a function of
+What we want is how fast hydrogen orbits the galactic center, as a function of
 how far out it is. What we measure is its speed along one line of sight.
 
 Use 200 km/s for the Sun's orbital speed; estimates range from 180 to 250 km/s. Use an orbital radius of 8 kpc, with roughly 1 kpc uncertainty. (The Earth's 30 km/s around the Sun
@@ -239,7 +246,7 @@ The radius that corresponds to is
 
 $$ R_l = R_e \sin(l) $$
 
-with \\(R_e\\) the Sun's distance from the centre and \\(l\\) the galactic
+with \\(R_e\\) the Sun's distance from the center and \\(l\\) the galactic
 longitude — valid, again, only for \\(|l| < 90°\\). The rotation speed there is
 
 $$ V_l = | V_{los} | + V_e \sin(|l|) $$
@@ -250,7 +257,7 @@ orbital speed.
 Plot \\(V_l\\) against \\(R_l\\) and you have a rotation curve for the Milky Way.
 
 **What did you expect it to look like? Compare it against what a galaxy with all
-its mass in the visible disc would give you.**
+its mass in the visible disk would give you.**
 
 ---
 

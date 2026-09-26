@@ -45,7 +45,7 @@ python3 -c "from gnuradio import dspira; print(dspira.__file__)"
 ```
 
 Restart GNU Radio Companion. The installed processing blocks appear in its **DSPIRA** category.
-Open `dspira-software/applications/spectrometry/calibrated-spectrometer.grc`.
+From your `dspira-software` folder, open `applications/spectrometry/calibrated-spectrometer.grc`.
 Configure [receiver settings]({{ '/Spectrometer_sourceblock_settings' | relative_url }}) and [recording paths]({{ '/HornOperation_runningSpectrometer' | relative_url }}).
 
 ## Update an existing installation

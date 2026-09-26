@@ -128,7 +128,7 @@ raw trace. Its autocorrelation still reveals the period. The noise is uncorrelat
 ![Autocorrelation recovering a period from noise]({{ site.baseurl }}/images/interferometry/autocorrelation.png)
 
 This is not an analogy for what the spectrometer does — it is what the
-spectrometer does. [`spectrometer_w_cal.grc`]({{ site.baseurl }}/HornOperation_runningSpectrometer) displays a power spectrum. This is the Fourier transform of the horn voltage's autocorrelation. The Wiener–Khinchin theorem establishes this equivalence. It explains how the hydrogen line emerges from a much larger noise floor.
+spectrometer does. [`calibrated-spectrometer.grc`]({{ site.baseurl }}/HornOperation_runningSpectrometer) displays a power spectrum. This is the Fourier transform of the horn voltage's autocorrelation. The Wiener–Khinchin theorem establishes this equivalence. It explains how the hydrogen line emerges from a much larger noise floor.
 
 [↑ Go to the Top of the Page](#)
 
@@ -152,8 +152,7 @@ need:
 | 1 arcsecond | 53 km |
 | 15 milliarcseconds | 3,523 km |
 
-The last row is the resolution the VLA reaches routinely. A single dish that
-did the same would be a quarter of the diameter of the Earth. A dish of that size is impractical, regardless of budget.
+The last row illustrates the enormous aperture needed at 21 cm. That diameter is more than one quarter of Earth's diameter. A dish of that size is impractical, regardless of budget.
 
 The way out is to stop trying to fill the aperture and instead sample it at a
 few points. Two horns separated by \\( b \\) resolve detail on the scale \\( \lambda / b \\). They match that large dish's resolution, but not its collecting area.
@@ -177,7 +176,7 @@ $$R_c= \langle V_1 V_2 \rangle_t$$
 
 $$R_c =\frac{V_0^2}{2}\cos{\omega \tau}=\frac{V_0^2}{2}\cos \Delta \Phi$$
 
-where \\( \tau \\) is the time delay in the signal path. A source at angle \\( \theta \\) from the zenith reaches one antenna first. The geometric delay is \\( \tau = b\cos\theta / c \\). As the Earth turns, that
+where \\( \tau \\) is the time delay in the signal path. A source at angle \\( \theta \\) from the baseline reaches one antenna first. The geometric delay is \\( \tau = b\cos\theta / c \\). As the Earth turns, that
 delay sweeps, and the output oscillates — the **fringe**.
 
 This is a cosine correlator. Add a phase delay of \\( \pi/2 \\) to one signal path to make a sine correlator:
@@ -187,7 +186,7 @@ $$V_1=V_{01} \cos (\omega (t + \tau))  \quad V_2 = V_{02} \cos (\omega t + \frac
 $$
 \begin{align}
 R&=\langle V_{01} V_{02} \cos{(\omega t + \frac{\pi}{2})} \cos{[\omega (t + \tau) ]} \rangle_t\\
-R&= V_0^2 \frac{\langle \cos(2 \omega t + \tau + \frac{\pi}{2})+\cos (\omega \tau - \frac{\pi}{2})\rangle_t}{2}
+R&= V_0^2 \frac{\langle \cos(2 \omega t + \omega \tau + \frac{\pi}{2})+\cos (\omega \tau - \frac{\pi}{2})\rangle_t}{2}
 \end{align}
 $$
 

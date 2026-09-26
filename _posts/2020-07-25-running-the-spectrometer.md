@@ -2,8 +2,8 @@
 permalink: /HornOperation_runningSpectrometer
 layout: post
 date: 2020-07-25
-title: Running the spectrometer_w_cal.grc Program
-summary:  Instructions on how to use the spectrometer_w_cal.grc program in GNU Radio
+title: Running the Calibrated Spectrometer
+summary:  Instructions on how to use the calibrated-spectrometer.grc program in GNU Radio
 tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Observing']
 order: 5
@@ -12,7 +12,7 @@ equipment: "An assembled telescope, powered amplifier, configured receiver, and 
 preparation: "Complete telescope and software setup. Check receiver settings, output paths, and computer power settings before starting an observation."
 ---
 
-Current software uses `applications/spectrometry/calibrated-spectrometer.grc`. Older videos and bootable images use the earlier filename shown in this lesson.
+Current software uses `applications/spectrometry/calibrated-spectrometer.grc`. Older videos and bootable images call it `spectrometer_w_cal.grc`.
 
 The video shown [here](https://youtu.be/50B2Uv-SoDY) explains the features in this program.
 
@@ -76,11 +76,11 @@ The video [here](https://youtu.be/Oo28QCEZe_g) explains how set up the horn and 
    * Data File Format:
       - The .csv format is a .txt data file that can be opened in any spreadsheet.
 
-      - When opened in a spreadsheet, the data will appear in 2 columns. The first columns contains the frequency, in MHz, from 1414 MHz to 1424 MHz. The second column is the signal.
+      - When opened in a spreadsheet, the data will appear in 2 columns. The first column contains frequency in MHz. The recorded band depends on your receiver settings. The second column is the signal.
 
       - A graph of Signal vs. Frequency can easily be created after opening a file in a spreadsheet.
 
       - The file name has a format that contains the date, time, location, azimuth, and elevation, with “_spectrum” at the end. The location, azimuth, and elevation are recorded with the values in the corresponding fields on the spectrometer interface screen.
 
-      - For example, `2020-07-15_Morgantown_200_30_spectrum.csv` identifies data collected in Morgantown on July 15, 2020. The telescope pointed at azimuth 200 degrees and elevation 30 degrees.
+      - For example, `2020-07-15_12.30.00.000001_Morgantown_200_30_spectrum.csv` identifies data collected in Morgantown on July 15, 2020. The telescope pointed at azimuth 200 degrees and elevation 30 degrees.
     

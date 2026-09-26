@@ -26,7 +26,7 @@ The previous labs and exercises demonstrated Fourier analysis as a central signa
     - [5.3. Fourier Analysis in Radio Astronomy: A Spectrometer](#53-fourier-analysis-in-radio-astronomy-a-spectrometer)
     - [5.4. The Spectrometer's purpose](#54-the-spectrometers-purpose)
     - [5.5. The Window Field in the GNU Radio FFT block](#55-the-window-field-in-the-gnu-radio-fft-block)
-    - [5.6. Spectral Leakage and Polyphase Filter Bank (PFB)](#56-spectral-leakage--polyphase-filter-bank-pfb)
+    - [5.6. Spectral Leakage and Polyphase Filter Bank (PFB)](#56-spectral-leakage-and-polyphase-filter-bank-pfb)
     - [5.7. Final Upgrade: PFB Spectrometer](#57-final-upgrade-pfb-spectrometer)
     - [5.8. Saving Data](#58-saving-data)
                     - [Image Credits](#image-credits)
@@ -57,7 +57,7 @@ multiplied signals.  With just the single incoming tone, demonstrate that you ca
 The Discrete Fourier Transform for N samples is given by:
 
 $$
-X[k] = \sum_{n=0}^{N-1} x[n] \cdot e^\frac{-2\pi kn}{N}
+X[k] = \sum_{n=0}^{N-1} x[n] \cdot e^{-2\pi i kn/N}
 $$
 
 Direct DFT evaluation requires $$ N^2 $$ complex multiplications and N(N-1) complex additions. Eliminating trivial operations, such as multiplication by 1, saves $$ O(N) $$ operations. Multiplications are particularly expensive computations. 
@@ -73,7 +73,7 @@ Fast Fourier transform algorithms drastically reduce the computational complexit
 The DFT implemented through a Cooley-Tukey Decimation in frequency FFT algorithm has the flowgraph shown below.
 ![8pfft]({{ site.baseurl }}/images/radio-astronomy-dsp/eight-point-fft.png)
 
-Build this in GNU Radio using constant multipliers and adders. Use \\(W^{i} = e^{\frac{-2\pi k i}{8}}\\). Are the outputs the valid frequency-domain results?
+Build this in GNU Radio using constant multipliers and adders. Use \\(W_8^k = e^{-2\pi i k/8}\\). Are the outputs the valid frequency-domain results?
 
 [↑ Go to the Top of the Page](#)
 
@@ -94,10 +94,10 @@ Use GNU Radio to create the signal processing chain to achieve this. Use an osmo
 A spectrometer records and measures a signal's spectral content. That signal may come from an astronomical radio source. Specifically, a spectrometer measures the power spectral density (PSD, measured in units of $$W\,\mathrm{Hz}^{-1}$$) of a signal. Spectral analysis reveals properties of radio sources and intervening material, such as galactic neutral hydrogen. The Power Spectral Density is given by the Wiener-Kinchin theorem for wide sense stationary signals as: 
 
 $$
-S_{xx}(\nu) = \int^{\infty}_{^-\infty}r_{xx}(\tau) e^{-2\pi i\nu\tau}d\tau
+S_{xx}(\nu) = \int_{-\infty}^{\infty}r_{xx}(\tau) e^{-2\pi i\nu\tau}d\tau
 $$
 $$
-r_{xx}= E[x(t)(x(t-\tau)]
+r_{xx}(\tau)= E[x(t)x^*(t-\tau)]
 $$
 
 and in the fourier domain
@@ -138,7 +138,7 @@ Change the FFT block's window field in your spectrometer flowgraph. Observe how 
 [↑ Go to the Top of the Page](#)
 
 ## 5.6. Spectral Leakage and Polyphase Filter Bank (PFB)
-{: #56-spectral-leakage--polyphase-filter-bank-pfb}
+<span id="56-spectral-leakage--polyphase-filter-bank-pfb"></span>
 
 Despite the appropriate windowing, spectral leakage persists, moreover there is something called a scalloping loss. Scalloping loss occurs between frequency-bin centers because each bin's frequency response is not flat. 
 

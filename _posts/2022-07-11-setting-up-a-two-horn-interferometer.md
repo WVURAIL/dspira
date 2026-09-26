@@ -78,7 +78,7 @@ Set up and run a two-horn interferometer with a Lime SDR and GNU Radio. The GNU 
          
 6. <B>For Adding Interferometry:</B>
 
-   - Run the spectrometer program Interferometer_SimpleSpectrometer_Adding.grc
+   - Run the spectrometer program limesdr-adding.grc
 
    - Plug the Lime SDR into a USB port.
 
@@ -88,9 +88,9 @@ Set up and run a two-horn interferometer with a Lime SDR and GNU Radio. The GNU 
 
      - Run GNU Radio: $ gnuradio-companion
 
-     - Open the Variable boxes described below in Interferometer_SimpleSpectrometer_Adding.grc. They are at the upper left of the GNU Radio canvas:
+     - Open the Variable boxes described below in limesdr-adding.grc. They are at the upper left of the GNU Radio canvas:
 
-       - Open the "prefix_hornA" Variable block (double-click it). For "Value" type the pathname to the subfolder that will be used to collect the spectrum of Horn A. This must be in quotes. In this example, horn A data goes into "magnitude_july21". That folder is inside "sun_july21", which is inside "interferometer_data". This will be written in the prefix-hornA Variable box as: "/home/john/dspira_2021/interferometer_data/sun_july21/hornA_july21/"
+       - Open the "prefix_hornA" Variable block (double-click it). For "Value", enter the quoted path to the folder for Horn A spectra. In this example, it is "hornA_july21". That folder is inside "sun_july21", which is inside "interferometer_data". This will be written in the prefix-hornA Variable box as: "/home/john/dspira_2021/interferometer_data/sun_july21/hornA_july21/"
 
        - Set up similar file pathnames in the Variable blocks "prefix_hornB" and "prefix_adding".
 
@@ -102,7 +102,7 @@ Set up and run a two-horn interferometer with a Lime SDR and GNU Radio. The GNU 
 
 7. <B>For Multiplying Interferometry:</B>
 
-   - Run the spectrometer program Interferometer_SimpleSpectrometer_Multiplying.grc
+   - Run the spectrometer program limesdr-multiplying.grc
 
    - Plug the Lime SDR into a USB port.
 
@@ -112,9 +112,9 @@ Set up and run a two-horn interferometer with a Lime SDR and GNU Radio. The GNU 
 
      - Run GNU Radio: $ gnuradio-companion
 
-     - Open the Variable boxes described below in Interferometer_SimpleSpectrometer_Multiplying.grc. They are at the upper left of the GNU Radio canvas:
+     - Open the Variable boxes described below in limesdr-multiplying.grc. They are at the upper left of the GNU Radio canvas:
 
-       - Open the "prefix_mag" Variable block (double-click it). For "Value" type the pathname to the subfolder that will be used to collect the spectrum of Horn A. This must be in quotes. In this example, interference magnitude data goes into "magnitude_july21". That folder is inside "sun_july21", which is inside "interferometer_data". This will be written in the prefix-mag Variable box as: "/home/john/dspira_2021/interferometer_data/sun_july21/magnitude_july21/"
+       - Open the "prefix_mag" Variable block (double-click it). For "Value", enter the quoted path to the folder for interference magnitude. In this example, the data goes into "magnitude_july21". That folder is inside "sun_july21", which is inside "interferometer_data". This will be written in the prefix-mag Variable box as: "/home/john/dspira_2021/interferometer_data/sun_july21/magnitude_july21/"
 
        - Set up similar file pathnames in the Variable blocks "prefix_phase", "prefix_hornA", and "prefix_hornB". 
 
