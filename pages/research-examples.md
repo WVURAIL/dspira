@@ -23,20 +23,20 @@ Full simulations can require substantial memory. Their algorithms and scientific
 
 ## Reference datasets
 
-These original binary files have no headers. Their names reflect historical labels, which were not independently verified.
+These original binary files have no headers. Their original parameter labels were not independently verified. Download names now identify each processing stage.
 Read the [format and provenance notes](https://github.com/WVURAIL/radio-research-software/tree/main/examples/transients#reference-data) before interpreting them.
 
-- [Pulse samples (BIN)](https://raw.githubusercontent.com/WVURAIL/radio-research-software/main/examples/transients/data/pulse_sim_10mhz_int16_5ms_period_60dm_1400MHz_center_150ms_long.bin)
-- [Signal-to-noise output (BIN)](https://raw.githubusercontent.com/WVURAIL/radio-research-software/main/examples/transients/data/pulse_sim_10mhz_int16_5ms_period_60dm_1400MHz_center_150ms_long_SNR.bin)
-- [Correlation output (BIN)](https://raw.githubusercontent.com/WVURAIL/radio-research-software/main/examples/transients/data/pulse_sim_10mhz_int16_5ms_period_60dm_1400MHz_center_150ms_long_corr.bin)
-- [Dispersion trials (BIN)](https://raw.githubusercontent.com/WVURAIL/radio-research-software/main/examples/transients/data/pulse_sim_10mhz_int16_5ms_period_60dm_1400MHz_center_150ms_long_dispersed.bin)
-- [Integrated spectra (BIN)](https://raw.githubusercontent.com/WVURAIL/radio-research-software/main/examples/transients/data/pulse_sim_10mhz_int16_5ms_period_60dm_1400MHz_center_150ms_long_integrated_FFT.bin)
-- [Noise samples (BIN)](https://raw.githubusercontent.com/WVURAIL/radio-research-software/main/examples/transients/data/pulse_sim_10mhz_int16_5ms_period_60dm_1400MHz_center_150ms_long_noise.bin)
+- [Pulse samples (BIN)](https://raw.githubusercontent.com/WVURAIL/radio-research-software/main/examples/transients/data/pulse-simulation-2019/signal-int16.bin)
+- [Signal-to-noise output (BIN)](https://raw.githubusercontent.com/WVURAIL/radio-research-software/main/examples/transients/data/pulse-simulation-2019/snr.bin)
+- [Correlation output (BIN)](https://raw.githubusercontent.com/WVURAIL/radio-research-software/main/examples/transients/data/pulse-simulation-2019/correlation.bin)
+- [Dispersion trials (BIN)](https://raw.githubusercontent.com/WVURAIL/radio-research-software/main/examples/transients/data/pulse-simulation-2019/dispersed.bin)
+- [Integrated spectra (BIN)](https://raw.githubusercontent.com/WVURAIL/radio-research-software/main/examples/transients/data/pulse-simulation-2019/integrated-fft.bin)
+- [Noise samples (BIN)](https://raw.githubusercontent.com/WVURAIL/radio-research-software/main/examples/transients/data/pulse-simulation-2019/noise-int16.bin)
 
 ## Design references
 
-- [Full detection flowgraph (GRC)](https://raw.githubusercontent.com/WVURAIL/radio-research-software/main/examples/transients/dual-stream-detection.grc)
-- [Full detection diagram (PNG)](https://raw.githubusercontent.com/WVURAIL/radio-research-software/main/examples/transients/dual-stream-detection.grc.png)
+- [Full detection flowgraph (GRC)](https://raw.githubusercontent.com/WVURAIL/radio-research-software/main/examples/transients/bench/dual-stream-detection.grc)
+- [Full detection diagram (PNG)](https://raw.githubusercontent.com/WVURAIL/radio-research-software/main/docs/images/transients/bench/dual-stream-detection.png)
 - [Research notes and limitations](https://github.com/WVURAIL/radio-research-software/tree/main/examples/transients)
 
 The flowgraph references retired GNU Radio 3.7 blocks and needs porting before use.

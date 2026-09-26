@@ -3217,7 +3217,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -3231,7 +3231,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -3249,7 +3249,7 @@
           "path": "LICENSE"
         },
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "LICENSE"
         }
       ]
@@ -3263,7 +3263,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -3277,7 +3277,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -3305,7 +3305,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -3319,7 +3319,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -3333,7 +3333,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -3347,7 +3347,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -3361,7 +3361,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -3375,7 +3375,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -3389,7 +3389,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -3403,7 +3403,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -3417,7 +3417,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -3431,7 +3431,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -3445,7 +3445,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -3459,7 +3459,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -3473,7 +3473,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -3487,7 +3487,7 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "cmake/cmake_uninstall.cmake.in"
         }
       ]
@@ -3501,7 +3501,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -3515,7 +3515,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -3529,7 +3529,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -3543,7 +3543,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -3557,7 +3557,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -3571,7 +3571,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -3585,7 +3585,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -3599,7 +3599,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -3613,7 +3613,7 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "docs/doxygen/doxyxml/generated/__init__.py"
         }
       ]
@@ -3627,7 +3627,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -3641,7 +3641,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -3655,7 +3655,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -3669,7 +3669,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -3683,7 +3683,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -3697,7 +3697,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -3711,7 +3711,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -3725,7 +3725,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -3739,7 +3739,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -3753,7 +3753,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -3781,7 +3781,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -3795,7 +3795,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -3809,7 +3809,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -3823,7 +3823,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -3837,7 +3837,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -3851,7 +3851,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -3865,7 +3865,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -3879,7 +3879,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -3893,7 +3893,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -3907,7 +3907,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -3949,7 +3949,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -3963,7 +3963,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -4159,7 +4159,7 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "cmake/cmake_uninstall.cmake.in"
         }
       ]
@@ -4285,7 +4285,7 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "docs/doxygen/doxyxml/generated/__init__.py"
         }
       ]
@@ -4705,7 +4705,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -4719,7 +4719,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -4733,7 +4733,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -4747,7 +4747,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -4761,7 +4761,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -4775,7 +4775,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -4789,7 +4789,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -4803,7 +4803,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -4817,7 +4817,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -4831,7 +4831,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -4845,7 +4845,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -4859,7 +4859,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -4873,7 +4873,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -4887,7 +4887,7 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "cmake/cmake_uninstall.cmake.in"
         }
       ]
@@ -4901,7 +4901,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -4915,7 +4915,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -4929,7 +4929,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -4943,7 +4943,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -4957,7 +4957,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -4971,7 +4971,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -4985,7 +4985,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -4999,7 +4999,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -5013,7 +5013,7 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "docs/doxygen/doxyxml/generated/__init__.py"
         }
       ]
@@ -5027,7 +5027,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -5041,7 +5041,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -5055,7 +5055,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -5069,7 +5069,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -5083,7 +5083,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -5097,7 +5097,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -5111,7 +5111,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -5125,7 +5125,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -5139,7 +5139,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -5153,7 +5153,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -5181,7 +5181,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -5195,7 +5195,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -5209,7 +5209,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -5223,7 +5223,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -5237,7 +5237,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -5251,7 +5251,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -5265,7 +5265,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -5279,7 +5279,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -5293,7 +5293,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -5307,7 +5307,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -5349,7 +5349,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -5363,7 +5363,7 @@
       "reason": "Retired GNU Radio 3.7 build/SWIG/Doxygen scaffolding, template QA, or superseded project metadata. No additional maintained application source here.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -5377,7 +5377,7 @@
       "reason": "Former repository scaffolding or metadata; authorship, research notes, limitations, and selected source material are retained in the current examples.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -5391,7 +5391,7 @@
       "reason": "Original file moved unchanged into its active project.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/CONTRIBUTORS.md"
         }
       ]
@@ -5405,7 +5405,7 @@
       "reason": "Former repository scaffolding or metadata; authorship, research notes, limitations, and selected source material are retained in the current examples.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -5419,7 +5419,7 @@
       "reason": "Original file moved unchanged into its active project.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/LICENSE.txt"
         }
       ]
@@ -5433,7 +5433,7 @@
       "reason": "Former repository scaffolding or metadata; authorship, research notes, limitations, and selected source material are retained in the current examples.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -5447,7 +5447,7 @@
       "reason": "Original file moved unchanged into its active project.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/SOURCE-NOTICE.txt"
         }
       ]
@@ -5461,7 +5461,7 @@
       "reason": "Former repository scaffolding or metadata; authorship, research notes, limitations, and selected source material are retained in the current examples.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -5475,7 +5475,7 @@
       "reason": "Former repository scaffolding or metadata; authorship, research notes, limitations, and selected source material are retained in the current examples.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -5489,7 +5489,7 @@
       "reason": "Former repository scaffolding or metadata; authorship, research notes, limitations, and selected source material are retained in the current examples.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -5503,8 +5503,8 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "docs/transient_documentation/Dedispersed_pulsar_DM=100.png"
+          "repository": "radio-research-software",
+          "path": "docs/images/transients/simulations/dedispersed-pulsar-dm-100.png"
         }
       ]
     },
@@ -5517,8 +5517,8 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "docs/transient_documentation/Dedispersed_pulsar_DM=20.png"
+          "repository": "radio-research-software",
+          "path": "docs/images/transients/simulations/dedispersed-pulsar-dm-20.png"
         }
       ]
     },
@@ -5531,8 +5531,8 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "docs/transient_documentation/Dedispersed_pulsar_DM=200_noisy.png"
+          "repository": "radio-research-software",
+          "path": "docs/images/transients/simulations/dedispersed-pulsar-dm-200-noisy.png"
         }
       ]
     },
@@ -5545,8 +5545,8 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "docs/transient_documentation/Dedispersed_pulsar_DM=20_noisy.png"
+          "repository": "radio-research-software",
+          "path": "docs/images/transients/simulations/dedispersed-pulsar-dm-20-noisy.png"
         }
       ]
     },
@@ -5559,8 +5559,8 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "docs/transient_documentation/Dedispersed_pulsar_DM=400_noisy.png"
+          "repository": "radio-research-software",
+          "path": "docs/images/transients/simulations/dedispersed-pulsar-dm-400-noisy.png"
         }
       ]
     },
@@ -5573,8 +5573,8 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "docs/transient_documentation/Dedispersed_pulsar_DM=600.png"
+          "repository": "radio-research-software",
+          "path": "docs/images/transients/simulations/dedispersed-pulsar-dm-600.png"
         }
       ]
     },
@@ -5587,8 +5587,8 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "docs/transient_documentation/Dispersed_pulsar_DM=100.png"
+          "repository": "radio-research-software",
+          "path": "docs/images/transients/simulations/dispersed-pulsar-dm-100.png"
         }
       ]
     },
@@ -5601,8 +5601,8 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "docs/transient_documentation/Dispersed_pulsar_DM=20.png"
+          "repository": "radio-research-software",
+          "path": "docs/images/transients/simulations/dispersed-pulsar-dm-20.png"
         }
       ]
     },
@@ -5615,8 +5615,8 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "docs/transient_documentation/Dispersed_pulsar_DM=200_noisy.png"
+          "repository": "radio-research-software",
+          "path": "docs/images/transients/simulations/dispersed-pulsar-dm-200-noisy.png"
         }
       ]
     },
@@ -5629,8 +5629,8 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "docs/transient_documentation/Dispersed_pulsar_DM=20_noisy.png"
+          "repository": "radio-research-software",
+          "path": "docs/images/transients/simulations/dispersed-pulsar-dm-20-noisy.png"
         }
       ]
     },
@@ -5643,8 +5643,8 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "docs/transient_documentation/Dispersed_pulsar_DM=400_noisy.png"
+          "repository": "radio-research-software",
+          "path": "docs/images/transients/simulations/dispersed-pulsar-dm-400-noisy.png"
         }
       ]
     },
@@ -5657,8 +5657,8 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "docs/transient_documentation/Dispersed_pulsar_DM=600.png"
+          "repository": "radio-research-software",
+          "path": "docs/images/transients/simulations/dispersed-pulsar-dm-600.png"
         }
       ]
     },
@@ -5671,8 +5671,8 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "docs/transient_documentation/Noise_DM=200_noisy.png"
+          "repository": "radio-research-software",
+          "path": "docs/images/transients/simulations/noise-dm-200-noisy.png"
         }
       ]
     },
@@ -5685,8 +5685,8 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "docs/transient_documentation/Noise_DM=20_noisy.png"
+          "repository": "radio-research-software",
+          "path": "docs/images/transients/simulations/noise-dm-20-noisy.png"
         }
       ]
     },
@@ -5699,8 +5699,8 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "docs/transient_documentation/Noise_DM=400_noisy.png"
+          "repository": "radio-research-software",
+          "path": "docs/images/transients/simulations/noise-dm-400-noisy.png"
         }
       ]
     },
@@ -5713,8 +5713,8 @@
       "reason": "Image links updated to the existing shared-library plots.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "examples/transients/plot-notes.md"
+          "repository": "radio-research-software",
+          "path": "docs/transients/plot-notes.md"
         }
       ]
     },
@@ -5727,8 +5727,8 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "docs/transient_documentation/SNR_vs_DM_DM=200_noisy.png"
+          "repository": "radio-research-software",
+          "path": "docs/images/transients/simulations/snr-vs-dm-dm-200-noisy.png"
         }
       ]
     },
@@ -5741,8 +5741,8 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "docs/transient_documentation/SNR_vs_DM_DM=20_noisy.png"
+          "repository": "radio-research-software",
+          "path": "docs/images/transients/simulations/snr-vs-dm-dm-20-noisy.png"
         }
       ]
     },
@@ -5755,8 +5755,8 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "docs/transient_documentation/SNR_vs_DM_DM=400_noisy.png"
+          "repository": "radio-research-software",
+          "path": "docs/images/transients/simulations/snr-vs-dm-dm-400-noisy.png"
         }
       ]
     },
@@ -5769,8 +5769,8 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "docs/transient_documentation/despirsed_pulse_DM=20.png"
+          "repository": "radio-research-software",
+          "path": "docs/images/transients/simulations/dispersed-pulse-dm-20.png"
         }
       ]
     },
@@ -5783,8 +5783,8 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "docs/transient_documentation/despirsed_pulse_DM=200.png"
+          "repository": "radio-research-software",
+          "path": "docs/images/transients/simulations/dispersed-pulse-dm-200.png"
         }
       ]
     },
@@ -5797,8 +5797,8 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "docs/transient_documentation/despirsed_pulse_DM=400.png"
+          "repository": "radio-research-software",
+          "path": "docs/images/transients/simulations/dispersed-pulse-dm-400.png"
         }
       ]
     },
@@ -5811,8 +5811,8 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "docs/transient_documentation/despirsed_pulse_with_noise_DM=200.png"
+          "repository": "radio-research-software",
+          "path": "docs/images/transients/simulations/dispersed-pulse-with-noise-dm-200.png"
         }
       ]
     },
@@ -5825,8 +5825,8 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "docs/transient_documentation/despirsed_pulse_with_noise_DM=400.png"
+          "repository": "radio-research-software",
+          "path": "docs/images/transients/simulations/dispersed-pulse-with-noise-dm-400.png"
         }
       ]
     },
@@ -5839,8 +5839,8 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "docs/transient_documentation/dispersion_measure_vs_time_DM=100.png"
+          "repository": "radio-research-software",
+          "path": "docs/images/transients/simulations/dispersion-measure-vs-time-dm-100.png"
         }
       ]
     },
@@ -5853,8 +5853,8 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "docs/transient_documentation/dispersion_measure_vs_time_DM=20.png"
+          "repository": "radio-research-software",
+          "path": "docs/images/transients/simulations/dispersion-measure-vs-time-dm-20.png"
         }
       ]
     },
@@ -5867,8 +5867,8 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "docs/transient_documentation/dispersion_measure_vs_time_DM=200_noisy.png"
+          "repository": "radio-research-software",
+          "path": "docs/images/transients/simulations/dispersion-measure-vs-time-dm-200-noisy.png"
         }
       ]
     },
@@ -5881,8 +5881,8 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "docs/transient_documentation/dispersion_measure_vs_time_DM=20_noisy.png"
+          "repository": "radio-research-software",
+          "path": "docs/images/transients/simulations/dispersion-measure-vs-time-dm-20-noisy.png"
         }
       ]
     },
@@ -5895,8 +5895,8 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "docs/transient_documentation/dispersion_measure_vs_time_DM=400_noisy.png"
+          "repository": "radio-research-software",
+          "path": "docs/images/transients/simulations/dispersion-measure-vs-time-dm-400-noisy.png"
         }
       ]
     },
@@ -5909,8 +5909,8 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "docs/transient_documentation/dispersion_measure_vs_time_DM=600.png"
+          "repository": "radio-research-software",
+          "path": "docs/images/transients/simulations/dispersion-measure-vs-time-dm-600.png"
         }
       ]
     },
@@ -5923,7 +5923,7 @@
       "reason": "Former repository scaffolding or metadata; authorship, research notes, limitations, and selected source material are retained in the current examples.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -5937,7 +5937,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -5951,7 +5951,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -5965,7 +5965,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -5979,7 +5979,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -5993,7 +5993,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6007,7 +6007,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6021,7 +6021,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6035,7 +6035,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6049,7 +6049,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6063,7 +6063,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6077,7 +6077,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6091,7 +6091,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6105,7 +6105,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6119,7 +6119,7 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "cmake/cmake_uninstall.cmake.in"
         }
       ]
@@ -6133,7 +6133,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6147,7 +6147,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6161,7 +6161,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6175,7 +6175,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6189,7 +6189,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6203,7 +6203,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6217,7 +6217,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6231,7 +6231,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6245,7 +6245,7 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "docs/doxygen/doxyxml/generated/__init__.py"
         }
       ]
@@ -6259,7 +6259,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6273,7 +6273,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6287,7 +6287,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6301,7 +6301,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6315,7 +6315,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6329,7 +6329,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6343,7 +6343,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6357,7 +6357,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6371,7 +6371,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6385,7 +6385,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6399,7 +6399,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6413,7 +6413,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6427,7 +6427,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6441,7 +6441,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6455,7 +6455,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6469,7 +6469,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6483,7 +6483,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6497,7 +6497,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6511,7 +6511,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6525,7 +6525,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6539,7 +6539,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6553,7 +6553,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6567,7 +6567,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6581,7 +6581,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6595,7 +6595,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6609,7 +6609,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6623,7 +6623,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6637,7 +6637,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6651,7 +6651,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6665,7 +6665,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6679,7 +6679,7 @@
       "reason": "Retired GNU Radio 3.7 prototype/toolchain. Known issues include circular wrapping, unsafe peak boundaries, and incorrect flux conversion. Research methods remain documented; this is not a supported replacement for current blocks.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/README.md"
         }
       ]
@@ -6693,7 +6693,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -6707,7 +6707,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -6721,7 +6721,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -6735,7 +6735,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -6749,7 +6749,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -6763,7 +6763,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -6777,7 +6777,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -6791,7 +6791,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -6805,7 +6805,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -6819,7 +6819,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -6833,7 +6833,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -6847,7 +6847,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -6861,7 +6861,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -6875,7 +6875,7 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "cmake/cmake_uninstall.cmake.in"
         }
       ]
@@ -6889,7 +6889,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -6903,7 +6903,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -6917,7 +6917,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -6931,7 +6931,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -6945,7 +6945,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -6959,7 +6959,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -6973,7 +6973,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -6987,7 +6987,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -7001,7 +7001,7 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "docs/doxygen/doxyxml/generated/__init__.py"
         }
       ]
@@ -7015,7 +7015,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -7029,7 +7029,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -7043,7 +7043,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -7057,7 +7057,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -7071,7 +7071,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -7085,7 +7085,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -7099,7 +7099,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -7113,7 +7113,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -7127,7 +7127,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -7141,7 +7141,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -7155,7 +7155,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -7169,7 +7169,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -7183,7 +7183,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -7197,7 +7197,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -7211,7 +7211,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -7225,7 +7225,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -7239,7 +7239,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -7253,7 +7253,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -7267,7 +7267,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -7281,7 +7281,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -7295,7 +7295,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -7309,7 +7309,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -7323,7 +7323,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -7337,7 +7337,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -7351,7 +7351,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -7365,7 +7365,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -7379,7 +7379,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -7393,7 +7393,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -7407,7 +7407,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -7421,7 +7421,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -7435,7 +7435,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -7449,7 +7449,7 @@
       "reason": "GNU Radio tutorial/template module with placeholder types and template QA, not a complete astronomy component.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "README.md"
         }
       ]
@@ -7463,8 +7463,8 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "docs/transient_benchtesting/Benchtesting.grc"
+          "repository": "radio-research-software",
+          "path": "examples/transients/bench/pipeline-comparison.grc"
         }
       ]
     },
@@ -7477,8 +7477,8 @@
       "reason": "Original file moved unchanged into its active project.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "examples/transients/dual-stream-detection.grc"
+          "repository": "radio-research-software",
+          "path": "examples/transients/bench/dual-stream-detection.grc"
         }
       ]
     },
@@ -7491,8 +7491,8 @@
       "reason": "Original file moved unchanged into its active project.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "examples/transients/dual-stream-detection.grc.png"
+          "repository": "radio-research-software",
+          "path": "docs/images/transients/bench/dual-stream-detection.png"
         }
       ]
     },
@@ -7505,8 +7505,8 @@
       "reason": "Historical-context notice added; original research notes retained.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "examples/transients/bench-notes.md"
+          "repository": "radio-research-software",
+          "path": "docs/transients/bench-notes.md"
         }
       ]
     },
@@ -7519,8 +7519,8 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "docs/transient_benchtesting/Simulated_pulse _to_sink.png"
+          "repository": "radio-research-software",
+          "path": "docs/images/transients/bench/simulated-pulse-to-sink.png"
         }
       ]
     },
@@ -7533,8 +7533,8 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "docs/transient_benchtesting/Simulated_pulse _to_sink_flowgraph.png"
+          "repository": "radio-research-software",
+          "path": "docs/images/transients/bench/simulated-pulse-to-sink-flowgraph.png"
         }
       ]
     },
@@ -7547,8 +7547,8 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "docs/transient_benchtesting/Simulated_pulse_to_Spectrometer_to_dedisperser_to_sink_PFB_disabled.png"
+          "repository": "radio-research-software",
+          "path": "docs/images/transients/bench/simulated-pulse-to-spectrometer-to-dedisperser-to-sink-pfb-disabled.png"
         }
       ]
     },
@@ -7561,8 +7561,8 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "docs/transient_benchtesting/Simulated_pulse_to_Spectrometer_to_dedisperser_to_sink_PFB_enabled.png"
+          "repository": "radio-research-software",
+          "path": "docs/images/transients/bench/simulated-pulse-to-spectrometer-to-dedisperser-to-sink-pfb-enabled.png"
         }
       ]
     },
@@ -7575,8 +7575,8 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "docs/transient_benchtesting/Simulated_pulse_to_Spectrometer_to_dedisperser_to_sink_PFB_enabled_flowgraph.png"
+          "repository": "radio-research-software",
+          "path": "docs/images/transients/bench/simulated-pulse-to-spectrometer-to-dedisperser-to-sink-pfb-enabled-flowgraph.png"
         }
       ]
     },
@@ -7589,8 +7589,8 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "docs/transient_benchtesting/Simulated_pulse_to_Spectrometer_to_dedisperser_to_sink_flowgraph.png"
+          "repository": "radio-research-software",
+          "path": "docs/images/transients/bench/simulated-pulse-to-spectrometer-to-dedisperser-to-sink-flowgraph.png"
         }
       ]
     },
@@ -7603,8 +7603,8 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "docs/transient_benchtesting/Simulated_pulse_to_Spectrometer_to_depdispersor_to_detector_to_sink_PFB_disabled.png"
+          "repository": "radio-research-software",
+          "path": "docs/images/transients/bench/simulated-pulse-to-spectrometer-to-dedisperser-to-detector-to-sink-pfb-disabled.png"
         }
       ]
     },
@@ -7617,12 +7617,12 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "docs/transient_benchtesting/Simulated_pulse_to_Spectrometer_to_depdispersor_to_detector_to_sink_PFB_disabled_flowgraph.png"
+          "repository": "radio-research-software",
+          "path": "docs/images/transients/bench/simulated-pulse-to-spectrometer-to-dedisperser-to-detector-to-sink-pfb-enabled.png"
         },
         {
-          "repository": "gr-radio_astro",
-          "path": "docs/transient_benchtesting/Simulated_pulse_to_Spectrometer_to_depdispersor_to_detector_to_sink_PFB_enabled.png"
+          "repository": "radio-research-software",
+          "path": "docs/images/transients/bench/simulated-pulse-to-spectrometer-to-dedisperser-to-detector-to-sink-pfb-enabled.png"
         }
       ]
     },
@@ -7635,8 +7635,8 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "docs/transient_benchtesting/Simulated_pulse_to_Spectrometer_to_depdispersor_to_detector_to_sink_PFB_enabled_flowgraph.png"
+          "repository": "radio-research-software",
+          "path": "docs/images/transients/bench/simulated-pulse-to-spectrometer-to-dedisperser-to-detector-to-sink-pfb-enabled-flowgraph.png"
         }
       ]
     },
@@ -7649,8 +7649,8 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "docs/transient_benchtesting/Simulated_pulse_to_Spectrometer_to_sink_PFB_disabled.png"
+          "repository": "radio-research-software",
+          "path": "docs/images/transients/bench/simulated-pulse-to-spectrometer-to-sink-pfb-disabled.png"
         }
       ]
     },
@@ -7663,8 +7663,8 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "docs/transient_benchtesting/Simulated pulse_to_Spectrometer_to_sink_PFB_enabled.png"
+          "repository": "radio-research-software",
+          "path": "docs/images/transients/bench/simulated-pulse-to-spectrometer-to-sink-pfb-enabled.png"
         }
       ]
     },
@@ -7677,8 +7677,8 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "docs/transient_benchtesting/Simulated_pulse_to_Spectrometer_to_sink_flowgraph.png"
+          "repository": "radio-research-software",
+          "path": "docs/images/transients/bench/simulated-pulse-to-spectrometer-to-sink-flowgraph.png"
         }
       ]
     },
@@ -7691,8 +7691,8 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "docs/transient_benchtesting/bench testing trial and error.ipynb"
+          "repository": "radio-research-software",
+          "path": "examples/transients/bench/bench-development.ipynb"
         }
       ]
     },
@@ -7705,8 +7705,8 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "docs/transient_benchtesting/bench_testing.grc"
+          "repository": "radio-research-software",
+          "path": "examples/transients/bench/spectrometer-bench.grc"
         }
       ]
     },
@@ -7719,8 +7719,8 @@
       "reason": "Generated application output; the full editable detection flowgraph is retained.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "examples/transients/dual-stream-detection.grc"
+          "repository": "radio-research-software",
+          "path": "examples/transients/bench/dual-stream-detection.grc"
         }
       ]
     },
@@ -7733,7 +7733,7 @@
       "reason": "Autosaved intermediate notebooks; selected complementary notebooks are ordinary files in the shared-library examples.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients"
         }
       ]
@@ -7747,7 +7747,7 @@
       "reason": "Autosaved intermediate notebooks; selected complementary notebooks are ordinary files in the shared-library examples.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients"
         }
       ]
@@ -7761,7 +7761,7 @@
       "reason": "Autosaved intermediate notebooks; selected complementary notebooks are ordinary files in the shared-library examples.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients"
         }
       ]
@@ -7775,7 +7775,7 @@
       "reason": "Autosaved intermediate notebooks; selected complementary notebooks are ordinary files in the shared-library examples.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients"
         }
       ]
@@ -7789,7 +7789,7 @@
       "reason": "Earlier partial notebooks or rendered plots superseded by the three selected notebook variants and existing diagnostic figures.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients"
         }
       ]
@@ -7803,7 +7803,7 @@
       "reason": "Earlier partial notebooks or rendered plots superseded by the three selected notebook variants and existing diagnostic figures.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients"
         }
       ]
@@ -7817,7 +7817,7 @@
       "reason": "Earlier partial notebooks or rendered plots superseded by the three selected notebook variants and existing diagnostic figures.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients"
         }
       ]
@@ -7831,7 +7831,7 @@
       "reason": "Renamed; output paths made relative; linspace sample counts made integers; saved outputs cleared; setup and status cells added. Research algorithms unchanged.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/pulsar-search-development.ipynb"
         }
       ]
@@ -7845,7 +7845,7 @@
       "reason": "Renamed; output paths made relative; linspace sample counts made integers; saved outputs cleared; setup and status cells added. Research algorithms unchanged.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/pulsar-simulation.ipynb"
         }
       ]
@@ -7859,7 +7859,7 @@
       "reason": "Renamed; output paths made relative; linspace sample counts made integers; saved outputs cleared; setup and status cells added. Research algorithms unchanged.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients/pulsar-background-comparison.ipynb"
         }
       ]
@@ -7873,8 +7873,8 @@
       "reason": "Historical-context notice added; original research notes retained.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "examples/transients/simulation-notes.md"
+          "repository": "radio-research-software",
+          "path": "docs/transients/simulation-notes.md"
         }
       ]
     },
@@ -7887,7 +7887,7 @@
       "reason": "Earlier partial notebooks or rendered plots superseded by the three selected notebook variants and existing diagnostic figures.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients"
         }
       ]
@@ -7901,7 +7901,7 @@
       "reason": "Earlier partial notebooks or rendered plots superseded by the three selected notebook variants and existing diagnostic figures.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients"
         }
       ]
@@ -7915,7 +7915,7 @@
       "reason": "Earlier partial notebooks or rendered plots superseded by the three selected notebook variants and existing diagnostic figures.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients"
         }
       ]
@@ -7929,7 +7929,7 @@
       "reason": "Earlier partial notebooks or rendered plots superseded by the three selected notebook variants and existing diagnostic figures.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
+          "repository": "radio-research-software",
           "path": "examples/transients"
         }
       ]
@@ -7943,8 +7943,8 @@
       "reason": "Original file moved unchanged into its active project.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "examples/transients/data/pulse_sim_10mhz_int16_5ms_period_60dm_1400MHz_center_150ms_long.bin"
+          "repository": "radio-research-software",
+          "path": "examples/transients/data/pulse-simulation-2019/signal-int16.bin"
         }
       ]
     },
@@ -7957,8 +7957,8 @@
       "reason": "Original file moved unchanged into its active project.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "examples/transients/data/pulse_sim_10mhz_int16_5ms_period_60dm_1400MHz_center_150ms_long_SNR.bin"
+          "repository": "radio-research-software",
+          "path": "examples/transients/data/pulse-simulation-2019/snr.bin"
         }
       ]
     },
@@ -7971,8 +7971,8 @@
       "reason": "Original file moved unchanged into its active project.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "examples/transients/data/pulse_sim_10mhz_int16_5ms_period_60dm_1400MHz_center_150ms_long_corr.bin"
+          "repository": "radio-research-software",
+          "path": "examples/transients/data/pulse-simulation-2019/correlation.bin"
         }
       ]
     },
@@ -7985,8 +7985,8 @@
       "reason": "Original file moved unchanged into its active project.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "examples/transients/data/pulse_sim_10mhz_int16_5ms_period_60dm_1400MHz_center_150ms_long_dispersed.bin"
+          "repository": "radio-research-software",
+          "path": "examples/transients/data/pulse-simulation-2019/dispersed.bin"
         }
       ]
     },
@@ -7999,8 +7999,8 @@
       "reason": "Original file moved unchanged into its active project.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "examples/transients/data/pulse_sim_10mhz_int16_5ms_period_60dm_1400MHz_center_150ms_long_integrated_FFT.bin"
+          "repository": "radio-research-software",
+          "path": "examples/transients/data/pulse-simulation-2019/integrated-fft.bin"
         }
       ]
     },
@@ -8013,8 +8013,8 @@
       "reason": "Original file moved unchanged into its active project.",
       "destinations": [
         {
-          "repository": "gr-radio_astro",
-          "path": "examples/transients/data/pulse_sim_10mhz_int16_5ms_period_60dm_1400MHz_center_150ms_long_noise.bin"
+          "repository": "radio-research-software",
+          "path": "examples/transients/data/pulse-simulation-2019/noise-int16.bin"
         }
       ]
     }
