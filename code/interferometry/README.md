@@ -8,7 +8,7 @@ figures, and then applied to what a two-element interferometer measures.
 
 ```bash
 pip install numpy scipy matplotlib jupyter
-jupyter notebook Interferometry.ipynb
+jupyter notebook interferometry.ipynb
 ```
 
 Nothing else is needed — no GNU Radio, no telescope, no data files. It runs on

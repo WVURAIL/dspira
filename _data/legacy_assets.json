@@ -1,6 +1,6 @@
 {
   "source_revision": "08b58638e1c3b65e5512f0547b32cd48172afde3",
-  "description": "Former download addresses. Source files live with their lessons or owning projects; compatibility copies are generated during publication.",
+  "description": "Former download and image addresses. Compatibility copies are generated during publication from each resource's maintained source.",
   "removed": [
     {
       "path": "FilesUploaded/blankfile",
@@ -20,72 +20,72 @@
     {
       "legacy": "FilesUploaded/APPhysics_AstroLesson7_GalacticPlaneObservation2_2019.pdf",
       "original_sha256": "b446d159966397a670ce6ca5aa61f0c104260314c641028a8b2bec763634ca23",
-      "source": "assets/lessons/velocity-curve/galactic-plane-observation-2-2019.pdf"
+      "source": "assets/worksheets/velocity-curve/galactic-plane-observation-2-2019.pdf"
     },
     {
       "legacy": "FilesUploaded/AstronomyLectures/Astronomy_AllGalaxiesGreatAndSmall.pdf",
       "original_sha256": "f9b6ffb88206ddaa3136296c740d400d048128c9871bc9ec390e8d0434ccfada",
-      "source": "assets/teaching/astronomy-lectures/all-galaxies-great-and-small.pdf"
+      "source": "assets/lessons/lectures/astronomy/all-galaxies-great-and-small.pdf"
     },
     {
       "legacy": "FilesUploaded/AstronomyLectures/Astronomy_DarkMatter.pdf",
       "original_sha256": "7006a01dab939c7abe20d596279e51ed9bd90ec74f313afca87da3421781fbf9",
-      "source": "assets/teaching/astronomy-lectures/dark-matter.pdf"
+      "source": "assets/lessons/lectures/astronomy/dark-matter.pdf"
     },
     {
       "legacy": "FilesUploaded/AstronomyLectures/Astronomy_DiscoveryOfTheMilkyWay.pdf",
       "original_sha256": "7fd226c395b2abfacc2a3f6fc2706f79ec7f40d947a6611f3c44900ba2b2e4bb",
-      "source": "assets/teaching/astronomy-lectures/discovery-of-the-milky-way.pdf"
+      "source": "assets/lessons/lectures/astronomy/discovery-of-the-milky-way.pdf"
     },
     {
       "legacy": "FilesUploaded/AstronomyLectures/Astronomy_DopplerEffectAndTelescopes.pdf",
       "original_sha256": "4d1fd60abddbbc25ebf662fac9127f0ca8c1fa034377f176afd0aa84745fade1",
-      "source": "assets/teaching/astronomy-lectures/doppler-effect-and-telescopes.pdf"
+      "source": "assets/lessons/lectures/astronomy/doppler-effect-and-telescopes.pdf"
     },
     {
       "legacy": "FilesUploaded/AstronomyLectures/Astronomy_GalaxyInteractionsAndDarkMatter.pdf",
       "original_sha256": "3f79cecb57e2082d50219e73e6dec1a36047681805208eceacd28befff9a105e",
-      "source": "assets/teaching/astronomy-lectures/galaxy-interactions-and-dark-matter.pdf"
+      "source": "assets/lessons/lectures/astronomy/galaxy-interactions-and-dark-matter.pdf"
     },
     {
       "legacy": "FilesUploaded/AstronomyLectures/Astronomy_Gravity.pdf",
       "original_sha256": "3b15506db2688fd27df0a799b69ef18e7709d9922e9d79bb6ef83eca2f5bc7cb",
-      "source": "assets/teaching/astronomy-lectures/gravity.pdf"
+      "source": "assets/lessons/lectures/astronomy/gravity.pdf"
     },
     {
       "legacy": "FilesUploaded/AstronomyLectures/Astronomy_LightAndTelescopes.pdf",
       "original_sha256": "4e9e7791584bcfdf919b46759b3f7551ff1befec22f99e07e7f32169bcad9b4c",
-      "source": "assets/teaching/astronomy-lectures/light-and-telescopes.pdf"
+      "source": "assets/lessons/lectures/astronomy/light-and-telescopes.pdf"
     },
     {
       "legacy": "FilesUploaded/AstronomyLectures/Astronomy_MotionOfTheSky.pdf",
       "original_sha256": "c21b398c8b1167a42545b7d12237cc2a20ede21ee36cec60b7b624114e4fb160",
-      "source": "assets/teaching/astronomy-lectures/motion-of-the-sky.pdf"
+      "source": "assets/lessons/lectures/astronomy/motion-of-the-sky.pdf"
     },
     {
       "legacy": "FilesUploaded/AstronomyLectures/Astronomy_RotationCurves.pdf",
       "original_sha256": "f29e3d228bce19e09d18fe6e049624dc065f63e9ef72134538f9ef060a17705c",
-      "source": "assets/teaching/astronomy-lectures/rotation-curves.pdf"
+      "source": "assets/lessons/lectures/astronomy/rotation-curves.pdf"
     },
     {
       "legacy": "FilesUploaded/AstronomyLectures/Astronomy_Stars.pdf",
       "original_sha256": "85866445b7dae898a7083a3c454df29cf3801c23b7c490d6c085100924189f37",
-      "source": "assets/teaching/astronomy-lectures/stars.pdf"
+      "source": "assets/lessons/lectures/astronomy/stars.pdf"
     },
     {
       "legacy": "FilesUploaded/AstronomyLectures/Astronomy_StellarEvolution.pdf",
       "original_sha256": "a0307aa133597dd287e3258c700e15090b28f2a22f950666c7760c4d2a1e499a",
-      "source": "assets/teaching/astronomy-lectures/stellar-evolution.pdf"
+      "source": "assets/lessons/lectures/astronomy/stellar-evolution.pdf"
     },
     {
       "legacy": "FilesUploaded/AstronomyLectures/Astronomy_TimeAndPlanningObservations.pdf",
       "original_sha256": "ca1f06974109da05419c6873b0e5aa1c32f12d349d9d94763a01e63d0b7823de",
-      "source": "assets/teaching/astronomy-lectures/time-and-planning-observations.pdf"
+      "source": "assets/lessons/lectures/astronomy/time-and-planning-observations.pdf"
     },
     {
       "legacy": "FilesUploaded/AstronomyLectures/Astronomy_UnitsAndScales.pdf",
       "original_sha256": "6ded84da64b1d684ff88074d9be9012fa22579dea87b7c28f3e5ec44f1aac92c",
-      "source": "assets/teaching/astronomy-lectures/units-and-scales.pdf"
+      "source": "assets/lessons/lectures/astronomy/units-and-scales.pdf"
     },
     {
       "legacy": "FilesUploaded/BuildingSimpleSpectrometer_Explained.pdf",
@@ -105,72 +105,72 @@
     {
       "legacy": "FilesUploaded/EM_spectrum.jpg",
       "original_sha256": "9a03f9144a9b4bcb010675ba61dee38ca4d96e49be738eb0a84c2187eb5231dc",
-      "source": "assets/lessons/electromagnetic-spectrum/spectrum.jpg"
+      "source": "images/electromagnetic-spectrum/spectrum.jpg"
     },
     {
       "legacy": "FilesUploaded/EM_spectrum_Worksheet.jpg",
       "original_sha256": "fbd3da25af187b195f83e02d45971a3bbd7f3ee80eacc7ec7d946c5ff189aa17",
-      "source": "assets/lessons/electromagnetic-spectrum/worksheet.jpg"
+      "source": "assets/worksheets/electromagnetic-spectrum/worksheet.jpg"
     },
     {
       "legacy": "FilesUploaded/EM_spectrum_worksheet_key.jpg",
       "original_sha256": "b6de12a0e4a22c15acbf39a9bc695dfd08473d67ede78e44b1efb62d610d3dd7",
-      "source": "assets/lessons/electromagnetic-spectrum/worksheet-key.jpg"
+      "source": "assets/worksheets/electromagnetic-spectrum/answer-key.jpg"
     },
     {
       "legacy": "FilesUploaded/FourierTransform_Activity.pdf",
       "original_sha256": "70b3ca33eda681f60efc246750494d7560e62b3816778490686d35d027a88ff6",
-      "source": "assets/lessons/fourier-activity/worksheet.pdf"
+      "source": "assets/worksheets/fourier-series/worksheet.pdf"
     },
     {
       "legacy": "FilesUploaded/Gnuradio_Lesson1_simpleWaveform.docx",
       "original_sha256": "09161b894f60b6fe42569968086ace3e1c20b2da7f8a3429fa79f09409b12c05",
-      "source": "assets/lessons/simple-spectrometer/01-simple-waveform.docx"
+      "source": "assets/worksheets/simple-spectrometer/01-simple-waveform.docx"
     },
     {
       "legacy": "FilesUploaded/Gnuradio_Lesson1_simpleWaveform.pdf",
       "original_sha256": "de7d1d3ae910f7e857c99350d36b7a4836bcbca784e05b6a402633a869e8efbc",
-      "source": "assets/lessons/simple-spectrometer/01-simple-waveform.pdf"
+      "source": "assets/worksheets/simple-spectrometer/01-simple-waveform.pdf"
     },
     {
       "legacy": "FilesUploaded/Gnuradio_Lesson2_MultipleSources.docx",
       "original_sha256": "bca04af2ee85fe9de0aab5bc2507305541ccb3a1354de729e04c4fc15522fb9d",
-      "source": "assets/lessons/simple-spectrometer/02-multiple-sources.docx"
+      "source": "assets/worksheets/simple-spectrometer/02-multiple-sources.docx"
     },
     {
       "legacy": "FilesUploaded/Gnuradio_Lesson2_MultipleSources.pdf",
       "original_sha256": "c437763412bf7e2ca986b5f6646e3e35ffce73df189f4cef48dfdf0780f3ae2c",
-      "source": "assets/lessons/simple-spectrometer/02-multiple-sources.pdf"
+      "source": "assets/worksheets/simple-spectrometer/02-multiple-sources.pdf"
     },
     {
       "legacy": "FilesUploaded/Gnuradio_Lesson3_FourierSeries.docx",
       "original_sha256": "8eca5647018ba9d191f04ec729d0979a9a9483027ef8336dcfeb41f90053dd90",
-      "source": "assets/lessons/simple-spectrometer/03-fourier-series.docx"
+      "source": "assets/worksheets/simple-spectrometer/03-fourier-series.docx"
     },
     {
       "legacy": "FilesUploaded/Gnuradio_Lesson3_FourierSeries.pdf",
       "original_sha256": "a4622d745c9bcb5730ac8e2ca28d15a63ecaa7f6b03cce2a54619226becf409b",
-      "source": "assets/lessons/simple-spectrometer/03-fourier-series.pdf"
+      "source": "assets/worksheets/simple-spectrometer/03-fourier-series.pdf"
     },
     {
       "legacy": "FilesUploaded/Gnuradio_Lesson4_FFT.docx",
       "original_sha256": "f4a1ffbb4133f66057089f50e29568b87a2ad699e1017f847907aabc35935658",
-      "source": "assets/lessons/simple-spectrometer/04-fft.docx"
+      "source": "assets/worksheets/simple-spectrometer/04-fft.docx"
     },
     {
       "legacy": "FilesUploaded/Gnuradio_Lesson4_FFT.pdf",
       "original_sha256": "7e25eac1908781a5c2e710e9d361a0b93b7ecc998ec8cff73de6b4a432461236",
-      "source": "assets/lessons/simple-spectrometer/04-fft.pdf"
+      "source": "assets/worksheets/simple-spectrometer/04-fft.pdf"
     },
     {
       "legacy": "FilesUploaded/Gnuradio_Lesson5_Filters.docx",
       "original_sha256": "1ed0f22a9c8df27f6663b8ab5a19fde677993f7a253ec76910b4333e48db08c4",
-      "source": "assets/lessons/simple-spectrometer/05-filters.docx"
+      "source": "assets/worksheets/simple-spectrometer/05-filters.docx"
     },
     {
       "legacy": "FilesUploaded/Gnuradio_Lesson5_Filters.pdf",
       "original_sha256": "2306507081f20d97b1569b3ef887d3cb68ec035327535998f865e8caa30d4aa4",
-      "source": "assets/lessons/simple-spectrometer/05-filters.pdf"
+      "source": "assets/worksheets/simple-spectrometer/05-filters.pdf"
     },
     {
       "legacy": "FilesUploaded/Horn&Can_Assembly_2021.pdf",
@@ -190,7 +190,7 @@
     {
       "legacy": "FilesUploaded/Interferometer_electrical_schematic.png",
       "original_sha256": "fa4c6c2d90ae7a800def4bee601a7b0a2711c2fc82fcac547aa05c6c5ca725ff",
-      "source": "assets/lessons/two-horn-interferometer/electrical-schematic.png"
+      "source": "images/interferometry/electrical-schematic.png"
     },
     {
       "legacy": "FilesUploaded/LNA_OrderingParts_Info_3.pdf",
@@ -247,32 +247,32 @@
     {
       "legacy": "FilesUploaded/VelocityCurve_E&MSpectrum.pdf",
       "original_sha256": "586056806e3a99b023dc3611a61b63b4f898ade519f89e0f0ce87ee1918fcd07",
-      "source": "assets/lessons/velocity-curve/electromagnetic-spectrum.pdf"
+      "source": "assets/worksheets/velocity-curve/electromagnetic-spectrum.pdf"
     },
     {
       "legacy": "FilesUploaded/VelocityCurve_GalacticPlaneObservation1_2018.pdf",
       "original_sha256": "f4d6574f9f32b1e44444028ca833af35003e99e3edc003e5ae84554b23ccb9b9",
-      "source": "assets/lessons/velocity-curve/galactic-plane-observation-1-2018.pdf"
+      "source": "assets/worksheets/velocity-curve/galactic-plane-observation-1-2018.pdf"
     },
     {
       "legacy": "FilesUploaded/VelocityCurve_GalacticPlaneObservation1_Conclusions_2018.pdf",
       "original_sha256": "c447bef0bc294bf509a52b955c5408a47db3e1669c5efac6fbd463fbc7bf7411",
-      "source": "assets/lessons/velocity-curve/galactic-plane-observation-1-conclusions-2018.pdf"
+      "source": "assets/worksheets/velocity-curve/galactic-plane-observation-1-conclusions-2018.pdf"
     },
     {
       "legacy": "FilesUploaded/VelocityCurve_HornIntro.pdf",
       "original_sha256": "da945af90b7cec404fe5a1f98e48f6133a721462c8655ff8d8112bb9d9aca1b8",
-      "source": "assets/lessons/velocity-curve/horn-introduction.pdf"
+      "source": "assets/worksheets/velocity-curve/horn-introduction.pdf"
     },
     {
       "legacy": "FilesUploaded/VelocityCurve_HornIntro_Followup.pdf",
       "original_sha256": "b3d973b611ae636a9842aa36ceae5ca941e72977c3637749a2aba7f8562d93db",
-      "source": "assets/lessons/velocity-curve/horn-introduction-followup.pdf"
+      "source": "assets/worksheets/velocity-curve/horn-introduction-answer-key.pdf"
     },
     {
       "legacy": "FilesUploaded/VelocityCurve_Stellarium.pdf",
       "original_sha256": "b10c7d784a6f572b644a2d00c93f8ebb286e060cfb75da82cf646711103188b9",
-      "source": "assets/lessons/velocity-curve/stellarium.pdf"
+      "source": "assets/worksheets/velocity-curve/stellarium.pdf"
     },
     {
       "legacy": "FilesUploaded/VelocityCurve_UnitOutline.pdf",
@@ -291,12 +291,12 @@
     {
       "legacy": "FilesUploaded/colors_we_see_spectrum.jpg",
       "original_sha256": "7454dd654de10db7e314a58458275b1f1c0603245ee99ea5eeed037546497b39",
-      "source": "assets/lessons/electromagnetic-spectrum/visible-colors.jpg"
+      "source": "images/electromagnetic-spectrum/visible-colors.jpg"
     },
     {
       "legacy": "FilesUploaded/interferometer_electrical_connections_photo.png",
       "original_sha256": "84e77a81170965062759719365dee2fc5901d6889fa6a8856e9b9ba3dbe2869c",
-      "source": "assets/lessons/two-horn-interferometer/electrical-connections.png"
+      "source": "images/interferometry/electrical-connections.png"
     },
     {
       "legacy": "FilesUploaded/interferometer_simpleSpectrometer_Lime_adding.grc",
@@ -324,6 +324,1276 @@
       "owner": "dspira-software",
       "destination": "examples/fourier-wave-explorer/Fourier_Series_Wave_Explorer.grc",
       "sha256": "172d8809b81f3d2365334c5e05c1d3490017c5808720831f5347ca983e68f812"
+    },
+    {
+      "legacy": "images/01/img/01.png",
+      "source": "images/dsp-intro/launch-gnu-radio.png",
+      "original_sha256": "30dd763d2e79ab101a564edee7131cb89c3fe95860aa9038147118c474e129f3",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/01/img/02.png",
+      "source": "images/dsp-intro/gnu-radio-workspace.png",
+      "original_sha256": "e9e693aac380385a0a0bc7187f0fd7cd9fccad18d167644c85f1f43b8438c997",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/01/img/03.png",
+      "source": "images/dsp-intro/top-block-settings.png",
+      "original_sha256": "d021a9d82a7c1950d91d23acb638903f7dfc4c09b06063235e3462f0b0e15f67",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/01/img/04.png",
+      "source": "images/dsp-intro/variable-block.png",
+      "original_sha256": "e75cbf58af6d38af6a1b29eed5c8531d1e74adc7570858bd716533346f15ca6c",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/01/img/05.png",
+      "source": "images/dsp-intro/add-signal-source.png",
+      "original_sha256": "35448b76b3132c6d3f3e4d57d63aa716089a7048743496b222bfb457fe74808c",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/01/img/06.png",
+      "source": "images/dsp-intro/data-types.png",
+      "original_sha256": "4bfcf39742d0e9889568bfe5c626e38ed078f459f29795603d366391d66feda1",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/01/img/07.png",
+      "source": "images/dsp-intro/throttle-block.png",
+      "original_sha256": "a883c80860f17b28cb7918e1a7164f770786dd0463b20c87641070594ba0dedb",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/01/img/08.png",
+      "source": "images/dsp-intro/example-1-flowgraph.png",
+      "original_sha256": "390fcb2200a16479e54f084ddce51d31e67a5ea7744a6a1a3f2f3988fd7e18ef",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/01/img/09.png",
+      "source": "images/dsp-intro/example-1-frequency-display.png",
+      "original_sha256": "9c13b692f8cb62eb9ef77fb42da1db56080718602b0fd015020afe4732dcb258",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/01/img/10.png",
+      "source": "images/dsp-intro/example-1-time-display.png",
+      "original_sha256": "bb567cc9b9a902495fab5578768514cb5035aaa10c1b2afb6f598d9045c36e17",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/01/img/11.png",
+      "source": "images/dsp-intro/range-settings.png",
+      "original_sha256": "e5bf0f9dec1c3c215ec517573d44ad5053bd00ce6ec3451c7ecaa7c334a3212d",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/01/img/12.png",
+      "source": "images/dsp-intro/signal-frequency.png",
+      "original_sha256": "a6f4fc8d96936daffa28ad65bf23bf9c35a48a693b0896c418c04d08a27ea4fe",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/01/img/13.png",
+      "source": "images/dsp-intro/audio-sink.png",
+      "original_sha256": "062ea27e2cca717138cd1809460c952a2ae1c7f869abb6bee09fc22015d1394d",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/01/img/14.png",
+      "source": "images/dsp-intro/example-2-display.png",
+      "original_sha256": "d717ae11c1089343da98219b534c1faf0bbc27ac4832045b659eb21a8701bcf7",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/01/img/15.png",
+      "source": "images/dsp-intro/example-3-flowgraph.png",
+      "original_sha256": "3ef4c9441198a6aa54924068118c02af3fe597ba982d3c256f3173f2a927fa2c",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/01/img/16.png",
+      "source": "images/dsp-intro/example-3-display.png",
+      "original_sha256": "b14e8bf7afcf54a89ca8b2d5dc8bd2fa668d338b5895d3165283f6b4d75c0e9c",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/01/img/17.png",
+      "source": "images/dsp-intro/signal-offset.png",
+      "original_sha256": "ce745018f84458525d25854b58d186a6103fd4cae6ef9c775a05e464eb32eee0",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/01/img/18.png",
+      "source": "images/dsp-intro/waveform-chooser.png",
+      "original_sha256": "2d17332c74f12ec57d434aa15ff09b092155ad4d3ac86baa4623bd0cc5cdb8cb",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/01/img/19.png",
+      "source": "images/dsp-intro/waveform-settings.png",
+      "original_sha256": "b8d1a88eb1ce6ea60c9a93b5bcde3c98a47959cd9b37683dff705e4422166358",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/01/img/20.png",
+      "source": "images/dsp-intro/waveform-display.png",
+      "original_sha256": "94469052bae82028b4d135898e376ec75dbeae0c929065945a42628fb2091dd1",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/01/img/21.png",
+      "source": "images/dsp-intro/rearranged-display.png",
+      "original_sha256": "cd29d8d5a118c2597513e6aa1345840c8efddd1dab5848ac829c8732deb6ab10",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/01/img/211.png",
+      "source": "images/dsp-intro/gui-layout-hint-1.png",
+      "original_sha256": "c45384493e0a3763ee3d7ca4317cc5913259cb991e2317c24e54de78bb6d4229",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/01/img/212.png",
+      "source": "images/dsp-intro/gui-layout-hint-2.png",
+      "original_sha256": "dc8a5fd27b83c11469305724a3e4e4b11b52bb3e309bb8abb34c219f5ee3738f",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/01/img/213.png",
+      "source": "images/dsp-intro/gui-layout-hint-3.png",
+      "original_sha256": "77729ad890fe1f08426ff5a5d6cfa3b0b3dc18b35b3c9e8f978326e5567cd248",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/01/img/214.png",
+      "source": "images/dsp-intro/gui-layout-hint-4.png",
+      "original_sha256": "0d9baf09f51a5126571821ea5893df30b5928b8f6f22e2cb07f5fd0bce03746a",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/01/img/215.png",
+      "source": "images/dsp-intro/gui-layout-hint-5.png",
+      "original_sha256": "2a3c147e26d48ce77a6bda5ad72ace74b3c83bde15af85c17d3a24591732237b",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/01/img/22.png",
+      "source": "images/dsp-intro/vector-source.png",
+      "original_sha256": "e762460c77dd51a1098599e633a2191f70f708b16b7f82041e3c8b41c0211171",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/01/img/23.png",
+      "source": "images/dsp-intro/numpy-import.png",
+      "original_sha256": "d9dae7b52b77d39be384e5082c590ddf9f66a277514c67672652cbcc0b21ff88",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/01/img/24.png",
+      "source": "images/dsp-intro/tau-variable.png",
+      "original_sha256": "7d04b9b69b63d062fee4fa070f31be38f06a5198985cdd921e56254a1738975d",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/01/img/25.png",
+      "source": "images/dsp-intro/tag-settings.png",
+      "original_sha256": "fcc12f854fc0829801a2f5ecc5b6bc75b09230a8c80bc4e3a1aafc10de8192db",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/01/img/26.png",
+      "source": "images/dsp-intro/vector-settings.png",
+      "original_sha256": "809bc0b02f6ba4548b84f1641776359cdabd5012689052a633ea2666a7d9567f",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/01/img/27.png",
+      "source": "images/dsp-intro/time-trigger.png",
+      "original_sha256": "963b6d5d194b2889461e3bf2d892555be6358e62faf8dc092e3d436815715b52",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/01/img/28.png",
+      "source": "images/dsp-intro/frequency-trigger.png",
+      "original_sha256": "8f9e248c71aa0b8ce62fddb5ee598bc1c813761fc51bad6009c41a1f4aca635f",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/01/img/29.png",
+      "source": "images/dsp-intro/example-4-flowgraph.png",
+      "original_sha256": "dbc37095ceec4f02297b26daea2f3f0064aa5b6f127cbbb45dcde6f598559661",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/01/img/30.png",
+      "source": "images/dsp-intro/example-4-display.png",
+      "original_sha256": "4514b92bdb29073704ff4ccac89d30a7d4537473eacedbe3aa5dbebe69aacfde",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/01/img/31.png",
+      "source": "images/dsp-intro/example-4-updated-display.png",
+      "original_sha256": "fb11e7a679adc623f3d4be80bd213dcc5e386dff121758eb2ae0ccb83dbac01c",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/01/img/gqrx2.png",
+      "source": "images/dsp-intro/gqrx-window.png",
+      "original_sha256": "1c0828e007559b6d64fa2fe26a2466b8f53c3e9d2fdce93a18fe6cde30f164d9",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/01/img/gqrx3.png",
+      "source": "images/dsp-intro/gqrx-device-settings.png",
+      "original_sha256": "369fd9b67947ce0841acd0bc038e5df60bbf558a2b4193843319a6e1bd789c97",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/01/img/gqrx4.png",
+      "source": "images/dsp-intro/gqrx-spectrum.png",
+      "original_sha256": "cfca94904c8c99fb2bdea7b8be1e9f06bf9e76ff18b13472e1d06f93b600f6c9",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/01/img/gqrx5.png",
+      "source": "images/dsp-intro/gqrx-audio-settings.png",
+      "original_sha256": "2a7cf4550b25326055efec6bf8f36f0d3d6f021f00bfe185a59e36e0c9e278ec",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/01/img/gqrx6.png",
+      "source": "images/dsp-intro/gqrx-receiver-settings.png",
+      "original_sha256": "fa2a621a1ec12759881e73fe3841af3f0d68e8116f23e1d74eb3569cec7f9777",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/01/img/lfsr_noise.png",
+      "source": "images/dsp-intro/lfsr-noise.png",
+      "original_sha256": "4a33e5b2183f46facb72b98a6e6395b3137a54942283613d9ca877562b6a32bf",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/01/img/sampling.png",
+      "source": "images/dsp-intro/sampling.png",
+      "original_sha256": "06e1480f632b372ae554c69e027bf1d8c157904ae96a4a540d00a647b5555355",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/02/img/1.png",
+      "source": "images/software-defined-radio/airspy-receiver.png",
+      "original_sha256": "f28dcbe2ebb62c9921211fbd9c67841518631b5a45765be0e86283f83cfd34d8",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/02/img/7.png",
+      "source": "images/software-defined-radio/receiver-source.png",
+      "original_sha256": "c2682bbf4c6a5524d8fccaedbbdda5319a3c914c0820e62bb39da325cfb77756",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/02/img/7_1.png",
+      "source": "images/software-defined-radio/low-pass-filter.png",
+      "original_sha256": "5ac32fd102029e0d896e0aa06263cde5595dd5b3aeef20cf0c83383c0f6b5561",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/02/img/7_2.png",
+      "source": "images/software-defined-radio/resampler.png",
+      "original_sha256": "ed54ee876f84764034bb9035fdfda1f68a61fba0388b0167628a40d1b8315ef1",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/02/img/7_3.png",
+      "source": "images/software-defined-radio/audio-low-pass-filter.png",
+      "original_sha256": "472322a3e737e92812dfdf15712d978efdbbd7d55ef25d343250bab7b0ca5406",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/02/img/7_4.png",
+      "source": "images/software-defined-radio/quadrature-demodulator.png",
+      "original_sha256": "e30b3dac6b59df7a268c7326af37b8b4ce0eb9cb95228ba602926f86419985d6",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/02/img/8.png",
+      "source": "images/software-defined-radio/resampler-settings.png",
+      "original_sha256": "7db1781ca4904132b29e9b9a5fd26b4efcddce73a316159f20f723647c51d945",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/02/img/9.png",
+      "source": "images/software-defined-radio/demodulator-settings.png",
+      "original_sha256": "dae5b1410bf4c8a567b07b75bd2fa47c32f76ba35c31a1ea126b696e2f33c1de",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/02/img/amfm.gif",
+      "source": "images/software-defined-radio/am-and-fm.gif",
+      "original_sha256": "b36aad65b0510e8846f8b370fb00aa93fc93c309ccd49885080e844c6f0d347a",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/03/img/1.png",
+      "source": "images/fourier-series/square-wave.png",
+      "original_sha256": "cdcced5cba337e9855cad7b6b3814e1edcfc2424a479b0b66eff05589b7cb90c",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/03/img/2.png",
+      "source": "images/fourier-series/triangle-wave.png",
+      "original_sha256": "5b53ea79d2a7e6908349f414ece1b50fd18e85df46d7592f6eeaeae6acf7a81e",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/03/img/3.png",
+      "source": "images/fourier-series/fourier-analysis.png",
+      "original_sha256": "b6d8f4648eaaf0b7dd976357c940dd8d5a77493f9739fccdcd4c458c836f9ec9",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/03/img/4.png",
+      "source": "images/fourier-series/sawtooth-wave.png",
+      "original_sha256": "663f774c46c668e2990aadb928ced82ef1a81b2004fd56be42243d59dbb6eb9b",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/03/img/Fourier_series_and_transform.gif",
+      "source": "images/fourier-series/fourier-series-and-transform.gif",
+      "original_sha256": "b04fb61d79de7ee1e629c4bb4603c67e43961b1292e00738cd2bd5868a972bdf",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/04/img/1.png",
+      "source": "images/digital-filters/filter-diagram.png",
+      "original_sha256": "ee0024caeb36805145b64a7b320cb16694b1d28404895652be0d756e8c251a34",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/04/img/1000px-FIR_Filter.png",
+      "source": "images/digital-filters/fir-filter.png",
+      "original_sha256": "70298533696ddc12c08286a7f176ce17d4b4fe831076e0adaba951e580742411",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/04/img/2.png",
+      "source": "images/digital-filters/moving-average-filter.png",
+      "original_sha256": "057379f4a8e6a64c5af0c22164198db60723ceb32b211827dfc827397cff9735",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/04/img/3.png",
+      "source": "images/digital-filters/filter-flowgraph.png",
+      "original_sha256": "cca5b5b301296521f857ce410a42a9263ed964208b5b9bf77abfd9e31bb4db16",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/04/img/4.png",
+      "source": "images/digital-filters/equalizer.png",
+      "original_sha256": "d0134ef6935950a8b967383be164389cd3d83cf6721ad0e86d8681bc99e468ae",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/04/img/Filters_order5.svg.png",
+      "source": "images/digital-filters/fifth-order-filter-responses.png",
+      "original_sha256": "c728d98b73260f89f37eca3f78bf070076f8ddd5d77e99594dedf5ec9cd1ef43",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/04/img/IIR-filter.png",
+      "source": "images/digital-filters/iir-filter.png",
+      "original_sha256": "ac082a45d85402d1f5e37aeac9dee5316d89ff0354f280206ac33d4a8a80d5ee",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/04/img/audiotosink.png",
+      "source": "images/digital-filters/audio-sink-flowgraph.png",
+      "original_sha256": "0841442144a424c840b1f1af2c09f4b146ea1ac448badd01b06cdec6739ef3cc",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/04/img/bessel.png",
+      "source": "images/digital-filters/bessel.png",
+      "original_sha256": "e593172349b76b91f638684f0147e7019e3cf910a64bf7554d8f826e46924639",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/04/img/fdt.png",
+      "source": "images/digital-filters/filter-design-tool.png",
+      "original_sha256": "e499d0af2fc836011f47e3e599a473ae05cbd0cb6286360d369c7c8309e9b4d4",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/04/img/fdtdemo.png",
+      "source": "images/digital-filters/filter-design-demo.png",
+      "original_sha256": "aa54f4b7e5273b3f05a0ae2e31df29cd580c36f4e7e19d26b6d472d8b9b8c788",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/04/img/fdtdemo1.png",
+      "source": "images/digital-filters/filter-design-settings.png",
+      "original_sha256": "50bdd90859809df6f5db6b95bd7f819282de482e1c7580a43745284e8a681499",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/04/img/freq.png",
+      "source": "images/digital-filters/fundamental-frequency.png",
+      "original_sha256": "045898e170acd59ccddf175d0264d1c1fd71b5dfcef8c1207343969be7325cac",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/05/img/H1.png",
+      "source": "images/radio-astronomy-dsp/hydrogen-line-spectrum.png",
+      "original_sha256": "b57d1187913b20434bfcdf64690cd5caf2696a6dfa3193a0a137b7c54961c7f9",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/05/img/a.png",
+      "source": "images/radio-astronomy-dsp/fft-butterfly-diagram.png",
+      "original_sha256": "e7cb9845d47cbe51e96e73a8e2cd6de6a26a9f01a2a07388b8adb591948054d5",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/05/img/fft8p.png",
+      "source": "images/radio-astronomy-dsp/eight-point-fft.png",
+      "original_sha256": "ddde4ad13518d92e8623babd0f05496fa6d14b75bc5b96a52463c325969f4ff7",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/05/img/fftvshann.png",
+      "source": "images/radio-astronomy-dsp/fft-and-hann-window.png",
+      "original_sha256": "053fab9b3eddd5b1fba829b94a06c2b87342e681069c3b88643417810817a876",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/05/img/grcpfb1.png",
+      "source": "images/radio-astronomy-dsp/polyphase-flowgraph.png",
+      "original_sha256": "854afd94794c39e8752f8b76609d1491691653bbab19edf463f218c323a7da7d",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/05/img/grcpfb2.png",
+      "source": "images/radio-astronomy-dsp/polyphase-receiver-settings.png",
+      "original_sha256": "5aa590883bf169030c36d52b70ce42e064be7bb8b4489595c2fc7eb4114efec3",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/05/img/iq.png",
+      "source": "images/radio-astronomy-dsp/iq.png",
+      "original_sha256": "6084e03bb40d142adf485526b016928709bace4a05e03701db781a4dcfdcc042",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/05/img/nwvsw.png",
+      "source": "images/radio-astronomy-dsp/rectangular-and-hann-windows.png",
+      "original_sha256": "d43947c92eb0aa0e01d12f53b185f682feff3d3e961af5d4c10de9c565b5c201",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/05/img/pfb.png",
+      "source": "images/radio-astronomy-dsp/polyphase-filter-bank.png",
+      "original_sha256": "6a270bf153e1c4f448ea18abdacd03c795c49a35931308c36b1bc41c3e42f6ba",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/05/img/pfb_chart.png",
+      "source": "images/radio-astronomy-dsp/polyphase-filter-chart.png",
+      "original_sha256": "80c897069ed09e5f3d52aeb6011a692c84c1c69501fe4eac73562f024b7c16a0",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/05/img/pfbrealized.png",
+      "source": "images/radio-astronomy-dsp/polyphase-filter-implementation.png",
+      "original_sha256": "370f22c827117c46c067d7aec185e9ba0c23aeae532cb7f0a520e65a1937b5c8",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/05/img/pfbyo.png",
+      "source": "images/radio-astronomy-dsp/polyphase-filter-output.png",
+      "original_sha256": "e7c535e1693c752094b8e2df37a1adf0c695a24a985850c10fb62e5d69ca0002",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/05/img/specleak.png",
+      "source": "images/radio-astronomy-dsp/spectral-leakage.png",
+      "original_sha256": "58aebe1fa21e629358d8f1f5e677c7a95c9be2ddc45cf40e1b41e2e6888e4d34",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/05/img/spectro.png",
+      "source": "images/radio-astronomy-dsp/spectrometer-comparison.png",
+      "original_sha256": "d1e6e77dc998b28a4b452192eeb6bd5add3796eef11b887ca6720940830ee914",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/05/img/windows.png",
+      "source": "images/radio-astronomy-dsp/windows.png",
+      "original_sha256": "9006e6ee836509beef1221e362ed000a53f82e885d3abe672391d941968c116a",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/programme/2018-10-16-students-horn-parking-lot-web.jpg",
+      "source": "images/program/2018-10-16-students-horn-parking-lot-web.jpg",
+      "original_sha256": "9716c2d31b2d025f094d27b963e3536949fc9f6bc43720529dda7df2d5027cb6",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/programme/2018-10-16-students-horn-parking-lot.jpg",
+      "source": "images/program/2018-10-16-students-horn-parking-lot.jpg",
+      "original_sha256": "b706e8fefc7c4974339b9170cb2584e7e8b274a62ea1e0ff2d5e0abed439cdc8",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/programme/2018-10-24-students-horn-roof-web.jpg",
+      "source": "images/program/2018-10-24-students-horn-roof-web.jpg",
+      "original_sha256": "559ab01feffe328a0b80e60d31e12ea6d144c9c5dd70c616f7ed46313b678eac",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/programme/2018-10-24-students-horn-roof.jpg",
+      "source": "images/program/2018-10-24-students-horn-roof.jpg",
+      "original_sha256": "194055c2ab0e67465305106f74025f29520c9ad8f9a9bdd89771df26554782c6",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/programme/green-bank-night.jpg",
+      "source": "images/program/green-bank-night.jpg",
+      "original_sha256": "8a3e65ce119a3d6ca3f006fd3103f068346804fa8a923180557860fd9b5ae740",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/programme/horn-on-stand.jpg",
+      "source": "images/program/horn-on-stand.jpg",
+      "original_sha256": "571e3ffd8d5dc25cece847c146224172f4252c93434ee3f351db29043a52146a",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "iq/figure-01.png",
+      "source": "images/iq/figure-01.png",
+      "original_sha256": "4d6c3ad9270d771b4ff4ddf52f51719bffd8283f3b0579a044cfa6407f6428a5",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "iq/figure-02.png",
+      "source": "images/iq/figure-02.png",
+      "original_sha256": "708c8176c6e65b2d0eb5c9ecbb61c3ee020811d1dc899f8a12d72e2ee8c5c6f0",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "iq/figure-03.png",
+      "source": "images/iq/figure-03.png",
+      "original_sha256": "484f71d07636936dd95e9a722350cd03b69fc00e623553799d9ad2472b59b954",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "iq/figure-04.png",
+      "source": "images/iq/figure-04.png",
+      "original_sha256": "21019b2b220cdc549c485397be13f2d2f2c13fefce70cd628965d1142044c45f",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "iq/figure-05.png",
+      "source": "images/iq/figure-05.png",
+      "original_sha256": "ac9784f2494e5328cdc50df758c8691067fac7cc4270e0ef13042d07619620dd",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "iq/figure-06.png",
+      "source": "images/iq/figure-06.png",
+      "original_sha256": "eb33a554a9c0b7813305c2913af2884b5982a63d3487ba4a1c4ff9554dd6d90a",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "iq/figure-07.png",
+      "source": "images/iq/figure-07.png",
+      "original_sha256": "2755438f80405b382092d476402aeb54cd32447070892619f0c1f9db9550a457",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "iq/figure-08.png",
+      "source": "images/iq/figure-08.png",
+      "original_sha256": "0c94cd6b06144f7174ef15c1a0b83328c09d558bbb5ce73127471384dc554318",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "iq/figure-09.png",
+      "source": "images/iq/figure-09.png",
+      "original_sha256": "e0f7c2152a8ffa457956ff833a5b1a73980b719e07556c8092d96160a635ef5f",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "iq/figure-10.png",
+      "source": "images/iq/figure-10.png",
+      "original_sha256": "515a43de74e9581ad1dddbcd3d1c0933725c0cfd2ce899554a4c3b26a58322b6",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "iq/figure-11.png",
+      "source": "images/iq/figure-11.png",
+      "original_sha256": "37df7efcae16efef93ec0edfbe67e1901d67208340ef7ae5d10fcba722a4809e",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "iq/figure-12.png",
+      "source": "images/iq/figure-12.png",
+      "original_sha256": "58f816e6263eb7421d96abe2a0689c3fec2ab9660aaeabc1c10ef366fb60d30c",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "iq/figure-13.png",
+      "source": "images/iq/figure-13.png",
+      "original_sha256": "c9c331cac96f1abdbc072c6bbe9436c41df9f92969ec2816189214ae0d4319bd",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "iq/notebook.css",
+      "source": "css/iq-notebook.css",
+      "original_sha256": "e77d6330584393991c59196963c8358b52bf6c37957a4119b663f0272d0487e7",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/AirspyMini_samp_rate.png",
+      "source": "images/receiver-electronics/airspy-mini-sample-rate.png",
+      "original_sha256": "0a99e5d14a40f74523a50550db742a198a7d1b887da54a537dcd98b82652d057",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/Bias_T_connections.png",
+      "source": "images/receiver-electronics/limesdr-bias-tee-connections.png",
+      "original_sha256": "b654124b72a7a8bf412105427404100222ac420b4681b552bece55e3fbc46d3a",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/Bias_T_connections_PlutoSDR.png",
+      "source": "images/receiver-electronics/plutosdr-bias-tee-connections.png",
+      "original_sha256": "da61cfc2a1bafaabbcb959b245502cbb4aa9e7f7aa44355334e136bf1d70775c",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/CHIME_dishes.jpg",
+      "source": "images/observing/calibration-video-thumbnail.jpg",
+      "original_sha256": "41ba10f764b62736f45c5ac9730c6e678d2e5e7a352f1a729ef6cef37f6e99a8",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/Celestial_Sphere_-_Equatorial_Coordinate_System.png",
+      "source": "images/astronomy/equatorial-coordinate-system.png",
+      "original_sha256": "5de534341ba74d5e6d81a56ff7c8e3834eb2adf317dd2a7d4eb01a6cd3c085b0",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/DspiraGalaxyPic2019.jpg",
+      "source": "images/program/2019-dspira-group.jpg",
+      "original_sha256": "78da9bf61ee9adcc804cb77ca1ba66683eb2b34a373def1bfba8ed753aaa9195",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/EarthSun.png",
+      "source": "images/astronomy/earth-orbit.png",
+      "original_sha256": "edf79675f1f779a72a6e83604f29e2f24194cbfbbaa30b6aac2d98f3535f776f",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/GBO.svg",
+      "source": "images/branding/green-bank-observatory.svg",
+      "original_sha256": "3b0141da7fde00768fac9054a46cbbc8c9883a706a66e3d2f14bbb5a0ef90949",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/GBTHerman.jpg",
+      "source": "images/astronomy/green-bank-telescope.jpg",
+      "original_sha256": "4407793c312b4e6dc908a8087dd451acaaf2d6ec7dfd15a599e2ea7f7eb880bf",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/GNURadio_image.png",
+      "source": "images/observing/spectrometer-flowgraph.png",
+      "original_sha256": "6878f9a7d5aa35f96d9b8c591b1400f5d7587505f75c7096825cb95e36a8a904",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/HIMap.png",
+      "source": "images/astronomy/neutral-hydrogen-map.png",
+      "original_sha256": "2594529e06340782916b737395c16b6e79e616306e83bf5daf1e3018910a31a9",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/HornIntro_Fig3.png",
+      "source": "images/observing/hydrogen-line-peak.png",
+      "original_sha256": "fb87d6b4c86bc009e9b9de132e16a1d88f5117092d51187c29d5acc5571861df",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/Janksy_Karl_radio_telescope.jpg",
+      "source": "images/astronomy/karl-jansky-radio-telescope.jpg",
+      "original_sha256": "0a45806f2ee24eb464ceb3296ad4adb0ab5903c91868297706493733a895a24a",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/JanskyHerman.jpg",
+      "source": "images/astronomy/jansky-antenna.jpg",
+      "original_sha256": "5f5afd723ca955ffa948eae176a80b441ad7a2ec87b4a2b88ad1b8d9a96f160a",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/Lime_General.png",
+      "source": "images/receiver-electronics/limesdr-general-settings.png",
+      "original_sha256": "760dff13c9aa5b1807dd94dff487e7e89490a48d316cbd8183b000fc6fbcb60d",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/Lime_channelA.png",
+      "source": "images/receiver-electronics/limesdr-channel-a.png",
+      "original_sha256": "06571d7ae73ed0f8cda5d912eb946464a45fc685d60a4d100f503680c931f498",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/Lime_connections.png",
+      "source": "images/receiver-electronics/limesdr-source-connections.png",
+      "original_sha256": "b073c51b287090a1fa5fc8b3f227604a47ec25ca0dbda8899db2765bd8a798f9",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/MWG.png",
+      "source": "images/astronomy/milky-way.png",
+      "original_sha256": "7bc2107a5e709e0cf414ca3954a748d00fbe1a80b695e4d28aff2d6ff4525b3d",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/NSF.png",
+      "source": "images/branding/nsf-logo.png",
+      "original_sha256": "a87116c3741183918a2908721b9fd6d39f7062dd39d6e59e6243814008a359ae",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/Picture1.png",
+      "source": "images/branding/wvu-logo.png",
+      "original_sha256": "6f21b50329486684bdab7b3943bd5680708da7f43cd576f9cb79b5c651ab407b",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/Picture2.png",
+      "source": "images/branding/green-bank-observatory.png",
+      "original_sha256": "3c4b7fd0383f7dcacb1877ca58d4ada2e0afae253757bc8ce1a7415db85e9210",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/Picture3.png",
+      "source": "images/branding/nsf-seal.png",
+      "original_sha256": "bd7465cec09ab988bbf62e19a5f6ab56ae9d9d0e28b6680b9896f2f00ff89bba",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/PlutoSDR_Source.png",
+      "source": "images/receiver-electronics/plutosdr-source.png",
+      "original_sha256": "246bcc312de3ea08d8ddd609b73254d85832462607aa9b2c7f81f8e182f1c14a",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/PlutoSDR_freq.png",
+      "source": "images/receiver-electronics/plutosdr-frequency.png",
+      "original_sha256": "e66da930a40cec8421db4fc8d9b199b010cac8951f4ab957eb2cb44b5b82e021",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/PlutoSDR_samp_rate.png",
+      "source": "images/receiver-electronics/plutosdr-sample-rate.png",
+      "original_sha256": "f07410da2ac39954fefb866f24bb3bc98a96f97b9724b0990b7961a976c8cb1e",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/PlutoSDR_sourceBlock_connections.png",
+      "source": "images/receiver-electronics/plutosdr-source-connections.png",
+      "original_sha256": "9e004e217655ab1b580564edab822bf934bfde088445561a4d4c9cdb699b1961",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/RTL_SDR_samp_rate.png",
+      "source": "images/receiver-electronics/rtl-sdr-sample-rate.png",
+      "original_sha256": "312f5c7f457d1f37d307e62318f01fefce95508f03db93201695e7aa9e6d1a96",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/RTL_SDR_source.png",
+      "source": "images/receiver-electronics/rtl-sdr-source.png",
+      "original_sha256": "7728292cdade159894ab63097221279856dc81a96fd232a68f1d7f56987921ac",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/Sample_spectrum.png",
+      "source": "images/observing/sample-spectrum.png",
+      "original_sha256": "86baaf9013485cd09504eeb6d3d1400e44cdcb54067dcac88469440045a7c531",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/Sample_spectrum_Fig2.png",
+      "source": "images/observing/background-spectrum.png",
+      "original_sha256": "fece36f5e31bd13b3aa195b19be2e9a43ab40cea940eaf529b669fee73dc85d2",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/SharedScreenshot.jpg",
+      "source": "images/contributing/google-drive-sharing.jpg",
+      "original_sha256": "44d64432a7347acfe7ffb7b7cc4e16d1838b0040246d6072fdb4c7e5085a6f1d",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/SolderingStation.JPG",
+      "source": "images/receiver-electronics/soldering-station.jpg",
+      "original_sha256": "2c034c86e076cc359ba0fb3bb067bfddd33939027530578edffd2c31fcd51d2b",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/Students_Obs_GC.png",
+      "source": "images/program/students-observing-galactic-center.png",
+      "original_sha256": "50a82a833bb1ccdb512d10b5ce5a16f998462797c23acad6e6ea74bca384ce04",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/UserDefinedBlocks.png",
+      "source": "images/observing/user-defined-blocks.png",
+      "original_sha256": "02696fe0246b177131fe31749e6acd52814f61893d4412bad137730ffdc70941",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/VelocityCurve_dataTable.jpg",
+      "source": "images/astronomy/velocity-curve-data-table.jpg",
+      "original_sha256": "1b27bdf0b30566af9536a770190e2a127e3d5afb064fa076c0c51f923ad7d9cd",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/astronomy.jpg",
+      "source": "images/astronomy/astronomy.jpg",
+      "original_sha256": "de9d04d7561f7831192adadc6d2a46009472ec2c4ea649ecd28ad1850a99a32d",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/filtered_nocal.png",
+      "source": "images/observing/uncalibrated-spectrum.png",
+      "original_sha256": "775c4c44fdf567b80b77b2ce5dd59056fcd76a49971993e1972f5a1add64d2b4",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/freq_vs_radial_velocity.png",
+      "source": "images/astronomy/frequency-versus-radial-velocity.png",
+      "original_sha256": "79907d916b0840592dfe89ac6a10d8e5365336d974567ec3e592dc9e19e1491d",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/galactic_rotation.png",
+      "source": "images/astronomy/galactic-rotation.png",
+      "original_sha256": "e7f6b00e82cd49d2d0b8190edf573560d6f70a0d8aaeefc8f7959b6d764595a0",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/gb.svg",
+      "source": "images/branding/green-bank-alternate.svg",
+      "original_sha256": "c7f3ca244729f9fd46ccf5618e64a24c91f99935086a2e653bc31900cb99ad25",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/horn-ops.jpeg",
+      "source": "images/observing/horn-operations.jpeg",
+      "original_sha256": "2fc7415206fab7ae87de7952766b0ade68bba3c54f499203c5c4ee32d1f101a6",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/horn.jpeg",
+      "source": "images/horn-construction/horn.jpeg",
+      "original_sha256": "3b607ad1e4dd82cb7d05061eab2cf8a341d36acc4f920a1f9d3ba7f9406a35f5",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/landing.png",
+      "source": "images/hero/night-horns-original.png",
+      "original_sha256": "81b7ba6c51a3a4c975398df62d58424f7b902ec6a03bb024d593844acb49c943",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/nsf.svg",
+      "source": "images/branding/nsf.svg",
+      "original_sha256": "9f0e531e097863143975e47724f669a1f738cdd01b65bbf91d7c38134f14d981",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/social-card.png",
+      "source": "images/branding/social-card.png",
+      "original_sha256": "892f64b9312989f6ba1e8f27dd18f73b66f49a64b69d192b5da37ea8e72eac1f",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/sys_T&G.png",
+      "source": "images/observing/system-temperature-and-gain.png",
+      "original_sha256": "10107a51d7d990dc769d84fceece800a3dbf14e9c7989c8781345e7ad3855594",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/wvu.eps",
+      "source": "images/branding/wvu.eps",
+      "original_sha256": "ae67edaed5d55b3344791d4b5fb4c919a5a00b3d6d65437cd3425e1f13947a93",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "images/wvu.svg",
+      "source": "images/branding/wvu.svg",
+      "original_sha256": "a45949dc82fd174f4f4332ae63c4aef37b9e98ff5e421a19b762f9ff968a8ea4",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "code/interferometry/Interferometry.ipynb",
+      "original_sha256": "011c15c6378b9fde3b9a053b493b828c0fce828129af9d2aa88a1c65e5e5cc4a",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c",
+      "url": "https://raw.githubusercontent.com/WVURAIL/dspira/04b7c372c890e09204b3031d85c058a86da0863c/code/interferometry/Interferometry.ipynb",
+      "sha256": "011c15c6378b9fde3b9a053b493b828c0fce828129af9d2aa88a1c65e5e5cc4a",
+      "canonical": "/dspira/code/interferometry/interferometry.ipynb",
+      "owner": "dspira",
+      "destination": "code/interferometry/interferometry.ipynb"
+    },
+    {
+      "legacy": "code/velocity_curve/quadII_III_velocity_vs_longitude.csv",
+      "source": "code/velocity_curve/quadrants_ii_iii_velocity_vs_longitude.csv",
+      "original_sha256": "4db611e01bb6426bca7859b6a2cfec32fda3b982ee8bc7e3572226c479682016",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/lessons/simple-spectrometer/01-simple-waveform.docx",
+      "source": "assets/worksheets/simple-spectrometer/01-simple-waveform.docx",
+      "original_sha256": "09161b894f60b6fe42569968086ace3e1c20b2da7f8a3429fa79f09409b12c05",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/lessons/simple-spectrometer/01-simple-waveform.pdf",
+      "source": "assets/worksheets/simple-spectrometer/01-simple-waveform.pdf",
+      "original_sha256": "de7d1d3ae910f7e857c99350d36b7a4836bcbca784e05b6a402633a869e8efbc",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/lessons/simple-spectrometer/05-filters.pdf",
+      "source": "assets/worksheets/simple-spectrometer/05-filters.pdf",
+      "original_sha256": "2306507081f20d97b1569b3ef887d3cb68ec035327535998f865e8caa30d4aa4",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/lessons/simple-spectrometer/04-fft.pdf",
+      "source": "assets/worksheets/simple-spectrometer/04-fft.pdf",
+      "original_sha256": "7e25eac1908781a5c2e710e9d361a0b93b7ecc998ec8cff73de6b4a432461236",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/lessons/simple-spectrometer/05-filters.docx",
+      "source": "assets/worksheets/simple-spectrometer/05-filters.docx",
+      "original_sha256": "1ed0f22a9c8df27f6663b8ab5a19fde677993f7a253ec76910b4333e48db08c4",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/lessons/simple-spectrometer/04-fft.docx",
+      "source": "assets/worksheets/simple-spectrometer/04-fft.docx",
+      "original_sha256": "f4a1ffbb4133f66057089f50e29568b87a2ad699e1017f847907aabc35935658",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/lessons/simple-spectrometer/02-multiple-sources.docx",
+      "source": "assets/worksheets/simple-spectrometer/02-multiple-sources.docx",
+      "original_sha256": "bca04af2ee85fe9de0aab5bc2507305541ccb3a1354de729e04c4fc15522fb9d",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/lessons/simple-spectrometer/02-multiple-sources.pdf",
+      "source": "assets/worksheets/simple-spectrometer/02-multiple-sources.pdf",
+      "original_sha256": "c437763412bf7e2ca986b5f6646e3e35ffce73df189f4cef48dfdf0780f3ae2c",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/lessons/simple-spectrometer/03-fourier-series.pdf",
+      "source": "assets/worksheets/simple-spectrometer/03-fourier-series.pdf",
+      "original_sha256": "a4622d745c9bcb5730ac8e2ca28d15a63ecaa7f6b03cce2a54619226becf409b",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/lessons/simple-spectrometer/03-fourier-series.docx",
+      "source": "assets/worksheets/simple-spectrometer/03-fourier-series.docx",
+      "original_sha256": "8eca5647018ba9d191f04ec729d0979a9a9483027ef8336dcfeb41f90053dd90",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/lessons/fourier-activity/worksheet.pdf",
+      "source": "assets/worksheets/fourier-series/worksheet.pdf",
+      "original_sha256": "70b3ca33eda681f60efc246750494d7560e62b3816778490686d35d027a88ff6",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/lessons/velocity-curve/galactic-plane-observation-1-2018.pdf",
+      "source": "assets/worksheets/velocity-curve/galactic-plane-observation-1-2018.pdf",
+      "original_sha256": "f4d6574f9f32b1e44444028ca833af35003e99e3edc003e5ae84554b23ccb9b9",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/lessons/velocity-curve/galactic-plane-observation-1-conclusions-2018.pdf",
+      "source": "assets/worksheets/velocity-curve/galactic-plane-observation-1-conclusions-2018.pdf",
+      "original_sha256": "c447bef0bc294bf509a52b955c5408a47db3e1669c5efac6fbd463fbc7bf7411",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/lessons/velocity-curve/galactic-plane-observation-2-2019.pdf",
+      "source": "assets/worksheets/velocity-curve/galactic-plane-observation-2-2019.pdf",
+      "original_sha256": "b446d159966397a670ce6ca5aa61f0c104260314c641028a8b2bec763634ca23",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/lessons/velocity-curve/horn-introduction.pdf",
+      "source": "assets/worksheets/velocity-curve/horn-introduction.pdf",
+      "original_sha256": "da945af90b7cec404fe5a1f98e48f6133a721462c8655ff8d8112bb9d9aca1b8",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/lessons/velocity-curve/horn-introduction-followup.pdf",
+      "source": "assets/worksheets/velocity-curve/horn-introduction-answer-key.pdf",
+      "original_sha256": "b3d973b611ae636a9842aa36ceae5ca941e72977c3637749a2aba7f8562d93db",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/lessons/velocity-curve/electromagnetic-spectrum.pdf",
+      "source": "assets/worksheets/velocity-curve/electromagnetic-spectrum.pdf",
+      "original_sha256": "586056806e3a99b023dc3611a61b63b4f898ade519f89e0f0ce87ee1918fcd07",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/lessons/velocity-curve/stellarium.pdf",
+      "source": "assets/worksheets/velocity-curve/stellarium.pdf",
+      "original_sha256": "b10c7d784a6f572b644a2d00c93f8ebb286e060cfb75da82cf646711103188b9",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/lessons/electromagnetic-spectrum/worksheet.jpg",
+      "source": "assets/worksheets/electromagnetic-spectrum/worksheet.jpg",
+      "original_sha256": "fbd3da25af187b195f83e02d45971a3bbd7f3ee80eacc7ec7d946c5ff189aa17",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/lessons/electromagnetic-spectrum/worksheet-key.jpg",
+      "source": "assets/worksheets/electromagnetic-spectrum/answer-key.jpg",
+      "original_sha256": "b6de12a0e4a22c15acbf39a9bc695dfd08473d67ede78e44b1efb62d610d3dd7",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/lessons/electromagnetic-spectrum/spectrum.jpg",
+      "source": "images/electromagnetic-spectrum/spectrum.jpg",
+      "original_sha256": "9a03f9144a9b4bcb010675ba61dee38ca4d96e49be738eb0a84c2187eb5231dc",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/lessons/electromagnetic-spectrum/visible-colors.jpg",
+      "source": "images/electromagnetic-spectrum/visible-colors.jpg",
+      "original_sha256": "7454dd654de10db7e314a58458275b1f1c0603245ee99ea5eeed037546497b39",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/lessons/two-horn-interferometer/electrical-connections.png",
+      "source": "images/interferometry/electrical-connections.png",
+      "original_sha256": "84e77a81170965062759719365dee2fc5901d6889fa6a8856e9b9ba3dbe2869c",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/lessons/two-horn-interferometer/electrical-schematic.png",
+      "source": "images/interferometry/electrical-schematic.png",
+      "original_sha256": "fa4c6c2d90ae7a800def4bee601a7b0a2711c2fc82fcac547aa05c6c5ca725ff",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/teaching/astronomy-lectures/motion-of-the-sky.pdf",
+      "source": "assets/lessons/lectures/astronomy/motion-of-the-sky.pdf",
+      "original_sha256": "c21b398c8b1167a42545b7d12237cc2a20ede21ee36cec60b7b624114e4fb160",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/teaching/astronomy-lectures/dark-matter.pdf",
+      "source": "assets/lessons/lectures/astronomy/dark-matter.pdf",
+      "original_sha256": "7006a01dab939c7abe20d596279e51ed9bd90ec74f313afca87da3421781fbf9",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/teaching/astronomy-lectures/stellar-evolution.pdf",
+      "source": "assets/lessons/lectures/astronomy/stellar-evolution.pdf",
+      "original_sha256": "a0307aa133597dd287e3258c700e15090b28f2a22f950666c7760c4d2a1e499a",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/teaching/astronomy-lectures/discovery-of-the-milky-way.pdf",
+      "source": "assets/lessons/lectures/astronomy/discovery-of-the-milky-way.pdf",
+      "original_sha256": "7fd226c395b2abfacc2a3f6fc2706f79ec7f40d947a6611f3c44900ba2b2e4bb",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/teaching/astronomy-lectures/time-and-planning-observations.pdf",
+      "source": "assets/lessons/lectures/astronomy/time-and-planning-observations.pdf",
+      "original_sha256": "ca1f06974109da05419c6873b0e5aa1c32f12d349d9d94763a01e63d0b7823de",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/teaching/astronomy-lectures/units-and-scales.pdf",
+      "source": "assets/lessons/lectures/astronomy/units-and-scales.pdf",
+      "original_sha256": "6ded84da64b1d684ff88074d9be9012fa22579dea87b7c28f3e5ec44f1aac92c",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/teaching/astronomy-lectures/galaxy-interactions-and-dark-matter.pdf",
+      "source": "assets/lessons/lectures/astronomy/galaxy-interactions-and-dark-matter.pdf",
+      "original_sha256": "3f79cecb57e2082d50219e73e6dec1a36047681805208eceacd28befff9a105e",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/teaching/astronomy-lectures/stars.pdf",
+      "source": "assets/lessons/lectures/astronomy/stars.pdf",
+      "original_sha256": "85866445b7dae898a7083a3c454df29cf3801c23b7c490d6c085100924189f37",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/teaching/astronomy-lectures/all-galaxies-great-and-small.pdf",
+      "source": "assets/lessons/lectures/astronomy/all-galaxies-great-and-small.pdf",
+      "original_sha256": "f9b6ffb88206ddaa3136296c740d400d048128c9871bc9ec390e8d0434ccfada",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/teaching/astronomy-lectures/gravity.pdf",
+      "source": "assets/lessons/lectures/astronomy/gravity.pdf",
+      "original_sha256": "3b15506db2688fd27df0a799b69ef18e7709d9922e9d79bb6ef83eca2f5bc7cb",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/teaching/astronomy-lectures/rotation-curves.pdf",
+      "source": "assets/lessons/lectures/astronomy/rotation-curves.pdf",
+      "original_sha256": "f29e3d228bce19e09d18fe6e049624dc065f63e9ef72134538f9ef060a17705c",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/teaching/astronomy-lectures/light-and-telescopes.pdf",
+      "source": "assets/lessons/lectures/astronomy/light-and-telescopes.pdf",
+      "original_sha256": "4e9e7791584bcfdf919b46759b3f7551ff1befec22f99e07e7f32169bcad9b4c",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/teaching/astronomy-lectures/doppler-effect-and-telescopes.pdf",
+      "source": "assets/lessons/lectures/astronomy/doppler-effect-and-telescopes.pdf",
+      "original_sha256": "4d1fd60abddbbc25ebf662fac9127f0ca8c1fa034377f176afd0aa84745fade1",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/teaching/2018/dsp-filters.pptx",
+      "source": "assets/lessons/lectures/digital-signal-processing/2018/filters.pptx",
+      "original_sha256": "b85a8accd450ed710705d135222b3cc05d5dab77efe0555e5b0295b5ef511256",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/teaching/2018/dsp-mixing.pptx",
+      "source": "assets/lessons/lectures/digital-signal-processing/2018/mixing.pptx",
+      "original_sha256": "8754aa527e767833b537fdc926d9ac17a6840f6fd9e9590e9bf91979f4e4d046",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/teaching/2018/astronomy-introduction-to-astronomy.pptx",
+      "source": "assets/lessons/lectures/astronomy/2018/introduction-to-astronomy.pptx",
+      "original_sha256": "160909cd43e5d9611c124e47b7d8ad7baefcb2213cb7467507f39df6fe11a6b4",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/teaching/2018/dsp-sampling.pptx",
+      "source": "assets/lessons/lectures/digital-signal-processing/2018/sampling.pptx",
+      "original_sha256": "37331738b555b881f7ca6883c2845f8942478ec9d68fce8527aef1a5b0403286",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/teaching/2018/astronomy-galactic-rotation.pptx",
+      "source": "assets/lessons/lectures/astronomy/2018/galactic-rotation.pptx",
+      "original_sha256": "68321491762e1565edaae8e0bec329a95d6308b79d511774223a490ff543108e",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/teaching/2018/astronomy-motion-of-the-sky.pptx",
+      "source": "assets/lessons/lectures/astronomy/2018/motion-of-the-sky.pptx",
+      "original_sha256": "6eb326fc9f81379dbef9811231f11112fc0cb0cc1c9a3a95e778b0e644c0e7b0",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/teaching/2018/dsp-signals.pptx",
+      "source": "assets/lessons/lectures/digital-signal-processing/2018/signals.pptx",
+      "original_sha256": "29283e48d4398bd08790307254a01e865b69003334c519b0c0c128e1a170b0c7",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/teaching/2018/dsp-fourier-transform.pptx",
+      "source": "assets/lessons/lectures/digital-signal-processing/2018/fourier-transform.pptx",
+      "original_sha256": "5c83ed86a3214461d34615da107dff72b26d3bd231a3bc6d00bd7018ea5daf3b",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/teaching/2018/astronomy-planning-observations.pptx",
+      "source": "assets/lessons/lectures/astronomy/2018/planning-observations.pptx",
+      "original_sha256": "ddd5a4fddaae2e50341048c12f03e3bb7ef43ddd2b1250fb077c1e9f02bf1431",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/teaching/2018/dsp-fourier-project.pptx",
+      "source": "assets/lessons/lectures/digital-signal-processing/2018/fourier-project.pptx",
+      "original_sha256": "3642bcaa5c3785b84f82364c1f330ae2ac48b5bd595de3fb80a785ccec82e4cb",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/teaching/2018/astronomy-your-observations.pptx",
+      "source": "assets/lessons/lectures/astronomy/2018/your-observations.pptx",
+      "original_sha256": "a031b435eeb4c698bdeeebc1145c3ecbae7c51dc5f3e711cd0fe75248900a639",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/teaching/2018/astronomy-dark-matter.pptx",
+      "source": "assets/lessons/lectures/astronomy/2018/dark-matter.pptx",
+      "original_sha256": "63157ccc8bb4896d18f36a4168c280474bc314eea00e0553129c21bd5ef31894",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/teaching/2018/dsp-fourier-series.pptx",
+      "source": "assets/lessons/lectures/digital-signal-processing/2018/fourier-series.pptx",
+      "original_sha256": "c919e31fc97ea84074a07cdd4d50f501da346a7b70ac11d7027b738d75c0a8d3",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/teaching/README.txt",
+      "source": "assets/lessons/lectures/README.txt",
+      "original_sha256": "485b53786e208492dfa7ca58367d74ce5540570583a7d9c0a3a25105f7c5c9ab",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/teaching/SOURCE-LICENSE.txt",
+      "source": "assets/lessons/lectures/SOURCE-LICENSE.txt",
+      "original_sha256": "8f7dfd34006d83f987a9cf4fa074e2302ede50a0db0c13be5749692b926807a5",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/teaching/SOURCE-NOTICE.txt",
+      "source": "assets/lessons/lectures/SOURCE-NOTICE.txt",
+      "original_sha256": "be02b611aa295c58b265ebf66c149b3fcd6af2e09f96104b5ffe79df75df6e2c",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/teaching/freq-vs-radial-velocity.pdf",
+      "source": "images/astronomy/frequency-versus-radial-velocity.pdf",
+      "original_sha256": "6d2c54eac3e490db7d88b11d8b7dc59786e2f5a71d308879223c194b04bcd32c",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/teaching/galactic-rotation.pdf",
+      "source": "images/astronomy/galactic-rotation.pdf",
+      "original_sha256": "03f2beea17ccb6e2ac032e73ecd6ba38a8997f7545f287894b3311508f41dc3a",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
+    },
+    {
+      "legacy": "assets/teaching/imaging-and-deconvolution-wilner-2014.pdf",
+      "source": "assets/lessons/lectures/radio-astronomy/2014/imaging-and-deconvolution-wilner.pdf",
+      "original_sha256": "06a12075424cf2d2086cf83e145419d6d153bd780fae7eb65bce3c34f6bb2dd1",
+      "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
     }
   ]
 }

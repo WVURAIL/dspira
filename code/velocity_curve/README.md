@@ -6,11 +6,11 @@ Code companion to the lesson
 | File | What it does |
 |---|---|
 | `galactic_plane_sine_fit.ipynb` | Fits a sine curve to HI Doppler velocity vs. galactic longitude (Part 1, Quadrants II and III) |
-| `quadII_III_velocity_vs_longitude.csv` | Sample dataset — replace with your class's measurements |
+| `quadrants_ii_iii_velocity_vs_longitude.csv` | Sample dataset — replace with your class's measurements |
 
 ## Using it with your own data
 
-Open `quadII_III_velocity_vs_longitude.csv` and replace its rows with your measurements. Each pointing needs galactic longitude in degrees and velocity in km/s. Rerun the notebook from the top. No code changes needed.
+Open `quadrants_ii_iii_velocity_vs_longitude.csv` and replace its rows with your measurements. Each pointing needs galactic longitude in degrees and velocity in km/s. Rerun the notebook from the top. No code changes needed.
 
 ## Running it
 

@@ -3,5 +3,5 @@ code/gbt_drift/README.md: "Analyze a drift scan from the Green Bank Telescope wi
 code/interferometry/README.md: "Explore DSPIRA code for correlation and a two-element interferometer. Find the analysis examples that accompany the GNU Radio lessons."
 code/observations/README.md: "Work with recorded horn telescope observations using DSPIRA analysis code. Find tools for reading data, checking pointing, and making maps."
 code/velocity_curve/README.md: "Use DSPIRA analysis code to study the Milky Way rotation curve. Find the scripts and data workflow that accompany the astronomy activities."
-images/programme/README.md: "Find source information and credits for DSPIRA program photographs. Review the image collection used to document teacher and student activities."
+images/program/README.md: "Find source information and credits for DSPIRA program photographs. Review the image collection used to document teacher and student activities."
 tools/README.md: "Check the DSPIRA website before publishing changes. Find commands for building the lessons and testing links, layout, mathematics, and contrast."

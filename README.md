@@ -12,10 +12,11 @@ A future move to `rail.wvu.edu` follows the [lab's cutover checklist](https://gi
 | Path | Purpose |
 | --- | --- |
 | [_posts](_posts/) | Individual lesson pages |
-| [assets/lessons](assets/lessons/) | Worksheets, editable originals, construction guides, and lesson attachments |
-| [assets/teaching](assets/teaching/) | Shared lecture slides and teaching references |
+| [assets/lessons](assets/lessons/) | Lesson guides, background handouts, and construction instructions |
+| [assets/lessons/lectures](assets/lessons/lectures/) | Lecture slides grouped by subject and known course year |
+| [assets/worksheets](assets/worksheets/) | Student exercises, answer keys, and editable originals |
 | [assets/templates](assets/templates/) | Lesson contribution templates |
-| [images](images/) | Existing lesson figures, module thumbnails, and site illustrations |
+| [images](images/) | Figures, screenshots, photographs, and branding, grouped by topic |
 | [code](code/) | Small activity scripts and observation analysis examples |
 | [pages](pages/) | Teaching, installation, hardware, history, and contribution guides |
 | [categories](categories/) | Module introduction pages |
@@ -44,8 +45,10 @@ Teachers can use the [submission guide](https://wvurail.org/dspira/newpost/) wit
 For repository contributions, follow [CONTRIBUTING.md](CONTRIBUTING.md) and the [lesson template](_includes/lesson-template.txt).
 
 Each lesson needs one module, a position within that module, and a stable public address.
-Store its attachments together under `assets/lessons/<lesson-slug>/`.
-Keep printable PDFs beside their editable originals, and give new files lowercase names with hyphens.
+Store worksheets under `assets/worksheets/<lesson-slug>/`, keeping printable PDFs beside their editable originals.
+Put instructional guides under `assets/lessons/<lesson-slug>/` and illustrations under `images/<topic>/`.
+Use lowercase filenames with hyphens, such as `2026-09-25-horn-calibration.md` or `receiver-settings.png`.
+Published lesson addresses are set by `permalink`, independently of source filenames.
 Start body headings at `##`; the layout supplies the page title.
 
 All published material is public. Keep student records and restricted answer keys in your school's classroom system.
@@ -66,6 +69,15 @@ See [the tools guide](tools/README.md) for checks run by CI.
 The WVU Design System stylesheet is vendored under `assets/wvu-design-system`.
 Page layouts use the common masthead, footer, and contact settings from `_config.yml`.
 Site publishing trims unused stylesheet rules and checks the resulting pages.
+
+## Naming conventions
+
+Use lowercase, hyphenated names for lesson sources, web pages, images, and teaching downloads.
+Lesson sources retain Jekyll's required `YYYY-MM-DD-` prefix.
+Python scripts, notebooks, and their data use lowercase names with underscores under `code/`.
+Jekyll directories and data keys retain their required underscores.
+Standard project files such as `README.md`, `LICENSE`, `CITATION.cff`, and `Gemfile` keep their conventional names.
+Preserved source notices and vendored libraries retain their original naming.
 
 ## Historical material
 

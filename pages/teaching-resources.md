@@ -26,11 +26,11 @@ Use the PDF for printing or the Word file when adapting an activity.
 
 | Activity | Printable PDF | Editable Word file |
 | --- | --- | --- |
-| 1. Simple waveform | [Print waveform worksheet]({{ '/assets/lessons/simple-spectrometer/01-simple-waveform.pdf' | relative_url }}) | [Edit waveform worksheet]({{ '/assets/lessons/simple-spectrometer/01-simple-waveform.docx' | relative_url }}) |
-| 2. Multiple sources | [Print multiple sources worksheet]({{ '/assets/lessons/simple-spectrometer/02-multiple-sources.pdf' | relative_url }}) | [Edit multiple sources worksheet]({{ '/assets/lessons/simple-spectrometer/02-multiple-sources.docx' | relative_url }}) |
-| 3. Fourier series | [Print Fourier series worksheet]({{ '/assets/lessons/simple-spectrometer/03-fourier-series.pdf' | relative_url }}) | [Edit Fourier series worksheet]({{ '/assets/lessons/simple-spectrometer/03-fourier-series.docx' | relative_url }}) |
-| 4. FFT | [Print FFT worksheet]({{ '/assets/lessons/simple-spectrometer/04-fft.pdf' | relative_url }}) | [Edit FFT worksheet]({{ '/assets/lessons/simple-spectrometer/04-fft.docx' | relative_url }}) |
-| 5. Filters | [Print filters worksheet]({{ '/assets/lessons/simple-spectrometer/05-filters.pdf' | relative_url }}) | [Edit filters worksheet]({{ '/assets/lessons/simple-spectrometer/05-filters.docx' | relative_url }}) |
+| 1. Simple waveform | [Print waveform worksheet]({{ '/assets/worksheets/simple-spectrometer/01-simple-waveform.pdf' | relative_url }}) | [Edit waveform worksheet]({{ '/assets/worksheets/simple-spectrometer/01-simple-waveform.docx' | relative_url }}) |
+| 2. Multiple sources | [Print multiple sources worksheet]({{ '/assets/worksheets/simple-spectrometer/02-multiple-sources.pdf' | relative_url }}) | [Edit multiple sources worksheet]({{ '/assets/worksheets/simple-spectrometer/02-multiple-sources.docx' | relative_url }}) |
+| 3. Fourier series | [Print Fourier series worksheet]({{ '/assets/worksheets/simple-spectrometer/03-fourier-series.pdf' | relative_url }}) | [Edit Fourier series worksheet]({{ '/assets/worksheets/simple-spectrometer/03-fourier-series.docx' | relative_url }}) |
+| 4. FFT | [Print FFT worksheet]({{ '/assets/worksheets/simple-spectrometer/04-fft.pdf' | relative_url }}) | [Edit FFT worksheet]({{ '/assets/worksheets/simple-spectrometer/04-fft.docx' | relative_url }}) |
+| 5. Filters | [Print filters worksheet]({{ '/assets/worksheets/simple-spectrometer/05-filters.pdf' | relative_url }}) | [Edit filters worksheet]({{ '/assets/worksheets/simple-spectrometer/05-filters.docx' | relative_url }}) |
 
 </details>
 
@@ -42,28 +42,28 @@ The decks reflect the 2018 courses; they may differ from later recordings.
 
 ### Astronomy slides
 
-- [Introduction to Astronomy (PowerPoint)]({{ '/assets/teaching/2018/astronomy-introduction-to-astronomy.pptx' | relative_url }})
-- [Motion of the Sky (PowerPoint)]({{ '/assets/teaching/2018/astronomy-motion-of-the-sky.pptx' | relative_url }})
-- [Time, Planning Observations, and Coordinate Systems (PowerPoint)]({{ '/assets/teaching/2018/astronomy-planning-observations.pptx' | relative_url }})
-- [Dark Matter (PowerPoint)]({{ '/assets/teaching/2018/astronomy-dark-matter.pptx' | relative_url }})
-- [Galactic Rotation (PowerPoint)]({{ '/assets/teaching/2018/astronomy-galactic-rotation.pptx' | relative_url }})
-- [Your Observations (PowerPoint)]({{ '/assets/teaching/2018/astronomy-your-observations.pptx' | relative_url }})
+- [Introduction to Astronomy (PowerPoint)]({{ '/assets/lessons/lectures/astronomy/2018/introduction-to-astronomy.pptx' | relative_url }})
+- [Motion of the Sky (PowerPoint)]({{ '/assets/lessons/lectures/astronomy/2018/motion-of-the-sky.pptx' | relative_url }})
+- [Time, Planning Observations, and Coordinate Systems (PowerPoint)]({{ '/assets/lessons/lectures/astronomy/2018/planning-observations.pptx' | relative_url }})
+- [Dark Matter (PowerPoint)]({{ '/assets/lessons/lectures/astronomy/2018/dark-matter.pptx' | relative_url }})
+- [Galactic Rotation (PowerPoint)]({{ '/assets/lessons/lectures/astronomy/2018/galactic-rotation.pptx' | relative_url }})
+- [Your Observations (PowerPoint)]({{ '/assets/lessons/lectures/astronomy/2018/your-observations.pptx' | relative_url }})
 
 ### DSP slides
 
-- [Signal Processing for Radio Astronomy Applications (PowerPoint)]({{ '/assets/teaching/2018/dsp-signals.pptx' | relative_url }})
-- [Periodic and Nonperiodic Signals: Fourier Series (PowerPoint)]({{ '/assets/teaching/2018/dsp-fourier-series.pptx' | relative_url }})
-- [Frequency Content of Nonperiodic Signals (PowerPoint)]({{ '/assets/teaching/2018/dsp-fourier-transform.pptx' | relative_url }})
-- [Fourier Series Project (PowerPoint)]({{ '/assets/teaching/2018/dsp-fourier-project.pptx' | relative_url }})
-- [Filters (PowerPoint)]({{ '/assets/teaching/2018/dsp-filters.pptx' | relative_url }})
-- [Sampling (PowerPoint)]({{ '/assets/teaching/2018/dsp-sampling.pptx' | relative_url }})
-- [Mixing and Modulation (PowerPoint)]({{ '/assets/teaching/2018/dsp-mixing.pptx' | relative_url }})
+- [Signal Processing for Radio Astronomy Applications (PowerPoint)]({{ '/assets/lessons/lectures/digital-signal-processing/2018/signals.pptx' | relative_url }})
+- [Periodic and Nonperiodic Signals: Fourier Series (PowerPoint)]({{ '/assets/lessons/lectures/digital-signal-processing/2018/fourier-series.pptx' | relative_url }})
+- [Frequency Content of Nonperiodic Signals (PowerPoint)]({{ '/assets/lessons/lectures/digital-signal-processing/2018/fourier-transform.pptx' | relative_url }})
+- [Fourier Series Project (PowerPoint)]({{ '/assets/lessons/lectures/digital-signal-processing/2018/fourier-project.pptx' | relative_url }})
+- [Filters (PowerPoint)]({{ '/assets/lessons/lectures/digital-signal-processing/2018/filters.pptx' | relative_url }})
+- [Sampling (PowerPoint)]({{ '/assets/lessons/lectures/digital-signal-processing/2018/sampling.pptx' | relative_url }})
+- [Mixing and Modulation (PowerPoint)]({{ '/assets/lessons/lectures/digital-signal-processing/2018/mixing.pptx' | relative_url }})
 
 ## Additional teaching figures
 
-- [Frequency and radial velocity figure (PDF)]({{ '/assets/teaching/freq-vs-radial-velocity.pdf' | relative_url }})
-- [Galactic rotation figure (PDF)]({{ '/assets/teaching/galactic-rotation.pdf' | relative_url }})
-- [Imaging and Deconvolution, David J. Wilner, 2014 (PDF)]({{ '/assets/teaching/imaging-and-deconvolution-wilner-2014.pdf' | relative_url }})
+- [Frequency and radial velocity figure (PDF)]({{ '/images/astronomy/frequency-versus-radial-velocity.pdf' | relative_url }})
+- [Galactic rotation figure (PDF)]({{ '/images/astronomy/galactic-rotation.pdf' | relative_url }})
+- [Imaging and Deconvolution, David J. Wilner, 2014 (PDF)]({{ '/assets/lessons/lectures/radio-astronomy/2014/imaging-and-deconvolution-wilner.pdf' | relative_url }})
 
 Wilner's lecture provides advanced background from the Synthesis Imaging Workshop.
 

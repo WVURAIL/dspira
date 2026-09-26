@@ -13,7 +13,7 @@ BOOTSTRAP 3.3.6 and 3.3.7
 
 Inlined by nbconvert into the two exported notebooks, about 246 KB apiece:
 
-  pages/I_Q_quadrature_sampling.html
+  pages/iq-quadrature-sampling.html
   code/gbt_drift/gbt_rendered_2017.html
 
 Nothing else on the site uses it. The site itself is styled by the WVU Design

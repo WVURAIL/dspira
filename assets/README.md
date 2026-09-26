@@ -1,57 +1,90 @@
-# Asset directory guide
+# File organization guide
 
-Keep each resource with the lesson or project that maintains it.
-Use lowercase names with hyphens. Keep a worksheet's PDF and editable original together.
+Choose a folder by the resource's purpose. Use lowercase names with hyphens for teaching files and images.
+Keep printable worksheets beside their editable originals. Link labels on the website should describe the resource in ordinary language.
 
-## Lesson attachments
+## Lessons and lectures
+
+The lesson web pages live in [`_posts`](../_posts/) because Jekyll requires that directory.
+Their `permalink` fields preserve public addresses independently of source filenames.
+
+[`lessons`](lessons/) holds instructional guides and background handouts:
 
 | Folder | Contents |
 | --- | --- |
-| [lessons/simple-spectrometer](lessons/simple-spectrometer/) | Five GNU Radio worksheets in PDF and Word formats, plus the spectrometer guide |
-| [lessons/velocity-curve](lessons/velocity-curve/) | Unit outline, background handouts, and dated observation examples |
-| [lessons/electromagnetic-spectrum](lessons/electromagnetic-spectrum/) | Introduction, spectrum images, worksheet, and its existing public answer key |
-| [lessons/fourier-activity](lessons/fourier-activity/) | Printable Fourier activity |
-| [lessons/horn-construction](lessons/horn-construction/) | Horn, can, cradle, stand, and mini-horn construction instructions |
-| [lessons/telescope-setup](lessons/telescope-setup/) | Equipment checklist |
-| [lessons/two-horn-interferometer](lessons/two-horn-interferometer/) | Setup handout and wiring figures |
+| [electromagnetic-spectrum](lessons/electromagnetic-spectrum/) | Background introduction to wavelengths and radiation |
+| [horn-construction](lessons/horn-construction/) | Horn, can, cradle, stand, and mini-horn construction instructions |
+| [simple-spectrometer](lessons/simple-spectrometer/) | Spectrometer construction guide |
+| [telescope-setup](lessons/telescope-setup/) | Equipment checklist |
+| [two-horn-interferometer](lessons/two-horn-interferometer/) | Setup guide |
+| [velocity-curve](lessons/velocity-curve/) | Unit outline and astronomy background handouts |
 
-Add future lesson files under `assets/lessons/<lesson-slug>/`.
-Link with `{{ '/assets/lessons/<lesson-slug>/filename.pdf' | relative_url }}`.
-Do not move an existing resource without updating its links and preserving necessary old addresses.
+[`lessons/lectures`](lessons/lectures/) groups lecture slides by subject:
 
-## Shared resources and site files
+- [astronomy](lessons/lectures/astronomy/): PDF lecture decks, with editable 2018 institute slides under `2018/`.
+- [digital-signal-processing/2018](lessons/lectures/digital-signal-processing/2018/): institute DSP slides and the Fourier project.
+- [radio-astronomy/2014](lessons/lectures/radio-astronomy/2014/): the Imaging and Deconvolution lecture.
 
-- [teaching/astronomy-lectures](teaching/astronomy-lectures/): PDF slide decks linked from the astronomy recordings.
-- [teaching/2018](teaching/2018/): editable institute slides, with the course year retained.
-- [teaching](teaching/): shared teaching figures, lecture references, and source notices.
+Keep known course years. Do not infer a year for undated material.
+Original author credits and the institute's source notices remain with the lecture collection.
+The two teaching figures under `images/astronomy/` retain the same original rights and credits.
+
+## Worksheets
+
+[`worksheets`](worksheets/) contains student exercises and their companion answers:
+
+| Folder | Contents |
+| --- | --- |
+| [simple-spectrometer](worksheets/simple-spectrometer/) | Five paired PDF and Word worksheets |
+| [fourier-series](worksheets/fourier-series/) | Printable Fourier activity |
+| [electromagnetic-spectrum](worksheets/electromagnetic-spectrum/) | Worksheet and answer key saved as JPEGs |
+| [velocity-curve](worksheets/velocity-curve/) | Observation sheets, introductory exercises, and companion answers |
+
+A complete worksheet belongs here even when its original format is an image.
+An illustration used within a page belongs in `images/` instead.
+Use a matching base name for editable and printable versions, such as `01-simple-waveform.docx` and `01-simple-waveform.pdf`.
+Existing public answer keys stay with their worksheets. Keep restricted classroom materials outside this public repository.
+
+## Images and styles
+
+[`images`](../images/) holds illustrations, screenshots, and photographs, grouped by topic.
+The DSP lab folders use descriptive names such as `dsp-intro`, `fourier-series`, and `digital-filters`.
+I/Q notebook figures live in `images/iq/`. Its separate stylesheet lives in `css/iq-notebook.css`.
+The notebook page remains available at `/dspira/iq/`.
+
+`images/branding/` holds logos and the social card; `images/program/` holds program photographs.
+`images/modules/` contains module thumbnails, and `images/hero/` contains the homepage photographs and their originals.
+Photo and diagram bytes remain unchanged when files move.
+
+## Templates and website files
+
 - [templates](templates/): lesson planning and Markdown templates.
 - [js](js/): website behavior.
-- [wvu-design-system](wvu-design-system/): the site's vendored stylesheet and its notices.
-- [../images](../images/): existing lesson illustrations, module thumbnails, and site branding.
+- [wvu-design-system](wvu-design-system/): the vendored stylesheet, navigation script, and notices.
+- [../css](../css/): lesson and notebook styles.
+- [../code](../code/): small activity scripts, notebooks, and example data, using lowercase Python naming.
 
 ## Files maintained in other projects
 
 - [dspira-software](https://github.com/WVURAIL/dspira-software): telescope applications and GNU Radio flowgraphs.
 - [dspira-hardware](https://github.com/WVURAIL/dspira-hardware/tree/main/docs/assembly): amplifier parts guides and component locations.
-- [LightWork](https://wvurail.org/lightwork/): the authoritative technical memo collection.
+- [LightWork](https://wvurail.org/lightwork/): technical memos.
 
 Link to those resources instead of committing another copy here.
-Current interferometer downloads use the applications in `dspira-software/flowgraphs`.
-The Fourier wave explorer lives in `dspira-software/examples/fourier-wave-explorer`.
-The schematic already existed in `dspira-hardware`; its duplicate was removed here.
-The memo 31 copy rendered identically to LightWork's copy, which the lessons now reference.
+Keep original author credits, licenses, and editable files with their material.
 
 ## Old download addresses
 
-`FilesUploaded` is no longer a source directory. Its old public download addresses still work.
-[`_data/legacy_assets.json`](../_data/legacy_assets.json) records each former path and its new source.
+`FilesUploaded`, `assets/teaching`, and the top-level `iq` folder are no longer source directories.
+Their old public download and image addresses remain available.
+[`_data/legacy_assets.json`](../_data/legacy_assets.json) records former paths and their maintained sources.
 [`tools/publish_assets.py`](../tools/publish_assets.py) creates compatibility files after the Jekyll build.
-Local aliases use the current lesson file. Downloads owned elsewhere use pinned revisions with verified checksums.
-The old interferometer copies and memo retain their original bytes through immutable commits in this active repository.
+Local aliases follow the current resource. Downloads owned elsewhere use pinned revisions with verified checksums.
+Historical software copies and the older memo retain their original bytes through immutable commits.
 No retired repository is required.
 
 The publication workflows run this step for DSPIRA and the lab's old lesson addresses.
-For a local compatibility check, run:
+For a local compatibility check:
 
 ```sh
 bundle exec jekyll build
@@ -59,4 +92,5 @@ python3 tools/test_publish_assets.py
 python3 tools/publish_assets.py --site _site
 ```
 
-The twelve-byte `FilesUploaded/blankfile` placeholder was removed. All substantive downloads remain available.
+Update current links and the compatibility map whenever an existing resource moves.
+The former twelve-byte `FilesUploaded/blankfile` placeholder was removed; substantive downloads remain available.

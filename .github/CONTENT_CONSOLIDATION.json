@@ -88,7 +88,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/teaching/SOURCE-NOTICE.txt"
+          "path": "assets/lessons/lectures/SOURCE-NOTICE.txt"
         }
       ]
     },
@@ -662,7 +662,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "_posts/2020-08-14-dsplab1.md"
+          "path": "_posts/2020-08-14-dsp-lab-introduction.md"
         }
       ]
     },
@@ -676,7 +676,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/01/img/01.png"
+          "path": "images/dsp-intro/launch-gnu-radio.png"
         }
       ]
     },
@@ -690,7 +690,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/01/img/02.png"
+          "path": "images/dsp-intro/gnu-radio-workspace.png"
         }
       ]
     },
@@ -704,7 +704,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/01/img/03.png"
+          "path": "images/dsp-intro/top-block-settings.png"
         }
       ]
     },
@@ -718,7 +718,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/01/img/04.png"
+          "path": "images/dsp-intro/variable-block.png"
         }
       ]
     },
@@ -732,7 +732,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/01/img/05.png"
+          "path": "images/dsp-intro/add-signal-source.png"
         }
       ]
     },
@@ -746,7 +746,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/01/img/06.png"
+          "path": "images/dsp-intro/data-types.png"
         }
       ]
     },
@@ -760,7 +760,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/01/img/07.png"
+          "path": "images/dsp-intro/throttle-block.png"
         }
       ]
     },
@@ -774,7 +774,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/01/img/08.png"
+          "path": "images/dsp-intro/example-1-flowgraph.png"
         }
       ]
     },
@@ -788,7 +788,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/01/img/09.png"
+          "path": "images/dsp-intro/example-1-frequency-display.png"
         }
       ]
     },
@@ -802,7 +802,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/01/img/10.png"
+          "path": "images/dsp-intro/example-1-time-display.png"
         }
       ]
     },
@@ -816,7 +816,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/01/img/11.png"
+          "path": "images/dsp-intro/range-settings.png"
         }
       ]
     },
@@ -830,7 +830,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/01/img/12.png"
+          "path": "images/dsp-intro/signal-frequency.png"
         }
       ]
     },
@@ -844,7 +844,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/01/img/13.png"
+          "path": "images/dsp-intro/audio-sink.png"
         }
       ]
     },
@@ -858,7 +858,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/01/img/14.png"
+          "path": "images/dsp-intro/example-2-display.png"
         }
       ]
     },
@@ -872,7 +872,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/01/img/15.png"
+          "path": "images/dsp-intro/example-3-flowgraph.png"
         }
       ]
     },
@@ -886,7 +886,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/01/img/16.png"
+          "path": "images/dsp-intro/example-3-display.png"
         }
       ]
     },
@@ -900,7 +900,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/01/img/17.png"
+          "path": "images/dsp-intro/signal-offset.png"
         }
       ]
     },
@@ -914,7 +914,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/01/img/18.png"
+          "path": "images/dsp-intro/waveform-chooser.png"
         }
       ]
     },
@@ -928,7 +928,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/01/img/19.png"
+          "path": "images/dsp-intro/waveform-settings.png"
         }
       ]
     },
@@ -942,7 +942,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/01/img/20.png"
+          "path": "images/dsp-intro/waveform-display.png"
         }
       ]
     },
@@ -956,7 +956,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/01/img/21.png"
+          "path": "images/dsp-intro/rearranged-display.png"
         }
       ]
     },
@@ -970,7 +970,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/01/img/211.png"
+          "path": "images/dsp-intro/gui-layout-hint-1.png"
         }
       ]
     },
@@ -984,7 +984,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/01/img/212.png"
+          "path": "images/dsp-intro/gui-layout-hint-2.png"
         }
       ]
     },
@@ -998,7 +998,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/01/img/213.png"
+          "path": "images/dsp-intro/gui-layout-hint-3.png"
         }
       ]
     },
@@ -1012,7 +1012,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/01/img/214.png"
+          "path": "images/dsp-intro/gui-layout-hint-4.png"
         }
       ]
     },
@@ -1026,7 +1026,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/01/img/215.png"
+          "path": "images/dsp-intro/gui-layout-hint-5.png"
         }
       ]
     },
@@ -1040,7 +1040,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/01/img/22.png"
+          "path": "images/dsp-intro/vector-source.png"
         }
       ]
     },
@@ -1054,7 +1054,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/01/img/23.png"
+          "path": "images/dsp-intro/numpy-import.png"
         }
       ]
     },
@@ -1068,7 +1068,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/01/img/24.png"
+          "path": "images/dsp-intro/tau-variable.png"
         }
       ]
     },
@@ -1082,7 +1082,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/01/img/25.png"
+          "path": "images/dsp-intro/tag-settings.png"
         }
       ]
     },
@@ -1096,7 +1096,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/01/img/26.png"
+          "path": "images/dsp-intro/vector-settings.png"
         }
       ]
     },
@@ -1110,7 +1110,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/01/img/27.png"
+          "path": "images/dsp-intro/time-trigger.png"
         }
       ]
     },
@@ -1124,7 +1124,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/01/img/28.png"
+          "path": "images/dsp-intro/frequency-trigger.png"
         }
       ]
     },
@@ -1138,7 +1138,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/01/img/29.png"
+          "path": "images/dsp-intro/example-4-flowgraph.png"
         }
       ]
     },
@@ -1152,7 +1152,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/01/img/30.png"
+          "path": "images/dsp-intro/example-4-display.png"
         }
       ]
     },
@@ -1166,7 +1166,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/01/img/31.png"
+          "path": "images/dsp-intro/example-4-updated-display.png"
         }
       ]
     },
@@ -1180,7 +1180,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/01/img/gqrx2.png"
+          "path": "images/dsp-intro/gqrx-window.png"
         }
       ]
     },
@@ -1194,7 +1194,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/01/img/gqrx3.png"
+          "path": "images/dsp-intro/gqrx-device-settings.png"
         }
       ]
     },
@@ -1208,7 +1208,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/01/img/gqrx4.png"
+          "path": "images/dsp-intro/gqrx-spectrum.png"
         }
       ]
     },
@@ -1222,7 +1222,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/01/img/gqrx5.png"
+          "path": "images/dsp-intro/gqrx-audio-settings.png"
         }
       ]
     },
@@ -1236,7 +1236,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/01/img/gqrx6.png"
+          "path": "images/dsp-intro/gqrx-receiver-settings.png"
         }
       ]
     },
@@ -1250,7 +1250,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/01/img/lfsr_noise.png"
+          "path": "images/dsp-intro/lfsr-noise.png"
         }
       ]
     },
@@ -1264,7 +1264,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/01/img/sampling.png"
+          "path": "images/dsp-intro/sampling.png"
         }
       ]
     },
@@ -1278,7 +1278,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "_posts/2020-08-14-dsplab2.md"
+          "path": "_posts/2020-08-14-dsp-lab-software-defined-radio.md"
         }
       ]
     },
@@ -1292,7 +1292,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/02/img/1.png"
+          "path": "images/software-defined-radio/airspy-receiver.png"
         }
       ]
     },
@@ -1306,7 +1306,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/02/img/7.png"
+          "path": "images/software-defined-radio/receiver-source.png"
         }
       ]
     },
@@ -1320,7 +1320,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/02/img/7_1.png"
+          "path": "images/software-defined-radio/low-pass-filter.png"
         }
       ]
     },
@@ -1334,7 +1334,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/02/img/7_2.png"
+          "path": "images/software-defined-radio/resampler.png"
         }
       ]
     },
@@ -1348,7 +1348,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/02/img/7_3.png"
+          "path": "images/software-defined-radio/audio-low-pass-filter.png"
         }
       ]
     },
@@ -1362,7 +1362,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/02/img/7_4.png"
+          "path": "images/software-defined-radio/quadrature-demodulator.png"
         }
       ]
     },
@@ -1376,7 +1376,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/02/img/8.png"
+          "path": "images/software-defined-radio/resampler-settings.png"
         }
       ]
     },
@@ -1390,7 +1390,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/02/img/9.png"
+          "path": "images/software-defined-radio/demodulator-settings.png"
         }
       ]
     },
@@ -1404,7 +1404,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/02/img/amfm.gif"
+          "path": "images/software-defined-radio/am-and-fm.gif"
         }
       ]
     },
@@ -1418,7 +1418,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "_posts/2020-08-14-dsplab3.md"
+          "path": "_posts/2020-08-14-dsp-lab-fourier-series.md"
         }
       ]
     },
@@ -1432,7 +1432,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/03/img/1.png"
+          "path": "images/fourier-series/square-wave.png"
         }
       ]
     },
@@ -1446,7 +1446,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/03/img/2.png"
+          "path": "images/fourier-series/triangle-wave.png"
         }
       ]
     },
@@ -1460,7 +1460,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/03/img/3.png"
+          "path": "images/fourier-series/fourier-analysis.png"
         }
       ]
     },
@@ -1474,7 +1474,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/03/img/4.png"
+          "path": "images/fourier-series/sawtooth-wave.png"
         }
       ]
     },
@@ -1488,7 +1488,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/03/img/Fourier_series_and_transform.gif"
+          "path": "images/fourier-series/fourier-series-and-transform.gif"
         }
       ]
     },
@@ -1502,7 +1502,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "_posts/2020-08-14-dsplab4.md"
+          "path": "_posts/2020-08-14-dsp-lab-digital-filters.md"
         }
       ]
     },
@@ -1516,7 +1516,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/04/img/1.png"
+          "path": "images/digital-filters/filter-diagram.png"
         }
       ]
     },
@@ -1530,7 +1530,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/04/img/1000px-FIR_Filter.png"
+          "path": "images/digital-filters/fir-filter.png"
         }
       ]
     },
@@ -1544,7 +1544,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/04/img/2.png"
+          "path": "images/digital-filters/moving-average-filter.png"
         }
       ]
     },
@@ -1558,7 +1558,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/04/img/3.png"
+          "path": "images/digital-filters/filter-flowgraph.png"
         }
       ]
     },
@@ -1572,7 +1572,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/04/img/4.png"
+          "path": "images/digital-filters/equalizer.png"
         }
       ]
     },
@@ -1586,7 +1586,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/04/img/Filters_order5.svg.png"
+          "path": "images/digital-filters/fifth-order-filter-responses.png"
         }
       ]
     },
@@ -1600,7 +1600,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/04/img/IIR-filter.png"
+          "path": "images/digital-filters/iir-filter.png"
         }
       ]
     },
@@ -1614,7 +1614,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/04/img/audiotosink.png"
+          "path": "images/digital-filters/audio-sink-flowgraph.png"
         }
       ]
     },
@@ -1628,7 +1628,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/04/img/bessel.png"
+          "path": "images/digital-filters/bessel.png"
         }
       ]
     },
@@ -1642,7 +1642,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/04/img/fdt.png"
+          "path": "images/digital-filters/filter-design-tool.png"
         }
       ]
     },
@@ -1656,7 +1656,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/04/img/fdtdemo.png"
+          "path": "images/digital-filters/filter-design-demo.png"
         }
       ]
     },
@@ -1670,7 +1670,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/04/img/fdtdemo1.png"
+          "path": "images/digital-filters/filter-design-settings.png"
         }
       ]
     },
@@ -1684,7 +1684,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/04/img/freq.png"
+          "path": "images/digital-filters/fundamental-frequency.png"
         }
       ]
     },
@@ -1698,7 +1698,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "pages/I_Q_quadrature_sampling.html"
+          "path": "pages/iq-quadrature-sampling.html"
         }
       ]
     },
@@ -1712,7 +1712,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "_posts/2020-08-14-dsplab5.md"
+          "path": "_posts/2020-08-14-dsp-lab-radio-astronomy.md"
         }
       ]
     },
@@ -1726,7 +1726,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/05/img/H1.png"
+          "path": "images/radio-astronomy-dsp/hydrogen-line-spectrum.png"
         }
       ]
     },
@@ -1740,7 +1740,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/05/img/a.png"
+          "path": "images/radio-astronomy-dsp/fft-butterfly-diagram.png"
         }
       ]
     },
@@ -1754,7 +1754,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/05/img/fft8p.png"
+          "path": "images/radio-astronomy-dsp/eight-point-fft.png"
         }
       ]
     },
@@ -1768,7 +1768,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/05/img/fftvshann.png"
+          "path": "images/radio-astronomy-dsp/fft-and-hann-window.png"
         }
       ]
     },
@@ -1782,7 +1782,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/05/img/grcpfb1.png"
+          "path": "images/radio-astronomy-dsp/polyphase-flowgraph.png"
         }
       ]
     },
@@ -1796,7 +1796,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/05/img/grcpfb2.png"
+          "path": "images/radio-astronomy-dsp/polyphase-receiver-settings.png"
         }
       ]
     },
@@ -1810,7 +1810,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/05/img/iq.png"
+          "path": "images/radio-astronomy-dsp/iq.png"
         }
       ]
     },
@@ -1824,7 +1824,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/05/img/nwvsw.png"
+          "path": "images/radio-astronomy-dsp/rectangular-and-hann-windows.png"
         }
       ]
     },
@@ -1838,7 +1838,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/05/img/pfb.png"
+          "path": "images/radio-astronomy-dsp/polyphase-filter-bank.png"
         }
       ]
     },
@@ -1852,7 +1852,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/05/img/pfb_chart.png"
+          "path": "images/radio-astronomy-dsp/polyphase-filter-chart.png"
         }
       ]
     },
@@ -1866,7 +1866,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/05/img/pfbrealized.png"
+          "path": "images/radio-astronomy-dsp/polyphase-filter-implementation.png"
         }
       ]
     },
@@ -1880,7 +1880,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/05/img/pfbyo.png"
+          "path": "images/radio-astronomy-dsp/polyphase-filter-output.png"
         }
       ]
     },
@@ -1894,7 +1894,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/05/img/specleak.png"
+          "path": "images/radio-astronomy-dsp/spectral-leakage.png"
         }
       ]
     },
@@ -1908,7 +1908,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/05/img/spectro.png"
+          "path": "images/radio-astronomy-dsp/spectrometer-comparison.png"
         }
       ]
     },
@@ -1922,7 +1922,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/05/img/windows.png"
+          "path": "images/radio-astronomy-dsp/windows.png"
         }
       ]
     },
@@ -1950,7 +1950,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "_posts/2020-08-30-Horn_Construction_Information.md"
+          "path": "_posts/2020-08-30-horn-construction-guide.md"
         }
       ]
     },
@@ -1978,7 +1978,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "_posts/2020-07-24-BuildingHornTelescope_Overview.md"
+          "path": "_posts/2020-07-24-building-a-horn-telescope.md"
         }
       ]
     },
@@ -1992,7 +1992,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/teaching/freq-vs-radial-velocity.pdf"
+          "path": "images/astronomy/frequency-versus-radial-velocity.pdf"
         }
       ]
     },
@@ -2006,7 +2006,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/teaching/galactic-rotation.pdf"
+          "path": "images/astronomy/galactic-rotation.pdf"
         }
       ]
     },
@@ -2020,7 +2020,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "_posts/2020-08-20-Observations.md"
+          "path": "_posts/2020-08-20-observing-and-mapping-the-sky.md"
         }
       ]
     },
@@ -2034,7 +2034,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/freq_vs_radial_velocity.png"
+          "path": "images/astronomy/frequency-versus-radial-velocity.png"
         }
       ]
     },
@@ -2048,7 +2048,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/galactic_rotation.png"
+          "path": "images/astronomy/galactic-rotation.png"
         }
       ]
     },
@@ -2090,7 +2090,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/teaching/2018/astronomy-introduction-to-astronomy.pptx"
+          "path": "assets/lessons/lectures/astronomy/2018/introduction-to-astronomy.pptx"
         }
       ]
     },
@@ -2104,7 +2104,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/teaching/2018/astronomy-motion-of-the-sky.pptx"
+          "path": "assets/lessons/lectures/astronomy/2018/motion-of-the-sky.pptx"
         }
       ]
     },
@@ -2118,7 +2118,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "_posts/2020-07-24-A2UnderstandingCeleCoords.md"
+          "path": "_posts/2020-07-24-understanding-celestial-coordinates.md"
         }
       ]
     },
@@ -2132,7 +2132,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/teaching/2018/astronomy-planning-observations.pptx"
+          "path": "assets/lessons/lectures/astronomy/2018/planning-observations.pptx"
         }
       ]
     },
@@ -2146,7 +2146,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/teaching/2018/astronomy-dark-matter.pptx"
+          "path": "assets/lessons/lectures/astronomy/2018/dark-matter.pptx"
         }
       ]
     },
@@ -2160,7 +2160,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/teaching/2018/astronomy-galactic-rotation.pptx"
+          "path": "assets/lessons/lectures/astronomy/2018/galactic-rotation.pptx"
         }
       ]
     },
@@ -2174,7 +2174,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/teaching/2018/astronomy-your-observations.pptx"
+          "path": "assets/lessons/lectures/astronomy/2018/your-observations.pptx"
         }
       ]
     },
@@ -2188,7 +2188,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/teaching/2018/dsp-fourier-transform.pptx"
+          "path": "assets/lessons/lectures/digital-signal-processing/2018/fourier-transform.pptx"
         }
       ]
     },
@@ -2202,7 +2202,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/teaching/imaging-and-deconvolution-wilner-2014.pdf"
+          "path": "assets/lessons/lectures/radio-astronomy/2014/imaging-and-deconvolution-wilner.pdf"
         }
       ]
     },
@@ -2216,7 +2216,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/teaching/2018/dsp-signals.pptx"
+          "path": "assets/lessons/lectures/digital-signal-processing/2018/signals.pptx"
         }
       ]
     },
@@ -2230,7 +2230,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/teaching/2018/dsp-fourier-series.pptx"
+          "path": "assets/lessons/lectures/digital-signal-processing/2018/fourier-series.pptx"
         }
       ]
     },
@@ -2244,7 +2244,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/teaching/2018/dsp-fourier-transform.pptx"
+          "path": "assets/lessons/lectures/digital-signal-processing/2018/fourier-transform.pptx"
         }
       ]
     },
@@ -2258,7 +2258,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/teaching/2018/dsp-fourier-project.pptx"
+          "path": "assets/lessons/lectures/digital-signal-processing/2018/fourier-project.pptx"
         }
       ]
     },
@@ -2272,7 +2272,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/teaching/2018/dsp-filters.pptx"
+          "path": "assets/lessons/lectures/digital-signal-processing/2018/filters.pptx"
         }
       ]
     },
@@ -2286,7 +2286,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/teaching/2018/dsp-sampling.pptx"
+          "path": "assets/lessons/lectures/digital-signal-processing/2018/sampling.pptx"
         }
       ]
     },
@@ -2300,7 +2300,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/teaching/2018/dsp-mixing.pptx"
+          "path": "assets/lessons/lectures/digital-signal-processing/2018/mixing.pptx"
         }
       ]
     },
@@ -2328,7 +2328,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/teaching/astronomy-lectures/light-and-telescopes.pdf"
+          "path": "assets/lessons/lectures/astronomy/light-and-telescopes.pdf"
         }
       ]
     },
@@ -2342,7 +2342,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/teaching/astronomy-lectures/doppler-effect-and-telescopes.pdf"
+          "path": "assets/lessons/lectures/astronomy/doppler-effect-and-telescopes.pdf"
         }
       ]
     },
@@ -2356,7 +2356,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/teaching/astronomy-lectures/stars.pdf"
+          "path": "assets/lessons/lectures/astronomy/stars.pdf"
         }
       ]
     },
@@ -2370,7 +2370,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/teaching/astronomy-lectures/stellar-evolution.pdf"
+          "path": "assets/lessons/lectures/astronomy/stellar-evolution.pdf"
         }
       ]
     },
@@ -2384,7 +2384,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/teaching/astronomy-lectures/discovery-of-the-milky-way.pdf"
+          "path": "assets/lessons/lectures/astronomy/discovery-of-the-milky-way.pdf"
         }
       ]
     },
@@ -2398,7 +2398,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/teaching/astronomy-lectures/all-galaxies-great-and-small.pdf"
+          "path": "assets/lessons/lectures/astronomy/all-galaxies-great-and-small.pdf"
         }
       ]
     },
@@ -2412,7 +2412,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/teaching/astronomy-lectures/galaxy-interactions-and-dark-matter.pdf"
+          "path": "assets/lessons/lectures/astronomy/galaxy-interactions-and-dark-matter.pdf"
         }
       ]
     },
@@ -2426,7 +2426,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/teaching/astronomy-lectures/dark-matter.pdf"
+          "path": "assets/lessons/lectures/astronomy/dark-matter.pdf"
         }
       ]
     },
@@ -2440,7 +2440,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/teaching/astronomy-lectures/gravity.pdf"
+          "path": "assets/lessons/lectures/astronomy/gravity.pdf"
         }
       ]
     },
@@ -2454,7 +2454,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/teaching/astronomy-lectures/units-and-scales.pdf"
+          "path": "assets/lessons/lectures/astronomy/units-and-scales.pdf"
         }
       ]
     },
@@ -2468,7 +2468,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/teaching/astronomy-lectures/motion-of-the-sky.pdf"
+          "path": "assets/lessons/lectures/astronomy/motion-of-the-sky.pdf"
         }
       ]
     },
@@ -2482,7 +2482,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/teaching/astronomy-lectures/rotation-curves.pdf"
+          "path": "assets/lessons/lectures/astronomy/rotation-curves.pdf"
         }
       ]
     },
@@ -2496,7 +2496,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/teaching/astronomy-lectures/time-and-planning-observations.pdf"
+          "path": "assets/lessons/lectures/astronomy/time-and-planning-observations.pdf"
         }
       ]
     },
@@ -2538,7 +2538,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "_posts/2020-08-22-CommandLine_and_Git.md"
+          "path": "_posts/2020-08-22-command-line-and-git.md"
         }
       ]
     },
@@ -2552,7 +2552,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "_posts/2020-08-22-CommandLine_and_Git.md"
+          "path": "_posts/2020-08-22-command-line-and-git.md"
         }
       ]
     },
@@ -2664,7 +2664,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/programme/2018-10-24-students-horn-roof.jpg"
+          "path": "images/program/2018-10-24-students-horn-roof.jpg"
         }
       ]
     },
@@ -2678,7 +2678,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/lessons/velocity-curve/galactic-plane-observation-2-2019.pdf"
+          "path": "assets/worksheets/velocity-curve/galactic-plane-observation-2-2019.pdf"
         }
       ]
     },
@@ -2762,7 +2762,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/lessons/electromagnetic-spectrum/spectrum.jpg"
+          "path": "images/electromagnetic-spectrum/spectrum.jpg"
         }
       ]
     },
@@ -2776,7 +2776,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/lessons/electromagnetic-spectrum/worksheet.jpg"
+          "path": "assets/worksheets/electromagnetic-spectrum/worksheet.jpg"
         }
       ]
     },
@@ -2790,7 +2790,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/lessons/electromagnetic-spectrum/worksheet-key.jpg"
+          "path": "assets/worksheets/electromagnetic-spectrum/answer-key.jpg"
         }
       ]
     },
@@ -2804,7 +2804,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/lessons/fourier-activity/worksheet.pdf"
+          "path": "assets/worksheets/fourier-series/worksheet.pdf"
         }
       ]
     },
@@ -2818,7 +2818,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "_posts/2020-07-24-BuildingHornTelescope_Overview.md"
+          "path": "_posts/2020-07-24-building-a-horn-telescope.md"
         }
       ]
     },
@@ -2832,7 +2832,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "_posts/2020-07-24-BuildingHornTelescope_Overview.md"
+          "path": "_posts/2020-07-24-building-a-horn-telescope.md"
         }
       ]
     },
@@ -2860,7 +2860,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "_posts/2021-07-01-spectrometer_w_cal_Instructions.md"
+          "path": "_posts/2020-07-25-running-the-spectrometer.md"
         }
       ]
     },
@@ -2874,7 +2874,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "_posts/2021-07-01-spectrometer_w_cal_Instructions.md"
+          "path": "_posts/2020-07-25-running-the-spectrometer.md"
         }
       ]
     },
@@ -2934,7 +2934,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "_posts/2021-07-01-spectrometer_w_cal_Instructions.md"
+          "path": "_posts/2020-07-25-running-the-spectrometer.md"
         }
       ]
     },
@@ -2948,7 +2948,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/programme/2018-10-16-students-horn-parking-lot.jpg"
+          "path": "images/program/2018-10-16-students-horn-parking-lot.jpg"
         }
       ]
     },
@@ -2962,7 +2962,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/programme/2018-10-24-students-horn-roof.jpg"
+          "path": "images/program/2018-10-24-students-horn-roof.jpg"
         }
       ]
     },
@@ -2976,7 +2976,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/lessons/velocity-curve/horn-introduction.pdf"
+          "path": "assets/worksheets/velocity-curve/horn-introduction.pdf"
         }
       ]
     },
@@ -2990,7 +2990,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/lessons/velocity-curve/horn-introduction-followup.pdf"
+          "path": "assets/worksheets/velocity-curve/horn-introduction-answer-key.pdf"
         }
       ]
     },
@@ -3004,7 +3004,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/lessons/velocity-curve/electromagnetic-spectrum.pdf"
+          "path": "assets/worksheets/velocity-curve/electromagnetic-spectrum.pdf"
         }
       ]
     },
@@ -3046,7 +3046,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/lessons/velocity-curve/stellarium.pdf"
+          "path": "assets/worksheets/velocity-curve/stellarium.pdf"
         }
       ]
     },
@@ -3060,7 +3060,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/lessons/velocity-curve/galactic-plane-observation-1-2018.pdf"
+          "path": "assets/worksheets/velocity-curve/galactic-plane-observation-1-2018.pdf"
         }
       ]
     },
@@ -3074,7 +3074,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/lessons/velocity-curve/galactic-plane-observation-1-conclusions-2018.pdf"
+          "path": "assets/worksheets/velocity-curve/galactic-plane-observation-1-conclusions-2018.pdf"
         }
       ]
     },
@@ -3102,7 +3102,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "assets/lessons/electromagnetic-spectrum/visible-colors.jpg"
+          "path": "images/electromagnetic-spectrum/visible-colors.jpg"
         }
       ]
     },
@@ -3176,7 +3176,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/programme/2018-10-16-students-horn-parking-lot.jpg"
+          "path": "images/program/2018-10-16-students-horn-parking-lot.jpg"
         }
       ]
     },
@@ -3190,7 +3190,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "images/programme/2018-10-24-students-horn-roof.jpg"
+          "path": "images/program/2018-10-24-students-horn-roof.jpg"
         }
       ]
     },

@@ -1,0 +1,1088 @@
+---
+# Keep the notebook separate: its Bootstrap styles conflict with the site layout.
+layout: null
+permalink: /iq/
+sitemap: false
+---
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8" />
+{% if page.noindex or site.noindex_all %}<meta name="robots" content="noindex" />{% endif %}
+<title>I/Q Quadrature Sampling Notebook · DSPIRA</title>
+<meta name="description" content="Explore I/Q quadrature sampling with a Python notebook. Simulate mixing, filtering, and receiver imbalance for radio astronomy signals." />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+
+
+<link rel="stylesheet" href="{{ '/css/iq-notebook.css' | relative_url }}" />
+<style type="text/css">
+    .highlight .hll { background-color: #ffffcc }
+.highlight  { background: #f8f8f8; }
+.highlight .c { color: #408080; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #008000; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #BC7A00 } /* Comment.Preproc */
+.highlight .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+.highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0044DD } /* Generic.Traceback */
+.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #008000 } /* Keyword.Pseudo */
+.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #B00040 } /* Keyword.Type */
+.highlight .m { color: #666666 } /* Literal.Number */
+.highlight .s { color: #BA2121 } /* Literal.String */
+.highlight .na { color: #7D9029 } /* Name.Attribute */
+.highlight .nb { color: #008000 } /* Name.Builtin */
+.highlight .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.highlight .no { color: #880000 } /* Name.Constant */
+.highlight .nd { color: #AA22FF } /* Name.Decorator */
+.highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #0000FF } /* Name.Function */
+.highlight .nl { color: #A0A000 } /* Name.Label */
+.highlight .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #19177C } /* Name.Variable */
+.highlight .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mb { color: #666666 } /* Literal.Number.Bin */
+.highlight .mf { color: #666666 } /* Literal.Number.Float */
+.highlight .mh { color: #666666 } /* Literal.Number.Hex */
+.highlight .mi { color: #666666 } /* Literal.Number.Integer */
+.highlight .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
+.highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #BA2121 } /* Literal.String.Double */
+.highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.highlight .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.highlight .sx { color: #008000 } /* Literal.String.Other */
+.highlight .sr { color: #BB6688 } /* Literal.String.Regex */
+.highlight .s1 { color: #BA2121 } /* Literal.String.Single */
+.highlight .ss { color: #19177C } /* Literal.String.Symbol */
+.highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #19177C } /* Name.Variable.Class */
+.highlight .vg { color: #19177C } /* Name.Variable.Global */
+.highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
+    </style>
+<style type="text/css">
+    
+/* Temporary definitions which will become obsolete with Notebook release 5.0 */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-bold { font-weight: bold; }
+
+    </style>
+
+
+<style type="text/css">
+/* Overrides of notebook CSS for static HTML export */
+body {
+  overflow: visible;
+  padding: 8px;
+}
+
+div#notebook {
+  overflow: visible;
+  border-top: none;
+}
+
+@media print {
+  div.cell {
+    display: block;
+    page-break-inside: avoid;
+  } 
+  div.output_wrapper { 
+    display: block;
+    page-break-inside: avoid; 
+  }
+  div.output { 
+    display: block;
+    page-break-inside: avoid; 
+  }
+}
+</style>
+
+<!-- nbconvert emits a link to an optional per-user custom.css here. There has
+     never been one in this repo, so the link only bought a 404 on every load
+     of the page. If the notebook is ever re-exported, drop the link again. -->
+
+<!-- Loading mathjax macro -->
+<!-- Load mathjax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS_HTML"></script>
+    <!-- MathJax configuration -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        showProcessingMessages: false,
+        messageStyle: "none",
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        // Center justify equations in code and markdown cells. Elsewhere
+        // we use CSS to left justify single line equations in code cells.
+        displayAlign: 'center',
+        "HTML-CSS": {
+            styles: {'.MathJax_Display': {"margin": 0}},
+            linebreaks: { automatic: true }
+        }
+    });
+    </script>
+    <!-- End of mathjax configuration -->
+<style>
+/* Five colours from this file's own inlined Pygments and nbconvert stylesheets
+   miss WCAG AA on the background they are painted on - comments at 4.25:1,
+   string interpolation at 3.65:1, escapes at 3.89:1, operator words at 4.47:1,
+   and the Out[n] prompt at 4.44:1, all against a 4.5:1 minimum. Every one is a
+   near miss, which is the usual story with a default syntax palette.
+
+   Darkened just enough to pass, keeping each hue and saturation so the
+   highlighting still reads the way the notebook intended. Ratios after:
+   4.66, 4.61, 4.63, 4.62 and 4.61.
+
+   This block must come after the generated stylesheets above, which is why it
+   is here rather than in the site CSS - and this page does not load the site
+   CSS at all, by design. tools/check_contrast.py notices if a re-export drops
+   it. */
+.highlight .c1 { color: #3d7979; }
+.highlight .si { color: #b14f76; }
+.highlight .se { color: #a95c1f; }
+.highlight .ow { color: #a71bff; }
+div.output_prompt, div.prompt.output_prompt { color: #d34215; }
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LearningResource", "name": "I/Q Quadrature Sampling Notebook · DSPIRA", "description": "Explore I/Q quadrature sampling with a Python notebook. Simulate mixing, filtering, and receiver imbalance for radio astronomy signals.", "inLanguage": "en-US", "learningResourceType": "Notebook"}</script>
+<style>
+.notebook-skip { position: absolute; left: -10000px; }
+.notebook-skip:focus { position: fixed; left: 12px; top: 12px; z-index: 10000; padding: 12px; background: #fff; color: #002855; }
+#notebook-container { max-width: 100%; box-sizing: border-box; }
+div.inner_cell { min-width: 0; }
+.MathJax_Display { max-width: 100%; overflow-x: auto; overflow-y: hidden; }
+.anchor-link { display: inline-block; min-width: 24px; min-height: 24px; text-align: center; }
+</style>
+<link rel="canonical" href="{{ page.url | absolute_url }}" />
+<meta property="og:title" content="I/Q Quadrature Sampling Notebook · DSPIRA" />
+<meta property="og:description" content="Explore I/Q quadrature sampling with a Python notebook. Simulate mixing, filtering, and receiver imbalance for radio astronomy signals." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="{{ page.url | absolute_url }}" />
+<meta property="og:image" content="{{ '/images/branding/social-card.png' | absolute_url }}" />
+<meta property="og:image:alt" content="DSPIRA - Digital Signal Processing in Radio Astronomy" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="{{ '/favicon-wvu.ico' | relative_url }}" sizes="any">
+</head>
+<body>
+<a class="notebook-skip" href="#notebook">Skip to main content</a>
+<div role="navigation" aria-label="Notebook navigation" style="position:sticky;top:0;z-index:9999;background:#04070e;
+     border-bottom:1px solid rgba(255,255,255,.1);padding:12px 20px;
+     font:500 14px/1 -apple-system,'Segoe UI',sans-serif">
+  <a href="{{ '/' | relative_url }}" style="color:#eaaa00;text-decoration:none">&larr; DSPIRA lessons</a>
+  <span style="color:#7b8698;margin-left:14px">I/Q quadrature sampling</span>
+</div>
+
+  <div role="main" tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="IQ-Mixing---Quadrature-Signals">IQ Mixing - Quadrature Signals<a class="anchor-link" aria-label="Link to IQ Mixing - Quadrature Signals" href="#IQ-Mixing---Quadrature-Signals">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><code><span></span><span class="o">%</span><span class="k">matplotlib</span> notebook
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">matplotlib.pyplot</span> <span class="k">import</span> <span class="o">*</span>
+</code></pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="We'll-Simulate-IQ-sampling-at-200MHz,-with-an-LO-at-1.4GHz-and-inputs-signals-at-1.42-and-1.38GHz.--An-Airspy-is-the-same,-only-sampling-at-5-MHz.">We'll simulate I/Q sampling at 200 MHz with a 1.4 GHz LO. Input signals are at 1.42 and 1.38 GHz.  An Airspy is the same, only sampling at 5 MHz.<a class="anchor-link" aria-label="Link to We'll simulate I/Q sampling at 200 MHz with a 1.4 GHz LO. Input signals are at 1.42 and 1.38 GHz.  An Airspy is the same, only sampling at 5 MHz." href="#We'll-Simulate-IQ-sampling-at-200MHz,-with-an-LO-at-1.4GHz-and-inputs-signals-at-1.42-and-1.38GHz.--An-Airspy-is-the-same,-only-sampling-at-5-MHz.">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><code><span></span><span class="c1"># Setup constants</span>
+<span class="n">Nx</span> <span class="o">=</span> <span class="mi">65536</span>  <span class="c1">#Large number of samples</span>
+<span class="n">Fs</span> <span class="o">=</span> <span class="mi">200</span><span class="n">e6</span>  <span class="c1">#Sampling frequency</span>
+<span class="n">Flo</span> <span class="o">=</span> <span class="mf">1.4e9</span> <span class="c1">#Frequency &#39;tuned&#39; to.</span>
+<span class="n">F1</span> <span class="o">=</span> <span class="mf">1.42e9</span> <span class="c1"># Input tone we&#39;re trying to listen to</span>
+<span class="n">F2</span> <span class="o">=</span> <span class="mf">1.38e9</span> <span class="c1"># other tone we&#39;re trying to listen to</span>
+<span class="n">fs_rf</span> <span class="o">=</span> <span class="mi">12</span><span class="n">e9</span> <span class="c1"># Frequency running simulation at.</span>
+<span class="n">freq</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">fftfreq</span><span class="p">(</span><span class="n">Nx</span><span class="p">,</span><span class="mf">1.0</span><span class="o">/</span><span class="p">(</span><span class="n">fs_rf</span><span class="o">/</span><span class="mi">1</span><span class="n">e6</span><span class="p">))</span>
+<span class="n">signal1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mf">2.0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">F1</span><span class="o">/</span><span class="n">fs_rf</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">Nx</span><span class="p">))</span><span class="c1"># + 0.03)  # make the 1.42MHz tone</span>
+<span class="n">signal2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mf">2.0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">F2</span><span class="o">/</span><span class="n">fs_rf</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">Nx</span><span class="p">))</span><span class="c1"># + 0.05 ) # make the 1.38MHz tone</span>
+<span class="n">signal_loI</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mf">2.0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">Flo</span><span class="o">/</span><span class="n">fs_rf</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">Nx</span><span class="p">)</span> <span class="p">)</span> <span class="c1">#make the signal from the receiver to &#39;tune&#39;</span>
+<span class="n">signal_loQ</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mf">2.0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">Flo</span><span class="o">/</span><span class="n">fs_rf</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">Nx</span><span class="p">)</span> <span class="p">)</span> <span class="c1">#make the signal from the receiver to &#39;tune&#39;</span>
+</code></pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><code><span></span><span class="c1">#Plot the 2 incoming tones.</span>
+<span class="n">figure</span><span class="p">()</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">signal1</span><span class="p">[:</span><span class="mi">50</span><span class="p">])</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">signal2</span><span class="p">[:</span><span class="mi">50</span><span class="p">])</span>
+</code></pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+
+
+
+<div id="b4c7b84b-46c7-4aa4-8084-330009d30564"></div>
+<div class="output_subarea output_javascript ">
+
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+
+<div class="output_html rendered_html output_subarea ">
+<img loading="lazy" decoding="async" width="640" height="480" src="{{ '/images/iq/figure-01.png' | relative_url }}" alt="First 50 samples of the 1.42 GHz (blue) and 1.38 GHz (green) input tones: two near-identical cosines of amplitude 1 that slowly drift apart in phase">
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt output_prompt">Out[3]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><samp>[&lt;matplotlib.lines.Line2D at 0x10cdf4828&gt;]</samp></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><code><span></span><span class="c1"># Put the input signals into the Receiver for Mixing, where multiply by a cosine and a sine</span>
+<span class="n">mixed1I</span> <span class="o">=</span> <span class="n">signal1</span> <span class="o">*</span> <span class="n">signal_loI</span>
+<span class="n">mixed1Q</span> <span class="o">=</span> <span class="n">signal1</span> <span class="o">*</span> <span class="n">signal_loQ</span>
+<span class="n">mixed2I</span> <span class="o">=</span> <span class="n">signal2</span> <span class="o">*</span> <span class="n">signal_loI</span>
+<span class="n">mixed2Q</span> <span class="o">=</span> <span class="n">signal2</span> <span class="o">*</span> <span class="n">signal_loQ</span>
+</code></pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Trig-product-to-sum-rules:">Trig product to sum rules:<a class="anchor-link" aria-label="Link to Trig product to sum rules:" href="#Trig-product-to-sum-rules:">&#182;</a></h2>$$ cos(a) cos(b) = cos(a+b) + cos(a-b) $$$$ cos(a) sin(b) = sin(a+b) - sin(a-b) $$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><code><span></span><span class="c1"># Observer that we now have both the &#39;slow&#39; 20 MHz (difference) and fast ~2.8GHz signals</span>
+<span class="n">figure</span><span class="p">()</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">mixed1I</span><span class="p">[:</span><span class="mi">500</span><span class="p">])</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">mixed1Q</span><span class="p">[:</span><span class="mi">500</span><span class="p">])</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">mixed2I</span><span class="p">[:</span><span class="mi">500</span><span class="p">])</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">mixed2Q</span><span class="p">[:</span><span class="mi">500</span><span class="p">])</span>
+</code></pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+
+
+
+<div id="3ac947f1-82a0-4bb4-9c64-07484a028331"></div>
+<div class="output_subarea output_javascript ">
+
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+
+<div class="output_html rendered_html output_subarea ">
+<img loading="lazy" decoding="async" width="640" height="480" src="{{ '/images/iq/figure-02.png' | relative_url }}" alt="First 500 samples of the four mixer outputs (I and Q for each tone): a dense 2.8 GHz oscillation riding inside a slow 20 MHz envelope">
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt output_prompt">Out[5]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><samp>[&lt;matplotlib.lines.Line2D at 0x105c62208&gt;]</samp></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><code><span></span><span class="c1">#Observe just the &quot;I&quot; output has 2 positive and 2 negative tones visible(low freq hard to see there are 2)</span>
+<span class="c1">#after mixing the &#39;zero&#39; is relative to the &quot;LO&quot; or receiver tuned frequency.</span>
+<span class="n">figure</span><span class="p">()</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">fft</span><span class="p">(</span><span class="n">mixed1I</span><span class="p">)))</span>
+</code></pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+
+
+
+<div id="ea4a90e3-b2e4-4523-a1e1-e2d4508ed249"></div>
+<div class="output_subarea output_javascript ">
+
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+
+<div class="output_html rendered_html output_subarea ">
+<img loading="lazy" decoding="async" width="640" height="480" src="{{ '/images/iq/figure-03.png' | relative_url }}" alt="Spectrum of the I mixer output, -6000 to 6000 MHz: sum tones near -2800 and +2800 MHz and the -20 and +20 MHz difference tones merged into one line at 0">
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt output_prompt">Out[6]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><samp>[&lt;matplotlib.lines.Line2D at 0x10fcda080&gt;]</samp></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><code><span></span><span class="c1"># Hard fourier cutoff lowpass filter.  This is the same as a &#39;rectangular&#39; window in fourier space.</span>
+<span class="c1"># This would usually be an analog filter of some kind in the receiver.</span>
+<span class="n">figure</span><span class="p">()</span>
+<span class="n">N_cutoff</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">Fs</span><span class="o">/</span><span class="n">fs_rf</span><span class="o">*</span><span class="n">Nx</span><span class="p">)</span>
+<span class="n">signals</span> <span class="o">=</span> <span class="p">[</span><span class="n">mixed1I</span><span class="p">,</span> <span class="n">mixed1Q</span><span class="p">,</span> <span class="n">mixed2I</span><span class="p">,</span> <span class="n">mixed2Q</span><span class="p">]</span>
+<span class="n">filtered_signals</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1">#Now can observe there are only the &#39;low frequency&#39; positive and negative 20MHz tones</span>
+
+<span class="k">for</span> <span class="n">signal</span> <span class="ow">in</span> <span class="n">signals</span><span class="p">:</span>
+    <span class="n">fsignal</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">fft</span><span class="p">(</span><span class="n">signal</span><span class="p">)</span>
+    <span class="n">fsignal</span><span class="p">[</span><span class="n">N_cutoff</span><span class="p">:</span><span class="o">-</span><span class="n">N_cutoff</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="n">plot</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span> <span class="nb">abs</span><span class="p">(</span><span class="n">fsignal</span><span class="p">))</span>
+    <span class="n">filtered_signals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">ifft</span><span class="p">(</span><span class="n">fsignal</span><span class="p">))</span>
+    
+<span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">)</span>
+</code></pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+
+
+
+<div id="8d6c3986-f801-43ff-8297-f7d478c97bc5"></div>
+<div class="output_subarea output_javascript ">
+
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+
+<div class="output_html rendered_html output_subarea ">
+<img loading="lazy" decoding="async" width="640" height="480" src="{{ '/images/iq/figure-04.png' | relative_url }}" alt="Spectra of the four mixer outputs after a hard low-pass cutoff, -200 to 200 MHz: only two sharp peaks remain, at -20 and +20 MHz; all four traces overlap">
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt output_prompt">Out[7]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><samp>(-200, 200)</samp></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><code><span></span><span class="c1"># Observer the timeseries again.  Now only have the &#39;slow&#39; frequencies</span>
+<span class="c1"># Notice however there are now 2 totally in phase, and 2 180 out of phase.  </span>
+<span class="n">figure</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">signal</span> <span class="ow">in</span> <span class="n">filtered_signals</span><span class="p">:</span>
+    <span class="n">plot</span><span class="p">(</span><span class="n">signal</span><span class="p">[</span><span class="mi">500</span><span class="p">:</span><span class="mi">1000</span><span class="p">])</span>
+</code></pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+
+
+
+<div id="36cb0edb-d4d3-4ac4-acfd-f70593d58594"></div>
+<div class="output_subarea output_javascript ">
+
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+
+<div class="output_html rendered_html output_subarea ">
+<img loading="lazy" decoding="async" width="640" height="480" src="{{ '/images/iq/figure-05.png' | relative_url }}" alt="Samples 500 to 1000 of the four filtered signals: smooth 20 MHz sine waves of amplitude 0.5; the I traces coincide, the Q traces are mirror images">
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stderr output_text">
+<pre><samp>/Users/kbandura/anaconda/envs/py3/lib/python3.5/site-packages/numpy/core/numeric.py:482: ComplexWarning: Casting complex values to real discards the imaginary part
+  return array(a, dtype, copy=False, order=order)
+</samp></pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><code><span></span><span class="c1"># &quot;I&quot; part is exactly the same for both the 1.38 and 1.42GHz signals</span>
+<span class="n">figure</span><span class="p">()</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">filtered_signals</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">500</span><span class="p">:</span><span class="mi">1000</span><span class="p">])</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">filtered_signals</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">500</span><span class="p">:</span><span class="mi">1000</span><span class="p">])</span>
+</code></pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+
+
+
+<div id="8c909e4a-6439-43f2-a619-dde1a7cfed76"></div>
+<div class="output_subarea output_javascript ">
+
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+
+<div class="output_html rendered_html output_subarea ">
+<img loading="lazy" decoding="async" width="640" height="480" src="{{ '/images/iq/figure-06.png' | relative_url }}" alt="Samples 500 to 1000 of the filtered I outputs for the 1.38 and 1.42 GHz tones: the two traces lie exactly on top of each other as one sine wave">
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stderr output_text">
+<pre><samp>/Users/kbandura/anaconda/envs/py3/lib/python3.5/site-packages/numpy/core/numeric.py:482: ComplexWarning: Casting complex values to real discards the imaginary part
+  return array(a, dtype, copy=False, order=order)
+</samp></pre>
+</div>
+</div>
+
+<div class="output_area"><div class="prompt output_prompt">Out[9]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><samp>[&lt;matplotlib.lines.Line2D at 0x110b023c8&gt;]</samp></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><code><span></span><span class="c1"># &quot;Q&quot; part is exactly 180 out of phase for the 1.38 and 1.42GHz signals</span>
+<span class="n">figure</span><span class="p">()</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">filtered_signals</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">500</span><span class="p">:</span><span class="mi">1000</span><span class="p">])</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">filtered_signals</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">500</span><span class="p">:</span><span class="mi">1000</span><span class="p">])</span>
+</code></pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+
+
+
+<div id="43bbcaac-5628-4cb9-8510-6947bad010db"></div>
+<div class="output_subarea output_javascript ">
+
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+
+<div class="output_html rendered_html output_subarea ">
+<img loading="lazy" decoding="async" width="640" height="480" src="{{ '/images/iq/figure-07.png' | relative_url }}" alt="Samples 500 to 1000 of the filtered Q outputs for the 1.38 and 1.42 GHz tones: two sine waves that are exact mirror images, 180 degrees out of phase">
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stderr output_text">
+<pre><samp>/Users/kbandura/anaconda/envs/py3/lib/python3.5/site-packages/numpy/core/numeric.py:482: ComplexWarning: Casting complex values to real discards the imaginary part
+  return array(a, dtype, copy=False, order=order)
+</samp></pre>
+</div>
+</div>
+
+<div class="output_area"><div class="prompt output_prompt">Out[10]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><samp>[&lt;matplotlib.lines.Line2D at 0x110b4b438&gt;]</samp></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><code><span></span><span class="c1"># Make the &#39;complex&#39; signal I - j*Q.  </span>
+<span class="c1">#</span>
+<span class="n">s1</span> <span class="o">=</span> <span class="n">filtered_signals</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mf">1.0</span><span class="n">j</span><span class="o">*</span><span class="n">filtered_signals</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">s2</span> <span class="o">=</span> <span class="n">filtered_signals</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="mf">1.0</span><span class="n">j</span><span class="o">*</span><span class="n">filtered_signals</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+</code></pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><code><span></span><span class="c1"># Now can just take the fourier transform of the IQ quadrature signal we&#39;ve just created and recover the &#39;original&#39; </span>
+<span class="c1"># spectrum shifted down by 1.4GHz.</span>
+<span class="c1"># 0 Frequency corresponds to 1.4GHz.  -20MHz is 1.38GHz, 20MHz is 1.42GHz.</span>
+<span class="n">figure</span><span class="p">()</span>
+<span class="n">freq</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">fftfreq</span><span class="p">(</span><span class="n">Nx</span><span class="p">,</span><span class="mf">1.0</span><span class="o">/</span><span class="p">(</span><span class="n">fs_rf</span><span class="o">/</span><span class="mi">1</span><span class="n">e6</span><span class="p">))</span>
+<span class="n">slices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1092</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">Nx</span><span class="o">-</span><span class="mi">1092</span><span class="p">,</span><span class="n">Nx</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">slices</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">freq</span><span class="p">[</span><span class="n">slices</span><span class="p">],</span><span class="mi">20</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">fft</span><span class="p">(</span><span class="n">s1</span><span class="p">))[</span><span class="n">slices</span><span class="p">]))</span>
+<span class="c1">#Can recover just the +20MHz signal</span>
+</code></pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+
+
+
+<div id="e69b024b-3070-4405-901e-6dcf9e84cc68"></div>
+<div class="output_subarea output_javascript ">
+
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+
+<div class="output_html rendered_html output_subarea ">
+<img loading="lazy" decoding="async" width="640" height="480" src="{{ '/images/iq/figure-08.png' | relative_url }}" alt="Spectrum in dB of the complex I minus jQ signal for the 1.42 GHz tone, -200 to 200 MHz: a single sharp peak at +20 MHz near 90 dB and nothing at -20 MHz">
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre><samp>[    0     1     2 ..., 65533 65534 65535]
+</samp></pre>
+</div>
+</div>
+
+<div class="output_area"><div class="prompt output_prompt">Out[16]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><samp>[&lt;matplotlib.lines.Line2D at 0x111629048&gt;]</samp></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><code><span></span><span class="c1">#Can recover just the -20MHz signal.</span>
+<span class="n">figure</span><span class="p">()</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">freq</span><span class="p">[</span><span class="n">slices</span><span class="p">],</span><span class="mi">20</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">fft</span><span class="p">(</span><span class="n">s2</span><span class="p">))[</span><span class="n">slices</span><span class="p">]))</span>
+</code></pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+
+
+
+<div id="c6f74b0d-5393-4ad7-986c-4f48d547e71b"></div>
+<div class="output_subarea output_javascript ">
+
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+
+<div class="output_html rendered_html output_subarea ">
+<img loading="lazy" decoding="async" width="640" height="480" src="{{ '/images/iq/figure-09.png' | relative_url }}" alt="Spectrum in dB of the complex I minus jQ signal for the 1.38 GHz tone, -200 to 200 MHz: a single sharp peak at -20 MHz near 90 dB and nothing at +20 MHz">
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt output_prompt">Out[17]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><samp>[&lt;matplotlib.lines.Line2D at 0x111db3dd8&gt;]</samp></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="I-Q-imbalance">I Q imbalance<a class="anchor-link" aria-label="Link to I Q imbalance" href="#I-Q-imbalance">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><code><span></span><span class="c1">#Of course the I and Q pass through different analog filters/amplifiers/mixers and ADC</span>
+<span class="c1"># The I and Q signal will be off by a bit.  </span>
+
+<span class="c1">#Let&#39;s simulate that.</span>
+<span class="n">imbalanced</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.99</span><span class="o">*</span><span class="n">signal1</span> <span class="o">*</span> <span class="n">signal_loI</span><span class="p">,</span> <span class="n">signal1</span> <span class="o">*</span> <span class="n">signal_loQ</span><span class="p">,</span> <span class="mf">0.99</span><span class="o">*</span><span class="n">signal2</span> <span class="o">*</span> <span class="n">signal_loI</span><span class="p">,</span> <span class="n">signal2</span> <span class="o">*</span> <span class="n">signal_loQ</span><span class="p">]</span>
+ 
+</code></pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><code><span></span><span class="c1">#Filter and plot the unbalanced signals.  Not obviously different...</span>
+<span class="n">figure</span><span class="p">()</span>
+<span class="n">filtered_signals_imbalanced</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">signal</span> <span class="ow">in</span> <span class="n">imbalanced</span><span class="p">:</span>
+    <span class="n">fsignal</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">fft</span><span class="p">(</span><span class="n">signal</span><span class="p">)</span>
+    <span class="n">fsignal</span><span class="p">[</span><span class="n">N_cutoff</span><span class="p">:</span><span class="o">-</span><span class="n">N_cutoff</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="n">plot</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span> <span class="nb">abs</span><span class="p">(</span><span class="n">fsignal</span><span class="p">))</span>
+    <span class="n">filtered_signals_imbalanced</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">ifft</span><span class="p">(</span><span class="n">fsignal</span><span class="p">))</span>
+<span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">)</span>
+</code></pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+
+
+
+<div id="b1ae54c5-1a59-4565-9f55-873cad8d33a7"></div>
+<div class="output_subarea output_javascript ">
+
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+
+<div class="output_html rendered_html output_subarea ">
+<img loading="lazy" decoding="async" width="640" height="480" src="{{ '/images/iq/figure-10.png' | relative_url }}" alt="Spectra of the four imbalanced mixer outputs after low-pass filtering, -200 to 200 MHz: peaks at -20 and +20 MHz, no different from the balanced case">
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt output_prompt">Out[19]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><samp>(-200, 200)</samp></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><code><span></span><span class="c1"># Also un-noticeable in the time domain.</span>
+<span class="n">figure</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">signal</span> <span class="ow">in</span> <span class="n">filtered_signals_imbalanced</span><span class="p">:</span>
+    <span class="n">plot</span><span class="p">(</span><span class="n">signal</span><span class="p">[</span><span class="mi">500</span><span class="p">:</span><span class="mi">1000</span><span class="p">])</span>
+</code></pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+
+
+
+<div id="b18f7d53-613a-4e83-b71b-a6d6b3dbce78"></div>
+<div class="output_subarea output_javascript ">
+
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+
+<div class="output_html rendered_html output_subarea ">
+<img loading="lazy" decoding="async" width="640" height="480" src="{{ '/images/iq/figure-11.png' | relative_url }}" alt="Samples 500 to 1000 of the four imbalanced filtered signals: 20 MHz sine waves of amplitude about 0.5 that look identical to the balanced case">
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stderr output_text">
+<pre><samp>/Users/kbandura/anaconda/envs/py3/lib/python3.5/site-packages/numpy/core/numeric.py:482: ComplexWarning: Casting complex values to real discards the imaginary part
+  return array(a, dtype, copy=False, order=order)
+</samp></pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><code><span></span><span class="c1"># Create &#39;complex&#39; IQ sampling output again.  Rember this is what an SDR dongle</span>
+<span class="c1">#gives as an output for processing by GNU Radio.</span>
+<span class="n">s1im</span> <span class="o">=</span> <span class="n">filtered_signals_imbalanced</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mf">1.0</span><span class="n">j</span><span class="o">*</span><span class="n">filtered_signals_imbalanced</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">s2im</span> <span class="o">=</span> <span class="n">filtered_signals_imbalanced</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="mf">1.0</span><span class="n">j</span><span class="o">*</span><span class="n">filtered_signals_imbalanced</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+</code></pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><code><span></span><span class="c1"># Now what should be a pure tone at 20MHz also has a small one at -20MHz.  This is non-ideal when trying to measure a pure signal.  </span>
+<span class="n">figure</span><span class="p">()</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">freq</span><span class="p">[</span><span class="n">slices</span><span class="p">],</span><span class="mi">20</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">fft</span><span class="p">(</span><span class="n">s1im</span><span class="p">))[</span><span class="n">slices</span><span class="p">]))</span>
+</code></pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+
+
+
+<div id="83191b86-cb79-4ded-8646-8d524794bbe1"></div>
+<div class="output_subarea output_javascript ">
+
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+
+<div class="output_html rendered_html output_subarea ">
+<img loading="lazy" decoding="async" width="640" height="480" src="{{ '/images/iq/figure-12.png' | relative_url }}" alt="Spectrum in dB of the imbalanced complex signal for the 1.42 GHz tone: the main peak at +20 MHz near 90 dB plus a small image spur at -20 MHz near 44 dB">
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt output_prompt">Out[22]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><samp>[&lt;matplotlib.lines.Line2D at 0x112e60ba8&gt;]</samp></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><code><span></span><span class="c1">#Same for the -20MHz.  </span>
+<span class="n">figure</span><span class="p">()</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">freq</span><span class="p">[</span><span class="n">slices</span><span class="p">],</span><span class="mi">20</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">fft</span><span class="p">(</span><span class="n">s2im</span><span class="p">))[</span><span class="n">slices</span><span class="p">]))</span>
+</code></pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+
+
+
+<div id="873b7aec-09ba-4ab9-ba65-a31dde1ed5d0"></div>
+<div class="output_subarea output_javascript ">
+
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+
+<div class="output_html rendered_html output_subarea ">
+<img loading="lazy" decoding="async" width="640" height="480" src="{{ '/images/iq/figure-13.png' | relative_url }}" alt="Spectrum in dB of the imbalanced complex signal for the 1.38 GHz tone: the main peak at -20 MHz near 90 dB plus a small image spur at +20 MHz near 44 dB">
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt output_prompt">Out[23]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre><samp>[&lt;matplotlib.lines.Line2D at 0x112ebf2b0&gt;]</samp></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+
+    </div>
+  </div>
+</body>
+</html>
