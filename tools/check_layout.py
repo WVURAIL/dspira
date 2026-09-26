@@ -66,7 +66,7 @@ ALLOW = {
     # header, footer and every button — so this is theirs to have, and fixing it
     # would mean editing generated output that gets regenerated.
     "/iq/index.html": "inlined Bootstrap 3 container, 8px at ~768px",
-    "/code/gbt_drift/gbt_rendered_2017.html": "inlined Bootstrap 3 container, 8px at ~768px",
+    "/lesson-examples/gbt-drift/gbt_rendered_2017.html": "inlined Bootstrap 3 container, 8px at ~768px",
 }
 
 # Every page gets these. Real phones, tablets and laptops.

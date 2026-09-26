@@ -49,6 +49,13 @@ gnuradio-companion
 The folder must exist and be writable. Older downloaded applications may still contain someone else's output path.
 Check the [recording instructions]({{ '/HornOperation_runningSpectrometer' | relative_url }}) before collecting data.
 
+## Process recorded observations
+
+The software download includes a `data-processing` folder for calibration, mapping, CSV export, and power plots.
+Follow the [Observations lesson]({{ '/Observations/' | relative_url }}) for the analysis workflow.
+The [processing guide](https://github.com/WVURAIL/dspira-software/tree/main/data-processing) lists Python dependencies and commands.
+These scripts can process saved files without GNU Radio installed.
+
 ## Additional and experimental applications
 
 The ZIP also contains two interferometers and four experimental lightning detectors.

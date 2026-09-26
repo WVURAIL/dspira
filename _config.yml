@@ -67,7 +67,7 @@ plugins:
 # Both exported notebooks have front matter, conditional noindex for preview
 # builds, and sitemap: false. Keep those fields when regenerating the exports.
 
-# The READMEs under code/, tools/ and images/program/ carry no front matter,
+# The READMEs under lesson-examples/ carry no front matter,
 # so the github-pages gem's own plugins publish them: as pages
 # (optional-front-matter), at their directory's index (readme-index), in the
 # `page` layout (default-layout), titled from their opening "# Heading"

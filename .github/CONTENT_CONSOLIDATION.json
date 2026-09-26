@@ -172,7 +172,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "code/gbt_drift/gbt_drift_scan.ipynb"
+          "path": "lesson-examples/gbt-drift/gbt_drift_scan.ipynb"
         }
       ]
     },
@@ -186,7 +186,7 @@
       "destinations": [
         {
           "repository": "dspira",
-          "path": "code/gbt_drift/gbt_drift_scan.ipynb"
+          "path": "lesson-examples/gbt-drift/gbt_drift_scan.ipynb"
         }
       ]
     },
@@ -2565,8 +2565,8 @@
       "reason": "Identical file bytes already exist in an active repository.",
       "destinations": [
         {
-          "repository": "dspira",
-          "path": "code/observations/az_el2gal.py"
+          "repository": "dspira-software",
+          "path": "data-processing/az_el2gal.py"
         }
       ]
     },
@@ -2579,8 +2579,8 @@
       "reason": "Current observation scripts include subsequent calibration, input-validation, plotting, or pointing fixes.",
       "destinations": [
         {
-          "repository": "dspira",
-          "path": "code/observations/convert_to_temperature.py"
+          "repository": "dspira-software",
+          "path": "data-processing/convert_to_temperature.py"
         }
       ]
     },
@@ -2593,8 +2593,8 @@
       "reason": "Current observation scripts include subsequent calibration, input-validation, plotting, or pointing fixes.",
       "destinations": [
         {
-          "repository": "dspira",
-          "path": "code/observations/hdf5_to_csv.py"
+          "repository": "dspira-software",
+          "path": "data-processing/hdf5_to_csv.py"
         }
       ]
     },
@@ -2607,8 +2607,8 @@
       "reason": "Current observation scripts include subsequent calibration, input-validation, plotting, or pointing fixes.",
       "destinations": [
         {
-          "repository": "dspira",
-          "path": "code/observations/map_from_csv.py"
+          "repository": "dspira-software",
+          "path": "data-processing/map_from_csv.py"
         }
       ]
     },
@@ -2621,8 +2621,8 @@
       "reason": "Current observation scripts include subsequent calibration, input-validation, plotting, or pointing fixes.",
       "destinations": [
         {
-          "repository": "dspira",
-          "path": "code/observations/map_h1_hdf5_drift.py"
+          "repository": "dspira-software",
+          "path": "data-processing/map_h1_hdf5_drift.py"
         }
       ]
     },
@@ -2635,8 +2635,8 @@
       "reason": "Current observation scripts include subsequent calibration, input-validation, plotting, or pointing fixes.",
       "destinations": [
         {
-          "repository": "dspira",
-          "path": "code/observations/plot_total_power.py"
+          "repository": "dspira-software",
+          "path": "data-processing/plot_total_power.py"
         }
       ]
     },

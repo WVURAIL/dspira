@@ -14,7 +14,7 @@ Start with the DSPIRA website for lessons and downloads. Contributors can use th
 | Repository | What belongs there |
 | --- | --- |
 | [dspira](https://github.com/WVURAIL/dspira) | Lessons, worksheets, teacher guides, and the educational website |
-| [dspira-software](https://github.com/WVURAIL/dspira-software) | Classroom applications and all DSPIRA processing blocks |
+| [dspira-software](https://github.com/WVURAIL/dspira-software) | Classroom applications, DSPIRA processing blocks, and observation-processing scripts |
 | [radio-research-software](https://github.com/WVURAIL/radio-research-software) | Research acquisition, event detection, and transient experiments |
 | [dspira-hardware](https://github.com/WVURAIL/dspira-hardware) | Schematics, board layouts, and fabrication files |
 | [lightwork](https://github.com/WVURAIL/lightwork) | Numbered technical memos |

@@ -19,7 +19,7 @@ the other. This lesson explains convolution, autocorrelation, and cross-correlat
 
 It was written by **Pranav Sanghavi** at this lab in 2018. Everything here can
 be run yourself: the notebook is at
-[`code/interferometry/`](https://github.com/WVURAIL/dspira/tree/main/code/interferometry)
+[`lesson-examples/interferometry/`](https://github.com/WVURAIL/dspira/tree/main/lesson-examples/interferometry)
 and needs nothing but `numpy`, `scipy` and `matplotlib`.
 
 <!-- TOC -->

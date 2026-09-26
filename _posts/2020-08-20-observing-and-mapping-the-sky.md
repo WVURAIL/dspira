@@ -23,8 +23,9 @@ summer workshop, and it is the command-line route through the data.
 > It uses student handouts and a spreadsheet instead of Python. Same physics, different audience. Read that one
 > if you are teaching this to a class; read this one if you want the pipeline.
 
-The scripts are in [`code/observations/`](https://github.com/WVURAIL/dspira/tree/main/code/observations).
-The [README](https://github.com/WVURAIL/dspira/blob/main/code/observations/README.md) explains installation and each script's output.
+The [observation-processing scripts](https://github.com/WVURAIL/dspira-software/tree/main/data-processing) are maintained in DSPIRA software.
+The [processing guide](https://github.com/WVURAIL/dspira-software/blob/main/data-processing/README.md) explains installation and each script's output.
+Download [DSPIRA software](https://github.com/WVURAIL/dspira-software/archive/refs/heads/main.zip), then open its `data-processing` folder for the commands below.
 
 ---
 
@@ -258,7 +259,7 @@ its mass in the visible disc would give you.**
 The 2017 DSPIRA cohort connected their new spectrometer to the **Green Bank Telescope**. They recorded a 24-hour drift scan. That notebook is
 here, with the calibration worked through:
 
-* [GBT drift scan notebook](https://github.com/WVURAIL/dspira/tree/main/code/gbt_drift){: .btn .btn-wvu-blue}
+* [GBT drift scan notebook](https://github.com/WVURAIL/dspira/tree/main/lesson-examples/gbt-drift){: .btn .btn-wvu-blue}
 
 The data file remains on Green Bank's systems and is not included. This notebook reverses that observation's intermediate-frequency downconversion and corrects a clock error. It also selects integration ranges specific to that file. Read it as a worked example. Before applying it to your data, follow the README's instructions for adapting it. Comparing a horn telescope's spectrum against a 100 m
 dish's is worth the detour.

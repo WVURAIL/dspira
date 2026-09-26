@@ -6,8 +6,8 @@ GitHub is optional for lesson authors.
 
 ## Repository responsibilities
 
-- `dspira`: lessons, worksheets, teacher guides, small activity code, and website templates.
-- `dspira-software`: classroom telescope applications and DSPIRA processing blocks.
+- `dspira`: lessons, worksheets, teacher guides, lesson notebooks and examples, and website templates.
+- `dspira-software`: classroom telescope applications, DSPIRA processing blocks, and reusable observation-processing scripts.
 - `radio-research-software`: research applications, event detection, and transient experiments.
 - `dspira-hardware`: board designs and fabrication files.
 - `lightwork`: numbered technical memos.
@@ -54,13 +54,14 @@ Record presenters, authors, and source details in the lecture README. Do not cre
 Worksheets belong in `assets/worksheets/<lesson-slug>/`, including complete worksheets saved as images.
 Figures, screenshots, and photographs belong in `images/<topic>/`.
 Guides and background handouts belong in `assets/lessons/<lesson-slug>/`.
-GNU Radio applications and flowgraphs belong in `dspira-software`; board designs and amplifier assembly references belong in `dspira-hardware`.
+GNU Radio applications, flowgraphs, and reusable observation-processing scripts belong in `dspira-software`.
+Board designs and amplifier assembly references belong in `dspira-hardware`.
 Technical memos belong in `lightwork`. Link to their maintained files instead of uploading another copy.
 
 The former `FilesUploaded` directory is generated during publication for old links.
 Add new material to its proper source folder. Record future moves in `_data/legacy_assets.json` when existing public addresses must survive.
 Keep each published lesson's `permalink` unchanged when renaming its source file.
-Python files under `code/` use lowercase names with underscores; standard project files retain conventional names.
+Python files under `lesson-examples/` use lowercase names with underscores; standard project files retain conventional names.
 
 ## Prepare the first contribution trial
 

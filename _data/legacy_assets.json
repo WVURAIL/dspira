@@ -1249,13 +1249,13 @@
       "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c",
       "url": "https://raw.githubusercontent.com/WVURAIL/dspira/04b7c372c890e09204b3031d85c058a86da0863c/code/interferometry/Interferometry.ipynb",
       "sha256": "011c15c6378b9fde3b9a053b493b828c0fce828129af9d2aa88a1c65e5e5cc4a",
-      "canonical": "/dspira/code/interferometry/interferometry.ipynb",
+      "canonical": "/dspira/lesson-examples/interferometry/interferometry.ipynb",
       "owner": "dspira",
-      "destination": "code/interferometry/interferometry.ipynb"
+      "destination": "lesson-examples/interferometry/interferometry.ipynb"
     },
     {
       "legacy": "code/velocity_curve/quadII_III_velocity_vs_longitude.csv",
-      "source": "code/velocity_curve/quadrants_ii_iii_velocity_vs_longitude.csv",
+      "source": "lesson-examples/velocity-curve/quadrants_ii_iii_velocity_vs_longitude.csv",
       "original_sha256": "4db611e01bb6426bca7859b6a2cfec32fda3b982ee8bc7e3572226c479682016",
       "source_revision": "04b7c372c890e09204b3031d85c058a86da0863c"
     },
@@ -1710,6 +1710,134 @@
       "source": "images/night-horn/night-horns.webp",
       "original_sha256": "30df52f67e14e6cc1469c2fe51c5a007c736f27cdbb1cb3a49e4e8e0e245129f",
       "source_revision": "d58b9b67a3c4c8d50251f7f2bcba6c0f2148d6f6"
+    },
+    {
+      "legacy": "code/gbt_drift/README.md",
+      "source": "lesson-examples/gbt-drift/README.md",
+      "original_sha256": "307c6d51749770b47da3a22d119dcecfb52c5470e2f16997af61706ca9f66da0",
+      "source_revision": "1ed12e3a2994336fd8364ca59982c943f8a1a72e"
+    },
+    {
+      "legacy": "code/gbt_drift/gbt_drift_scan.ipynb",
+      "source": "lesson-examples/gbt-drift/gbt_drift_scan.ipynb",
+      "original_sha256": "3a4a7ead6e8a22b87cbfec1d73865ba611f3f1ac45b3400a357fe6ba67ce55b4",
+      "source_revision": "1ed12e3a2994336fd8364ca59982c943f8a1a72e"
+    },
+    {
+      "legacy": "code/interferometry/README.md",
+      "source": "lesson-examples/interferometry/README.md",
+      "original_sha256": "93b3d58135e33764e78a8885b332f1b6c64e479e74411477034be91b6cef1d7f",
+      "source_revision": "1ed12e3a2994336fd8364ca59982c943f8a1a72e"
+    },
+    {
+      "legacy": "code/interferometry/interferometry.ipynb",
+      "source": "lesson-examples/interferometry/interferometry.ipynb",
+      "original_sha256": "8935bb428cfcb23c48280915d84fadcb6d6ddd97843f5fbf207eb91064fb31c2",
+      "source_revision": "1ed12e3a2994336fd8364ca59982c943f8a1a72e"
+    },
+    {
+      "legacy": "code/interferometry/make_figures.py",
+      "source": "lesson-examples/interferometry/make_figures.py",
+      "original_sha256": "b52ed2bb618827d9735fcead7e22331efca286893fc747e62d330566eea60bbf",
+      "source_revision": "1ed12e3a2994336fd8364ca59982c943f8a1a72e"
+    },
+    {
+      "legacy": "code/velocity_curve/README.md",
+      "source": "lesson-examples/velocity-curve/README.md",
+      "original_sha256": "fd31be6cd3d87b7cabe4f058c763e956d821b3ca1f5abd53654355f4d566c426",
+      "source_revision": "1ed12e3a2994336fd8364ca59982c943f8a1a72e"
+    },
+    {
+      "legacy": "code/velocity_curve/galactic_plane_sine_fit.ipynb",
+      "source": "lesson-examples/velocity-curve/galactic_plane_sine_fit.ipynb",
+      "original_sha256": "d4f125ac4422ebeaf1801876f17e60cd4e148cd46ec2add1c88644e0246ce4bd",
+      "source_revision": "1ed12e3a2994336fd8364ca59982c943f8a1a72e"
+    },
+    {
+      "legacy": "code/velocity_curve/quadrants_ii_iii_velocity_vs_longitude.csv",
+      "source": "lesson-examples/velocity-curve/quadrants_ii_iii_velocity_vs_longitude.csv",
+      "original_sha256": "4db611e01bb6426bca7859b6a2cfec32fda3b982ee8bc7e3572226c479682016",
+      "source_revision": "1ed12e3a2994336fd8364ca59982c943f8a1a72e"
+    },
+    {
+      "legacy": "code/observations/README.md",
+      "url": "https://raw.githubusercontent.com/WVURAIL/dspira-software/f89a2f3fecc8d5f75ed318d124515f559b9fab34/data-processing/README.md",
+      "sha256": "66f281de091a28e60398f47ffca49530ff8095209b2b4407ea3cb67d024fb52c",
+      "original_sha256": "c447d5698a1779e63f4f81a835037062abd83e4515a4b9dbd43e483c135fa018",
+      "source_revision": "1ed12e3a2994336fd8364ca59982c943f8a1a72e",
+      "canonical": "https://github.com/WVURAIL/dspira-software/blob/main/data-processing/README.md",
+      "owner": "dspira-software",
+      "destination": "data-processing/README.md"
+    },
+    {
+      "legacy": "code/observations/az_el2gal.py",
+      "url": "https://raw.githubusercontent.com/WVURAIL/dspira-software/f89a2f3fecc8d5f75ed318d124515f559b9fab34/data-processing/az_el2gal.py",
+      "sha256": "22d1ef093f8cf1d77d38eee6a131a096dc16045d503493554d547751e4952563",
+      "original_sha256": "22d1ef093f8cf1d77d38eee6a131a096dc16045d503493554d547751e4952563",
+      "source_revision": "1ed12e3a2994336fd8364ca59982c943f8a1a72e",
+      "canonical": "https://github.com/WVURAIL/dspira-software/blob/main/data-processing/az_el2gal.py",
+      "owner": "dspira-software",
+      "destination": "data-processing/az_el2gal.py"
+    },
+    {
+      "legacy": "code/observations/convert_to_temperature.py",
+      "url": "https://raw.githubusercontent.com/WVURAIL/dspira-software/f89a2f3fecc8d5f75ed318d124515f559b9fab34/data-processing/convert_to_temperature.py",
+      "sha256": "1fe54e6ef39248e8c4a6bd6ac1a91265d7534a69a1ef8e0f6a378f986c288fef",
+      "original_sha256": "1fe54e6ef39248e8c4a6bd6ac1a91265d7534a69a1ef8e0f6a378f986c288fef",
+      "source_revision": "1ed12e3a2994336fd8364ca59982c943f8a1a72e",
+      "canonical": "https://github.com/WVURAIL/dspira-software/blob/main/data-processing/convert_to_temperature.py",
+      "owner": "dspira-software",
+      "destination": "data-processing/convert_to_temperature.py"
+    },
+    {
+      "legacy": "code/observations/hdf5_to_csv.py",
+      "url": "https://raw.githubusercontent.com/WVURAIL/dspira-software/f89a2f3fecc8d5f75ed318d124515f559b9fab34/data-processing/hdf5_to_csv.py",
+      "sha256": "d44123554a5a5d2f70ba0cd42e2fd24fe7ed2e38c4ca3f4c25f9dea951a166f3",
+      "original_sha256": "d44123554a5a5d2f70ba0cd42e2fd24fe7ed2e38c4ca3f4c25f9dea951a166f3",
+      "source_revision": "1ed12e3a2994336fd8364ca59982c943f8a1a72e",
+      "canonical": "https://github.com/WVURAIL/dspira-software/blob/main/data-processing/hdf5_to_csv.py",
+      "owner": "dspira-software",
+      "destination": "data-processing/hdf5_to_csv.py"
+    },
+    {
+      "legacy": "code/observations/map_from_csv.py",
+      "url": "https://raw.githubusercontent.com/WVURAIL/dspira-software/f89a2f3fecc8d5f75ed318d124515f559b9fab34/data-processing/map_from_csv.py",
+      "sha256": "05bf668374e892c111aeca582eb3f6c24b5e8ecb1e2879562c2e8a4cb71719e1",
+      "original_sha256": "05bf668374e892c111aeca582eb3f6c24b5e8ecb1e2879562c2e8a4cb71719e1",
+      "source_revision": "1ed12e3a2994336fd8364ca59982c943f8a1a72e",
+      "canonical": "https://github.com/WVURAIL/dspira-software/blob/main/data-processing/map_from_csv.py",
+      "owner": "dspira-software",
+      "destination": "data-processing/map_from_csv.py"
+    },
+    {
+      "legacy": "code/observations/map_h1_hdf5_drift.py",
+      "url": "https://raw.githubusercontent.com/WVURAIL/dspira-software/f89a2f3fecc8d5f75ed318d124515f559b9fab34/data-processing/map_h1_hdf5_drift.py",
+      "sha256": "43db3227dc9b22ba6e94433ff22a84ebe99fe11a7791caae809c3000fd9d0704",
+      "original_sha256": "43db3227dc9b22ba6e94433ff22a84ebe99fe11a7791caae809c3000fd9d0704",
+      "source_revision": "1ed12e3a2994336fd8364ca59982c943f8a1a72e",
+      "canonical": "https://github.com/WVURAIL/dspira-software/blob/main/data-processing/map_h1_hdf5_drift.py",
+      "owner": "dspira-software",
+      "destination": "data-processing/map_h1_hdf5_drift.py"
+    },
+    {
+      "legacy": "code/observations/plot_total_power.py",
+      "url": "https://raw.githubusercontent.com/WVURAIL/dspira-software/f89a2f3fecc8d5f75ed318d124515f559b9fab34/data-processing/plot_total_power.py",
+      "sha256": "e871838368914e0baa3a95c7a85af3d051f4fd8db21bad22f4ee44997f6094d6",
+      "original_sha256": "e871838368914e0baa3a95c7a85af3d051f4fd8db21bad22f4ee44997f6094d6",
+      "source_revision": "1ed12e3a2994336fd8364ca59982c943f8a1a72e",
+      "canonical": "https://github.com/WVURAIL/dspira-software/blob/main/data-processing/plot_total_power.py",
+      "owner": "dspira-software",
+      "destination": "data-processing/plot_total_power.py"
+    },
+    {
+      "legacy": "code/observations/test_parse_pointing.py",
+      "url": "https://raw.githubusercontent.com/WVURAIL/dspira-software/f89a2f3fecc8d5f75ed318d124515f559b9fab34/data-processing/test_parse_pointing.py",
+      "sha256": "fe51abd21e23912c51ddf439ebdd5e6279f370aaf421f9b8475db7bdf2d74eba",
+      "original_sha256": "fe51abd21e23912c51ddf439ebdd5e6279f370aaf421f9b8475db7bdf2d74eba",
+      "source_revision": "1ed12e3a2994336fd8364ca59982c943f8a1a72e",
+      "canonical": "https://github.com/WVURAIL/dspira-software/blob/main/data-processing/test_parse_pointing.py",
+      "owner": "dspira-software",
+      "destination": "data-processing/test_parse_pointing.py"
     }
   ]
 }

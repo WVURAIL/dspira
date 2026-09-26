@@ -14,7 +14,7 @@ BOOTSTRAP 3.3.6 and 3.3.7
 Inlined by nbconvert into the two exported notebooks, about 246 KB apiece:
 
   pages/iq-quadrature-sampling.html
-  code/gbt_drift/gbt_rendered_2017.html
+  lesson-examples/gbt-drift/gbt_rendered_2017.html
 
 Nothing else on the site uses it. The site itself is styled by the WVU Design
 System (a Bootstrap 5.3 fork) linked from designsystem.wvu.edu and not

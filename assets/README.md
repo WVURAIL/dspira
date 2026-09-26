@@ -64,11 +64,11 @@ Photo and diagram bytes remain unchanged when files move.
 - [js](js/): website behavior.
 - [wvu-design-system](wvu-design-system/): the vendored stylesheet, navigation script, and notices.
 - [../css](../css/): lesson and notebook styles.
-- [../code](../code/): small activity scripts, notebooks, and example data, using lowercase Python naming.
+- [../lesson-examples](../lesson-examples/): lesson notebooks, figure generators, and sample data, using lowercase Python filenames.
 
 ## Files maintained in other projects
 
-- [dspira-software](https://github.com/WVURAIL/dspira-software): telescope applications and GNU Radio flowgraphs.
+- [dspira-software](https://github.com/WVURAIL/dspira-software): telescope applications, GNU Radio flowgraphs, and reusable observation-processing scripts.
 - [dspira-hardware](https://github.com/WVURAIL/dspira-hardware/tree/main/docs/assembly): amplifier parts guides and component locations.
 - [LightWork](https://wvurail.org/lightwork/): technical memos.
 

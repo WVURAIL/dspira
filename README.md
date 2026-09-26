@@ -17,7 +17,7 @@ A future move to `rail.wvu.edu` follows the [lab's cutover checklist](https://gi
 | [assets/worksheets](assets/worksheets/) | Student exercises, answer keys, and editable originals |
 | [assets/templates](assets/templates/) | Lesson contribution templates |
 | [images](images/) | Figures, screenshots, photographs, and branding, grouped by topic |
-| [code](code/) | Small activity scripts and observation analysis examples |
+| [lesson-examples](lesson-examples/) | Lesson notebooks, sample data, and figure generators |
 | [pages](pages/) | Teaching, installation, hardware, history, and contribution guides |
 | [categories](categories/) | Module introduction pages |
 | [_data](_data/) | Navigation, module definitions, resource catalogs, and compatibility maps |
@@ -32,7 +32,7 @@ The [asset directory guide](assets/README.md) lists the attachment folders and e
 ## Keep each resource in one project
 
 - Lesson pages, worksheets, and teacher materials belong here.
-- Telescope applications and GNU Radio flowgraphs belong in [dspira-software](https://github.com/WVURAIL/dspira-software).
+- Telescope applications, GNU Radio flowgraphs, and reusable observation-processing scripts belong in [dspira-software](https://github.com/WVURAIL/dspira-software).
 - Board designs and amplifier assembly references belong in [dspira-hardware](https://github.com/WVURAIL/dspira-hardware).
 - Technical memos belong in [LightWork](https://github.com/WVURAIL/lightwork).
 
@@ -74,7 +74,7 @@ Site publishing trims unused stylesheet rules and checks the resulting pages.
 
 Use lowercase, hyphenated names for lesson sources, web pages, images, and teaching downloads.
 Lesson sources retain Jekyll's required `YYYY-MM-DD-` prefix.
-Python scripts, notebooks, and their data use lowercase names with underscores under `code/`.
+Python scripts, notebooks, and their data use lowercase names with underscores under `lesson-examples/`.
 Jekyll directories and data keys retain their required underscores.
 Standard project files such as `README.md`, `LICENSE`, `CITATION.cff`, and `Gemfile` keep their conventional names.
 Preserved source notices and vendored libraries retain their original naming.

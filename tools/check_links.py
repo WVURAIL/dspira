@@ -60,11 +60,8 @@ def source_files():
     # top-level directory of pages needs a line here. forum/ and the
     # categories/*/index.html redirect stubs were invisible until 2026.
     #
-    # README.md, CONTRIBUTING.md and the READMEs under tools/ and code/ are
-    # deliberately absent: _config.yml excludes the first two and the rest carry
-    # no front matter, so none of them is a page. tools/README.md would also
-    # report a false positive, because it quotes '#16-exercises' as an example
-    # of the kind of anchor this script catches.
+    # Root documentation and tools/ are excluded from the site build.
+    # The combined-site checker covers generated lesson-example README pages.
     out = []
     for pat in ("_posts/*.md", "_posts/*.markdown", "pages/*.md",
                 "pages/*.html", "*.md", "index.html",

@@ -199,7 +199,7 @@ jobs:
       # (address, phone, fax, email), and copyright on every page. The layout carries
       # them, so a page can only lack them by being built outside the layout —
       # which `layout: null` does, silently. Two pages are, on purpose: the
-      # exported notebooks at /iq/ and /code/gbt_drift/gbt_rendered_2017.html,
+      # exported notebooks at /iq/ and /lesson-examples/gbt-drift/gbt_rendered_2017.html,
       # which tools/check_layout.py already exempts for the same reason (their
       # inlined Bootstrap 3 would rewrite the shell). The redirect stubs under
       # /categories/ and /lesson-modules/ are not pages anyone reads.
@@ -214,7 +214,7 @@ jobs:
           checked=0
           while IFS= read -r f; do
             case "$f" in
-              _site/iq/*|_site/code/gbt_drift/gbt_rendered_2017.html) continue ;;
+              _site/iq/*|_site/lesson-examples/gbt-drift/gbt_rendered_2017.html) continue ;;
             esac
             if grep -q '<title>Redirecting' "$f"; then continue; fi
             checked=$((checked + 1))
