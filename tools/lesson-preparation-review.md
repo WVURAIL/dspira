@@ -31,5 +31,5 @@ Synthetic 4096-channel inputs were passed through one vector at a time:
 
 These checks support the mode-switching instructions and correct the old 20 K baseline statement.
 They do not establish receiver performance, full scheduler behavior, sky calibration accuracy, or agreement with the video.
-The hardware and video review remains tracked in [issue 32](https://github.com/WVURAIL/dspira/issues/32).
-Lesson timing and classroom confirmation remain tracked in [issue 33](https://github.com/WVURAIL/dspira/issues/33).
+Hardware and video instructions still need review with the equipment used in class.
+Lesson timing and classroom preparation still need confirmation from educators.
