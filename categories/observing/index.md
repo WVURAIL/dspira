@@ -16,7 +16,7 @@ Two operating procedures are documented as PDFs rather than as lessons:
 
 * [Setting up and operating a 2-horn interferometer]({{ site.baseurl }}/assets/lessons/two-horn-interferometer/setup-guide.pdf) —
   covers both the adding and the multiplying spectrometer programs.
-* [Adding interferometry to a 2-horn system](/lightwork/memos/LightWorkMemo031.pdf) —
+* [Adding interferometry to a 2-horn system](/lightwork/memos/memo-031.pdf) —
   LightWork Memo 31.
 
 For what an interferometer is actually good for, see
