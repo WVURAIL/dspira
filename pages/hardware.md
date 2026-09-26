@@ -18,16 +18,16 @@ Compare [amplifier options]({{ '/LNA' | relative_url }}) before ordering parts.
 You can build the DSPIRA amplifier or choose a listed ready-made option.
 
 - [Build the DSPIRA amplifier]({{ '/DetailedLNAInstructions' | relative_url }}).
-- [Review the parts ordering guide (PDF)](https://raw.githubusercontent.com/WVURAIL/dspira-hardware/main/docs/assembly/parts-guide-v4.pdf).
+- [Review the parts ordering guide (PDF)](https://raw.githubusercontent.com/WVURAIL/dspira-hardware/main/assembly/parts-guide-v4.pdf).
 - [Ask about a starter kit]({{ '/kits/' | relative_url }}).
 
 ## Maintain or fabricate a board
 
 Match the schematic and fabrication files to your board revision before making changes.
 The download includes a readable schematic, editable Altium sources, and fabrication files.
-Use `HI_amp_v3_gerbers` for the existing version 3 board.
+Use `fabrication/v3/` for the existing version 3 board.
 
-[Open the version 3 schematic (PDF)](https://raw.githubusercontent.com/WVURAIL/dspira-hardware/main/Neutral_Hydrogen_amplifier_v3.pdf)
+[Open the version 3 schematic (PDF)](https://raw.githubusercontent.com/WVURAIL/dspira-hardware/main/design/amplifier-v3.pdf)
 
 [Download hardware design files (ZIP)](https://github.com/WVURAIL/dspira-hardware/archive/refs/heads/main.zip){: .btn .btn-wvu-blue}
 
@@ -38,9 +38,9 @@ Use `HI_amp_v3_gerbers` for the existing version 3 board.
 
 These institute documents explain earlier choices. Component values, bias settings, and prices may differ from your board.
 
-- [Amplifier assembly notes (PDF)](https://raw.githubusercontent.com/WVURAIL/dspira-hardware/main/docs/institute/lna-assembly.pdf)
-- [June 2018 assembly guide (PDF)](https://raw.githubusercontent.com/WVURAIL/dspira-hardware/main/docs/institute/lna-assembly-2018-06-22.pdf)
-- [2017 design and measurements (PDF)](https://raw.githubusercontent.com/WVURAIL/dspira-hardware/main/docs/institute/lna-design-memo-2017.pdf)
+- [Amplifier assembly notes (PDF)](https://raw.githubusercontent.com/WVURAIL/dspira-hardware/main/assembly/reference/assembly-notes.pdf)
+- [June 2018 assembly guide (PDF)](https://raw.githubusercontent.com/WVURAIL/dspira-hardware/main/assembly/reference/assembly-guide-2018-06-22.pdf)
+- [2017 design and measurements (PDF)](https://raw.githubusercontent.com/WVURAIL/dspira-hardware/main/docs/amplifier-design-2017.pdf)
 
 Use the current construction lesson for classroom assembly.
 </details>

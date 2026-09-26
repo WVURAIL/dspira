@@ -196,18 +196,18 @@
       "legacy": "FilesUploaded/LNA_OrderingParts_Info_3.pdf",
       "original_sha256": "f622e8468a4eb107a2af36c9d5368ef49414f8c4637ab630ef4f5720ee5fc580",
       "url": "https://raw.githubusercontent.com/WVURAIL/dspira-hardware/c61eb7a74ab0a659dc0ce6df278c01334b64485a/docs/assembly/history/parts-guide-v3.pdf",
-      "canonical": "https://raw.githubusercontent.com/WVURAIL/dspira-hardware/main/docs/assembly/history/parts-guide-v3.pdf",
+      "canonical": "https://raw.githubusercontent.com/WVURAIL/dspira-hardware/main/assembly/reference/parts-guide-v3.pdf",
       "owner": "dspira-hardware",
-      "destination": "docs/assembly/history/parts-guide-v3.pdf",
+      "destination": "assembly/reference/parts-guide-v3.pdf",
       "sha256": "f622e8468a4eb107a2af36c9d5368ef49414f8c4637ab630ef4f5720ee5fc580"
     },
     {
       "legacy": "FilesUploaded/LNA_OrderingParts_Info_4.pdf",
       "original_sha256": "e2c175601ffa5437e47fb3d63b55955f4c29b6ab902efc445f3b73e63bb8133a",
       "url": "https://raw.githubusercontent.com/WVURAIL/dspira-hardware/c61eb7a74ab0a659dc0ce6df278c01334b64485a/docs/assembly/parts-guide-v4.pdf",
-      "canonical": "https://raw.githubusercontent.com/WVURAIL/dspira-hardware/main/docs/assembly/parts-guide-v4.pdf",
+      "canonical": "https://raw.githubusercontent.com/WVURAIL/dspira-hardware/main/assembly/parts-guide-v4.pdf",
       "owner": "dspira-hardware",
-      "destination": "docs/assembly/parts-guide-v4.pdf",
+      "destination": "assembly/parts-guide-v4.pdf",
       "sha256": "e2c175601ffa5437e47fb3d63b55955f4c29b6ab902efc445f3b73e63bb8133a"
     },
     {
@@ -219,9 +219,9 @@
       "legacy": "FilesUploaded/Neutral_Hydrogen_amplifier_v3.pdf",
       "original_sha256": "8b4081ee1e8e29a31c9a83db934db9618bfc6303b23959cf55ecda3a36282a49",
       "url": "https://raw.githubusercontent.com/WVURAIL/dspira-hardware/c61eb7a74ab0a659dc0ce6df278c01334b64485a/Neutral_Hydrogen_amplifier_v3.pdf",
-      "canonical": "https://raw.githubusercontent.com/WVURAIL/dspira-hardware/main/Neutral_Hydrogen_amplifier_v3.pdf",
+      "canonical": "https://raw.githubusercontent.com/WVURAIL/dspira-hardware/main/design/amplifier-v3.pdf",
       "owner": "dspira-hardware",
-      "destination": "Neutral_Hydrogen_amplifier_v3.pdf",
+      "destination": "design/amplifier-v3.pdf",
       "sha256": "8b4081ee1e8e29a31c9a83db934db9618bfc6303b23959cf55ecda3a36282a49"
     },
     {
@@ -283,9 +283,9 @@
       "legacy": "FilesUploaded/circuit board componet locations Final1.jpg",
       "original_sha256": "f1f98a2294991c817ea7709a7abc263483538eb96f72bc13c9cc5407db4018a0",
       "url": "https://raw.githubusercontent.com/WVURAIL/dspira-hardware/c61eb7a74ab0a659dc0ce6df278c01334b64485a/docs/assembly/component-locations.jpg",
-      "canonical": "https://raw.githubusercontent.com/WVURAIL/dspira-hardware/main/docs/assembly/component-locations.jpg",
+      "canonical": "https://raw.githubusercontent.com/WVURAIL/dspira-hardware/main/assembly/component-locations.jpg",
       "owner": "dspira-hardware",
-      "destination": "docs/assembly/component-locations.jpg",
+      "destination": "assembly/component-locations.jpg",
       "sha256": "f1f98a2294991c817ea7709a7abc263483538eb96f72bc13c9cc5407db4018a0"
     },
     {

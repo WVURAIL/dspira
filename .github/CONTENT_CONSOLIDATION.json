@@ -144,7 +144,7 @@
       "destinations": [
         {
           "repository": "dspira-hardware",
-          "path": "docs/institute/lna-assembly.pdf"
+          "path": "assembly/reference/assembly-notes.pdf"
         }
       ]
     },
@@ -1936,7 +1936,7 @@
       "destinations": [
         {
           "repository": "dspira-hardware",
-          "path": "docs/institute/lna-assembly-2018-06-22.pdf"
+          "path": "assembly/reference/assembly-guide-2018-06-22.pdf"
         }
       ]
     },
@@ -1964,7 +1964,7 @@
       "destinations": [
         {
           "repository": "dspira-hardware",
-          "path": "docs/institute/lna-design-memo-2017.pdf"
+          "path": "docs/amplifier-design-2017.pdf"
         }
       ]
     },
@@ -2888,7 +2888,7 @@
       "destinations": [
         {
           "repository": "dspira-hardware",
-          "path": "docs/assembly/parts-guide-v4.pdf"
+          "path": "assembly/parts-guide-v4.pdf"
         }
       ]
     },
@@ -2902,11 +2902,11 @@
       "destinations": [
         {
           "repository": "dspira-hardware",
-          "path": "Neutral_Hydrogen_amplifier_v3.pdf"
+          "path": "design/amplifier-v3.pdf"
         },
         {
           "repository": "dspira-hardware",
-          "path": "Neutral_Hydrogen_amplifier_v3.pdf"
+          "path": "design/amplifier-v3.pdf"
         }
       ]
     },
