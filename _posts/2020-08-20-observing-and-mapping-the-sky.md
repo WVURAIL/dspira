@@ -150,7 +150,7 @@ whole sky.
 ### Turning the observations into a map
 
 ```bash
-python3 map_h1_hdf5_drift.py -d ~/my_observation/ -n -79.872 -l 39.659 \
+python3 map_hydrogen_drift.py -d ~/my_observation/ -n -79.872 -l 39.659 \
         -s airspy -g tsys_gain.csv -t tsys_Tsys.csv
 ```
 
@@ -166,7 +166,7 @@ Without them, the map uses raw units instead of temperature.
 > [source block settings page]({{ site.baseurl }}/Spectrometer_sourceblock_settings)
 > has the full list per radio.
 
-`python3 map_h1_hdf5_drift.py --help` lists everything.
+`python3 map_hydrogen_drift.py --help` lists everything.
 
 That writes two files into the directory you are standing in:
 

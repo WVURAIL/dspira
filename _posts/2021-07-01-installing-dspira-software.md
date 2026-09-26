@@ -45,7 +45,7 @@ python3 -c "from gnuradio import dspira; print(dspira.__file__)"
 ```
 
 Restart GNU Radio Companion. The installed processing blocks appear in its **DSPIRA** category.
-Open `dspira-software/flowgraphs/spectrometer_w_cal.grc`.
+Open `dspira-software/applications/spectrometry/calibrated-spectrometer.grc`.
 Configure [receiver settings]({{ '/Spectrometer_sourceblock_settings' | relative_url }}) and [recording paths]({{ '/HornOperation_runningSpectrometer' | relative_url }}).
 
 ## Update an existing installation
@@ -72,5 +72,5 @@ Existing images may contain the former combined `gr-radio_astro` package.
 Use the current DSPIRA installation for new GNU Radio 3.10 setups.
 The [GNU Radio 3.8 guide]({{ '/gr_radio_astro_Installation_Ubuntu20' | relative_url }}) describes a frozen historical release.
 
-If an import fails, follow the [package troubleshooting notes](https://github.com/WVURAIL/dspira-software/blob/main/docs/BLOCKS.md).
+If an import fails, follow the [package troubleshooting notes](https://github.com/WVURAIL/dspira-software/blob/main/docs/block-reference.md).
 Test receiver operation and calibration before relying on the setup in class.

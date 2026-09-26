@@ -74,7 +74,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "examples/institute/LICENSE.txt"
+          "path": "licenses/institute-examples.txt"
         }
       ]
     },
@@ -214,7 +214,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "examples/institute/a1.grc"
+          "path": "examples/signal-basics/signal-controls.grc"
         }
       ]
     },
@@ -228,7 +228,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "examples/institute/a1.grc"
+          "path": "examples/signal-basics/signal-controls.grc"
         }
       ]
     },
@@ -242,7 +242,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "examples/institute/convolution.grc"
+          "path": "examples/fourier-analysis/convolution.grc"
         }
       ]
     },
@@ -256,7 +256,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "examples/institute/custom-noisegen.grc"
+          "path": "examples/signal-basics/noise-generator.grc"
         }
       ]
     },
@@ -270,7 +270,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "examples/institute/ex01-1.grc"
+          "path": "examples/signal-basics/signal-source.grc"
         }
       ]
     },
@@ -284,7 +284,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "examples/institute/ex01-2.grc"
+          "path": "examples/signal-basics/time-display.grc"
         }
       ]
     },
@@ -298,7 +298,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "examples/institute/ex01-3.grc"
+          "path": "examples/signal-basics/signal-combination.grc"
         }
       ]
     },
@@ -312,7 +312,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "examples/institute/ex01-4.grc"
+          "path": "examples/signal-basics/frequency-display.grc"
         }
       ]
     },
@@ -326,7 +326,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "examples/institute/fmradio.grc"
+          "path": "examples/receivers/fm-receiver.grc"
         }
       ]
     },
@@ -340,7 +340,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "examples/institute"
+          "path": "examples"
         }
       ]
     },
@@ -354,7 +354,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "examples/institute/fmradioeq.grc"
+          "path": "examples/receivers/fm-receiver-equalizer.grc"
         }
       ]
     },
@@ -368,7 +368,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "examples/institute/fourier-series.grc"
+          "path": "examples/fourier-analysis/fourier-series.grc"
         }
       ]
     },
@@ -382,7 +382,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "examples/institute/fourierseries-square.grc"
+          "path": "examples/fourier-analysis/square-wave-series.grc"
         }
       ]
     },
@@ -396,7 +396,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "examples/institute/fourierseries-triangle.grc"
+          "path": "examples/fourier-analysis/triangle-wave-series.grc"
         }
       ]
     },
@@ -410,7 +410,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "examples/institute/ft-sine-cos.grc"
+          "path": "examples/fourier-analysis/sine-cosine-transforms.grc"
         }
       ]
     },
@@ -424,7 +424,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "examples/institute/ftpairs.grc"
+          "path": "examples/fourier-analysis/transform-pairs.grc"
         }
       ]
     },
@@ -438,7 +438,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "examples/institute/fundamentalfreq.grc"
+          "path": "examples/filters/fundamental-frequency-fir.grc"
         }
       ]
     },
@@ -452,7 +452,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "examples/institute/fundamentalfreq-iir.grc"
+          "path": "examples/filters/fundamental-frequency-iir.grc"
         }
       ]
     },
@@ -466,7 +466,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "examples/institute/mixing-demo-sines.grc"
+          "path": "examples/modulation/sine-mixing.grc"
         }
       ]
     },
@@ -480,7 +480,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "examples/institute/mixing-demo-sines-freq-amplitude-modulation.grc"
+          "path": "examples/modulation/frequency-amplitude-modulation.grc"
         }
       ]
     },
@@ -494,7 +494,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "examples/institute/movavggeir.grc"
+          "path": "examples/filters/moving-average-block.grc"
         }
       ]
     },
@@ -508,7 +508,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "examples/institute/movingaverage.grc"
+          "path": "examples/filters/moving-average-comparison.grc"
         }
       ]
     },
@@ -522,7 +522,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "examples/institute/pfb-spectrometer.grc"
+          "path": "examples/spectrometry/polyphase-spectrometer.grc"
         }
       ]
     },
@@ -536,7 +536,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "examples/institute/pfb-spectrometer-pluto.grc"
+          "path": "examples/spectrometry/polyphase-spectrometer-pluto.grc"
         }
       ]
     },
@@ -550,7 +550,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "examples/institute/pfb-spectrometer-rtlsdr.grc"
+          "path": "examples/spectrometry/polyphase-spectrometer-rtl-sdr.grc"
         }
       ]
     },
@@ -564,7 +564,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "examples/institute/sampling.grc"
+          "path": "examples/sampling/sampling.grc"
         }
       ]
     },
@@ -578,7 +578,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "examples/institute/sampling-demo.grc"
+          "path": "examples/sampling/sampling-demo.grc"
         }
       ]
     },
@@ -592,7 +592,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "examples/institute/sawfft.grc"
+          "path": "examples/fourier-analysis/sawtooth-transform.grc"
         }
       ]
     },
@@ -606,7 +606,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "examples/institute"
+          "path": "examples"
         }
       ]
     },
@@ -620,7 +620,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "examples/institute/spectrometer-demo-lime.grc"
+          "path": "examples/spectrometry/limesdr-spectrometer-demo.grc"
         }
       ]
     },
@@ -634,7 +634,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "examples/institute/spectrometer-pfb-lime.grc"
+          "path": "examples/spectrometry/limesdr-polyphase-spectrometer.grc"
         }
       ]
     },
@@ -648,7 +648,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "examples/institute"
+          "path": "examples"
         }
       ]
     },
@@ -2566,7 +2566,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "data-processing/az_el2gal.py"
+          "path": "data-processing/az_el_to_galactic.py"
         }
       ]
     },
@@ -2622,7 +2622,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "data-processing/map_h1_hdf5_drift.py"
+          "path": "data-processing/map_hydrogen_drift.py"
         }
       ]
     },
@@ -3292,7 +3292,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "examples/fourier-wave-explorer/Fourier_Series_Wave_Explorer.grc"
+          "path": "examples/fourier-analysis/wave-explorer.grc"
         }
       ]
     },
@@ -3978,7 +3978,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -3992,7 +3992,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -4006,7 +4006,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -4020,7 +4020,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -4034,7 +4034,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -4048,7 +4048,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -4062,7 +4062,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -4076,7 +4076,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -4090,7 +4090,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -4104,7 +4104,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -4118,7 +4118,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -4132,7 +4132,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -4146,7 +4146,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -4174,7 +4174,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -4188,7 +4188,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -4202,7 +4202,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -4216,7 +4216,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -4230,7 +4230,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -4244,7 +4244,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -4258,7 +4258,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -4272,7 +4272,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -4300,7 +4300,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -4314,7 +4314,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -4328,7 +4328,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -4342,7 +4342,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -4356,7 +4356,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -4370,7 +4370,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -4384,7 +4384,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -4398,7 +4398,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -4412,7 +4412,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -4426,7 +4426,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -4440,7 +4440,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -4468,7 +4468,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -4482,7 +4482,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -4496,7 +4496,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -4510,7 +4510,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -4524,7 +4524,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -4538,7 +4538,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -4552,7 +4552,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -4566,7 +4566,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -4580,7 +4580,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -4594,7 +4594,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -4608,7 +4608,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -4636,7 +4636,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -4650,7 +4650,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -4678,7 +4678,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -4692,7 +4692,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -5168,7 +5168,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -5322,7 +5322,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },
@@ -5336,7 +5336,7 @@
       "destinations": [
         {
           "repository": "dspira-software",
-          "path": "flowgraphs"
+          "path": "applications"
         }
       ]
     },

@@ -23,4 +23,4 @@ A related paper-based exercise, which needs no software at all:
 Open the original GNU Radio 3.7 flowgraph below. Save the file from your browser before opening it in GNU Radio Companion.
 Review compatibility before using it with a newer installation. The software repository retains its source and revision notes.
 
-[GNU Radio .grc file for Fourier Activity](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/fourier-wave-explorer/Fourier_Series_Wave_Explorer.grc){: .btn .btn-wvu-blue}
+[GNU Radio .grc file for Fourier Activity](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/fourier-analysis/wave-explorer.grc){: .btn .btn-wvu-blue}

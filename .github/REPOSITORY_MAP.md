@@ -83,4 +83,4 @@ The remaining research package passes nine QA tests.
 DSPIRA's moved implementations retain their original bytes and file notices.
 All seven applications generate and pass syntax checks using the DSPIRA package alone.
 Block checks cover exports, averaging, and single-vector calibration and CSV capture.
-See dspira-software/docs/KNOWN_ISSUES.md for compatibility results and remaining hardware checks.
+See dspira-software/docs/compatibility.md for compatibility results and remaining hardware checks.

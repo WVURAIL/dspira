@@ -59,7 +59,7 @@ Options:
 
         - The band covers only about ±230 km/s, clipping the line's faint wings. No region is guaranteed free of Galactic hydrogen for baseline fitting. Maps are good for seeing where the
           Milky Way is; treat the intensity numbers as indicative.
-        - These SDRs produce a spurious tone at the band's exact center. At this tuning, it sits 0.1 MHz from the line. `map_h1_hdf5_drift.py` blanks a 120 kHz strip around it. The strip's proximity to the line costs roughly one quarter of the measured intensity. The comment on `DC_MASK_HALFWIDTH_HZ` in that
+        - These SDRs produce a spurious tone at the band's exact center. At this tuning, it sits 0.1 MHz from the line. `map_hydrogen_drift.py` blanks a 120 kHz strip around it. The strip's proximity to the line costs roughly one quarter of the measured intensity. The comment on `DC_MASK_HALFWIDTH_HZ` in that
           script has the measured figures and the two ways to improve it.
 
 + Lime 

@@ -13,44 +13,45 @@ They live in the classroom software repository, so updates have one home.
 
 ## Examples with successful generation checks
 
-These sixteen files generated Python successfully with GNU Radio 3.10.9.2.
+These seventeen files generated Python successfully with GNU Radio 3.10.9.2.
 Generation checks do not confirm runtime behavior or receiver operation.
 
-- [Signal controls (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/institute/a1.grc)
-- [Convolution (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/institute/convolution.grc)
-- [Custom noise generator (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/institute/custom-noisegen.grc)
-- [Signal source exercise (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/institute/ex01-1.grc)
-- [Time display exercise (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/institute/ex01-2.grc)
-- [Signal combination exercise (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/institute/ex01-3.grc)
-- [Fourier series (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/institute/fourier-series.grc)
-- [Square-wave Fourier series (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/institute/fourierseries-square.grc)
-- [Triangle-wave Fourier series (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/institute/fourierseries-triangle.grc)
-- [Sine and cosine transforms (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/institute/ft-sine-cos.grc)
-- [Fourier transform pairs (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/institute/ftpairs.grc)
-- [Fundamental frequency with IIR filters (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/institute/fundamentalfreq-iir.grc)
-- [Moving average demonstration (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/institute/movavggeir.grc)
-- [Sampling (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/institute/sampling.grc)
-- [Sampling demonstration (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/institute/sampling-demo.grc)
-- [Sawtooth Fourier transform (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/institute/sawfft.grc)
+- [Signal controls (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/signal-basics/signal-controls.grc)
+- [Convolution (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/fourier-analysis/convolution.grc)
+- [Custom noise generator (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/signal-basics/noise-generator.grc)
+- [Signal source exercise (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/signal-basics/signal-source.grc)
+- [Time display exercise (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/signal-basics/time-display.grc)
+- [Signal combination exercise (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/signal-basics/signal-combination.grc)
+- [Fourier series (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/fourier-analysis/fourier-series.grc)
+- [Square-wave Fourier series (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/fourier-analysis/square-wave-series.grc)
+- [Triangle-wave Fourier series (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/fourier-analysis/triangle-wave-series.grc)
+- [Sine and cosine transforms (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/fourier-analysis/sine-cosine-transforms.grc)
+- [Fourier transform pairs (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/fourier-analysis/transform-pairs.grc)
+- [Fundamental frequency with IIR filters (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/filters/fundamental-frequency-iir.grc)
+- [Moving average demonstration (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/filters/moving-average-block.grc)
+- [Sampling (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/sampling/sampling.grc)
+- [Sampling demonstration (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/sampling/sampling-demo.grc)
+- [Sawtooth Fourier transform (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/fourier-analysis/sawtooth-transform.grc)
+- [Fourier series wave explorer (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/fourier-analysis/wave-explorer.grc)
 
 ## Examples requiring updates
 
-These thirteen examples need compatibility work before use.
+These twelve examples need compatibility work before use.
 Problems include old window constants, disconnected ports, and invalid FFT or decimation settings.
 Receiver examples also need suitable drivers and equipment settings.
 
-- [Frequency display exercise (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/institute/ex01-4.grc)
-- [FM receiver (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/institute/fmradio.grc)
-- [FM receiver with equalizer (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/institute/fmradioeq.grc)
-- [Fundamental frequency with FIR filters (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/institute/fundamentalfreq.grc)
-- [Mixing sine waves (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/institute/mixing-demo-sines.grc)
-- [Frequency and amplitude modulation (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/institute/mixing-demo-sines-freq-amplitude-modulation.grc)
-- [Moving average comparison (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/institute/movingaverage.grc)
-- [Polyphase spectrometer (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/institute/pfb-spectrometer.grc)
-- [Pluto polyphase spectrometer (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/institute/pfb-spectrometer-pluto.grc)
-- [RTL-SDR polyphase spectrometer (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/institute/pfb-spectrometer-rtlsdr.grc)
-- [LimeSDR spectrometer demonstration (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/institute/spectrometer-demo-lime.grc)
-- [LimeSDR polyphase spectrometer (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/institute/spectrometer-pfb-lime.grc)
+- [Frequency display exercise (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/signal-basics/frequency-display.grc)
+- [FM receiver (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/receivers/fm-receiver.grc)
+- [FM receiver with equalizer (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/receivers/fm-receiver-equalizer.grc)
+- [Fundamental frequency with FIR filters (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/filters/fundamental-frequency-fir.grc)
+- [Mixing sine waves (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/modulation/sine-mixing.grc)
+- [Frequency and amplitude modulation (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/modulation/frequency-amplitude-modulation.grc)
+- [Moving average comparison (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/filters/moving-average-comparison.grc)
+- [Polyphase spectrometer (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/spectrometry/polyphase-spectrometer.grc)
+- [Pluto polyphase spectrometer (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/spectrometry/polyphase-spectrometer-pluto.grc)
+- [RTL-SDR polyphase spectrometer (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/spectrometry/polyphase-spectrometer-rtl-sdr.grc)
+- [LimeSDR spectrometer demonstration (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/spectrometry/limesdr-spectrometer-demo.grc)
+- [LimeSDR polyphase spectrometer (GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/spectrometry/limesdr-polyphase-spectrometer.grc)
 
 ## Use the collection
 

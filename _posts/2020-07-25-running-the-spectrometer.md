@@ -12,6 +12,8 @@ equipment: "An assembled telescope, powered amplifier, configured receiver, and 
 preparation: "Complete telescope and software setup. Check receiver settings, output paths, and computer power settings before starting an observation."
 ---
 
+Current software uses `applications/spectrometry/calibrated-spectrometer.grc`. Older videos and bootable images use the earlier filename shown in this lesson.
+
 The video shown [here](https://youtu.be/50B2Uv-SoDY) explains the features in this program.
 
 ## Before Starting The Program

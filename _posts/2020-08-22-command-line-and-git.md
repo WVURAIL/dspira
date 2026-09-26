@@ -101,7 +101,7 @@ You will eventually see this:
 ```
 Updating d0ebfc5..0b10e81
 error: Your local changes to the following files would be overwritten by merge:
-	examples/spectrometer_w_cal.grc
+	applications/spectrometry/calibrated-spectrometer.grc
 Please commit your changes or stash them before you merge.
 Aborting
 ```

@@ -302,27 +302,27 @@
       "legacy": "FilesUploaded/interferometer_simpleSpectrometer_Lime_adding.grc",
       "original_sha256": "ba8b5026247c43bdaee1cb7302c3aaf618f7d2216e420a68dbe76362a90e6fa0",
       "url": "https://raw.githubusercontent.com/WVURAIL/dspira/08b58638e1c3b65e5512f0547b32cd48172afde3/FilesUploaded/interferometer_simpleSpectrometer_Lime_adding.grc",
-      "canonical": "https://raw.githubusercontent.com/WVURAIL/dspira-software/main/flowgraphs/interferometer_simpleSpectrometer_Lime_adding.grc",
+      "canonical": "https://raw.githubusercontent.com/WVURAIL/dspira-software/main/applications/interferometry/limesdr-adding.grc",
       "owner": "dspira-software",
-      "destination": "flowgraphs/interferometer_simpleSpectrometer_Lime_adding.grc",
+      "destination": "applications/interferometry/limesdr-adding.grc",
       "sha256": "ba8b5026247c43bdaee1cb7302c3aaf618f7d2216e420a68dbe76362a90e6fa0"
     },
     {
       "legacy": "FilesUploaded/interferometer_simpleSpectrometer_Lime_multiplying.grc",
       "original_sha256": "c7cc31991cb0a5383bd903083ba37f40ff165a980ce2b97aab91e21258000469",
       "url": "https://raw.githubusercontent.com/WVURAIL/dspira/08b58638e1c3b65e5512f0547b32cd48172afde3/FilesUploaded/interferometer_simpleSpectrometer_Lime_multiplying.grc",
-      "canonical": "https://raw.githubusercontent.com/WVURAIL/dspira-software/main/flowgraphs/interferometer_simpleSpectrometer_Lime_multiplying.grc",
+      "canonical": "https://raw.githubusercontent.com/WVURAIL/dspira-software/main/applications/interferometry/limesdr-multiplying.grc",
       "owner": "dspira-software",
-      "destination": "flowgraphs/interferometer_simpleSpectrometer_Lime_multiplying.grc",
+      "destination": "applications/interferometry/limesdr-multiplying.grc",
       "sha256": "c7cc31991cb0a5383bd903083ba37f40ff165a980ce2b97aab91e21258000469"
     },
     {
       "legacy": "images/Fourier_Series_Wave_Explorer.grc",
       "original_sha256": "172d8809b81f3d2365334c5e05c1d3490017c5808720831f5347ca983e68f812",
       "url": "https://raw.githubusercontent.com/WVURAIL/dspira-software/06c18a0e014c3eb3b67f4cab61139d2cc345f56d/examples/fourier-wave-explorer/Fourier_Series_Wave_Explorer.grc",
-      "canonical": "https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/fourier-wave-explorer/Fourier_Series_Wave_Explorer.grc",
+      "canonical": "https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/fourier-analysis/wave-explorer.grc",
       "owner": "dspira-software",
-      "destination": "examples/fourier-wave-explorer/Fourier_Series_Wave_Explorer.grc",
+      "destination": "examples/fourier-analysis/wave-explorer.grc",
       "sha256": "172d8809b81f3d2365334c5e05c1d3490017c5808720831f5347ca983e68f812"
     },
     {
@@ -1775,9 +1775,9 @@
       "sha256": "22d1ef093f8cf1d77d38eee6a131a096dc16045d503493554d547751e4952563",
       "original_sha256": "22d1ef093f8cf1d77d38eee6a131a096dc16045d503493554d547751e4952563",
       "source_revision": "1ed12e3a2994336fd8364ca59982c943f8a1a72e",
-      "canonical": "https://github.com/WVURAIL/dspira-software/blob/main/data-processing/az_el2gal.py",
+      "canonical": "https://github.com/WVURAIL/dspira-software/blob/main/data-processing/az_el_to_galactic.py",
       "owner": "dspira-software",
-      "destination": "data-processing/az_el2gal.py"
+      "destination": "data-processing/az_el_to_galactic.py"
     },
     {
       "legacy": "code/observations/convert_to_temperature.py",
@@ -1815,9 +1815,9 @@
       "sha256": "43db3227dc9b22ba6e94433ff22a84ebe99fe11a7791caae809c3000fd9d0704",
       "original_sha256": "43db3227dc9b22ba6e94433ff22a84ebe99fe11a7791caae809c3000fd9d0704",
       "source_revision": "1ed12e3a2994336fd8364ca59982c943f8a1a72e",
-      "canonical": "https://github.com/WVURAIL/dspira-software/blob/main/data-processing/map_h1_hdf5_drift.py",
+      "canonical": "https://github.com/WVURAIL/dspira-software/blob/main/data-processing/map_hydrogen_drift.py",
       "owner": "dspira-software",
-      "destination": "data-processing/map_h1_hdf5_drift.py"
+      "destination": "data-processing/map_hydrogen_drift.py"
     },
     {
       "legacy": "code/observations/plot_total_power.py",
@@ -1835,9 +1835,9 @@
       "sha256": "fe51abd21e23912c51ddf439ebdd5e6279f370aaf421f9b8475db7bdf2d74eba",
       "original_sha256": "fe51abd21e23912c51ddf439ebdd5e6279f370aaf421f9b8475db7bdf2d74eba",
       "source_revision": "1ed12e3a2994336fd8364ca59982c943f8a1a72e",
-      "canonical": "https://github.com/WVURAIL/dspira-software/blob/main/data-processing/test_parse_pointing.py",
+      "canonical": "https://github.com/WVURAIL/dspira-software/blob/main/tests/data-processing/test_parse_pointing.py",
       "owner": "dspira-software",
-      "destination": "data-processing/test_parse_pointing.py"
+      "destination": "tests/data-processing/test_parse_pointing.py"
     }
   ]
 }

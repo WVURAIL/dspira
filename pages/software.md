@@ -13,7 +13,7 @@ Check your computer, receiver model, and GNU Radio version together. Installatio
 
 **Generation checks pass on GNU Radio 3.10.9.2.** All seven applications generate Python successfully with the DSPIRA blocks installed.
 Generated Python also passes syntax checks. Receiver operation and hardware calibration still need testing.
-Read the [compatibility results and remaining checks](https://github.com/WVURAIL/dspira-software/blob/main/docs/KNOWN_ISSUES.md) before using these applications in class.
+Read the [compatibility results and remaining checks](https://github.com/WVURAIL/dspira-software/blob/main/docs/compatibility.md) before using these applications in class.
 
 Email [rail@wvu.edu](mailto:rail@wvu.edu) with your operating system, GNU Radio version, and receiver model for setup guidance.
 
@@ -22,8 +22,10 @@ Email [rail@wvu.edu](mailto:rail@wvu.edu) with your operating system, GNU Radio 
 1. Review [computer requirements]({{ '/HornOperation_computerSystems' | relative_url }}).
 2. Choose [an installation route]({{ '/BuildingHorn_SoftwareInfo' | relative_url }}) appropriate for your computer.
 3. [Install DSPIRA software]({{ '/install-software/' | relative_url }}), including GNU Radio dependencies, processing blocks, and applications.
-4. Open `flowgraphs/spectrometer_w_cal.grc` from your `dspira-software` folder.
+4. Open `applications/spectrometry/calibrated-spectrometer.grc` from your `dspira-software` folder.
 5. Set [your receiver source block]({{ '/Spectrometer_sourceblock_settings' | relative_url }}) and follow [the running instructions]({{ '/HornOperation_runningSpectrometer' | relative_url }}).
+
+Current checkouts use `calibrated-spectrometer.grc`. Older videos and bootable images call this program `spectrometer_w_cal.grc`.
 
 Older instructions may target GNU Radio 3.8. Do not assume they apply unchanged to newer releases.
 
