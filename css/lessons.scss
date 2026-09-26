@@ -191,27 +191,24 @@ h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
    overflow-x: auto;
 }
 
-/* assets/js/lessons.js turns a bare YouTube URL into
-   <div class="videoWrapper"><iframe>. The DS has .ratio.ratio-16x9 for exactly
-   this, but the class name is the script's, so the same 16:9 box is built
-   here. With JavaScript off the URL stays a plain link and none of this
-   applies. */
+/* Reserve player space before lazy loading; keep controls usable on phones. */
 .videoWrapper {
    position: relative;
-   height: 0;
-   padding-bottom: 56.25%;
-   margin: 1.5rem 0;
+   width: 100%;
+   max-width: 100%;
+   aspect-ratio: 16 / 9;
+   min-height: 200px;
    overflow: hidden;
    background: var(--bs-wvu-coal);
 }
 .videoWrapper iframe {
    position: absolute;
-   top: 0;
-   left: 0;
+   inset: 0;
    width: 100%;
    height: 100%;
    border: 0;
 }
+.lesson-video { scroll-margin-top: 1rem; }
 
 /* The filter on /all/ needs nothing here: it ships with the `hidden`
    attribute and the DS reboot's [hidden] { display: none !important } keeps

@@ -28,7 +28,7 @@ preparation: "Review Doppler shifts and galactic coordinates. Replace the histor
 - **Pre-Knowledge of Students:** 
 
     + The students have been exposed to the horn telescope and understand how to read a spectrum. 
-    
+
     + Students understand radio waves and the hydrogen spin-flip transition. This transition produces the 21 cm waves detected by the horn telescope. 
 
     + Students apply Doppler shifts to spectral peaks to find the detected hydrogen's relative velocity.
@@ -41,20 +41,24 @@ preparation: "Review Doppler shifts and galactic coordinates. Replace the histor
 
 - **Key Terms:** horn telescope, HI spectrum, galactic coordinates, horizontal coordinates, Stellarium. Doppler shift, red shift, blue shift, relative velocity. Circular motion, law of gravitation, orbital motion
 
-- **Related Videos for Teacher:** [Galaxy Survey Trailer](https://youtu.be/tDCPp8RIM4g)
+- **Related Videos for Teacher:** [Galaxy Survey Trailer](#video-tDCPp8RIM4g)
+
+<figure class="lesson-video" id="video-tDCPp8RIM4g">
+{% include youtube.html title="Galaxy Survey Trailer" url="https://youtu.be/tDCPp8RIM4g" video="tDCPp8RIM4g" %}
+</figure>
 
 - **Teacher Preparation:**  
     + Share one horn with the class, or assign separate horns to student groups.
-    
+
     + The students have used a horn telescope before. It is recommended that the following lessons have been completed:
         - Intro to the Horn Telescope
-        
+
         - Electromagnetic Spectrum
-        
+
         - The 21 cm Wavelength of Neutral Hydrogen
-        
+
         - Understanding Coordinate Systems 
-        
+
     + Teachers should understand red-shifted and blue-shifted signals. Quadrant II generally shows blue-shifted peaks, while quadrant III shows red-shifted peaks. Together, these trends imply clockwise galactic rotation in standard galactic coordinates.
 
     + Teachers should understand the tangent method and its relationship between galactic distances, angles, and line-of-sight motion. In quadrant I, tangent-point motion is away from the Sun. This produces the red-shifted peaks students seek. See the Teacher Notes under Part 2: Galactic Quadrant I Observation.
@@ -62,23 +66,23 @@ preparation: "Review Doppler shifts and galactic coordinates. Replace the histor
 - **Sequence of activities:** - The Teacher Notes for each part provide more details.
 
 **INTRO:** These activities introduce the concepts and give students experience with the horn telescope
-    
+
    a. Group these four activities together. Small groups can take turns using the horn telescope for the practical activity.
-    
+
    b. The students may have had some of these experiences if other lesson modules have been done (Basic Observational Tools) 
-       
+
  **PART I** The students collect spectra at different galactic longitudes along the galactic plane in quadrants II and III.
-     
+
    a. The student analyze the spectra to determine the relative velocity of the detected hydrogen.
-    
+
    b. The students determine that the galaxy is rotating.
-    
+
   **PART II** The students then collect spectra at different galactic longitudes along the galactic plane in quadrant I.
-    
+
    a. Assuming circular motion of the galaxy, the speed of the tangent point along the observation line is calculated.
-    
+
    b. A graph showing galactic speed vs distance from the galactic center is created using these results.
-    
+
    c. This graph is compared to the graph expected in different models of mass distribution in the galaxy.
 
 
@@ -89,18 +93,18 @@ OBJECTIVE: These activities allow this *Velocity Curve of the MWG* module be abl
 *Teacher Notes* Assign all four activities so students have work to complete while others use the telescope. Small groups can then take turns discovering what the horn can do. (Most teachers very likely with have only one telescope.)
 
 * [Introduction to Horn Telescope]({{ site.baseurl }}/assets/worksheets/velocity-curve/horn-introduction.pdf){: .btn .btn-wvu-blue}
-   
+
 * [Introduction to Horn Telescope Follow-up]({{ site.baseurl }}/assets/worksheets/velocity-curve/horn-introduction-answer-key.pdf)
-   
+
 * [The Electromagnetic Spectrum]({{ site.baseurl }}/assets/worksheets/velocity-curve/electromagnetic-spectrum.pdf){: .btn .btn-wvu-blue}
 
    Further reading for this activity:
    [introduction to wavelengths and radiation]({{ site.baseurl }}/assets/lessons/electromagnetic-spectrum/introduction.pdf).
-   
+
 * [The 21 cm Wavelength of Neutral Hydrogen]({{ site.baseurl }}/assets/lessons/velocity-curve/hydrogen-21cm.pdf){: .btn .btn-wvu-blue}
-   
+
 * [Celestial Coordinate Systems]({{ site.baseurl }}/assets/lessons/velocity-curve/coordinate-systems.pdf){: .btn .btn-wvu-blue}
-   
+
 * [Using Stellarium]({{ site.baseurl }}/assets/worksheets/velocity-curve/stellarium.pdf){: .btn .btn-wvu-blue}
 
 
@@ -160,15 +164,15 @@ An [earlier Part 2 worksheet from 2019]({{ '/assets/worksheets/velocity-curve/ga
 It includes teacher notes and an observation plan. Adapt its class-specific details before use.
 
    * [Galactic Plane Quadrants II and III Observations: Teacher Notes](https://docs.google.com/document/d/1h9is9YnnfDidLnlvs-DnXlyzXIjT0EhrLDdnONAByHg/edit?usp=sharing)
-   
+
    * [Galactic Plane Quadrants II and III Observations](https://docs.google.com/document/d/1jcMV-8X8Cd7rryGCsednTlc0fFRrgvAGkFyJUQAGJh8/edit)
-   
+
    * [Galactic Plane Quadrants II and III Observations: Conclusions](https://docs.google.com/document/d/1aVUFzAvC14gPeV6RSYumYPlkclgILeoaI5LpUZNSV5U/edit)
-      
+
    * [Galactic Plane Quadrant I Observations: Teacher Notes](https://docs.google.com/document/d/1BSLoZjrFtA2qEoVzgvXjHdufQFRWmxtQWSAl8k1yJu8/edit)
-   
+
    * [Galactic Plane Quadrant I Observations](https://docs.google.com/document/d/1V4wUx8VtX358x-gIWdH9FaYi3579bz_Unl38_ShrbKE/edit)
-   
+
    * [Galactic Plane Quadrant I Observations: The Tangent Method](https://docs.google.com/document/d/1wA_tVKYrAyjvuVqUY9c_stwNpO1dGDFnIL6TiHq5hx8/edit?usp=sharing)   
-   
+
    * [Galactic Plane Quadrant I Observations: Analysis and Conclusions](https://docs.google.com/document/d/1J9w1DH5fQW24XDvesYTzsR943Px_13uTZQQS5qi6rxg/edit)

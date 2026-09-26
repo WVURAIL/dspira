@@ -14,9 +14,11 @@ equipment: "A working horn telescope and running spectrometer. The horn must be 
 preparation: "Complete telescope setup and read the spectrometer controls. Warm up the system before collecting hot and cold references."
 ---
 
-[Instructional video](https://youtu.be/r8iYuaiFOd8) - Demonstrates steps for calibrating the horn telescope.
+[Instructional video](#video-r8iYuaiFOd8) - Demonstrates steps for calibrating the horn telescope.
 
-[<img alt="Watch the horn telescope calibration instructional video on YouTube" src="{{ '/images/observing/calibration-video-thumbnail.jpg' | relative_url }}" width="400" height="300" />](https://youtu.be/r8iYuaiFOd8)
+<figure class="lesson-video" id="video-r8iYuaiFOd8">
+{% include youtube.html title="How to Calibrate a Horn Telescope" url="https://youtu.be/r8iYuaiFOd8" video="r8iYuaiFOd8" %}
+</figure>
 
 Use the written procedure below as the current reference beside the video.
 Software checks confirm the reference-saving behavior described here. The full procedure still needs a recorded hardware check.
@@ -59,8 +61,8 @@ Software checks confirm the reference-saving behavior described here. The full p
    * A negative or drifting baseline is a reason to check the setup and repeat calibration.
      The model assumes a 10 K cold reference, not a 20 K target.
      Adjusting `y-min` changes the display scale; it does not correct calibration.
- 
+
    * A constant background offset does not shift peak positions. Frequency-dependent drift or interference can change the spectrum's shape.
 
    * Review baseline stability before quantitative analysis. Subtracting a constant offset cannot repair every calibration error.
-    
+

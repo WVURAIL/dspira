@@ -15,8 +15,6 @@ Their `permalink` fields preserve public addresses independently of source filen
 | [electromagnetic-spectrum](lessons/electromagnetic-spectrum/) | Background introduction to wavelengths and radiation |
 | [horn-construction](lessons/horn-construction/) | Horn, can, cradle, stand, and mini-horn construction instructions |
 | [simple-spectrometer](lessons/simple-spectrometer/) | Spectrometer construction guide |
-| [telescope-setup](lessons/telescope-setup/) | Equipment checklist |
-| [two-horn-interferometer](lessons/two-horn-interferometer/) | Setup guide |
 | [velocity-curve](lessons/velocity-curve/) | Unit outline and astronomy background handouts |
 
 [`lessons/lectures`](lessons/lectures/) groups lecture slides by subject:
@@ -29,6 +27,10 @@ Files sit directly in each subject folder. Known years go at the end of filename
 The [lecture index](lessons/lectures/README.md) records titles, credits, and available date information.
 Do not infer a year for undated material. Original source notices remain with the lecture collection.
 The two teaching figures under `images/astronomy/` retain the same original rights and credits.
+
+The telescope equipment checklist and two-horn setup instructions now live directly on their lesson pages.
+Their former PDF addresses remain available through pinned compatibility downloads.
+Keep construction packets, slide decks, worksheets, and teacher planning sheets when their printable format serves the activity.
 
 ## Worksheets
 

@@ -57,6 +57,9 @@ jobs:
           BUNDLE_GEMFILE: ${{ github.workspace }}/Gemfile.ci
           JEKYLL_ENV: production
 
+      - name: Embedded videos and watch links
+        run: python3 tools/check_videos.py --site _site
+
       - name: Every lesson and index page built
         run: |
           set -euo pipefail

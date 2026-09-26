@@ -1,0 +1,9 @@
+<div class="videoWrapper">
+  <iframe width="640" height="360" loading="lazy"
+    src="https://www.youtube-nocookie.com/embed/{% if include.playlist %}videoseries?list={{ include.playlist | escape }}{% else %}{{ include.video | escape }}?rel=0{% endif %}{% if include.start %}&amp;start={{ include.start }}{% endif %}"
+    title="{{ include.title | escape }}"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</div>
+<figcaption>{{ include.title | escape }}. <a href="{{ include.url | escape_once }}">Watch on YouTube<span class="visually-hidden">: {{ include.title | escape }}</span></a>.</figcaption>

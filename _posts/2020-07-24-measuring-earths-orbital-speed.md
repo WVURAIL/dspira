@@ -25,34 +25,50 @@ There are (up to) 6 activities to get to using the Horn Telescope
    5. Analyzing DSPIRA Radio Horn Data
    6. Comparing Model to Data
    7. Getting your own data with your Radio Horn
-   
+
 ## 1. How Fast Are We Moving?   
    This standalone exercise suits students from middle school space science through high school physics. Students determine Earth's rotation speed, its orbital speed around the Sun, and the Sun's speed around the galaxy.
 To get to the activity files, click here [How Fast Are We Moving?]({{ site.baseurl }}/HowFastAreWeMoving)   
-   
+
 ## 2. Modeling Earth's Motion around the Sun    
 The Earth will be modeled as moving in a circle around the Sun.  The direction to the galactic center (GC) is included for use in later measurements.  Later Doppler calculations require Earth's velocity component toward the GC. This activity introduces velocity components graphically.  
 Click here for Student Activity [Modeling Earth's Motion around the Sun student worksheet](https://docs.google.com/document/d/1__n0TklTs-efhsMBp2iGLFbOOSoBRgllJImWqw3vCNQ/edit?usp=sharing)    
 Click here for Student Activity [Diagram](https://drive.google.com/file/d/1AZH7kvTEcVaMl58jet1LkjiGaGwPlmJs/view?usp=sharing) 
-   
-[Modeling Earth's Motion around the Sun teacher video](https://www.youtube.com/watch?v=ke65AuJ-j7I&feature=youtu.be) Video for Activity 
+
+[Modeling Earth's Motion around the Sun teacher video](#video-ke65AuJ-j7I) Video for Activity
+
+<figure class="lesson-video" id="video-ke65AuJ-j7I">
+{% include youtube.html title="Having students graphically modeling the Earth's motion around the Sun" url="https://www.youtube.com/watch?v=ke65AuJ-j7I&amp;feature=youtu.be" video="ke65AuJ-j7I" %}
+</figure>
 
 ## 3. Earth's Motion with respect to the Galactic Center 
 The previous activity produced an Earth orbit model. Its numbered days now need actual calendar dates.  Use [Stellarium Web Online](https://stellarium-web.org/) to connect calendar dates with the student's model.   
 
 Click here for Student Activity [Earth's Motion with respect to the Galactic Center student worksheet](https://docs.google.com/document/d/16ibpadOhBioZqrvxWpdrwJ1S6iNAwi7YaRW_QoM-CVI/edit?usp=sharing) 
-   
-[Earth's Motion with respect to the Galactic Center teacher video](https://www.youtube.com/watch?v=ApKA6kWlFuQ&feature=youtu.be) Video for Activity 
+
+[Earth's Motion with respect to the Galactic Center teacher video](#video-ApKA6kWlFuQ) Video for Activity
 ### Stellarium - Web vs Download Version  
 Stellarium helps observers explore the night sky. Teachers can also use it for interactive astronomy lessons.  
 For the full DSPIRA telescope-building experience, consider learning the more capable downloadable version (still free).  Watch the video for a DSPIRA opinion on Pros and Cons for each version.  
 
-Video [Stellarium Web vs Download version](https://www.youtube.com/watch?v=uWdVQG93MO4&list=PLxSg3s3C3JCFns9MFgZ-1VWBV4Y346afq&index=5&t=0s) 
+<figure class="lesson-video" id="video-ApKA6kWlFuQ">
+{% include youtube.html title="DSPIRA Stellarium Web-version Tutorial" url="https://www.youtube.com/watch?v=ApKA6kWlFuQ&amp;feature=youtu.be" video="ApKA6kWlFuQ" %}
+</figure>
+
+Video [Stellarium Web vs Download version](#video-uWdVQG93MO4)
+
+<figure class="lesson-video" id="video-uWdVQG93MO4">
+{% include youtube.html title="Stellarium Web Version vs Download (20.2)" url="https://www.youtube.com/watch?v=uWdVQG93MO4&amp;list=PLxSg3s3C3JCFns9MFgZ-1VWBV4Y346afq&amp;index=5&amp;t=0s" video="uWdVQG93MO4" %}
+</figure>
 
 ## 4. Introduction to Doppler Effect   
 There is not a DSPIRA generated activity for Doppler.  The next activity uses the Doppler equation provided in its instructions. Introduce the equation in a lecture first.  
 This three-minute video introduces the Doppler shift. Its final minute explains how astronomers use the effect to detect motion. 
-[Popular Youtube Doppler Shift Video](https://www.youtube.com/watch?v=h4OnBYrbCjY)
+[Popular Youtube Doppler Shift Video](#video-h4OnBYrbCjY)
+
+<figure class="lesson-video" id="video-h4OnBYrbCjY">
+{% include youtube.html title="The Doppler Effect: what does motion do to waves?" url="https://www.youtube.com/watch?v=h4OnBYrbCjY" video="h4OnBYrbCjY" %}
+</figure>
 
 ## 5. Measuring the Earth's Speed around the Sun   
 Actual data generated from the DSPIRA Radio Horn Telescope is given to the students to analyze.  It is a great opportunity for students to learn to dig information out of a graph.  The data lines up with the points created in the Earth Orbit Model from activity #2.  The students will use the Doppler equation to determine the (radial) speed of the Earth towards the Galactic Center. 
@@ -60,8 +76,12 @@ Actual data generated from the DSPIRA Radio Horn Telescope is given to the stude
 Click here for Student Activity [Measuring the Earth's Speed around the Sun student worksheet](https://drive.google.com/file/d/17vAWar6qnTkrmAbeuVLDPLYGMwrpnj2J/view?usp=sharing)  
 
 The following video shows an example of how to analyze the Spectrum in the manner of the activity.  It can help the teacher or student get started with the analysis part of the activity. 
-Video of [Graph Analysis Example](https://www.youtube.com/watch?v=0yAo1z4kv1w)
-   
+Video of [Graph Analysis Example](#video-0yAo1z4kv1w)
+
+<figure class="lesson-video" id="video-0yAo1z4kv1w">
+{% include youtube.html title="Finding the Speed of Earth Around the Sun - Example of Graph Analysis" url="https://www.youtube.com/watch?v=0yAo1z4kv1w" video="0yAo1z4kv1w" %}
+</figure>
+
 ## 6. Comparing the Earth Orbit Model to the actual Data Analysis
 
 There has been a long sequence of activities that brings a class to this point.  Students summarize their work in one Conclusion/Final Comparison chart.  

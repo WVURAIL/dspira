@@ -12,4 +12,6 @@ equipment: "A computer or other device for watching the introductory video. No t
 preparation: "Preview the video before class. Use it to introduce the telescope before discussing construction or observations."
 ---
 
-[Introductory Video: What is a Horn Telescope?](https://youtu.be/uzYvv4nwndM){: .btn .btn-wvu-blue}
+<figure class="lesson-video" id="video-uzYvv4nwndM">
+{% include youtube.html title="Introduction to a Horn Telescope" url="https://youtu.be/uzYvv4nwndM" video="uzYvv4nwndM" %}
+</figure>

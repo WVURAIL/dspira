@@ -14,11 +14,19 @@ preparation: "Complete telescope and software setup. Check receiver settings, ou
 
 Current software uses `applications/spectrometry/calibrated-spectrometer.grc`. Older videos and bootable images call it `spectrometer_w_cal.grc`.
 
-The video shown [here](https://youtu.be/50B2Uv-SoDY) explains the features in this program.
+The video shown [here](#video-50B2Uv-SoDY) explains the features in this program.
+
+<figure class="lesson-video" id="video-50B2Uv-SoDY">
+{% include youtube.html title="Radio Horn Operation - The DSPIRA Horn Spectrometer Environment" url="https://youtu.be/50B2Uv-SoDY" video="50B2Uv-SoDY" %}
+</figure>
 
 ## Before Starting The Program
 
-The video [here](https://youtu.be/Oo28QCEZe_g) explains how set up the horn and make adjustments to the user-defined settings referred to below.
+The video [here](#video-Oo28QCEZe_g) explains how set up the horn and make adjustments to the user-defined settings referred to below.
+
+<figure class="lesson-video" id="video-Oo28QCEZe_g">
+{% include youtube.html title="Horn Operation: Setting Up a Horn" url="https://youtu.be/Oo28QCEZe_g" video="Oo28QCEZe_g" %}
+</figure>
 
    * Check the user-defined settings illustrated below. These are the `Variable` blocks in the upper right corner of the GNU Radio canvas.
 
@@ -54,10 +62,14 @@ The video [here](https://youtu.be/Oo28QCEZe_g) explains how set up the horn and 
    * Adjust the `ymin` and `ymax` values to scale the graph as desired.
 
    * Fill in the `azimuth`, `elevation`, and `location`, if desired. 
-   
+
       - **NOTE: Press ENTER after each value so the program records it.**
 
-      - These parameters are included in the title, as described in the *Saving a Spectrum to a Data File* section below. This is also demonstrated in [this video.](https://youtu.be/dWX0rRU99Z8).
+      - These parameters are included in the title, as described in the *Saving a Spectrum to a Data File* section below. This is also demonstrated in [this video.](#video-dWX0rRU99Z8).
+
+<figure class="lesson-video" id="video-dWX0rRU99Z8">
+{% include youtube.html title="Horn Operation: Saving Data with the DSPIRA Spectrometer" url="https://youtu.be/dWX0rRU99Z8" video="dWX0rRU99Z8" %}
+</figure>
 
    * The `Short Integration` option is good for quick observations and demonstrations. Once the pointing is settled, switch to `Long Integration` for a longer run with smoother data.
 
@@ -65,7 +77,7 @@ The video [here](https://youtu.be/Oo28QCEZe_g) explains how set up the horn and 
 
 ## Saving a Spectrum to a Data File
 
-   * [Video](https://youtu.be/dWX0rRU99Z8) - describes how to save data
+   * [Video](#video-dWX0rRU99Z8) - describes how to save data
 
    * Click `Capture Current Spectrum` to save the displayed spectrum as a .csv data file. The data file is written to the folder under the path in the `prefix` Variable box.
 
@@ -83,4 +95,4 @@ The video [here](https://youtu.be/Oo28QCEZe_g) explains how set up the horn and 
       - The file name has a format that contains the date, time, location, azimuth, and elevation, with “_spectrum” at the end. The location, azimuth, and elevation are recorded with the values in the corresponding fields on the spectrometer interface screen.
 
       - For example, `2020-07-15_12.30.00.000001_Morgantown_200_30_spectrum.csv` identifies data collected in Morgantown on July 15, 2020. The telescope pointed at azimuth 200 degrees and elevation 30 degrees.
-    
+

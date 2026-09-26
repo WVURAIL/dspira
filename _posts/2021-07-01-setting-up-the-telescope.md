@@ -13,6 +13,22 @@ preparation: "Review the checklist and setup video. Confirm amplifier power and 
 ---
 
 
-+ [List of equipment needed]({{ site.baseurl }}/assets/lessons/telescope-setup/equipment-list.pdf)
+## Equipment checklist
 
-+ [How to set up the telescope](https://youtu.be/Oo28QCEZe_g). This video covers telescope setup and initial *spectrometer_w_cal* settings.
+- An assembled horn and feed can.
+- A low-noise amplifier (LNA).
+- A supported software-defined radio (SDR), such as an Airspy, RTL-SDR, LimeSDR, or PlutoSDR.
+- A coaxial cable connecting the LNA to the SDR.
+- A USB cable connecting the SDR to the computer.
+- A computer with GNU Radio and the DSPIRA telescope software installed.
+
+Check the [receiver settings]({{ '/Spectrometer_sourceblock_settings' | relative_url }}) for your SDR and amplifier power arrangement.
+
+## Setup demonstration
+
+This video covers telescope setup and initial spectrometer settings.
+Older videos call the program `spectrometer_w_cal.grc`; the current application is `calibrated-spectrometer.grc`.
+
+<figure class="lesson-video" id="video-Oo28QCEZe_g">
+{% include youtube.html title="Horn Operation: Setting Up a Horn" url="https://youtu.be/Oo28QCEZe_g" video="Oo28QCEZe_g" %}
+</figure>

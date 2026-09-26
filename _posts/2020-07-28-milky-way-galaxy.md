@@ -30,7 +30,7 @@ Click here for a complete document of [Teacher's Notes](https://docs.google.com/
    5. Introduction to the Milky Way - What CAN'T we see?
    6. A Model of the Motion within the Milky Way
    7. Creating a Velocity Curve for the Milky Way Galaxy
-   
+
 ## 1. How Fast Are We Moving?   
 
 This activity may have already been done as a stand alone, or as part of the Earth’s Motion sequence. Students determine the Sun's speed around the Milky Way. They can complete the activity now or recall their earlier result.
@@ -64,11 +64,17 @@ Click here for Student Activity [Introduction to the Milky Way - What can we see
 
 ## 5. Introduction to the Milky Way - What CAN'T we see? 
 
-The name is hopefully not misleading, because there is lots that we can't see.  This activity looks at MOTION as "the thing we can't see" (without understanding the [Doppler Effect](https://www.youtube.com/watch?v=h4OnBYrbCjY))
+The name is hopefully not misleading, because there is lots that we can't see.  This activity looks at MOTION as "the thing we can't see" (without understanding the [Doppler Effect](#video-h4OnBYrbCjY))
+
+<figure class="lesson-video" id="video-h4OnBYrbCjY">
+{% include youtube.html title="The Doppler Effect: what does motion do to waves?" url="https://www.youtube.com/watch?v=h4OnBYrbCjY" video="h4OnBYrbCjY" %}
+</figure>
 
 Click here for Student Activity [Introduction to the Milky Way - What CAN'T we see? student worksheet](https://drive.google.com/file/d/1xPjeHIYgnBoz7Gs0A-shC9hNVgdAPxlF/view?usp=sharing) 
 
-[Computer Simulation of Galactic Motion](https://www.youtube.com/watch?v=GLiXR0Jh3o8)
+<figure class="lesson-video" id="video-GLiXR0Jh3o8">
+{% include youtube.html title="Galactic Rotation Model in Interactive Physics" url="https://www.youtube.com/watch?v=GLiXR0Jh3o8" video="GLiXR0Jh3o8" %}
+</figure>
 
 ## 6. Modeling the Motion of the Milky Way
 
@@ -80,8 +86,20 @@ Click here for all 3 Student documents
 -----> [Model Diagram](https://drive.google.com/file/d/10Ct0UIcqEZzKVll40bz1z-7tCSWLWcfV/view?usp=sharing)  
 
 Here are 3 helpful video companions 
-[MWG Model - Part 1](https://www.youtube.com/watch?v=sZTpAqn1St4){: .btn .btn-wvu-blue}[MWG Model - Part 2](https://www.youtube.com/watch?v=kyww_Vu5AZc){: .btn .btn-wvu-blue}[MWG Model - Part 3](https://www.youtube.com/watch?v=Vf4a7fKUWGE){: .btn .btn-wvu-blue}
+[MWG Model - Part 1](#video-sZTpAqn1St4)[MWG Model - Part 2](#video-kyww_Vu5AZc)[MWG Model - Part 3](#video-Vf4a7fKUWGE)
+
+<figure class="lesson-video" id="video-sZTpAqn1St4">
+{% include youtube.html title="Modeling the Motion in the Milky Way-Part 1" url="https://www.youtube.com/watch?v=sZTpAqn1St4" video="sZTpAqn1St4" %}
+</figure>
+
+<figure class="lesson-video" id="video-kyww_Vu5AZc">
+{% include youtube.html title="Modeling the Motion of the Milky Way - Part 2" url="https://www.youtube.com/watch?v=kyww_Vu5AZc" video="kyww_Vu5AZc" %}
+</figure>
+
+<figure class="lesson-video" id="video-Vf4a7fKUWGE">
+{% include youtube.html title="Modeling the Motion of the Milky Way - Part 3" url="https://www.youtube.com/watch?v=Vf4a7fKUWGE" video="Vf4a7fKUWGE" %}
+</figure>
 
 ## 7. Creating a Velocity Curve for the Milky Way Galaxy
 This final activity lets teachers and students collect galactic data. A separate lesson sequence on the Lesson Module Page explains the process. 
-    
+

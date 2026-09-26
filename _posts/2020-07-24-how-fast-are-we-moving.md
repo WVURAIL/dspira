@@ -25,6 +25,8 @@ This version suits students familiar with universal gravitation and circular mot
 
 [Teacher Notes](https://docs.google.com/document/d/1wpvKYHrdWjpbbzHOWjYOjCK95BkYc4WE0pzj2UZ3auI/edit?usp=sharing){: .btn .btn-wvu-blue}
 
-https://www.youtube.com/watch?v=uZ9iNsjyw7k&feature=youtu.be
+<figure class="lesson-video" id="video-uZ9iNsjyw7k">
+{% include youtube.html title="How Fast Are We Moving - Things to expect from students" url="https://www.youtube.com/watch?v=uZ9iNsjyw7k&amp;feature=youtu.be" video="uZ9iNsjyw7k" %}
+</figure>
 
 This video discusses common difficulties experienced during this activity in the past.

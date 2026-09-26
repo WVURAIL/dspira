@@ -125,3 +125,10 @@ Set up and run a two-horn interferometer with a Lime SDR and GNU Radio. The GNU 
    - Start the program. Select "Long Integration" and "Writing to File". If all is good, the graphs should show signals being collected.
 
 
+
+## Check recording before a long run
+
+Briefly select `Writing to File`, then stop the program and inspect each output folder.
+Confirm that new, time-stamped files contain data for the selected spectrometer.
+Keep test observations separate from the science run.
+Use your browser's Print command if you need a field copy of these instructions.

@@ -22,5 +22,10 @@ Two parts of the build are documented as drawings rather than as lessons:
 * [The base stand]({{ site.baseurl }}/assets/lessons/horn-construction/stand-assembly-2021.pdf) —
   a simple, sturdy base for the cradle to bolt to.
 
-[A completed horn assembled](https://youtu.be/LT0h3Frd-_k) is a short video
+[A completed horn assembled](#video-LT0h3Frd-_k) is a short video
 showing how the horn-can, cradle and stand go together.
+
+
+<figure class="lesson-video" id="video-LT0h3Frd-_k">
+{% include youtube.html title="Horn Assembly" url="https://youtu.be/LT0h3Frd-_k" video="LT0h3Frd-_k" %}
+</figure>

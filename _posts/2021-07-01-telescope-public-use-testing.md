@@ -19,7 +19,11 @@ She compared observations with published measurements. She measured neutral hydr
 either the sky is odd or the telescope is, and it is worth knowing which.
 
 [The poster](https://undergraduateresearch.wvu.edu/symposia/summer-2021/-poster-presentations/physical-sciences-poster-presentations-99-117/past-symposia/testing-the-effectiveness-of-the-dspira-radio-telescope-for-public-use){: .btn .btn-wvu-blue}
-[The talk (video)](https://www.youtube.com/watch?v=LJhsqkWALcc){: .btn .btn-wvu-blue}
+[The talk (video)](#video-LJhsqkWALcc)
 [Supplemental materials](https://drive.google.com/drive/folders/19uFeHImNC_nRXGhQv-8Bi2e9AXS4x81f){: .btn .btn-wvu-blue}
+
+<figure class="lesson-video" id="video-LJhsqkWALcc">
+{% include youtube.html title="WVU SURE Symposium -- Testing the Effectiveness of the DSPIRA Radio Telescope for Public Use" url="https://www.youtube.com/watch?v=LJhsqkWALcc" video="LJhsqkWALcc" %}
+</figure>
 
 Use this comparison to check your spectra while working through the [Observing]({{ '/categories/observing/' | relative_url }}) module.

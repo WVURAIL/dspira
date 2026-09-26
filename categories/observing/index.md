@@ -12,9 +12,9 @@ Protect your electronics from weather and follow the equipment instructions.
 
 The module ends with two extensions to single-horn observing. First, turn drift scans into a sky map and rotation curve. Then add a second horn to make an interferometer.
 
-Two operating procedures are documented as PDFs rather than as lessons:
+For two-horn observations, use the setup lesson and its companion technical memo:
 
-* [Setting up and operating a 2-horn interferometer]({{ site.baseurl }}/assets/lessons/two-horn-interferometer/setup-guide.pdf) —
+* [Setting up and operating a 2-horn interferometer]({{ '/SettingUp2HornInterferometer' | relative_url }}) —
   covers both the adding and the multiplying spectrometer programs.
 * [Adding interferometry to a 2-horn system](/lightwork/memos/memo-031.pdf) —
   LightWork Memo 31.
@@ -26,9 +26,9 @@ For what an interferometer is actually good for, see
 
 Follow the lessons below for the complete observing sequence. For a specific task:
 
-- [Set up the telescope]({{ '/Telescope_Setup' | relative_url }}) · [Watch the setup video](https://youtu.be/Oo28QCEZe_g).
-- [Learn the spectrometer controls]({{ '/HornOperation_spectrometer_description' | relative_url }}) · [Watch the controls video](https://youtu.be/50B2Uv-SoDY).
-- [Run and save observations]({{ '/HornOperation_runningSpectrometer' | relative_url }}) · [Watch the saving-data video](https://youtu.be/dWX0rRU99Z8).
+- [Set up the telescope]({{ '/Telescope_Setup' | relative_url }}).
+- [Learn the spectrometer controls]({{ '/HornOperation_spectrometer_description' | relative_url }}).
+- [Run and save observations]({{ '/HornOperation_runningSpectrometer' | relative_url }}).
 - [Calibrate the telescope]({{ '/HornOperation_Calibration' | relative_url }}).
 
 Use your browser's Print command to print a lesson or save it as a PDF.

@@ -35,6 +35,23 @@ system images need a separate download location, linked from the lesson page.
 The `main` branch publishes the website after its checks pass.
 Use a local preview when reviewing changes. The former approval preview is archived.
 
+## Videos and printable materials
+
+Embed lesson videos with the shared include. Give each video a descriptive title and keep its original watch link.
+Use `start=433` to begin at 7:13. For a playlist, replace `video` with `playlist` and use the playlist ID.
+
+```liquid
+{% include youtube.html video="Oo28QCEZe_g" title="Setting up a horn telescope" url="https://youtu.be/Oo28QCEZe_g" %}
+```
+
+Wrap the include in `<figure class="lesson-video">` and `</figure>` on separate lines.
+Use a unique figure ID when another sentence links to the video.
+The player loads lazily and the watch link also works in print.
+
+Put short instructions directly on the lesson page.
+Keep PDFs that serve a printing purpose, such as construction plans, worksheets, presentations, and teacher planning sheets.
+When retiring a duplicate PDF, preserve its old download addresses in `_data/legacy_assets.json`.
+
 ## Review and publication
 
 A maintainer checks metadata, links, files, and accessibility structure. An educator
