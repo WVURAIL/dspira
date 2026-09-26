@@ -53,6 +53,7 @@ jobs:
           bundle exec jekyll build --trace
           python3 tools/test_publish_assets.py
           python3 tools/publish_assets.py --site _site
+          python3 tools/check_teaching_documents.py --site _site
         env:
           BUNDLE_GEMFILE: ${{ github.workspace }}/Gemfile.ci
           JEKYLL_ENV: production

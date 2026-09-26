@@ -17,9 +17,9 @@ module.
 
 Two parts of the build are documented as drawings rather than as lessons:
 
-* [The horn cradle]({{ site.baseurl }}/assets/lessons/horn-construction/cradle-assembly-2021.pdf) —
+* [The horn cradle]({{ site.baseurl }}/assets/lessons/horn-construction/cradle-assembly-2021.pdf) · [Editable Word]({{ '/assets/lessons/horn-construction/cradle-assembly-2021.docx' | relative_url }}) —
   the frame that carries the horn and sets its elevation.
-* [The base stand]({{ site.baseurl }}/assets/lessons/horn-construction/stand-assembly-2021.pdf) —
+* [The base stand]({{ site.baseurl }}/assets/lessons/horn-construction/stand-assembly-2021.pdf) · [Editable Word]({{ '/assets/lessons/horn-construction/stand-assembly-2021.docx' | relative_url }}) —
   a simple, sturdy base for the cradle to bolt to.
 
 [A completed horn assembled](#video-LT0h3Frd-_k) is a short video

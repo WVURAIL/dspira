@@ -1,0 +1,354 @@
+[
+  {
+    "title": "Horn construction",
+    "documents": [
+      {
+        "title": "Horn telescope cradle assembly",
+        "pdf": "/assets/lessons/horn-construction/cradle-assembly-2021.pdf",
+        "editable": "/assets/lessons/horn-construction/cradle-assembly-2021.docx",
+        "format": "Word"
+      },
+      {
+        "title": "Horn and can assembly",
+        "pdf": "/assets/lessons/horn-construction/horn-and-can-assembly-2021.pdf",
+        "editable": "/assets/lessons/horn-construction/horn-and-can-assembly-2021.docx",
+        "format": "Word"
+      },
+      {
+        "title": "Horn design",
+        "pdf": "/assets/lessons/horn-construction/horn-design.pdf",
+        "editable": "/assets/lessons/horn-construction/horn-design.pptx",
+        "format": "PowerPoint"
+      },
+      {
+        "title": "Mini horn telescope construction and operation",
+        "pdf": "/assets/lessons/horn-construction/mini-horn-construction.pdf",
+        "editable": "/assets/lessons/horn-construction/mini-horn-construction.docx",
+        "format": "Word"
+      },
+      {
+        "title": "Horn telescope stand assembly",
+        "pdf": "/assets/lessons/horn-construction/stand-assembly-2021.pdf",
+        "editable": "/assets/lessons/horn-construction/stand-assembly-2021.docx",
+        "format": "Word"
+      }
+    ]
+  },
+  {
+    "title": "Electromagnetic spectrum",
+    "documents": [
+      {
+        "title": "Electromagnetic spectrum and space",
+        "pdf": "/assets/lessons/electromagnetic-spectrum/introduction.pdf",
+        "editable": "/assets/lessons/electromagnetic-spectrum/introduction.docx",
+        "format": "Word"
+      },
+      {
+        "title": "Electromagnetic spectrum answer key",
+        "pdf": "/assets/worksheets/electromagnetic-spectrum/answer-key.pdf",
+        "editable": "/assets/worksheets/electromagnetic-spectrum/answer-key.docx",
+        "format": "Word"
+      },
+      {
+        "title": "Electromagnetic spectrum activity",
+        "pdf": "/assets/worksheets/electromagnetic-spectrum/worksheet.pdf",
+        "editable": "/assets/worksheets/electromagnetic-spectrum/worksheet.docx",
+        "format": "Word"
+      }
+    ]
+  },
+  {
+    "title": "Simple spectrometer",
+    "documents": [
+      {
+        "title": "Build a simple spectrometer",
+        "pdf": "/assets/lessons/simple-spectrometer/build-a-spectrometer.pdf",
+        "editable": "/assets/lessons/simple-spectrometer/build-a-spectrometer.docx",
+        "format": "Word"
+      },
+      {
+        "title": "Building a waveform generator",
+        "pdf": "/assets/worksheets/simple-spectrometer/01-simple-waveform.pdf",
+        "editable": "/assets/worksheets/simple-spectrometer/01-simple-waveform.docx",
+        "format": "Word"
+      },
+      {
+        "title": "Multiple signal sources",
+        "pdf": "/assets/worksheets/simple-spectrometer/02-multiple-sources.pdf",
+        "editable": "/assets/worksheets/simple-spectrometer/02-multiple-sources.docx",
+        "format": "Word"
+      },
+      {
+        "title": "Fourier series",
+        "pdf": "/assets/worksheets/simple-spectrometer/03-fourier-series.pdf",
+        "editable": "/assets/worksheets/simple-spectrometer/03-fourier-series.docx",
+        "format": "Word"
+      },
+      {
+        "title": "The FFT block",
+        "pdf": "/assets/worksheets/simple-spectrometer/04-fft.pdf",
+        "editable": "/assets/worksheets/simple-spectrometer/04-fft.docx",
+        "format": "Word"
+      },
+      {
+        "title": "Filters",
+        "pdf": "/assets/worksheets/simple-spectrometer/05-filters.pdf",
+        "editable": "/assets/worksheets/simple-spectrometer/05-filters.docx",
+        "format": "Word"
+      }
+    ]
+  },
+  {
+    "title": "Fourier series",
+    "documents": [
+      {
+        "title": "Fourier transform activity",
+        "pdf": "/assets/worksheets/fourier-series/worksheet.pdf",
+        "editable": "/assets/worksheets/fourier-series/worksheet.docx",
+        "format": "Word"
+      }
+    ]
+  },
+  {
+    "title": "Velocity curve",
+    "documents": [
+      {
+        "title": "Celestial coordinate systems",
+        "pdf": "/assets/lessons/velocity-curve/coordinate-systems.pdf",
+        "editable": "/assets/lessons/velocity-curve/coordinate-systems.docx",
+        "format": "Word"
+      },
+      {
+        "title": "The 21 cm hydrogen line",
+        "pdf": "/assets/lessons/velocity-curve/hydrogen-21cm.pdf",
+        "editable": "/assets/lessons/velocity-curve/hydrogen-21cm.docx",
+        "format": "Word"
+      },
+      {
+        "title": "Radio astronomy unit outline",
+        "pdf": "/assets/lessons/velocity-curve/unit-outline.pdf",
+        "editable": "/assets/lessons/velocity-curve/unit-outline.docx",
+        "format": "Word"
+      },
+      {
+        "title": "The electromagnetic spectrum",
+        "pdf": "/assets/worksheets/velocity-curve/electromagnetic-spectrum.pdf",
+        "editable": "/assets/worksheets/velocity-curve/electromagnetic-spectrum.docx",
+        "format": "Word"
+      },
+      {
+        "title": "Galactic plane observation 1 (2018 edition)",
+        "pdf": "/assets/worksheets/velocity-curve/galactic-plane-observation-1-2018.pdf",
+        "editable": "/assets/worksheets/velocity-curve/galactic-plane-observation-1-2018.docx",
+        "format": "Word"
+      },
+      {
+        "title": "Galactic plane observation 1 conclusions (2018 edition)",
+        "pdf": "/assets/worksheets/velocity-curve/galactic-plane-observation-1-conclusions-2018.pdf",
+        "editable": "/assets/worksheets/velocity-curve/galactic-plane-observation-1-conclusions-2018.docx",
+        "format": "Word"
+      },
+      {
+        "title": "Galactic plane observation 2 (2019 edition)",
+        "pdf": "/assets/worksheets/velocity-curve/galactic-plane-observation-2-2019.pdf",
+        "editable": "/assets/worksheets/velocity-curve/galactic-plane-observation-2-2019.docx",
+        "format": "Word"
+      },
+      {
+        "title": "Horn telescope discussion guide",
+        "pdf": "/assets/worksheets/velocity-curve/horn-introduction-answer-key.pdf",
+        "editable": "/assets/worksheets/velocity-curve/horn-introduction-answer-key.docx",
+        "format": "Word"
+      },
+      {
+        "title": "Horn telescope observations",
+        "pdf": "/assets/worksheets/velocity-curve/horn-introduction.pdf",
+        "editable": "/assets/worksheets/velocity-curve/horn-introduction.docx",
+        "format": "Word"
+      },
+      {
+        "title": "Using Stellarium",
+        "pdf": "/assets/worksheets/velocity-curve/stellarium.pdf",
+        "editable": "/assets/worksheets/velocity-curve/stellarium.docx",
+        "format": "Word"
+      }
+    ]
+  },
+  {
+    "title": "Astronomy lecture slides",
+    "documents": [
+      {
+        "title": "All galaxies great and small",
+        "pdf": "/assets/lessons/lectures/astronomy/all-galaxies-great-and-small.pdf",
+        "editable": "/assets/lessons/lectures/astronomy/all-galaxies-great-and-small.pptx",
+        "format": "PowerPoint"
+      },
+      {
+        "title": "Dark matter (2018 edition)",
+        "pdf": "/assets/lessons/lectures/astronomy/dark-matter-2018.pdf",
+        "editable": "/assets/lessons/lectures/astronomy/dark-matter-2018.pptx",
+        "format": "PowerPoint"
+      },
+      {
+        "title": "Dark matter",
+        "pdf": "/assets/lessons/lectures/astronomy/dark-matter.pdf",
+        "editable": "/assets/lessons/lectures/astronomy/dark-matter.pptx",
+        "format": "PowerPoint"
+      },
+      {
+        "title": "Discovery of the milky way",
+        "pdf": "/assets/lessons/lectures/astronomy/discovery-of-the-milky-way.pdf",
+        "editable": "/assets/lessons/lectures/astronomy/discovery-of-the-milky-way.pptx",
+        "format": "PowerPoint"
+      },
+      {
+        "title": "Doppler effect and telescopes",
+        "pdf": "/assets/lessons/lectures/astronomy/doppler-effect-and-telescopes.pdf",
+        "editable": "/assets/lessons/lectures/astronomy/doppler-effect-and-telescopes.pptx",
+        "format": "PowerPoint"
+      },
+      {
+        "title": "Galactic rotation (2018 edition)",
+        "pdf": "/assets/lessons/lectures/astronomy/galactic-rotation-2018.pdf",
+        "editable": "/assets/lessons/lectures/astronomy/galactic-rotation-2018.pptx",
+        "format": "PowerPoint"
+      },
+      {
+        "title": "Galaxy interactions and dark matter",
+        "pdf": "/assets/lessons/lectures/astronomy/galaxy-interactions-and-dark-matter.pdf",
+        "editable": "/assets/lessons/lectures/astronomy/galaxy-interactions-and-dark-matter.pptx",
+        "format": "PowerPoint"
+      },
+      {
+        "title": "Gravity",
+        "pdf": "/assets/lessons/lectures/astronomy/gravity.pdf",
+        "editable": "/assets/lessons/lectures/astronomy/gravity.pptx",
+        "format": "PowerPoint"
+      },
+      {
+        "title": "Introduction to astronomy (2018 edition)",
+        "pdf": "/assets/lessons/lectures/astronomy/introduction-to-astronomy-2018.pdf",
+        "editable": "/assets/lessons/lectures/astronomy/introduction-to-astronomy-2018.pptx",
+        "format": "PowerPoint"
+      },
+      {
+        "title": "Light and telescopes",
+        "pdf": "/assets/lessons/lectures/astronomy/light-and-telescopes.pdf",
+        "editable": "/assets/lessons/lectures/astronomy/light-and-telescopes.pptx",
+        "format": "PowerPoint"
+      },
+      {
+        "title": "Motion of the sky (2018 edition)",
+        "pdf": "/assets/lessons/lectures/astronomy/motion-of-the-sky-2018.pdf",
+        "editable": "/assets/lessons/lectures/astronomy/motion-of-the-sky-2018.pptx",
+        "format": "PowerPoint"
+      },
+      {
+        "title": "Motion of the sky",
+        "pdf": "/assets/lessons/lectures/astronomy/motion-of-the-sky.pdf",
+        "editable": "/assets/lessons/lectures/astronomy/motion-of-the-sky.pptx",
+        "format": "PowerPoint"
+      },
+      {
+        "title": "Time, planning observations, and coordinate systems (2018 edition)",
+        "pdf": "/assets/lessons/lectures/astronomy/planning-observations-2018.pdf",
+        "editable": "/assets/lessons/lectures/astronomy/planning-observations-2018.pptx",
+        "format": "PowerPoint"
+      },
+      {
+        "title": "Rotation curves",
+        "pdf": "/assets/lessons/lectures/astronomy/rotation-curves.pdf",
+        "editable": "/assets/lessons/lectures/astronomy/rotation-curves.pptx",
+        "format": "PowerPoint"
+      },
+      {
+        "title": "Stars",
+        "pdf": "/assets/lessons/lectures/astronomy/stars.pdf",
+        "editable": "/assets/lessons/lectures/astronomy/stars.pptx",
+        "format": "PowerPoint"
+      },
+      {
+        "title": "Stellar evolution",
+        "pdf": "/assets/lessons/lectures/astronomy/stellar-evolution.pdf",
+        "editable": "/assets/lessons/lectures/astronomy/stellar-evolution.pptx",
+        "format": "PowerPoint"
+      },
+      {
+        "title": "Time and planning observations",
+        "pdf": "/assets/lessons/lectures/astronomy/time-and-planning-observations.pdf",
+        "editable": "/assets/lessons/lectures/astronomy/time-and-planning-observations.pptx",
+        "format": "PowerPoint"
+      },
+      {
+        "title": "Units and scales",
+        "pdf": "/assets/lessons/lectures/astronomy/units-and-scales.pdf",
+        "editable": "/assets/lessons/lectures/astronomy/units-and-scales.pptx",
+        "format": "PowerPoint"
+      },
+      {
+        "title": "Your observations (2018 edition)",
+        "pdf": "/assets/lessons/lectures/astronomy/your-observations-2018.pdf",
+        "editable": "/assets/lessons/lectures/astronomy/your-observations-2018.pptx",
+        "format": "PowerPoint"
+      }
+    ]
+  },
+  {
+    "title": "Digital signal processing slides",
+    "documents": [
+      {
+        "title": "Filters (2018 edition)",
+        "pdf": "/assets/lessons/lectures/digital-signal-processing/filters-2018.pdf",
+        "editable": "/assets/lessons/lectures/digital-signal-processing/filters-2018.pptx",
+        "format": "PowerPoint"
+      },
+      {
+        "title": "Fourier series project (2018 edition)",
+        "pdf": "/assets/lessons/lectures/digital-signal-processing/fourier-project-2018.pdf",
+        "editable": "/assets/lessons/lectures/digital-signal-processing/fourier-project-2018.pptx",
+        "format": "PowerPoint"
+      },
+      {
+        "title": "Fourier series (2018 edition)",
+        "pdf": "/assets/lessons/lectures/digital-signal-processing/fourier-series-2018.pdf",
+        "editable": "/assets/lessons/lectures/digital-signal-processing/fourier-series-2018.pptx",
+        "format": "PowerPoint"
+      },
+      {
+        "title": "Fourier transform (2018 edition)",
+        "pdf": "/assets/lessons/lectures/digital-signal-processing/fourier-transform-2018.pdf",
+        "editable": "/assets/lessons/lectures/digital-signal-processing/fourier-transform-2018.pptx",
+        "format": "PowerPoint"
+      },
+      {
+        "title": "Mixing and modulation (2018 edition)",
+        "pdf": "/assets/lessons/lectures/digital-signal-processing/mixing-2018.pdf",
+        "editable": "/assets/lessons/lectures/digital-signal-processing/mixing-2018.pptx",
+        "format": "PowerPoint"
+      },
+      {
+        "title": "Sampling (2018 edition)",
+        "pdf": "/assets/lessons/lectures/digital-signal-processing/sampling-2018.pdf",
+        "editable": "/assets/lessons/lectures/digital-signal-processing/sampling-2018.pptx",
+        "format": "PowerPoint"
+      },
+      {
+        "title": "Signal processing for radio astronomy (2018 edition)",
+        "pdf": "/assets/lessons/lectures/digital-signal-processing/signals-2018.pdf",
+        "editable": "/assets/lessons/lectures/digital-signal-processing/signals-2018.pptx",
+        "format": "PowerPoint"
+      }
+    ]
+  },
+  {
+    "title": "Radio astronomy slides",
+    "documents": [
+      {
+        "title": "Imaging and deconvolution — David J. Wilner, 2014",
+        "pdf": "/assets/lessons/lectures/radio-astronomy/imaging-and-deconvolution-wilner-2014.pdf",
+        "editable": "/assets/lessons/lectures/radio-astronomy/imaging-and-deconvolution-wilner-2014.pptx",
+        "format": "PowerPoint"
+      }
+    ]
+  }
+]

@@ -52,6 +52,24 @@ Put short instructions directly on the lesson page.
 Keep PDFs that serve a printing purpose, such as construction plans, worksheets, presentations, and teacher planning sheets.
 When retiring a duplicate PDF, preserve its old download addresses in `_data/legacy_assets.json`.
 
+## Keep teaching downloads consistent
+
+Publish a PDF beside every teaching document. Keep Word files for worksheets and guides, and PowerPoint files for slides.
+Use matching filenames, such as `worksheet.docx` and `worksheet.pdf`.
+Start from an existing resource in the [teaching catalog](https://wvurail.org/dspira/teaching-resources/).
+
+- Use Arial for body text and headings, preserving specialist math fonts where needed.
+- Use a WVU DSPIRA header and a footer with the site address and page number.
+- Set handouts to US Letter with 0.75-inch margins and 11-point body text.
+- Use actual headings, lists, and tables. Keep directions and response areas editable.
+- Keep author credits, citations, image descriptions, and source notices.
+- Export the PDF from the editable source after each change. Check every page for clipped text and broken equations.
+- Export legacy slide equations through PowerPoint when other exporters misread their embedded graphics.
+- Add both formats to `_data/teaching_documents.json` and the related lesson page.
+
+The PDF is the printing copy. Update the editable file first so both versions stay synchronized.
+Some legacy diagrams remain images. Retain those figures when adapting the surrounding text.
+
 ## Review and publication
 
 A maintainer checks metadata, links, files, and accessibility structure. An educator

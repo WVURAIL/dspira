@@ -39,8 +39,8 @@ Keep construction packets, slide decks, worksheets, and teacher planning sheets 
 | Folder | Contents |
 | --- | --- |
 | [simple-spectrometer](worksheets/simple-spectrometer/) | Five paired PDF and Word worksheets |
-| [fourier-series](worksheets/fourier-series/) | Printable Fourier activity |
-| [electromagnetic-spectrum](worksheets/electromagnetic-spectrum/) | Worksheet and answer key saved as JPEGs |
+| [fourier-series](worksheets/fourier-series/) | Paired PDF and Word Fourier activity |
+| [electromagnetic-spectrum](worksheets/electromagnetic-spectrum/) | Paired PDF and Word activity and answer key; original JPEGs retained |
 | [velocity-curve](worksheets/velocity-curve/) | Observation sheets, introductory exercises, and companion answers |
 
 A complete worksheet belongs here even when its original format is an image.

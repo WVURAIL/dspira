@@ -43,12 +43,12 @@ All thirteen, in the order they were given.
 
 ## Dr. Loren Anderson
 
-* [Units and Scales]({{ site.baseurl }}/assets/lessons/lectures/astronomy/units-and-scales.pdf){: .btn .btn-wvu-blue}
-* [Motion of the Sky]({{ site.baseurl }}/assets/lessons/lectures/astronomy/motion-of-the-sky.pdf){: .btn .btn-wvu-blue}
-* [Time and Planning Observations]({{ site.baseurl }}/assets/lessons/lectures/astronomy/time-and-planning-observations.pdf){: .btn .btn-wvu-blue}
-* [Gravity]({{ site.baseurl }}/assets/lessons/lectures/astronomy/gravity.pdf){: .btn .btn-wvu-blue}
-* [Dark Matter]({{ site.baseurl }}/assets/lessons/lectures/astronomy/dark-matter.pdf){: .btn .btn-wvu-blue}
-* [Galactic Rotation Curves]({{ site.baseurl }}/assets/lessons/lectures/astronomy/rotation-curves.pdf){: .btn .btn-wvu-blue}
+* [Units and Scales]({{ site.baseurl }}/assets/lessons/lectures/astronomy/units-and-scales.pdf){: .btn .btn-wvu-blue} · [Editable PowerPoint]({{ '/assets/lessons/lectures/astronomy/units-and-scales.pptx' | relative_url }})
+* [Motion of the Sky]({{ site.baseurl }}/assets/lessons/lectures/astronomy/motion-of-the-sky.pdf){: .btn .btn-wvu-blue} · [Editable PowerPoint]({{ '/assets/lessons/lectures/astronomy/motion-of-the-sky.pptx' | relative_url }})
+* [Time and Planning Observations]({{ site.baseurl }}/assets/lessons/lectures/astronomy/time-and-planning-observations.pdf){: .btn .btn-wvu-blue} · [Editable PowerPoint]({{ '/assets/lessons/lectures/astronomy/time-and-planning-observations.pptx' | relative_url }})
+* [Gravity]({{ site.baseurl }}/assets/lessons/lectures/astronomy/gravity.pdf){: .btn .btn-wvu-blue} · [Editable PowerPoint]({{ '/assets/lessons/lectures/astronomy/gravity.pptx' | relative_url }})
+* [Dark Matter]({{ site.baseurl }}/assets/lessons/lectures/astronomy/dark-matter.pdf){: .btn .btn-wvu-blue} · [Editable PowerPoint]({{ '/assets/lessons/lectures/astronomy/dark-matter.pptx' | relative_url }})
+* [Galactic Rotation Curves]({{ site.baseurl }}/assets/lessons/lectures/astronomy/rotation-curves.pdf){: .btn .btn-wvu-blue} · [Editable PowerPoint]({{ '/assets/lessons/lectures/astronomy/rotation-curves.pptx' | relative_url }})
 
 Gravity, Dark Matter and Rotation Curves are the three that the
 [Velocity Curve unit]({{ site.baseurl }}/Astronomy_VelocityCurve_Overview) builds
@@ -56,13 +56,13 @@ toward. Start there if you teach that unit and want more physics background than
 
 ## Dr. D. J. Pisano
 
-* [Light and Telescopes]({{ site.baseurl }}/assets/lessons/lectures/astronomy/light-and-telescopes.pdf){: .btn .btn-wvu-blue}
-* [Doppler Effect and Telescopes]({{ site.baseurl }}/assets/lessons/lectures/astronomy/doppler-effect-and-telescopes.pdf){: .btn .btn-wvu-blue}
-* [Stars]({{ site.baseurl }}/assets/lessons/lectures/astronomy/stars.pdf){: .btn .btn-wvu-blue}
-* [Stellar Evolution]({{ site.baseurl }}/assets/lessons/lectures/astronomy/stellar-evolution.pdf){: .btn .btn-wvu-blue}
-* [Discovery of the Milky Way]({{ site.baseurl }}/assets/lessons/lectures/astronomy/discovery-of-the-milky-way.pdf){: .btn .btn-wvu-blue}
-* [All Galaxies Great and Small]({{ site.baseurl }}/assets/lessons/lectures/astronomy/all-galaxies-great-and-small.pdf){: .btn .btn-wvu-blue}
-* [Galaxy Interactions and Dark Matter]({{ site.baseurl }}/assets/lessons/lectures/astronomy/galaxy-interactions-and-dark-matter.pdf){: .btn .btn-wvu-blue}
+* [Light and Telescopes]({{ site.baseurl }}/assets/lessons/lectures/astronomy/light-and-telescopes.pdf){: .btn .btn-wvu-blue} · [Editable PowerPoint]({{ '/assets/lessons/lectures/astronomy/light-and-telescopes.pptx' | relative_url }})
+* [Doppler Effect and Telescopes]({{ site.baseurl }}/assets/lessons/lectures/astronomy/doppler-effect-and-telescopes.pdf){: .btn .btn-wvu-blue} · [Editable PowerPoint]({{ '/assets/lessons/lectures/astronomy/doppler-effect-and-telescopes.pptx' | relative_url }})
+* [Stars]({{ site.baseurl }}/assets/lessons/lectures/astronomy/stars.pdf){: .btn .btn-wvu-blue} · [Editable PowerPoint]({{ '/assets/lessons/lectures/astronomy/stars.pptx' | relative_url }})
+* [Stellar Evolution]({{ site.baseurl }}/assets/lessons/lectures/astronomy/stellar-evolution.pdf){: .btn .btn-wvu-blue} · [Editable PowerPoint]({{ '/assets/lessons/lectures/astronomy/stellar-evolution.pptx' | relative_url }})
+* [Discovery of the Milky Way]({{ site.baseurl }}/assets/lessons/lectures/astronomy/discovery-of-the-milky-way.pdf){: .btn .btn-wvu-blue} · [Editable PowerPoint]({{ '/assets/lessons/lectures/astronomy/discovery-of-the-milky-way.pptx' | relative_url }})
+* [All Galaxies Great and Small]({{ site.baseurl }}/assets/lessons/lectures/astronomy/all-galaxies-great-and-small.pdf){: .btn .btn-wvu-blue} · [Editable PowerPoint]({{ '/assets/lessons/lectures/astronomy/all-galaxies-great-and-small.pptx' | relative_url }})
+* [Galaxy Interactions and Dark Matter]({{ site.baseurl }}/assets/lessons/lectures/astronomy/galaxy-interactions-and-dark-matter.pdf){: .btn .btn-wvu-blue} · [Editable PowerPoint]({{ '/assets/lessons/lectures/astronomy/galaxy-interactions-and-dark-matter.pptx' | relative_url }})
 
 ## Interactive activities
 
