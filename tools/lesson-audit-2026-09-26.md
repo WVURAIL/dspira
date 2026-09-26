@@ -32,7 +32,12 @@ Lesson fixes include current application names, installation paths, Pluto instru
 Two broken section targets were repaired while preserving their earlier anchor names.
 The FM, DFT, Fourier-series, and interferometer explanations received specific equation corrections.
 The observing lesson now distinguishes calibrated CSV output from the raw HDF5 processing route.
-Corrections accompany the older spectrometer PDF, and alternatives accompany unavailable slide resources.
+Five PDFs now contain the corrected resources and explanations. The three related 2018 PowerPoint decks have matching link updates.
+The mini-horn guide links to public setup instructions. The astronomy slides link to the US Naval Observatory calculator and PhET Gravity and Orbits.
+The Rotating Sky Explorer runs in a current browser; its earlier Flash-only classification was incorrect. Its link now uses HTTPS.
+The spectrometer guide explains antenna bias power, 4096 FFT channels, channel width, and integration without claiming noise power cancels.
+Eight edited PDF pages were rendered and inspected. The other 87 pages are pixel-identical to the originals.
+PDF page counts remain unchanged, corrected text is extractable, and obsolete targets are absent from the PDFs and matching slide decks.
 
 ## Lesson-by-lesson record
 
@@ -46,9 +51,9 @@ External exceptions and checks requiring equipment are stated explicitly.
 | --- | ---: | --- |
 | 1. [What is Needed to Build a Horn Radio Telescope](https://wvurail.org/dspira/BuildingHornTelescope_Overview) | 14 | Parts and assembly links checked. Current software filename and version corrected. Physical construction not tested. |
 | 2. [Horn Construction Information](https://wvurail.org/dspira/Horn_Construction_Information) | 14 | Construction links checked; Airspy Mini product link corrected. Dimensions and assembly require a physical build. |
-| 3. [Horn and Can Assembly](https://wvurail.org/dspira/Horn_can) | 9 | Both assembly PDFs open. The mini-horn PDF contains a restricted software link; see issue 36. |
+| 3. [Horn and Can Assembly](https://wvurail.org/dspira/Horn_can) | 9 | Both assembly PDFs open. The mini-horn PDF now points to public software and boot-image guides. |
 | 4. [Detailed Instructions for Assembling the CAN](https://wvurail.org/dspira/assemblingcan) | 5 | Instructions, images, and video links checked. Mechanical assembly and soldering not performed. |
-| 5. [Other Horn Designs](https://wvurail.org/dspira/Other_Horn_Designs) | 11 | Mini-horn and LightWork PDFs open. Added a public installation alternative for the restricted Drive folder. |
+| 5. [Other Horn Designs](https://wvurail.org/dspira/Other_Horn_Designs) | 11 | Mini-horn and LightWork PDFs open. Replaced the restricted Drive folder inside the mini-horn PDF. |
 
 ### Receiver Electronics
 
@@ -113,7 +118,7 @@ External exceptions and checks requiring equipment are stated explicitly.
 | 5. [Measuring the Earth's Speed around the Sun](https://wvurail.org/dspira/EarthAroundSun) | 21 | Documents and class spreadsheet are publicly downloadable. Experimental measurements were not repeated. |
 | 6. [Determining a Velocity Curve of the Milky Way Galaxy](https://wvurail.org/dspira/Astronomy_VelocityCurve_Overview) | 30 | Documents, model spreadsheet, and supplied-data velocity notebook checked. Proprietary classroom simulation software was not executed. |
 | 7. [Interferometry](https://wvurail.org/dspira/Interferometry) | 8 | Links to the theory notebook and telescope setup resolve. Notebook executed; hardware experiment remains untested. |
-| 8. [Astronomy Lecture Recordings](https://wvurail.org/dspira/Astronomy_Lecture_Recordings/) | 33 | Slides open; public video sources checked. Added alternatives for unavailable/Flash resources embedded in older slides: issue 36. |
+| 8. [Astronomy Lecture Recordings](https://wvurail.org/dspira/Astronomy_Lecture_Recordings/) | 33 | Slides open; public video sources checked. Repaired embedded links in three PDFs and their related PowerPoint decks. Replacement calculator and orbit simulation tested in a browser. |
 
 ### Community Labs
 
@@ -127,8 +132,7 @@ External exceptions and checks requiring equipment are stated explicitly.
 ## Follow-up and limitations
 
 1. **Receiver and calibration verification:** [software issue 1](https://github.com/WVURAIL/dspira-software/issues/1). Test an actual receiver from installation through saved observations. Record OS, driver, application revision, receiver, amplifier, and calibration reference. Two-horn, lightning, audio-device, Raspberry Pi, and boot-image operation remain unverified.
-2. **External references and older PDFs:** [lesson issue 36](https://github.com/WVURAIL/dspira/issues/36). Covers the private mini-horn software folder, two unavailable slide links, the Flash Rotating Sky Explorer, and spectrometer PDF corrections. Existing PDFs were preserved; the website supplies alternatives or corrections.
-3. **Historical observation file:** [lesson issue 37](https://github.com/WVURAIL/dspira/issues/37). The 2017 GBT notebook's 16 code cells pass syntax checks, but its observation file is missing. Its original rendered results remain readable.
+2. **Historical observation file:** [lesson issue 37](https://github.com/WVURAIL/dspira/issues/37). The 2017 GBT notebook's 16 code cells pass syntax checks, but its observation file is missing. Its original rendered results remain readable.
 
 All four GNU Radio wiki destinations rendered in a browser after initially returning security-verification pages.
 PhysicsOpenLab's homepage and Milky Way article rendered in a browser despite HTTP 403 responses to scripts. Its 34-page project PDF was retrieved through the web document reader.

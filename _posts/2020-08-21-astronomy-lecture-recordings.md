@@ -64,11 +64,11 @@ toward. Start there if you teach that unit and want more physics background than
 * [All Galaxies Great and Small]({{ site.baseurl }}/assets/lessons/lectures/astronomy/all-galaxies-great-and-small.pdf){: .btn .btn-wvu-blue}
 * [Galaxy Interactions and Dark Matter]({{ site.baseurl }}/assets/lessons/lectures/astronomy/galaxy-interactions-and-dark-matter.pdf){: .btn .btn-wvu-blue}
 
-## Older interactive links in the slides
+## Interactive activities
 
-The slides retain historical external references. Two resources are unavailable: the sidereal-time calculator and an orbital-motion Flash animation.
-Use [Stellarium](https://stellarium.org/) for observation planning and the [Milky Way activities]({{ '/Astro_MWG' | relative_url }}) for motion models.
-The older Rotating Sky Explorer also uses Flash. See the [celestial coordinates activity]({{ '/A2UnderstandingCeleCoords' | relative_url }}) for the current classroom route.
+* [US Naval Observatory sidereal-time calculator](https://aa.usno.navy.mil/data/siderealtime) - Find sidereal time for your observation date and longitude.
+* [Gravity and Orbits](https://phet.colorado.edu/en/simulations/gravity-and-orbits) - Explore how mass and distance affect orbital motion.
+* [Rotating Sky Explorer](https://astro.unl.edu/naap/motion2/animations/ce_hc.html) - Compare visible and circumpolar regions at different latitudes.
 
 ## Figure credits
 
