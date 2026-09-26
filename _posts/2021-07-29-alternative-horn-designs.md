@@ -13,7 +13,7 @@ equipment: "The selected design guide and its parts list. Materials and tools de
 preparation: "Choose one horn design. These alternatives are not additional required builds."
 ---
 
-*  __Baby DSPIRA Horn__ is a smaller version of the design above. Find instructions in this [PDF]({{ site.baseurl }}/assets/lessons/horn-construction/mini-horn-construction.pdf) · [Editable Word]({{ '/assets/lessons/horn-construction/mini-horn-construction.docx' | relative_url }}) and these [videos](#video-PLxSg3s3C3JCH2yBC_kHLGCpd0tqQ6gM1h). This includes a cradle and stand as part of its construction. This design uses the same components and software as the standard DSPIRA horn described here. It provides easy use and is good for demonstrations.
+*  __Baby DSPIRA Horn__ is a smaller version of the design above. Find instructions in this [PDF]({{ site.baseurl }}/assets/lessons/horn-construction/mini-horn-construction.pdf) and these [videos](#video-PLxSg3s3C3JCH2yBC_kHLGCpd0tqQ6gM1h). This includes a cradle and stand as part of its construction. This design uses the same components and software as the standard DSPIRA horn described here. It provides easy use and is good for demonstrations.
 
 <figure class="lesson-video" id="video-PLxSg3s3C3JCH2yBC_kHLGCpd0tqQ6gM1h">
 {% include youtube.html title="Baby DSPIRA horn construction playlist" url="https://youtube.com/playlist?list=PLxSg3s3C3JCH2yBC_kHLGCpd0tqQ6gM1h" playlist="PLxSg3s3C3JCH2yBC_kHLGCpd0tqQ6gM1h" %}

@@ -1,14 +1,15 @@
 ---
 layout: page
-title: DSPIRA teaching downloads and lecture slides
+title: DSPIRA teacher downloads and editable materials
 permalink: /teaching-resources/
 eyebrow: For educators
-lead: Print classroom materials or adapt the editable versions for your students.
-meta_description: "Download DSPIRA teaching slides and classroom resources. Find astronomy presentations, DSP exercises, observation planning notes, and technical references."
+lead: Find every editable worksheet, guide, and slide deck in one place.
+meta_description: "Find DSPIRA classroom materials in one teacher download catalog. Print PDFs or adapt editable Word worksheets, guides, and PowerPoint slides for your class."
 ---
 
-Find lecture slides, classroom handouts, and DSP exercises here.
-Each download opens directly from the site or its owning software repository.
+Choose a topic below to download materials for your class.
+Each resource includes a printable PDF and an editable Word or PowerPoint file.
+For lesson planning, visit [Teach with DSPIRA]({{ '/teach/' | relative_url }}).
 
 ## Plan a class
 
@@ -18,9 +19,7 @@ The [DSP recordings]({{ '/dsp' | relative_url }}) connect theory with laboratory
 
 ## Printable and editable materials
 
-Every teaching download below includes a PDF and an editable companion.
 Use Word for handouts and worksheets. Use PowerPoint for presentations.
-Both versions share WVU DSPIRA headers, consistent fonts, and page numbers.
 
 Some diagrams and legacy equations remain images within the editable files.
 Keep author credits and check third-party permissions when adapting materials.

@@ -14,7 +14,7 @@ preparation: "Review Doppler shifts and galactic coordinates. Replace the histor
 
 **OVERVIEW FOR THE TEACHER**
 
-* [Unit Description and Outline]({{ site.baseurl }}/assets/lessons/velocity-curve/unit-outline.pdf){: .btn .btn-wvu-blue} · [Editable Word]({{ '/assets/lessons/velocity-curve/unit-outline.docx' | relative_url }})
+* [Unit Description and Outline]({{ site.baseurl }}/assets/lessons/velocity-curve/unit-outline.pdf){: .btn .btn-wvu-blue}
 
   The whole unit at a glance: what the students build toward, in what order, and
   why. Written for AP Physics. Students use the Milky Way's rotation curve to deduce the existence of dark matter.
@@ -92,20 +92,20 @@ OBJECTIVE: These activities allow this *Velocity Curve of the MWG* module be abl
 
 *Teacher Notes* Assign all four activities so students have work to complete while others use the telescope. Small groups can then take turns discovering what the horn can do. (Most teachers very likely with have only one telescope.)
 
-* [Introduction to Horn Telescope]({{ site.baseurl }}/assets/worksheets/velocity-curve/horn-introduction.pdf){: .btn .btn-wvu-blue} · [Editable Word]({{ '/assets/worksheets/velocity-curve/horn-introduction.docx' | relative_url }})
+* [Introduction to Horn Telescope]({{ site.baseurl }}/assets/worksheets/velocity-curve/horn-introduction.pdf){: .btn .btn-wvu-blue}
 
-* [Introduction to Horn Telescope Follow-up]({{ site.baseurl }}/assets/worksheets/velocity-curve/horn-introduction-answer-key.pdf) · [Editable Word]({{ '/assets/worksheets/velocity-curve/horn-introduction-answer-key.docx' | relative_url }})
+* [Introduction to Horn Telescope Follow-up]({{ site.baseurl }}/assets/worksheets/velocity-curve/horn-introduction-answer-key.pdf)
 
-* [The Electromagnetic Spectrum]({{ site.baseurl }}/assets/worksheets/velocity-curve/electromagnetic-spectrum.pdf){: .btn .btn-wvu-blue} · [Editable Word]({{ '/assets/worksheets/velocity-curve/electromagnetic-spectrum.docx' | relative_url }})
+* [The Electromagnetic Spectrum]({{ site.baseurl }}/assets/worksheets/velocity-curve/electromagnetic-spectrum.pdf){: .btn .btn-wvu-blue}
 
    Further reading for this activity:
-   [introduction to wavelengths and radiation]({{ site.baseurl }}/assets/lessons/electromagnetic-spectrum/introduction.pdf) · [Editable Word]({{ '/assets/lessons/electromagnetic-spectrum/introduction.docx' | relative_url }}).
+   [introduction to wavelengths and radiation]({{ site.baseurl }}/assets/lessons/electromagnetic-spectrum/introduction.pdf).
 
-* [The 21 cm Wavelength of Neutral Hydrogen]({{ site.baseurl }}/assets/lessons/velocity-curve/hydrogen-21cm.pdf){: .btn .btn-wvu-blue} · [Editable Word]({{ '/assets/lessons/velocity-curve/hydrogen-21cm.docx' | relative_url }})
+* [The 21 cm Wavelength of Neutral Hydrogen]({{ site.baseurl }}/assets/lessons/velocity-curve/hydrogen-21cm.pdf){: .btn .btn-wvu-blue}
 
-* [Celestial Coordinate Systems]({{ site.baseurl }}/assets/lessons/velocity-curve/coordinate-systems.pdf){: .btn .btn-wvu-blue} · [Editable Word]({{ '/assets/lessons/velocity-curve/coordinate-systems.docx' | relative_url }})
+* [Celestial Coordinate Systems]({{ site.baseurl }}/assets/lessons/velocity-curve/coordinate-systems.pdf){: .btn .btn-wvu-blue}
 
-* [Using Stellarium]({{ site.baseurl }}/assets/worksheets/velocity-curve/stellarium.pdf){: .btn .btn-wvu-blue} · [Editable Word]({{ '/assets/worksheets/velocity-curve/stellarium.docx' | relative_url }})
+* [Using Stellarium]({{ site.baseurl }}/assets/worksheets/velocity-curve/stellarium.pdf){: .btn .btn-wvu-blue}
 
 
 ## Part 1: Galactic Quadrants II and III Observation
@@ -153,14 +153,14 @@ Students find their own azimuth and altitude in Stellarium and complete the tabl
 The conclusions sheet retains example data from the original class.
 The Part 1 and Part 2 handouts above are the current lesson versions.
 
-* [Galactic Plane Observation 1, 2018]({{ site.baseurl }}/assets/worksheets/velocity-curve/galactic-plane-observation-1-2018.pdf){: .btn .btn-wvu-blue} · [Editable Word]({{ '/assets/worksheets/velocity-curve/galactic-plane-observation-1-2018.docx' | relative_url }}) — the observing sheet. Its spreadsheet analysis section is useful whatever dates you observe on.
-* [Galactic Plane Observation 1: Conclusions, 2018]({{ site.baseurl }}/assets/worksheets/velocity-curve/galactic-plane-observation-1-conclusions-2018.pdf){: .btn .btn-wvu-blue} · [Editable Word]({{ '/assets/worksheets/velocity-curve/galactic-plane-observation-1-conclusions-2018.docx' | relative_url }}). Class results for quadrants II and III, including uncertainty estimates and conclusion questions.
+* [Galactic Plane Observation 1, 2018]({{ site.baseurl }}/assets/worksheets/velocity-curve/galactic-plane-observation-1-2018.pdf){: .btn .btn-wvu-blue} — the observing sheet. Its spreadsheet analysis section is useful whatever dates you observe on.
+* [Galactic Plane Observation 1: Conclusions, 2018]({{ site.baseurl }}/assets/worksheets/velocity-curve/galactic-plane-observation-1-conclusions-2018.pdf){: .btn .btn-wvu-blue}. Class results for quadrants II and III, including uncertainty estimates and conclusion questions.
 
 
 ## All Velocity Curve handouts in one place
 
 An earlier Part 2 worksheet from 2019 is also available:
-[PDF]({{ '/assets/worksheets/velocity-curve/galactic-plane-observation-2-2019.pdf' | relative_url }}) · [Editable Word]({{ '/assets/worksheets/velocity-curve/galactic-plane-observation-2-2019.docx' | relative_url }}).
+[PDF]({{ '/assets/worksheets/velocity-curve/galactic-plane-observation-2-2019.pdf' | relative_url }}).
 It includes teacher notes and an observation plan. Adapt its class-specific details before use.
 
    * [Galactic Plane Quadrants II and III Observations: Teacher Notes](https://docs.google.com/document/d/1h9is9YnnfDidLnlvs-DnXlyzXIjT0EhrLDdnONAByHg/edit?usp=sharing)

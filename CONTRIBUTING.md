@@ -65,7 +65,8 @@ Start from an existing resource in the [teaching catalog](https://wvurail.org/ds
 - Keep author credits, citations, image descriptions, and source notices.
 - Export the PDF from the editable source after each change. Check every page for clipped text and broken equations.
 - Export legacy slide equations through PowerPoint when other exporters misread their embedded graphics.
-- Add both formats to `_data/teaching_documents.json` and the related lesson page.
+- Add both formats to `_data/teaching_documents.json` for the teacher download catalog.
+- Link to the PDF from the related lesson page. Keep editable download links in the teacher catalog.
 
 The PDF is the printing copy. Update the editable file first so both versions stay synchronized.
 Some legacy diagrams remain images. Retain those figures when adapting the surrounding text.

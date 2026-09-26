@@ -18,7 +18,7 @@ To access the classroom activity click on the following link:
 
 A related paper-based exercise, which needs no software at all:
 
-[Fourier Transform Activity]({{ site.baseurl }}/assets/worksheets/fourier-series/worksheet.pdf){: .btn .btn-wvu-blue} · [Editable Word]({{ '/assets/worksheets/fourier-series/worksheet.docx' | relative_url }})
+[Fourier Transform Activity]({{ site.baseurl }}/assets/worksheets/fourier-series/worksheet.pdf){: .btn .btn-wvu-blue}
 
 Open the original GNU Radio 3.7 flowgraph below. Save the file from your browser before opening it in GNU Radio Companion.
 Review compatibility before using it with a newer installation. The software repository retains its source and revision notes.
