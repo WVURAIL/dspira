@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Lesson or worksheet",
+    "pdf": "/assets/templates/wvu-dspira-lesson-template.pdf",
+    "editable": "/assets/templates/wvu-dspira-lesson-template.dotx",
+    "format": "Word template",
+    "extension": ".dotx"
+  },
+  {
+    "title": "Classroom presentation",
+    "pdf": "/assets/templates/wvu-dspira-presentation-template.pdf",
+    "editable": "/assets/templates/wvu-dspira-presentation-template.potx",
+    "format": "PowerPoint template",
+    "extension": ".potx"
+  }
+]

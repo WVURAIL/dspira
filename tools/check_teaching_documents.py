@@ -11,6 +11,34 @@ import zipfile
 W = {'w': 'http://schemas.openxmlformats.org/wordprocessingml/2006/main'}
 
 
+def check_template(package, path, part, word_document):
+    content_types = ET.fromstring(package.read('[Content_Types].xml'))
+    expected = ('application/vnd.openxmlformats-officedocument.wordprocessingml.template.main+xml'
+                if word_document else 'application/vnd.openxmlformats-officedocument.presentationml.template.main+xml')
+    assert any(node.get('PartName') == '/' + part and node.get('ContentType') == expected
+               for node in content_types), f'{path}: not an Office template'
+    assert not any('vbaproject' in name.lower() for name in package.namelist()), f'{path}: unexpected macro'
+    if word_document:
+        footers = [package.read(name).decode('utf-8') for name in package.namelist()
+                   if re.fullmatch(r'word/footer\d+\.xml', name)]
+        assert any('PAGE' in footer and 'NUMPAGES' in footer for footer in footers), f'{path}: missing page fields'
+    else:
+        p = {'p': 'http://schemas.openxmlformats.org/presentationml/2006/main',
+             'a': 'http://schemas.openxmlformats.org/drawingml/2006/main'}
+        layouts = [ET.fromstring(package.read(name)) for name in package.namelist()
+                   if re.fullmatch(r'ppt/slideLayouts/slideLayout\d+\.xml', name)]
+        assert layouts, f'{path}: no reusable layouts'
+        for layout in layouts:
+            placeholders = layout.findall('.//p:ph', p)
+            assert len(placeholders) >= 2 and any(ph.get('type') == 'title' for ph in placeholders), (
+                f'{path}: layout lacks editable title and content placeholders')
+        masters = [ET.fromstring(package.read(name)) for name in package.namelist()
+                   if re.fullmatch(r'ppt/slideMasters/slideMaster\d+\.xml', name)]
+        assert len(masters) == 1, f'{path}: unexpected extra slide master'
+        assert 'WVU DSPIRA' in ''.join(masters[0].itertext()), f'{path}: master lacks branding'
+        assert masters[0].find('.//a:fld[@type="slidenum"]', p) is not None, f'{path}: missing slide number field'
+
+
 def check_word_style(package, path):
     styles = ET.fromstring(package.read('word/styles.xml'))
     normal = next(s for s in styles.findall('w:style', W)
@@ -74,6 +102,8 @@ def main():
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
     groups = json.loads((root / '_data/teaching_documents.json').read_text())
+    templates = json.loads((root / '_data/teaching_templates.json').read_text())
+    groups.append({'title': 'Teacher templates', 'documents': templates})
     seen = set()
     count = 0
     pages = 0
@@ -84,7 +114,10 @@ def main():
             pdf = Path(document['pdf'].lstrip('/'))
             editable = Path(document['editable'].lstrip('/'))
             extension, part = {'Word': ('.docx', 'word/document.xml'),
-                               'PowerPoint': ('.pptx', 'ppt/presentation.xml')}[document['format']]
+                               'PowerPoint': ('.pptx', 'ppt/presentation.xml'),
+                               'Word template': ('.dotx', 'word/document.xml'),
+                               'PowerPoint template': ('.potx', 'ppt/presentation.xml')}[document['format']]
+            word_document = document['format'].startswith('Word')
             assert pdf.suffix == '.pdf' and editable.suffix == extension, document
             assert pdf.with_suffix('') == editable.with_suffix(''), document
             for path in (pdf, editable):
@@ -97,14 +130,16 @@ def main():
             assert (root / pdf).read_bytes().startswith(b'%PDF-'), pdf
             with zipfile.ZipFile(root / editable) as package:
                 assert part in package.namelist() and package.testzip() is None, editable
-                if document['format'] == 'Word':
+                if word_document:
                     check_word_style(package, editable)
+                if extension in ('.dotx', '.potx'):
+                    check_template(package, editable, part, word_document)
             if args.style:
-                pages += check_pdf_style(root / pdf, document['format'] == 'Word')
+                pages += check_pdf_style(root / pdf, word_document)
             count += 1
-    for folder in ('assets/lessons', 'assets/worksheets'):
+    for folder in ('assets/lessons', 'assets/worksheets', 'assets/templates'):
         for path in (root / folder).rglob('*'):
-            if path.suffix in ('.pdf', '.docx', '.pptx'):
+            if path.suffix in ('.pdf', '.docx', '.pptx', '.dotx', '.potx'):
                 assert path.relative_to(root) in seen, f'Missing catalog entry: {path.relative_to(root)}'
     print(f'Checked {count} teaching resources with matching PDF and editable files.')
     if args.style:

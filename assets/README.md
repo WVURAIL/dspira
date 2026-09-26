@@ -51,7 +51,11 @@ Existing public answer keys stay with their worksheets. Keep restricted classroo
 
 ## Teaching document style
 
-Use the existing Word or PowerPoint file as a starting point. Keep Arial text and the numbered footer.
+Start new material with the [Word template](templates/wvu-dspira-lesson-template.dotx) or [PowerPoint template](templates/wvu-dspira-presentation-template.potx).
+Open the template in the desktop application and save a working `.docx` or `.pptx` copy.
+The Word file includes heading styles, a data table, and automatic page fields.
+The PowerPoint file includes six named layouts with inherited branding and automatic slide numbers.
+Use Home > New Slide to add a layout. Keep Arial text and the numbered footer.
 Every page needs a navy header band with a gold rule, white 16-point WVU DSPIRA lettering, and the university name.
 Fit the banner within the existing header space so worksheet content and diagrams do not move or shrink.
 The colors follow [WVU's visual identity](https://scm.wvu.edu/brand/visual-identity/): navy `#002855` and gold `#EEAA00` for digital documents.
@@ -64,6 +68,7 @@ Word theme fonts can override an explicit font, so check the exported PDF as wel
 Original equations and labels within diagrams may retain their mathematical typefaces.
 
 Register each pair in [`_data/teaching_documents.json`](../_data/teaching_documents.json).
+Reusable template downloads and their PDF previews are listed separately in [`_data/teaching_templates.json`](../_data/teaching_templates.json).
 Lesson pages link to PDFs; editable downloads appear only in the [teacher catalog](https://wvurail.org/dspira/teaching-resources/).
 Maintain these local teaching files instead of sending readers to older Google document copies.
 External publications and historical research references retain their publisher's formatting.
@@ -89,7 +94,7 @@ Photo and diagram bytes remain unchanged when files move.
 
 ## Templates and website files
 
-- [templates](templates/): lesson planning and Markdown templates.
+- [templates](templates/): branded Word and PowerPoint templates, PDF previews, and lesson planning and Markdown templates.
 - [js](js/): website behavior.
 - [wvu-design-system](wvu-design-system/): the vendored stylesheet, navigation script, and notices.
 - [../css](../css/): lesson and notebook styles.

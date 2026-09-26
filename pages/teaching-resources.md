@@ -3,13 +3,43 @@ layout: page
 title: DSPIRA teacher downloads and editable materials
 permalink: /teaching-resources/
 eyebrow: For educators
-lead: Find every editable worksheet, guide, and slide deck in one place.
+lead: Adapt existing materials or create your own with WVU DSPIRA templates.
 meta_description: "Find DSPIRA classroom materials in one teacher download catalog. Print PDFs or adapt editable Word worksheets, guides, and PowerPoint slides for your class."
 ---
 
 Choose a topic below to download materials for your class.
 Each resource includes a printable PDF and an editable Word or PowerPoint file.
 For lesson planning, visit [Teach with DSPIRA]({{ '/teach/' | relative_url }}).
+
+## Create new materials
+
+Start with these templates to keep new lessons consistent with the collection.
+Both use the WVU DSPIRA banner, Arial text, and automatic page or slide numbers.
+
+<table>
+<caption class="visually-hidden">WVU DSPIRA templates for teachers</caption>
+<thead><tr><th scope="col">Use</th><th scope="col">Template</th><th scope="col">Preview</th></tr></thead>
+<tbody>
+{% for template in site.data.teaching_templates %}
+<tr>
+<th scope="row">{{ template.title }}</th>
+<td><a href="{{ template.editable | relative_url }}" download>{{ template.format }} ({{ template.extension }})</a></td>
+<td><a href="{{ template.pdf | relative_url }}" aria-label="Preview the {{ template.title | downcase }} template as PDF">PDF</a></td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+
+The Word template includes lesson sections, a data table, and space for student answers.
+The PowerPoint template includes six layouts, from a lesson introduction to data and reflection slides.
+
+1. Download the template and open it in the desktop version of Word or PowerPoint.
+2. Save your working copy as a Word document (`.docx`) or PowerPoint presentation (`.pptx`).
+3. Replace bracketed prompts and remove unused sections. In PowerPoint, choose **Home > New Slide** for the branded layouts.
+4. Keep the heading styles and Arial font. Add image descriptions, source credits, and relevant safety instructions.
+5. Check accessibility and page breaks, then export a PDF. Keep the editable file so teachers can adapt your lesson.
+
+Word comments and PowerPoint speaker notes include additional guidance.
 
 ## Plan a class
 
