@@ -11,11 +11,14 @@ These exploratory examples support advanced work on pulsars and radio transients
 Andrew Dyck developed them in 2019, with project setup and documentation by Pranav Sanghavi.
 They live in `radio-research-software`, alongside the research applications.
 
-## Download a notebook
+## Read a notebook
 
-- [Pulsar simulation (Jupyter notebook)](https://raw.githubusercontent.com/WVURAIL/radio-research-software/main/examples/transients/pulsar-simulation.ipynb)
-- [Alternative background comparison (Jupyter notebook)](https://raw.githubusercontent.com/WVURAIL/radio-research-software/main/examples/transients/pulsar-background-comparison.ipynb)
-- [Earlier peak-search development (Jupyter notebook)](https://raw.githubusercontent.com/WVURAIL/radio-research-software/main/examples/transients/pulsar-search-development.ipynb)
+These links open readable notebook previews on GitHub.
+To run a notebook yourself, use its **Download raw file** button and open the downloaded file in Jupyter.
+
+- [Pulsar simulation (Jupyter notebook)](https://github.com/WVURAIL/radio-research-software/blob/main/examples/transients/pulsar-simulation.ipynb)
+- [Alternative background comparison (Jupyter notebook)](https://github.com/WVURAIL/radio-research-software/blob/main/examples/transients/pulsar-background-comparison.ipynb)
+- [Earlier peak-search development (Jupyter notebook)](https://github.com/WVURAIL/radio-research-software/blob/main/examples/transients/pulsar-search-development.ipynb)
 
 Use Python 3, Jupyter, NumPy, SciPy, and Matplotlib.
 Generated outputs use a local folder. Saved notebook outputs were cleared during migration.
