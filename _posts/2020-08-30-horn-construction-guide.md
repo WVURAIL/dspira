@@ -24,7 +24,7 @@ The descriptions below link to purchasing information and assembly instructions 
     
 The antenna consists of the horn panels, a metal can, the wire probe, and a low noise amplifier.
 
-The **horn panels and metal can** are assembled as a single unit. Detailed instructions on the parts involved and their assembly can be found [here.]({{ site.baseurl }}/assets/lessons/horn-construction/horn-and-can-assembly-2021.pdf)
+The **horn panels and metal can** are assembled as a single unit. Follow the [horn and can assembly guide (view PDF)]({{ site.baseurl }}/assets/lessons/horn-construction/horn-and-can-assembly-2021.pdf)
 
 The **low noise amplifier** (LNA) connects to the antenna probe through an SMA connector. This connector belongs to the can assembly. (See above.) 
     
@@ -45,7 +45,7 @@ The support stand described here is intended to be simple and affordable to anyo
 
 It consists of a cradle that holds the horn/can assembly and a base to support the cradle.
 
-Use the [stand assembly guide (PDF)]({{ site.baseurl }}/assets/lessons/horn-construction/stand-assembly-2021.pdf) and [cradle assembly guide (PDF)]({{ site.baseurl }}/assets/lessons/horn-construction/cradle-assembly-2021.pdf).
+Use the [stand assembly guide (view PDF)]({{ site.baseurl }}/assets/lessons/horn-construction/stand-assembly-2021.pdf) and [cradle assembly guide (view PDF)]({{ site.baseurl }}/assets/lessons/horn-construction/cradle-assembly-2021.pdf).
 
 The cost of the parts is under $50.
   

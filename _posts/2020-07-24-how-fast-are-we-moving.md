@@ -14,16 +14,16 @@ preparation: "Choose the basic, advanced, or physics version. Read the teacher n
 ---
 This lesson is designed at three different levels.  Each is mainly after the students being able to determine the speed of the Earth around the Sun.  
 
-[Basic Version]({{ site.baseurl }}/assets/worksheets/earth-motion/basic.pdf){: .btn .btn-wvu-blue}
+[Basic Version (view PDF)]({{ site.baseurl }}/assets/worksheets/earth-motion/basic.pdf){: .btn .btn-wvu-blue}
 The basic version introduces the task directly. Students find some information online.
 
-[Advanced Version]({{ site.baseurl }}/assets/worksheets/earth-motion/advanced.pdf){: .btn .btn-wvu-blue}
+[Advanced Version (view PDF)]({{ site.baseurl }}/assets/worksheets/earth-motion/advanced.pdf){: .btn .btn-wvu-blue}
 The advanced version asks students to reason through the problem before searching online. The outcome is the same.
 
-[Physics Version]({{ site.baseurl }}/assets/worksheets/earth-motion/physics.pdf){: .btn .btn-wvu-blue}
+[Physics Version (view PDF)]({{ site.baseurl }}/assets/worksheets/earth-motion/physics.pdf){: .btn .btn-wvu-blue}
 This version suits students familiar with universal gravitation and circular motion.
 
-[Teacher Notes]({{ site.baseurl }}/assets/lessons/earth-motion/teacher-notes.pdf){: .btn .btn-wvu-blue}
+[Teacher Notes (view PDF)]({{ site.baseurl }}/assets/lessons/earth-motion/teacher-notes.pdf){: .btn .btn-wvu-blue}
 
 <figure class="lesson-video" id="video-uZ9iNsjyw7k">
 {% include youtube.html title="How Fast Are We Moving - Things to expect from students" url="https://www.youtube.com/watch?v=uZ9iNsjyw7k&amp;feature=youtu.be" video="uZ9iNsjyw7k" %}

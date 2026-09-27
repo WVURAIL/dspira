@@ -206,7 +206,7 @@ The FFT block is a special block which does the Fourier transform really fast. P
 
 ## 3.4. Fourier Transform Pairs
 
-Let us revisit Fourier transform by exploring the concept through their various properties. Refer to this [Table of Fourier Transform Pairs and Properties](https://ws.binghamton.edu/fowler/fowler%20personal%20page/EE301_files/FT%20Tables_rev3.pdf) and implement in GNU Radio the following :
+Let us revisit Fourier transform by exploring the concept through their various properties. Refer to this [Table of Fourier Transform Pairs and Properties (view PDF)](https://ws.binghamton.edu/fowler/fowler%20personal%20page/EE301_files/FT%20Tables_rev3.pdf) and implement in GNU Radio the following :
 
 1. Fourier Transform a Sinusoid and 
 2. Fourier transform of the sinusoid delayed by one sample

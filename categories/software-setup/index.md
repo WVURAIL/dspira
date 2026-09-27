@@ -20,7 +20,7 @@ meta_description: "Set up a computer for DSPIRA radio astronomy. Install Ubuntu,
 * Another option is to build a simple spectrometer program in *GNU Radio*. Instructions for doing this are provided below under *Build a Simple Spectrometer in GNU Radio*. These instructions teach *GNU Radio*, then introduce digital signal processing (DSP). The DSP lessons explain processes used in the spectrometer. Then steps on how to build a simple spectrometer in *GNU Radio* are provided.
 
 **Warning-Novice Computer Users - Does *UBUNTU* or *Command Line Interface* sound new to you?**
-You may wish to read the following intro to the UBUNTU environment. [**What is UBUNTU?**]({{ site.baseurl }}/assets/lessons/software-setup/understanding-ubuntu.pdf) before you start downloading and setting up software.
+You may wish to read the following intro to the UBUNTU environment. [**What is UBUNTU?** (view PDF)]({{ site.baseurl }}/assets/lessons/software-setup/understanding-ubuntu.pdf) before you start downloading and setting up software.
 
 **Acquire Necessary Software:**
 

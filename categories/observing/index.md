@@ -16,7 +16,7 @@ For two-horn observations, use the setup lesson and its companion technical memo
 
 * [Setting up and operating a 2-horn interferometer]({{ '/SettingUp2HornInterferometer' | relative_url }}) —
   covers both the adding and the multiplying spectrometer programs.
-* [Adding interferometry to a 2-horn system](/lightwork/memos/memo-031.pdf) —
+* [Adding interferometry to a 2-horn system (view PDF)](/lightwork/memos/memo-031.pdf) —
   LightWork Memo 31.
 
 For what an interferometer is actually good for, see

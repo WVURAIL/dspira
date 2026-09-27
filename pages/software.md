@@ -31,7 +31,7 @@ Older instructions may target GNU Radio 3.8. Do not assume they apply unchanged 
 
 ### Software download
 
-[Download DSPIRA software](https://github.com/WVURAIL/dspira-software/archive/refs/heads/main.zip){: .btn .btn-wvu-blue}
+[Download DSPIRA software (ZIP)](https://github.com/WVURAIL/dspira-software/archive/refs/heads/main.zip){: .btn .btn-wvu-blue}
 
 **Review compatibility before opening these files.** Extract the ZIP and find the `applications` folder.
 The download includes the processing blocks and applications. Follow the [installation steps]({{ '/install-software/' | relative_url }}) before opening a flowgraph.

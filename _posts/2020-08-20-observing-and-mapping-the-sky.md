@@ -25,7 +25,7 @@ summer workshop, and it is the command-line route through the data.
 
 The [observation-processing scripts](https://github.com/WVURAIL/dspira-software/tree/main/data-processing) are maintained in DSPIRA software.
 The [processing guide](https://github.com/WVURAIL/dspira-software/blob/main/data-processing/README.md) explains installation and each script's output.
-Download [DSPIRA software](https://github.com/WVURAIL/dspira-software/archive/refs/heads/main.zip), then open its `data-processing` folder for the commands below.
+[Download DSPIRA software (ZIP)](https://github.com/WVURAIL/dspira-software/archive/refs/heads/main.zip), then open its `data-processing` folder for the commands below.
 
 ---
 

@@ -14,13 +14,13 @@ preparation: "Choose the software or paper route. Review sine waves before combi
 
 To access the classroom activity click on the following link:  
 
-[Making Waves with Fourier Series]({{ site.baseurl }}/assets/lessons/fourier-series/teacher-notes.pdf){: .btn .btn-wvu-blue}
+[Making Waves with Fourier Series (view PDF)]({{ site.baseurl }}/assets/lessons/fourier-series/teacher-notes.pdf){: .btn .btn-wvu-blue}
 
 A related paper-based exercise, which needs no software at all:
 
-[Fourier Transform Activity]({{ site.baseurl }}/assets/worksheets/fourier-series/worksheet.pdf){: .btn .btn-wvu-blue}
+[Fourier Transform Activity (view PDF)]({{ site.baseurl }}/assets/worksheets/fourier-series/worksheet.pdf){: .btn .btn-wvu-blue}
 
-Open the original GNU Radio 3.7 flowgraph below. Save the file from your browser before opening it in GNU Radio Companion.
+Download the original GNU Radio 3.7 flowgraph below, then open it in GNU Radio Companion.
 Review compatibility before using it with a newer installation. The software repository retains its source and revision notes.
 
-[GNU Radio .grc file for Fourier Activity](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/fourier-analysis/wave-explorer.grc){: .btn .btn-wvu-blue}
+[GNU Radio .grc file for Fourier Activity (download GRC)](https://raw.githubusercontent.com/WVURAIL/dspira-software/main/examples/fourier-analysis/wave-explorer.grc){: .btn .btn-wvu-blue download="" data-download=""}

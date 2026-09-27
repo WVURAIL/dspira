@@ -16,7 +16,7 @@ preparation: "This is an optional historical setup route. Review image compatibi
 ## Radio Astronomy with Raspberry Operating System
 ### Glen Langston,  2020 October 21
 
-[Download the illustrated guide (PDF)]({{ site.baseurl }}/assets/lessons/software-setup/raspberry-pi-guide-2020.pdf){: .btn .btn-wvu-blue}
+[Download the illustrated guide (view PDF)]({{ site.baseurl }}/assets/lessons/software-setup/raspberry-pi-guide-2020.pdf){: .btn .btn-wvu-blue}
 
 ***
 *The text of the pdf is below*

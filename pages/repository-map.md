@@ -31,7 +31,7 @@ Moved GitHub files cannot redirect individually. Use their replacement links bel
 The retired repositories contain forwarding notices. Their files and history are preserved through the active DSPIRA project.
 The lab site handles their old website addresses. See [historical material and recovery packages]({{ '/history/' | relative_url }}).
 
-[Download the link map as JSON]({{ '/repository-links.json' | relative_url }}).
+[Download the link map as JSON]({{ '/repository-links.json' | relative_url }}){: download=""}.
 
 <details>
 <summary>Find replacement links for older addresses</summary>

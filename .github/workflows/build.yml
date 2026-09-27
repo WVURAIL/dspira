@@ -265,6 +265,9 @@ jobs:
       - name: Lesson search and history
         run: node --test tools/test_lesson_filter.js
 
+      - name: Software downloads
+        run: node --test tools/test_file_downloads.js
+
       - name: Heading anchors resolve
         run: python3 tools/check_links.py --offline --fail-on anchors
 
