@@ -8,6 +8,8 @@ import re
 from urllib.parse import urlparse
 from urllib.request import urlopen
 
+from version_downloads import version_downloads
+
 MANIFEST = Path(__file__).resolve().parents[1] / '_data/legacy_assets.json'
 
 
@@ -76,6 +78,8 @@ def main():
     args = parser.parse_args()
     count = publish(args.site, json.loads(args.manifest.read_text()))
     print(f'Preserved {count} legacy download addresses.')
+    updated = version_downloads(args.site)
+    print(f'Updated {updated} document links with file versions.')
 
 
 if __name__ == '__main__':

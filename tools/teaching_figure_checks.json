@@ -33,79 +33,59 @@
     "editable": "assets/lessons/horn-construction/mini-horn-construction.docx",
     "figures": [
       {
-        "width": 141,
-        "height": 298,
-        "sha256": "5f05ec0668a7e4fe03031b95383a5f51777c925fe2760822220e8aa07299e6f0"
-      },
-      {
-        "width": 843,
-        "height": 687,
-        "sha256": "9ded69dfbb4602113387ba68af070896b880215eb9b98dd5a9a7de55ece7fe1c"
-      },
-      {
-        "width": 691,
-        "height": 563,
-        "sha256": "afe32fd6fb23a269266a5ee047062f729ce6041c393c233b1d9a9a0c79c72647"
-      },
-      {
-        "width": 783,
-        "height": 640,
-        "sha256": "49efe41bd36c6f3212ff700db9bfb7f9c82101d78d8602952eaada8435cfbd8d"
-      },
-      {
-        "width": 897,
-        "height": 731,
-        "sha256": "f97970725bc40616dc1e11515684cde6014ae752c167a84dee8c7c7f4f9ec1f4"
-      },
-      {
-        "width": 1947,
-        "height": 913,
-        "sha256": "8e1b82806c82cddc2a4cb51878f58e2c9079a13eb85c7499b4f2bb99ad0646b4"
-      },
-      {
-        "width": 1748,
-        "height": 619,
-        "sha256": "548539b3d9dfce3e6c70fda36e7a2afb89ecd877d22e059fa65bda895faf2e2c"
-      },
-      {
-        "width": 1791,
-        "height": 584,
-        "sha256": "ba8c7237c88dca8c43e2402857c0eecc93b4f26c0d15d7aa693cd40f48772d9c"
-      },
-      {
-        "width": 1093,
-        "height": 609,
-        "sha256": "1fa5bd7fac871e178462b83d4ff3ac8ebab2fb03fc6d5efc870c383118861df4"
-      },
-      {
-        "width": 1833,
-        "height": 944,
-        "sha256": "5fea7bf664d4ce8c2a66b575f4639dd1a5f0605f490c0e70d0d3a2a8d3c33c33"
-      },
-      {
-        "width": 1525,
-        "height": 956,
-        "sha256": "96f1829b06041a7effaa9c1365fa3a222a27bb6f628023879dea06407b1394d3"
-      },
-      {
         "width": 1012,
         "height": 494,
         "sha256": "bd2b53b34370eb5864f44d1dec8ed4f336c71c1b2fb167b208b3f57da847fe3f"
       },
       {
-        "width": 515,
-        "height": 773,
-        "sha256": "becdcff6c948c36d50afa60effff2a70245cc45bf8de533d4da92869e1cef595"
+        "width": 1350,
+        "height": 363,
+        "sha256": "af80d13d3cc8a1554082105ec15206c67935e02e9cc2f21163a83c7f7dca881c"
       },
       {
-        "width": 1945,
-        "height": 693,
-        "sha256": "4e482155c788d970eb57c96ff7580e4cb0787cc42030fc4dc3e8d3bc78979c98"
+        "width": 1400,
+        "height": 388,
+        "sha256": "30d4af7b31f278382421475c08747fae5ca648aaa6a145797632723e219fce69"
       },
       {
-        "width": 826,
-        "height": 482,
-        "sha256": "083a432e2fba90214a90d5623b8828fa466db8366f1151b594e3109925f969f3"
+        "width": 1400,
+        "height": 463,
+        "sha256": "cfbfefff9dd475e4c33e672de300c499306e5cd5ecfe6511aa4c1e350668a256"
+      },
+      {
+        "width": 1400,
+        "height": 513,
+        "sha256": "96949288e7705ab9e151edb85bfbccb5aa4ed1dd77687a11adc3b396463210ed"
+      },
+      {
+        "width": 1400,
+        "height": 638,
+        "sha256": "3a4d9f51b1d8308526b6f768c0e997c9ab504d8200a79d3c76098b92fb78111a"
+      },
+      {
+        "width": 1400,
+        "height": 650,
+        "sha256": "435644827a2fc19687798b604515a5025f20b8c67c542a63716e7caed3e9291b"
+      },
+      {
+        "width": 1400,
+        "height": 650,
+        "sha256": "4bfc3c8680813d3d8e3078f363fa5b84f2a62b215ca0c5628a2e24503f9a0ae9"
+      },
+      {
+        "width": 1400,
+        "height": 688,
+        "sha256": "38fa7365b8a8ca01967a39abb6b07f6b3b457f3f8baff1b7394948a47028a4db"
+      },
+      {
+        "width": 1400,
+        "height": 825,
+        "sha256": "d1afef17b97d0d27284fe3bceb1e30639127628da0e05ac27f67d4859f9a48c3"
+      },
+      {
+        "width": 1400,
+        "height": 1163,
+        "sha256": "5316bd57deb02aae9c132c8dbb05185b8b578011bb942a33f8b34d82a4325010"
       }
     ]
   },
