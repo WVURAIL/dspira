@@ -8,19 +8,24 @@
         "sha256": "a0d667da85c8caa5f898b4a302e5b2f5cc9e90c4bab91677ea417ce1ed22d53e"
       },
       {
-        "width": 924,
-        "height": 1016,
-        "sha256": "b0ccc011d5f916e99688d19948b160cadcba8f46ff505dd65f859d55a4389dd2"
-      },
-      {
-        "width": 904,
-        "height": 1018,
-        "sha256": "9a12f6638f105835ec0fac617c316a42b1213cbf1f7670a5fcc89fcd1243a171"
-      },
-      {
         "width": 697,
         "height": 709,
         "sha256": "4e6ea3da9799450c47cbecff3521567b4bd262cf92cd10daefd10ae4f079ab48"
+      },
+      {
+        "width": 1050,
+        "height": 1375,
+        "sha256": "5bcdc50177247c01db1392824658dcdfa6a9dd9cac572cc610457b14dd774017"
+      },
+      {
+        "width": 1350,
+        "height": 620,
+        "sha256": "6706967eb6c94c1617bddf6fcc6d7ff0e78724ffd3fc34e03df6b90e625baed2"
+      },
+      {
+        "width": 1650,
+        "height": 2038,
+        "sha256": "bf165590ee255e6620a160ea66cff4d5c1e5ff368aa6ddf315012f63ee05ac37"
       }
     ]
   },
