@@ -64,8 +64,8 @@ sass:
 plugins:
   - jekyll-sitemap
 
-# Both exported notebooks have front matter, conditional noindex for preview
-# builds, and sitemap: false. Keep those fields when regenerating the exports.
+# Notebook pages use the normal site layout. The old GBT export redirects to
+# its notebook page and remains excluded from the sitemap.
 
 # The READMEs under lesson-examples/ carry no front matter,
 # so the github-pages gem's own plugins publish them: as pages

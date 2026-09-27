@@ -1,5 +1,79 @@
 # tools
 
+## Notebook publication
+
+`_data/notebooks.json` lists every published teaching and research notebook.
+Pages use the `notebook` layout, then `publish_assets.py` adds their rendered content and downloads after Jekyll builds.
+Install the renderer before running publication:
+
+```sh
+python3 -m pip install -r tools/notebook-requirements.txt
+bundle exec jekyll build
+python3 tools/publish_assets.py --site _site
+python3 tools/test_publish_notebooks.py
+python3 tools/check_notebook_pages.py --site _site
+```
+
+Teaching sources live in `lesson-examples/`. Edit their `.ipynb` files, retaining plot descriptions in output metadata under `dspira_alt`.
+Research sources stay in `radio-research-software`; each build reads all four from one resolved commit.
+The daily publication check detects research updates as well as hardware updates.
+Notebook publication never executes code. It shows saved outputs when available and labels examples without saved outputs.
+It extracts static plots from older Matplotlib widgets and removes executable notebook HTML.
+The built-page check verifies displayed code, matching downloads, plot descriptions, and section links.
+Generated downloads, plot images, and source checksums live under `_site/assets/notebooks/`.
+Use `--notebook-revision <full-commit-sha>` to reproduce a specific research snapshot.
+
+The I/Q source was recovered from its published HTML, with its 13 original plots.
+The GBT notebook includes ten restored plots from its 2017 export. Its missing HDF5 data still prevents rerunning the observation.
+Both original webpage addresses remain available. Notebook pages use the site's normal layout and the download is the complete source notebook.
+
+## Assembly instructions
+
+The horn, cradle, and stand webpages include text and original illustrations exported from their teaching Word documents.
+Edit the `.docx` guides in `assets/lessons/horn-construction/`, export their matching PDFs, then run:
+
+```sh
+python3 tools/export_assembly_guides.py
+python3 tools/export_assembly_guides.py --check
+```
+
+Commit the documents, `_includes/assembly/`, and `images/horn-construction/assembly/` together.
+Build and publication checks reject stale website exports.
+The exporter preserves measurements, tables, step order, image descriptions, and image bytes.
+It changes paper-page references to webpage directions. Update its image names when adding or removing illustrations.
+Review the resulting webpages and PDFs before publishing.
+
+The can lesson adds detailed demonstrations to the printable horn and can guide.
+Keep those explanations consistent when changing the guide's probe or can dimensions.
+
+## Hardware document publication
+
+`publish_assets.py` also publishes the hardware documents listed in `_data/hardware_publication.json`.
+Each build copies their original bytes from one commit of `WVURAIL/dspira-hardware`.
+Files appear under `_site/assets/hardware/`; `source.json` records the source commit and each file's SHA256 checksum.
+PDF and Word links receive content versions, so revised documents get fresh browser URLs.
+Missing files or invalid document formats fail the build, leaving the last successful website online.
+
+Edit amplifier guides in `dspira-hardware`. Add new publication paths to `_data/hardware_publication.json` in this repository.
+Use `/assets/hardware/<source-path>` with Jekyll's `relative_url` filter when linking a published document.
+Register PDF and Word pairs in `_data/hardware_documents.json` to include them in the teacher catalog.
+
+The Publish Pages workflow checks for hardware updates daily and skips rebuilding when the source revision is unchanged.
+The check uses `_config.yml` for the website address, including after a domain change.
+Run Publish Pages manually to publish sooner. Pushes to this repository also publish the current hardware documents.
+
+For a local build:
+
+```sh
+bundle exec jekyll build
+python3 tools/test_publish_hardware.py
+python3 tools/publish_assets.py --site _site
+```
+
+Add `--hardware-revision <full-commit-sha>` to reproduce a particular hardware revision.
+Serve the completed `_site` directory under `/dspira/` to preview its generated downloads.
+Rerun the publication step after rebuilding Jekyll.
+
 ## check_links.py
 
 Finds broken links in the lessons before students do.
@@ -176,25 +250,18 @@ Teachers project these lessons in classrooms. Marginal contrast on a laptop can 
 **A warning worth keeping.** The first version measured every element with a text-node child. This included containers inheriting colors used only by their descendants. It reported 81 of 82 pages
 broken, and every one was wrong. The checker now measures only elements with their own non-whitespace text. `--self-test` covers the earlier mistake.
 
-The corrected first run found five failing color pairs in two exported Jupyter notebooks. All came from the default Pygments palette. Comments measured 4.25:1; string interpolation measured 3.65:1. They are corrected by an
-override block near the top of each of those two files, which explains itself.
+The corrected first run found five failing color pairs in two exported Jupyter notebooks. All came from the default Pygments palette. Current notebook pages use the site's shared typography and accessible code colors in `css/lessons.scss`.
 
 Since the move to the Design System the colours are its own. New failures are more likely to involve utility classes on unsuitable backgrounds, such as `text-wvu-gold` on white. Fix these in the page rather than `css/lessons.scss`.
 
 It does not cover text over images, focus indicators, or anything needing a
 pointer or keyboard. One measurable slice, not the whole of accessibility.
 
-## I/Q notebook export
+## Older I/Q asset addresses
 
-The published I/Q notebook is a static export. Its Bootstrap stylesheet and
-13 unchanged plot images live in `images/iq/`, with their stylesheet at `css/iq-notebook.css`.
-The HTML keeps its text, code samples,
-plot descriptions, MathJax, and accessibility overrides. The unused Jupyter
-widget scripts are omitted.
-
-When updating the export, preserve its metadata, skip link, heading IDs, image
-descriptions, and preview `noindex`. Keep plot files separate so they can load
-on demand. Compare all plots and rerun the layout and contrast checks.
+The old `images/iq/` figures and `css/iq-notebook.css` remain available for existing links.
+The current `/iq/` page is generated from `lesson-examples/iq/iq-quadrature-sampling.ipynb` through notebook publication.
+Update that source instead of editing a separate HTML export.
 
 ## Historical notebook styles
 

@@ -109,6 +109,11 @@ Photo and diagram bytes remain unchanged when files move.
 Link to those resources instead of committing another copy here.
 Keep original author credits, licenses, and editable files with their material.
 
+The build publishes linked hardware PDFs and Word files under `/dspira/assets/hardware/`.
+These generated copies let visitors read and download documents directly on DSPIRA.
+Their originals remain in `dspira-hardware`; do not add a second editable copy to this repository.
+The [hardware publication manifest](../_data/hardware_publication.json) lists the source paths included in each build.
+
 ## Old download addresses
 
 `FilesUploaded`, `assets/teaching`, and the top-level `iq` folder are no longer source directories.
@@ -125,6 +130,7 @@ For a local compatibility check:
 ```sh
 bundle exec jekyll build
 python3 tools/test_publish_assets.py
+python3 tools/test_publish_hardware.py
 python3 tools/publish_assets.py --site _site
 ```
 

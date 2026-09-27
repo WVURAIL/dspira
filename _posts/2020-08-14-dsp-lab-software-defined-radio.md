@@ -157,7 +157,7 @@ Add a Multiply Const block before the Audio Sink to control volume. Start with a
 Every filter must use its input sample rate when calculating taps.
 The second filter reduces the audio rate by five: `240000 / 5 = 48000`.
 
-The [FM receiver example](https://github.com/WVURAIL/dspira-software/blob/main/examples/receivers/fm-receiver.grc) uses the same rate conversion.
+The [FM receiver example (view GRC source)](https://github.com/WVURAIL/dspira-software/blob/main/examples/receivers/fm-receiver.grc) uses the same rate conversion.
 Its WBFM Receive block combines demodulation, audio filtering, and de-emphasis.
 Radio reception and audio playback still require compatible hardware.
 

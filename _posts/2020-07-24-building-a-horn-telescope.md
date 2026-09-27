@@ -13,14 +13,14 @@ preparation: "Review the complete system before ordering parts. Choose a horn de
 ---
 A list of the components that are needed to build and operate a horn radio telescope system is presented below. Links to documentation and instructional videos are provided where applicable.
 
-Why does the horn have these dimensions? How do they relate to observing the 21 cm line? See [Horn Telescope Design]({{ site.baseurl }}/assets/lessons/horn-construction/horn-design.pdf){: .btn .btn-wvu-blue}
+Why does the horn have these dimensions? How do they relate to observing the 21 cm line? See [Horn Telescope Design (view PDF)]({{ site.baseurl }}/assets/lessons/horn-construction/horn-design.pdf){: .btn .btn-wvu-blue}
 
 ## What's Needed for a Complete Horn Radio Telescope System
    - the horn and antenna assembly
 
-      * the front end horn [Click here for horn details]({{ site.baseurl }}/assets/lessons/horn-construction/horn-and-can-assembly-2021.pdf)
-      * the back end can and feedthrough antenna [Click here for CAN details]({{ site.baseurl }}/assemblingcan)
-      * the front end and back end support stand [Click here for stand details]({{ site.baseurl }}/assets/lessons/horn-construction/stand-assembly-2021.pdf)
+      * [Build the horn]({{ '/Horn_can' | relative_url }}) - the front end that collects radio waves.
+      * [Assemble the can and antenna]({{ '/assemblingcan' | relative_url }}) - the back end containing the copper probe.
+      * [Build the cradle and stand]({{ '/cradle-and-stand/' | relative_url }}) - the support for the complete antenna.
 
    - a low noise amplifier (LNA)
    

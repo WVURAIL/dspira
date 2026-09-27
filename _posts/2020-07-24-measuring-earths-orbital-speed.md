@@ -12,7 +12,7 @@ equipment: "Student worksheets, Stellarium, and the linked class spreadsheet. Su
 preparation: "Start with motion, coordinate systems, and Doppler shifts. Collecting your own telescope data is an optional final activity."
 ---
 This intensive activity sequence is intended for high school students and above. Students eventually use the DSPIRA Radio Horn Telescope to measure Earth's speed around the Sun. The reference point to measure this speed with be the Center of the Galaxy (GC).   
-Click here for a complete document of [Teacher's Notes]({{ site.baseurl }}/assets/lessons/earth-orbit/teacher-notes.pdf) for this whole activity sequence
+Click here for a complete document of [Teacher's Notes (view PDF)]({{ site.baseurl }}/assets/lessons/earth-orbit/teacher-notes.pdf) for this whole activity sequence
 
 There are (up to) 6 activities to get to using the Horn Telescope 
 
@@ -32,8 +32,8 @@ To get to the activity files, click here [How Fast Are We Moving?]({{ site.baseu
 
 ## 2. Modeling Earth's Motion around the Sun    
 The Earth will be modeled as moving in a circle around the Sun.  The direction to the galactic center (GC) is included for use in later measurements.  Later Doppler calculations require Earth's velocity component toward the GC. This activity introduces velocity components graphically.  
-Click here for Student Activity [Modeling Earth's Motion around the Sun student worksheet]({{ site.baseurl }}/assets/worksheets/earth-orbit/modeling-earth-orbit.pdf)
-Click here for Student Activity [Diagram]({{ site.baseurl }}/assets/worksheets/earth-orbit/model-diagram.pdf)
+Click here for Student Activity [Modeling Earth's Motion around the Sun student worksheet (view PDF)]({{ site.baseurl }}/assets/worksheets/earth-orbit/modeling-earth-orbit.pdf)
+Click here for Student Activity [Diagram (view PDF)]({{ site.baseurl }}/assets/worksheets/earth-orbit/model-diagram.pdf)
 
 [Modeling Earth's Motion around the Sun teacher video](#video-ke65AuJ-j7I) Video for Activity
 
@@ -44,7 +44,7 @@ Click here for Student Activity [Diagram]({{ site.baseurl }}/assets/worksheets/e
 ## 3. Earth's Motion with respect to the Galactic Center 
 The previous activity produced an Earth orbit model. Its numbered days now need actual calendar dates.  Use [Stellarium Web Online](https://stellarium-web.org/) to connect calendar dates with the student's model.   
 
-Click here for Student Activity [Earth's Motion with respect to the Galactic Center student worksheet]({{ site.baseurl }}/assets/worksheets/earth-orbit/finding-the-galactic-center.pdf)
+Click here for Student Activity [Earth's Motion with respect to the Galactic Center student worksheet (view PDF)]({{ site.baseurl }}/assets/worksheets/earth-orbit/finding-the-galactic-center.pdf)
 
 [Earth's Motion with respect to the Galactic Center teacher video](#video-ApKA6kWlFuQ) Video for Activity
 ### Stellarium - Web vs Download Version  
@@ -73,7 +73,7 @@ This three-minute video introduces the Doppler shift. Its final minute explains 
 ## 5. Measuring the Earth's Speed around the Sun   
 Actual data generated from the DSPIRA Radio Horn Telescope is given to the students to analyze.  It is a great opportunity for students to learn to dig information out of a graph.  The data lines up with the points created in the Earth Orbit Model from activity #2.  The students will use the Doppler equation to determine the (radial) speed of the Earth towards the Galactic Center. 
 
-Click here for Student Activity [Measuring the Earth's Speed around the Sun student worksheet]({{ site.baseurl }}/assets/worksheets/earth-orbit/doppler-measurements.pdf)
+Click here for Student Activity [Measuring the Earth's Speed around the Sun student worksheet (view PDF)]({{ site.baseurl }}/assets/worksheets/earth-orbit/doppler-measurements.pdf)
 
 The following video shows an example of how to analyze the Spectrum in the manner of the activity.  It can help the teacher or student get started with the analysis part of the activity. 
 Video of [Graph Analysis Example](#video-0yAo1z4kv1w)
@@ -86,7 +86,7 @@ Video of [Graph Analysis Example](#video-0yAo1z4kv1w)
 
 There has been a long sequence of activities that brings a class to this point.  Students summarize their work in one Conclusion/Final Comparison chart.  
 
-Open the [Comparing the Earth Orbit Model to the actual Data Analysis student worksheet]({{ site.baseurl }}/assets/worksheets/earth-orbit/final-comparison.pdf).
+Open the [Comparing the Earth Orbit Model to the actual Data Analysis student worksheet (view PDF)]({{ site.baseurl }}/assets/worksheets/earth-orbit/final-comparison.pdf).
 Students working independently will find slightly different differences between their model velocities and the measured data.
 Collect the class results and discuss them together.  Teachers can copy this spreadsheet and share it with students. Students can then enter their data together.  Their data on the spreadsheet has typically yielded a nice histogram.  Students and teachers can quickly compare individual results with the rest of the class.  There is an example worksheet (lower tabs) to look at once the spreadsheet is open.
 

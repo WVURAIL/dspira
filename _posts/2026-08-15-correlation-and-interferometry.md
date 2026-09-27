@@ -17,10 +17,9 @@ Every measurement a radio telescope makes is a correlation of some kind. A
 single horn correlates a signal with itself; two horns correlate one against
 the other. This lesson explains convolution, autocorrelation, and cross-correlation. It then uses these operations to explain what a two-element interferometer measures.
 
-It was written by **Pranav Sanghavi** at this lab in 2018. Everything here can
-be run yourself: the notebook is at
-[`lesson-examples/interferometry/`](https://github.com/WVURAIL/dspira/tree/main/lesson-examples/interferometry)
-and needs nothing but `numpy`, `scipy` and `matplotlib`.
+It was written by **Pranav Sanghavi** at this lab in 2018.
+[Read the worked notebook]({{ '/notebooks/interferometry/' | relative_url }}) to see its code and plots.
+Download it from that page to run the examples with NumPy, SciPy, and Matplotlib in Jupyter.
 
 <!-- TOC -->
 
@@ -228,7 +227,7 @@ See [**Fundamentals of Radio Interferometry**](https://github.com/ratt-ru/foi-co
 
 Closer to home, and worth doing in this order:
 
-* [Additive Interferometry Using Two DSPIRA Radio Horn Telescopes](/lightwork/memos/memo-031.pdf) — LightWork Memo 31. This is a measured version of the fringe pattern above. A solar transit on a 5.0 m baseline produced 0.043 rad spacing, compared with 0.042 rad predicted. This is what the theory on this page looks like when it comes out of a real horn.
+* [Additive Interferometry Using Two DSPIRA Radio Horn Telescopes (view PDF)](/lightwork/memos/memo-031.pdf) — LightWork Memo 31. This is a measured version of the fringe pattern above. A solar transit on a 5.0 m baseline produced 0.043 rad spacing, compared with 0.042 rad predicted. This is what the theory on this page looks like when it comes out of a real horn.
 * [Setting up a 2 Horn Interferometer]({{ site.baseurl }}/SettingUp2HornInterferometer) — building one and running it
 * [Interferometry]({{ site.baseurl }}/Interferometry) — the rest of the interferometry material on this site
 * [Fourier Analysis]({{ site.baseurl }}/dsplab-fourier1/) and [Expert Mode]({{ site.baseurl }}/dsplab-fourier2/) — the transforms this page leans on

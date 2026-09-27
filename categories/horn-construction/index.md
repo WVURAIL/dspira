@@ -15,17 +15,5 @@ electronics that go behind it are in the
 [Receiver Electronics]({{ '/categories/receiver-electronics/' | relative_url }})
 module.
 
-Two parts of the build are documented as drawings rather than as lessons:
-
-* [The horn cradle]({{ site.baseurl }}/assets/lessons/horn-construction/cradle-assembly-2021.pdf) —
-  the frame that carries the horn and sets its elevation.
-* [The base stand]({{ site.baseurl }}/assets/lessons/horn-construction/stand-assembly-2021.pdf) —
-  a simple, sturdy base for the cradle to bolt to.
-
-[A completed horn assembled](#video-LT0h3Frd-_k) is a short video
-showing how the horn-can, cradle and stand go together.
-
-
-<figure class="lesson-video" id="video-LT0h3Frd-_k">
-{% include youtube.html title="Horn Assembly" url="https://youtu.be/LT0h3Frd-_k" video="LT0h3Frd-_k" %}
-</figure>
+The [cradle and stand lesson]({{ '/cradle-and-stand/' | relative_url }}) includes materials, drawings, assembly steps, and a demonstration video.
+Each assembly lesson also links to printable PDF instructions.

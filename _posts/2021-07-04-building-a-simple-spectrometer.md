@@ -14,13 +14,13 @@ preparation: "Begin with the introductory waveform lessons. Review FFTs and filt
 
 
 + Introductory Lessons on Using GNU Radio and Some Basic DSP
-    - [Lesson 1]({{ site.baseurl }}/assets/worksheets/simple-spectrometer/01-simple-waveform.pdf) - Introduction to GNU Radio basics.
-    - [Lesson 2]({{ site.baseurl }}/assets/worksheets/simple-spectrometer/02-multiple-sources.pdf) - Learning more GNU Radio tools building a multiple waveform source.
-    - [Lesson 3]({{ site.baseurl }}/assets/worksheets/simple-spectrometer/03-fourier-series.pdf) - Demonstration of Fourier series.
-    - [Lesson 4]({{ site.baseurl }}/assets/worksheets/simple-spectrometer/04-fft.pdf) - Demonstration of how an FFT block works.
-    - [Lesson 5]({{ site.baseurl }}/assets/worksheets/simple-spectrometer/05-filters.pdf) - Filter basics.
+    - [Lesson 1 (view PDF)]({{ site.baseurl }}/assets/worksheets/simple-spectrometer/01-simple-waveform.pdf) - Introduction to GNU Radio basics.
+    - [Lesson 2 (view PDF)]({{ site.baseurl }}/assets/worksheets/simple-spectrometer/02-multiple-sources.pdf) - Learning more GNU Radio tools building a multiple waveform source.
+    - [Lesson 3 (view PDF)]({{ site.baseurl }}/assets/worksheets/simple-spectrometer/03-fourier-series.pdf) - Demonstration of Fourier series.
+    - [Lesson 4 (view PDF)]({{ site.baseurl }}/assets/worksheets/simple-spectrometer/04-fft.pdf) - Demonstration of how an FFT block works.
+    - [Lesson 5 (view PDF)]({{ site.baseurl }}/assets/worksheets/simple-spectrometer/05-filters.pdf) - Filter basics.
 
-+ [Build a Simple Spectrometer]({{ site.baseurl }}/assets/lessons/simple-spectrometer/build-a-spectrometer.pdf) - Directions on building a simple spectrometer for a horn telescope, with detailed explanations of the blocks.
++ [Build a Simple Spectrometer (view PDF)]({{ site.baseurl }}/assets/lessons/simple-spectrometer/build-a-spectrometer.pdf) - Directions on building a simple spectrometer for a horn telescope, with detailed explanations of the blocks.
 
 Teachers can download [editable Word versions of all five worksheets]({{ '/teaching-resources/#editable-gnu-radio-worksheets' | relative_url }}).
 

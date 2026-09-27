@@ -165,6 +165,37 @@ h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
    color: var(--bs-secondary-color);
 }
 
+/* Assembly photos retain their order as the reading column narrows. */
+.assembly-figures {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 1rem;
+   align-items: flex-start;
+   margin-top: 1.5rem;
+}
+.prose .assembly-figures figure {
+   flex: 1 1 12rem;
+   min-width: 0;
+   max-width: 38rem;
+   margin: 0;
+}
+.assembly-figures img { display: block; }
+.assembly-caption { font-size: 0.875rem; margin-top: 0.5rem; }
+
+/* Notebook cells use the site's reading column and typography. */
+.notebook-example .cell { margin: 1.5rem 0; min-width: 0; }
+.notebook-example .inner_cell,
+.notebook-example .output_area { min-width: 0; max-width: 100%; }
+.notebook-example .prompt { display: none; }
+.notebook-example .highlight,
+.notebook-example .highlight span { color: #002855; background: transparent; }
+.notebook-example pre { font-size: 0.9rem; white-space: pre-wrap; overflow-wrap: anywhere; }
+.notebook-example .output_text pre { background: #f4f5f6; color: #222; }
+.notebook-example .output_png img { display: block; max-width: 100%; height: auto; }
+.notebook-example .notebook-sections { margin: 1rem 0; }
+.notebook-example summary { cursor: pointer; font-weight: bold; }
+.notebook-status { border-left: 4px solid #eaaa00; padding: 0.5rem 1rem; }
+
 /* 06. Form controls in content --------------------------------------------- */
 
 /* The contributor guide (/newpost/) has a raw <textarea cols="80"> and an
@@ -182,9 +213,7 @@ h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
 
 /* 07. Exported notebooks and video embeds ---------------------------------- */
 
-/* Exported Jupyter notebooks ship their own fixed widths; let them scroll
-   inside the column rather than the page. (/iq/ is standalone and does not
-   use this; it is for a notebook pasted into a lesson.) */
+/* Keep wide notebook outputs inside the reading column. */
 .prose .output_subarea,
 .prose .output_wrapper,
 .prose .rendered_html {

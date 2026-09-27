@@ -39,6 +39,11 @@ The [asset directory guide](assets/README.md) lists the attachment folders and e
 Link to the maintained resource instead of uploading another copy.
 Keep original author credits, licenses, and editable files with the material.
 
+Amplifier PDFs and Word files are published automatically from `dspira-hardware` during the site build.
+Edit the originals there; the website copies are generated files.
+A daily check republishes DSPIRA when the hardware repository changes.
+See the [hardware publication instructions](tools/README.md#hardware-document-publication) for adding a document or rebuilding immediately.
+
 ## Add or update a lesson
 
 Teachers can use the [submission guide](https://wvurail.org/dspira/newpost/) without using GitHub.
@@ -63,7 +68,7 @@ bundle exec jekyll serve
 ```
 
 Open `http://localhost:4000/dspira/`.
-For old download addresses, also follow the [compatibility build instructions](assets/README.md#old-download-addresses).
+For hardware documents and old download addresses, also follow the [compatibility build instructions](assets/README.md#old-download-addresses).
 See [the tools guide](tools/README.md) for checks run by CI.
 
 The WVU Design System stylesheet is vendored under `assets/wvu-design-system`.

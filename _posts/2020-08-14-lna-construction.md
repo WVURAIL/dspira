@@ -14,7 +14,7 @@ preparation: "Use this route when building an amplifier. Review soldering steps 
 
 ## First: Order the Components of the LNA  
 
-1. Download the [parts ordering guide](https://raw.githubusercontent.com/WVURAIL/dspira-hardware/main/assembly/parts-guide-v4.pdf). It lists the components and suppliers.
+1. View the [parts ordering guide (view PDF)]({{ '/assets/hardware/assembly/parts-guide-v4.pdf' | relative_url }}). It lists the components and suppliers.
 2. Order a bottle of silicone conformal coating. Coat the circuit board after soldering all components. The coating is not an electronic component of the LNA. This coating will protect your LNA from moisture, corrosion, fungus, dirt, dust, thermal shock, short circuits, and static discharge. This product is available through Amazon. You can also do a Google search for silicone conformal coating to find other sellers.  
 
 ## Second: Assemble a Soldering Station  

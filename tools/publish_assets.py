@@ -9,6 +9,8 @@ from urllib.parse import urlparse
 from urllib.request import urlopen
 
 from version_downloads import version_downloads
+from publish_hardware import MANIFEST as HARDWARE_MANIFEST, publish_hardware
+from publish_notebooks import MANIFEST as NOTEBOOK_MANIFEST, publish_notebooks
 
 MANIFEST = Path(__file__).resolve().parents[1] / '_data/legacy_assets.json'
 
@@ -75,9 +77,15 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--site', type=Path, default=Path('_site'))
     parser.add_argument('--manifest', type=Path, default=MANIFEST)
+    parser.add_argument('--hardware-revision', help='Hardware source commit; defaults to the current main revision')
+    parser.add_argument('--notebook-revision', help='Research notebook source commit; defaults to the current main revision')
     args = parser.parse_args()
     count = publish(args.site, json.loads(args.manifest.read_text()))
     print(f'Preserved {count} legacy download addresses.')
+    hardware = publish_hardware(args.site, json.loads(HARDWARE_MANIFEST.read_text()), args.hardware_revision)
+    print(f"Published {len(hardware['files'])} hardware documents from {hardware['revision']}.")
+    notebooks = publish_notebooks(args.site, json.loads(NOTEBOOK_MANIFEST.read_text()), args.notebook_revision)
+    print(f"Published {len(notebooks['notebooks'])} notebook examples from their source files.")
     updated = version_downloads(args.site)
     print(f'Updated {updated} document links with file versions.')
 

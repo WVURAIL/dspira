@@ -10,7 +10,7 @@ The observation began at 2017-08-01 09:25:56 and ended the following morning. It
 
 You need `h5py`, `numpy` and `matplotlib`.
 
-**The data file is not in this repository.** The 300 MB HDF5 file remains on Green Bank's systems. The notebook opens it through an absolute path on its original machine:
+**The data file is unavailable.** Its current location has not been confirmed. The notebook opens the original 300 MB HDF5 file through an absolute path:
 
 ```python
 '/home/dspradio/grc_data/2017-08-01_09.25.56_GBTdrift.h5'
@@ -20,14 +20,13 @@ The format matches `hdf5_sink` output, so you can apply these techniques to your
 ...`). For a horn, use `np.arange(flength)*fstep + fstart` instead. Timestamps include a **+12 h correction for that day's clock error**. Several cells select ranges specific to this 19,280-integration file. Read it as a worked example; the noise-diode
 calibration is the part that transfers.
 
-`gbt_rendered_2017.html` preserves the original 2017 run **with its plots**. Read it in any browser without Jupyter. The notebook file itself has cleared outputs.
+Read the [notebook preview](https://wvurail.org/dspira/notebooks/gbt-drift/) without Jupyter. It includes ten plots restored from the original 2017 HTML export. Those plots are also saved in the downloadable notebook. They are historical results, not a fresh execution. `gbt_rendered_2017.html` redirects to the preview.
 
 ## What changed when this moved here
 
-The notebook is unchanged apart from two things.
+The analysis code is preserved, with the plotting backend changed for portability.
 
-**Its outputs were removed.** The original file was **1.35 MB**. About 99% was JavaScript embedded by `%matplotlib notebook` for interactive plot widgets. Those widgets require classic Jupyter Notebook with a live kernel. They display nothing on GitHub, in JupyterLab, or in modern viewers. So the file was over a megabyte of markup that
-displayed no plots. Cleared, it is 13 KB.
+**Static plots replace obsolete widgets.** The original notebook used interactive JavaScript outputs that required classic Jupyter and a live kernel. The restored PNG plots now display in modern notebook viewers. Notebook metadata records their source and explains the missing-data limitation.
 
 **`%matplotlib notebook` is now `%matplotlib inline`.** Running it saves plots into the notebook so they survive sharing. That is the
 change that makes the outputs worth keeping next time.

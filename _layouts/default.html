@@ -16,6 +16,9 @@
    {% endcomment -%}
       {%- assign accessible_content = content | replace: ' role="doc-endnote"', '' | replace: ' role="doc-biblioentry"', '' | replace: ' role="doc-noteref"', '' | replace: 'class="footnote"', 'class="footnote" role="doc-noteref"' -%}
       {% include footnote-links.html html=accessible_content %}
+      {% if content contains 'data-download' %}
+      <noscript><p>To save a GNU Radio file, right-click its download link and choose Save Link As.</p></noscript>
+      {% endif %}
    </main>
    {%- comment -%}
    The Design System's own navigation script, loaded after <main> exactly as
@@ -25,6 +28,9 @@
    lessons.js, is loaded from head.html with defer and stays there.
    {%- endcomment %}
    <script src="{{ '/assets/wvu-design-system/navigation.min.js' | relative_url }}" defer></script>
+   {% if content contains 'data-download' %}
+   <script src="{{ '/assets/js/file-downloads.js' | relative_url }}" defer></script>
+   {% endif %}
    {% include footer.html %}
 </body>
 </html>

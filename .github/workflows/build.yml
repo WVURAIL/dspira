@@ -50,10 +50,16 @@ jobs:
 
       - name: Build
         run: |
+          python3 tools/export_assembly_guides.py --check
+          python3 tools/test_export_assembly_guides.py
           python3 -m pip install --quiet PyMuPDF==1.28.2
+          python3 -m pip install --quiet -r tools/notebook-requirements.txt
           bundle exec jekyll build --trace
           python3 tools/test_publish_assets.py
+          python3 tools/test_publish_hardware.py
+          python3 tools/test_publish_notebooks.py
           python3 tools/publish_assets.py --site _site
+          python3 tools/check_notebook_pages.py --site _site
           python3 tools/check_teaching_documents.py --site _site --style
         env:
           BUNDLE_GEMFILE: ${{ github.workspace }}/Gemfile.ci
@@ -200,27 +206,13 @@ jobs:
           fi
           exit $fail
 
-      # WVU's Common Elements rule: the masthead, the footer contact block
-      # (address, phone, fax, email), and copyright on every page. The layout carries
-      # them, so a page can only lack them by being built outside the layout —
-      # which `layout: null` does, silently. Two pages are, on purpose: the
-      # exported notebooks at /iq/ and /lesson-examples/gbt-drift/gbt_rendered_2017.html,
-      # which tools/check_layout.py already exempts for the same reason (their
-      # inlined Bootstrap 3 would rewrite the shell). The redirect stubs under
-      # /categories/ and /lesson-modules/ are not pages anyone reads.
-      #
-      # One <h1> per page is housekeeping of the same kind: the layout writes
-      # the title as the h1, so a second one is a body that opens with its own
-      # '# Title' — which is what a README rendered as a page does.
+      # The shared layout supplies WVU contact details and one page title.
       - name: WVU common elements on every page
         run: |
           set -euo pipefail
           fail=0
           checked=0
           while IFS= read -r f; do
-            case "$f" in
-              _site/iq/*|_site/lesson-examples/gbt-drift/gbt_rendered_2017.html) continue ;;
-            esac
             if grep -q '<title>Redirecting' "$f"; then continue; fi
             checked=$((checked + 1))
             for want in "favicon-wvu.ico" \
@@ -237,8 +229,7 @@ jobs:
           # A check that found nothing to check would pass for the wrong reason.
           [ "$checked" -ge 60 ] \
             || { echo "::error::only $checked pages checked — did _site build?"; fail=1; }
-          # The exported GBT notebook stays out of the sitemap. Preview builds
-          # separately verify its conditional noindex in the combined site.
+          # The old GBT address is a redirect and stays out of the sitemap.
           if [ ! -s _site/sitemap.xml ] || grep -q 'gbt_rendered_2017\.html' _site/sitemap.xml; then
             echo "::error::_site/sitemap.xml is missing, or still lists gbt_rendered_2017.html — the notebook must retain sitemap: false in its front matter"
             fail=1
@@ -248,9 +239,7 @@ jobs:
       - name: No unrendered Liquid escaped into the output
         run: |
           set -euo pipefail
-          # The exported notebook at /iq/ contains literal braces in its
-          # JavaScript, so it is excluded from this check.
-          if grep -rn '{%\|{{' _site --include='*.html' | grep -v '_site/iq/'; then
+          if grep -rn '{%\|{{' _site --include='*.html'; then
             echo "::error::Found unrendered Liquid tags in the built site"
             exit 1
           fi
@@ -264,6 +253,9 @@ jobs:
       # they depend on people and hosts outside this repository.
       - name: Lesson search and history
         run: node --test tools/test_lesson_filter.js
+
+      - name: Software downloads
+        run: node --test tools/test_file_downloads.js
 
       - name: Heading anchors resolve
         run: python3 tools/check_links.py --offline --fail-on anchors

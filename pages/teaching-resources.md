@@ -7,8 +7,9 @@ lead: Adapt existing materials or create your own with WVU DSPIRA templates.
 meta_description: "Find DSPIRA classroom materials in one teacher download catalog. Print PDFs or adapt editable Word worksheets, guides, and PowerPoint slides for your class."
 ---
 
-Choose a topic below to download materials for your class.
+Choose a topic below to view or download materials for your class.
 Each resource includes a printable PDF and an editable Word or PowerPoint file.
+View PDFs in your browser. Download editable files to adapt them for your class.
 For lesson planning, visit [Teach with DSPIRA]({{ '/teach/' | relative_url }}).
 
 ## Create new materials
@@ -23,8 +24,8 @@ Both use the WVU DSPIRA banner, Arial text, and automatic page or slide numbers.
 {% for template in site.data.teaching_templates %}
 <tr>
 <th scope="row">{{ template.title }}</th>
-<td><a href="{{ template.editable | relative_url }}" download>{{ template.format }} ({{ template.extension }})</a></td>
-<td><a href="{{ template.pdf | relative_url }}" aria-label="Preview the {{ template.title | downcase }} template as PDF">PDF</a></td>
+<td><a href="{{ template.editable | relative_url }}" download="{{ template.editable | split: '/' | last }}" aria-label="Download {{ template.format }}: {{ template.title | escape }}">Download {{ template.format }} ({{ template.extension }})</a></td>
+<td><a href="{{ template.pdf | relative_url }}" aria-label="View PDF: {{ template.title | escape }} template">View PDF</a></td>
 </tr>
 {% endfor %}
 </tbody>
@@ -67,13 +68,13 @@ Keep author credits and check third-party permissions when adapting materials.
 <summary>{{ group.title }} ({{ group.documents | size }})</summary>
 <table>
 <caption class="visually-hidden">{{ group.title }} downloads</caption>
-<thead><tr><th scope="col">Resource</th><th scope="col">Print</th><th scope="col">Edit</th></tr></thead>
+<thead><tr><th scope="col">Resource</th><th scope="col">View</th><th scope="col">Download</th></tr></thead>
 <tbody>
 {% for document in group.documents %}
 <tr>
 <th scope="row">{{ document.title }}</th>
-<td><a href="{{ document.pdf | relative_url }}" aria-label="Download {{ document.title | escape }} as PDF">PDF</a></td>
-<td><a href="{{ document.editable | relative_url }}" aria-label="Edit {{ document.title | escape }} in {{ document.format }}">{{ document.format }}</a></td>
+<td><a href="{{ document.pdf | relative_url }}" aria-label="View PDF: {{ document.title | escape }}">View PDF</a></td>
+<td><a href="{{ document.editable | relative_url }}" download="{{ document.editable | split: '/' | last }}" aria-label="Download {{ document.format }}: {{ document.title | escape }}">Download {{ document.format }}</a></td>
 </tr>
 {% endfor %}
 </tbody>
@@ -84,16 +85,17 @@ Keep author credits and check third-party permissions when adapting materials.
 <details class="teaching-downloads" id="amplifier-assembly">
 <summary>Amplifier assembly ({{ site.data.hardware_documents | size }})</summary>
 <p>Match the guide to your board revision. Circuit drawings retain their original labels and component values.</p>
+<p>View PDFs in your browser or download Word files to adapt the instructions.</p>
 <table>
 <caption class="visually-hidden">Amplifier assembly downloads</caption>
-<thead><tr><th scope="col">Resource</th><th scope="col">Print</th><th scope="col">Edit</th></tr></thead>
+<thead><tr><th scope="col">Resource</th><th scope="col">View</th><th scope="col">Download</th></tr></thead>
 <tbody>
 {% for document in site.data.hardware_documents %}
-{% assign source = 'https://raw.githubusercontent.com/WVURAIL/dspira-hardware/main/' | append: document.path %}
+{% assign source = '/assets/hardware/' | append: document.path %}
 <tr>
 <th scope="row">{{ document.title }}</th>
-<td><a href="{{ source }}.pdf" aria-label="Download {{ document.title | escape }} as PDF">PDF</a></td>
-<td><a href="{{ source }}.docx" aria-label="Edit {{ document.title | escape }} in Word">Word</a></td>
+<td><a href="{{ source | append: '.pdf' | relative_url }}" aria-label="View PDF: {{ document.title | escape }}">View PDF</a></td>
+<td><a href="{{ source | append: '.docx' | relative_url }}" download="{{ document.path | split: '/' | last }}.docx" aria-label="Download Word: {{ document.title | escape }}">Download Word</a></td>
 </tr>
 {% endfor %}
 </tbody>

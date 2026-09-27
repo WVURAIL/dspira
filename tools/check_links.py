@@ -182,7 +182,8 @@ def heading_raw_text(src, baseurl):
 def body_lines(path):
     """(lineno, line) for real body lines: front matter and code fences out."""
     try:
-        lines = open(path, encoding="utf-8", errors="replace").read().split("\n")
+        with open(path, encoding="utf-8", errors="replace") as source:
+            lines = source.read().split("\n")
     except OSError:
         return
     i = 0
@@ -210,8 +211,13 @@ def body_lines(path):
 IAL_ID_RE = re.compile(r"\{:\s*[^}]*#([A-Za-z0-9_.:-]+)[^}]*\}")
 
 
-def anchors_in(path, baseurl="/dspira"):
+def anchors_in(path, baseurl="/dspira", _seen=None):
     """Every fragment this page will answer to."""
+    _seen = set() if _seen is None else _seen
+    absolute = os.path.realpath(path)
+    if absolute in _seen:
+        return set()
+    _seen.add(absolute)
     lines = list(body_lines(path))
     out, counter = set(), {}
     for idx, (_ln, line) in enumerate(lines):
@@ -232,13 +238,20 @@ def anchors_in(path, baseurl="/dspira"):
         counter[base] = n
         out.add(base if n == 0 else "%s-%d" % (base, n))
     try:
-        text = open(path, encoding="utf-8", errors="replace").read()
+        with open(path, encoding="utf-8", errors="replace") as source:
+            text = source.read()
     except OSError:
         return out
     out |= set(IAL_ID_RE.findall(text))                     # {: #custom-id}
     out |= set(re.findall(r"\{#([\w-]+)\}", text))          # older {#id} form
     out |= set(re.findall(r"""<[a-zA-Z][^>]*\sid\s*=\s*["']([^"']+)["']""",
                           text))                            # raw html anchors
+    # Static includes contribute headings only to pages that actually use them.
+    include_root = os.path.realpath("_includes")
+    for name in re.findall(r"\{%\s*include\s+([\w./-]+)\s*%\}", text):
+        included = os.path.realpath(os.path.join(include_root, name))
+        if os.path.commonpath([include_root, included]) == include_root and os.path.isfile(included):
+            out |= anchors_in(included, baseurl, _seen)
     return out
 
 
@@ -333,6 +346,12 @@ def check_url(url):
         except Exception as e:                    # noqa: BLE001
             return "CHECK", f"{type(e).__name__}: {e}"
     return "CHECK", "no response"
+
+
+def published_hardware_exists(path, built_site="_site"):
+    return (path.startswith(("assets/hardware/", "assets/notebooks/"))
+            and ".." not in path.split("/")
+            and os.path.isfile(os.path.join(built_site, path)))
 
 
 def main():
@@ -431,7 +450,7 @@ def main():
                 # time, so the .css the pages link is real even though only
                 # the .scss is in the repo.
                 scss_twin = path.endswith(".css") and os.path.exists(path[:-4] + ".scss")
-                if not os.path.exists(path) and not scss_twin:
+                if not os.path.exists(path) and not scss_twin and not published_hardware_exists(path):
                     assets.append((u, f, line, "file not found"))
             elif path.startswith(".."):
                 internal.append((u, f, line, "relative path escapes the site root"))
