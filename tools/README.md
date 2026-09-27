@@ -1,5 +1,32 @@
 # tools
 
+## Notebook publication
+
+`_data/notebooks.json` lists every published teaching and research notebook.
+Pages use the `notebook` layout, then `publish_assets.py` adds their rendered content and downloads after Jekyll builds.
+Install the renderer before running publication:
+
+```sh
+python3 -m pip install -r tools/notebook-requirements.txt
+bundle exec jekyll build
+python3 tools/publish_assets.py --site _site
+python3 tools/test_publish_notebooks.py
+python3 tools/check_notebook_pages.py --site _site
+```
+
+Teaching sources live in `lesson-examples/`. Edit their `.ipynb` files, retaining plot descriptions in output metadata under `dspira_alt`.
+Research sources stay in `radio-research-software`; each build reads all four from one resolved commit.
+The daily publication check detects research updates as well as hardware updates.
+Notebook publication never executes code. It shows saved outputs when available and labels examples without saved outputs.
+It extracts static plots from older Matplotlib widgets and removes executable notebook HTML.
+The built-page check verifies displayed code, matching downloads, plot descriptions, and section links.
+Generated downloads, plot images, and source checksums live under `_site/assets/notebooks/`.
+Use `--notebook-revision <full-commit-sha>` to reproduce a specific research snapshot.
+
+The I/Q source was recovered from its published HTML, with its 13 original plots.
+The GBT notebook includes ten restored plots from its 2017 export. Its missing HDF5 data still prevents rerunning the observation.
+Both original webpage addresses remain available. Notebook pages use the site's normal layout and the download is the complete source notebook.
+
 ## Assembly instructions
 
 The horn, cradle, and stand webpages include text and original illustrations exported from their teaching Word documents.
@@ -223,25 +250,18 @@ Teachers project these lessons in classrooms. Marginal contrast on a laptop can 
 **A warning worth keeping.** The first version measured every element with a text-node child. This included containers inheriting colors used only by their descendants. It reported 81 of 82 pages
 broken, and every one was wrong. The checker now measures only elements with their own non-whitespace text. `--self-test` covers the earlier mistake.
 
-The corrected first run found five failing color pairs in two exported Jupyter notebooks. All came from the default Pygments palette. Comments measured 4.25:1; string interpolation measured 3.65:1. They are corrected by an
-override block near the top of each of those two files, which explains itself.
+The corrected first run found five failing color pairs in two exported Jupyter notebooks. All came from the default Pygments palette. Current notebook pages use the site's shared typography and accessible code colors in `css/lessons.scss`.
 
 Since the move to the Design System the colours are its own. New failures are more likely to involve utility classes on unsuitable backgrounds, such as `text-wvu-gold` on white. Fix these in the page rather than `css/lessons.scss`.
 
 It does not cover text over images, focus indicators, or anything needing a
 pointer or keyboard. One measurable slice, not the whole of accessibility.
 
-## I/Q notebook export
+## Older I/Q asset addresses
 
-The published I/Q notebook is a static export. Its Bootstrap stylesheet and
-13 unchanged plot images live in `images/iq/`, with their stylesheet at `css/iq-notebook.css`.
-The HTML keeps its text, code samples,
-plot descriptions, MathJax, and accessibility overrides. The unused Jupyter
-widget scripts are omitted.
-
-When updating the export, preserve its metadata, skip link, heading IDs, image
-descriptions, and preview `noindex`. Keep plot files separate so they can load
-on demand. Compare all plots and rerun the layout and contrast checks.
+The old `images/iq/` figures and `css/iq-notebook.css` remain available for existing links.
+The current `/iq/` page is generated from `lesson-examples/iq/iq-quadrature-sampling.ipynb` through notebook publication.
+Update that source instead of editing a separate HTML export.
 
 ## Historical notebook styles
 

@@ -17,10 +17,9 @@ Every measurement a radio telescope makes is a correlation of some kind. A
 single horn correlates a signal with itself; two horns correlate one against
 the other. This lesson explains convolution, autocorrelation, and cross-correlation. It then uses these operations to explain what a two-element interferometer measures.
 
-It was written by **Pranav Sanghavi** at this lab in 2018. Everything here can
-be run yourself: the notebook is at
-[`lesson-examples/interferometry/`](https://github.com/WVURAIL/dspira/tree/main/lesson-examples/interferometry)
-and needs nothing but `numpy`, `scipy` and `matplotlib`.
+It was written by **Pranav Sanghavi** at this lab in 2018.
+[Read the worked notebook]({{ '/notebooks/interferometry/' | relative_url }}) to see its code and plots.
+Download it from that page to run the examples with NumPy, SciPy, and Matplotlib in Jupyter.
 
 <!-- TOC -->
 

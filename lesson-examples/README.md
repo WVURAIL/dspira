@@ -1,11 +1,15 @@
 # Lesson examples
 
 These notebooks and sample datasets accompany the DSPIRA lessons.
+
+[Read all notebook examples on the website](https://wvurail.org/dspira/notebooks/).
+Each page includes the explanations, code, available results, and a notebook download.
 Choose an example, then follow its README for dependencies and instructions.
 
 | Example | What it contains |
 | --- | --- |
 | [GBT drift scan](gbt-drift/) | A worked observation notebook and its original rendered plots |
+| [I/Q sampling](iq/) | Mixing, filtering, and receiver imbalance with thirteen plots |
 | [Correlation and interferometry](interferometry/) | A teaching notebook and the script that generates lesson figures |
 | [Milky Way velocity curve](velocity-curve/) | A sine-fitting notebook and sample measurements |
 

@@ -1,0 +1,130 @@
+[
+  {
+    "id": "iq-quadrature-sampling",
+    "title": "I/Q Quadrature Sampling",
+    "url": "/iq/",
+    "source": "lesson-examples/iq/iq-quadrature-sampling.ipynb",
+    "summary": "Simulate mixing, filtering, and receiver imbalance.",
+    "lesson": "/dsplab-fourier2/",
+    "lesson_title": "Radio astronomy lab",
+    "requirements": "Use Python 3, Jupyter, NumPy, and Matplotlib.",
+    "notes": [
+      "This notebook preserves the code and 13 plots from the original I/Q webpage."
+    ],
+    "group": "Teaching examples"
+  },
+  {
+    "id": "interferometry",
+    "title": "Correlation and Interferometry",
+    "url": "/notebooks/interferometry/",
+    "source": "lesson-examples/interferometry/interferometry.ipynb",
+    "summary": "Explore convolution, autocorrelation, telescope beams, and interferometer fringes.",
+    "lesson": "/correlation-and-interferometry/",
+    "lesson_title": "Correlation and interferometry lesson",
+    "requirements": "Use Python 3, Jupyter, NumPy, SciPy, and Matplotlib. No telescope or external data is needed.",
+    "notes": [
+      "Pranav Sanghavi wrote the original material in 2018. The notebook was updated for Python 3 in 2026."
+    ],
+    "group": "Teaching examples"
+  },
+  {
+    "id": "velocity-curve",
+    "title": "Galactic Velocity Curve Fit",
+    "url": "/notebooks/velocity-curve/",
+    "source": "lesson-examples/velocity-curve/galactic_plane_sine_fit.ipynb",
+    "summary": "Fit a sine curve to measured velocities and galactic longitudes.",
+    "lesson": "/Astronomy_VelocityCurve_Overview",
+    "lesson_title": "Milky Way velocity curve lesson",
+    "requirements": "Use Python 3, Jupyter, NumPy, SciPy, and Matplotlib. Download the sample CSV alongside the notebook.",
+    "data": "/lesson-examples/velocity-curve/quadrants_ii_iii_velocity_vs_longitude.csv",
+    "notes": [
+      "The example uses sample measurements. Replace the CSV rows with your own observations to repeat the analysis."
+    ],
+    "group": "Teaching examples"
+  },
+  {
+    "id": "gbt-drift",
+    "title": "Green Bank Telescope Drift Scan",
+    "url": "/notebooks/gbt-drift/",
+    "source": "lesson-examples/gbt-drift/gbt_drift_scan.ipynb",
+    "summary": "Read the 2017 observation and its ten preserved plots.",
+    "lesson": "/Observations/",
+    "lesson_title": "Observation and analysis lesson",
+    "requirements": "Use Python 3, Jupyter, NumPy, Matplotlib, and h5py. The original HDF5 dataset is unavailable.",
+    "notes": [
+      "The ten plots shown here come from the original 2017 run. They have not been recomputed.",
+      "The original HDF5 dataset is missing, so this notebook cannot currently be rerun as supplied.",
+      "Frequency conversion, clock correction, and integration ranges are specific to the GBT observation. Adapt them before analyzing another dataset."
+    ],
+    "group": "Teaching examples"
+  },
+  {
+    "id": "pulsar-simulation",
+    "title": "Pulsar Simulation",
+    "url": "/notebooks/pulsar-simulation/",
+    "repository": "WVURAIL/radio-research-software",
+    "source": "examples/transients/pulsar-simulation.ipynb",
+    "summary": "Generate a pulse, disperse it, and explore a dispersion-measure search.",
+    "lesson": "/research-examples/",
+    "lesson_title": "Research examples and data",
+    "requirements": "Use Python 3, Jupyter, NumPy, SciPy, and Matplotlib. Review older APIs and local file paths before running.",
+    "notes": [
+      "Andrew Dyck developed these research examples in 2019. Project setup and documentation were provided by Pranav Sanghavi.",
+      "The full simulation can allocate large arrays. Its scientific methods and results have not been independently validated."
+    ],
+    "group": "Research examples"
+  },
+  {
+    "id": "pulsar-background-comparison",
+    "title": "Pulsar Background Comparison",
+    "url": "/notebooks/pulsar-background-comparison/",
+    "repository": "WVURAIL/radio-research-software",
+    "source": "examples/transients/pulsar-background-comparison.ipynb",
+    "summary": "Compare an alternative background subtraction and correlation method.",
+    "lesson": "/research-examples/",
+    "lesson_title": "Research examples and data",
+    "requirements": "Use Python 3, Jupyter, NumPy, SciPy, and Matplotlib. Review older APIs and local file paths before running.",
+    "notes": [
+      "Andrew Dyck developed these research examples in 2019. Project setup and documentation were provided by Pranav Sanghavi.",
+      "The full simulation can allocate large arrays. Its scientific methods and results have not been independently validated."
+    ],
+    "group": "Research examples"
+  },
+  {
+    "id": "pulsar-search-development",
+    "title": "Pulsar Search Development",
+    "url": "/notebooks/pulsar-search-development/",
+    "repository": "WVURAIL/radio-research-software",
+    "source": "examples/transients/pulsar-search-development.ipynb",
+    "summary": "Read earlier peak-search and averaging experiments.",
+    "lesson": "/research-examples/",
+    "lesson_title": "Research examples and data",
+    "requirements": "Use Python 3, Jupyter, NumPy, SciPy, and Matplotlib. Review older APIs and local file paths before running.",
+    "notes": [
+      "Andrew Dyck developed these research examples in 2019. Project setup and documentation were provided by Pranav Sanghavi.",
+      "The full simulation can allocate large arrays. Its scientific methods and results have not been independently validated."
+    ],
+    "group": "Research examples"
+  },
+  {
+    "id": "bench-development",
+    "title": "Bench Data Comparison",
+    "url": "/notebooks/bench-development/",
+    "repository": "WVURAIL/radio-research-software",
+    "source": "examples/transients/bench/bench-development.ipynb",
+    "summary": "Inspect an older comparison of Python and GNU Radio recordings.",
+    "lesson": "/research-examples/",
+    "lesson_title": "Research examples and data",
+    "requirements": "Use Python 3, Jupyter, NumPy, SciPy, and Matplotlib. Review older APIs and local file paths before running.",
+    "notes": [
+      "Andrew Dyck developed these research examples in 2019. Project setup and documentation were provided by Pranav Sanghavi.",
+      "This bench notebook references unavailable local recordings and older SciPy APIs. It cannot currently run as supplied.",
+      "The preview includes the original saved results. These results have not been reproduced with the missing recordings."
+    ],
+    "plot_descriptions": [
+      "First 10,000 samples from the original Python recording, plotted by sample index.",
+      "Original GNU Radio recording shown in reverse sample order, plotted by sample index."
+    ],
+    "group": "Research examples"
+  }
+]

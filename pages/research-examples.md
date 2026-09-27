@@ -13,15 +13,18 @@ They live in `radio-research-software`, alongside the research applications.
 
 ## Read a notebook
 
-These links open readable notebook previews on GitHub.
-To run a notebook yourself, use its **Download raw file** button and open the downloaded file in Jupyter.
+Read each notebook directly on DSPIRA. Each page includes a download for opening the example in Jupyter.
 
-- [Pulsar simulation (Jupyter notebook)](https://github.com/WVURAIL/radio-research-software/blob/main/examples/transients/pulsar-simulation.ipynb)
-- [Alternative background comparison (Jupyter notebook)](https://github.com/WVURAIL/radio-research-software/blob/main/examples/transients/pulsar-background-comparison.ipynb)
-- [Earlier peak-search development (Jupyter notebook)](https://github.com/WVURAIL/radio-research-software/blob/main/examples/transients/pulsar-search-development.ipynb)
+- [Pulsar simulation]({{ '/notebooks/pulsar-simulation/' | relative_url }})
+- [Alternative background comparison]({{ '/notebooks/pulsar-background-comparison/' | relative_url }})
+- [Earlier peak-search development]({{ '/notebooks/pulsar-search-development/' | relative_url }})
+- [Bench data comparison]({{ '/notebooks/bench-development/' | relative_url }})
+
+The [notebook catalog]({{ '/notebooks/' | relative_url }}) also includes the classroom examples.
 
 Use Python 3, Jupyter, NumPy, SciPy, and Matplotlib.
-Generated outputs use a local folder. Saved notebook outputs were cleared during migration.
+Generated outputs use a local folder. The three pulsar notebooks have no saved outputs.
+The bench comparison retains its original results but requires unavailable recordings.
 Full simulations can require substantial memory. Their algorithms and scientific results have not been validated by this move.
 
 ## Reference datasets

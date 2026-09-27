@@ -349,7 +349,7 @@ def check_url(url):
 
 
 def published_hardware_exists(path, built_site="_site"):
-    return (path.startswith("assets/hardware/")
+    return (path.startswith(("assets/hardware/", "assets/notebooks/"))
             and ".." not in path.split("/")
             and os.path.isfile(os.path.join(built_site, path)))
 

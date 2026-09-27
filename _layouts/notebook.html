@@ -1,0 +1,24 @@
+---
+layout: page
+---
+{% assign example = site.data.notebooks | where: 'id', page.notebook | first %}
+<nav aria-label="Notebook navigation" class="mb-4">
+  <a href="{{ '/notebooks/' | relative_url }}">All notebook examples</a>
+  {% if example.lesson %} · <a href="{{ example.lesson | relative_url }}">{{ example.lesson_title }}</a>{% endif %}
+</nav>
+<p>Read the explanations, code, and available results below. Code does not run on this page.</p>
+<p><a class="btn btn-wvu-blue" href="{{ '/assets/notebooks/' | append: example.id | append: '/' | append: example.id | append: '.ipynb' | relative_url }}" download="{{ example.id }}.ipynb">Download notebook</a></p>
+{% for note in example.notes %}<p>{{ note }}</p>{% endfor %}
+{% if example.data %}<p><a href="{{ example.data | relative_url }}" download="{{ example.data | split: '/' | last }}">Download sample data (CSV)</a>. Keep this file beside the notebook.</p>{% endif %}
+<details class="lesson-plan mb-4">
+  <summary>Run this notebook yourself</summary>
+  <p>{{ example.requirements }}</p>
+  <p>Download the notebook and open it in Jupyter. Review its code and data requirements before running the cells.</p>
+  <p><a href="{% if example.repository %}https://github.com/{{ example.repository }}/blob/main/{{ example.source }}{% else %}https://github.com/WVURAIL/dspira/blob/main/{{ example.source }}{% endif %}">Source and revision history</a></p>
+</details>
+{{ content }}
+<div class="notebook-example">
+<!-- notebook:{{ example.id }}:start -->
+<p>The notebook preview is added during publication.</p>
+<!-- notebook:{{ example.id }}:end -->
+</div>

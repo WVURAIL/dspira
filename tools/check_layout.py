@@ -58,16 +58,7 @@ import time
 
 # Pages with a known, accepted overflow. Anything listed here is NOT checked, so
 # keep the list short and say why each one is on it.
-ALLOW = {
-    # Two Jupyter notebooks exported by nbconvert, each carrying its own inlined
-    # copy of Bootstrap 3. Bootstrap's .container uses negative margins that
-    # overhang by 8px at tablet widths. Both pages are deliberately served
-    # outside the site layout — their Bootstrap would otherwise rewrite the
-    # header, footer and every button — so this is theirs to have, and fixing it
-    # would mean editing generated output that gets regenerated.
-    "/iq/index.html": "inlined Bootstrap 3 container, 8px at ~768px",
-    "/lesson-examples/gbt-drift/gbt_rendered_2017.html": "inlined Bootstrap 3 container, 8px at ~768px",
-}
+ALLOW = {}
 
 # Every page gets these. Real phones, tablets and laptops.
 COARSE = (320, 360, 390, 414, 768, 1024, 1280, 1440)

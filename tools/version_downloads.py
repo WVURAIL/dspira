@@ -5,7 +5,7 @@ from html.parser import HTMLParser
 import re
 from urllib.parse import parse_qsl, unquote, urlencode, urljoin, urlsplit, urlunsplit
 
-FORMATS = {'.pdf', '.docx', '.pptx', '.dotx', '.potx'}
+FORMATS = {'.pdf', '.docx', '.pptx', '.dotx', '.potx', '.ipynb', '.csv'}
 ATTRIBUTE = re.compile(r'''([^\s=<>/]+)\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))''', re.S)
 
 

@@ -19,6 +19,8 @@ jobs:
     outputs:
       publish: ${{ steps.hardware.outputs.publish }}
       hardware_revision: ${{ steps.hardware.outputs.revision }}
+      notebooks_publish: ${{ steps.notebooks.outputs.publish }}
+      notebook_revision: ${{ steps.notebooks.outputs.revision }}
     steps:
       - uses: actions/checkout@v5
         with:
@@ -36,9 +38,20 @@ jobs:
           else
             python3 tools/publish_hardware.py >> "$GITHUB_OUTPUT"
           fi
+      - name: Check for updated research notebooks
+        id: notebooks
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          if [ "$GITHUB_EVENT_NAME" = schedule ]; then
+            published_url=$(ruby -ryaml -e 'c = YAML.load_file("_config.yml"); puts "#{c.fetch("url")}#{c.fetch("baseurl", "")}/assets/notebooks/source.json"')
+            python3 tools/publish_notebooks.py --published-url "$published_url" >> "$GITHUB_OUTPUT"
+          else
+            python3 tools/publish_notebooks.py >> "$GITHUB_OUTPUT"
+          fi
   build:
     needs: publication
-    if: needs.publication.outputs.publish == 'true'
+    if: needs.publication.outputs.publish == 'true' || needs.publication.outputs.notebooks_publish == 'true'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
@@ -64,10 +77,13 @@ jobs:
         run: |
           python3 tools/export_assembly_guides.py --check
           python3 -m pip install --quiet PyMuPDF==1.28.2
+          python3 -m pip install --quiet -r tools/notebook-requirements.txt
           bundle exec jekyll build --trace -d ../_site
           python3 tools/test_publish_assets.py
           python3 tools/test_publish_hardware.py
-          python3 tools/publish_assets.py --site ../_site --hardware-revision '${{ needs.publication.outputs.hardware_revision }}'
+          python3 tools/test_publish_notebooks.py
+          python3 tools/publish_assets.py --site ../_site --hardware-revision '${{ needs.publication.outputs.hardware_revision }}' --notebook-revision '${{ needs.publication.outputs.notebook_revision }}'
+          python3 tools/check_notebook_pages.py --site ../_site
           python3 tools/check_teaching_documents.py --site ../_site --style
         env:
           BUNDLE_GEMFILE: ${{ github.workspace }}/Gemfile.ci

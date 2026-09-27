@@ -23,6 +23,9 @@ Find all [printable and editable teaching materials]({{ '/teaching-resources/' |
 Download Word files for worksheets and guides, or PowerPoint files for presentations.
 Lesson pages link directly to the printable PDFs.
 
+Browse [notebook examples]({{ '/notebooks/' | relative_url }}) for Python code and saved plots.
+Download a notebook from its preview page to adapt it for your class.
+
 ## Prepare for class
 
 Open **Equipment and preparation** near the top of each lesson for activity-specific requirements.
