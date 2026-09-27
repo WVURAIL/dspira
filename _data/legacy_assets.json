@@ -11,11 +11,8 @@
     {
       "legacy": "FilesUploaded/2Horn_AddingInterferometry_LightWorkMemo31.pdf",
       "original_sha256": "7f8210d81c3075e97d1b698631aefff53dbe7334972adf75847fa51c5ac42bb6",
-      "url": "https://raw.githubusercontent.com/WVURAIL/dspira/08b58638e1c3b65e5512f0547b32cd48172afde3/FilesUploaded/2Horn_AddingInterferometry_LightWorkMemo31.pdf",
       "canonical": "/lightwork/memos/memo-031.pdf",
-      "owner": "lightwork",
-      "destination": "memos/memo-031.pdf",
-      "sha256": "7f8210d81c3075e97d1b698631aefff53dbe7334972adf75847fa51c5ac42bb6"
+      "source": "assets/retired/lightwork-memo-031.pdf"
     },
     {
       "legacy": "FilesUploaded/APPhysics_AstroLesson7_GalacticPlaneObservation2_2019.pdf",
@@ -180,9 +177,8 @@
     {
       "legacy": "FilesUploaded/HornTelescopeEquipmentList.pdf",
       "original_sha256": "d7bd14f3af99cc6002092c889ee7f1944632637f0a110d87839419eb589cc5f2",
-      "url": "https://raw.githubusercontent.com/WVURAIL/dspira/303f0f990e43876bc0b5fb71937be9a823b8c622/assets/lessons/telescope-setup/equipment-list.pdf",
-      "sha256": "d7bd14f3af99cc6002092c889ee7f1944632637f0a110d87839419eb589cc5f2",
-      "canonical": "/dspira/Telescope_Setup"
+      "canonical": "/dspira/Telescope_Setup",
+      "source": "assets/retired/telescope-setup.pdf"
     },
     {
       "legacy": "FilesUploaded/HornTelescope_Design.pdf",
@@ -197,20 +193,20 @@
     {
       "legacy": "FilesUploaded/LNA_OrderingParts_Info_3.pdf",
       "original_sha256": "f622e8468a4eb107a2af36c9d5368ef49414f8c4637ab630ef4f5720ee5fc580",
-      "url": "https://raw.githubusercontent.com/WVURAIL/dspira-hardware/c5d7183aa82e18bc99f4c48ef9b36f4e5ba9a3a4/assembly/reference/parts-guide-v3.pdf",
+      "url": "https://raw.githubusercontent.com/WVURAIL/dspira-hardware/32f40e1740121dbb60b928fdaa8bc0b3a43ba8d0/assembly/reference/parts-guide-v3.pdf",
       "canonical": "https://raw.githubusercontent.com/WVURAIL/dspira-hardware/main/assembly/reference/parts-guide-v3.pdf",
       "owner": "dspira-hardware",
       "destination": "assembly/reference/parts-guide-v3.pdf",
-      "sha256": "d394f0b7dc02b821cf58ec921a64afe5e1f9feda6993a3ce4c5462c7e7cf4ed9"
+      "sha256": "e090358576ababf40f33f436c04622475913cc6703616047270fc15cb0eec543"
     },
     {
       "legacy": "FilesUploaded/LNA_OrderingParts_Info_4.pdf",
       "original_sha256": "e2c175601ffa5437e47fb3d63b55955f4c29b6ab902efc445f3b73e63bb8133a",
-      "url": "https://raw.githubusercontent.com/WVURAIL/dspira-hardware/c5d7183aa82e18bc99f4c48ef9b36f4e5ba9a3a4/assembly/parts-guide-v4.pdf",
+      "url": "https://raw.githubusercontent.com/WVURAIL/dspira-hardware/32f40e1740121dbb60b928fdaa8bc0b3a43ba8d0/assembly/parts-guide-v4.pdf",
       "canonical": "https://raw.githubusercontent.com/WVURAIL/dspira-hardware/main/assembly/parts-guide-v4.pdf",
       "owner": "dspira-hardware",
       "destination": "assembly/parts-guide-v4.pdf",
-      "sha256": "02d8f5776ed43508339c34636e224bf35444c7abb14731fbed79ed28b9e1102e"
+      "sha256": "6c99dacc15ea08c0d90b66f8e4aef24983149fd8ca566fa5b415a24d690ed2f8"
     },
     {
       "legacy": "FilesUploaded/MiniHorn_construction.pdf",
@@ -220,18 +216,17 @@
     {
       "legacy": "FilesUploaded/Neutral_Hydrogen_amplifier_v3.pdf",
       "original_sha256": "8b4081ee1e8e29a31c9a83db934db9618bfc6303b23959cf55ecda3a36282a49",
-      "url": "https://raw.githubusercontent.com/WVURAIL/dspira-hardware/c61eb7a74ab0a659dc0ce6df278c01334b64485a/Neutral_Hydrogen_amplifier_v3.pdf",
+      "url": "https://raw.githubusercontent.com/WVURAIL/dspira-hardware/32f40e1740121dbb60b928fdaa8bc0b3a43ba8d0/design/amplifier-v3.pdf",
       "canonical": "https://raw.githubusercontent.com/WVURAIL/dspira-hardware/main/design/amplifier-v3.pdf",
       "owner": "dspira-hardware",
       "destination": "design/amplifier-v3.pdf",
-      "sha256": "8b4081ee1e8e29a31c9a83db934db9618bfc6303b23959cf55ecda3a36282a49"
+      "sha256": "3f41c51d17e039ce41ccf8bf3bc2ebaef2fe4b79ecce7d88af1acca64c8a6501"
     },
     {
       "legacy": "FilesUploaded/SettingUp_2 Horn_Interferometer.pdf",
       "original_sha256": "7997e1cc124e07418a94b97ff1ab050b17b7c66885c30b49c4f25684a431e775",
-      "url": "https://raw.githubusercontent.com/WVURAIL/dspira/303f0f990e43876bc0b5fb71937be9a823b8c622/assets/lessons/two-horn-interferometer/setup-guide.pdf",
-      "sha256": "7997e1cc124e07418a94b97ff1ab050b17b7c66885c30b49c4f25684a431e775",
-      "canonical": "/dspira/SettingUp2HornInterferometer"
+      "canonical": "/dspira/SettingUp2HornInterferometer",
+      "source": "assets/retired/two-horn-interferometer.pdf"
     },
     {
       "legacy": "FilesUploaded/Stand_Assembly_2021.pdf",
@@ -286,7 +281,7 @@
     {
       "legacy": "FilesUploaded/circuit board componet locations Final1.jpg",
       "original_sha256": "f1f98a2294991c817ea7709a7abc263483538eb96f72bc13c9cc5407db4018a0",
-      "url": "https://raw.githubusercontent.com/WVURAIL/dspira-hardware/c61eb7a74ab0a659dc0ce6df278c01334b64485a/docs/assembly/component-locations.jpg",
+      "url": "https://raw.githubusercontent.com/WVURAIL/dspira-hardware/32f40e1740121dbb60b928fdaa8bc0b3a43ba8d0/assembly/component-locations.jpg",
       "canonical": "https://raw.githubusercontent.com/WVURAIL/dspira-hardware/main/assembly/component-locations.jpg",
       "owner": "dspira-hardware",
       "destination": "assembly/component-locations.jpg",
@@ -1845,15 +1840,13 @@
     },
     {
       "legacy": "assets/lessons/telescope-setup/equipment-list.pdf",
-      "url": "https://raw.githubusercontent.com/WVURAIL/dspira/303f0f990e43876bc0b5fb71937be9a823b8c622/assets/lessons/telescope-setup/equipment-list.pdf",
-      "sha256": "d7bd14f3af99cc6002092c889ee7f1944632637f0a110d87839419eb589cc5f2",
-      "canonical": "/dspira/Telescope_Setup"
+      "canonical": "/dspira/Telescope_Setup",
+      "source": "assets/retired/telescope-setup.pdf"
     },
     {
       "legacy": "assets/lessons/two-horn-interferometer/setup-guide.pdf",
-      "url": "https://raw.githubusercontent.com/WVURAIL/dspira/303f0f990e43876bc0b5fb71937be9a823b8c622/assets/lessons/two-horn-interferometer/setup-guide.pdf",
-      "sha256": "7997e1cc124e07418a94b97ff1ab050b17b7c66885c30b49c4f25684a431e775",
-      "canonical": "/dspira/SettingUp2HornInterferometer"
+      "canonical": "/dspira/SettingUp2HornInterferometer",
+      "source": "assets/retired/two-horn-interferometer.pdf"
     },
     {
       "legacy": "images/astronomy/frequency-versus-radial-velocity.pdf",
@@ -1862,6 +1855,14 @@
     {
       "legacy": "images/astronomy/galactic-rotation.pdf",
       "source": "assets/lessons/astronomy-figures/galactic-rotation.pdf"
+    },
+    {
+      "legacy": "assets/lessons/telescope-research/public-use-poster.pdf",
+      "source": "assets/lessons/telescope-research/public-use-report.pdf"
+    },
+    {
+      "legacy": "assets/lessons/telescope-research/public-use-poster.pptx",
+      "source": "assets/retired/public-use-poster.pptx"
     }
   ]
 }

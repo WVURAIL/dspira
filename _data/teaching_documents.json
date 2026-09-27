@@ -416,12 +416,6 @@
         "pdf": "/assets/lessons/telescope-research/public-use-report.pdf",
         "editable": "/assets/lessons/telescope-research/public-use-report.docx",
         "format": "Word"
-      },
-      {
-        "title": "Telescope public use study poster",
-        "pdf": "/assets/lessons/telescope-research/public-use-poster.pdf",
-        "editable": "/assets/lessons/telescope-research/public-use-poster.pptx",
-        "format": "PowerPoint"
       }
     ]
   },

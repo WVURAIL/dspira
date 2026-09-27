@@ -41,16 +41,52 @@ def check_template(package, path, part, word_document):
 
 def check_word_style(package, path):
     styles = ET.fromstring(package.read('word/styles.xml'))
-    normal = next(s for s in styles.findall('w:style', W)
-                  if s.get(f"{{{W['w']}}}styleId") == 'Normal')
-    font = normal.find('w:rPr/w:rFonts', W)
-    assert font is not None and font.get(f"{{{W['w']}}}ascii") == 'Arial', f'{path}: body font must be Arial'
+    by_id = {style.get(f"{{{W['w']}}}styleId"): style for style in styles.findall('w:style', W)}
+
+    def inherited(style_id, element, attribute):
+        visited = set()
+        while style_id and style_id not in visited:
+            visited.add(style_id)
+            style = by_id.get(style_id)
+            assert style is not None, f'{path}: unknown style {style_id}'
+            node = style.find(f'w:rPr/w:{element}', W)
+            if node is not None and node.get(f"{{{W['w']}}}{attribute}") is not None:
+                return node.get(f"{{{W['w']}}}{attribute}")
+            parent = style.find('w:basedOn', W)
+            style_id = parent.get(f"{{{W['w']}}}val") if parent is not None else None
+        node = styles.find(f'w:docDefaults/w:rPrDefault/w:rPr/w:{element}', W)
+        return node.get(f"{{{W['w']}}}{attribute}") if node is not None else None
+
+    assert inherited('Normal', 'rFonts', 'ascii') == 'Arial', f'{path}: body font must be Arial'
+    for style_id, size in (('Normal', 22), ('Title', 48), ('Heading1', 30), ('Heading2', 24)):
+        assert inherited(style_id, 'sz', 'val') == str(size), (
+            f'{path}: {style_id} must use the lesson template size')
     for name in package.namelist():
         if not name.startswith('word/') or not name.endswith('.xml'):
             continue
         for font in ET.fromstring(package.read(name)).iter(f"{{{W['w']}}}rFonts"):
             if font.get(f"{{{W['w']}}}ascii") == 'Arial':
                 assert not any('theme' in key.lower() for key in font.attrib), f'{path}: theme overrides Arial'
+
+
+def check_slide_style(package, path):
+    ns = {'p': 'http://schemas.openxmlformats.org/presentationml/2006/main',
+          'a': 'http://schemas.openxmlformats.org/drawingml/2006/main'}
+    presentation = ET.fromstring(package.read('ppt/presentation.xml'))
+    size = presentation.find('p:sldSz', ns)
+    assert size is not None and (size.get('cx'), size.get('cy')) == ('12192000', '6858000'), (
+        f'{path}: slides must use the widescreen teaching template')
+    masters = [ET.fromstring(package.read(name)) for name in package.namelist()
+               if re.fullmatch(r'ppt/slideMasters/slideMaster\d+\.xml', name)]
+    assert len(masters) == 1, f'{path}: unexpected extra slide master'
+    assert 'WVU DSPIRA' in ''.join(masters[0].itertext()), f'{path}: missing branded master'
+    assert masters[0].find('.//a:fld[@type="slidenum"]', ns) is not None, f'{path}: missing slide number'
+    layouts = {ET.fromstring(package.read(name)).find('p:cSld', ns).get('name')
+               for name in package.namelist()
+               if re.fullmatch(r'ppt/slideLayouts/slideLayout\d+\.xml', name)}
+    expected = {'Lesson title', 'Question and goals', 'Explanation and figure',
+                'Activity steps', 'Data or visual', 'Discussion and reflection'}
+    assert expected <= layouts, f'{path}: missing reusable teacher layouts'
 
 
 def check_pdf_style(path, word_document):
@@ -64,7 +100,7 @@ def check_pdf_style(path, word_document):
             assert 'WVU DSPIRA' in text, f'{path}, page {page.number + 1}: missing header'
             spans = [span for block in page.get_text('dict', clip=header)['blocks']
                      for line in block.get('lines', []) for span in line['spans']]
-            brand = [span for span in spans if span['text'].strip() == 'WVU DSPIRA']
+            brand = [span for span in spans if ' '.join(span['text'].split()) == 'WVU DSPIRA']
             assert len(brand) == 1 and brand[0]['size'] >= 15.5 and brand[0]['color'] == 0xffffff, (
                 f'{path}, page {page.number + 1}: header must use prominent white lettering')
             assert 'WEST VIRGINIA UNIVERSITY' in text, f'{path}, page {page.number + 1}: missing university name'
@@ -132,6 +168,8 @@ def main():
                 assert part in package.namelist() and package.testzip() is None, editable
                 if word_document:
                     check_word_style(package, editable)
+                else:
+                    check_slide_style(package, editable)
                 if extension in ('.dotx', '.potx'):
                     check_template(package, editable, part, word_document)
             if args.style:

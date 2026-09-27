@@ -8,7 +8,7 @@ tags: ['School-Teachers', 'Students', 'Hobbyists']
 categories: ['Community Labs']
 order: 2
 meta_description: "Read about a WVU student project that tested the DSPIRA horn telescope against published measurements to assess its use outside the classroom."
-equipment: "A browser for the research poster and video. Repeating the analysis requires calibrated observations and the comparison references."
+equipment: "A browser for the research report and video. Repeating the analysis requires calibrated observations and the comparison references."
 preparation: "Read this as an optional project example. Review calibration and hydrogen measurements before adapting the analysis."
 optional: true
 ---
@@ -21,7 +21,6 @@ either the sky is odd or the telescope is, and it is worth knowing which.
 [The poster](https://undergraduateresearch.wvu.edu/symposia/summer-2021/-poster-presentations/physical-sciences-poster-presentations-99-117/past-symposia/testing-the-effectiveness-of-the-dspira-radio-telescope-for-public-use){: .btn .btn-wvu-blue}
 [The talk (video)](#video-LJhsqkWALcc)
 [Study report (PDF)]({{ site.baseurl }}/assets/lessons/telescope-research/public-use-report.pdf){: .btn .btn-wvu-blue}
-[Research poster (PDF)]({{ site.baseurl }}/assets/lessons/telescope-research/public-use-poster.pdf){: .btn .btn-wvu-blue}
 
 <figure class="lesson-video" id="video-LJhsqkWALcc">
 {% include youtube.html title="WVU SURE Symposium -- Testing the Effectiveness of the DSPIRA Radio Telescope for Public Use" url="https://www.youtube.com/watch?v=LJhsqkWALcc" video="LJhsqkWALcc" %}

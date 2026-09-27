@@ -56,11 +56,13 @@ When retiring a duplicate PDF, preserve its old download addresses in `_data/leg
 
 Publish a PDF beside every teaching document. Keep Word files for worksheets and guides, and PowerPoint files for slides.
 Use matching filenames, such as `worksheet.docx` and `worksheet.pdf`.
-Start from an existing resource in the [teaching catalog](https://wvurail.org/dspira/teaching-resources/).
+Start from the Word or PowerPoint template in the [teaching catalog](https://wvurail.org/dspira/teaching-resources/).
 
 - Use Arial for body text and headings, preserving specialist math fonts where needed.
 - Use a WVU DSPIRA header and a footer with the site address and page number.
-- Set handouts to US Letter with 0.75-inch margins and 11-point body text.
+- Use the Word template's page setup, 11-point body text, and built-in heading styles.
+- Use the PowerPoint template's widescreen layouts, title styles, and branded slide master.
+- Preserve the physical dimensions of printable models and technical drawings.
 - Use actual headings, lists, and tables. Keep directions and response areas editable.
 - Keep author credits, citations, image descriptions, and source notices.
 - Export the PDF from the editable source after each change. Check every page for clipped text and broken equations.
@@ -70,6 +72,8 @@ Start from an existing resource in the [teaching catalog](https://wvurail.org/ds
 
 The PDF is the printing copy. Update the editable file first so both versions stay synchronized.
 Some legacy diagrams remain images. Retain those figures when adapting the surrounding text.
+Original diagram labels, equations, and credited source figures may retain their specialist typography.
+Do not place a banner over an old page layout as a substitute for applying the template.
 
 ## Review and publication
 
