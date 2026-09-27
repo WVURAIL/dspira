@@ -5,6 +5,7 @@ import tempfile
 import unittest
 
 from publish_assets import publish
+from version_downloads import version_downloads
 
 
 class AssetPublishingTests(unittest.TestCase):
@@ -60,6 +61,61 @@ class AssetPublishingTests(unittest.TestCase):
             publish(self.site, {'files': [entry]}, fetch=lambda url: b'changed')
         with self.assertRaisesRegex(ValueError, 'pinned GitHub revision'):
             publish(self.site, {'files': [dict(entry, url=entry['url'].replace('a' * 40, 'main'))]})
+
+
+class DownloadVersionTests(unittest.TestCase):
+    def setUp(self):
+        self.temporary = tempfile.TemporaryDirectory()
+        self.addCleanup(self.temporary.cleanup)
+        self.site = Path(self.temporary.name)
+        (self.site / 'assets').mkdir()
+        self.pdf = self.site / 'assets/Lesson sheet.pdf'
+        self.pdf.write_bytes(b'%PDF current lesson')
+        self.index = self.site / 'index.html'
+        self.index.write_text('<link rel="canonical" href="https://wvurail.org/dspira/">')
+        (self.site / 'lesson').mkdir()
+        self.page = self.site / 'lesson/index.html'
+        self.head = '<link href="https://wvurail.org/dspira/lesson/" rel="canonical">'
+
+    def test_changed_files_get_new_versions_without_losing_queries_or_fragments(self):
+        self.page.write_text(self.head + '<a href="../assets/Lesson%20sheet.pdf?download=1&amp;v=old#page=2">PDF</a>')
+        self.assertEqual(version_downloads(self.site), 1)
+        first = hashlib.sha256(self.pdf.read_bytes()).hexdigest()[:12]
+        self.assertIn('?download=1&amp;v=' + first + '#page=2', self.page.read_text())
+        self.assertEqual(version_downloads(self.site), 0)
+        self.pdf.write_bytes(b'%PDF revised lesson')
+        self.assertEqual(version_downloads(self.site), 1)
+        self.assertNotIn(first, self.page.read_text())
+
+    def test_external_sibling_missing_and_non_document_links_stay_unchanged(self):
+        body = ''.join('<a href="' + url + '">link</a>' for url in (
+            'https://example.org/dspira/assets/Lesson%20sheet.pdf',
+            '/lightwork/paper.pdf', '/dspira/assets/missing.pdf',
+            '/dspira/assets/picture.png', 'mailto:rail@wvu.edu', '#page=2'))
+        self.page.write_text(self.head + body)
+        self.assertEqual(version_downloads(self.site), 0)
+        self.assertEqual(self.page.read_text(), self.head + body)
+
+    def test_root_absolute_and_embedded_downloads_use_same_file_version(self):
+        self.page.write_text(self.head +
+            '<a href="/dspira/assets/Lesson%20sheet.pdf">PDF</a>' +
+            "<iframe src='https://wvurail.org/dspira/assets/Lesson%20sheet.pdf#page=3'></iframe>")
+        self.assertEqual(version_downloads(self.site), 2)
+        digest = hashlib.sha256(self.pdf.read_bytes()).hexdigest()[:12]
+        self.assertEqual(self.page.read_text().count('v=' + digest), 2)
+        self.assertIn('#page=3', self.page.read_text())
+
+    def test_only_the_actual_link_attribute_changes(self):
+        self.page.write_text(self.head +
+            '<a data-href="keep.pdf" title="href=keep.pdf" href=/dspira/assets/Lesson%20sheet.pdf>PDF</a>')
+        self.assertEqual(version_downloads(self.site), 1)
+        digest = hashlib.sha256(self.pdf.read_bytes()).hexdigest()[:12]
+        self.assertIn('data-href="keep.pdf" title="href=keep.pdf"', self.page.read_text())
+        self.assertIn('href="/dspira/assets/Lesson%20sheet.pdf?v=' + digest + '">', self.page.read_text())
+
+    def test_encoded_traversal_cannot_read_files_outside_the_published_site(self):
+        self.page.write_text(self.head + '<a href="/dspira/%2e%2e/outside.pdf">PDF</a>')
+        self.assertEqual(version_downloads(self.site), 0)
 
 
 if __name__ == '__main__':

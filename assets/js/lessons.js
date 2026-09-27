@@ -4,51 +4,10 @@
    System's own: its navigation script (loaded by the layout, after <main>)
    looks for .js-wvu-site-nav-toggle and .js-wvu-site-nav-items, toggles
    is-opened and aria-expanded, swaps "Open Menu" / "Close Menu", and closes
-   on Escape. What remains here is the three things the Design System does
-   not do: video embeds in lesson prose, retiring the old service worker,
-   and the filter on /all/.                                                */
+   on Escape. This script retires the old service worker, filters lessons,
+   and makes overflowing content keyboard-accessible.                                                */
 (function () {
    "use strict";
-
-   /* --- Video embeds ------------------------------------------------------
-      Lessons are written by teachers in plain Markdown, and the authoring
-      convention is to paste a YouTube URL on a line by itself. This turns
-      those into responsive embeds.
-
-      It runs on the rendered paragraph rather than at build time because
-      GitHub Pages only permits its own plugin allowlist. If this script does
-      not run, the URL stays a visible, clickable link — which is why the URL
-      is left in place as the fallback rather than being replaced.        */
-   var YT = /^https?:\/\/(?:www\.)?(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([\w-]{11})/;
-
-   var videoNumber = 0;
-   document.querySelectorAll(".prose p").forEach(function (p) {
-      var text = p.textContent.trim();
-      var link = p.querySelector("a");
-      // Only a paragraph that is nothing but the URL.
-      if (p.children.length > 1) return;
-      if (link && link.textContent.trim() !== text) return;
-
-      var m = YT.exec(text);
-      if (!m) return;
-
-      var wrap = document.createElement("div");
-      wrap.className = "videoWrapper";
-      var frame = document.createElement("iframe");
-      frame.src = "https://www.youtube-nocookie.com/embed/" + m[1];
-      var heading = document.querySelector("h1");
-      document.querySelectorAll(".prose h2, .prose h3, .prose h4").forEach(function (candidate) {
-         // DOCUMENT_POSITION_FOLLOWING means the video follows this heading.
-         if (candidate.compareDocumentPosition(p) & 4) heading = candidate;
-      });
-      videoNumber++;
-      frame.title = (heading ? heading.textContent.trim() : "Lesson") + " — video " + videoNumber;
-      frame.loading = "lazy";
-      frame.allow = "accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
-      frame.allowFullscreen = true;
-      wrap.appendChild(frame);
-      p.replaceWith(wrap);
-   });
 
    /* --- Retire the old service worker ------------------------------------
       The previous theme registered a cache-first service worker with no

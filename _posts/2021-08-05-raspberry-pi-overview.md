@@ -46,9 +46,13 @@ This image requires a minimum of 16GB of space on the SD card.
    4. Select the correct image file downloaded in step 1 and 2 from your system.
    5. Click `Choose storage` and select your inserted SD card.
    6. Click write. 
-   7. More info [here](https://www.raspberrypi.com/documentation/computers/getting-started.html) and a [video](https://www.youtube.com/watch?v=ntaXWS8Lk34)
+   7. More info [here](https://www.raspberrypi.com/documentation/computers/getting-started.html) and a [video](#video-ntaXWS8Lk34)
 4. Insert SD card to Raspberry Pi and power it up.
 5. The default user name is `pi`, with password `raspberry`. Change the password after first boot. 
+
+<figure class="lesson-video" id="video-ntaXWS8Lk34">
+{% include youtube.html title="How to use Raspberry Pi Imager | Install Raspberry Pi OS to your Raspberry Pi (Raspbian)" url="https://www.youtube.com/watch?v=ntaXWS8Lk34" video="ntaXWS8Lk34" %}
+</figure>
 
 
 ## Setting OS and installing software from scratch.
@@ -91,7 +95,7 @@ _NOTE_: Firstly, for Ubuntu desktop a monitor and mouse and keyboard is required
    1. [Download PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/){:target="_blank"}.
    2. Add IP address in the hostname field.
 4. Using VNC: More info [here](https://www.raspberrypi.com/documentation/computers/remote-access.html#vnc){:target="_blank"}
-    
+
     
 
 #### Installing DSPIRA software

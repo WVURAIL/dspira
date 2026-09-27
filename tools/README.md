@@ -212,3 +212,10 @@ It copies local lesson assets and verifies pinned downloads from active reposito
 It rejects missing sources, conflicting destinations, unsafe paths, and checksum mismatches.
 Run `python3 tools/test_publish_assets.py`, then `python3 tools/publish_assets.py --site _site`.
 See [the asset guide](../assets/README.md) before moving an existing download.
+
+## Embedded lesson videos
+
+`check_videos.py --site _site` checks the built YouTube players, accessible titles, watch links, timestamps, and video anchors.
+It also catches duplicate players and unintended autoplay.
+Lesson authors use `_includes/youtube.html`; embeds work without the site's JavaScript.
+The player uses YouTube's privacy-enhanced domain and loads lazily.

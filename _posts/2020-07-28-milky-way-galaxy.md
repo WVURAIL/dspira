@@ -20,7 +20,7 @@ At the heart of the DSPIRA Experience is the development of the Radio Horn Teles
 
 The Milky Way provides a bright radio source for the DSPIRA Horn Telescope. This activity sequence introduces our galaxy and explores what its radio waves reveal.
 
-Click here for a complete document of [Teacher's Notes](https://docs.google.com/document/d/1kXJ99gTiLGk551XCP7-ygE7T5rd5aw0Yu3gccNCzsdc/edit?usp=sharing) for this whole activity sequence
+Click here for a complete document of [Teacher's Notes]({{ site.baseurl }}/assets/lessons/milky-way/teacher-notes.pdf) for this whole activity sequence
 
 **_Activity List_**
    1. How Fast Are We Moving?
@@ -30,7 +30,7 @@ Click here for a complete document of [Teacher's Notes](https://docs.google.com/
    5. Introduction to the Milky Way - What CAN'T we see?
    6. A Model of the Motion within the Milky Way
    7. Creating a Velocity Curve for the Milky Way Galaxy
-   
+
 ## 1. How Fast Are We Moving?   
 
 This activity may have already been done as a stand alone, or as part of the Earth’s Motion sequence. Students determine the Sun's speed around the Milky Way. They can complete the activity now or recall their earlier result.
@@ -54,34 +54,52 @@ This activity connects to the Earth Motion lesson sequence. It also provides a s
 
 *Video (to be created) - Planning for a Horn Telescope Observation - From choosing an object to pointing the Horn at it*
 
-Click here for Student Activity [Using Stellarium to Find the Galactic Center student worksheet](https://docs.google.com/document/d/16ibpadOhBioZqrvxWpdrwJ1S6iNAwi7YaRW_QoM-CVI/view?usp=sharing) 
+Click here for Student Activity [Using Stellarium to Find the Galactic Center student worksheet]({{ site.baseurl }}/assets/worksheets/earth-orbit/finding-the-galactic-center.pdf)
 
 ## 4. Introduction to the Milky Way - What can we see?
 
 Just a basic chance for the students to get basic information about the Milky Way off the internet. There is also a first pass at understanding the Galactic Coordinate system used for studying the Milky Way.  
 
-Click here for Student Activity [Introduction to the Milky Way - What can we see? student worksheet](https://drive.google.com/file/d/1T441BW8rz3_bVgKN_bKK-ivfudXhQwFa/view?usp=sharing) 
+Click here for Student Activity [Introduction to the Milky Way - What can we see? student worksheet]({{ site.baseurl }}/assets/worksheets/milky-way/introduction.pdf)
 
 ## 5. Introduction to the Milky Way - What CAN'T we see? 
 
-The name is hopefully not misleading, because there is lots that we can't see.  This activity looks at MOTION as "the thing we can't see" (without understanding the [Doppler Effect](https://www.youtube.com/watch?v=h4OnBYrbCjY))
+The name is hopefully not misleading, because there is lots that we can't see.  This activity looks at MOTION as "the thing we can't see" (without understanding the [Doppler Effect](#video-h4OnBYrbCjY))
 
-Click here for Student Activity [Introduction to the Milky Way - What CAN'T we see? student worksheet](https://drive.google.com/file/d/1xPjeHIYgnBoz7Gs0A-shC9hNVgdAPxlF/view?usp=sharing) 
+<figure class="lesson-video" id="video-h4OnBYrbCjY">
+{% include youtube.html title="The Doppler Effect: what does motion do to waves?" url="https://www.youtube.com/watch?v=h4OnBYrbCjY" video="h4OnBYrbCjY" %}
+</figure>
 
-[Computer Simulation of Galactic Motion](https://www.youtube.com/watch?v=GLiXR0Jh3o8)
+Click here for Student Activity [Introduction to the Milky Way - What CAN'T we see? student worksheet]({{ site.baseurl }}/assets/worksheets/milky-way/galactic-rotation.pdf)
+
+<figure class="lesson-video" id="video-GLiXR0Jh3o8">
+{% include youtube.html title="Galactic Rotation Model in Interactive Physics" url="https://www.youtube.com/watch?v=GLiXR0Jh3o8" video="GLiXR0Jh3o8" %}
+</figure>
 
 ## 6. Modeling the Motion of the Milky Way
 
 This paper model helps students determine stars' relative radial speeds at different locations around the Milky Way.  A collaborative class effort can produce a model very similar to current research in Milky Way Astronomy
 
 Click here for all 3 Student documents
------> [Modeling the Motion of the Milky Way student worksheet](https://drive.google.com/file/d/1TKCevAKtUIFev0SgQoPPxSa87RVd7KmC/view?usp=sharing)
+-----> [Modeling the Motion of the Milky Way student worksheet]({{ site.baseurl }}/assets/worksheets/milky-way/modeling-motion.pdf)
 -----> [Spreadsheet](https://docs.google.com/spreadsheets/d/1gwL3GSYX-_zK7E2O1va8yNV41vwuRpVm2QRopB4B5TM/edit?usp=sharing)
------> [Model Diagram](https://drive.google.com/file/d/10Ct0UIcqEZzKVll40bz1z-7tCSWLWcfV/view?usp=sharing)  
+-----> [Model Diagram]({{ site.baseurl }}/assets/worksheets/milky-way/model-diagram.pdf)
 
 Here are 3 helpful video companions 
-[MWG Model - Part 1](https://www.youtube.com/watch?v=sZTpAqn1St4){: .btn .btn-wvu-blue}[MWG Model - Part 2](https://www.youtube.com/watch?v=kyww_Vu5AZc){: .btn .btn-wvu-blue}[MWG Model - Part 3](https://www.youtube.com/watch?v=Vf4a7fKUWGE){: .btn .btn-wvu-blue}
+[MWG Model - Part 1](#video-sZTpAqn1St4)[MWG Model - Part 2](#video-kyww_Vu5AZc)[MWG Model - Part 3](#video-Vf4a7fKUWGE)
+
+<figure class="lesson-video" id="video-sZTpAqn1St4">
+{% include youtube.html title="Modeling the Motion in the Milky Way-Part 1" url="https://www.youtube.com/watch?v=sZTpAqn1St4" video="sZTpAqn1St4" %}
+</figure>
+
+<figure class="lesson-video" id="video-kyww_Vu5AZc">
+{% include youtube.html title="Modeling the Motion of the Milky Way - Part 2" url="https://www.youtube.com/watch?v=kyww_Vu5AZc" video="kyww_Vu5AZc" %}
+</figure>
+
+<figure class="lesson-video" id="video-Vf4a7fKUWGE">
+{% include youtube.html title="Modeling the Motion of the Milky Way - Part 3" url="https://www.youtube.com/watch?v=Vf4a7fKUWGE" video="Vf4a7fKUWGE" %}
+</figure>
 
 ## 7. Creating a Velocity Curve for the Milky Way Galaxy
 This final activity lets teachers and students collect galactic data. A separate lesson sequence on the Lesson Module Page explains the process. 
-    
+

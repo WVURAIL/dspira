@@ -15,9 +15,17 @@ preparation: "Complete software and receiver setup before using the controls. Re
 The program used to run the telescope is a GNU Radio program called *calibrated-spectrometer.grc*. Get it from the [DSPIRA software guide]({{ '/software/' | relative_url }}). The *calibrated-spectrometer.grc* program has several features to make data collection with the horn telescope user-friendly. Each feature on the display is described below. Older videos call this program `spectrometer_w_cal.grc`.
 
 Set up the horn. Cable the LNA to the Airspy, then connect the Airspy to the computer's USB port.  Then open the calibrated-spectrometer.grc program in GNU Radio.
-[This video shows how to set up a horn and start the program.](https://youtu.be/Oo28QCEZe_g) 
+[This video shows how to set up a horn and start the program.](#video-Oo28QCEZe_g)
 
-You can also watch [this video](https://youtu.be/50B2Uv-SoDY), which describes these user interface features in detail.
+<figure class="lesson-video" id="video-Oo28QCEZe_g">
+{% include youtube.html title="Horn Operation: Setting Up a Horn" url="https://youtu.be/Oo28QCEZe_g" video="Oo28QCEZe_g" %}
+</figure>
+
+You can also watch [this video](#video-50B2Uv-SoDY), which describes these user interface features in detail.
+
+<figure class="lesson-video" id="video-50B2Uv-SoDY">
+{% include youtube.html title="Radio Horn Operation - The DSPIRA Horn Spectrometer Environment" url="https://youtu.be/50B2Uv-SoDY" video="50B2Uv-SoDY" %}
+</figure>
 
 ## **1.	Features of the *Spectrum* Tab**
 
@@ -56,7 +64,7 @@ You can also watch [this video](https://youtu.be/50B2Uv-SoDY), which describes t
 
         - **Long Integration**
            + This is useful for when smoother data is desired. Usually the user will use the longer setting for targeted pointings where “good” data is needed.
-           
+
            + The default setting for the longer integration time is 10 s. 
 
    * **Integration Reset** – This resets the data averaging when the long integration time is selected. Use this when you change the telescope's pointing during a long integration. It ensures the displayed average represents the new pointing.
@@ -76,7 +84,11 @@ You can also watch [this video](https://youtu.be/50B2Uv-SoDY), which describes t
 
        - This option saves the spectrum to a new file after each integration period. It supports unattended data collection.
 
-       - See the video [Saving Data Using the *spectrometer_w_cal.grc* Program](https://youtu.be/dWX0rRU99Z8).
+       - See the video [Saving Data Using the *spectrometer_w_cal.grc* Program](#video-dWX0rRU99Z8).
+
+<figure class="lesson-video" id="video-dWX0rRU99Z8">
+{% include youtube.html title="Horn Operation: Saving Data with the DSPIRA Spectrometer" url="https://youtu.be/dWX0rRU99Z8" video="dWX0rRU99Z8" %}
+</figure>
 
 
 ## **2.	Features of the *System Temp/Gain* Tab**

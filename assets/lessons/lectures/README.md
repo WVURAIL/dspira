@@ -5,7 +5,7 @@ This index describes the files maintained in this directory.
 
 Files are grouped by subject, with no intermediate year folders.
 Known course years appear at the end of filenames. Undated files retain their descriptive names without an inferred year.
-The PDFs and 2018 PowerPoints remain separate source editions.
+Each deck has matching PDF and PowerPoint files. Undated and 2018 decks remain separate source editions.
 
 ## Astronomy
 
@@ -21,7 +21,7 @@ Presenter credit does not replace authorship or figure credits recorded inside a
 | Galactic rotation | [galactic-rotation-2018.pptx](astronomy/galactic-rotation-2018.pptx) |
 | Your observations | [your-observations-2018.pptx](astronomy/your-observations-2018.pptx) |
 
-The following PDFs came from the institute's PDF astronomy collections.
+The following paired PDF and PowerPoint decks came from the institute's PDF astronomy collections.
 Their course years remain unverified. Credits below follow the preserved source notice.
 
 | Topic | Recorded author | File |
@@ -63,7 +63,10 @@ That edition includes corrected X(f) notation and an expanded Dirac-train explan
 
 ## Credits and source records
 
-All moved slides and PDFs retain their original bytes, embedded credits, and existing rights.
+The teaching editions use consistent WVU DSPIRA headers, fonts, and page numbers.
+Original author credits, source notices, and existing rights remain in place.
+Diagrams and some legacy equations remain images inside editable decks.
+The PDFs omit hidden supplemental slides; PowerPoint files retain those slides.
 These third-party materials are not relicensed by their inclusion here.
 The [original source notice](SOURCE-NOTICE.txt) and [source license](SOURCE-LICENSE.txt) remain unchanged.
 Ask the named rights holder before adapting or redistributing third-party material.

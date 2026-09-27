@@ -17,6 +17,12 @@ lead: Choose an activity, review its materials, and prepare it for your class.
 
 These routes use the same lessons students read. Teacher notes and worksheets stay beside the relevant activity.
 
+## Download and adapt materials
+
+Find all [printable and editable teaching materials]({{ '/teaching-resources/' | relative_url }}) in one place.
+Download Word files for worksheets and guides, or PowerPoint files for presentations.
+Lesson pages link directly to the printable PDFs.
+
 ## Prepare for class
 
 Open **Equipment and preparation** near the top of each lesson for activity-specific requirements.
@@ -32,7 +38,6 @@ Allow setup time separately from student activity time. Hardware testing and cla
 For telescope sessions, review [software compatibility]({{ '/software/' | relative_url }}) before scheduling observations.
 
 [Request a starter kit]({{ '/kits/' | relative_url }}) if equipment access is a barrier.
-[Teaching slides and exercises]({{ '/teaching-resources/' | relative_url }}) provide additional materials.
 
 ## Share or ask
 

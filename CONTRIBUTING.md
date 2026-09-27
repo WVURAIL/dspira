@@ -35,6 +35,50 @@ system images need a separate download location, linked from the lesson page.
 The `main` branch publishes the website after its checks pass.
 Use a local preview when reviewing changes. The former approval preview is archived.
 
+## Videos and printable materials
+
+Embed lesson videos with the shared include. Give each video a descriptive title and keep its original watch link.
+Use `start=433` to begin at 7:13. For a playlist, replace `video` with `playlist` and use the playlist ID.
+
+```liquid
+{% include youtube.html video="Oo28QCEZe_g" title="Setting up a horn telescope" url="https://youtu.be/Oo28QCEZe_g" %}
+```
+
+Wrap the include in `<figure class="lesson-video">` and `</figure>` on separate lines.
+Use a unique figure ID when another sentence links to the video.
+The player loads lazily and the watch link also works in print.
+
+Put short instructions directly on the lesson page.
+Keep PDFs that serve a printing purpose, such as construction plans, worksheets, presentations, and teacher planning sheets.
+When retiring a duplicate PDF, preserve its old download addresses in `_data/legacy_assets.json`.
+
+## Keep teaching downloads consistent
+
+Publish a PDF beside every teaching document. Keep Word files for worksheets and guides, and PowerPoint files for slides.
+Use matching filenames, such as `worksheet.docx` and `worksheet.pdf`.
+Start from the Word or PowerPoint template in the [teaching catalog](https://wvurail.org/dspira/teaching-resources/).
+
+- Use Arial for body text and headings, preserving specialist math fonts where needed.
+- Use a WVU DSPIRA header and a footer with the site address and page number.
+- Use the Word template's page setup, 11-point body text, and built-in heading styles.
+- Use the PowerPoint template's widescreen layouts, title styles, and branded slide master.
+- Preserve the physical dimensions of printable models and technical drawings.
+- Use actual headings, lists, and tables. Keep directions and response areas editable.
+- Keep author credits, citations, image descriptions, and source notices.
+- Export the PDF from the editable source after each change. Check every page for clipped text and broken equations.
+- Export legacy slide equations through PowerPoint when other exporters misread their embedded graphics.
+- Add both formats to `_data/teaching_documents.json` for the teacher download catalog.
+- Link to the PDF from the related lesson page. Keep editable download links in the teacher catalog.
+
+The PDF is the printing copy. Update the editable file first so both versions stay synchronized.
+Some legacy diagrams remain images. Retain those figures when adapting the surrounding text.
+Original diagram labels, equations, and credited source figures may retain their specialist typography.
+Do not place a banner over an old page layout as a substitute for applying the template.
+Rewrite fragmented directions into clear steps. Keep each figure beside its explanation and caption.
+Compare converted figures with their original PDFs. Preserve transparency masks, dimensions, labels, and source credits.
+The document check protects previously restored figures using `tools/teaching_figure_checks.json`.
+Update a figure reference only after checking the replacement against its original.
+
 ## Review and publication
 
 A maintainer checks metadata, links, files, and accessibility structure. An educator

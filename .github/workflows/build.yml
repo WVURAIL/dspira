@@ -50,12 +50,17 @@ jobs:
 
       - name: Build
         run: |
+          python3 -m pip install --quiet PyMuPDF==1.28.2
           bundle exec jekyll build --trace
           python3 tools/test_publish_assets.py
           python3 tools/publish_assets.py --site _site
+          python3 tools/check_teaching_documents.py --site _site --style
         env:
           BUNDLE_GEMFILE: ${{ github.workspace }}/Gemfile.ci
           JEKYLL_ENV: production
+
+      - name: Embedded videos and watch links
+        run: python3 tools/check_videos.py --site _site
 
       - name: Every lesson and index page built
         run: |

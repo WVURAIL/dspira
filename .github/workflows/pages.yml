@@ -36,9 +36,11 @@ jobs:
       - name: Build the site
         working-directory: site
         run: |
+          python3 -m pip install --quiet PyMuPDF==1.28.2
           bundle exec jekyll build --trace -d ../_site
           python3 tools/test_publish_assets.py
           python3 tools/publish_assets.py --site ../_site
+          python3 tools/check_teaching_documents.py --site ../_site --style
         env:
           BUNDLE_GEMFILE: ${{ github.workspace }}/Gemfile.ci
           JEKYLL_ENV: production
