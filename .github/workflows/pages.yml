@@ -3,6 +3,8 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  schedule:
+    - cron: '23 8 * * *'
 
 permissions:
   contents: read
@@ -12,7 +14,31 @@ concurrency:
   group: pages
   cancel-in-progress: true
 jobs:
+  publication:
+    runs-on: ubuntu-latest
+    outputs:
+      publish: ${{ steps.hardware.outputs.publish }}
+      hardware_revision: ${{ steps.hardware.outputs.revision }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          sparse-checkout: |
+            tools
+            _data
+      - name: Check for updated hardware documents
+        id: hardware
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          if [ "$GITHUB_EVENT_NAME" = schedule ]; then
+            published_url=$(ruby -ryaml -e 'c = YAML.load_file("_config.yml"); puts "#{c.fetch("url")}#{c.fetch("baseurl", "")}/assets/hardware/source.json"')
+            python3 tools/publish_hardware.py --published-url "$published_url" >> "$GITHUB_OUTPUT"
+          else
+            python3 tools/publish_hardware.py >> "$GITHUB_OUTPUT"
+          fi
   build:
+    needs: publication
+    if: needs.publication.outputs.publish == 'true'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
@@ -39,7 +65,8 @@ jobs:
           python3 -m pip install --quiet PyMuPDF==1.28.2
           bundle exec jekyll build --trace -d ../_site
           python3 tools/test_publish_assets.py
-          python3 tools/publish_assets.py --site ../_site
+          python3 tools/test_publish_hardware.py
+          python3 tools/publish_assets.py --site ../_site --hardware-revision '${{ needs.publication.outputs.hardware_revision }}'
           python3 tools/check_teaching_documents.py --site ../_site --style
         env:
           BUNDLE_GEMFILE: ${{ github.workspace }}/Gemfile.ci

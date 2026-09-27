@@ -335,6 +335,12 @@ def check_url(url):
     return "CHECK", "no response"
 
 
+def published_hardware_exists(path, built_site="_site"):
+    return (path.startswith("assets/hardware/")
+            and ".." not in path.split("/")
+            and os.path.isfile(os.path.join(built_site, path)))
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--offline", action="store_true",
@@ -431,7 +437,7 @@ def main():
                 # time, so the .css the pages link is real even though only
                 # the .scss is in the repo.
                 scss_twin = path.endswith(".css") and os.path.exists(path[:-4] + ".scss")
-                if not os.path.exists(path) and not scss_twin:
+                if not os.path.exists(path) and not scss_twin and not published_hardware_exists(path):
                     assets.append((u, f, line, "file not found"))
             elif path.startswith(".."):
                 internal.append((u, f, line, "relative path escapes the site root"))

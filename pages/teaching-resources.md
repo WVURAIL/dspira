@@ -85,18 +85,17 @@ Keep author credits and check third-party permissions when adapting materials.
 <details class="teaching-downloads" id="amplifier-assembly">
 <summary>Amplifier assembly ({{ site.data.hardware_documents | size }})</summary>
 <p>Match the guide to your board revision. Circuit drawings retain their original labels and component values.</p>
-<p>These PDFs open in GitHub's document preview. Word files download directly.</p>
+<p>View PDFs in your browser or download Word files to adapt the instructions.</p>
 <table>
 <caption class="visually-hidden">Amplifier assembly downloads</caption>
 <thead><tr><th scope="col">Resource</th><th scope="col">View</th><th scope="col">Download</th></tr></thead>
 <tbody>
 {% for document in site.data.hardware_documents %}
-{% assign source = 'https://raw.githubusercontent.com/WVURAIL/dspira-hardware/main/' | append: document.path %}
-{% assign preview = 'https://github.com/WVURAIL/dspira-hardware/blob/main/' | append: document.path %}
+{% assign source = '/assets/hardware/' | append: document.path %}
 <tr>
 <th scope="row">{{ document.title }}</th>
-<td><a href="{{ preview }}.pdf" aria-label="View PDF: {{ document.title | escape }}">View PDF</a></td>
-<td><a href="{{ source }}.docx" aria-label="Download Word: {{ document.title | escape }}">Download Word</a></td>
+<td><a href="{{ source | append: '.pdf' | relative_url }}" aria-label="View PDF: {{ document.title | escape }}">View PDF</a></td>
+<td><a href="{{ source | append: '.docx' | relative_url }}" download="{{ document.path | split: '/' | last }}.docx" aria-label="Download Word: {{ document.title | escape }}">Download Word</a></td>
 </tr>
 {% endfor %}
 </tbody>

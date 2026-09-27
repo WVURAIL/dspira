@@ -1,5 +1,33 @@
 # tools
 
+## Hardware document publication
+
+`publish_assets.py` also publishes the hardware documents listed in `_data/hardware_publication.json`.
+Each build copies their original bytes from one commit of `WVURAIL/dspira-hardware`.
+Files appear under `_site/assets/hardware/`; `source.json` records the source commit and each file's SHA256 checksum.
+PDF and Word links receive content versions, so revised documents get fresh browser URLs.
+Missing files or invalid document formats fail the build, leaving the last successful website online.
+
+Edit amplifier guides in `dspira-hardware`. Add new publication paths to `_data/hardware_publication.json` in this repository.
+Use `/assets/hardware/<source-path>` with Jekyll's `relative_url` filter when linking a published document.
+Register PDF and Word pairs in `_data/hardware_documents.json` to include them in the teacher catalog.
+
+The Publish Pages workflow checks for hardware updates daily and skips rebuilding when the source revision is unchanged.
+The check uses `_config.yml` for the website address, including after a domain change.
+Run Publish Pages manually to publish sooner. Pushes to this repository also publish the current hardware documents.
+
+For a local build:
+
+```sh
+bundle exec jekyll build
+python3 tools/test_publish_hardware.py
+python3 tools/publish_assets.py --site _site
+```
+
+Add `--hardware-revision <full-commit-sha>` to reproduce a particular hardware revision.
+Serve the completed `_site` directory under `/dspira/` to preview its generated downloads.
+Rerun the publication step after rebuilding Jekyll.
+
 ## check_links.py
 
 Finds broken links in the lessons before students do.
