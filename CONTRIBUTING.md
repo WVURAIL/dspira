@@ -74,6 +74,10 @@ The PDF is the printing copy. Update the editable file first so both versions st
 Some legacy diagrams remain images. Retain those figures when adapting the surrounding text.
 Original diagram labels, equations, and credited source figures may retain their specialist typography.
 Do not place a banner over an old page layout as a substitute for applying the template.
+Rewrite fragmented directions into clear steps. Keep each figure beside its explanation and caption.
+Compare converted figures with their original PDFs. Preserve transparency masks, dimensions, labels, and source credits.
+The document check protects previously restored figures using `tools/teaching_figure_checks.json`.
+Update a figure reference only after checking the replacement against its original.
 
 ## Review and publication
 

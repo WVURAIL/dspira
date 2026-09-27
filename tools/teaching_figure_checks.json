@@ -1,0 +1,192 @@
+[
+  {
+    "editable": "assets/lessons/horn-construction/horn-and-can-assembly-2021.docx",
+    "figures": [
+      {
+        "width": 926,
+        "height": 818,
+        "sha256": "a0d667da85c8caa5f898b4a302e5b2f5cc9e90c4bab91677ea417ce1ed22d53e"
+      },
+      {
+        "width": 924,
+        "height": 1016,
+        "sha256": "b0ccc011d5f916e99688d19948b160cadcba8f46ff505dd65f859d55a4389dd2"
+      },
+      {
+        "width": 904,
+        "height": 1018,
+        "sha256": "9a12f6638f105835ec0fac617c316a42b1213cbf1f7670a5fcc89fcd1243a171"
+      },
+      {
+        "width": 697,
+        "height": 709,
+        "sha256": "4e6ea3da9799450c47cbecff3521567b4bd262cf92cd10daefd10ae4f079ab48"
+      }
+    ]
+  },
+  {
+    "editable": "assets/lessons/horn-construction/mini-horn-construction.docx",
+    "figures": [
+      {
+        "width": 141,
+        "height": 298,
+        "sha256": "5f05ec0668a7e4fe03031b95383a5f51777c925fe2760822220e8aa07299e6f0"
+      },
+      {
+        "width": 843,
+        "height": 687,
+        "sha256": "9ded69dfbb4602113387ba68af070896b880215eb9b98dd5a9a7de55ece7fe1c"
+      },
+      {
+        "width": 691,
+        "height": 563,
+        "sha256": "afe32fd6fb23a269266a5ee047062f729ce6041c393c233b1d9a9a0c79c72647"
+      },
+      {
+        "width": 783,
+        "height": 640,
+        "sha256": "49efe41bd36c6f3212ff700db9bfb7f9c82101d78d8602952eaada8435cfbd8d"
+      },
+      {
+        "width": 897,
+        "height": 731,
+        "sha256": "f97970725bc40616dc1e11515684cde6014ae752c167a84dee8c7c7f4f9ec1f4"
+      },
+      {
+        "width": 1947,
+        "height": 913,
+        "sha256": "8e1b82806c82cddc2a4cb51878f58e2c9079a13eb85c7499b4f2bb99ad0646b4"
+      },
+      {
+        "width": 1748,
+        "height": 619,
+        "sha256": "548539b3d9dfce3e6c70fda36e7a2afb89ecd877d22e059fa65bda895faf2e2c"
+      },
+      {
+        "width": 1791,
+        "height": 584,
+        "sha256": "ba8c7237c88dca8c43e2402857c0eecc93b4f26c0d15d7aa693cd40f48772d9c"
+      },
+      {
+        "width": 1093,
+        "height": 609,
+        "sha256": "1fa5bd7fac871e178462b83d4ff3ac8ebab2fb03fc6d5efc870c383118861df4"
+      },
+      {
+        "width": 1833,
+        "height": 944,
+        "sha256": "5fea7bf664d4ce8c2a66b575f4639dd1a5f0605f490c0e70d0d3a2a8d3c33c33"
+      },
+      {
+        "width": 1525,
+        "height": 956,
+        "sha256": "96f1829b06041a7effaa9c1365fa3a222a27bb6f628023879dea06407b1394d3"
+      },
+      {
+        "width": 1012,
+        "height": 494,
+        "sha256": "bd2b53b34370eb5864f44d1dec8ed4f336c71c1b2fb167b208b3f57da847fe3f"
+      },
+      {
+        "width": 515,
+        "height": 773,
+        "sha256": "becdcff6c948c36d50afa60effff2a70245cc45bf8de533d4da92869e1cef595"
+      },
+      {
+        "width": 1945,
+        "height": 693,
+        "sha256": "4e482155c788d970eb57c96ff7580e4cb0787cc42030fc4dc3e8d3bc78979c98"
+      },
+      {
+        "width": 826,
+        "height": 482,
+        "sha256": "083a432e2fba90214a90d5623b8828fa466db8366f1151b594e3109925f969f3"
+      }
+    ]
+  },
+  {
+    "editable": "assets/lessons/horn-construction/stand-assembly-2021.docx",
+    "figures": [
+      {
+        "width": 343,
+        "height": 457,
+        "sha256": "dcef0da995389055c8eb500750302feede6fcea1baaa95512e0f47cb3dee1dfd"
+      }
+    ]
+  },
+  {
+    "editable": "assets/lessons/electromagnetic-spectrum/introduction.docx",
+    "figures": [
+      {
+        "width": 300,
+        "height": 300,
+        "sha256": "cc80c1731f022e5a3f9fa1086b1151ac6826003cfcb928353f8dcda2df8cebe9"
+      }
+    ]
+  },
+  {
+    "editable": "assets/lessons/simple-spectrometer/build-a-spectrometer.docx",
+    "figures": [
+      {
+        "width": 1258,
+        "height": 869,
+        "sha256": "d73707e115ad6c5af0e8386e29c6fc0e4c29c7d35ff4a099a9903c51a4560dca"
+      },
+      {
+        "width": 500,
+        "height": 709,
+        "sha256": "0d4da7535befeae3c0ccd5ae3584cb2626aa3735931f813e1de5e265914d148f"
+      },
+      {
+        "width": 505,
+        "height": 534,
+        "sha256": "f45a2b05dad1e67dc6e22719e7f104b12f545695e5bd9a332f0e7286172b636a"
+      },
+      {
+        "width": 498,
+        "height": 530,
+        "sha256": "1c296dbdfb78fabb945c7a9c92d5ccdaf92f4b32c7b59af4d6c15d2bbb29c625"
+      },
+      {
+        "width": 501,
+        "height": 531,
+        "sha256": "b1b0faabdb0153e901a2a0a90ce860254940f4a5ac3f428905ce6a5f4e7f982c"
+      },
+      {
+        "width": 496,
+        "height": 530,
+        "sha256": "a945e7cc623441ee7aa3ce384337e8e0d8d3c6cdc973fab1fe4b03f3348b2e72"
+      },
+      {
+        "width": 499,
+        "height": 530,
+        "sha256": "55048499e78bd1620de3ca66950492c6e34358457a92ba450ae038735f8ce077"
+      },
+      {
+        "width": 499,
+        "height": 685,
+        "sha256": "f592306e84d22f662e177d4b9e98b690ef692b0d7b6bf2ee6c8116fd6eb83bcd"
+      }
+    ]
+  },
+  {
+    "editable": "assets/lessons/velocity-curve/coordinate-systems.docx",
+    "figures": [
+      {
+        "width": 233,
+        "height": 216,
+        "sha256": "9fe7c8a7fa25e1dcd281619f1dda0615499ab536a75b263e9a6d1760cd7acd50"
+      },
+      {
+        "width": 287,
+        "height": 227,
+        "sha256": "26f6e9bb5667ab19c5880c8c7691942a8907cc6c063271f01ae93858e8ff9e41"
+      },
+      {
+        "width": 249,
+        "height": 203,
+        "sha256": "e533d4402ae1bf3ea851d71e422da08d79480f8fd5343c12c750f10aafa425c5"
+      }
+    ]
+  }
+]

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Check that every catalog entry has matching print and editable downloads."""
 import argparse
+import hashlib
 import json
 from pathlib import Path
 import re
@@ -131,12 +132,35 @@ def check_pdf_style(path, word_document):
         return len(pdf)
 
 
+def check_restored_figures(package, path, expected):
+    """Keep recovered diagram labels intact when Office rewrites image parts."""
+    import pymupdf
+
+    found = set()
+    for name in package.namelist():
+        if not name.startswith(('word/media/', 'ppt/media/')):
+            continue
+        try:
+            image = pymupdf.Pixmap(package.read(name))
+        except (RuntimeError, ValueError):
+            continue
+        if image.alpha:
+            found.add((image.width, image.height, hashlib.sha256(image.samples).hexdigest()))
+    for figure in expected:
+        key = (figure['width'], figure['height'], figure['sha256'])
+        assert key in found, (
+            f'{path}: restored figure changed or lost transparency '
+            f'({figure["width"]} x {figure["height"]}); compare with the original before updating its reference')
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--site', type=Path, default=Path('_site'))
     parser.add_argument('--style', action='store_true', help='Check PDF headers and Word export fonts; requires PyMuPDF')
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
+    figure_checks = {item['editable']: item['figures'] for item in
+                     json.loads((root / 'tools/teaching_figure_checks.json').read_text())}
     groups = json.loads((root / '_data/teaching_documents.json').read_text())
     templates = json.loads((root / '_data/teaching_templates.json').read_text())
     groups.append({'title': 'Teacher templates', 'documents': templates})
@@ -172,6 +196,8 @@ def main():
                     check_slide_style(package, editable)
                 if extension in ('.dotx', '.potx'):
                     check_template(package, editable, part, word_document)
+                if args.style and editable.as_posix() in figure_checks:
+                    check_restored_figures(package, editable, figure_checks[editable.as_posix()])
             if args.style:
                 pages += check_pdf_style(root / pdf, word_document)
             count += 1
