@@ -1,5 +1,24 @@
 # tools
 
+## Assembly instructions
+
+The horn, cradle, and stand webpages include text and original illustrations exported from their teaching Word documents.
+Edit the `.docx` guides in `assets/lessons/horn-construction/`, export their matching PDFs, then run:
+
+```sh
+python3 tools/export_assembly_guides.py
+python3 tools/export_assembly_guides.py --check
+```
+
+Commit the documents, `_includes/assembly/`, and `images/horn-construction/assembly/` together.
+Build and publication checks reject stale website exports.
+The exporter preserves measurements, tables, step order, image descriptions, and image bytes.
+It changes paper-page references to webpage directions. Update its image names when adding or removing illustrations.
+Review the resulting webpages and PDFs before publishing.
+
+The can lesson adds detailed demonstrations to the printable horn and can guide.
+Keep those explanations consistent when changing the guide's probe or can dimensions.
+
 ## Hardware document publication
 
 `publish_assets.py` also publishes the hardware documents listed in `_data/hardware_publication.json`.

@@ -165,6 +165,23 @@ h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
    color: var(--bs-secondary-color);
 }
 
+/* Assembly photos retain their order as the reading column narrows. */
+.assembly-figures {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 1rem;
+   align-items: flex-start;
+   margin-top: 1.5rem;
+}
+.prose .assembly-figures figure {
+   flex: 1 1 12rem;
+   min-width: 0;
+   max-width: 38rem;
+   margin: 0;
+}
+.assembly-figures img { display: block; }
+.assembly-caption { font-size: 0.875rem; margin-top: 0.5rem; }
+
 /* 06. Form controls in content --------------------------------------------- */
 
 /* The contributor guide (/newpost/) has a raw <textarea cols="80"> and an

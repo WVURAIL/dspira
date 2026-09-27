@@ -50,6 +50,8 @@ jobs:
 
       - name: Build
         run: |
+          python3 tools/export_assembly_guides.py --check
+          python3 tools/test_export_assembly_guides.py
           python3 -m pip install --quiet PyMuPDF==1.28.2
           bundle exec jekyll build --trace
           python3 tools/test_publish_assets.py

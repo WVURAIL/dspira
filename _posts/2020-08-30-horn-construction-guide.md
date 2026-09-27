@@ -24,7 +24,9 @@ The descriptions below link to purchasing information and assembly instructions 
     
 The antenna consists of the horn panels, a metal can, the wire probe, and a low noise amplifier.
 
-The **horn panels and metal can** are assembled as a single unit. Follow the [horn and can assembly guide (view PDF)]({{ site.baseurl }}/assets/lessons/horn-construction/horn-and-can-assembly-2021.pdf)
+The **horn panels and metal can** are assembled as a single unit.
+Follow the [horn assembly instructions]({{ '/Horn_can' | relative_url }})
+and the [can and antenna instructions]({{ '/assemblingcan' | relative_url }}).
 
 The **low noise amplifier** (LNA) connects to the antenna probe through an SMA connector. This connector belongs to the can assembly. (See above.) 
     
@@ -45,7 +47,8 @@ The support stand described here is intended to be simple and affordable to anyo
 
 It consists of a cradle that holds the horn/can assembly and a base to support the cradle.
 
-Use the [stand assembly guide (view PDF)]({{ site.baseurl }}/assets/lessons/horn-construction/stand-assembly-2021.pdf) and [cradle assembly guide (view PDF)]({{ site.baseurl }}/assets/lessons/horn-construction/cradle-assembly-2021.pdf).
+Follow the [cradle and stand instructions]({{ '/cradle-and-stand/' | relative_url }}).
+Printable guides are available on that page.
 
 The cost of the parts is under $50.
   
@@ -60,4 +63,3 @@ A less expensive option is the [Airspy Mini](https://airspy.com/airspy-mini/), $
 A [coaxial cable](https://www.coaxrf.com/shop/1-rf-coaxial-cables/times-microwave-lmr240/sma-male-times-microwave-lmr240/lmr240-sma-male-to-sma-male-coaxial-rf-pigtail-cable/) is needed to connect the LNA to the SDR. Refer to the diagram above. Typically a 10 ft length is adequate, but any length up to 25 ft should work fine.
 
 The SDR comes with a cable for plugging it into a USB port on the computer. The spectrometer program on the computer is run on GNU Radio, which is a free and open source software program. Information about setting up the computer with the necessary software can be found [here.]({{ site.baseurl }}/HornOperation_computerSystems)
-

@@ -62,6 +62,7 @@ jobs:
       - name: Build the site
         working-directory: site
         run: |
+          python3 tools/export_assembly_guides.py --check
           python3 -m pip install --quiet PyMuPDF==1.28.2
           bundle exec jekyll build --trace -d ../_site
           python3 tools/test_publish_assets.py

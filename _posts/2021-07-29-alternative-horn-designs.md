@@ -6,7 +6,7 @@ title: Other Horn Designs
 summary:  Links to building other horn designs
 tags: ['School-Teachers', 'Students', 'Hobbyists' ]
 categories: ['Horn Construction']
-order: 5
+order: 6
 meta_description: "Explore alternative radio horn telescope designs. Find construction guides for a smaller DSPIRA horn, telescope bases, and cylindrical horns."
 optional: true
 equipment: "The selected design guide and its parts list. Materials and tools depend on which horn you build."
