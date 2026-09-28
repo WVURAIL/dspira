@@ -1,14 +1,4 @@
-# Builds the site the way GitHub Pages actually builds it, on every push and
-# pull request.
-#
-# Why this exists: the Pages builder reports failures only by email, after the
-# fact, and keeps serving the last good build. A broken Liquid tag therefore
-# looks like "the site just didn't update" rather than like an error. This
-# makes that loud.
-#
-# Note it installs the `github-pages` gem rather than using the repo's Gemfile
-# directly: Pages runs Jekyll 3.9 through that gem, and building against
-# anything newer can go green on something 3.9 rejects.
+# Build and validate the same locked dependencies used for publication.
 name: Build
 
 on:
@@ -21,27 +11,18 @@ permissions:
 
 jobs:
   jekyll:
-    name: Jekyll build (github-pages gem)
+    name: Jekyll build (locked dependencies)
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
 
-      - name: Pin the exact gems GitHub Pages uses
-        run: |
-          cat > Gemfile.ci <<'GEMFILE'
-          source "https://rubygems.org"
-          gem "github-pages", group: :jekyll_plugins
-          # Ruby 3.0+ dropped webrick from the stdlib; Jekyll 3.9 still wants it.
-          gem "webrick", "~> 1.8"
-          GEMFILE
-
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.1"
+          ruby-version: "3.3"
           bundler-cache: true
         env:
-          BUNDLE_GEMFILE: ${{ github.workspace }}/Gemfile.ci
+          BUNDLE_GEMFILE: ${{ github.workspace }}/Gemfile
 
       - name: Test migration compatibility
         run: |
@@ -62,7 +43,7 @@ jobs:
           python3 tools/check_notebook_pages.py --site _site
           python3 tools/check_teaching_documents.py --site _site --style
         env:
-          BUNDLE_GEMFILE: ${{ github.workspace }}/Gemfile.ci
+          BUNDLE_GEMFILE: ${{ github.workspace }}/Gemfile
           JEKYLL_ENV: production
 
       - name: Embedded videos and watch links

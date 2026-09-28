@@ -59,19 +59,12 @@ jobs:
           path: site
           lfs: true
 
-      - name: Install the GitHub Pages gems
-        run: |
-          cat > Gemfile.ci <<'GEMFILE'
-          source "https://rubygems.org"
-          gem "github-pages", group: :jekyll_plugins
-          gem "webrick", "~> 1.8"
-          GEMFILE
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.1"
+          ruby-version: "3.3"
           bundler-cache: true
         env:
-          BUNDLE_GEMFILE: ${{ github.workspace }}/Gemfile.ci
+          BUNDLE_GEMFILE: ${{ github.workspace }}/site/Gemfile
       - name: Build the site
         working-directory: site
         run: |
@@ -86,7 +79,7 @@ jobs:
           python3 tools/check_notebook_pages.py --site ../_site
           python3 tools/check_teaching_documents.py --site ../_site --style
         env:
-          BUNDLE_GEMFILE: ${{ github.workspace }}/Gemfile.ci
+          BUNDLE_GEMFILE: ${{ github.workspace }}/site/Gemfile
           JEKYLL_ENV: production
       - uses: actions/checkout@v5
         with:
