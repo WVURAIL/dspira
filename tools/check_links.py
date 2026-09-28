@@ -425,8 +425,9 @@ def main():
             # /dspira-2019/ and so on) that live in other repositories, so
             # those are external as far as this checker is concerned.
             norm_path = re.sub(r"/{2,}", "/", parsed.path)
+            host = (parsed.hostname or "").lower()
             is_site = (not parsed.netloc) or (
-                "wvurail.org" in parsed.netloc.lower()
+                (host == "wvurail.org" or host.endswith(".wvurail.org"))
                 and re.match(rf"^/?{re.escape(args.baseurl.strip('/'))}(/|$)",
                              norm_path)
             )
