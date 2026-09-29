@@ -75,70 +75,162 @@ jobs:
     - name: Embedded videos and watch links
       run: python3 tools/check_videos.py --site _site
     - name: Every lesson and index page built
-      run: "set -euo pipefail\nmissing=0\nfor page in index.html all/index.html lesson-modules/index.html \\\n           \
-        \ about/index.html kits/index.html user-levels/index.html \\\n            404.html iq/index.html\ndo\n  [ -s \"_site/$page\"\
-        \ ] || { echo \"::error::_site/$page missing or empty\"; missing=1; }\ndone\n# Every lesson in _posts must produce\
-        \ a page.\nwant=$(ls _posts | wc -l)\ngot=$(find _site -name index.html -newer _config.yml | wc -l)\necho \"posts\
-        \ in _posts: $want\"\n[ \"$want\" -ge 40 ] || { echo \"::error::only $want posts found \u2014 did _posts get truncated?\"\
-        ; missing=1; }\nexit $missing\n"
+      run: |
+        set -euo pipefail
+        missing=0
+        for page in index.html all/index.html lesson-modules/index.html \
+                    about/index.html kits/index.html user-levels/index.html \
+                    404.html iq/index.html
+        do
+          [ -s "_site/$page" ] || { echo "::error::_site/$page missing or empty"; missing=1; }
+        done
+        # Every lesson in _posts must produce a page.
+        want=$(ls _posts | wc -l)
+        got=$(find _site -name index.html -newer _config.yml | wc -l)
+        echo "posts in _posts: $want"
+        [ "$want" -ge 40 ] || { echo "::error::only $want posts found — did _posts get truncated?"; missing=1; }
+        exit $missing
     - name: The data-driven lists actually rendered
-      run: "set -euo pipefail\nfail=0\ncheck() {  # name, file, pattern, minimum\n  n=$(grep -o \"$3\" \"_site/$2\" | wc -l\
-        \ || true)\n  echo \"$1: $n\"\n  if [ \"$n\" -lt \"$4\" ]; then\n    echo \"::error::$1 rendered $n (expected >= $4)\
-        \ \u2014 data or a Liquid filter is broken\"\n    fail=1\n  fi\n}\n# The module grid is driven by _data/modules.yml\
-        \ cross-referenced\n# against post categories. A category renamed in one place and not the\n# other still builds \u2014\
-        \ it just silently drops a module.\n#\n# The expected number is read from _data/modules.yml rather than\n# written\
-        \ down here. It used to be a hardcoded 9, which was right\n# until the modules were consolidated and then quietly\
-        \ wrong: a check\n# with a number copied into it has the same drift problem as the thing\n# it is checking.\nmodules=$(grep\
-        \ -c '^- category:' _data/modules.yml)\necho \"modules declared in _data/modules.yml: $modules\"\n\ncheck \"modules\
-        \ on the front page\" index.html     'class=\"module\"'          \"$modules\"\n# /all/ is the only lesson index now;\
-        \ /lesson-modules/ redirects to it,\n# so the module headings live here.\ncheck \"module sections in /all/\"  all/index.html\
-        \  'class=\"module-toc__head\"' \"$modules\"\ncheck \"lesson cards in /all/\"     all/index.html  'class=\"lesson-card\"\
-        '     40\n# The Design System's navigation script drives the list that carries\n# this class. grep -o counts substrings,\
-        \ so 1 means \"the nav is there\".\ncheck \"nav links\"                 index.html      'js-wvu-site-nav-items'  \
-        \ 1\n\n# Every module the front page shows must also be a page you can open.\n# tr -d CR because a checkout with core.autocrlf\
-        \ on yields CRLF, and a\n# slug with a carriage return on the end matches no directory.\nfor slug in $(grep '^- category:'\
-        \ _data/modules.yml \\\n              | sed 's/^- category: *//' \\\n              | tr -d '\\r' | tr 'A-Z' 'a-z'\
-        \ | tr ' ' '-'); do\n  [ -s \"_site/categories/$slug/index.html\" ] \\\n    || { echo \"::error::module '$slug' has\
-        \ no page at /categories/$slug/ \u2014 the name in _data/modules.yml and the lessons' categories: have diverged\"\
-        ; fail=1; }\ndone\n\nexit $fail\n"
+      run: |
+        set -euo pipefail
+        fail=0
+        check() {  # name, file, pattern, minimum
+          n=$(grep -o "$3" "_site/$2" | wc -l || true)
+          echo "$1: $n"
+          if [ "$n" -lt "$4" ]; then
+            echo "::error::$1 rendered $n (expected >= $4) — data or a Liquid filter is broken"
+            fail=1
+          fi
+        }
+        # The module grid is driven by _data/modules.yml cross-referenced
+        # against post categories. A category renamed in one place and not the
+        # other still builds — it just silently drops a module.
+        #
+        # The expected number is read from _data/modules.yml rather than
+        # written down here. It used to be a hardcoded 9, which was right
+        # until the modules were consolidated and then quietly wrong: a check
+        # with a number copied into it has the same drift problem as the thing
+        # it is checking.
+        modules=$(grep -c '^- category:' _data/modules.yml)
+        echo "modules declared in _data/modules.yml: $modules"
+
+        check "modules on the front page" index.html     'class="module"'          "$modules"
+        # /all/ is the only lesson index now; /lesson-modules/ redirects to it,
+        # so the module headings live here.
+        check "module sections in /all/"  all/index.html  'class="module-toc__head"' "$modules"
+        check "lesson cards in /all/"     all/index.html  'class="lesson-card"'     40
+        # The Design System's navigation script drives the list that carries
+        # this class. grep -o counts substrings, so 1 means "the nav is there".
+        check "nav links"                 index.html      'js-wvu-site-nav-items'   1
+
+        # Every module the front page shows must also be a page you can open.
+        # tr -d CR because a checkout with core.autocrlf on yields CRLF, and a
+        # slug with a carriage return on the end matches no directory.
+        for slug in $(grep '^- category:' _data/modules.yml \
+                      | sed 's/^- category: *//' \
+                      | tr -d '\r' | tr 'A-Z' 'a-z' | tr ' ' '-'); do
+          [ -s "_site/categories/$slug/index.html" ] \
+            || { echo "::error::module '$slug' has no page at /categories/$slug/ — the name in _data/modules.yml and the lessons' categories: have diverged"; fail=1; }
+        done
+
+        exit $fail
     - name: Every lesson has one module and a position in it
-      run: "python3 - <<'PY'\nimport glob, re, sys, collections\nbad, by_module = [], collections.defaultdict(list)\nfor path\
-        \ in sorted(glob.glob(\"_posts/*.md\")):\n    fm = open(path, encoding=\"utf-8\").read().split(\"---\")[1]\n    cats\
-        \ = re.search(r\"^categories:\\s*(.*)$\", fm, re.M)\n    order = re.search(r\"^order:\\s*(\\d+)\\s*$\", fm, re.M)\n\
-        \    if not cats:\n        bad.append(\"%s: no categories:\" % path); continue\n    names = re.findall(r\"'([^']+)'|\\\
-        \"([^\\\"]+)\\\"\", cats.group(1))\n    names = [a or b for a, b in names]\n    if len(names) != 1:\n        bad.append(\"\
-        %s: filed under %d modules (%s) \u2014 one only\" % (path, len(names), \", \".join(names)))\n        continue\n  \
-        \  if not order:\n        bad.append(\"%s: no order: \u2014 it would sort to the front of %s\" % (path, names[0]))\n\
-        \        continue\n    by_module[names[0]].append((int(order.group(1)), path))\n\nfor module, items in sorted(by_module.items()):\n\
-        \    nums = sorted(n for n, _ in items)\n    if nums != list(range(1, len(nums) + 1)):\n        dupes = [n for n in\
-        \ set(nums) if nums.count(n) > 1]\n        bad.append(\"%s: order is %s, expected 1..%d%s\"\n                   %\
-        \ (module, nums, len(nums),\n                      \" (duplicated: %s)\" % dupes if dupes else \"\"))\n\nfor b in\
-        \ bad:\n    print(\"::error::\" + b)\nprint(\"%d lessons across %d modules\" % (sum(len(v) for v in by_module.values()),\
-        \ len(by_module)))\nsys.exit(1 if bad else 0)\nPY\n"
+      run: |
+        python3 - <<'PY'
+        import glob, re, sys, collections
+        bad, by_module = [], collections.defaultdict(list)
+        for path in sorted(glob.glob("_posts/*.md")):
+            fm = open(path, encoding="utf-8").read().split("---")[1]
+            cats = re.search(r"^categories:\s*(.*)$", fm, re.M)
+            order = re.search(r"^order:\s*(\d+)\s*$", fm, re.M)
+            if not cats:
+                bad.append("%s: no categories:" % path); continue
+            names = re.findall(r"'([^']+)'|\"([^\"]+)\"", cats.group(1))
+            names = [a or b for a, b in names]
+            if len(names) != 1:
+                bad.append("%s: filed under %d modules (%s) — one only" % (path, len(names), ", ".join(names)))
+                continue
+            if not order:
+                bad.append("%s: no order: — it would sort to the front of %s" % (path, names[0]))
+                continue
+            by_module[names[0]].append((int(order.group(1)), path))
+
+        for module, items in sorted(by_module.items()):
+            nums = sorted(n for n, _ in items)
+            if nums != list(range(1, len(nums) + 1)):
+                dupes = [n for n in set(nums) if nums.count(n) > 1]
+                bad.append("%s: order is %s, expected 1..%d%s"
+                           % (module, nums, len(nums),
+                              " (duplicated: %s)" % dupes if dupes else ""))
+
+        for b in bad:
+            print("::error::" + b)
+        print("%d lessons across %d modules" % (sum(len(v) for v in by_module.values()), len(by_module)))
+        sys.exit(1 if bad else 0)
+        PY
     - name: The forum rooms send people to their GitHub Discussions category
-      run: "set -euo pipefail\n# The rooms are plain pages now. SCM ruled that nothing forum-like may\n# be served from the\
-        \ University domain, so the giscus comment boxes\n# went; each room links to the Discussions category on GitHub where\n\
-        # its threads have always lived. The slug comes from _data/forum.yml,\n# and a wrong one is a 404 on GitHub rather\
-        \ than a build error \u2014 so\n# the six URLs are spelled out here as well, verified live, and the\n# two copies\
-        \ have to agree.\nfail=0\nfor pair in index:general antennas:antennas astronomy:astronomy \\\n            dsp:dsp\
-        \ electronics:electronics gnuradio:gnu-radio\ndo\n  room=${pair%%:*}\n  slug=${pair##*:}\n  if [ \"$room\" = index\
-        \ ]; then\n    f=\"_site/forum/index.html\"\n  else\n    f=\"_site/forum/$room/index.html\"\n  fi\n  if [ ! -s \"\
-        $f\" ]; then\n    echo \"::error::$f is missing or empty\"; fail=1; continue\n  fi\n  grep -qF \"href=\\\"https://github.com/WVURAIL/dspira/discussions/categories/$slug\\\
-        \"\" \"$f\" \\\n    || { echo \"::error::$f does not link to the '$slug' Discussions category\"; fail=1; }\ndone\n\
-        echo \"forum rooms checked: 6\"\n# And no page may mention giscus at all. If the word is back, so is a\n# comment\
-        \ box, or the include that made one.\nif grep -rli 'giscus' _site --include='*.html'; then\n  echo \"::error::giscus\
-        \ is back in the built site \u2014 see the pages listed above\"\n  fail=1\nfi\nexit $fail\n"
+      run: |
+        set -euo pipefail
+        # The rooms are plain pages now. SCM ruled that nothing forum-like may
+        # be served from the University domain, so the giscus comment boxes
+        # went; each room links to the Discussions category on GitHub where
+        # its threads have always lived. The slug comes from _data/forum.yml,
+        # and a wrong one is a 404 on GitHub rather than a build error — so
+        # the six URLs are spelled out here as well, verified live, and the
+        # two copies have to agree.
+        fail=0
+        for pair in index:general antennas:antennas astronomy:astronomy \
+                    dsp:dsp electronics:electronics gnuradio:gnu-radio
+        do
+          room=${pair%%:*}
+          slug=${pair##*:}
+          if [ "$room" = index ]; then
+            f="_site/forum/index.html"
+          else
+            f="_site/forum/$room/index.html"
+          fi
+          if [ ! -s "$f" ]; then
+            echo "::error::$f is missing or empty"; fail=1; continue
+          fi
+          grep -qF "href=\"https://github.com/WVURAIL/dspira/discussions/categories/$slug\"" "$f" \
+            || { echo "::error::$f does not link to the '$slug' Discussions category"; fail=1; }
+        done
+        echo "forum rooms checked: 6"
+        # And no page may mention giscus at all. If the word is back, so is a
+        # comment box, or the include that made one.
+        if grep -rli 'giscus' _site --include='*.html'; then
+          echo "::error::giscus is back in the built site — see the pages listed above"
+          fail=1
+        fi
+        exit $fail
     - name: WVU common elements on every page
-      run: "set -euo pipefail\nfail=0\nchecked=0\nwhile IFS= read -r f; do\n  if grep -q '<title>Redirecting' \"$f\"; then\
-        \ continue; fi\n  checked=$((checked + 1))\n  for want in \"favicon-wvu.ico\" \\\n              \"(304) 293-9686\"\
-        \ \"Fax\" \"Skip to main content\"\n  do\n    grep -qF -- \"$want\" \"$f\" \\\n      || { echo \"::error::$f lacks\
-        \ \\\"$want\\\"\"; fail=1; }\n  done\n  n=$(grep -o '<h1' \"$f\" | wc -l || true)\n  [ \"$n\" -eq 1 ] \\\n    || {\
-        \ echo \"::error::$f has $n <h1> headings, expected exactly 1\"; fail=1; }\ndone < <(find _site -name '*.html' | sort)\n\
-        echo \"pages checked: $checked\"\n# A check that found nothing to check would pass for the wrong reason.\n[ \"$checked\"\
-        \ -ge 60 ] \\\n  || { echo \"::error::only $checked pages checked \u2014 did _site build?\"; fail=1; }\n# The old\
-        \ GBT address is a redirect and stays out of the sitemap.\nif [ ! -s _site/sitemap.xml ] || grep -q 'gbt_rendered_2017\\\
-        .html' _site/sitemap.xml; then\n  echo \"::error::_site/sitemap.xml is missing, or still lists gbt_rendered_2017.html\
-        \ \u2014 the notebook must retain sitemap: false in its front matter\"\n  fail=1\nfi\nexit $fail\n"
+      run: |
+        set -euo pipefail
+        fail=0
+        checked=0
+        while IFS= read -r f; do
+          if grep -q '<title>Redirecting' "$f"; then continue; fi
+          checked=$((checked + 1))
+          for want in "favicon-wvu.ico" \
+                      "(304) 293-9686" "Fax" "Skip to main content"
+          do
+            grep -qF -- "$want" "$f" \
+              || { echo "::error::$f lacks \"$want\""; fail=1; }
+          done
+          n=$(grep -o '<h1' "$f" | wc -l || true)
+          [ "$n" -eq 1 ] \
+            || { echo "::error::$f has $n <h1> headings, expected exactly 1"; fail=1; }
+        done < <(find _site -name '*.html' | sort)
+        echo "pages checked: $checked"
+        # A check that found nothing to check would pass for the wrong reason.
+        [ "$checked" -ge 60 ] \
+          || { echo "::error::only $checked pages checked — did _site build?"; fail=1; }
+        # The old GBT address is a redirect and stays out of the sitemap.
+        if [ ! -s _site/sitemap.xml ] || grep -q 'gbt_rendered_2017\.html' _site/sitemap.xml; then
+          echo "::error::_site/sitemap.xml is missing, or still lists gbt_rendered_2017.html — the notebook must retain sitemap: false in its front matter"
+          fail=1
+        fi
+        exit $fail
     - name: No unrendered Liquid escaped into the output
       run: |
         set -euo pipefail
