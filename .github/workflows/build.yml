@@ -23,7 +23,7 @@ jobs:
     name: Validate website
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       with:
         persist-credentials: false
         lfs: true
@@ -59,7 +59,7 @@ jobs:
         JEKYLL_ENV: production
         HARDWARE_REVISION: ${{ inputs.hardware_revision }}
         NOTEBOOK_REVISION: ${{ inputs.notebook_revision }}
-    - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       with:
         repository: WVURAIL/wvurail.github.io
         ref: ebaef70170bc770905f01e5f7bff1432d3a6a51f
