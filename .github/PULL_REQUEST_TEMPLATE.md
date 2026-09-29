@@ -9,4 +9,4 @@ For lesson contributions:
 For maintainers:
 - [ ] Check the build, links, accessibility structure, and sentence lengths.
 - [ ] Keep published lesson addresses stable.
-- [ ] Apply approved source changes to the staging branch.
+- [ ] Confirm the checked build passes before publishing from `main`.

@@ -17,3 +17,7 @@ vendor/
 link-report.md
 __pycache__/
 *.pyc
+
+/.dependencies/
+
+/_retired/
