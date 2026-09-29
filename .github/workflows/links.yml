@@ -33,7 +33,7 @@ jobs:
     name: Check every external link
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
 
       - name: Check links, with one retry
         run: |
@@ -48,7 +48,7 @@ jobs:
 
       - name: Keep the report either way
         if: always()
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         with:
           name: link-report
           path: link-report.md

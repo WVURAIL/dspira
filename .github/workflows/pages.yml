@@ -1,15 +1,13 @@
 name: Publish Pages
-on:
+'on':
   push:
-    branches: [main]
-  workflow_dispatch:
+    branches:
+    - main
+  workflow_dispatch: null
   schedule:
-    - cron: '23 8 * * *'
-
+  - cron: 23 8 * * *
 permissions:
   contents: read
-  pages: write
-  id-token: write
 concurrency:
   group: pages
   cancel-in-progress: true
@@ -22,96 +20,43 @@ jobs:
       notebooks_publish: ${{ steps.notebooks.outputs.publish }}
       notebook_revision: ${{ steps.notebooks.outputs.revision }}
     steps:
-      - uses: actions/checkout@v5
-        with:
-          sparse-checkout: |
-            tools
-            _data
-      - name: Check for updated hardware documents
-        id: hardware
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-        run: |
-          if [ "$GITHUB_EVENT_NAME" = schedule ]; then
-            published_url=$(ruby -ryaml -e 'c = YAML.load_file("_config.yml"); puts "#{c.fetch("url")}#{c.fetch("baseurl", "")}/assets/hardware/source.json"')
-            python3 tools/publish_hardware.py --published-url "$published_url" >> "$GITHUB_OUTPUT"
-          else
-            python3 tools/publish_hardware.py >> "$GITHUB_OUTPUT"
-          fi
-      - name: Check for updated research notebooks
-        id: notebooks
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-        run: |
-          if [ "$GITHUB_EVENT_NAME" = schedule ]; then
-            published_url=$(ruby -ryaml -e 'c = YAML.load_file("_config.yml"); puts "#{c.fetch("url")}#{c.fetch("baseurl", "")}/assets/notebooks/source.json"')
-            python3 tools/publish_notebooks.py --published-url "$published_url" >> "$GITHUB_OUTPUT"
-          else
-            python3 tools/publish_notebooks.py >> "$GITHUB_OUTPUT"
-          fi
+    - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      with:
+        sparse-checkout: |
+          tools
+          _data
+        persist-credentials: false
+    - name: Check for updated hardware documents
+      id: hardware
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+      run: |
+        if [ "$GITHUB_EVENT_NAME" = schedule ]; then
+          published_url=$(ruby -ryaml -e 'c = YAML.load_file("_config.yml"); puts "#{c.fetch("url")}#{c.fetch("baseurl", "")}/assets/hardware/source.json"')
+          python3 tools/publish_hardware.py --published-url "$published_url" >> "$GITHUB_OUTPUT"
+        else
+          python3 tools/publish_hardware.py >> "$GITHUB_OUTPUT"
+        fi
+    - name: Check for updated research notebooks
+      id: notebooks
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+      run: |
+        if [ "$GITHUB_EVENT_NAME" = schedule ]; then
+          published_url=$(ruby -ryaml -e 'c = YAML.load_file("_config.yml"); puts "#{c.fetch("url")}#{c.fetch("baseurl", "")}/assets/notebooks/source.json"')
+          python3 tools/publish_notebooks.py --published-url "$published_url" >> "$GITHUB_OUTPUT"
+        else
+          python3 tools/publish_notebooks.py >> "$GITHUB_OUTPUT"
+        fi
+    if: github.ref == 'refs/heads/main'
   build:
     needs: publication
     if: needs.publication.outputs.publish == 'true' || needs.publication.outputs.notebooks_publish == 'true'
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v5
-        with:
-          path: site
-          lfs: true
-
-      - uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: "3.3"
-          bundler-cache: true
-        env:
-          BUNDLE_GEMFILE: ${{ github.workspace }}/site/Gemfile
-      - name: Build the site
-        working-directory: site
-        run: |
-          python3 tools/export_assembly_guides.py --check
-          python3 -m pip install --quiet PyMuPDF==1.28.2
-          python3 -m pip install --quiet -r tools/notebook-requirements.txt
-          bundle exec jekyll build --trace -d ../_site
-          python3 tools/test_publish_assets.py
-          python3 tools/test_publish_hardware.py
-          python3 tools/test_publish_notebooks.py
-          python3 tools/publish_assets.py --site ../_site --hardware-revision '${{ needs.publication.outputs.hardware_revision }}' --notebook-revision '${{ needs.publication.outputs.notebook_revision }}'
-          python3 tools/check_notebook_pages.py --site ../_site
-          python3 tools/check_teaching_documents.py --site ../_site --style
-        env:
-          BUNDLE_GEMFILE: ${{ github.workspace }}/site/Gemfile
-          JEKYLL_ENV: production
-      - uses: actions/checkout@v5
-        with:
-          repository: WVURAIL/wvurail.github.io
-          ref: ebaef70170bc770905f01e5f7bff1432d3a6a51f
-          path: checks
-      - uses: actions/setup-node@v4
-        with:
-          node-version: "22"
-      - name: Trim unused Design System styles
-        run: |
-          npm ci --prefix checks/.github/site-tools
-          node checks/.github/site-tools/scripts/trim_styles.mjs _site assets/wvu-design-system/site.min.css
-      - name: Load verified historical material
-        run: |
-          python3 site/tools/test_retired_sites.py
-          python3 site/tools/retired_sites.py fetch --destination _retired
-          python3 site/tools/retired_sites.py history --source _retired --site _site
-      - name: Preserve old institute addresses
-        run: |
-          python3 site/tools/test_publish_pages.py
-          python3 site/tools/publish_pages.py --site _site --archive _retired/dspira-archive --archive-url https://wvurail.org/dspira/history/sites/dspira-archive/
-          test -s _site/index.html
-          test -s _site/teach/index.html
-          test -s _site/labs/01/index.html
-          test ! -e _site/CNAME
-          if grep -q 'name="robots" content="noindex"' _site/index.html; then exit 1; fi
-          grep -q 'href="/dspira/' _site/index.html
-
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: _site
+    uses: ./.github/workflows/build.yml
+    with:
+      pages_artifact: true
+      hardware_revision: ${{ needs.publication.outputs.hardware_revision }}
+      notebook_revision: ${{ needs.publication.outputs.notebook_revision }}
   deploy:
     needs: build
     runs-on: ubuntu-latest
@@ -119,5 +64,9 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+    - id: deployment
+      uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4
+    if: github.ref == 'refs/heads/main'
+    permissions:
+      pages: write
+      id-token: write
