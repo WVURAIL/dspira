@@ -23,7 +23,7 @@ jobs:
     name: Validate website
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       with:
         persist-credentials: false
         lfs: true
@@ -59,13 +59,13 @@ jobs:
         JEKYLL_ENV: production
         HARDWARE_REVISION: ${{ inputs.hardware_revision }}
         NOTEBOOK_REVISION: ${{ inputs.notebook_revision }}
-    - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       with:
         repository: WVURAIL/wvurail.github.io
         ref: ebaef70170bc770905f01e5f7bff1432d3a6a51f
         path: .dependencies/checks
         persist-credentials: false
-    - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+    - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
       with:
         node-version: '22'
     - name: Trim unused Design System styles
@@ -280,7 +280,7 @@ jobs:
         grep -q 'href="/dspira/' _site/index.html
     - name: Upload the built site
       if: always()
-      uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+      uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
       with:
         name: site
         path: _site
