@@ -1,9 +1,7 @@
 # DSPIRA lessons — site configuration.
 #
-# The site is built by GitHub Pages, which runs Jekyll 3.9 through the
-# github-pages gem. Anything that needs a newer Jekyll, or a plugin outside the
-# Pages allowlist, will fail the build silently: Pages emails the repository
-# owner and keeps serving the last good copy, so the site simply stops updating.
+# GitHub Actions builds Jekyll with the repository's locked dependencies.
+# The deployment uploads the resulting static site to GitHub Pages.
 
 title:       DSPIRA
 tagline:     Digital Signal Processing in Radio Astronomy
@@ -68,7 +66,7 @@ plugins:
 # its notebook page and remains excluded from the sitemap.
 
 # The READMEs under lesson-examples/ carry no front matter,
-# so the github-pages gem's own plugins publish them: as pages
+# so the configured plugins publish them: as pages
 # (optional-front-matter), at their directory's index (readme-index), in the
 # `page` layout (default-layout), titled from their opening "# Heading"
 # (titles-from-headings). The layout writes that title as the page's h1, so

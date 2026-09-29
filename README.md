@@ -60,7 +60,10 @@ All published material is public. Keep student records and restricted answer key
 
 ## Preview and validation
 
-The site uses the GitHub Pages gem and Jekyll. For a local preview:
+The site uses Jekyll 3.10 and the plugins listed in `Gemfile`.
+CI and publication use the same `Gemfile.lock` with Ruby 3.3.
+Publication deploys the artifact that passed the full website checks, including scheduled imports.
+For a local preview:
 
 ```sh
 bundle install
