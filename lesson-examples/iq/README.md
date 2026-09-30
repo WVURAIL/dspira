@@ -1,6 +1,6 @@
 # I/Q quadrature sampling
 
-[Read the example on DSPIRA](https://wvurail.org/dspira/iq/).
+[Read the example on DSPIRA](https://rail.wvu.edu/dspira/iq/).
 
 `iq-quadrature-sampling.ipynb` contains the code, explanations, and 13 plots recovered from the published I/Q example.
 The plotting backend is now `%matplotlib inline`, so saved plots work outside a running notebook.

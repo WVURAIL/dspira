@@ -14,7 +14,7 @@ import zipfile
 from publish_pages import make_alias, page_url, redirect
 
 NAMES = ('dspira-archive', 'cra', 'gr-transient')
-BASE = 'https://wvurail.org/dspira/history/sites/'
+BASE = 'https://rail.wvu.edu/dspira/history/sites/'
 RELEASE = 'https://github.com/WVURAIL/dspira/releases/tag/preserved-repositories-2026-09-25'
 MANIFEST = Path(__file__).resolve().parents[1] / '_data/retired_sites.json'
 NOTEBOOK_EXPORTS = {'gbtdrift/index.html', 'labs/05/I_Q_quadrature_sampling.html'}
@@ -60,7 +60,7 @@ def historical_html(text, name, relative):
                 '<meta name="viewport" content="width=device-width, initial-scale=1">'
                 '<title>Historical DSPIRA material</title></head><body>' + text + '</body></html>')
     for old in NAMES:
-        text = text.replace('https://wvurail.org/' + old + '/', BASE + old + '/')
+        text = text.replace('https://rail.wvu.edu/' + old + '/', BASE + old + '/')
         text = re.sub(r'(?<=[\"\x27(])/' + re.escape(old) + '/', '/dspira/history/sites/' + old + '/', text)
     # The source packages replace repository browsing and source-download links.
     text = re.sub(r'https?://github\.com/WVURAIL/(?:dspira-archive|cra|gr-transient|gr-dspira)(?:[/?#][^\s<>\"\x27]*)?',
@@ -100,7 +100,7 @@ def install_aliases(source, site):
     if target.exists():
         raise ValueError('An existing gr-dspira page would be replaced.')
     target.parent.mkdir(parents=True, exist_ok=True)
-    target.write_text(redirect('https://wvurail.org/dspira/software/'), encoding='utf-8')
+    target.write_text(redirect('https://rail.wvu.edu/dspira/software/'), encoding='utf-8')
 
 
 def main():

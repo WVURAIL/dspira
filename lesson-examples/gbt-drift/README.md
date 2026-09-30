@@ -2,7 +2,7 @@
 
 `gbt_drift_scan.ipynb` analyzes a real observation. The 2017 RET-DSPIRA cohort fixed the **Green Bank Telescope** on one position for a 24-hour drift scan. They recorded it with their own GNU Radio spectrometer.
 
-It is worth reading even if you never run it. The calibration section shows how the GBT's noise diode converts arbitrary units to kelvin. This known-temperature source switches on and off throughout the observation. This follows the hot/cold calibration principle in [the Observations lesson](https://wvurail.org/dspira/Observations/). The instrument can perform it continuously.
+It is worth reading even if you never run it. The calibration section shows how the GBT's noise diode converts arbitrary units to kelvin. This known-temperature source switches on and off throughout the observation. This follows the hot/cold calibration principle in [the Observations lesson](https://rail.wvu.edu/dspira/Observations/). The instrument can perform it continuously.
 
 The observation began at 2017-08-01 09:25:56 and ended the following morning. Its dataset contains 19,280 integrations of 4,096 channels.
 
@@ -20,7 +20,7 @@ The format matches `hdf5_sink` output, so you can apply these techniques to your
 ...`). For a horn, use `np.arange(flength)*fstep + fstart` instead. Timestamps include a **+12 h correction for that day's clock error**. Several cells select ranges specific to this 19,280-integration file. Read it as a worked example; the noise-diode
 calibration is the part that transfers.
 
-Read the [notebook preview](https://wvurail.org/dspira/notebooks/gbt-drift/) without Jupyter. It includes ten plots restored from the original 2017 HTML export. Those plots are also saved in the downloadable notebook. They are historical results, not a fresh execution. `gbt_rendered_2017.html` redirects to the preview.
+Read the [notebook preview](https://rail.wvu.edu/dspira/notebooks/gbt-drift/) without Jupyter. It includes ten plots restored from the original 2017 HTML export. Those plots are also saved in the downloadable notebook. They are historical results, not a fresh execution. `gbt_rendered_2017.html` redirects to the preview.
 
 ## What changed when this moved here
 

@@ -69,7 +69,7 @@ Original equations and labels within diagrams may retain their mathematical type
 
 Register each pair in [`_data/teaching_documents.json`](../_data/teaching_documents.json).
 Reusable template downloads and their PDF previews are listed separately in [`_data/teaching_templates.json`](../_data/teaching_templates.json).
-Lesson pages link to PDFs; editable downloads appear only in the [teacher catalog](https://wvurail.org/dspira/teaching-resources/).
+Lesson pages link to PDFs; editable downloads appear only in the [teacher catalog](https://rail.wvu.edu/dspira/teaching-resources/).
 Maintain these local teaching files instead of sending readers to older Google document copies.
 External publications and historical research references retain their publisher's formatting.
 
@@ -104,7 +104,7 @@ Photo and diagram bytes remain unchanged when files move.
 
 - [dspira-software](https://github.com/WVURAIL/dspira-software): telescope applications, GNU Radio flowgraphs, and reusable observation-processing scripts.
 - [dspira-hardware](https://github.com/WVURAIL/dspira-hardware/tree/main/assembly): amplifier parts guides and component locations.
-- [LightWork](https://wvurail.org/lightwork/): technical memos.
+- [LightWork](https://rail.wvu.edu/lightwork/): technical memos.
 
 Link to those resources instead of committing another copy here.
 Keep original author credits, licenses, and editable files with their material.

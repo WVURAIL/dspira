@@ -24,7 +24,7 @@ The website links to categories, whose addresses remain unchanged.
 | 16 | Electronics Forum | [#29](https://github.com/WVURAIL/dspira/discussions/29) |
 | 15 | USB Quality | [#26](https://github.com/WVURAIL/dspira/discussions/26) |
 | 10 | Velocity Curve Activity Question | [#22](https://github.com/WVURAIL/dspira/discussions/22) |
-| 29 | wvurail.org will be moving to rail.wvu.edu | [#34](https://github.com/WVURAIL/dspira/discussions/34) |
+| 29 | rail.wvu.edu will be moving to rail.wvu.edu | [#34](https://github.com/WVURAIL/dspira/discussions/34) |
 | 30 | new lab email is rail@wvu.edu | [#35](https://github.com/WVURAIL/dspira/discussions/35) |
 
 The contributor wiki and recovery release were also copied to the active repository.

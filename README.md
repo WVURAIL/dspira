@@ -1,7 +1,7 @@
 # DSPIRA lessons
 
 Lessons and classroom resources for Digital Signal Processing in Radio Astronomy.
-Visit the [DSPIRA website](https://wvurail.org/dspira/) for teaching materials and downloads.
+Visit the [DSPIRA website](https://rail.wvu.edu/dspira/) for teaching materials and downloads.
 Start with [CONTRIBUTING.md](CONTRIBUTING.md) to suggest changes or submit a lesson.
 
 The approved site publishes from `main`. The former approval preview is archived.
@@ -46,7 +46,7 @@ See the [hardware publication instructions](tools/README.md#hardware-document-pu
 
 ## Add or update a lesson
 
-Teachers can use the [submission guide](https://wvurail.org/dspira/newpost/) without using GitHub.
+Teachers can use the [submission guide](https://rail.wvu.edu/dspira/newpost/) without using GitHub.
 For repository contributions, follow [CONTRIBUTING.md](CONTRIBUTING.md) and the [lesson template](_includes/lesson-template.txt).
 
 Each lesson needs one module, a position within that module, and a stable public address.
@@ -89,6 +89,6 @@ Preserved source notices and vendored libraries retain their original naming.
 
 ## Historical material
 
-The [history page](https://wvurail.org/dspira/history/) links preserved material and recovery ZIPs.
+The [history page](https://rail.wvu.edu/dspira/history/) links preserved material and recovery ZIPs.
 Retired repository snapshots remain separate from current lesson assets.
-The [repository map](https://wvurail.org/dspira/repository-map/) explains old names and current ownership.
+The [repository map](https://rail.wvu.edu/dspira/repository-map/) explains old names and current ownership.

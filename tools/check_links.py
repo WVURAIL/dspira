@@ -421,13 +421,13 @@ def main():
 
             parsed = urllib.parse.urlparse(u)
             # Only URLs under this site's baseurl are ours to verify.
-            # wvurail.org also hosts sibling projects (/lightwork/,
+            # rail.wvu.edu also hosts sibling projects (/lightwork/,
             # /dspira-2019/ and so on) that live in other repositories, so
             # those are external as far as this checker is concerned.
             norm_path = re.sub(r"/{2,}", "/", parsed.path)
             host = (parsed.hostname or "").lower()
             is_site = (not parsed.netloc) or (
-                (host == "wvurail.org" or host.endswith(".wvurail.org"))
+                (host == "rail.wvu.edu" or host.endswith(".rail.wvu.edu"))
                 and re.match(rf"^/?{re.escape(args.baseurl.strip('/'))}(/|$)",
                              norm_path)
             )
@@ -439,7 +439,7 @@ def main():
             path = urllib.parse.unquote(parsed.path)
             frag = parsed.fragment
             # Collapse duplicate slashes first: links in the wild are written
-            # as wvurail.org//dspira/... fairly often, and the server
+            # as rail.wvu.edu//dspira/... fairly often, and the server
             # serves those fine, so they must not be reported as broken.
             path = re.sub(r"/{2,}", "/", path)
             path = re.sub(rf"^/?{re.escape(base)}/?", "", path).strip("/")
