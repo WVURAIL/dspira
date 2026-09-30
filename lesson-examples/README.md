@@ -2,7 +2,7 @@
 
 These notebooks and sample datasets accompany the DSPIRA lessons.
 
-[Read all notebook examples on the website](https://wvurail.org/dspira/notebooks/).
+[Read all notebook examples on the website](https://rail.wvu.edu/dspira/notebooks/).
 Each page includes the explanations, code, available results, and a notebook download.
 Choose an example, then follow its README for dependencies and instructions.
 

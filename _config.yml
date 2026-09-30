@@ -46,7 +46,7 @@ lab_url: ""
 # the org site's CNAME); canonicals, og:url, the sitemap and the feed do. Change
 # to https://rail.wvu.edu in the same commit as the org repo's CNAME move — the
 # full checklist is .github/CUTOVER.md in wvurail.github.io.
-url:         "https://wvurail.org"
+url:         "https://rail.wvu.edu"
 date_format: "%B %-d, %Y"
 
 github_username: WVURAIL

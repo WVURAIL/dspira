@@ -1,7 +1,7 @@
 # Contributing to DSPIRA
 
 Teachers can send a Word document, shared document, or worksheet to rail@wvu.edu.
-Start with the [submission guide](https://wvurail.org/dspira/newpost/) and its planning template.
+Start with the [submission guide](https://rail.wvu.edu/dspira/newpost/) and its planning template.
 GitHub is optional for lesson authors.
 
 ## Repository responsibilities
@@ -56,7 +56,7 @@ When retiring a duplicate PDF, preserve its old download addresses in `_data/leg
 
 Publish a PDF beside every teaching document. Keep Word files for worksheets and guides, and PowerPoint files for slides.
 Use matching filenames, such as `worksheet.docx` and `worksheet.pdf`.
-Start from the Word or PowerPoint template in the [teaching catalog](https://wvurail.org/dspira/teaching-resources/).
+Start from the Word or PowerPoint template in the [teaching catalog](https://rail.wvu.edu/dspira/teaching-resources/).
 
 - Use Arial for body text and headings, preserving specialist math fonts where needed.
 - Use a WVU DSPIRA header and a footer with the site address and page number.

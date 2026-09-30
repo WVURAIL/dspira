@@ -1,6 +1,6 @@
 # Lecture slides
 
-Browse the [teaching resources page](https://wvurail.org/dspira/teaching-resources/) for classroom downloads.
+Browse the [teaching resources page](https://rail.wvu.edu/dspira/teaching-resources/) for classroom downloads.
 This index describes the files maintained in this directory.
 
 Files are grouped by subject, with no intermediate year folders.

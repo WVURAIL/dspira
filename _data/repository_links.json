@@ -5,8 +5,8 @@
     "behavior": "GitHub repository redirect"
   },
   {
-    "old": "https://wvurail.org/dspira-lessons/",
-    "new": "https://wvurail.org/dspira/",
+    "old": "https://rail.wvu.edu/dspira-lessons/",
+    "new": "https://rail.wvu.edu/dspira/",
     "behavior": "Website compatibility redirects and downloads"
   },
   {
@@ -16,7 +16,7 @@
   },
   {
     "old": "https://github.com/WVURAIL/cra",
-    "new": "https://wvurail.org/dspira/",
+    "new": "https://rail.wvu.edu/dspira/",
     "behavior": "Historical repository retained with current lesson links"
   },
   {

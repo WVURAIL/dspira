@@ -43,7 +43,7 @@ class HardwarePublicationTests(unittest.TestCase):
 
     def test_new_revision_refreshes_documents_and_browser_versions(self):
         page = self.site / 'index.html'
-        page.write_text('<link rel="canonical" href="https://wvurail.org/dspira/">'
+        page.write_text('<link rel="canonical" href="https://rail.wvu.edu/dspira/">'
                         '<a href="/dspira/assets/hardware/assembly/guide.pdf#page=2">View PDF</a>')
         publish_hardware(self.site, self.manifest, fetch=self.fetch)
         version_downloads(self.site)
@@ -95,13 +95,13 @@ class HardwarePublicationTests(unittest.TestCase):
     def test_schedule_skips_unchanged_sources_and_detects_new_documents(self):
         record = publish_hardware(self.site, self.manifest, fetch=self.fetch)
         fetch = lambda url: json.dumps(record).encode()
-        url = 'https://wvurail.org/dspira/assets/hardware/source.json'
+        url = 'https://rail.wvu.edu/dspira/assets/hardware/source.json'
         self.assertFalse(needs_update(self.manifest, self.revision, url, fetch))
         self.assertTrue(needs_update(self.manifest, 'b' * 40, url, fetch))
         self.assertTrue(needs_update({'files': ['new-guide.pdf']}, self.revision, url, fetch))
 
     def test_first_publication_is_detected_but_server_errors_remain_errors(self):
-        url = 'https://wvurail.org/dspira/assets/hardware/source.json'
+        url = 'https://rail.wvu.edu/dspira/assets/hardware/source.json'
         def missing(url): raise HTTPError(url, 404, 'Missing', {}, None)
         self.assertTrue(needs_update(self.manifest, self.revision, url, missing))
         def unavailable(url): raise HTTPError(url, 503, 'Unavailable', {}, None)

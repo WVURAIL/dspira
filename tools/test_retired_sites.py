@@ -76,7 +76,7 @@ class PreservationTests(unittest.TestCase):
             self.assertFalse((root / 'unsafe').exists())
 
     def test_rewrites_legacy_assets_and_canonical(self):
-        original = '<html><head><link rel="canonical" href="old"></head><body><img src="/cra/example.png"><a href="https://wvurail.org/cra/guide/">Guide</a></body></html>'
+        original = '<html><head><link rel="canonical" href="old"></head><body><img src="/cra/example.png"><a href="https://rail.wvu.edu/cra/guide/">Guide</a></body></html>'
         result = historical_html(original, 'cra', Path('guide/index.html'))
         self.assertIn('src="/dspira/history/sites/cra/example.png"', result)
         self.assertNotIn('href="old"', result)
