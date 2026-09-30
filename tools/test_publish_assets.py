@@ -72,10 +72,10 @@ class DownloadVersionTests(unittest.TestCase):
         self.pdf = self.site / 'assets/Lesson sheet.pdf'
         self.pdf.write_bytes(b'%PDF current lesson')
         self.index = self.site / 'index.html'
-        self.index.write_text('<link rel="canonical" href="https://wvurail.org/dspira/">')
+        self.index.write_text('<link rel="canonical" href="https://rail.wvu.edu/dspira/">')
         (self.site / 'lesson').mkdir()
         self.page = self.site / 'lesson/index.html'
-        self.head = '<link href="https://wvurail.org/dspira/lesson/" rel="canonical">'
+        self.head = '<link href="https://rail.wvu.edu/dspira/lesson/" rel="canonical">'
 
     def test_changed_files_get_new_versions_without_losing_queries_or_fragments(self):
         self.page.write_text(self.head + '<a href="../assets/Lesson%20sheet.pdf?download=1&amp;v=old#page=2">PDF</a>')
@@ -99,7 +99,7 @@ class DownloadVersionTests(unittest.TestCase):
     def test_root_absolute_and_embedded_downloads_use_same_file_version(self):
         self.page.write_text(self.head +
             '<a href="/dspira/assets/Lesson%20sheet.pdf">PDF</a>' +
-            "<iframe src='https://wvurail.org/dspira/assets/Lesson%20sheet.pdf#page=3'></iframe>")
+            "<iframe src='https://rail.wvu.edu/dspira/assets/Lesson%20sheet.pdf#page=3'></iframe>")
         self.assertEqual(version_downloads(self.site), 2)
         digest = hashlib.sha256(self.pdf.read_bytes()).hexdigest()[:12]
         self.assertEqual(self.page.read_text().count('v=' + digest), 2)

@@ -74,9 +74,9 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--site', required=True, type=Path)
     parser.add_argument('--alias', type=Path)
-    parser.add_argument('--canonical', default='https://wvurail.org/dspira/')
+    parser.add_argument('--canonical', default='https://rail.wvu.edu/dspira/')
     parser.add_argument('--archive', type=Path)
-    parser.add_argument('--archive-url', default='https://wvurail.org/dspira-archive/')
+    parser.add_argument('--archive-url', default='https://rail.wvu.edu/dspira-archive/')
     args = parser.parse_args()
     if args.alias:
         make_alias(args.site, args.alias, args.canonical)

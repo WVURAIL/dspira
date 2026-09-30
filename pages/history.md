@@ -14,9 +14,9 @@ The material below records earlier courses and research projects. Historical sof
 
 ## Earlier websites
 
-- [DSPIRA institute materials](https://wvurail.org/dspira/history/sites/dspira-archive/)
-- [Classroom Radio Astronomy materials](https://wvurail.org/dspira/history/sites/cra/)
-- [Radio transient experiments](https://wvurail.org/dspira/history/sites/gr-transient/)
+- [DSPIRA institute materials](https://rail.wvu.edu/dspira/history/sites/dspira-archive/)
+- [Classroom Radio Astronomy materials](https://rail.wvu.edu/dspira/history/sites/cra/)
+- [Radio transient experiments](https://rail.wvu.edu/dspira/history/sites/gr-transient/)
 
 Old website pages redirect to these preserved copies. Existing worksheet and data download addresses remain available.
 The main lab site maintains those addresses. The retired repositories no longer publish the websites.

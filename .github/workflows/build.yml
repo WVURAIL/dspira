@@ -271,7 +271,8 @@ jobs:
     - name: Preserve old institute addresses
       run: |
         python3 tools/test_publish_pages.py
-        python3 tools/publish_pages.py --site _site --archive _retired/dspira-archive --archive-url https://wvurail.org/dspira/history/sites/dspira-archive/
+        cp -a _site/history/sites/dspira-archive _migrated-dspira-archive
+        python3 tools/publish_pages.py --site _site --archive _migrated-dspira-archive --archive-url https://rail.wvu.edu/dspira/history/sites/dspira-archive/
         test -s _site/index.html
         test -s _site/teach/index.html
         test -s _site/labs/01/index.html
