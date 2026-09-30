@@ -2,9 +2,10 @@ import hashlib
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import patch
 import zipfile
 
-from retired_sites import extract_verified, historical_html, install_aliases, install_history, NAMES
+from retired_sites import extract_verified, historical_html, install_aliases, install_history, NAMES, PDF_OVERRIDES
 
 
 class PreservationTests(unittest.TestCase):
@@ -64,6 +65,47 @@ class PreservationTests(unittest.TestCase):
             restored = root / 'with-override/history/sites/dspira-archive/gbtdrift'
             self.assertIn('href="custom.css"', (restored / 'index.html').read_text())
             self.assertEqual((restored / 'custom.css').read_text(), 'body { color: navy; }')
+
+    def test_domain_updates_only_published_copies(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            package = root / 'sites.zip'
+            old_host = 'old.example.edu'
+            original_pdf = b'%PDF-original'
+            revised_pdf = root / 'revised.pdf'
+            revised_pdf.write_bytes(b'%PDF-updated')
+            with zipfile.ZipFile(package, 'w') as archive:
+                for name in NAMES:
+                    archive.writestr(name + '/index.html',
+                        '<html><head><link rel="canonical" href="https://' + old_host
+                        + '/' + name + '/"></head><body>https://' + old_host
+                        + '/dspira/ https://external.example.edu/</body></html>')
+                    archive.writestr(name + '/README.md', 'https://' + old_host + '/dspira/')
+                    archive.writestr(name + '/worksheet.pdf', original_pdf)
+            digest = hashlib.sha256(package.read_bytes()).hexdigest()
+            extract_verified(package, root / 'source', digest)
+            overrides = {'cra/worksheet.pdf': (
+                hashlib.sha256(original_pdf).hexdigest(), str(revised_pdf))}
+            (root / 'active').mkdir()
+            pinned_text = root / 'active/pinned-readme.txt'
+            pinned_text.write_text('https://' + old_host + '/dspira/')
+            lesson_alias = root / 'aliases/dspira-lessons/README.md'
+            lesson_alias.parent.mkdir(parents=True)
+            lesson_alias.write_text(pinned_text.read_text())
+            with patch.dict(PDF_OVERRIDES, overrides, clear=True):
+                install_history(root / 'source', root / 'active')
+                install_aliases(root / 'source', root / 'aliases')
+            for destination in (root / 'active/history/sites', root / 'aliases'):
+                self.assertEqual((destination / 'cra/worksheet.pdf').read_bytes(), b'%PDF-updated')
+                self.assertEqual((destination / 'cra/README.md').read_text(), 'https://rail.wvu.edu/dspira/')
+                self.assertNotIn(old_host, (destination / 'cra/index.html').read_text())
+            self.assertEqual(pinned_text.read_text(), 'https://rail.wvu.edu/dspira/')
+            self.assertEqual(lesson_alias.read_text(), 'https://rail.wvu.edu/dspira/')
+            self.assertIn('https://external.example.edu/',
+                          (root / 'active/history/sites/cra/index.html').read_text())
+            self.assertEqual((root / 'source/cra/worksheet.pdf').read_bytes(), original_pdf)
+            self.assertIn(old_host, (root / 'source/cra/index.html').read_text())
+            self.assertEqual(hashlib.sha256(package.read_bytes()).hexdigest(), digest)
 
     def test_rejects_wrong_checksum_and_traversal(self):
         with tempfile.TemporaryDirectory() as temporary:
