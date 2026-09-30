@@ -139,6 +139,7 @@ Change the FFT block's window field in your spectrometer flowgraph. Observe how 
 
 ## 5.6. Spectral Leakage and Polyphase Filter Bank (PFB)
 <span id="56-spectral-leakage--polyphase-filter-bank-pfb"></span>
+<span id="57-spectral-leakage--polyphase-filter-bank-pfb"></span>
 
 Despite the appropriate windowing, spectral leakage persists, moreover there is something called a scalloping loss. Scalloping loss occurs between frequency-bin centers because each bin's frequency response is not flat. 
 

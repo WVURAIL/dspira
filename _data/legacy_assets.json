@@ -1863,6 +1863,14 @@
     {
       "legacy": "assets/lessons/telescope-research/public-use-poster.pptx",
       "source": "assets/retired/public-use-poster.pptx"
+    },
+    {
+      "legacy": "labs/01_1/img/sampling.png",
+      "source": "images/dsp-intro/sampling.png"
+    },
+    {
+      "legacy": "labs/01_1/img/lfsr_noise.png",
+      "source": "images/dsp-intro/lfsr-noise.png"
     }
   ]
 }
