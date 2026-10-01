@@ -1,8 +1,14 @@
 # Contributing to DSPIRA
 
 Teachers can send a Word document, shared document, or worksheet to rail@wvu.edu.
-Start with the [submission guide](https://rail.wvu.edu/dspira/newpost/) and its planning template.
-GitHub is optional for lesson authors.
+Start with the [submission guide](https://rail.wvu.edu/dspira/newpost/). GitHub is optional for lesson authors.
+
+Choose the template that fits your contribution:
+
+- [Word lesson template (.dotx)](https://rail.wvu.edu/dspira/assets/templates/wvu-dspira-lesson-template.dotx) for an editable classroom document.
+- [Website lesson template (Markdown)](https://rail.wvu.edu/dspira/assets/templates/lesson-template.txt) for a lesson submitted through GitHub.
+
+Use the submission guide's download links to save these files. Save the Markdown template as `lesson-template.md`.
 
 ## Repository responsibilities
 
@@ -19,7 +25,7 @@ system images need a separate download location, linked from the lesson page.
 
 ## Submit a lesson with GitHub
 
-1. Start from `_includes/lesson-template.txt` or the published Markdown template download. Replace every prompt.
+1. Start from the [website lesson template](https://rail.wvu.edu/dspira/assets/templates/lesson-template.txt). Replace every prompt.
 2. Save it under `_posts/` as `YYYY-MM-DD-short-name.md`.
 3. Set `title`, `summary`, `categories`, `order`, and a permanent `permalink`.
 4. Choose exactly one category from `_data/modules.yml`. Use an unused order value in that module.
@@ -37,7 +43,7 @@ Use a local preview when reviewing changes. The former approval preview is archi
 
 ## Videos and printable materials
 
-Embed lesson videos with the shared include. Give each video a descriptive title and keep its original watch link.
+Embed lesson videos with the shared include. Give each video a descriptive title and its original YouTube URL.
 Use `start=433` to begin at 7:13. For a playlist, replace `video` with `playlist` and use the playlist ID.
 
 ```liquid
@@ -46,7 +52,7 @@ Use `start=433` to begin at 7:13. For a playlist, replace `video` with `playlist
 
 Wrap the include in `<figure class="lesson-video">` and `</figure>` on separate lines.
 Use a unique figure ID when another sentence links to the video.
-The player loads lazily and the watch link also works in print.
+The title becomes a linked caption that also works in print. The player loads lazily.
 
 Put short instructions directly on the lesson page.
 Keep PDFs that serve a printing purpose, such as construction plans, worksheets, presentations, and teacher planning sheets.

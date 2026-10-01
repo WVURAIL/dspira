@@ -6,4 +6,4 @@
     allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     allowfullscreen></iframe>
 </div>
-<figcaption>{{ include.title | escape }}. <a href="{{ include.url | escape_once }}">Watch on YouTube<span class="visually-hidden">: {{ include.title | escape }}</span></a>.</figcaption>
+<figcaption><a href="{{ include.url | escape_once }}">{{ include.title | escape }}</a>.</figcaption>
