@@ -89,6 +89,6 @@ Preserved source notices and vendored libraries retain their original naming.
 
 ## Historical material
 
-The [history page](https://rail.wvu.edu/dspira/history/) links preserved material and recovery ZIPs.
-Retired repository snapshots remain separate from current lesson assets.
+The [history page](https://rail.wvu.edu/dspira/history/) links retained experiments, original files, and lab images.
+These resources are stored in active repositories and remain independent of the deleted recovery releases.
 The [repository map](https://rail.wvu.edu/dspira/repository-map/) explains old names and current ownership.

@@ -31,10 +31,10 @@ The contributor wiki and recovery release were also copied to the active reposit
 Existing outside collaborators received invitations with their previous permissions.
 They may need to accept those invitations to regain access.
 
-The [repository backup](https://github.com/WVURAIL/dspira/releases/tag/repository-swap-2026-09-25) contains both repositories and both wikis as Git bundles.
-It also contains discussion exports, this number mapping, and public pull request records.
-The old repository's open coverage draft contained no file changes; its records and branch are included in the backup.
-The [preserved project downloads](https://github.com/WVURAIL/dspira/releases/tag/preserved-repositories-2026-09-25) remain available under the active name.
+The migration created offline recovery packages containing both repositories, both wikis, discussion exports, this number mapping, and public pull request records.
+The old repository's open coverage draft contained no file changes; its records and branch were included in the backup.
+The public recovery releases were intentionally deleted on September 30, 2026.
+The active site no longer advertises or downloads those packages.
 
 The repository left at `WVURAIL/dspira-lessons` was deleted after the active project and backups were verified.
 Old website addresses are served by the lab website and do not depend on that repository.

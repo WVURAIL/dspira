@@ -27,9 +27,9 @@ The public map is generated from `_data/repository_links.json` and available at
 - GitHub redirects gr-radio_astro to radio-research-software. Keep that old name unused too.
 - Individual GitHub file moves have no redirect. The map includes replacement
   flowgraph URLs and immutable original commit links.
-- wvurail.github.io serves the old dspira-lessons, dspira-archive, cra, and gr-transient website paths.
-- The retired repositories contain forwarding notices. Their recovery packages live in a DSPIRA release.
-- See ARCHIVE_RETIREMENT.md for restoration, hosting ownership, and deletion limits.
+- wvurail.github.io serves the old dspira-lessons paths and the gr-dspira software redirect.
+- Archive-dependent websites and recovery downloads were retired after their releases were deleted.
+- See ARCHIVE_RETIREMENT.md for current hosting ownership and retained material.
 - Original commit messages, tags, citations, binary documents, and frozen research
   instructions retain historical names. Their continued presence is intentional.
 - Ubuntu 20.04 instructions use the preserved gr38 release line. They do not refer
