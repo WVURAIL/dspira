@@ -34,13 +34,24 @@ def page_url(base, relative):
     return base.rstrip('/') + '/' + quote(path, safe='/')
 
 
-def make_alias(source, destination, canonical):
+def make_alias(source, destination, canonical, exclude=()):
     source, destination = Path(source).resolve(), Path(destination).resolve()
     if source == destination or source in destination.parents or destination in source.parents:
         raise ValueError('Alias and source directories must be separate.')
     if destination.exists():
         raise ValueError('Alias destination must not already exist.')
-    shutil.copytree(source, destination)
+    excluded = set()
+    for value in exclude:
+        relative = Path(value)
+        if relative.is_absolute() or '..' in relative.parts or relative == Path('.'):
+            raise ValueError('Excluded alias paths must be relative and stay inside the source.')
+        excluded.add(relative.as_posix())
+
+    def ignore(directory, names):
+        relative = Path(directory).relative_to(source)
+        return [name for name in names if (relative / name).as_posix() in excluded]
+
+    shutil.copytree(source, destination, ignore=ignore if excluded else None)
     for path in destination.rglob('*.html'):
         path.write_text(redirect(page_url(canonical, path.relative_to(destination))), encoding='utf-8')
     for name in ('CNAME', 'sitemap.xml', 'sitemap.xml.gz', 'feed.xml'):
@@ -75,11 +86,13 @@ def main():
     parser.add_argument('--site', required=True, type=Path)
     parser.add_argument('--alias', type=Path)
     parser.add_argument('--canonical', default='https://rail.wvu.edu/dspira/')
+    parser.add_argument('--exclude', action='append', default=[],
+                        help='Relative source path to omit from an alias copy; repeat for multiple paths.')
     parser.add_argument('--archive', type=Path)
     parser.add_argument('--archive-url', default='https://rail.wvu.edu/dspira-archive/')
     args = parser.parse_args()
     if args.alias:
-        make_alias(args.site, args.alias, args.canonical)
+        make_alias(args.site, args.alias, args.canonical, args.exclude)
         print('Created compatibility site:', args.alias)
     if args.archive:
         print('Preserved archive paths:', add_archive_paths(args.site, args.archive, args.archive_url))

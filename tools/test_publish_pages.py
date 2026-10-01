@@ -48,6 +48,47 @@ class MigrationTests(unittest.TestCase):
             self.assertEqual((root / 'site/test.grc').read_bytes(), b'flowgraph')
             self.assertFalse((root / 'site/sitemap.xml').exists())
 
+
+    def test_explicit_alias_exclusion_preserves_existing_downloads_and_redirects(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source = root / 'source'
+            originals = {
+                'index.html': b'current homepage',
+                'history/index.html': b'current history page',
+                'history/experiments/index.html': b'current experiment catalog',
+                'assets/history/new-recovery.zip': b'new canonical download',
+                'assets/lessons/existing.pdf': b'existing download bytes',
+                'assets/history-notes.txt': b'not part of excluded directory',
+            }
+            for relative, data in originals.items():
+                path = source / relative
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_bytes(data)
+            alias = root / 'alias'
+            make_alias(source, alias, '/dspira/', exclude=['assets/history'])
+            self.assertFalse((alias / 'assets/history').exists())
+            for relative in ('assets/lessons/existing.pdf', 'assets/history-notes.txt'):
+                self.assertEqual((alias / relative).read_bytes(), originals[relative])
+            self.assertIn('/dspira/history/', (alias / 'history/index.html').read_text())
+            self.assertIn('/dspira/history/experiments/', (alias / 'history/experiments/index.html').read_text())
+            for relative, data in originals.items():
+                self.assertEqual((source / relative).read_bytes(), data)
+
+            make_alias(source, root / 'complete-alias', '/dspira/')
+            self.assertEqual((root / 'complete-alias/assets/history/new-recovery.zip').read_bytes(),
+                             originals['assets/history/new-recovery.zip'])
+
+    def test_alias_exclusions_must_stay_inside_source(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source = root / 'source'
+            source.mkdir()
+            for excluded in ('.', '..', '../outside', '/absolute'):
+                with self.assertRaises(ValueError):
+                    make_alias(source, root / 'alias', '/dspira/', exclude=[excluded])
+                self.assertFalse((root / 'alias').exists())
+
     def test_rejects_nested_destinations(self):
         with tempfile.TemporaryDirectory() as directory:
             with self.assertRaises(ValueError):

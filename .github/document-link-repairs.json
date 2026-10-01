@@ -1,0 +1,198 @@
+{
+  "date": "2026-09-30",
+  "purpose": "Repair confirmed broken citation destinations in current documents without changing visible content. Explicit historical versions remain unchanged.",
+  "documents": [
+    {
+      "file": "assets/lessons/lectures/astronomy/motion-of-the-sky.pdf",
+      "original_sha256": "ef3479362415348182ef5bb5d2561ea50991688e82325ebedf4c2650c08da38f",
+      "updated_sha256": "d2f8d697f4a2ff5c62f908da86abbe1ee8c85c2890681f059ccf01fcbf6c712f",
+      "changes": [
+        {
+          "page": 1,
+          "annotation_xref": 785,
+          "old_url": "http://www.youtube.com/watch?",
+          "new_url": "https://www.youtube.com/watch?v=17jymDn0W6U",
+          "mapping_type": "exact_printed_video_id",
+          "evidence": "Full video ID is printed immediately below the truncated hyperlink; official YouTube metadata verified title The Known Universe by AMNH #datavisualization and author American Museum of Natural History."
+        },
+        {
+          "page": 23,
+          "annotation_xref": 808,
+          "old_url": "http://www.youtube.com/watch?",
+          "new_url": "https://www.youtube.com/watch?v=3V3rmDG5J8A",
+          "mapping_type": "exact_printed_video_id",
+          "evidence": "Full video ID is printed immediately below the truncated hyperlink; official YouTube metadata verified title Star Trail Time Lapse and author Nachtwolke."
+        },
+        {
+          "page": 23,
+          "annotation_xref": 809,
+          "old_url": "http://www.youtube.com/watch?",
+          "new_url": "https://www.youtube.com/watch?v=uHcRPJFR47Q",
+          "mapping_type": "exact_printed_video_id",
+          "evidence": "Full video ID is printed immediately below the truncated hyperlink; official YouTube metadata verified title Time Lapse - 26th June 2011 and author Stuart Brown."
+        },
+        {
+          "page": 23,
+          "annotation_xref": 810,
+          "old_url": "http://www.youtube.com/watch?",
+          "new_url": "https://www.youtube.com/watch?v=ANAmiuAkyGQ",
+          "mapping_type": "exact_printed_video_id",
+          "evidence": "Full video ID is printed immediately below the truncated hyperlink; official YouTube metadata verified title Star Spin - Earth Rotates Under Starry Sky Composite Time Lapse V06709txm and author JCMegabyte."
+        }
+      ],
+      "validation": {
+        "visible_text_unchanged": true,
+        "rendered_pixels_unchanged": true,
+        "all_other_office_members_identical": null
+      }
+    },
+    {
+      "file": "assets/lessons/lectures/astronomy/motion-of-the-sky.pptx",
+      "original_sha256": "77bce9b4702cf44f34911befd948af74bf7630c7e4c8a10187b5a3d5bb737c7c",
+      "updated_sha256": "b38400d539a49918adb94ee00878e3b6ce4e9613bbd223ff29384231e107d0d5",
+      "changes": [
+        {
+          "relationship_part": "ppt/slides/_rels/slide1.xml.rels",
+          "relationship_id": "rIdDspiraLink7",
+          "old_url": "http://www.youtube.com/watch?",
+          "new_url": "https://www.youtube.com/watch?v=17jymDn0W6U",
+          "mapping_type": "exact_printed_video_id",
+          "evidence": "Full video ID is printed immediately below the truncated hyperlink; official YouTube metadata verified title The Known Universe by AMNH #datavisualization and author American Museum of Natural History."
+        },
+        {
+          "relationship_part": "ppt/slides/_rels/slide23.xml.rels",
+          "relationship_id": "rIdDspiraLink1",
+          "old_url": "http://www.youtube.com/watch?",
+          "new_url": "https://www.youtube.com/watch?v=3V3rmDG5J8A",
+          "mapping_type": "exact_printed_video_id",
+          "evidence": "Full video ID is printed immediately below the truncated hyperlink; official YouTube metadata verified title Star Trail Time Lapse and author Nachtwolke."
+        },
+        {
+          "relationship_part": "ppt/slides/_rels/slide23.xml.rels",
+          "relationship_id": "rIdDspiraLink2",
+          "old_url": "http://www.youtube.com/watch?",
+          "new_url": "https://www.youtube.com/watch?v=uHcRPJFR47Q",
+          "mapping_type": "exact_printed_video_id",
+          "evidence": "Full video ID is printed immediately below the truncated hyperlink; official YouTube metadata verified title Time Lapse - 26th June 2011 and author Stuart Brown."
+        },
+        {
+          "relationship_part": "ppt/slides/_rels/slide23.xml.rels",
+          "relationship_id": "rIdDspiraLink3",
+          "old_url": "http://www.youtube.com/watch?",
+          "new_url": "https://www.youtube.com/watch?v=ANAmiuAkyGQ",
+          "mapping_type": "exact_printed_video_id",
+          "evidence": "Full video ID is printed immediately below the truncated hyperlink; official YouTube metadata verified title Star Spin - Earth Rotates Under Starry Sky Composite Time Lapse V06709txm and author JCMegabyte."
+        }
+      ],
+      "validation": {
+        "visible_text_unchanged": true,
+        "rendered_pixels_unchanged": null,
+        "all_other_office_members_identical": true
+      }
+    },
+    {
+      "file": "assets/lessons/lectures/astronomy/units-and-scales.pdf",
+      "original_sha256": "a7483976f4f8ffd508a513cb4b47b53c557d7aa80df3d8b220b9486020acee06",
+      "updated_sha256": "69ffac351225ef8f539f02eecb9a617e0943bad0266c17165ce8e6e0ff0dd8ec",
+      "changes": [
+        {
+          "page": 23,
+          "annotation_xref": 868,
+          "old_url": "http://www.youtube.com/watch?",
+          "new_url": "https://www.youtube.com/watch?v=17jymDn0W6U",
+          "mapping_type": "exact_printed_video_id",
+          "evidence": "Full video ID is printed immediately below the truncated hyperlink; official YouTube metadata verified title The Known Universe by AMNH #datavisualization and author American Museum of Natural History."
+        },
+        {
+          "page": 26,
+          "annotation_xref": 873,
+          "old_url": "https://www.youtube.com/watch?",
+          "new_url": "https://www.youtube.com/watch?v=ShTxGumvbno",
+          "mapping_type": "exact_printed_video_id",
+          "evidence": "Full video ID is printed immediately below the truncated hyperlink; official YouTube metadata verified title The Cosmic Calendar | Cosmos: A Spacetime Odyssey and author National Geographic."
+        }
+      ],
+      "validation": {
+        "visible_text_unchanged": true,
+        "rendered_pixels_unchanged": true,
+        "all_other_office_members_identical": null
+      }
+    },
+    {
+      "file": "assets/lessons/lectures/astronomy/units-and-scales.pptx",
+      "original_sha256": "1fe160febf2953d5c023bfe75728c0f24f6fe9e78a3100dbd266c80e30e3a2fb",
+      "updated_sha256": "fe673614a020b922a6be7b4bae3c385f2993ea1e36e8810ca0cf7319a6591f26",
+      "changes": [
+        {
+          "relationship_part": "ppt/slides/_rels/slide23.xml.rels",
+          "relationship_id": "rIdDspiraLink2",
+          "old_url": "http://www.youtube.com/watch?",
+          "new_url": "https://www.youtube.com/watch?v=17jymDn0W6U",
+          "mapping_type": "exact_printed_video_id",
+          "evidence": "Full video ID is printed immediately below the truncated hyperlink; official YouTube metadata verified title The Known Universe by AMNH #datavisualization and author American Museum of Natural History."
+        },
+        {
+          "relationship_part": "ppt/slides/_rels/slide26.xml.rels",
+          "relationship_id": "rIdDspiraLink1",
+          "old_url": "https://www.youtube.com/watch?",
+          "new_url": "https://www.youtube.com/watch?v=ShTxGumvbno",
+          "mapping_type": "exact_printed_video_id",
+          "evidence": "Full video ID is printed immediately below the truncated hyperlink; official YouTube metadata verified title The Cosmic Calendar | Cosmos: A Spacetime Odyssey and author National Geographic."
+        }
+      ],
+      "validation": {
+        "visible_text_unchanged": true,
+        "rendered_pixels_unchanged": null,
+        "all_other_office_members_identical": true
+      }
+    },
+    {
+      "file": "assets/worksheets/electromagnetic-spectrum/doppler-effect.docx",
+      "original_sha256": "6aed4427a726e25a153c0cce1293a71f7ce377fd259f4d03ab57790bbcc11e95",
+      "updated_sha256": "53d3b89a24ce190d84c66f71026a28fb387c3a68599b0a7f4dfd92f9420dacd4",
+      "changes": [
+        {
+          "relationship_part": "word/_rels/document.xml.rels",
+          "relationship_id": "rId19",
+          "old_url": "https://greenbankobservatory.org/science/telescopes/40-ft/",
+          "new_url": "https://greenbankobservatory.org/about/telescopes/40-foot/",
+          "mapping_type": "verified_same_resource",
+          "evidence": "Same observatory telescope page at its current official path."
+        }
+      ],
+      "validation": {
+        "visible_text_unchanged": true,
+        "rendered_pixels_unchanged": null,
+        "all_other_office_members_identical": true
+      }
+    },
+    {
+      "file": "assets/worksheets/electromagnetic-spectrum/doppler-effect.pdf",
+      "original_sha256": "ababb4feab99e184b38d1cad682d38fde8322858273ab68fc6e3f80548b1e54a",
+      "updated_sha256": "0f3e4ff3dc73dc9be76130490c45b09aec15abcf67b5fd2f69e89d653bfcc663",
+      "changes": [
+        {
+          "page": 3,
+          "annotation_xref": 174,
+          "old_url": "https://greenbankobservatory.org/science/telescopes/40-ft/",
+          "new_url": "https://greenbankobservatory.org/about/telescopes/40-foot/",
+          "mapping_type": "verified_same_resource",
+          "evidence": "Same observatory telescope page at its current official path."
+        },
+        {
+          "page": 3,
+          "annotation_xref": 175,
+          "old_url": "https://greenbankobservatory.org/science/telescopes/40-ft/",
+          "new_url": "https://greenbankobservatory.org/about/telescopes/40-foot/",
+          "mapping_type": "verified_same_resource",
+          "evidence": "Same observatory telescope page at its current official path."
+        }
+      ],
+      "validation": {
+        "visible_text_unchanged": true,
+        "rendered_pixels_unchanged": true,
+        "all_other_office_members_identical": null
+      }
+    }
+  ]
+}

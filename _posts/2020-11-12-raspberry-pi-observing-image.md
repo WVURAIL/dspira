@@ -16,6 +16,8 @@ preparation: "This is an optional historical setup route. Review image compatibi
 ## Radio Astronomy with Raspberry Operating System
 ### Glen Langston,  2020 October 21
 
+**Historical setup:** The 2020 guide is retained below, but its original download link for `NsfSdr-20Aug31.img.xz` now returns "not found." For maintained installation options and compatibility information, start with the [software guide]({{ '/software/' | relative_url }}).
+
 [Download the illustrated guide (view PDF)]({{ site.baseurl }}/assets/lessons/software-setup/raspberry-pi-guide-2020.pdf){: .btn .btn-wvu-blue}
 
 ***
