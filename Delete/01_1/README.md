@@ -1,10 +1,10 @@
 # 1.1. Random Signals and Sampling
 
-- [1.1. Random Signals and Sampling](#1-random-signals-and-sampling)
-    - [1.1.1. Random Discrete Signals](#11-random-discrete-signals)
-    - [1.1.2. Sampling](#12-sampling)
-    - [1.1.3. Histograms](#13-histograms)
-    - [1.1.4. GnuRadio Companion Example.](#14-gnuradio-companion-example)
+- [1.1. Random Signals and Sampling](#11-random-signals-and-sampling)
+    - [1.1.1. Random Discrete Signals](#random-discrete-signals)
+    - [1.1.2. Sampling](#sampling)
+    - [1.1.3. Histograms](#113-histograms)
+    - [1.1.4. GnuRadio Companion Example.](#gnuradio-companion-example)
 
 <!-- /TOC -->
 
@@ -28,7 +28,7 @@ A histogram is a plot of the number of occurances of the signal that occur betwe
 ## GnuRadio Companion Example.  
 
 Create the shown GnuRadio flowgraph.  
-![sampling](img/sampling.png) 
+![sampling](../../labs/01/img/sampling.png)
 
 Use a random source between -10 and 10.  The random source only creates discrete integer values, so you also need and Int to Float block with a 'scale' which will multiply the incoming signal by the scale value.  
 
@@ -46,7 +46,7 @@ Create a new flowgraph in grc.
  We'll start by using a just a QLFSR block.  This is a 'linear feedback shift register'  block, which is a very simple way to create 'pseudorandom' noise.  Look [here](https://en.wikipedia.org/wiki/Linear-feedback_shift_register) for more details.  Set the type to float, the degree (how many elements in the shift register) to 32, repeat yes.  Change the seed to any number.  Leave the 'mask' at zero to get an 'optimal' source that wont repeat.  Try using other numbers to compare, 1075838979 is a nice choice for random looking data.  Use a histogram sink and a gui sink to look at the output.  Even though the output is only -1 or 1, without knowing the initial seed and how many cycles have gone by, the answer is random.
 
  Add a number of these sources together:
- ![gaussian](img/lfsr_noise.png)
+ ![gaussian](../../labs/01/img/lfsr_noise.png)
 
  What does the output look like now?  This is one of the simple ways of going from a 'flat' random number to a gaussian white noise.
  
@@ -55,5 +55,5 @@ Create a new flowgraph in grc.
 
 
 
-[↑ Go to the Top of the Page](#) ......[Next Lab](../02)
+[↑ Go to the Top of the Page](#) ......[Next Lab](../../labs/02/)
 

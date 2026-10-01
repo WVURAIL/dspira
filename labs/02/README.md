@@ -220,7 +220,7 @@ NOAA 18 – 137.9125 MHz
 NOAA 19 – 137.1000 MHz
 
 8. If transmitted nearby get a newspaper over the radio!
-9. [Decode high definition radio](http://theori.io/research/nrsc-5-c)
+9. [Decode high definition radio](https://theori.io/blog/receiving-nrsc-5)
 10. Build your own radio astronomy observatory! ( ok we are totally doing that!)
 
 [↑ Go to the Top of the Page](#) ......[Next Lab](../03)

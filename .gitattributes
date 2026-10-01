@@ -1,2 +1,24 @@
 *.psd filter=lfs diff=lfs merge=lfs -text
 *.pdf filter=lfs diff=lfs merge=lfs -text
+
+# Publish these existing PDF downloads as ordinary Git files for GitHub Pages.
+archive/DSPIRA_LNA_assembly.pdf -filter -diff -merge -text
+labs/06/2018_06_22.pdf -filter -diff -merge -text
+labs/06/DSPIRA_Horn_Assembly.pdf -filter -diff -merge -text
+labs/06/DSPIRA_memo2_LNA.pdf -filter -diff -merge -text
+labs/06/img/freq_vs_radial_velocity.pdf -filter -diff -merge -text
+labs/06/img/galactic_rotation.pdf -filter -diff -merge -text
+lectures/2018/DSP/imagndeconv.pdf -filter -diff -merge -text
+lectures/astronomy/DJP_Lectures/RET_0706.pdf -filter -diff -merge -text
+lectures/astronomy/DJP_Lectures/RET_0707.pdf -filter -diff -merge -text
+lectures/astronomy/DJP_Lectures/RET_0710.pdf -filter -diff -merge -text
+lectures/astronomy/DJP_Lectures/RET_0711.pdf -filter -diff -merge -text
+lectures/astronomy/DJP_Lectures/RET_0712.pdf -filter -diff -merge -text
+lectures/astronomy/DJP_Lectures/RET_0713.pdf -filter -diff -merge -text
+lectures/astronomy/DJP_Lectures/RET_0714.pdf -filter -diff -merge -text
+lectures/astronomy/LDA_Lectures/RET_DSP_Dark_Matter.pdf -filter -diff -merge -text
+lectures/astronomy/LDA_Lectures/RET_DSP_Gravity.pdf -filter -diff -merge -text
+lectures/astronomy/LDA_Lectures/RET_DSP_Intro.pdf -filter -diff -merge -text
+lectures/astronomy/LDA_Lectures/RET_DSP_MotionOfSky1.pdf -filter -diff -merge -text
+lectures/astronomy/LDA_Lectures/RET_DSP_Rotation_Curves.pdf -filter -diff -merge -text
+lectures/astronomy/LDA_Lectures/RET_SCP_Time_Planning_Observations.pdf -filter -diff -merge -text

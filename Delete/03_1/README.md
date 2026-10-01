@@ -34,13 +34,13 @@ where $$X(\omega)$$ is the fourier transform and $$\omega_o = \frac{2\pi}{T}$$
 
 **In summary, the fourier series of a signal is a sum of sines and cosines. And, the fourier transform decomposes the signal into it's its frequency components with their relative strength. This can be visually seen in a neat animation as shown below ( *credit: wikipedia* ) and in the next section**
 
-![animation FS](img/Fourier_series_and_transform.gif)
+![animation FS](../../labs/03/img/Fourier_series_and_transform.gif)
 
 [↑ Go to the Top of the Page](#)
 
 ## 3.1.2. Fourier Transform
 
-Use the [Square Wave](../03/#13-a-sqaure-wave) and the [Triangle Wave](../03/#14-a-triangle-wave) flowgraphs from the previous exercise.
+Use the [Square Wave](../../labs/03/#321-a-sqaure-wave) and the [Triangle Wave](../../labs/03/#322-a-triangle-wave) flowgraphs from the previous exercise.
 
 First use a ``signal source`` block to make a square wave and feed the signal into a ``QT frequency sink``
 
@@ -50,7 +50,7 @@ Place another ``QT Frequency Sink`` and change the number of inputs to the numbe
 
 The output looks like this:
 
-![1.png](img/3.png)
+![1.png](../../labs/03/img/3.png)
 
 The couloured peaks are the Fourier transforms of the individual sinusoids. Do they align with the Fourier Transform of the pure square wave? If you add more terms of the fourier series to the sink, how do they compare?
 
@@ -67,8 +67,8 @@ We can also think of this to use gnuradio-companion to graphically get the fouri
 It is also helpful to plot the timeseries to see what your input is and the frequency sink to make it easier to just read off the frequency of the components.  
 
 An example flowgraph looks like:
-![sawtooth](img/4.png) 
+![sawtooth](../../labs/03/img/4.png)
 
 The FFT block is a special block which does the fourier transform really fast. Play around with the FFT block and your general waveform generator from Lab 1 to take their fourier tranform.  Use this to read off the fourier series coefficients.  This can still be used with a periodic signal with much less obvious structure.
 
-[↑ Go to the Top of the Page](#) ......[Next Lab](../04)
+[↑ Go to the Top of the Page](#) ......[Next Lab](../../labs/04/)

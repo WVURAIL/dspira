@@ -49,7 +49,7 @@ layout: default
 <a href="https://github.com/WVURAIL/dspira/blob/master/lectures/2018/DSP/lecture4.pptx">Filter</a><br>
 <a href="https://github.com/WVURAIL/dspira/blob/master/lectures/2018/DSP/lecture5.pptx">Sampling</a><br>
 <a href="https://github.com/WVURAIL/dspira/blob/master/lectures/2018/DSP/lecture6.pptx">Lecture 6</a><br>
-<a href="https://github.com/WVURAIL/dspira/blob/master/lectures/2018/DSP/imagnconv.pdf">Imaging and Deconvolution</a><br>
+<a href="{{ "/lectures/2018/DSP/imagndeconv.pdf" | relative_url }}">Imaging and Deconvolution</a><br>
 
 <hr>
 
@@ -73,7 +73,7 @@ Dr. D. J. Pisano  ( DSPIRA 2017 )
 
 Lab:
 Dr. Kevin Bandura   ( DSPIRA 2017, 2018 )
-[Department Webpage](http://www.statler.wvu.edu/faculty-staff/faculty/kevin-bandura)
+[Department Webpage](https://directory.statler.wvu.edu/faculty-staff-directory/kevin-bandura)
 [Personal Webpage](http://community.wvu.edu/%7Ekmbandura/)
 
 Pranav Sanghavi

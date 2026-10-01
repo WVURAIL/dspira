@@ -5,15 +5,15 @@ As we observed in the previous labs and theory with their corresponding exercise
 <!-- TOC -->
 
 - [5. Fourier Analysis - Expert Mode!](#5-fourier-analysis---expert-mode)
-    - [5.1. IQ signals *or* What is up with all the Complex Numbers](#52-iq-signals-or-what-is-up-with-all-the-complex-numbers)
-    - [5.2. Fast Fourier Transforms (FFT)](#53-fast-fourier-transforms-fft)
-        - [5.2.1. 8 Point Fast Fourier Transform **[OPTIONAL]**](#531-8-point-fast-fourier-transform-optional)
-    - [5.3. Fourier Analysis in Radio Astronomy: A Spectrometer](#54-fourier-analysis-in-radio-astronomy-a-spectrometer)
-    - [5.4. The Spectrometer's purpose](#55-the-spectrometers-purpose)
-    - [5.5. The Window Field in the gnuradio FFT block](#56-the-window-field-in-the-gnuradio-fft-block)
-    - [5.6. Spectral Leakage & Polyphase Filter Bank (PFB)](#57-spectral-leakage--polyphase-filter-bank-pfb)
-    - [5.7. Final Upgrade: PFB Spectrometer](#58-final-upgrade-pfb-spectrometer)
-    - [5.8. Saving Data](#59-saving-data)
+    - [5.1. IQ signals *or* What is up with all the Complex Numbers](#51-iq-signals-or-what-is-up-with-all-the-complex-numbers)
+    - [5.2. Fast Fourier Transforms (FFT)](#52-fast-fourier-transforms-fft)
+        - [5.2.1. 8 Point Fast Fourier Transform **[OPTIONAL]**](#521-8-point-fast-fourier-transform-optional)
+    - [5.3. Fourier Analysis in Radio Astronomy: A Spectrometer](#53-fourier-analysis-in-radio-astronomy-a-spectrometer)
+    - [5.4. The Spectrometer's purpose](#54-the-spectrometers-purpose)
+    - [5.5. The Window Field in the gnuradio FFT block](#55-the-window-field-in-the-gnuradio-fft-block)
+    - [5.6. Spectral Leakage & Polyphase Filter Bank (PFB)](#56-spectral-leakage--polyphase-filter-bank-pfb)
+    - [5.7. Final Upgrade: PFB Spectrometer](#57-final-upgrade-pfb-spectrometer)
+    - [5.8. Saving Data](#58-saving-data)
                     - [Image Credits](#image-credits)
 
 <!-- /TOC -->
