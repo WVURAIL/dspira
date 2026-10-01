@@ -38,14 +38,13 @@ contact:
 baseurl:     "/dspira"
 
 # The lab site is a separate site on this host. Links to its education pages
-# use lab_url so preview builds can point back to /rail-preview. LightWork is
-# another GitHub Pages project, not part of the lab preview, and stays at
-# /lightwork/ in both production and staging.
+# use lab_url, which can be overridden for a local or isolated preview.
+# LightWork is a separate GitHub Pages project at /lightwork/.
 lab_url: ""
-# THE CUTOVER SWITCH. Serving does not read this (the domain is inherited from
-# the org site's CNAME); canonicals, og:url, the sitemap and the feed do. Change
-# to https://rail.wvu.edu in the same commit as the org repo's CNAME move — the
-# full checklist is .github/CUTOVER.md in wvurail.github.io.
+# The custom domain is inherited from the organization site's CNAME.
+# This URL supplies canonical links, og:url, and the sitemap; keep it aligned
+# with the live domain. Publishing ownership and compatibility routes are
+# documented in .github/CUTOVER.md in wvurail.github.io.
 url:         "https://rail.wvu.edu"
 date_format: "%B %-d, %Y"
 

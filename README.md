@@ -5,7 +5,7 @@ Visit the [DSPIRA website](https://rail.wvu.edu/dspira/) for teaching materials 
 Start with [CONTRIBUTING.md](CONTRIBUTING.md) to suggest changes or submit a lesson.
 
 The approved site publishes from `main`. The former approval preview is archived.
-A future move to `rail.wvu.edu` follows the [lab's cutover checklist](https://github.com/WVURAIL/wvurail.github.io/blob/main/.github/CUTOVER.md).
+The site is live at `rail.wvu.edu`; the [lab's domain migration record](https://github.com/WVURAIL/wvurail.github.io/blob/main/.github/CUTOVER.md) documents publishing ownership and compatibility routes.
 
 ## Find the right files
 

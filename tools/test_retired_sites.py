@@ -5,7 +5,7 @@ import unittest
 from unittest.mock import patch
 import zipfile
 
-from retired_sites import extract_verified, historical_html, install_aliases, install_history, NAMES, PDF_OVERRIDES
+from retired_sites import extract_verified, historical_html, install_aliases, install_history, NAMES, PDF_OVERRIDES, remove_unused_export_fonts
 
 
 class PreservationTests(unittest.TestCase):
@@ -105,6 +105,96 @@ class PreservationTests(unittest.TestCase):
                           (root / 'active/history/sites/cra/index.html').read_text())
             self.assertEqual((root / 'source/cra/worksheet.pdf').read_bytes(), original_pdf)
             self.assertIn(old_host, (root / 'source/cra/index.html').read_text())
+            self.assertEqual(hashlib.sha256(package.read_bytes()).hexdigest(), digest)
+
+
+    def test_repairs_only_known_historical_anchor_links(self):
+        original = ('<html><head></head><body>'
+                    '<h2 id="11-installation-guide">Installation</h2>'
+                    '<a href="#11-Installation-Guide">Install</a>'
+                    "<a href='../02/#14-fun-sdrgnu-radio-things'>SDR</a>"
+                    '<a href="#123-a-general-waveform-generator">Waveform</a>'
+                    '<a href="#unrelated">Other</a>'
+                    '<p>#11-Installation-Guide</p></body></html>')
+        result = historical_html(original, 'dspira-archive', Path('labs/01/index.html'))
+        self.assertIn('href="#11-installation-guide"', result)
+        self.assertIn("href='../02/#24-fun-sdrgnu-radio-things'", result)
+        self.assertIn('href="#133-a-general-waveform-generator"', result)
+        self.assertIn('href="#unrelated"', result)
+        self.assertIn('<p>#11-Installation-Guide</p>', result)
+        for name, relative in [('cra', 'labs/01/index.html'), ('dspira-archive', 'other/index.html')]:
+            self.assertIn('href="#11-Installation-Guide"', historical_html(original, name, Path(relative)))
+
+        fourier = historical_html('<a href="#57-spectral-leakage--polyphase-filter-bank-pfb">PFB</a>',
+                                  'dspira-archive', Path('labs/05/index.html'))
+        self.assertIn('href="#56-spectral-leakage--polyphase-filter-bank-pfb"', fourier)
+
+    def test_preserved_homepage_links_reach_current_example_owners(self):
+        original = ('<a href="https://github.com/WVURAIL/dspira/tree/master/code/gbt_drift">Drift</a>'
+                    '<a href="https://github.com/WVURAIL/dspira/tree/master/code/observations">Observations</a>')
+        result = historical_html(original, 'dspira-archive', Path('index.html'))
+        self.assertIn('href="https://rail.wvu.edu/dspira/lesson-examples/gbt-drift/"', result)
+        self.assertIn('href="https://github.com/WVURAIL/dspira-software/tree/main/data-processing"', result)
+
+    def test_historical_references_use_the_same_article_and_matching_manual_version(self):
+        stream_tags = historical_html('<a href="https://gnuradio.org/doc/doxygen/page_stream_tags.html">Tags</a>',
+                                      'dspira-archive', Path('labs/01/index.html'))
+        self.assertIn('href="https://www.gnuradio.org/doc/doxygen-3.7/page_stream_tags.html"', stream_tags)
+        nrsc = historical_html('<a href="http://theori.io/research/nrsc-5-c">NRSC-5</a>',
+                               'dspira-archive', Path('labs/02/index.html'))
+        self.assertIn('href="https://theori.io/blog/receiving-nrsc-5"', nrsc)
+        table = historical_html('<a href="http://www.ws.binghamton.edu/fowler/fowler%20personal%20page/EE301_files/FT%20Tables_rev3.pdf">Table</a>',
+                                'dspira-archive', Path('labs/03/index.html'))
+        self.assertIn('href="https://ws.binghamton.edu/fowler/fowler%20personal%20page/EE301_files/FT%20Tables_rev3.pdf"', table)
+
+    def test_preserves_available_or_used_export_fonts(self):
+        definition = "@font-face {font-family: 'FontAwesome'; src: url('../fonts/icons.woff?v=4.2.0');}"
+        other = "@font-face {font-family: 'Lesson text'; src: url('../fonts/text.woff');}"
+        original = '<html><head><style>' + definition + other + '</style></head><body>Notebook</body></html>'
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            page = root / 'notebook/index.html'
+            page.parent.mkdir()
+            result = remove_unused_export_fonts(original, page)
+            self.assertNotIn(definition, result)
+            self.assertIn(other, result)
+            for markup in ['<i class="fa fa-save"></i>', '<i class="fa-save"></i>',
+                           '<span style="font-family: FontAwesome">Icon</span>']:
+                used = original.replace('Notebook', markup)
+                self.assertIn(definition, remove_unused_export_fonts(used, page))
+            (root / 'fonts').mkdir()
+            (root / 'fonts/icons.woff').write_bytes(b'available-font')
+            self.assertEqual(remove_unused_export_fonts(original, page), original)
+
+    def test_historical_repairs_preserve_source_package_and_downloads(self):
+        notebook = ('<html><head><style>@font-face {font-family: "Glyphicons Halflings"; '
+                    'src: url("../components/bootstrap/fonts/missing.woff");}'
+                    'body {color: black;}</style></head><body>Original output</body></html>')
+        lesson = '<html><head></head><body><a href="#11-Installation-Guide">Install</a></body></html>'
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            package, _ = self.archive(root)
+            with zipfile.ZipFile(package, 'a') as archive:
+                archive.writestr('dspira-archive/labs/01/index.html', lesson)
+                archive.writestr('dspira-archive/labs/05/I_Q_quadrature_sampling.html', notebook)
+                archive.writestr('dspira-archive/other.html', notebook)
+                archive.writestr('dspira-archive/labs/05/original.ipynb', b'original notebook bytes')
+            digest = hashlib.sha256(package.read_bytes()).hexdigest()
+            extract_verified(package, root / 'source', digest)
+            before = {str(p.relative_to(root / 'source')): p.read_bytes()
+                      for p in (root / 'source').rglob('*') if p.is_file()}
+            install_history(root / 'source', root / 'active')
+            published = root / 'active/history/sites/dspira-archive'
+            self.assertIn('href="#11-installation-guide"', (published / 'labs/01/index.html').read_text())
+            result = (published / 'labs/05/I_Q_quadrature_sampling.html').read_text()
+            self.assertNotIn('@font-face', result)
+            self.assertIn('body {color: black;}', result)
+            self.assertIn('Original output', result)
+            self.assertIn('@font-face', (published / 'other.html').read_text())
+            self.assertEqual((published / 'labs/05/original.ipynb').read_bytes(), b'original notebook bytes')
+            after = {str(p.relative_to(root / 'source')): p.read_bytes()
+                     for p in (root / 'source').rglob('*') if p.is_file()}
+            self.assertEqual(before, after)
             self.assertEqual(hashlib.sha256(package.read_bytes()).hexdigest(), digest)
 
     def test_rejects_wrong_checksum_and_traversal(self):

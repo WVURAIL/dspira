@@ -21,6 +21,53 @@ RELEASE = 'https://github.com/WVURAIL/dspira/releases/tag/preserved-repositories
 MANIFEST = Path(__file__).resolve().parents[1] / '_data/retired_sites.json'
 NOTEBOOK_EXPORTS = {'gbtdrift/index.html', 'labs/05/I_Q_quadrature_sampling.html'}
 
+# Repair links in the published historical pages; the preserved package stays intact.
+HISTORICAL_LINK_REPLACEMENTS = {
+    "index.html": {
+        "https://github.com/WVURAIL/dspira/tree/master/code/gbt_drift": "https://rail.wvu.edu/dspira/lesson-examples/gbt-drift/",
+        "https://github.com/WVURAIL/dspira/tree/master/code/observations": "https://github.com/WVURAIL/dspira-software/tree/main/data-processing"
+    },
+    "labs/01/index.html": {
+        "https://gnuradio.org/doc/doxygen/page_stream_tags.html": "https://www.gnuradio.org/doc/doxygen-3.7/page_stream_tags.html",
+        "#1-Introduction-to-GNU-Radio-and-Signals": "#1-introduction-to-gnu-radio-and-signals",
+        "#11-Installation-Guide": "#11-installation-guide",
+        "#12-GQRX---Its-cool": "#12-gqrx---its-cool",
+        "#121-Getting-Started-with-GNU-Radio": "#121-getting-started-with-gnu-radio",
+        "#13-Lets-get-Familiar": "#13-lets-get-familiar",
+        "#131-A-Cosine-Waveform-generator": "#131-a-cosine-waveform-generator",
+        "#132-A-Cosine-Waveform-Generator-with-Variable-Frequency-and-Sound": "#132-a-cosine-waveform-generator-with-variable-frequency-and-sound",
+        "#133-A-General-Waveform-Generator": "#133-a-general-waveform-generator",
+        "#14-GNU-Radio-and-Python": "#14-gnu-radio-and-python",
+        "#141-Arbitrary-Function-generation": "#141-arbitrary-function-generation",
+        "#15-Note-on-the-Frequency-Display": "#15-note-on-the-frequency-display",
+        "#16-Exercises": "#16-exercises",
+        "#17-Random-Discrete-Signals": "#17-random-discrete-signals",
+        "#18-Sampling": "#18-sampling",
+        "#19-Histograms": "#19-histograms",
+        "#110-GnuRadio-Companion-Example": "#110-gnuradio-companion-example",
+        "#111-Make-your-own-gaussian-noise-block": "#111-make-your-own-gaussian-noise-block",
+        "../02/#14-fun-sdrgnu-radio-things": "../02/#24-fun-sdrgnu-radio-things",
+        "#123-a-general-waveform-generator": "#133-a-general-waveform-generator"
+    },
+    "labs/02/index.html": {
+        "http://theori.io/research/nrsc-5-c": "https://theori.io/blog/receiving-nrsc-5"
+    },
+    "labs/03/index.html": {
+        "http://www.ws.binghamton.edu/fowler/fowler%20personal%20page/EE301_files/FT%20Tables_rev3.pdf": "https://ws.binghamton.edu/fowler/fowler%20personal%20page/EE301_files/FT%20Tables_rev3.pdf"
+    },
+    "labs/05/index.html": {
+        "#52-iq-signals-or-what-is-up-with-all-the-complex-numbers": "#51-iq-signals-or-what-is-up-with-all-the-complex-numbers",
+        "#53-fast-fourier-transforms-fft": "#52-fast-fourier-transforms-fft",
+        "#531-8-point-fast-fourier-transform-optional": "#521-8-point-fast-fourier-transform-optional",
+        "#54-fourier-analysis-in-radio-astronomy-a-spectrometer": "#53-fourier-analysis-in-radio-astronomy-a-spectrometer",
+        "#55-the-spectrometers-purpose": "#54-the-spectrometers-purpose",
+        "#56-the-window-field-in-the-gnuradio-fft-block": "#55-the-window-field-in-the-gnuradio-fft-block",
+        "#57-spectral-leakage--polyphase-filter-bank-pfb": "#56-spectral-leakage--polyphase-filter-bank-pfb",
+        "#58-final-upgrade-pfb-spectrometer": "#57-final-upgrade-pfb-spectrometer",
+        "#59-saving-data": "#58-saving-data"
+    }
+}
+
 PDF_OVERRIDES = {
     'cra/Files_uploaded/Hardware&Software_Needs_HornTelescope.pdf': (
         '0b6f3a4193197e66510e2c1e635872900dfcc9f4605c50fd8e0c62df44e1f257',
@@ -109,7 +156,56 @@ def fetch(destination, package=None):
         extract_verified(download, destination, manifest['sha256'])
 
 
+
+def repair_historical_links(text, name, relative):
+    if name != 'dspira-archive':
+        return text
+    replacements = HISTORICAL_LINK_REPLACEMENTS.get(relative.as_posix(), {})
+
+    def replace_link(match):
+        prefix, quote, target = match.groups()
+        return prefix + quote + replacements.get(target, target) + quote
+
+    return re.sub(r'(<a\b[^>]*?\bhref\s*=\s*)([\"\x27])(.*?)\2',
+                  replace_link, text, flags=re.I | re.S)
+
+
+def remove_unused_export_fonts(text, path):
+    """Remove only absent, unused icon font declarations from an old export."""
+    families = {'Glyphicons Halflings': 'glyphicon', 'FontAwesome': 'fa'}
+    used = set()
+
+    class FontUses(HTMLParser):
+        def handle_starttag(self, tag, attrs):
+            attrs = dict(attrs)
+            classes = attrs.get('class', '').split()
+            for family, prefix in families.items():
+                if (any(value == prefix or value.startswith(prefix + '-') for value in classes)
+                        or family.lower() in attrs.get('style', '').lower()
+                        or family.lower() in attrs.get('face', '').lower()):
+                    used.add(family)
+
+    FontUses().feed(text)
+
+    def remove_missing_font(match):
+        block = match[0]
+        family_match = re.search(r'font-family\s*:\s*[\"\x27]([^\"\x27]+)', block, flags=re.I)
+        if not family_match or family_match[1] not in families or family_match[1] in used:
+            return block
+        sources = re.findall(r'url\(\s*[\"\x27]?([^\"\x27)]+)', block, flags=re.I)
+        if not sources:
+            return block
+        for source in sources:
+            url = urlsplit(source.strip())
+            if url.scheme or url.netloc or (path.parent / url.path).is_file():
+                return block
+        return ''
+
+    return re.sub(r'@font-face\s*\{[^}]*\}', remove_missing_font, text, flags=re.I | re.S)
+
+
 def historical_html(text, name, relative):
+    text = repair_historical_links(text, name, relative)
     if not re.search(r'<body\b', text, flags=re.I):
         text = ('<!doctype html><html lang="en"><head><meta charset="utf-8">'
                 '<meta name="viewport" content="width=device-width, initial-scale=1">'
@@ -140,6 +236,8 @@ def install_history(source, site):
         for path in target.rglob('*.html'):
             relative = path.relative_to(target)
             text = path.read_text()
+            if name == 'dspira-archive' and relative.as_posix() == 'labs/05/I_Q_quadrature_sampling.html':
+                text = remove_unused_export_fonts(text, path)
             if (name == 'dspira-archive' and relative.as_posix() in NOTEBOOK_EXPORTS
                     and not (path.parent / 'custom.css').exists()):
                 # These exports embed their styles; custom.css was an optional override.
