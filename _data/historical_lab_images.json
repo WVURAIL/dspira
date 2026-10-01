@@ -1,0 +1,44 @@
+[
+  {
+    "title": "DSPIRA horn telescope at Green Bank",
+    "download_path": "/assets/history/lab-images/dspira-horn-at-green-bank.jpg",
+    "sha256": "f25ac165fb7bfd6aefeaa792459e92446a90c5c11fd54bed49922817fd02adf1",
+    "original_path": "/images/dspira.jpg",
+    "source_url": "https://github.com/WVURAIL/wvurail.github.io/blob/0ac32c733c23108da76dbdcdd6a9c4c0920f726b/images/dspira.jpg"
+  },
+  {
+    "title": "Fast radio burst dispersion diagram",
+    "download_path": "/assets/history/lab-images/fast-radio-burst-dispersion.jpg",
+    "sha256": "f6187fe9c7a1780c7f660ca864d4ae42fe7360e0ca1dbaeb6117829bc78e68f2",
+    "original_path": "/images/frb.jpg",
+    "source_url": "https://github.com/WVURAIL/wvurail.github.io/blob/0ac32c733c23108da76dbdcdd6a9c4c0920f726b/images/frb.jpg"
+  },
+  {
+    "title": "HIRAX dish array",
+    "download_path": "/assets/history/lab-images/hirax-dish-array.jpg",
+    "sha256": "e7e7a3ec8fa938b2e4f97acc272b96fef20b25c7b231d13e4361320da079e000",
+    "original_path": "/images/hirax8dish17.jpg",
+    "source_url": "https://github.com/WVURAIL/wvurail.github.io/blob/0ac32c733c23108da76dbdcdd6a9c4c0920f726b/images/hirax8dish17.jpg"
+  },
+  {
+    "title": "Historical HIRAX logo",
+    "download_path": "/assets/history/lab-images/hirax-logo.png",
+    "sha256": "7f82fa629803847980d5abd7b718a54735559fb4f1f0933ede00c7060bb1cd60",
+    "original_path": "/images/hirax_logo.png",
+    "source_url": "https://github.com/WVURAIL/wvurail.github.io/blob/0ac32c733c23108da76dbdcdd6a9c4c0920f726b/images/hirax_logo.png"
+  },
+  {
+    "title": "CHIME at night",
+    "download_path": "/assets/history/lab-images/chime-at-night.jpg",
+    "sha256": "8bf522333ffdc3476ce7c6e86b6819341eb4359e6432b3236a50a341dfecac62",
+    "original_path": "/images/spotlight01.jpg",
+    "source_url": "https://github.com/WVURAIL/wvurail.github.io/blob/0ac32c733c23108da76dbdcdd6a9c4c0920f726b/images/spotlight01.jpg"
+  },
+  {
+    "title": "ICE electronics",
+    "download_path": "/assets/history/lab-images/ice-electronics.jpg",
+    "sha256": "07d55ce4ccef1a63e90c8ec8eaae83d651b7043f14b6c554b797d7c5287616ee",
+    "original_path": "/images/spotlight02.jpg",
+    "source_url": "https://github.com/WVURAIL/wvurail.github.io/blob/0ac32c733c23108da76dbdcdd6a9c4c0920f726b/images/spotlight02.jpg"
+  }
+]

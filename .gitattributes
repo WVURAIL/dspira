@@ -1,2 +1,5 @@
 *.pdf binary
 *.pptx binary
+
+# Retain the original bytes of preserved experiment downloads.
+assets/history/radio-experiments/** -text whitespace=cr-at-eol

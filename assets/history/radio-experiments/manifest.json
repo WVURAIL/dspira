@@ -65,8 +65,7 @@
           "source_commit_date": "2021-07-30",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/2f6e42336bb6575df23d636e136af39795c98e3d/examples/interferometer_Lime_simpleSpectrometer.grc"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/receivers/limesdr-multiplying-interferometer-2021.grc"
+      ]
     },
     {
       "id": "nsf-mapping-experiment-6-mhz",
@@ -89,8 +88,7 @@
           "source_commit_date": "2024-01-05",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/dd05ed472d2353a876125ffdec5bb843e46b6379/examples/nsf/NsfMap60.grc"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/nsf/nsf-mapping-experiment-6-mhz.grc"
+      ]
     },
     {
       "id": "left-and-right-audio-tones",
@@ -113,8 +111,7 @@
           "source_commit_date": "2021-04-13",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/631767cf1c5db42d694749eaa253a76d010da4e7/examples/LeftRightAudio.grc"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/audio/left-and-right-audio-tones.grc"
+      ]
     },
     {
       "id": "single-audio-tone",
@@ -137,8 +134,7 @@
           "source_commit_date": "2021-04-13",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/df69695605a5e21a513135a85c718bdd4d35414d/examples/AudioTone.grc"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/audio/single-audio-tone.grc"
+      ]
     },
     {
       "id": "spectrometer-testing-2020",
@@ -161,8 +157,7 @@
           "source_commit_date": "2020-07-09",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/b6d92e2f70def8d9ca35ce6a47bad6d90c9608be/examples/spectrometer_testing.grc"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/receivers/spectrometer-testing-2020.grc"
+      ]
     },
     {
       "id": "calibrated-spectrometer-variant-2020",
@@ -185,8 +180,7 @@
           "source_commit_date": "2020-07-09",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/b6d92e2f70def8d9ca35ce6a47bad6d90c9608be/examples/spectrometer_w_cal_jlm2020.grc"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/receivers/calibrated-spectrometer-variant-2020.grc"
+      ]
     },
     {
       "id": "three-consecutive-test-events",
@@ -209,8 +203,7 @@
           "source_commit_date": "2020-03-23",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/e474b592cdb022fefa581c6ddb30b6ba414ad7bf/docs/NsfPing3ConsecutiveEventsTest.png"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/nsf/three-consecutive-test-events.png"
+      ]
     },
     {
       "id": "three-test-events-enlarged-view",
@@ -233,8 +226,7 @@
           "source_commit_date": "2020-03-23",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/e474b592cdb022fefa581c6ddb30b6ba414ad7bf/docs/NsfPing3EventsZoom.png"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/nsf/three-test-events-enlarged-view.png"
+      ]
     },
     {
       "id": "single-event-plotting-trial",
@@ -257,8 +249,7 @@
           "source_commit_date": "2020-03-23",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/e474b592cdb022fefa581c6ddb30b6ba414ad7bf/docs/NsfPingEvent.png"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/nsf/single-event-plotting-trial.png"
+      ]
     },
     {
       "id": "odroid-pulse-test-screen",
@@ -281,8 +272,7 @@
           "source_commit_date": "2020-03-23",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/9e9ec22808a3a33e91003e9143f90b206403f915/docs/OdroidNsfPing.png"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/nsf/odroid-pulse-test-screen.png"
+      ]
     },
     {
       "id": "nsf-plutosdr-diagnostic-test",
@@ -305,8 +295,7 @@
           "source_commit_date": "2020-03-19",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/4d8f5682a8b5bc6dbef68270f3b6414701810e9a/examples/NsfTest.grc"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/nsf/nsf-plutosdr-diagnostic-test.grc"
+      ]
     },
     {
       "id": "nsf-integrate-64-plutosdr",
@@ -329,8 +318,7 @@
           "source_commit_date": "2020-03-19",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/81e3af8d9b3e683d0a86f472d9a585744b983e4f/examples/NsfIntegrate64.grc"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/nsf/nsf-integrate-64-plutosdr.grc"
+      ]
     },
     {
       "id": "nsf-integrate-90-sdrplay",
@@ -353,8 +341,7 @@
           "source_commit_date": "2020-02-15",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/9011f194a58e6d7f5f14bd908b4468dec440ed13/examples/NsfIntegrate90.grc"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/nsf/nsf-integrate-90-sdrplay.grc"
+      ]
     },
     {
       "id": "nsf-integrate-59-sdrplay",
@@ -377,8 +364,7 @@
           "source_commit_date": "2020-01-13",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/1e8da2ed9be5ba80aa8e92fad70ba623f70b5cfd/examples/NsfIntegrate59.grc"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/nsf/nsf-integrate-59-sdrplay.grc"
+      ]
     },
     {
       "id": "nsf-watch-70-sdrplay",
@@ -401,8 +387,7 @@
           "source_commit_date": "2019-12-20",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/4cb385a1cb7cb1c51ee704092cc753787c7e4a86/examples/NsfWatch70.grc"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/nsf/nsf-watch-70-sdrplay.grc"
+      ]
     },
     {
       "id": "nsf-watch-64-plutosdr",
@@ -425,8 +410,7 @@
           "source_commit_date": "2019-11-26",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/69a81d021bd2b891991dd85a583a7116cc3766d0/examples/NsfWatch64.grc"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/nsf/nsf-watch-64-plutosdr.grc"
+      ]
     },
     {
       "id": "nsf-integrate-70-sdrplay",
@@ -449,8 +433,7 @@
           "source_commit_date": "2019-11-14",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/b08c75a3d8cbdff921398f2e493a3dc49bf01f09/examples/NsfIntegrate70.grc"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/nsf/nsf-integrate-70-sdrplay.grc"
+      ]
     },
     {
       "id": "nsf-integrate-32-plutosdr",
@@ -473,8 +456,7 @@
           "source_commit_date": "2019-11-12",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/4063c3248690ab18834fa6ca0ba347b7c9e6359d/examples/NsfIntegrate32.grc"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/nsf/nsf-integrate-32-plutosdr.grc"
+      ]
     },
     {
       "id": "nsf-watch-32-plutosdr",
@@ -497,8 +479,7 @@
           "source_commit_date": "2019-11-11",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/371b0abe09159b6ebc97c991ae60cc71e6eb7f85/examples/NsfWatch32.grc"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/nsf/nsf-watch-32-plutosdr.grc"
+      ]
     },
     {
       "id": "observed-pulsar-detection-pipeline",
@@ -521,9 +502,7 @@
           "source_commit_date": "2019-09-30",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/e66fd1b86dcfb2cd8ecabf04437fdede4280c90b/examples/transient_jupyter_pipeline/Pulsar_Detection_Pipeline.ipynb"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/transients/observed-pulsar-detection-pipeline.ipynb",
-      "recovery_issue_url": "https://github.com/WVURAIL/radio-research-software/issues/56"
+      ]
     },
     {
       "id": "pulse-simulation-and-detection-pipeline",
@@ -546,8 +525,7 @@
           "source_commit_date": "2019-09-30",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/e66fd1b86dcfb2cd8ecabf04437fdede4280c90b/examples/transient_jupyter_pipeline/Pulsar_Simulation_Detection.ipynb"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/transients/pulse-simulation-and-detection-pipeline.ipynb"
+      ]
     },
     {
       "id": "40-foot-telescope-pulsar-experiment",
@@ -570,9 +548,7 @@
           "source_commit_date": "2019-08-19",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/1c2f2e2aab7117c9347a9714ee5ff5bf06e6a7e8/examples/Pulsar_detection_python/Pulsar_detection_40ft.ipynb"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/transients/40-foot-telescope-pulsar-experiment.ipynb",
-      "recovery_issue_url": "https://github.com/WVURAIL/radio-research-software/issues/57"
+      ]
     },
     {
       "id": "pulse-in-beam-spectrum",
@@ -595,8 +571,7 @@
           "source_commit_date": "2019-08-07",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/def366c4f442513409bea91d94e70dae39a9b967/examples/Pulsar_detection_python/Fake_pulse.png"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/transients/pulse-in-beam-spectrum.png"
+      ]
     },
     {
       "id": "folded-pulse-profile",
@@ -619,8 +594,7 @@
           "source_commit_date": "2019-08-07",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/def366c4f442513409bea91d94e70dae39a9b967/examples/Pulsar_detection_python/Folded_pulse.png"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/transients/folded-pulse-profile.png"
+      ]
     },
     {
       "id": "pulse-out-of-beam-spectrum",
@@ -643,8 +617,7 @@
           "source_commit_date": "2019-08-07",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/def366c4f442513409bea91d94e70dae39a9b967/examples/Pulsar_detection_python/Off_pulsar.png"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/transients/pulse-out-of-beam-spectrum.png"
+      ]
     },
     {
       "id": "original-pulse-data-image",
@@ -667,8 +640,7 @@
           "source_commit_date": "2019-08-07",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/def366c4f442513409bea91d94e70dae39a9b967/examples/Pulsar_detection_python/RAW_pulse_data.png"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/transients/original-pulse-data-image.png"
+      ]
     },
     {
       "id": "limesdr-recording-program-screen",
@@ -691,8 +663,7 @@
           "source_commit_date": "2019-08-07",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/def366c4f442513409bea91d94e70dae39a9b967/examples/Pulsar_detection_python/lime_spectrometer_pic.png"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/transients/limesdr-recording-program-screen.png"
+      ]
     },
     {
       "id": "calibrated-chart-recorder",
@@ -715,8 +686,7 @@
           "source_commit_date": "2019-07-22",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/a57d78a0dbade89e320fe547f24ea20baf93bb4a/examples/chartrecorder_wcal.grc"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/receivers/calibrated-chart-recorder.grc"
+      ]
     },
     {
       "id": "nsf-integrate-60-no-fit-variant",
@@ -739,8 +709,7 @@
           "source_commit_date": "2019-06-29",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/06e72a64eaec2898b842ae1d46540fa285a2aa6a/examples/NsfIntegrate60.nofit.grc"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/nsf/nsf-integrate-60-no-fit-variant.grc"
+      ]
     },
     {
       "id": "nsf-integrate-30-rtl-sdr-variant",
@@ -763,8 +732,7 @@
           "source_commit_date": "2019-04-08",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/cfdbf435be22d3e698d4271bc498d7258a295b25/examples/NsfIntegrate30rtlsdr.grc"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/nsf/nsf-integrate-30-rtl-sdr-variant.grc"
+      ]
     },
     {
       "id": "event-detection-with-a-recording-sink",
@@ -787,8 +755,7 @@
           "source_commit_date": "2019-03-26",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/d2c4ea356669fdcc5608a7100baf4854a60adafb/examples/detect_with_sink.grc"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/transients/event-detection-with-a-recording-sink.grc"
+      ]
     },
     {
       "id": "event-detection-with-a-log",
@@ -811,8 +778,7 @@
           "source_commit_date": "2019-03-03",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/78a36be2fa2eb3d01669c151a4177c2255a49094/examples/detect_log.grc"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/transients/event-detection-with-a-log.grc"
+      ]
     },
     {
       "id": "basic-event-detection-example",
@@ -835,8 +801,7 @@
           "source_commit_date": "2019-03-01",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/fdb932ffe067adb643b9cdfe05076f95be364a48/examples/detect_example.grc"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/transients/basic-event-detection-example.grc"
+      ]
     },
     {
       "id": "file-based-dedispersion-test",
@@ -859,8 +824,7 @@
           "source_commit_date": "2019-01-25",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/c75c11ab83226b2fb760c64fc428e7f201d4c2fb/examples/simple_dedispersion_test_file.grc"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/transients/file-based-dedispersion-test.grc"
+      ]
     },
     {
       "id": "noise-based-dedispersion-example",
@@ -883,8 +847,7 @@
           "source_commit_date": "2019-01-24",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/677a9a0e1c52f64779f8f994f5574e8948a6d925/examples/dedispersion_example.grc"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/transients/noise-based-dedispersion-example.grc"
+      ]
     },
     {
       "id": "nsf-integrate-20",
@@ -907,8 +870,7 @@
           "source_commit_date": "2018-07-18",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/ac0cd2af3b16e5ce51264479f0e3df6708d3589e/examples/NsfIntegrate20.grc"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/nsf/nsf-integrate-20.grc"
+      ]
     },
     {
       "id": "correlation-block-test",
@@ -931,8 +893,7 @@
           "source_commit_date": "2018-06-20",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/acac6766bef0b6810e22d268a4a76717d89bf032/examples/simple_test_correlate.grc"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/receivers/correlation-block-test.grc"
+      ]
     },
     {
       "id": "hdf5-spectrometer-recorder",
@@ -955,8 +916,7 @@
           "source_commit_date": "2018-06-08",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/8c6379bf822f6c80cd8882c2419eda626cdeb211/examples/hdf5%20spectrometer1.grc"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/receivers/hdf5-spectrometer-recorder.grc"
+      ]
     },
     {
       "id": "hdf5-integer-recorder",
@@ -979,8 +939,7 @@
           "source_commit_date": "2018-06-08",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/8c6379bf822f6c80cd8882c2419eda626cdeb211/examples/hdf5%20spectrometer_1int.grc"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/receivers/hdf5-integer-recorder.grc"
+      ]
     },
     {
       "id": "hdf5-mixed-type-recorder",
@@ -1003,8 +962,7 @@
           "source_commit_date": "2018-06-08",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/8c6379bf822f6c80cd8882c2419eda626cdeb211/examples/hdf5%20spectrometer_alltype.grc"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/receivers/hdf5-mixed-type-recorder.grc"
+      ]
     },
     {
       "id": "hdf5-floating-point-recorder",
@@ -1027,8 +985,7 @@
           "source_commit_date": "2018-06-08",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/8c6379bf822f6c80cd8882c2419eda626cdeb211/examples/hdf5%20spectrometer_float1.grc"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/receivers/hdf5-floating-point-recorder.grc"
+      ]
     },
     {
       "id": "hdf5-multi-output-floating-point-recorder",
@@ -1051,8 +1008,7 @@
           "source_commit_date": "2018-06-08",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/8c6379bf822f6c80cd8882c2419eda626cdeb211/examples/hdf5%20spectrometer_float_all.grc"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/receivers/hdf5-multi-output-floating-point-recorder.grc"
+      ]
     },
     {
       "id": "hdf5-floating-point-and-integer-recorder",
@@ -1075,8 +1031,7 @@
           "source_commit_date": "2018-06-08",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/8c6379bf822f6c80cd8882c2419eda626cdeb211/examples/hdf5%20spectrometer_float_intl.grc"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/receivers/hdf5-floating-point-and-integer-recorder.grc"
+      ]
     },
     {
       "id": "integration-block-test",
@@ -1099,8 +1054,7 @@
           "source_commit_date": "2018-05-04",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/08a4c3e3238b16a289b0a81eb57b0567701c437b/examples/Integrate_test.grc"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/receivers/integration-block-test.grc"
+      ]
     },
     {
       "id": "velocity-profiles-from-an-elevation-scan",
@@ -1123,8 +1077,7 @@
           "source_commit_date": "2018-05-04",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/09b8366c943aefd927880af3f071dcdb4baa8ef2/analyze/AnalyzeMedian18Apr13.png"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/nsf/velocity-profiles-from-an-elevation-scan.png"
+      ]
     },
     {
       "id": "raw-horn-spectra-after-a-cable-upgrade",
@@ -1147,8 +1100,7 @@
           "source_commit_date": "2018-05-04",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/09b8366c943aefd927880af3f071dcdb4baa8ef2/analyze/AnalyzeRaw17Nov03.png"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/nsf/raw-horn-spectra-after-a-cable-upgrade.png"
+      ]
     },
     {
       "id": "calibrated-horn-spectra-by-elevation",
@@ -1171,8 +1123,7 @@
           "source_commit_date": "2018-05-04",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/09b8366c943aefd927880af3f071dcdb4baa8ef2/analyze/AnalyzeTsys17Nov03.png"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/nsf/calibrated-horn-spectra-by-elevation.png"
+      ]
     },
     {
       "id": "original-dispersed-pulse-figure",
@@ -1195,8 +1146,7 @@
           "source_commit_date": "2019-07-09",
           "history_url": "https://github.com/WVURAIL/gr-transient/blob/30ac228f56a0dc9951bba6fcf901ebb52caf4127/documentation/despirsed_pulse_with_noise_DM%3D20.png"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/transients/original-dispersed-pulse-figure.png"
+      ]
     },
     {
       "id": "early-pulsar-simulation-and-peak-search-notebook",
@@ -1219,8 +1169,7 @@
           "source_commit_date": "2019-06-13",
           "history_url": "https://github.com/WVURAIL/gr-transient/blob/9879947ffeadffdeec73af11062d717155187558/jupyter/Pulsar%20SImulator_10MHz_PSRB0329%2B54_DMed.ipynb"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/transients/early-pulsar-simulation-and-peak-search-notebook.ipynb"
+      ]
     },
     {
       "id": "earlier-pulse-simulation-samples",
@@ -1243,8 +1192,7 @@
           "source_commit_date": "2019-07-26",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/9f8806dfbb83676b6c3800bae80cf8b55356ada7/examples/transient_jupyter_pipeline/pulse_sim_10mhz_int16_5ms_period_60dm_1400MHz_center_150ms_long.bin"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/transients/earlier-pulse-simulation-samples.bin"
+      ]
     },
     {
       "id": "earlier-integrated-pulse-spectra",
@@ -1267,8 +1215,7 @@
           "source_commit_date": "2019-07-26",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/9f8806dfbb83676b6c3800bae80cf8b55356ada7/examples/transient_jupyter_pipeline/pulse_sim_10mhz_int16_5ms_period_60dm_1400MHz_center_150ms_long_integrated_FFT.bin"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/transients/earlier-integrated-pulse-spectra.bin"
+      ]
     },
     {
       "id": "earlier-noise-simulation-samples",
@@ -1291,8 +1238,7 @@
           "source_commit_date": "2019-07-26",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/9f8806dfbb83676b6c3800bae80cf8b55356ada7/examples/transient_jupyter_pipeline/pulse_sim_10mhz_int16_5ms_period_60dm_1400MHz_center_150ms_long_noise.bin"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/transients/earlier-noise-simulation-samples.bin"
+      ]
     },
     {
       "id": "original-dedispersion-test-input",
@@ -1315,8 +1261,7 @@
           "source_commit_date": "2019-01-25",
           "history_url": "https://github.com/WVURAIL/radio-research-software/blob/c75c11ab83226b2fb760c64fc428e7f201d4c2fb/examples/pulse_32ms_512freq_50dm_705mhz_10mhzbw_float32.dat"
         }
-      ],
-      "download_path": "/assets/history/radio-experiments/transients/original-dedispersion-test-input.dat"
+      ]
     }
   ],
   "notices": [
@@ -1348,10 +1293,5 @@
       "path": "notices/radio-research-software/SOURCE-NOTICE.txt",
       "sha256": "52bb161a60c786c383e9744e0c95481211746279d218d1e78f7ef143bf907a69"
     }
-  ],
-  "package": {
-    "path": "/assets/history/radio-experiments-2026-10-01.zip",
-    "bytes": 18143366,
-    "sha256": "1d8e88f91bab5a190ce399e15b8f64ca9f2e9b94e72811b073580c9558c52a65"
-  }
+  ]
 }

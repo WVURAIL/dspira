@@ -7,9 +7,9 @@ lead: Find earlier receiver configurations, audio demonstrations, pulsar noteboo
 meta_description: "Browse historical DSPIRA and radio astronomy experiments, with original downloads, source records, and links to current applications."
 ---
 <p>These files record earlier experiments. Start with the <a href="{{ '/software/' | relative_url }}">current classroom software</a> or <a href="{{ '/research-examples/' | relative_url }}">research examples</a> when choosing an application.</p>
-<p>The collection contains {{ site.data.historical_experiments.files.size }} distinct files from {{ site.data.historical_experiments.source_path_count }} historical paths. Three copies of the same LimeSDR graph share one entry. Each original remains unchanged, including saved notebook outputs and earlier hardware settings.</p>
+<p>The collection contains {{ site.data.historical_experiments.files.size }} distinct files from {{ site.data.historical_experiments.source_path_count }} historical paths. Three copies of the same LimeSDR graph share one entry. Each original is downloadable from this website and remains unchanged, including saved notebook outputs and earlier hardware settings.</p>
 <p><a href="{{ site.data.historical_experiments.package.path | relative_url }}">Download all historical experiments (ZIP, {{ site.data.historical_experiments.package.bytes | divided_by: 1000000.0 | round: 1 }} MB)</a>. The package includes source commits, checksums, and attribution notices.</p>
-<p>Historical software may require older GNU Radio blocks, local paths, or data that are not included. The observed-pulsar and 40-foot telescope notebooks reference local recordings that were not found in the preserved repositories. The catalog preserves their source and saved results; it does not establish that the experiments can be rerun.</p>
+<p>Historical software may require older GNU Radio blocks, local paths, or data that are not included. The <a href="https://github.com/WVURAIL/radio-research-software/issues/56">observed-pulsar recording</a> and <a href="https://github.com/WVURAIL/radio-research-software/issues/57">40-foot telescope recording</a> were not found in the preserved repositories. If you have a copy, attach it or share a download link in the corresponding issue. The catalog preserves their source and saved results; it does not establish that the experiments can be rerun.</p>
 <p>The three earlier simulation datasets are different from the current reference samples. Both versions remain available. The small input file for the older dedispersion test is included; its expected original filename appears in the package manifest.</p>
 <nav aria-label="Historical experiment topics">
 <ul>
@@ -27,7 +27,8 @@ meta_description: "Browse historical DSPIRA and radio astronomy experiments, wit
 <li id="{{ item.id }}" class="mb-4">
 <strong>{{ item.title | escape }}</strong> ({{ item.format }}, {{ item.date }})<br>
 {{ item.note | escape }}<br>
-<a href="{{ item.download_url }}">Download {{ item.title | escape }}</a> &middot; <a href="{{ item.original_url }}">View original source</a>
+<a href="{{ item.download_path | relative_url }}">Download {{ item.title | escape }}</a> &middot; <a href="{{ item.original_url }}">View original source</a>
+{% if item.recovery_issue_url %}<br><a href="{{ item.recovery_issue_url }}">Help recover the missing recording for {{ item.title | escape }}</a>{% endif %}
 </li>
 {% endfor %}
 </ul>
