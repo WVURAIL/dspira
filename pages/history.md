@@ -12,6 +12,10 @@ Useful course materials now have active homes. Browse [teaching downloads]({{ '/
 Start with the [current lessons]({{ '/' | relative_url }}) when planning a class.
 The material below records earlier courses and research projects. Historical software may need older tools or unsupported hardware.
 
+## Earlier experiments
+
+Browse the [historical experiment catalog]({{ '/history/experiments/' | relative_url }}) for older receiver configurations, audio demonstrations, pulsar notebooks, and diagnostic figures. Each entry links to its original source; one download preserves all 53 distinct files and their provenance. Current applications remain linked separately.
+
 ## Earlier websites
 
 - [DSPIRA institute materials](https://rail.wvu.edu/dspira/history/sites/dspira-archive/)
