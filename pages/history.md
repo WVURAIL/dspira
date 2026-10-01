@@ -14,7 +14,7 @@ The material below records earlier courses and research projects. Historical sof
 
 ## Earlier experiments
 
-Browse the [historical experiment catalog]({{ '/history/experiments/' | relative_url }}) for older receiver configurations, audio demonstrations, pulsar notebooks, and diagnostic figures. Each entry links to its original source; one download preserves all 49 distinct files and their provenance. Current applications remain linked separately.
+Browse the [historical experiment catalog]({{ '/history/experiments/' | relative_url }}) for older receiver configurations, audio demonstrations, pulsar notebooks, and diagnostic figures. Each entry links to its original source; one download preserves all 53 distinct files and their provenance. Current applications remain linked separately.
 
 ## Earlier websites
 

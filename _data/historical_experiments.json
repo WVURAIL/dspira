@@ -1,6 +1,7 @@
 {
   "version": 1,
   "prepared_date": "2026-10-01",
+  "source_path_count": 55,
   "purpose": "Historical references from the material-preservation audit. Current applications remain the recommended starting points. Original file contents are unchanged.",
   "groups": [
     {
@@ -1169,6 +1170,98 @@
           "history_url": "https://github.com/WVURAIL/gr-transient/blob/9879947ffeadffdeec73af11062d717155187558/jupyter/Pulsar%20SImulator_10MHz_PSRB0329%2B54_DMed.ipynb"
         }
       ]
+    },
+    {
+      "id": "earlier-pulse-simulation-samples",
+      "title": "Earlier pulse simulation samples",
+      "group": "transients",
+      "archive_path": "transients/earlier-pulse-simulation-samples.bin",
+      "bytes": 6000000,
+      "sha256": "6cac5cf16dc09d366d4cc8b392f6cc8a63f622717fe1ac41c69b62fafb9f21f0",
+      "git_blob": "167512bdf5d40fa6eeee64795a357ee5c5347a2a",
+      "date": "2019-07-26",
+      "format": "BIN",
+      "note": "An earlier headerless simulation file with different bytes from the current reference dataset. Original filename parameters are historical labels, not independently verified metadata.",
+      "original_url": "https://github.com/WVURAIL/radio-research-software/blob/9f8806dfbb83676b6c3800bae80cf8b55356ada7/examples/transient_jupyter_pipeline/pulse_sim_10mhz_int16_5ms_period_60dm_1400MHz_center_150ms_long.bin",
+      "download_url": "https://raw.githubusercontent.com/WVURAIL/radio-research-software/9f8806dfbb83676b6c3800bae80cf8b55356ada7/examples/transient_jupyter_pipeline/pulse_sim_10mhz_int16_5ms_period_60dm_1400MHz_center_150ms_long.bin",
+      "sources": [
+        {
+          "repository": "radio-research-software",
+          "path": "examples/transient_jupyter_pipeline/pulse_sim_10mhz_int16_5ms_period_60dm_1400MHz_center_150ms_long.bin",
+          "source_commit": "9f8806dfbb83676b6c3800bae80cf8b55356ada7",
+          "source_commit_date": "2019-07-26",
+          "history_url": "https://github.com/WVURAIL/radio-research-software/blob/9f8806dfbb83676b6c3800bae80cf8b55356ada7/examples/transient_jupyter_pipeline/pulse_sim_10mhz_int16_5ms_period_60dm_1400MHz_center_150ms_long.bin"
+        }
+      ]
+    },
+    {
+      "id": "earlier-integrated-pulse-spectra",
+      "title": "Earlier integrated pulse spectra",
+      "group": "transients",
+      "archive_path": "transients/earlier-integrated-pulse-spectra.bin",
+      "bytes": 1200000,
+      "sha256": "95fe24cd0a5443a03893e517bd016cdeb59bd26015b27454252bd25410bfc39b",
+      "git_blob": "2ed8f5a798c139c18267e28c41532dc813439add",
+      "date": "2019-07-26",
+      "format": "BIN",
+      "note": "An earlier headerless simulation file with different bytes from the current reference dataset. Original filename parameters are historical labels, not independently verified metadata.",
+      "original_url": "https://github.com/WVURAIL/radio-research-software/blob/9f8806dfbb83676b6c3800bae80cf8b55356ada7/examples/transient_jupyter_pipeline/pulse_sim_10mhz_int16_5ms_period_60dm_1400MHz_center_150ms_long_integrated_FFT.bin",
+      "download_url": "https://raw.githubusercontent.com/WVURAIL/radio-research-software/9f8806dfbb83676b6c3800bae80cf8b55356ada7/examples/transient_jupyter_pipeline/pulse_sim_10mhz_int16_5ms_period_60dm_1400MHz_center_150ms_long_integrated_FFT.bin",
+      "sources": [
+        {
+          "repository": "radio-research-software",
+          "path": "examples/transient_jupyter_pipeline/pulse_sim_10mhz_int16_5ms_period_60dm_1400MHz_center_150ms_long_integrated_FFT.bin",
+          "source_commit": "9f8806dfbb83676b6c3800bae80cf8b55356ada7",
+          "source_commit_date": "2019-07-26",
+          "history_url": "https://github.com/WVURAIL/radio-research-software/blob/9f8806dfbb83676b6c3800bae80cf8b55356ada7/examples/transient_jupyter_pipeline/pulse_sim_10mhz_int16_5ms_period_60dm_1400MHz_center_150ms_long_integrated_FFT.bin"
+        }
+      ]
+    },
+    {
+      "id": "earlier-noise-simulation-samples",
+      "title": "Earlier noise simulation samples",
+      "group": "transients",
+      "archive_path": "transients/earlier-noise-simulation-samples.bin",
+      "bytes": 6000000,
+      "sha256": "9136040b7d494d3ef2ba7e43b73a37a862135dcc0539a9021fc5bad9811fcda4",
+      "git_blob": "445c8afe3e90452468279d954df93c2414fd9af7",
+      "date": "2019-07-26",
+      "format": "BIN",
+      "note": "An earlier headerless simulation file with different bytes from the current reference dataset. Original filename parameters are historical labels, not independently verified metadata.",
+      "original_url": "https://github.com/WVURAIL/radio-research-software/blob/9f8806dfbb83676b6c3800bae80cf8b55356ada7/examples/transient_jupyter_pipeline/pulse_sim_10mhz_int16_5ms_period_60dm_1400MHz_center_150ms_long_noise.bin",
+      "download_url": "https://raw.githubusercontent.com/WVURAIL/radio-research-software/9f8806dfbb83676b6c3800bae80cf8b55356ada7/examples/transient_jupyter_pipeline/pulse_sim_10mhz_int16_5ms_period_60dm_1400MHz_center_150ms_long_noise.bin",
+      "sources": [
+        {
+          "repository": "radio-research-software",
+          "path": "examples/transient_jupyter_pipeline/pulse_sim_10mhz_int16_5ms_period_60dm_1400MHz_center_150ms_long_noise.bin",
+          "source_commit": "9f8806dfbb83676b6c3800bae80cf8b55356ada7",
+          "source_commit_date": "2019-07-26",
+          "history_url": "https://github.com/WVURAIL/radio-research-software/blob/9f8806dfbb83676b6c3800bae80cf8b55356ada7/examples/transient_jupyter_pipeline/pulse_sim_10mhz_int16_5ms_period_60dm_1400MHz_center_150ms_long_noise.bin"
+        }
+      ]
+    },
+    {
+      "id": "original-dedispersion-test-input",
+      "title": "Original dedispersion test input",
+      "group": "transients",
+      "archive_path": "transients/original-dedispersion-test-input.dat",
+      "bytes": 65536,
+      "sha256": "f2fdd485580a15264dcdc2000ffe3d1ca56762cf711e9c807f261b9cb1095e1a",
+      "git_blob": "2a8bdd9a00de665915723d3361c1f286f89c42a7",
+      "date": "2019-01-25",
+      "format": "DAT",
+      "note": "The original input named by the file-based dedispersion test. The manifest records the filename expected by that graph; this preserved input does not validate the experiment.",
+      "original_url": "https://github.com/WVURAIL/radio-research-software/blob/c75c11ab83226b2fb760c64fc428e7f201d4c2fb/examples/pulse_32ms_512freq_50dm_705mhz_10mhzbw_float32.dat",
+      "download_url": "https://raw.githubusercontent.com/WVURAIL/radio-research-software/c75c11ab83226b2fb760c64fc428e7f201d4c2fb/examples/pulse_32ms_512freq_50dm_705mhz_10mhzbw_float32.dat",
+      "sources": [
+        {
+          "repository": "radio-research-software",
+          "path": "examples/pulse_32ms_512freq_50dm_705mhz_10mhzbw_float32.dat",
+          "source_commit": "c75c11ab83226b2fb760c64fc428e7f201d4c2fb",
+          "source_commit_date": "2019-01-25",
+          "history_url": "https://github.com/WVURAIL/radio-research-software/blob/c75c11ab83226b2fb760c64fc428e7f201d4c2fb/examples/pulse_32ms_512freq_50dm_705mhz_10mhzbw_float32.dat"
+        }
+      ]
     }
   ],
   "notices": [
@@ -1203,7 +1296,7 @@
   ],
   "package": {
     "path": "/assets/history/radio-experiments-2026-10-01.zip",
-    "bytes": 5391963,
-    "sha256": "b2a69b9bc9fc6a19a31420f7d97695ae5cb8bcd200199c7742affd26c3ac2d98"
+    "bytes": 18143366,
+    "sha256": "1d8e88f91bab5a190ce399e15b8f64ca9f2e9b94e72811b073580c9558c52a65"
   }
 }

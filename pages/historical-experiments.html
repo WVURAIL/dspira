@@ -7,9 +7,10 @@ lead: Find earlier receiver configurations, audio demonstrations, pulsar noteboo
 meta_description: "Browse historical DSPIRA and radio astronomy experiments, with original downloads, source records, and links to current applications."
 ---
 <p>These files record earlier experiments. Start with the <a href="{{ '/software/' | relative_url }}">current classroom software</a> or <a href="{{ '/research-examples/' | relative_url }}">research examples</a> when choosing an application.</p>
-<p>The collection contains 49 distinct files from 51 historical paths. Three copies of the same LimeSDR graph share one entry. Each original remains unchanged, including saved notebook outputs and earlier hardware settings.</p>
-<p><a href="{{ site.data.historical_experiments.package.path | relative_url }}">Download all historical experiments (ZIP, 5.4 MB)</a>. The package includes source commits, checksums, and attribution notices.</p>
+<p>The collection contains {{ site.data.historical_experiments.files.size }} distinct files from {{ site.data.historical_experiments.source_path_count }} historical paths. Three copies of the same LimeSDR graph share one entry. Each original remains unchanged, including saved notebook outputs and earlier hardware settings.</p>
+<p><a href="{{ site.data.historical_experiments.package.path | relative_url }}">Download all historical experiments (ZIP, {{ site.data.historical_experiments.package.bytes | divided_by: 1000000.0 | round: 1 }} MB)</a>. The package includes source commits, checksums, and attribution notices.</p>
 <p>Historical software may require older GNU Radio blocks, local paths, or data that are not included. The observed-pulsar and 40-foot telescope notebooks reference local recordings that were not found in the preserved repositories. The catalog preserves their source and saved results; it does not establish that the experiments can be rerun.</p>
+<p>The three earlier simulation datasets are different from the current reference samples. Both versions remain available. The small input file for the older dedispersion test is included; its expected original filename appears in the package manifest.</p>
 <nav aria-label="Historical experiment topics">
 <ul>
 {% for group in site.data.historical_experiments.groups %}
