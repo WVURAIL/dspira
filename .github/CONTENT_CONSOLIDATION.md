@@ -1,7 +1,7 @@
 # Content consolidation
 
 Useful materials now live as ordinary files in their active projects and have links from the DSPIRA website.
-Recovery ZIPs are additional history, not the only location of these resources.
+The retained resources are stored in active repositories and do not depend on the deleted recovery releases.
 
 ## Current homes
 
@@ -38,4 +38,4 @@ This is a content review, not a claim that every historic experiment is supporte
 - not-promoted: 266 files
 - superseded: 73 files
 
-Retired repositories remain forwarding-only. No repository was deleted.
+At the end of this consolidation, retired repositories contained forwarding notices. No repository was deleted as part of that change.

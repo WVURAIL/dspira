@@ -263,15 +263,6 @@ The old `images/iq/` figures and `css/iq-notebook.css` remain available for exis
 The current `/iq/` page is generated from `lesson-examples/iq/iq-quadrature-sampling.ipynb` through notebook publication.
 Update that source instead of editing a separate HTML export.
 
-## Historical notebook styles
-
-`retired_sites.py history` repairs two optional stylesheet references in the published archive:
-`dspira-archive/gbtdrift/index.html` and `dspira-archive/labs/05/I_Q_quadrature_sampling.html`.
-Both notebook exports embed their styles but also request an absent `custom.css` override.
-The publication step removes that reference only when the stylesheet is missing.
-If a future source package includes the override, it is copied and retained.
-
-The preserved source and ZIP remain unchanged. Run `python3 tools/test_retired_sites.py` to check this behavior.
 ## Preserve moved download addresses
 
 `publish_assets.py` rebuilds old file addresses from `_data/legacy_assets.json` after Jekyll runs.

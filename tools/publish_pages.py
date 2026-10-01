@@ -58,29 +58,6 @@ def make_alias(source, destination, canonical, exclude=()):
         (destination / name).unlink(missing_ok=True)
 
 
-def add_archive_paths(site, archive, archive_url):
-    site, archive = Path(site).resolve(), Path(archive).resolve()
-    if site == archive or site in archive.parents or archive in site.parents:
-        raise ValueError('Archive and site directories must be separate.')
-    added = 0
-    for source in archive.rglob('*'):
-        if not source.is_file():
-            continue
-        relative = source.relative_to(archive)
-        if relative.as_posix() in ('CNAME', 'sitemap.xml', 'sitemap.xml.gz', 'feed.xml', 'robots.txt'):
-            continue
-        target = site / relative
-        if target.exists():
-            continue
-        target.parent.mkdir(parents=True, exist_ok=True)
-        if source.suffix.lower() == '.html':
-            target.write_text(redirect(page_url(archive_url, relative)), encoding='utf-8')
-        else:
-            shutil.copy2(source, target)
-        added += 1
-    return added
-
-
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--site', required=True, type=Path)
@@ -88,14 +65,10 @@ def main():
     parser.add_argument('--canonical', default='https://rail.wvu.edu/dspira/')
     parser.add_argument('--exclude', action='append', default=[],
                         help='Relative source path to omit from an alias copy; repeat for multiple paths.')
-    parser.add_argument('--archive', type=Path)
-    parser.add_argument('--archive-url', default='https://rail.wvu.edu/dspira-archive/')
     args = parser.parse_args()
     if args.alias:
         make_alias(args.site, args.alias, args.canonical, args.exclude)
         print('Created compatibility site:', args.alias)
-    if args.archive:
-        print('Preserved archive paths:', add_archive_paths(args.site, args.archive, args.archive_url))
 
 
 if __name__ == '__main__':

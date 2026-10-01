@@ -28,8 +28,8 @@ Research applications have a separate home in `radio-research-software`.
 GitHub redirects the former hardware name and `gr-radio_astro` repository name. Keep those old names unused so the redirects continue working.
 Moved GitHub files cannot redirect individually. Use their replacement links below or the original commit links in the downloadable map.
 
-The retired repositories contain forwarding notices. Their files and history are preserved through the active DSPIRA project.
-The lab site handles their old website addresses. See [historical material and recovery packages]({{ '/history/' | relative_url }}).
+Retained experiments and lab images are available as [historical material]({{ '/history/' | relative_url }}).
+Current lesson addresses under `/dspira-lessons/` forward through the lab website.
 
 [Download the link map as JSON]({{ '/repository-links.json' | relative_url }}){: download=""}.
 

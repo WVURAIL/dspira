@@ -37,7 +37,6 @@ jobs:
     - name: Test migration compatibility
       run: |
         python3 tools/test_publish_pages.py
-        python3 tools/test_retired_sites.py
     - name: Build
       run: |
         python3 tools/export_assembly_guides.py --check
@@ -263,19 +262,9 @@ jobs:
       run: python3 tools/check_contrast.py --self-test
     - name: Every piece of text meets WCAG AA
       run: python3 tools/check_contrast.py --site _site
-    - name: Load verified historical material
+    - name: Check production settings
       run: |
-        python3 tools/test_retired_sites.py
-        python3 tools/retired_sites.py fetch --destination _retired
-        python3 tools/retired_sites.py history --source _retired --site _site
-    - name: Preserve old institute addresses
-      run: |
-        python3 tools/test_publish_pages.py
-        cp -a _site/history/sites/dspira-archive _migrated-dspira-archive
-        python3 tools/publish_pages.py --site _site --archive _migrated-dspira-archive --archive-url https://rail.wvu.edu/dspira/history/sites/dspira-archive/
         test -s _site/index.html
-        test -s _site/teach/index.html
-        test -s _site/labs/01/index.html
         test ! -e _site/CNAME
         if grep -q 'name="robots" content="noindex"' _site/index.html; then exit 1; fi
         grep -q 'href="/dspira/' _site/index.html

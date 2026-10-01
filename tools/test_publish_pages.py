@@ -2,7 +2,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from publish_pages import add_archive_paths, make_alias, page_url, redirect
+from publish_pages import make_alias, page_url, redirect
 
 
 class MigrationTests(unittest.TestCase):
@@ -32,22 +32,6 @@ class MigrationTests(unittest.TestCase):
             self.assertFalse((root / 'alias/sitemap.xml').exists())
             self.assertEqual((source / 'index.html').read_text(), 'original')
             self.assertIn('/dspira/', (root / 'alias/index.html').read_text())
-
-    def test_archive_does_not_replace_current_content(self):
-        with tempfile.TemporaryDirectory() as directory:
-            root = Path(directory)
-            for folder in ('site', 'archive'):
-                (root / folder).mkdir()
-                (root / folder / 'index.html').write_text(folder)
-            (root / 'archive/lab.html').write_text('old lab')
-            (root / 'archive/test.grc').write_bytes(b'flowgraph')
-            (root / 'archive/sitemap.xml').write_text('archive sitemap')
-            self.assertEqual(add_archive_paths(root / 'site', root / 'archive', '/dspira-archive/'), 2)
-            self.assertEqual((root / 'site/index.html').read_text(), 'site')
-            self.assertIn('/dspira-archive/lab.html', (root / 'site/lab.html').read_text())
-            self.assertEqual((root / 'site/test.grc').read_bytes(), b'flowgraph')
-            self.assertFalse((root / 'site/sitemap.xml').exists())
-
 
     def test_explicit_alias_exclusion_preserves_existing_downloads_and_redirects(self):
         with tempfile.TemporaryDirectory() as directory:

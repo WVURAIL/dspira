@@ -1,0 +1,16 @@
+---
+layout: null
+permalink: /labs/01/
+sitemap: false
+---
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Redirecting &middot; {{ site.title }}</title>
+<link rel="canonical" href="{{ '/dsplab-intro/' | absolute_url }}">
+<meta http-equiv="refresh" content="0; url={{ '/dsplab-intro/' | relative_url }}">
+<script>const fragment = window.location.hash === '#11-installation-guide' ? '#11-installing-gnu-radio' : window.location.hash;
+window.location.replace({{ '/dsplab-intro/' | relative_url | jsonify }} + window.location.search + fragment);</script>
+</head><body><main><h1>This page has moved</h1>
+<p><a href="{{ '/dsplab-intro/' | relative_url }}">Continue to the introductory GNU Radio lab</a>.</p></main></body></html>
