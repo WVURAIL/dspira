@@ -1863,6 +1863,19 @@
     {
       "legacy": "assets/lessons/telescope-research/public-use-poster.pptx",
       "source": "assets/retired/public-use-poster.pptx"
+    },
+    {
+      "legacy": "labs/01_1/img/sampling.png",
+      "source": "images/dsp-intro/sampling.png"
+    },
+    {
+      "legacy": "labs/01_1/img/lfsr_noise.png",
+      "source": "images/dsp-intro/lfsr-noise.png"
+    },
+    {
+      "legacy": "images/Fourier_Series_Wave_Explorer.grc.zip",
+      "url": "https://raw.githubusercontent.com/WVURAIL/dspira/df9f22f4b2baf35da6a99faa8196e81102979252/images/Fourier_Series_Wave_Explorer.grc.zip",
+      "sha256": "338c6760ff0dfeab9231ca450a69bdc445bb1f9f5e06728db527caa974206d1c"
     }
   ]
 }

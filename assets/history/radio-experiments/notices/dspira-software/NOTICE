@@ -1,0 +1,19 @@
+DSPIRA software contains material with several file-level license notices.
+Some files specify GPL-3.0-only, others specify GPL-3.0-or-later, and retained
+utility files include BSD terms. The GPL-3.0 text in LICENSE is supplied for
+the GPL-covered portions of the repository; it does not replace the notices in
+individual files. Those file-level notices remain the authoritative terms for
+their contents.
+
+The flowgraphs were extracted from examples/DSPIRA at gr-radio_astro commit
+9de98c9c8a281293792ae4dfc3910b6dc6c15c81. Their original author fields are retained.
+Later compatibility changes are recorded in the commit history.
+The extracted directory history is retained in this repository. The complete
+original history remains at https://github.com/WVURAIL/radio-research-software.
+
+The twelve DSPIRA Python blocks and their GRC definitions were moved from
+gr-radio_astro commit cdbda4f577b538c0750b882241f8a36ecc2e88f8.
+Their implementation bytes and original notices are retained.
+
+The observation scripts under data-processing/ came from WVURAIL/dspira.
+Their MIT license and original copyright notice are retained in data-processing/LICENSE.
