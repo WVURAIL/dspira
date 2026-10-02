@@ -16,7 +16,7 @@ if __name__ == '__main__':
     fstep = f.attrs['freq_step']
     flength = spectrum.shape[1]
     freq = np.arange(flength)*fstep + fstart
-    f = np.zeros((1,4096))
+    f = np.zeros((1,flength))
     f[0] = freq
     data = np.concatenate((f,spectrum), axis=0)
     output = np.transpose(data)
